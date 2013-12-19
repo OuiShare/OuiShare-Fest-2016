@@ -3,7 +3,8 @@ class HomeController < ApplicationController
   # For negative captcha
   before_filter :contact_captcha, :only => [:contact, :contact_email]
   
-  def index    
+  def index
+    @team_members = IndividualType.find_by_title('Team').get_members
   end
 
   def faq

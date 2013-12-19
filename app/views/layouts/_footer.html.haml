@@ -1,68 +1,45 @@
-%footer
+/ FOOTER
+#f
   .container
     .row
-      .col-lg-12
-        %hr
-        .col-md-3
-          %ul.list-unstyled
-            %li
-              Links
-              %li
-                %li
-                  = link_to 'Contact Us', home_contact_path
-                %li
-                  = link_to 'Contact Us with PopUp', "#", :id => 'link_contact_modal'
-                %li
-                  = link_to 'FAQ', home_faq_path
-                %li
-                  /= link_to 'All users', users_path
-        .col-md-3
-          %ul.list-unstyled
-            %li
-              Links
-              %li
-                %li
-                  = link_to 'My public profile', current_user
-                %li
-                  = link_to 'My dashboard', me_dashboard_path
-                %li
-                  = link_to 'Edit my profile', me_edit_profile_path
-                %li
-                  = link_to 'View all users', users_path
-        .col-md-3
-          %ul.list-unstyled
-            %li
-              Services
-              %li
-                %li
-                  %a{href: "#"} Web analytics
-                %li
-                  %a{href: "#"} Presentations
-                %li
-                  %a{href: "#"} Code snippets
-                %li
-                  %a{href: "#"} Job board
-        .col-md-3
-          %ul.list-unstyled
-            %li
-              Documentation
-              %li
-                %li
-                  %a{href: "#"} Product Help
-                %li
-                  %a{href: "#"} Developer API
-                %li
-                  %a{href: "#"} Product Markdown
-                %li
-                  %a{href: "#"} Product Pages
-    %hr
-    .row
-      .col-lg-12
-        .col-md-8
-          %a{href: "#"} Terms of Service
-          %a{href: "#"} Privacy
-          %a{href: "#"} Security
-        .col-md-4
-          %p.muted.pull-right © 2014 Pitch Me. All rights reserved
-  = yield :scripts
+      .col-lg-5
+        %h5 Contact
+        %p
+          General questions:
+          %a{href: "mailto:hello@ouishare.net", target: "_blank"} hello@ouisharefest.com
+          %br/
+          Volunteers:
+          %a{href: "mailto:volunteers@ouishare.net", target: "_blank"} volunteers@ouisharefest.com
+          %br/
+          Partners  Sponsors:
+          %a{href: "partners:press@ouishare.net", target: "_blank"} partners@ouisharefest.com
+          %br/
+          = link_to 'Contact Us', home_contact_path
+          %br/
+          = link_to 'Contact Us with PopUp', "#", :id => 'link_contact_modal'
+        %p
+          About
+          %a{href: "http://ouishare.net/about/", target: "_blank"} OuiShare
+      .col-lg-2
+        %h5 Press
+        %p
+          %a{href: "#"} Download press kit
+        %p
+          %a{href: "mailto:press@ouishare.net", target: "_blank"} Press Contact
+      .col-lg-2
+        %h5 Location
+        %p
+          %small
+            Cabaret Sauvage
+            %br/
+            211, Avenue Jean Jaurès
+            %br/
+            Paris 19ème
+      .col-lg-3
+        %p
+        %p
+          %a{href: "https://maps.google.fr/maps?q=Cabaret+Sauvage,+Paris=fr=UTF8=48.895308,2.392101=0.01975,0.045362=48.895345,2.392168=0.009875,0.022681=caba=Cabaret+Sauvage,=Paris,+%C3%8Ele-de-France=m=15", target: "_blank"}
+            %img.img-responsive.img-thumbnail{src: "/assets/small_map.png"}/
+
+= yield :scripts
 =render '/modals/contact_modal'

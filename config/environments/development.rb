@@ -22,13 +22,13 @@ PitchmeRailsBackbone::Application.configure do
   config.action_mailer.delivery_method = :smtp
 
   config.action_mailer.smtp_settings = {
-  address: "",
+  address: "smtp.gmail.com",
   port: 587,
-  domain: "",
+  domain: "gmail.com",
   authentication: "plain",
   enable_starttls_auto: true,
-  user_name: "",
-  password: ""
+  user_name: "pitchme.mailer@gmail.com",
+  password: "pitchme!mailer"
   }
 
   ActionMailer::Base.default :from => "Pitch Me <contact@pitch-me.fr>"
@@ -37,9 +37,9 @@ PitchmeRailsBackbone::Application.configure do
   config.paperclip_defaults = {
     :storage => :s3,
     :s3_credentials => {
-      :bucket => "",
-      :access_key_id => "",
-      :secret_access_key => ""
+      :bucket => ENV["AWS_BUCKET"],
+      :access_key_id => ENV["AWS_KEY"],
+      :secret_access_key => ENV["AWS_SECRET"]
     }
   }
 

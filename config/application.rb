@@ -31,7 +31,7 @@ module PitchmeRailsBackbone
 
     # The default locale is :en and all translations from config/locales/*.rb,yml are auto loaded.
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
-    config.i18n.default_locale = :fr
+    config.i18n.default_locale = :en
     config.i18n.available_locales = [:en, :fr, :af, :ja]
     config.i18n.fallbacks = true
     config.i18n.fallbacks = [:en]
@@ -58,6 +58,7 @@ module PitchmeRailsBackbone
 
     # Enable the asset pipeline
     config.assets.enabled = true
+    config.assets.paths << "#{Rails.root}/app/assets/fonts"
 
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'

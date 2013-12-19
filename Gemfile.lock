@@ -14,14 +14,6 @@ GIT
       i18n (>= 0.5.0)
 
 GIT
-  remote: git://github.com/thomas-mcdonald/bootstrap-sass.git
-  revision: 9c6c07f74ff515cf38380b014cfede14a4f0eae4
-  branch: 3
-  specs:
-    bootstrap-sass (3.0.0.0)
-      sass (~> 3.2)
-
-GIT
   remote: https://github.com/amine-bouassida/omniauth-linkedin-oauth2.git
   revision: 9eaa99dc6ccb203dc17bef4103bbe8dbf355731c
   specs:
@@ -67,12 +59,13 @@ GEM
       nokogiri (>= 1.4.4)
       uuidtools (~> 2.1)
     bcrypt-ruby (3.1.2)
-    bcrypt-ruby (3.1.2-x86-mingw32)
     better_errors (1.0.1)
       coderay (>= 1.0.0)
       erubis (>= 2.6.6)
     binding_of_caller (0.7.2)
       debug_inspector (>= 0.0.1)
+    bootstrap-sass (3.0.3.0)
+      sass (~> 3.2)
     builder (3.0.4)
     carrierwave (0.9.0)
       activemodel (>= 3.2.0)
@@ -166,8 +159,6 @@ GEM
     nexmo (1.2.0)
     nokogiri (1.6.1)
       mini_portile (~> 0.5.0)
-    nokogiri (1.6.1-x86-mingw32)
-      mini_portile (~> 0.5.0)
     oauth (0.4.7)
     oauth2 (0.8.1)
       faraday (~> 0.8)
@@ -196,7 +187,6 @@ GEM
       cocaine (~> 0.5.3)
       mime-types
     pg (0.17.0)
-    pg (0.17.0-x86-mingw32)
     polyglot (0.3.3)
     rack (1.4.5)
     rack-cache (1.2)
@@ -288,13 +278,12 @@ GEM
 
 PLATFORMS
   ruby
-  x86-mingw32
 
 DEPENDENCIES
   aws-sdk
   better_errors
   binding_of_caller
-  bootstrap-sass!
+  bootstrap-sass (~> 3.0.3.0)
   coffee-rails (~> 3.2.1)
   devise
   factory_girl_rails
