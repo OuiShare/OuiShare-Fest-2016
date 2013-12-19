@@ -116,7 +116,7 @@ website:   	http://www.themepunch.com
 }
 
 .tp-caption.general_caption p:nth-of-type(1n){line-height: 23px\9;}
-.tp-caption.general_caption p{line-height: 23px\0/;}
+.tp-caption.general_caption p{line-height: 23px;}
 
 .tp-caption.general_caption p.lead{
 			font-size: 18px;
@@ -562,7 +562,7 @@ _::-ms-reveal, .caption a.button.large {padding:15px 24px 16px 24px !important;}
 .tp-bullets.simplebullets.round .bullet					{	cursor:pointer; position:relative;	background:url("/assets/bullet.png") no-Repeat top left;	width:16px;	height:16px;  margin-right:0px; float:left; margin-top:-10px; margin-left:3px;}
 .tp-bullets.simplebullets.round .bullet.last			{	margin-right:3px;}
 
-.tp-bullets.simplebullets.round-old .bullet				{	cursor:pointer; position:relative;	background:url("/assets/bullets.png") no-Repeat bottom left;	width:17px;	height:17px; margin-right:5px; float:left; margin-top:-8px; margin-top:0px\0/;}
+.tp-bullets.simplebullets.round-old .bullet				{	cursor:pointer; position:relative;	background:url("/assets/bullets.png") no-Repeat bottom left;	width:17px;	height:17px; margin-right:5px; float:left; margin-top:-8px; margin-top:0px;}
 .tp-bullets.simplebullets.round-old .bullet.last		{	margin-right:0px;}
 
 
@@ -650,10 +650,10 @@ _::-ms-reveal, .caption a.button.large {padding:15px 24px 16px 24px !important;}
 .tp-rightarrow.square-old								{	z-index:100;cursor:pointer; position:relative;	background:url("/assets/arrow_right2.png") no-Repeat top left;	width:12px;	height:17px;   float:left;	margin-left:0px; margin-top:-9px;}
 
 
-.tp-leftarrow.default									{	z-index:100;cursor:pointer; position:relative;	background:url("/assets/large_left.png") no-Repeat 0 0; background:url("/assets/large_left.png") no-Repeat 0 0\0/ !important;	width:35px;	height:75px;
+.tp-leftarrow.default									{	z-index:100;cursor:pointer; position:relative;	background:url("/assets/large_left.png") no-Repeat 0 0; background:url("/assets/large_left.png") no-Repeat 0 0 !important;	width:35px;	height:75px;
 
 														}
-.tp-rightarrow.default									{	z-index:100;cursor:pointer; position:relative;	background:url("/assets/large_right.png") no-Repeat 0 0; background:url("/assets/large_right.png") no-Repeat 0 0\0/ !important; width:35px;	height:75px;
+.tp-rightarrow.default									{	z-index:100;cursor:pointer; position:relative;	background:url("/assets/large_right.png") no-Repeat 0 0; background:url("/assets/large_right.png") no-Repeat 0 0 !important; width:35px;	height:75px;
 
 														}
 
@@ -796,7 +796,7 @@ _::-ms-reveal, .caption a.button.large {padding:15px 24px 16px 24px !important;}
 			}
 
 
-.tp-transparentimg {	content:"url("/assets/transparent.png")"}
+.tp-transparentimg {	content:"url('/assets/transparent.png')"}
 .tp-3d				{	-webkit-transform-style: preserve-3d;
 						 -webkit-transform-origin: 50% 50%;
 					}
