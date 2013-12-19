@@ -100,7 +100,7 @@ website:   	http://www.themepunch.com
 .tp-caption.general_caption h1.border3, .tp-caption.general_caption h2.border3, .tp-caption.general_caption h3.border3, .tp-caption.general_caption h4.border3, .tp-caption.general_caption h5.border3 {
 			text-transform:none !important;
 			background:rgba(0,0,0,0.5);
-			background-color:#34495e\0/;
+			background-color:#34495e;
 			color:#fff;
 			padding:4px 14px 6px 14px;
 			-webkit-border-radius: 4px;
