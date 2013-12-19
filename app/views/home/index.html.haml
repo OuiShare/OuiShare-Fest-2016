@@ -1,35 +1,204 @@
-.jumbotron
+/ Headerwrap
+#headerwrap
   .container
-    %h1 
-      = t('hello')
-      
-    %p This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.
+    .row{style: "background-color:rgba(0, 0, 0, 0.5);padding:20px;-moz-border-radius: 15px;border-radius: 15px;"}
+      %h1 THE AGE OF COMMUNITIES
+      %br/
+      %h1
+        %p
+          = t('baseline_1')
+          %br/
+          %br/
+          Connected by shared values, knowledge, resources, or by digital and physical spaces, communities are transforming cities, organizations and civic action.
+      %br/
+      %a{href: "https://www.facebook.com/OuiShare", target: "_blank"}
+        %img{src: "/assets/facebook.svg", width: "48px"}/
+      %a{href: "https://twitter.com/OuiShareFest", target: "_blank"}
+        %img{src: "/assets/twitter.svg", width: "48px"}/
+
+#cta
+  .container.centered
+    %h3 Welcome to our new corporate site.
+    %p Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
     %p
-      %a.btn.btn-primary.btn-lg{role: "button"} Learn more »
-.container
+      %b OuiShare Fest 14  will explore the "Age of Communities":
+      Connected by shared values, knowledge, resources, or by digital and physical spaces, communities are transforming cities, organizations and civic action everywhere in the world.
+    %p
+      %b What is a community?
+      When individuals share values and interact with each other, they are a community. Overlapping communities that are open.
+    Any group of people who share an interest and values. What has changed then ? People scattered all around the world now have the ability to connect and to interact on a regular basis. These people are not isolated anymore. Communities are not exclusive from each other, and you may yourself be part of several communities at the same time.
+    
+    OuiShare Fest will gather collaborative consumers, makers, digital  alternative currencies enthusiasts, open knowledge   be the starting point of new projects and collaborations to build a common vision of a sustainable future. It will bring together people and communities from different locations and backgrounds at the Cabaret Sauvage in Paris for 3 days from May 5. -7. 2014.
+
+#anc_speakers{style: "padding-top:20px;"}
+
+.container.sinfo
+  .row.centered
+    %h3 Speakers  facilitators
+    %br
+    %hr
+    %br
+    .ch-grid
+      .col-lg-3
+        %li
+          .ch-item{style: "background-image:url(http://2013.ouisharefest.com/img/speakers/Speakers_Bauwens_Michel.jpg)"}
+            .ch-info
+              %a{href: "http://www.twitter.com/FloreBerlin", target: "_blank"}
+                %h3 MICHEL BAUWENS
+              %p
+                %a{href: "http://p2pfoundation.net/", target: "_blank"} p2pfoundation.net
+          %h6
+            %b MICHEL BAUWENS
+            %br
+            %small P2P FOUNDATION
+            %br
+            %a{href: "https://twitter.com/BAWMENS"} @BAWMENS
+      .col-lg-3
+        %li
+          .ch-item{style: "background-image:url(http://2013.ouisharefest.com/img/speakers/Speakers_Bauwens_Michel.jpg)"}
+            .ch-info
+              %a{href: "http://www.twitter.com/FloreBerlin", target: "_blank"}
+                %h3 MICHEL BAUWENS
+              %p
+                %a{href: "http://p2pfoundation.net/", target: "_blank"} p2pfoundation.net
+          %h6
+            %b MICHEL BAUWENS
+            %br
+            %small P2P FOUNDATION
+            %br
+            %a{href: "https://twitter.com/BAWMENS"} @BAWMENS
+      .col-lg-3
+        %li
+          .ch-item{style: "background-image:url(http://2013.ouisharefest.com/img/speakers/Speakers_Bauwens_Michel.jpg)"}
+            .ch-info
+              %a{href: "http://www.twitter.com/FloreBerlin", target: "_blank"}
+                %h3 MICHEL BAUWENS
+              %p
+                %a{href: "http://p2pfoundation.net/", target: "_blank"} p2pfoundation.net
+          %h6
+            %b MICHEL BAUWENS
+            %br
+            %small P2P FOUNDATION
+            %br
+            %a{href: "https://twitter.com/BAWMENS"} @BAWMENS                  
+      .col-lg-3
+        %li
+          .ch-item{style: "background-image:url(http://2013.ouisharefest.com/img/speakers/Speakers_Bauwens_Michel.jpg)"}
+            .ch-info
+              %a{href: "http://www.twitter.com/FloreBerlin", target: "_blank"}
+                %h3 MICHEL BAUWENS
+              %p
+                %a{href: "http://p2pfoundation.net/", target: "_blank"} p2pfoundation.net
+          %h6
+            %b MICHEL BAUWENS
+            %br
+            %small P2P FOUNDATION
+            %br
+            %a{href: "https://twitter.com/BAWMENS"} @BAWMENS
+
+      #allspeakers{style: "display: none;"}            
+        .col-lg-3
+          %li
+            .ch-item{style: "background-image:url(http://2013.ouisharefest.com/img/speakers/Speakers_Bauwens_Michel.jpg)"}
+              .ch-info
+                %a{href: "http://www.twitter.com/FloreBerlin", target: "_blank"}
+                  %h3 MICHEL BAUWENS
+                %p
+                  %a{href: "http://p2pfoundation.net/", target: "_blank"} p2pfoundation.net
+            %h6
+              %b MICHEL BAUWENS
+              %br
+              %small P2P FOUNDATION
+              %br
+              %a{href: "https://twitter.com/BAWMENS"} @BAWMENS            
+      %div
+        %a#btn_showspeakers
+          %button.btn.btn-embossed.btn-primary Show all the speakers
+
+
+#anc_tickets{style: "padding-top:40px;"}
+
+#sp1
+  .container
+    .row
+      %h3 Tickets
+      %h4
+        We would like to create an event that anyone can join. There are many ways you can receive a free ticket, from contributing to the festival by co-creating a session, to becoming a volunteer or team member. If you are unable to contribute to the event organization,
+        %a{herf: "#"} you can apply for a sponsored ticket.
+      %h4 If you would like to sponsor someone elses ticket, get in touch.
+      %p
+      %div{style: "width:100%; text-align:left;"}
+        %iframe{allowtransparency: "true", frameborder: "0", height: "256", hspace: "0", marginheight: "5", marginwidth: "5", scrolling: "auto", src: "http://www.eventbrite.com/tickets-external?eid=4653432542&ref=etckt&v=2", vspace: "0", width: "100%"}
+      %h4 Who's already coming
+      %br/
+      %br/
+
+#anc_getinvolved{style: "padding-top:20px;"}
+
+.container.sinfo
   .row
-    .col-md-4
-      %h2 Todo
-      %p 
-        %ul
-          %li Mise en forme BS 3 sur toutes les pages
-          %li Notice et alerte sous forme de popup
-          %li Affichage d'une Notice une fois le mail envoyé
-          %li Ajout lien mot de passe oublié
-          %li Mise en forme navbar avec information de l'utilisateur connecté
-          %li Compléter le mail de contact avec les informations du user (ip, pays, id si connecté, ...)
-          %li Ajouter variables globales avec les inforamtions de contacts (FB, T, mail:to, ..)
-          %li Traduire toutes les pages actuelles (available languages)
+    .col-lg-7
+      %h4 Get involded
       %p
-        %a.btn.btn-default{href: "#", role: "button"} View details »
-    .col-md-4
-      %h2 Heading
-      %p Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
+        OuiShare Fest is a participative festival, co-designed by you. There are many ways you can get involved in its co-creation:
       %p
-        %a.btn.btn-default{href: "#", role: "button"} View details »
-    .col-md-4
-      %h2 Heading
-      %p Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
-      %p
-        %a.btn.btn-default{href: "#", role: "button"} View details »
-  %hr/
+      %ul
+        %li
+          Call for proposals: Submit a session or satellite event for the program. If you proposal is chosen, you will receive a free ticket.
+          %a{href: "#"} Link
+        %li
+          %a{href: "mailto:contact@ouisharefest.org", target: "_blank"} join the Fest Team during preparation
+        %li
+          %a{href: "mailto:contact@ouisharefest.org", target: "_blank"} volunteer before or during the event
+    .col-lg-5
+      .row
+        .col-md-10.col-md-offset-2
+          .alert.alert-success
+            %p Many links
+            %a.btn.btn-primary.btn-wide{href: "#"}
+              %i.fui-link
+              Get It Now!
+
+#anc_team
+
+
+#g
+  .container
+    .row.centered
+      %br/
+      %br/
+      %h3
+        =t('team')
+      %br/
+      %hr/
+      %h6
+        OuiShare is an open global community of people working to accelerate the shift towards a collaborative economy. We are entrepreneurs, designers, makers, researchers, public officials, citizens and more.
+        Find out more about us on OuiShare.net .
+      %br/
+      .ch-grid
+        - @team_members.each do |team_member|
+          .col-lg-3
+            %li
+              .ch-item{style: "background-image:url(" + team_member.attachment.url(:custom) + ")"}
+                .ch-info
+                  - if !team_member.twitter_account.blank?
+                    %a{href: "http://www.twitter.com/" + team_member.twitter_account, target: "_blank"}
+                      %h3
+                        = team_member.fullname
+                  - else
+                    %h3
+                      = team_member.fullname
+                  - if !team_member.twitter_account.blank?
+                    %p
+                      %a{href: "http://www.twitter.com/" + team_member.twitter_account, target: "_blank"}
+                        = "@" + team_member.twitter_account
+              %h6
+                %b
+                = team_member.fullname
+                %br/
+                = team_member.function
+                %br/
+                %br/
+                %small 
+                  = team_member.description
+                  /= t('bio_' + team_member.first_name + team_member.last_name)

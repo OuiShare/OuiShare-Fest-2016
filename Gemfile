@@ -37,7 +37,8 @@ gem 'jquery-rails'
 gem 'negative_captcha'
 
 # gem 'bootstrap-sass', '~> 2.3.1.0'
-gem 'bootstrap-sass', :git => 'git://github.com/thomas-mcdonald/bootstrap-sass.git', :branch => '3'
+#gem 'bootstrap-sass', :git => 'git://github.com/thomas-mcdonald/bootstrap-sass.git', :branch => '3'
+gem 'bootstrap-sass', '~> 3.0.3.0'
 
 # Rails Environment Variables
 gem 'figaro'

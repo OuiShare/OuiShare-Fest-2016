@@ -1,44 +1,42 @@
-.navbar.navbar-default
+.navbar.navbar-default.navbar-fixed-top
   .container
     .navbar-header
       %button.navbar-toggle{"data-target" => ".navbar-collapse", "data-toggle" => "collapse", type: "button"}
         %span.icon-bar
         %span.icon-bar
         %span.icon-bar
-      = link_to 'Pitch Me', root_path, :class => 'navbar-brand'
+      %a.navbar-brand{href: root_path} OUISHARE FEST 2014
     .navbar-collapse.collapse
-      - if !user_signed_in?
-        - state = '?state=' + root_path
-        = form_tag new_user_session_path, :class => 'navbar-form navbar-left' do
-          .form-group
-            = text_field_tag 'user[email]', '', :placeholder => 'Your Email', :class => 'form-control'
-          .form-group  
-            = password_field_tag 'user[password]', '', :placeholder => 'Your password', :class => 'form-control'
-          .checkbox
-            = check_box_tag 'user[remember_me]'
-          = label_tag 'user[remember_me]', 'Remember me'
-          %button.btn.btn-primary
-            Sign in
-          = link_to "Forgot your password?", new_password_path('user'), :class => 'btn btn-primary'
-          = link_to 'Sign up', register_path, :class => 'btn btn-primary'
-          = link_to 'Facebook', '/auth/facebook/' + state
-          = select_languages
-          
       %ul.nav.navbar-nav
-        
-        - if user_signed_in?
+        %li
+          %a{href: "#anc_about"} 
+            =t('about')
+        %li
+          %a{href: "#anc_speakers"}
+            =t('speakers')
+        %li
+          %a{href: "#anc_getinvolved"}
+            =t('get_involved')
+        %li
+          %a{href: "#anc_tickets"}
+            =t('tickets')
+        %li
+          %a{href: "#anc_partners"}
+            =t('partners')
+        %li
+          %a{href: "#anc_team"}
+            =t('team')
+        %li
+          %a{href: "http://blog.ouisharefest.com", target: "_blank"}
+            =t('blog')
+        %li
+          = select_languages
+        - if current_user && current_user.is_admin
           %li
-            = link_to image_tag(current_user.avatar.url(:mini)), current_user
+            = link_to admin_index_path do
+              %i.glyphicon.glyphicon-cog
           %li
-            = link_to current_user.email, current_user
-          %li
-            = link_to 'Sign out', logout_path, :method => :delete
-          -if current_user
-            %li
-              = link_to "Edit", me_edit_profile_path 
-          - if current_user.is_admin
-            %li
-              = link_to "Admin Panel", admin_index_path
-          %li
-            = select_languages
+            = link_to logout_path, :method => :delete do
+              %i.glyphicon.glyphicon-remove
 
+#anc_about
