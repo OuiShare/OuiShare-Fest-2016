@@ -1,0 +1,54 @@
+.container   
+  .row
+    .col-md-12
+      %h1 
+        Index Individuals
+      
+.container
+  .row
+    .col-md-12
+      %strong        
+        %i.glyphicon.glyphicon-globe
+        Index individuals
+      %hr      
+      %br
+      = render "/individuals/partials/index_partial", :admin_panel => false
+      / %table.table.table-hover
+      /   %thead
+      /     %tr
+      /       %th #
+      /       %th First Name
+      /       %th Last Name
+      /       %th Email
+      /       %th Birthday
+      /       %th Twitter account
+      /       %th Company name
+      /       %th Description
+      /       %th Function
+      /       %th URL
+            
+      /   %tbody
+      /   - @individuals.each do |individual|
+      /     %tr
+      /       %td
+      /         = image_tag individual.attachment.url(:small)
+      /       %td
+      /         = individual.first_name
+      /       %td 
+      /         = individual.last_name
+      /       %td
+      /         = individual.email
+      /       %td
+      /         = individual.birthday
+      /       %td
+      /         = individual.twitter_account
+      /       %td
+      /         = individual.company_name
+      /       %td
+      /         = individual.description
+      /       %td
+      /         = individual.function
+      /       %td
+      /         = individual.url
+            
+

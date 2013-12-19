@@ -1,0 +1,25 @@
+= form_tag traduction_path(@translation), :method => :put do |f|
+  .form-group.row
+    .col-lg-1
+      =label_tag "Key:"
+    .col-lg-5      
+      = text_field_tag :key ,@translation.key, :class => "form-control", :disabled => true 
+      = hidden_field_tag :key, @translation.key
+      
+  -@availables_languages.each do |locale|   
+    
+    - if current_translation = Translation.find_by_key_and_locale(@translation.key, locale.to_s)
+      .form-group.row
+        .col-lg-1
+          = image_tag "/assets/flags_test/" + locale.to_s + ".png"
+        .col-lg-5
+          = text_field_tag :value,current_translation.value, :class => "form-control", :name => "[value][" + locale.to_s + "]"
+    - else
+      .form-group.row
+        .col-lg-1
+          = image_tag "/assets/flags_test/" + locale.to_s + ".png"
+        .col-lg-5
+          = text_field_tag :value,"", :class => "form-control", :name => "[value][" + locale.to_s + "]"
+    
+  .form-group.row
+    = submit_tag "Save Trad"

@@ -1,0 +1,20 @@
+.container
+  .row
+    .col-md-12
+      %h1 
+        Create a new individual
+      
+
+.container
+  / upper section
+  .row
+    .col-md-3
+      = render '/admin/partial/menu', :active => 'individuals', :active_sub_panel => @is_checked
+    .col-md-9
+      %strong
+        %i.glyphicon.glyphicon-dashboard
+        Create new Individual for
+        = @is_checked
+        group
+      %hr
+      = render 'form', :is_checked => @is_checked 

@@ -1,0 +1,11 @@
+.container
+  %h1
+    Code Page
+
+  You have received an email containing the code you have to enter below to confirm your access to the admin panel.
+
+  = form_tag validate_strong_auth_admin_index_path do 
+    .form-group.row
+      =text_field_tag :admin_code, "", :class => "form-control"
+    .form-group.row
+      =submit_tag "Send Code"

@@ -1,0 +1,34 @@
+.container
+  .row
+    .col-md-12
+      %h1 
+        Show Individual
+      %hr
+.container
+  .row
+    .col-md-12
+      %br
+      = image_tag @individual.attachment.url(:small)
+      %br
+      = @individual.first_name
+      %br
+      = @individual.last_name
+      %br
+      = @individual.email
+      %br
+      = @individual.birthday
+      %br
+      = @individual.twitter_account
+      %br
+      = @individual.company_name
+      %br
+      = @individual.description
+      %br
+      = @individual.function
+      %br
+      = @individual.url
+      %br
+
+      = link_to 'Edit', edit_individual_path(@individual)
+      = " - "
+      = link_to 'Return to index', individuals_path

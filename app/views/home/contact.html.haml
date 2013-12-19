@@ -1,0 +1,72 @@
+-title "Contact"
+.container
+  .row
+    .col-md-6
+      %h1.text-center 
+        = t('1 - Get in touch')
+      %hr
+      %h2
+        %small
+          We're very approachable and would love to speak to you.
+          %br
+          Feel free to call, send us an email, Tweet us or simply complete the inquiry form.          
+      %hr.invisible
+      .row
+        .col-md-1.col-md-offset-1.text-center
+          = image_tag '/assets/flat_icons/14.png', :style => 'height:32px'
+        .col-md-10
+          .lead
+            = ENV['COMPANY_PHONE_NUMBER']
+        .col-md-1.col-md-offset-1
+          = image_tag '/assets/flat_icons/10.png', :style => 'width:24px'
+        .col-md-10
+          .lead
+            = ENV['COMPANY_TWITTER_ACCOUNT']
+        .col-md-1.col-md-offset-1
+          = image_tag '/assets/flat_icons/22.png', :style => 'width:24px'
+        .col-md-10
+          .lead
+            = ENV['COMPANY_CONTACT_MAIL']
+        .col-md-1.col-md-offset-1
+          = image_tag '/assets/flat_icons/9.png', :style => 'width:24px'
+        .col-md-10
+          .lead
+            = ENV['COMPANY_FACEBOOK_PAGE']
+        .col-md-1.col-md-offset-1
+          = image_tag '/assets/flat_icons/25.png', :style => 'width:24px'
+        .col-md-10
+          .lead
+            = ENV['COMPANY_ADDRESS_1']
+            %br
+            = ENV['COMPANY_ADDRESS_2']
+            %br
+            = ENV['COMPANY_ADDRESS_3']
+    .col-md-6
+      %h1.text-center 2 - Send us a message
+      %hr
+      %p.text-center
+        = form_tag home_contact_path do
+          = raw negative_captcha(@contact_captcha)
+          %fieldset
+            = negative_label_tag(@contact_captcha, :name, 'Your name:')
+            = negative_text_field_tag @contact_captcha, :name, :placeholder => 'Your name', :class => 'form-control', :required => true
+          %hr.invisible
+          %fieldset
+            = negative_label_tag(@contact_captcha, :email, 'Your email:')
+            = negative_text_field_tag @contact_captcha, :email, :placeholder => 'Your email', :class => 'form-control', :required => true
+          %hr.invisible
+          %fieldset
+            = negative_label_tag(@contact_captcha, :message, 'Your message:')
+            = negative_text_area_tag @contact_captcha, :message, :cols => '50', :rows => '10',:placeholder => 'Your message', :class => 'form-control'
+          %hr.invisible
+          %fieldset
+            = submit_tag 'Send', :class => 'btn btn-block btn-primary btn-block'
+          %hr.invisible
+  .row
+    .col-md-12
+      %h1.text-center 3 - Drop in, say Hi!
+      %hr
+      #map{style: "width: 100%; height: 400px;"}
+        / = gmaps4rails(@marker)
+        = gmaps("map_options" => { :raw => "{scrollwheel: false}","detect_location" => false, "center_on_user" => false, "zoom" => 13, "auto_zoom" => false},"markers" => { "data" => @marker, :options => { :raw => '{ animation: google.maps.Animation.BOUNCE }' } })
+      %hr.invisible

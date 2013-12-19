@@ -1,0 +1,66 @@
+/ .container
+/ .row
+/   .col-xs-12.col-sm-12.col-md-4.well.well-sm
+/     %legend
+/       %a{href: "http://www.jquery2dotnet.com"}
+/         %i.glyphicon.glyphicon-globe
+/       Sign up!
+/     %form.form{action: "#", method: "post", role: "form"}
+/       .row
+/         .col-xs-6.col-md-6
+/           %input.form-control{autofocus: "", name: "firstname", placeholder: "First Name", required: "", type: "text"}/
+/         .col-xs-6.col-md-6
+/           %input.form-control{name: "lastname", placeholder: "Last Name", required: "", type: "text"}/
+/       %input.form-control{name: "youremail", placeholder: "Your Email", type: "email"}/
+/       %input.form-control{name: "reenteremail", placeholder: "Re-enter Email", type: "email"}/
+/       %input.form-control{name: "password", placeholder: "New Password", type: "password"}/
+/       %label{for: ""}
+/         Birth Date
+/       .row
+/         .col-xs-4.col-md-4
+/           %select.form-control
+/             %option{value: "Month"} Month
+/         .col-xs-4.col-md-4
+/           %select.form-control
+/             %option{value: "Day"} Day
+/         .col-xs-4.col-md-4
+/           %select.form-control
+/             %option{value: "Year"} Year
+/       %label.radio-inline
+/         %input#inlineCheckbox1{name: "sex", type: "radio", value: "male"}/
+/         Male
+/       %label.radio-inline
+/         %input#inlineCheckbox2{name: "sex", type: "radio", value: "female"}/
+/         Female
+/       %br/
+/       %br/
+/       %button.btn.btn-lg.btn-primary.btn-block{type: "submit"}
+/         Sign up
+.container
+  .row
+    .col-md-12
+      
+      = form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f|
+        = devise_error_messages!
+        %div
+          = f.label :email
+          %br/
+          = f.email_field :email, :autofocus => true
+        %div
+          = f.label "First name"
+          %br/
+          = f.text_field :first_name, :required => true
+        %div
+          = f.label "Last name"
+          %br/
+          = f.text_field :last_name, :required => true
+        %div
+          = f.label :password
+          %br/
+          = f.password_field :password
+        %div
+          = f.label :password_confirmation
+          %br/
+          = f.password_field :password_confirmation
+        %div= f.submit "Sign up"
+  %hr/

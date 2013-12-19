@@ -1,0 +1,47 @@
+.container
+  .row
+    .col-md-12
+      %h1 Admin Dashboard
+      = link_to "Individuals", individuals_path
+
+.container
+  / upper section
+  .row
+    .col-md-3
+      = render '/admin/partial/menu', :active => 'admin_index'
+      
+    .col-md-9
+      %strong
+        %i.glyphicon.glyphicon-dashboard
+        Admin Dashboard
+      %hr/
+      %i.glyphicon.glyphicon-list
+      = link_to "Users list - CSV", export_users_admin_index_path(:format => :csv)
+      %br
+      %i.glyphicon.glyphicon-list
+      = link_to "Users list- Excel", export_users_admin_index_path(:format => :xls)      
+      %br
+      %br
+      %i.glyphicon.glyphicon-link
+      = link_to "See Users list", users_list_admin_index_path
+
+      %br
+      %br
+
+      = render "settings", :settings => @settings
+
+%footer.text-center
+#addWidgetModal.modal
+  .modal-dialog
+    .modal-content
+      .modal-header
+        %button.close{"aria-hidden" => "true", "data-dismiss" => "modal", type: "button"} ×
+        %h4.modal-title Add Widget
+      .modal-body
+        %p Add a widget stuff here..
+      .modal-footer
+        %a.btn{href: "#"} Close
+        %a.btn.btn-primary{href: "#"} Save changes
+    / /.modal-content
+  / /.modal-dalog
+/ /.modal

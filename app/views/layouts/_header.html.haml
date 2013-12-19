@@ -1,0 +1,44 @@
+.navbar.navbar-default
+  .container
+    .navbar-header
+      %button.navbar-toggle{"data-target" => ".navbar-collapse", "data-toggle" => "collapse", type: "button"}
+        %span.icon-bar
+        %span.icon-bar
+        %span.icon-bar
+      = link_to 'Pitch Me', root_path, :class => 'navbar-brand'
+    .navbar-collapse.collapse
+      - if !user_signed_in?
+        - state = '?state=' + root_path
+        = form_tag new_user_session_path, :class => 'navbar-form navbar-left' do
+          .form-group
+            = text_field_tag 'user[email]', '', :placeholder => 'Your Email', :class => 'form-control'
+          .form-group  
+            = password_field_tag 'user[password]', '', :placeholder => 'Your password', :class => 'form-control'
+          .checkbox
+            = check_box_tag 'user[remember_me]'
+          = label_tag 'user[remember_me]', 'Remember me'
+          %button.btn.btn-primary
+            Sign in
+          = link_to "Forgot your password?", new_password_path('user'), :class => 'btn btn-primary'
+          = link_to 'Sign up', register_path, :class => 'btn btn-primary'
+          = link_to 'Facebook', '/auth/facebook/' + state
+          = select_languages
+          
+      %ul.nav.navbar-nav
+        
+        - if user_signed_in?
+          %li
+            = link_to image_tag(current_user.avatar.url(:mini)), current_user
+          %li
+            = link_to current_user.email, current_user
+          %li
+            = link_to 'Sign out', logout_path, :method => :delete
+          -if current_user
+            %li
+              = link_to "Edit", me_edit_profile_path 
+          - if current_user.is_admin
+            %li
+              = link_to "Admin Panel", admin_index_path
+          %li
+            = select_languages
+

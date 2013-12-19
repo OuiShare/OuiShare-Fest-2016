@@ -1,0 +1,18 @@
+.container   
+  .row
+    .col-md-12
+      %h1 
+        Manage Individuals
+      
+.container      
+  .row
+    .col-md-3
+      = render '/admin/partial/menu', :active => 'individuals'
+    .col-md-9
+      %strong
+        = link_to new_individual_path do
+          %i.glyphicon.glyphicon-plus-sign
+          Create new individual
+      %hr      
+      %br
+      = render "/individuals/partials/index_partial", :admin_panel => true

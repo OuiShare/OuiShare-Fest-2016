@@ -1,0 +1,5 @@
+= form_for @individual_type do |f|
+  .form-group.row
+    = f.text_field :title, :required => true, :class => "form-control"
+  .form-group.row
+    = f.submit "Save"

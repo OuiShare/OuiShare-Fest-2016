@@ -1,0 +1,64 @@
+%p
+  = link_to me_change_password_path do
+    %button{:type => "button", :class => "btn btn-primary"}
+      Change password
+
+=form_for(@user, :url => me_update_profile_path, :html => { :class => 'form-horizontal', :multipart => true, :role => 'form' }) do |f| 
+
+  .form-group
+    .control-label.col-lg-3
+      = f.label :avatar, 'Profile_picture'
+    .col-lg-8
+      = image_tag @user.avatar(:small)
+      = f.file_field :avatar
+  .form-group
+    .control-label.col-lg-3
+      = f.label :first_name, 'First Name'
+    .col-lg-8
+      = f.text_field :first_name, :class => 'form-control', :required => true
+  .form-group
+    .control-label.col-lg-3
+      = f.label :last_name, 'Last Name'
+    .col-lg-8
+      = f.text_field :last_name, :class => 'form-control', :required => true
+  .form-group
+    .control-label.col-lg-3
+      = f.label :email
+    .col-lg-8
+      = f.email_field :email, :class => 'form-control', :required => true
+
+  .form-group
+    .control-label.col-lg-3
+      = f.label :gender
+    .col-lg-8
+      .form-control
+        = f.radio_button :gender,'M'
+        = f.label :gender,'M'
+        = f.radio_button :gender,'F'
+        = f.label :gender,'F'
+  .form-group
+    .control-label.col-lg-3
+      = f.label :birthday_date
+    .col-lg-8
+      = f.date_select :birthday_date, :class => 'form-control', :required => true
+  .form-group
+    .control-label.col-lg-3
+      = f.label :description
+    .col-lg-8
+      = f.text_area :description, :class => 'form-control'
+  
+  / .form-group
+  /   .control-label.col-lg-3
+  /     = f.label :password
+  /   .col-lg-8
+  /     = f.password_field :password, :class => 'form-control', :required => true
+  / .form-group
+  /   .control-label.col-lg-3
+  /     = f.label :password_confirmation
+  /   .col-lg-8
+  /     = f.password_field :password_confirmation, :class => 'form-control', :required => true
+  .form-group
+    .control-label.col-lg-3
+      = f.submit 'Update profil'
+
+    

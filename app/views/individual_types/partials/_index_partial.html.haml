@@ -1,0 +1,25 @@
+%table.table
+  %thead
+    %th
+      Title
+    %th
+      Members number
+    - if admin_panel
+      %th
+      %th         
+  %tbody
+  -@individual_types.each do |type|
+    %tr
+      %td
+        =type.title
+      %td
+        =type.get_member_number
+      - if admin_panel
+        %td
+          =link_to "Edit", edit_individual_type_path(type)      
+        %td
+          - if type.individuals.blank?
+            =link_to "Delete", individual_type_path(type), "data-method" => :delete, :confirm => "Are you Sure?"
+ 
+     
+      

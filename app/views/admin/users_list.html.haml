@@ -1,0 +1,40 @@
+.container
+  .row
+    .col-md-12
+      %h1 
+        Users list
+
+.container
+  .row
+    .col-md-3
+      = render '/admin/partial/menu', :active => 'users_list'
+    .col-md-9    
+      %strong
+        %i.glyphicon.glyphicon-dashboard
+        User's list
+      %hr/
+      %br
+      %table.table
+        %thead
+          %th id
+          %th First name
+          %th Last name
+          %th Email
+          %th Manage Admin
+        %tbody
+          - @users.each do |user|
+            %tr
+              %td 
+                = user.id
+              %td 
+                = user.first_name
+              %td 
+                = user.last_name
+              %td 
+                = user.email
+              %td 
+                - if user != current_user
+                  - if user.is_admin 
+                    = button_to 'Demote admin', toggle_admin_admin_path(user), :class => "btn btn-warning"
+                  - else
+                    = button_to 'Promote admin', toggle_admin_admin_path(user), :class => "btn btn-success"

@@ -1,0 +1,12 @@
+.container
+  .row
+    .col-md-3
+      = image_tag '/assets/logo_pitchme.png', :style => 'height:48px'
+    .col-md-9
+      =link_to 'Pitch Me', 'http://www.pitch-me.fr', :target => "_blank"
+      %br
+      = ENV['COMPANY_ADDRESS_1']
+      %br    
+      = ENV['COMPANY_ADDRESS_2']
+      %br
+      = ENV['COMPANY_ADDRESS_3']

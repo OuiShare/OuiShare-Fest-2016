@@ -1,0 +1,588 @@
+Connecting to database specified by database.yml
+  [1m[36m (0.5ms)[0m  [1mBEGIN[0m
+  Rendered layouts/_header.html.haml (11.4ms)
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.4ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (5.7ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'test@gmail.com' LIMIT 1[0m
+  [1m[35m (1.5ms)[0m  SELECT COUNT(*) FROM "translations" WHERE "translations"."locale" = 'fr' AND ("key" IN ('i18n.transliterate.rule') OR "key" LIKE 'i18n.transliterate.rule.%')
+  [1m[36m (0.6ms)[0m  [1mSELECT COUNT(*) FROM "users" WHERE "users"."slug" = 'user-user'[0m
+  [1m[35mSQL (13.9ms)[0m  INSERT INTO "users" ("authentication_token", "avatar_content_type", "avatar_file_name", "avatar_file_size", "avatar_updated_at", "birthday_date", "created_at", "current_language", "current_sign_in_at", "current_sign_in_ip", "description", "email", "encrypted_password", "facebook_url", "first_name", "gender", "is_admin", "last_name", "last_sign_in_at", "last_sign_in_ip", "remember_created_at", "reset_password_sent_at", "reset_password_token", "sign_in_count", "slug", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16, $17, $18, $19, $20, $21, $22, $23, $24, $25, $26) RETURNING "id"  [["authentication_token", nil], ["avatar_content_type", nil], ["avatar_file_name", nil], ["avatar_file_size", nil], ["avatar_updated_at", nil], ["birthday_date", nil], ["created_at", Wed, 18 Dec 2013 17:42:17 CET +01:00], ["current_language", nil], ["current_sign_in_at", nil], ["current_sign_in_ip", nil], ["description", nil], ["email", "test@gmail.com"], ["encrypted_password", "$2a$04$VKSP4pIDWYRBaIby92nMoeLtWBPirLJLPQFZJ6QaiDE2lhNebyteq"], ["facebook_url", nil], ["first_name", "user"], ["gender", nil], ["is_admin", false], ["last_name", "user"], ["last_sign_in_at", nil], ["last_sign_in_ip", nil], ["remember_created_at", nil], ["reset_password_sent_at", nil], ["reset_password_token", nil], ["sign_in_count", 0], ["slug", "user-user"], ["updated_at", Wed, 18 Dec 2013 17:42:17 CET +01:00]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+Processing by SetLanguageController#set_new_language as HTML
+  Parameters: {"language_code"=>"fr"}
+  [1m[35mSetting Load (2.5ms)[0m  SELECT "settings".* FROM "settings" WHERE "settings"."title" = 'SITE_VISIBLE' LIMIT 1
+Redirected to 
+Redirected to http://test.host/
+Completed 302 Found in 18ms (ActiveRecord: 5.4ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.3ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.7ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = 'admin@gmail.com' LIMIT 1
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM "users" WHERE "users"."slug" = 'admin-admin'[0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "users" ("authentication_token", "avatar_content_type", "avatar_file_name", "avatar_file_size", "avatar_updated_at", "birthday_date", "created_at", "current_language", "current_sign_in_at", "current_sign_in_ip", "description", "email", "encrypted_password", "facebook_url", "first_name", "gender", "is_admin", "last_name", "last_sign_in_at", "last_sign_in_ip", "remember_created_at", "reset_password_sent_at", "reset_password_token", "sign_in_count", "slug", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16, $17, $18, $19, $20, $21, $22, $23, $24, $25, $26) RETURNING "id"  [["authentication_token", nil], ["avatar_content_type", nil], ["avatar_file_name", nil], ["avatar_file_size", nil], ["avatar_updated_at", nil], ["birthday_date", nil], ["created_at", Wed, 18 Dec 2013 17:42:17 CET +01:00], ["current_language", nil], ["current_sign_in_at", nil], ["current_sign_in_ip", nil], ["description", nil], ["email", "admin@gmail.com"], ["encrypted_password", "$2a$04$cuOr2YBTUhtYnwN1TU1Tueqd/S1t738e.au13ZhFdRdrXxA1q86Rq"], ["facebook_url", nil], ["first_name", "admin"], ["gender", nil], ["is_admin", true], ["last_name", "admin"], ["last_sign_in_at", nil], ["last_sign_in_ip", nil], ["remember_created_at", nil], ["reset_password_sent_at", nil], ["reset_password_token", nil], ["sign_in_count", 0], ["slug", "admin-admin"], ["updated_at", Wed, 18 Dec 2013 17:42:17 CET +01:00]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.6ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (2.2ms)[0m  [1mINSERT INTO "translations" ("created_at", "interpolations", "is_proc", "key", "locale", "updated_at", "value") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["created_at", Wed, 18 Dec 2013 17:42:17 CET +01:00], ["interpolations", nil], ["is_proc", false], ["key", "hello"], ["locale", "en"], ["updated_at", Wed, 18 Dec 2013 17:42:17 CET +01:00], ["value", "Hello"]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by TraductionsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSetting Load (0.4ms)[0m  [1mSELECT "settings".* FROM "settings" WHERE "settings"."title" = 'SITE_VISIBLE' LIMIT 1[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mSetting Load (0.6ms)[0m  [1mSELECT "settings".* FROM "settings" WHERE "settings"."title" = 'ADMIN_STRONG_AUTH' LIMIT 1[0m
+Completed 200 OK in 10ms (Views: 4.7ms | ActiveRecord: 1.5ms)
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.5ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'admin@gmail.com' LIMIT 1[0m
+  [1m[35m (0.6ms)[0m  SELECT COUNT(*) FROM "users" WHERE "users"."slug" = 'admin-admin'
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "users" ("authentication_token", "avatar_content_type", "avatar_file_name", "avatar_file_size", "avatar_updated_at", "birthday_date", "created_at", "current_language", "current_sign_in_at", "current_sign_in_ip", "description", "email", "encrypted_password", "facebook_url", "first_name", "gender", "is_admin", "last_name", "last_sign_in_at", "last_sign_in_ip", "remember_created_at", "reset_password_sent_at", "reset_password_token", "sign_in_count", "slug", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16, $17, $18, $19, $20, $21, $22, $23, $24, $25, $26) RETURNING "id"[0m  [["authentication_token", nil], ["avatar_content_type", nil], ["avatar_file_name", nil], ["avatar_file_size", nil], ["avatar_updated_at", nil], ["birthday_date", nil], ["created_at", Wed, 18 Dec 2013 17:42:17 CET +01:00], ["current_language", nil], ["current_sign_in_at", nil], ["current_sign_in_ip", nil], ["description", nil], ["email", "admin@gmail.com"], ["encrypted_password", "$2a$04$maaObhzwi8K6yi1VtDGGtO4z0t6Otz3AYRzwnqiWObdjnAulWfoQy"], ["facebook_url", nil], ["first_name", "admin"], ["gender", nil], ["is_admin", true], ["last_name", "admin"], ["last_sign_in_at", nil], ["last_sign_in_ip", nil], ["remember_created_at", nil], ["reset_password_sent_at", nil], ["reset_password_token", nil], ["sign_in_count", 0], ["slug", "admin-admin"], ["updated_at", Wed, 18 Dec 2013 17:42:17 CET +01:00]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "translations" ("created_at", "interpolations", "is_proc", "key", "locale", "updated_at", "value") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["created_at", Wed, 18 Dec 2013 17:42:17 CET +01:00], ["interpolations", nil], ["is_proc", false], ["key", "hello"], ["locale", "en"], ["updated_at", Wed, 18 Dec 2013 17:42:17 CET +01:00], ["value", "Hello"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by TraductionsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mSetting Load (0.5ms)[0m  SELECT "settings".* FROM "settings" WHERE "settings"."title" = 'SITE_VISIBLE' LIMIT 1
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mSetting Load (0.4ms)[0m  SELECT "settings".* FROM "settings" WHERE "settings"."title" = 'ADMIN_STRONG_AUTH' LIMIT 1
+  [1m[36mTranslation Load (0.5ms)[0m  [1mSELECT "translations".* FROM "translations" WHERE "translations"."id" = $1 LIMIT 1[0m  [["id", "2"]]
+Completed 200 OK in 8ms (Views: 2.1ms | ActiveRecord: 1.9ms)
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.4ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'admin@gmail.com' LIMIT 1[0m
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "users" WHERE "users"."slug" = 'admin-admin'
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "users" ("authentication_token", "avatar_content_type", "avatar_file_name", "avatar_file_size", "avatar_updated_at", "birthday_date", "created_at", "current_language", "current_sign_in_at", "current_sign_in_ip", "description", "email", "encrypted_password", "facebook_url", "first_name", "gender", "is_admin", "last_name", "last_sign_in_at", "last_sign_in_ip", "remember_created_at", "reset_password_sent_at", "reset_password_token", "sign_in_count", "slug", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16, $17, $18, $19, $20, $21, $22, $23, $24, $25, $26) RETURNING "id"[0m  [["authentication_token", nil], ["avatar_content_type", nil], ["avatar_file_name", nil], ["avatar_file_size", nil], ["avatar_updated_at", nil], ["birthday_date", nil], ["created_at", Wed, 18 Dec 2013 17:42:17 CET +01:00], ["current_language", nil], ["current_sign_in_at", nil], ["current_sign_in_ip", nil], ["description", nil], ["email", "admin@gmail.com"], ["encrypted_password", "$2a$04$9oaKzSbmhuOi7./MGWf16eubK0jfLE3AyDPhInwIGpvrGOYxE0/2O"], ["facebook_url", nil], ["first_name", "admin"], ["gender", nil], ["is_admin", true], ["last_name", "admin"], ["last_sign_in_at", nil], ["last_sign_in_ip", nil], ["remember_created_at", nil], ["reset_password_sent_at", nil], ["reset_password_token", nil], ["sign_in_count", 0], ["slug", "admin-admin"], ["updated_at", Wed, 18 Dec 2013 17:42:17 CET +01:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "translations" ("created_at", "interpolations", "is_proc", "key", "locale", "updated_at", "value") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["created_at", Wed, 18 Dec 2013 17:42:17 CET +01:00], ["interpolations", nil], ["is_proc", false], ["key", "hello"], ["locale", "en"], ["updated_at", Wed, 18 Dec 2013 17:42:17 CET +01:00], ["value", "Hello"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM "translations" 
+Processing by TraductionsController#update as HTML
+  Parameters: {"key"=>"hello", "value"=>{"en"=>"new hello"}, "id"=>"3"}
+  [1m[36mSetting Load (0.5ms)[0m  [1mSELECT "settings".* FROM "settings" WHERE "settings"."title" = 'SITE_VISIBLE' LIMIT 1[0m
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 4 LIMIT 1
+  [1m[36mSetting Load (0.4ms)[0m  [1mSELECT "settings".* FROM "settings" WHERE "settings"."title" = 'ADMIN_STRONG_AUTH' LIMIT 1[0m
+  [1m[35mTranslation Load (0.4ms)[0m  SELECT "translations".* FROM "translations" WHERE "translations"."key" = 'hello'
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (1.7ms)[0m  UPDATE "translations" SET "value" = 'new hello', "updated_at" = '2013-12-18 16:42:17.448410' WHERE "translations"."id" = 3
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/traductions
+Completed 302 Found in 11ms (ActiveRecord: 4.0ms)
+  [1m[35m (0.6ms)[0m  SELECT COUNT(*) FROM "translations" 
+  [1m[36mTranslation Load (0.5ms)[0m  [1mSELECT "translations".* FROM "translations" WHERE "translations"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.5ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'admin@gmail.com' LIMIT 1[0m
+  [1m[35m (0.6ms)[0m  SELECT COUNT(*) FROM "users" WHERE "users"."slug" = 'admin-admin'
+  [1m[36mSQL (0.9ms)[0m  [1mINSERT INTO "users" ("authentication_token", "avatar_content_type", "avatar_file_name", "avatar_file_size", "avatar_updated_at", "birthday_date", "created_at", "current_language", "current_sign_in_at", "current_sign_in_ip", "description", "email", "encrypted_password", "facebook_url", "first_name", "gender", "is_admin", "last_name", "last_sign_in_at", "last_sign_in_ip", "remember_created_at", "reset_password_sent_at", "reset_password_token", "sign_in_count", "slug", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16, $17, $18, $19, $20, $21, $22, $23, $24, $25, $26) RETURNING "id"[0m  [["authentication_token", nil], ["avatar_content_type", nil], ["avatar_file_name", nil], ["avatar_file_size", nil], ["avatar_updated_at", nil], ["birthday_date", nil], ["created_at", Wed, 18 Dec 2013 17:42:17 CET +01:00], ["current_language", nil], ["current_sign_in_at", nil], ["current_sign_in_ip", nil], ["description", nil], ["email", "admin@gmail.com"], ["encrypted_password", "$2a$04$zCiyGL5ywX3PzIMTFRcGu.DbLA610UoWy7DQuW8ZkgCcjNjeEnp9u"], ["facebook_url", nil], ["first_name", "admin"], ["gender", nil], ["is_admin", true], ["last_name", "admin"], ["last_sign_in_at", nil], ["last_sign_in_ip", nil], ["remember_created_at", nil], ["reset_password_sent_at", nil], ["reset_password_token", nil], ["sign_in_count", 0], ["slug", "admin-admin"], ["updated_at", Wed, 18 Dec 2013 17:42:17 CET +01:00]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "translations" ("created_at", "interpolations", "is_proc", "key", "locale", "updated_at", "value") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["created_at", Wed, 18 Dec 2013 17:42:17 CET +01:00], ["interpolations", nil], ["is_proc", false], ["key", "hello"], ["locale", "en"], ["updated_at", Wed, 18 Dec 2013 17:42:17 CET +01:00], ["value", "Hello"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "translations" ("created_at", "interpolations", "is_proc", "key", "locale", "updated_at", "value") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["created_at", Wed, 18 Dec 2013 17:42:17 CET +01:00], ["interpolations", nil], ["is_proc", false], ["key", "hello"], ["locale", "es"], ["updated_at", Wed, 18 Dec 2013 17:42:17 CET +01:00], ["value", "Hola"]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "translations" [0m
+Processing by TraductionsController#update as HTML
+  Parameters: {"key"=>"hello", "value"=>{"es"=>""}, "id"=>"4"}
+  [1m[35mSetting Load (0.6ms)[0m  SELECT "settings".* FROM "settings" WHERE "settings"."title" = 'SITE_VISIBLE' LIMIT 1
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 5 LIMIT 1[0m
+  [1m[35mSetting Load (0.5ms)[0m  SELECT "settings".* FROM "settings" WHERE "settings"."title" = 'ADMIN_STRONG_AUTH' LIMIT 1
+  [1m[36mTranslation Load (0.3ms)[0m  [1mSELECT "translations".* FROM "translations" WHERE "translations"."key" = 'hello'[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.6ms)[0m  [1mDELETE FROM "translations" WHERE "translations"."id" = $1[0m  [["id", 5]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/traductions
+Completed 302 Found in 9ms (ActiveRecord: 2.8ms)
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "translations" [0m
+  [1m[35mTranslation Load (0.4ms)[0m  SELECT "translations".* FROM "translations" WHERE "translations"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.3ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.5ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = 'admin@gmail.com' LIMIT 1
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "users" WHERE "users"."slug" = 'admin-admin'[0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "users" ("authentication_token", "avatar_content_type", "avatar_file_name", "avatar_file_size", "avatar_updated_at", "birthday_date", "created_at", "current_language", "current_sign_in_at", "current_sign_in_ip", "description", "email", "encrypted_password", "facebook_url", "first_name", "gender", "is_admin", "last_name", "last_sign_in_at", "last_sign_in_ip", "remember_created_at", "reset_password_sent_at", "reset_password_token", "sign_in_count", "slug", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16, $17, $18, $19, $20, $21, $22, $23, $24, $25, $26) RETURNING "id"  [["authentication_token", nil], ["avatar_content_type", nil], ["avatar_file_name", nil], ["avatar_file_size", nil], ["avatar_updated_at", nil], ["birthday_date", nil], ["created_at", Wed, 18 Dec 2013 17:42:17 CET +01:00], ["current_language", nil], ["current_sign_in_at", nil], ["current_sign_in_ip", nil], ["description", nil], ["email", "admin@gmail.com"], ["encrypted_password", "$2a$04$Z19ypRDh/RUY2qauTWYdVORODju2A2HG4qVFCMs9.Z8iZXoup8QGW"], ["facebook_url", nil], ["first_name", "admin"], ["gender", nil], ["is_admin", true], ["last_name", "admin"], ["last_sign_in_at", nil], ["last_sign_in_ip", nil], ["remember_created_at", nil], ["reset_password_sent_at", nil], ["reset_password_token", nil], ["sign_in_count", 0], ["slug", "admin-admin"], ["updated_at", Wed, 18 Dec 2013 17:42:17 CET +01:00]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "translations" ("created_at", "interpolations", "is_proc", "key", "locale", "updated_at", "value") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["created_at", Wed, 18 Dec 2013 17:42:17 CET +01:00], ["interpolations", nil], ["is_proc", false], ["key", "hello"], ["locale", "en"], ["updated_at", Wed, 18 Dec 2013 17:42:17 CET +01:00], ["value", "Hello"]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "translations" [0m
+Processing by TraductionsController#update as HTML
+  Parameters: {"key"=>"hello", "value"=>{"fr"=>"nouveau hello"}, "id"=>"6"}
+  [1m[35mSetting Load (0.6ms)[0m  SELECT "settings".* FROM "settings" WHERE "settings"."title" = 'SITE_VISIBLE' LIMIT 1
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 6 LIMIT 1[0m
+  [1m[35mSetting Load (0.5ms)[0m  SELECT "settings".* FROM "settings" WHERE "settings"."title" = 'ADMIN_STRONG_AUTH' LIMIT 1
+  [1m[36mTranslation Load (0.5ms)[0m  [1mSELECT "translations".* FROM "translations" WHERE "translations"."key" = 'hello'[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "translations" ("created_at", "interpolations", "is_proc", "key", "locale", "updated_at", "value") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["created_at", Wed, 18 Dec 2013 17:42:17 CET +01:00], ["interpolations", nil], ["is_proc", false], ["key", "hello"], ["locale", "fr"], ["updated_at", Wed, 18 Dec 2013 17:42:17 CET +01:00], ["value", "nouveau hello"]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/traductions
+Completed 302 Found in 7ms (ActiveRecord: 3.1ms)
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM "translations" [0m
+  [1m[35mTranslation Load (0.5ms)[0m  SELECT "translations".* FROM "translations" WHERE "translations"."id" = $1 LIMIT 1  [["id", 6]]
+  [1m[36m (0.4ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.5ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = 'admin@gmail.com' LIMIT 1
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM "users" WHERE "users"."slug" = 'admin-admin'[0m
+  [1m[35mSQL (0.9ms)[0m  INSERT INTO "users" ("authentication_token", "avatar_content_type", "avatar_file_name", "avatar_file_size", "avatar_updated_at", "birthday_date", "created_at", "current_language", "current_sign_in_at", "current_sign_in_ip", "description", "email", "encrypted_password", "facebook_url", "first_name", "gender", "is_admin", "last_name", "last_sign_in_at", "last_sign_in_ip", "remember_created_at", "reset_password_sent_at", "reset_password_token", "sign_in_count", "slug", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16, $17, $18, $19, $20, $21, $22, $23, $24, $25, $26) RETURNING "id"  [["authentication_token", nil], ["avatar_content_type", nil], ["avatar_file_name", nil], ["avatar_file_size", nil], ["avatar_updated_at", nil], ["birthday_date", nil], ["created_at", Wed, 18 Dec 2013 17:42:17 CET +01:00], ["current_language", nil], ["current_sign_in_at", nil], ["current_sign_in_ip", nil], ["description", nil], ["email", "admin@gmail.com"], ["encrypted_password", "$2a$04$4jb7Wd9rK72ZSPLttWRJ/udQk8NNvEuE/MA29FGamggE659vR/KOG"], ["facebook_url", nil], ["first_name", "admin"], ["gender", nil], ["is_admin", true], ["last_name", "admin"], ["last_sign_in_at", nil], ["last_sign_in_ip", nil], ["remember_created_at", nil], ["reset_password_sent_at", nil], ["reset_password_token", nil], ["sign_in_count", 0], ["slug", "admin-admin"], ["updated_at", Wed, 18 Dec 2013 17:42:17 CET +01:00]]
+  [1m[36m (0.3ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "translations" ("created_at", "interpolations", "is_proc", "key", "locale", "updated_at", "value") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["created_at", Wed, 18 Dec 2013 17:42:17 CET +01:00], ["interpolations", nil], ["is_proc", false], ["key", "hello"], ["locale", "en"], ["updated_at", Wed, 18 Dec 2013 17:42:17 CET +01:00], ["value", "Hello"]]
+  [1m[35m (0.3ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by TraductionsController#new as HTML
+  [1m[36mSetting Load (0.4ms)[0m  [1mSELECT "settings".* FROM "settings" WHERE "settings"."title" = 'SITE_VISIBLE' LIMIT 1[0m
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 7 LIMIT 1
+  [1m[36mSetting Load (0.4ms)[0m  [1mSELECT "settings".* FROM "settings" WHERE "settings"."title" = 'ADMIN_STRONG_AUTH' LIMIT 1[0m
+Completed 200 OK in 7ms (Views: 2.3ms | ActiveRecord: 1.4ms)
+  [1m[35m (0.4ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.5ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'admin@gmail.com' LIMIT 1[0m
+  [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM "users" WHERE "users"."slug" = 'admin-admin'
+  [1m[36mSQL (0.9ms)[0m  [1mINSERT INTO "users" ("authentication_token", "avatar_content_type", "avatar_file_name", "avatar_file_size", "avatar_updated_at", "birthday_date", "created_at", "current_language", "current_sign_in_at", "current_sign_in_ip", "description", "email", "encrypted_password", "facebook_url", "first_name", "gender", "is_admin", "last_name", "last_sign_in_at", "last_sign_in_ip", "remember_created_at", "reset_password_sent_at", "reset_password_token", "sign_in_count", "slug", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16, $17, $18, $19, $20, $21, $22, $23, $24, $25, $26) RETURNING "id"[0m  [["authentication_token", nil], ["avatar_content_type", nil], ["avatar_file_name", nil], ["avatar_file_size", nil], ["avatar_updated_at", nil], ["birthday_date", nil], ["created_at", Wed, 18 Dec 2013 17:42:17 CET +01:00], ["current_language", nil], ["current_sign_in_at", nil], ["current_sign_in_ip", nil], ["description", nil], ["email", "admin@gmail.com"], ["encrypted_password", "$2a$04$vjg7CsMw8zIXbBliZYdOwOedT5uf6eYDqVZcaqAcxvda1QgVS0DJK"], ["facebook_url", nil], ["first_name", "admin"], ["gender", nil], ["is_admin", true], ["last_name", "admin"], ["last_sign_in_at", nil], ["last_sign_in_ip", nil], ["remember_created_at", nil], ["reset_password_sent_at", nil], ["reset_password_token", nil], ["sign_in_count", 0], ["slug", "admin-admin"], ["updated_at", Wed, 18 Dec 2013 17:42:17 CET +01:00]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.9ms)[0m  INSERT INTO "translations" ("created_at", "interpolations", "is_proc", "key", "locale", "updated_at", "value") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["created_at", Wed, 18 Dec 2013 17:42:17 CET +01:00], ["interpolations", nil], ["is_proc", false], ["key", "hello"], ["locale", "en"], ["updated_at", Wed, 18 Dec 2013 17:42:17 CET +01:00], ["value", "Hello"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "translations" 
+Processing by TraductionsController#create as HTML
+  Parameters: {"key"=>"test", "value"=>{"en"=>"Hello"}}
+  [1m[36mSetting Load (0.5ms)[0m  [1mSELECT "settings".* FROM "settings" WHERE "settings"."title" = 'SITE_VISIBLE' LIMIT 1[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 8 LIMIT 1
+  [1m[36mSetting Load (0.4ms)[0m  [1mSELECT "settings".* FROM "settings" WHERE "settings"."title" = 'ADMIN_STRONG_AUTH' LIMIT 1[0m
+  [1m[35mTranslation Load (0.5ms)[0m  SELECT "translations".* FROM "translations" WHERE "translations"."locale" = 'en' AND "translations"."key" = 'test' LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "translations" ("created_at", "interpolations", "is_proc", "key", "locale", "updated_at", "value") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["created_at", Wed, 18 Dec 2013 17:42:17 CET +01:00], ["interpolations", nil], ["is_proc", false], ["key", "test"], ["locale", "en"], ["updated_at", Wed, 18 Dec 2013 17:42:17 CET +01:00], ["value", "Hello"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/traductions
+Completed 302 Found in 8ms (ActiveRecord: 3.0ms)
+  [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM "translations" 
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.3ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.5ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = 'admin@gmail.com' LIMIT 1
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM "users" WHERE "users"."slug" = 'admin-admin'[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "users" ("authentication_token", "avatar_content_type", "avatar_file_name", "avatar_file_size", "avatar_updated_at", "birthday_date", "created_at", "current_language", "current_sign_in_at", "current_sign_in_ip", "description", "email", "encrypted_password", "facebook_url", "first_name", "gender", "is_admin", "last_name", "last_sign_in_at", "last_sign_in_ip", "remember_created_at", "reset_password_sent_at", "reset_password_token", "sign_in_count", "slug", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16, $17, $18, $19, $20, $21, $22, $23, $24, $25, $26) RETURNING "id"  [["authentication_token", nil], ["avatar_content_type", nil], ["avatar_file_name", nil], ["avatar_file_size", nil], ["avatar_updated_at", nil], ["birthday_date", nil], ["created_at", Wed, 18 Dec 2013 17:42:17 CET +01:00], ["current_language", nil], ["current_sign_in_at", nil], ["current_sign_in_ip", nil], ["description", nil], ["email", "admin@gmail.com"], ["encrypted_password", "$2a$04$vXMCqJvk8ZvJUEnoIni4EeENdqVuCCPMy/RRoXjY260PLYYgWFNGa"], ["facebook_url", nil], ["first_name", "admin"], ["gender", nil], ["is_admin", true], ["last_name", "admin"], ["last_sign_in_at", nil], ["last_sign_in_ip", nil], ["remember_created_at", nil], ["reset_password_sent_at", nil], ["reset_password_token", nil], ["sign_in_count", 0], ["slug", "admin-admin"], ["updated_at", Wed, 18 Dec 2013 17:42:17 CET +01:00]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "translations" ("created_at", "interpolations", "is_proc", "key", "locale", "updated_at", "value") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["created_at", Wed, 18 Dec 2013 17:42:17 CET +01:00], ["interpolations", nil], ["is_proc", false], ["key", "hello"], ["locale", "en"], ["updated_at", Wed, 18 Dec 2013 17:42:17 CET +01:00], ["value", "Hello"]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "translations" [0m
+Processing by TraductionsController#create as HTML
+  Parameters: {"key"=>"hello", "value"=>{"en"=>"Hello"}}
+  [1m[35mSetting Load (0.5ms)[0m  SELECT "settings".* FROM "settings" WHERE "settings"."title" = 'SITE_VISIBLE' LIMIT 1
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 9 LIMIT 1[0m
+  [1m[35mSetting Load (0.4ms)[0m  SELECT "settings".* FROM "settings" WHERE "settings"."title" = 'ADMIN_STRONG_AUTH' LIMIT 1
+  [1m[36mTranslation Load (0.5ms)[0m  [1mSELECT "translations".* FROM "translations" WHERE "translations"."locale" = 'en' AND "translations"."key" = 'hello' LIMIT 1[0m
+Redirected to http://test.host/traductions
+Completed 302 Found in 5ms (ActiveRecord: 1.8ms)
+  [1m[35m (0.6ms)[0m  SELECT COUNT(*) FROM "translations" 
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.3ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.4ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = 'test@gmail.com' LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "users" WHERE "users"."slug" = 'user-user'[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "users" ("authentication_token", "avatar_content_type", "avatar_file_name", "avatar_file_size", "avatar_updated_at", "birthday_date", "created_at", "current_language", "current_sign_in_at", "current_sign_in_ip", "description", "email", "encrypted_password", "facebook_url", "first_name", "gender", "is_admin", "last_name", "last_sign_in_at", "last_sign_in_ip", "remember_created_at", "reset_password_sent_at", "reset_password_token", "sign_in_count", "slug", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16, $17, $18, $19, $20, $21, $22, $23, $24, $25, $26) RETURNING "id"  [["authentication_token", nil], ["avatar_content_type", nil], ["avatar_file_name", nil], ["avatar_file_size", nil], ["avatar_updated_at", nil], ["birthday_date", nil], ["created_at", Wed, 18 Dec 2013 17:42:17 CET +01:00], ["current_language", nil], ["current_sign_in_at", nil], ["current_sign_in_ip", nil], ["description", nil], ["email", "test@gmail.com"], ["encrypted_password", "$2a$04$ZZMDr2d3GhmMgMpk.f2jUu7sui6l.qt7e2BUzXAfjXuYB5nqQkKD2"], ["facebook_url", nil], ["first_name", "user"], ["gender", nil], ["is_admin", false], ["last_name", "user"], ["last_sign_in_at", nil], ["last_sign_in_ip", nil], ["remember_created_at", nil], ["reset_password_sent_at", nil], ["reset_password_token", nil], ["sign_in_count", 0], ["slug", "user-user"], ["updated_at", Wed, 18 Dec 2013 17:42:17 CET +01:00]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by AdminController#index as HTML
+  [1m[35mSetting Load (0.5ms)[0m  SELECT "settings".* FROM "settings" WHERE "settings"."title" = 'SITE_VISIBLE' LIMIT 1
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 10 LIMIT 1[0m
+Redirected to http://test.host/
+Filter chain halted as :authenticate_admin! rendered or redirected
+Completed 302 Found in 4ms (ActiveRecord: 1.1ms)
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.4ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.7ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'admin@gmail.com' LIMIT 1[0m
+  [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM "users" WHERE "users"."slug" = 'admin-admin'
+  [1m[36mSQL (0.9ms)[0m  [1mINSERT INTO "users" ("authentication_token", "avatar_content_type", "avatar_file_name", "avatar_file_size", "avatar_updated_at", "birthday_date", "created_at", "current_language", "current_sign_in_at", "current_sign_in_ip", "description", "email", "encrypted_password", "facebook_url", "first_name", "gender", "is_admin", "last_name", "last_sign_in_at", "last_sign_in_ip", "remember_created_at", "reset_password_sent_at", "reset_password_token", "sign_in_count", "slug", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16, $17, $18, $19, $20, $21, $22, $23, $24, $25, $26) RETURNING "id"[0m  [["authentication_token", nil], ["avatar_content_type", nil], ["avatar_file_name", nil], ["avatar_file_size", nil], ["avatar_updated_at", nil], ["birthday_date", nil], ["created_at", Wed, 18 Dec 2013 17:42:17 CET +01:00], ["current_language", nil], ["current_sign_in_at", nil], ["current_sign_in_ip", nil], ["description", nil], ["email", "admin@gmail.com"], ["encrypted_password", "$2a$04$cmPzW03n.8ZnL8b7dKyyw.h88Mw.a/QoLmbcW4H9DzWHz2/X29A66"], ["facebook_url", nil], ["first_name", "admin"], ["gender", nil], ["is_admin", true], ["last_name", "admin"], ["last_sign_in_at", nil], ["last_sign_in_ip", nil], ["remember_created_at", nil], ["reset_password_sent_at", nil], ["reset_password_token", nil], ["sign_in_count", 0], ["slug", "admin-admin"], ["updated_at", Wed, 18 Dec 2013 17:42:17 CET +01:00]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by AdminController#index as HTML
+  [1m[36mSetting Load (0.5ms)[0m  [1mSELECT "settings".* FROM "settings" WHERE "settings"."title" = 'SITE_VISIBLE' LIMIT 1[0m
+  [1m[35mUser Load (0.6ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 11 LIMIT 1
+  [1m[36mSetting Load (0.6ms)[0m  [1mSELECT "settings".* FROM "settings" WHERE "settings"."title" = 'ADMIN_STRONG_AUTH' LIMIT 1[0m
+  Rendered layouts/_flash_messages.html.haml (1.8ms)
+  Rendered layouts/_header.html.haml (9.1ms)
+  Rendered modals/_contact_modal.html.haml (12.9ms)
+  Rendered layouts/_footer.html.haml (30.8ms)
+Completed 200 OK in 187ms (Views: 112.0ms | ActiveRecord: 1.6ms)
+  [1m[35m (0.4ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.5ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'admin@gmail.com' LIMIT 1[0m
+  [1m[35m (0.7ms)[0m  SELECT COUNT(*) FROM "users" WHERE "users"."slug" = 'admin-admin'
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "users" ("authentication_token", "avatar_content_type", "avatar_file_name", "avatar_file_size", "avatar_updated_at", "birthday_date", "created_at", "current_language", "current_sign_in_at", "current_sign_in_ip", "description", "email", "encrypted_password", "facebook_url", "first_name", "gender", "is_admin", "last_name", "last_sign_in_at", "last_sign_in_ip", "remember_created_at", "reset_password_sent_at", "reset_password_token", "sign_in_count", "slug", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16, $17, $18, $19, $20, $21, $22, $23, $24, $25, $26) RETURNING "id"[0m  [["authentication_token", nil], ["avatar_content_type", nil], ["avatar_file_name", nil], ["avatar_file_size", nil], ["avatar_updated_at", nil], ["birthday_date", nil], ["created_at", Wed, 18 Dec 2013 17:42:17 CET +01:00], ["current_language", nil], ["current_sign_in_at", nil], ["current_sign_in_ip", nil], ["description", nil], ["email", "admin@gmail.com"], ["encrypted_password", "$2a$04$bMl1dxrSiJFGn0siITt1kuHsWkg5IO2P6iZMIMTjtBpjD0hOgokIm"], ["facebook_url", nil], ["first_name", "admin"], ["gender", nil], ["is_admin", true], ["last_name", "admin"], ["last_sign_in_at", nil], ["last_sign_in_ip", nil], ["remember_created_at", nil], ["reset_password_sent_at", nil], ["reset_password_token", nil], ["sign_in_count", 0], ["slug", "admin-admin"], ["updated_at", Wed, 18 Dec 2013 17:42:17 CET +01:00]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by AdminController#index as HTML
+  [1m[36mSetting Load (0.5ms)[0m  [1mSELECT "settings".* FROM "settings" WHERE "settings"."title" = 'SITE_VISIBLE' LIMIT 1[0m
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 12 LIMIT 1
+  [1m[36mSetting Load (0.7ms)[0m  [1mSELECT "settings".* FROM "settings" WHERE "settings"."title" = 'ADMIN_STRONG_AUTH' LIMIT 1[0m
+  Rendered layouts/_flash_messages.html.haml (0.1ms)
+  Rendered layouts/_header.html.haml (3.5ms)
+  Rendered modals/_contact_modal.html.haml (1.5ms)
+  Rendered layouts/_footer.html.haml (2.9ms)
+Completed 200 OK in 18ms (Views: 13.3ms | ActiveRecord: 1.6ms)
+  [1m[35m (0.4ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.4ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'admin@gmail.com' LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "users" WHERE "users"."slug" = 'admin-admin'
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "users" ("authentication_token", "avatar_content_type", "avatar_file_name", "avatar_file_size", "avatar_updated_at", "birthday_date", "created_at", "current_language", "current_sign_in_at", "current_sign_in_ip", "description", "email", "encrypted_password", "facebook_url", "first_name", "gender", "is_admin", "last_name", "last_sign_in_at", "last_sign_in_ip", "remember_created_at", "reset_password_sent_at", "reset_password_token", "sign_in_count", "slug", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16, $17, $18, $19, $20, $21, $22, $23, $24, $25, $26) RETURNING "id"[0m  [["authentication_token", nil], ["avatar_content_type", nil], ["avatar_file_name", nil], ["avatar_file_size", nil], ["avatar_updated_at", nil], ["birthday_date", nil], ["created_at", Wed, 18 Dec 2013 17:42:17 CET +01:00], ["current_language", nil], ["current_sign_in_at", nil], ["current_sign_in_ip", nil], ["description", nil], ["email", "admin@gmail.com"], ["encrypted_password", "$2a$04$t1gS8a4/d1FP33xYmzfRRekGUZ6UQWJaur8O1rMc8jExQXjGxTyn2"], ["facebook_url", nil], ["first_name", "admin"], ["gender", nil], ["is_admin", true], ["last_name", "admin"], ["last_sign_in_at", nil], ["last_sign_in_ip", nil], ["remember_created_at", nil], ["reset_password_sent_at", nil], ["reset_password_token", nil], ["sign_in_count", 0], ["slug", "admin-admin"], ["updated_at", Wed, 18 Dec 2013 17:42:17 CET +01:00]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by AdminController#index as HTML
+  [1m[36mSetting Load (0.6ms)[0m  [1mSELECT "settings".* FROM "settings" WHERE "settings"."title" = 'SITE_VISIBLE' LIMIT 1[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 13 LIMIT 1
+  [1m[36mSetting Load (0.4ms)[0m  [1mSELECT "settings".* FROM "settings" WHERE "settings"."title" = 'ADMIN_STRONG_AUTH' LIMIT 1[0m
+  Rendered layouts/_flash_messages.html.haml (0.1ms)
+  Rendered layouts/_header.html.haml (2.9ms)
+  Rendered modals/_contact_modal.html.haml (1.7ms)
+  Rendered layouts/_footer.html.haml (3.3ms)
+Completed 200 OK in 16ms (Views: 12.1ms | ActiveRecord: 1.5ms)
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+Processing by HomeController#index as HTML
+  [1m[35mSetting Load (0.5ms)[0m  SELECT "settings".* FROM "settings" WHERE "settings"."title" = 'SITE_VISIBLE' LIMIT 1
+Completed 200 OK in 7ms (Views: 4.9ms | ActiveRecord: 0.5ms)
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.3ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (4.3ms)[0m  INSERT INTO "individual_types" ("created_at", "title", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["created_at", Wed, 18 Dec 2013 17:42:18 CET +01:00], ["title", "test"], ["updated_at", Wed, 18 Dec 2013 17:42:18 CET +01:00]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by IndividualTypesController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mSetting Load (0.5ms)[0m  SELECT "settings".* FROM "settings" WHERE "settings"."title" = 'SITE_VISIBLE' LIMIT 1
+  [1m[36mIndividualType Load (0.5ms)[0m  [1mSELECT "individual_types".* FROM "individual_types" WHERE "individual_types"."id" = $1 LIMIT 1[0m  [["id", "3"]]
+Completed 200 OK in 8ms (Views: 3.8ms | ActiveRecord: 1.0ms)
+  [1m[35m (0.4ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "individual_types" ("created_at", "title", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", Wed, 18 Dec 2013 17:42:18 CET +01:00], ["title", "test"], ["updated_at", Wed, 18 Dec 2013 17:42:18 CET +01:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by IndividualTypesController#update as HTML
+  Parameters: {"individual_type"=>{"title"=>"new_test"}, "id"=>"4"}
+  [1m[36mSetting Load (0.7ms)[0m  [1mSELECT "settings".* FROM "settings" WHERE "settings"."title" = 'SITE_VISIBLE' LIMIT 1[0m
+  [1m[35mIndividualType Load (0.4ms)[0m  SELECT "individual_types".* FROM "individual_types" WHERE "individual_types"."id" = $1 LIMIT 1  [["id", "4"]]
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.5ms)[0m  UPDATE "individual_types" SET "title" = 'new_test', "updated_at" = '2013-12-18 16:42:18.052884' WHERE "individual_types"."id" = 4
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/individual_types
+Completed 302 Found in 7ms (ActiveRecord: 2.1ms)
+  [1m[35mIndividualType Load (0.5ms)[0m  SELECT "individual_types".* FROM "individual_types" WHERE "individual_types"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.3ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "individual_types" ("created_at", "title", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["created_at", Wed, 18 Dec 2013 17:42:18 CET +01:00], ["title", "test"], ["updated_at", Wed, 18 Dec 2013 17:42:18 CET +01:00]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "individual_types" 
+Processing by IndividualTypesController#create as HTML
+  Parameters: {"article"=>{"title"=>"test"}}
+  [1m[36mSetting Load (0.5ms)[0m  [1mSELECT "settings".* FROM "settings" WHERE "settings"."title" = 'SITE_VISIBLE' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "individual_types" ("created_at", "title", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", Wed, 18 Dec 2013 17:42:18 CET +01:00], ["title", nil], ["updated_at", Wed, 18 Dec 2013 17:42:18 CET +01:00]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/individual_types
+Completed 302 Found in 5ms (ActiveRecord: 1.5ms)
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "individual_types" [0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "individual_types" ("created_at", "title", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", Wed, 18 Dec 2013 17:42:18 CET +01:00], ["title", "test"], ["updated_at", Wed, 18 Dec 2013 17:42:18 CET +01:00]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by IndividualTypesController#new as HTML
+  [1m[36mSetting Load (0.5ms)[0m  [1mSELECT "settings".* FROM "settings" WHERE "settings"."title" = 'SITE_VISIBLE' LIMIT 1[0m
+Completed 200 OK in 7ms (Views: 4.7ms | ActiveRecord: 0.5ms)
+  [1m[35m (0.3ms)[0m  ROLLBACK
+Connecting to database specified by database.yml
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.4ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (5.1ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'admin@gmail.com' LIMIT 1[0m
+  [1m[35m (2.3ms)[0m  SELECT COUNT(*) FROM "translations" WHERE "translations"."locale" = 'fr' AND ("key" IN ('i18n.transliterate.rule') OR "key" LIKE 'i18n.transliterate.rule.%')
+  [1m[36m (0.9ms)[0m  [1mSELECT COUNT(*) FROM "users" WHERE "users"."slug" = 'admin-admin'[0m
+  [1m[35mSQL (11.1ms)[0m  INSERT INTO "users" ("authentication_token", "avatar_content_type", "avatar_file_name", "avatar_file_size", "avatar_updated_at", "birthday_date", "created_at", "current_language", "current_sign_in_at", "current_sign_in_ip", "description", "email", "encrypted_password", "facebook_url", "first_name", "gender", "is_admin", "last_name", "last_sign_in_at", "last_sign_in_ip", "remember_created_at", "reset_password_sent_at", "reset_password_token", "sign_in_count", "slug", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16, $17, $18, $19, $20, $21, $22, $23, $24, $25, $26) RETURNING "id"  [["authentication_token", nil], ["avatar_content_type", nil], ["avatar_file_name", nil], ["avatar_file_size", nil], ["avatar_updated_at", nil], ["birthday_date", nil], ["created_at", Wed, 18 Dec 2013 18:10:07 CET +01:00], ["current_language", nil], ["current_sign_in_at", nil], ["current_sign_in_ip", nil], ["description", nil], ["email", "admin@gmail.com"], ["encrypted_password", "$2a$04$kbWiNbwje41Ab8aOQSyDh.WY59hZ7GfF6I3ysx0wehQoA25BZXwTm"], ["facebook_url", nil], ["first_name", "admin"], ["gender", nil], ["is_admin", true], ["last_name", "admin"], ["last_sign_in_at", nil], ["last_sign_in_ip", nil], ["remember_created_at", nil], ["reset_password_sent_at", nil], ["reset_password_token", nil], ["sign_in_count", 0], ["slug", "admin-admin"], ["updated_at", Wed, 18 Dec 2013 18:10:07 CET +01:00]]
+  [1m[36m (0.3ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by AdminController#index as HTML
+  [1m[35mSetting Load (2.1ms)[0m  SELECT "settings".* FROM "settings" WHERE "settings"."title" = 'SITE_VISIBLE' LIMIT 1
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 14 LIMIT 1[0m
+  [1m[35mSetting Load (0.5ms)[0m  SELECT "settings".* FROM "settings" WHERE "settings"."title" = 'ADMIN_STRONG_AUTH' LIMIT 1
+  [1m[36mSetting Load (0.9ms)[0m  [1mSELECT "settings".* FROM "settings" ORDER BY title ASC[0m
+  Rendered admin/_settings.html.haml (4.9ms)
+  Rendered admin/index.html.haml within layouts/application (85.2ms)
+  Rendered layouts/_flash_messages.html.haml (1.7ms)
+  Rendered layouts/_header.html.haml (10.8ms)
+  Rendered modals/_contact_modal.html.haml (5.7ms)
+  Rendered layouts/_footer.html.haml (16.6ms)
+Completed 200 OK in 163ms (Views: 144.4ms | ActiveRecord: 7.1ms)
+  [1m[35m (0.4ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.6ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'admin@gmail.com' LIMIT 1[0m
+  [1m[35m (0.6ms)[0m  SELECT COUNT(*) FROM "users" WHERE "users"."slug" = 'admin-admin'
+  [1m[36mSQL (0.9ms)[0m  [1mINSERT INTO "users" ("authentication_token", "avatar_content_type", "avatar_file_name", "avatar_file_size", "avatar_updated_at", "birthday_date", "created_at", "current_language", "current_sign_in_at", "current_sign_in_ip", "description", "email", "encrypted_password", "facebook_url", "first_name", "gender", "is_admin", "last_name", "last_sign_in_at", "last_sign_in_ip", "remember_created_at", "reset_password_sent_at", "reset_password_token", "sign_in_count", "slug", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16, $17, $18, $19, $20, $21, $22, $23, $24, $25, $26) RETURNING "id"[0m  [["authentication_token", nil], ["avatar_content_type", nil], ["avatar_file_name", nil], ["avatar_file_size", nil], ["avatar_updated_at", nil], ["birthday_date", nil], ["created_at", Wed, 18 Dec 2013 18:10:07 CET +01:00], ["current_language", nil], ["current_sign_in_at", nil], ["current_sign_in_ip", nil], ["description", nil], ["email", "admin@gmail.com"], ["encrypted_password", "$2a$04$2W/75Hamn8YO.0ZKzqyh9umsszpmJ7hiaWVn.eig8Z72m2vZeYC3u"], ["facebook_url", nil], ["first_name", "admin"], ["gender", nil], ["is_admin", true], ["last_name", "admin"], ["last_sign_in_at", nil], ["last_sign_in_ip", nil], ["remember_created_at", nil], ["reset_password_sent_at", nil], ["reset_password_token", nil], ["sign_in_count", 0], ["slug", "admin-admin"], ["updated_at", Wed, 18 Dec 2013 18:10:07 CET +01:00]]
+  [1m[35m (0.3ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by AdminController#index as HTML
+  [1m[36mSetting Load (0.5ms)[0m  [1mSELECT "settings".* FROM "settings" WHERE "settings"."title" = 'SITE_VISIBLE' LIMIT 1[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 15 LIMIT 1
+  [1m[36mSetting Load (0.3ms)[0m  [1mSELECT "settings".* FROM "settings" WHERE "settings"."title" = 'ADMIN_STRONG_AUTH' LIMIT 1[0m
+  [1m[35mSetting Load (0.4ms)[0m  SELECT "settings".* FROM "settings" ORDER BY title ASC
+  Rendered admin/_settings.html.haml (1.7ms)
+  Rendered layouts/_flash_messages.html.haml (0.1ms)
+  Rendered layouts/_header.html.haml (2.7ms)
+  Rendered modals/_contact_modal.html.haml (1.5ms)
+  Rendered layouts/_footer.html.haml (2.8ms)
+Completed 200 OK in 15ms (Views: 11.3ms | ActiveRecord: 1.7ms)
+  [1m[36m (0.4ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.3ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.5ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = 'test@gmail.com' LIMIT 1
+  [1m[36m (0.6ms)[0m  [1mSELECT COUNT(*) FROM "users" WHERE "users"."slug" = 'user-user'[0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "users" ("authentication_token", "avatar_content_type", "avatar_file_name", "avatar_file_size", "avatar_updated_at", "birthday_date", "created_at", "current_language", "current_sign_in_at", "current_sign_in_ip", "description", "email", "encrypted_password", "facebook_url", "first_name", "gender", "is_admin", "last_name", "last_sign_in_at", "last_sign_in_ip", "remember_created_at", "reset_password_sent_at", "reset_password_token", "sign_in_count", "slug", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16, $17, $18, $19, $20, $21, $22, $23, $24, $25, $26) RETURNING "id"  [["authentication_token", nil], ["avatar_content_type", nil], ["avatar_file_name", nil], ["avatar_file_size", nil], ["avatar_updated_at", nil], ["birthday_date", nil], ["created_at", Wed, 18 Dec 2013 18:10:07 CET +01:00], ["current_language", nil], ["current_sign_in_at", nil], ["current_sign_in_ip", nil], ["description", nil], ["email", "test@gmail.com"], ["encrypted_password", "$2a$04$j8QTG54/dC0C21IM3XCcXOjmVRoD2j1q03ZE9hbURvBFErk7hmFLy"], ["facebook_url", nil], ["first_name", "user"], ["gender", nil], ["is_admin", false], ["last_name", "user"], ["last_sign_in_at", nil], ["last_sign_in_ip", nil], ["remember_created_at", nil], ["reset_password_sent_at", nil], ["reset_password_token", nil], ["sign_in_count", 0], ["slug", "user-user"], ["updated_at", Wed, 18 Dec 2013 18:10:07 CET +01:00]]
+  [1m[36m (0.3ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by AdminController#index as HTML
+  [1m[35mSetting Load (0.7ms)[0m  SELECT "settings".* FROM "settings" WHERE "settings"."title" = 'SITE_VISIBLE' LIMIT 1
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 16 LIMIT 1[0m
+Redirected to http://test.host/
+Filter chain halted as :authenticate_admin! rendered or redirected
+Completed 302 Found in 4ms (ActiveRecord: 1.2ms)
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+Processing by SetLanguageController#set_new_language as HTML
+  Parameters: {"language_code"=>"fr"}
+  [1m[35mSetting Load (0.5ms)[0m  SELECT "settings".* FROM "settings" WHERE "settings"."title" = 'SITE_VISIBLE' LIMIT 1
+Redirected to 
+Redirected to http://test.host/
+Completed 302 Found in 3ms (ActiveRecord: 0.5ms)
+  [1m[36m (0.5ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by HomeController#index as HTML
+  [1m[36mSetting Load (0.6ms)[0m  [1mSELECT "settings".* FROM "settings" WHERE "settings"."title" = 'SITE_VISIBLE' LIMIT 1[0m
+Completed 200 OK in 53ms (Views: 3.4ms | ActiveRecord: 0.6ms)
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.4ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'admin@gmail.com' LIMIT 1[0m
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "users" WHERE "users"."slug" = 'admin-admin'
+  [1m[36mSQL (0.9ms)[0m  [1mINSERT INTO "users" ("authentication_token", "avatar_content_type", "avatar_file_name", "avatar_file_size", "avatar_updated_at", "birthday_date", "created_at", "current_language", "current_sign_in_at", "current_sign_in_ip", "description", "email", "encrypted_password", "facebook_url", "first_name", "gender", "is_admin", "last_name", "last_sign_in_at", "last_sign_in_ip", "remember_created_at", "reset_password_sent_at", "reset_password_token", "sign_in_count", "slug", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16, $17, $18, $19, $20, $21, $22, $23, $24, $25, $26) RETURNING "id"[0m  [["authentication_token", nil], ["avatar_content_type", nil], ["avatar_file_name", nil], ["avatar_file_size", nil], ["avatar_updated_at", nil], ["birthday_date", nil], ["created_at", Wed, 18 Dec 2013 18:10:07 CET +01:00], ["current_language", nil], ["current_sign_in_at", nil], ["current_sign_in_ip", nil], ["description", nil], ["email", "admin@gmail.com"], ["encrypted_password", "$2a$04$Uel8VlAO4BkkSzXGjxF2hu4pVSY62PnlC9e7RTqDlOMeI38UPWikm"], ["facebook_url", nil], ["first_name", "admin"], ["gender", nil], ["is_admin", true], ["last_name", "admin"], ["last_sign_in_at", nil], ["last_sign_in_ip", nil], ["remember_created_at", nil], ["reset_password_sent_at", nil], ["reset_password_token", nil], ["sign_in_count", 0], ["slug", "admin-admin"], ["updated_at", Wed, 18 Dec 2013 18:10:07 CET +01:00]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.3ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (2.4ms)[0m  INSERT INTO "translations" ("created_at", "interpolations", "is_proc", "key", "locale", "updated_at", "value") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["created_at", Wed, 18 Dec 2013 18:10:07 CET +01:00], ["interpolations", nil], ["is_proc", false], ["key", "hello"], ["locale", "en"], ["updated_at", Wed, 18 Dec 2013 18:10:07 CET +01:00], ["value", "Hello"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by TraductionsController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[35mSetting Load (0.6ms)[0m  SELECT "settings".* FROM "settings" WHERE "settings"."title" = 'SITE_VISIBLE' LIMIT 1
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 17 LIMIT 1[0m
+  [1m[35mSetting Load (0.4ms)[0m  SELECT "settings".* FROM "settings" WHERE "settings"."title" = 'ADMIN_STRONG_AUTH' LIMIT 1
+Completed 200 OK in 10ms (Views: 4.2ms | ActiveRecord: 1.6ms)
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.5ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = 'admin@gmail.com' LIMIT 1
+  [1m[36m (0.6ms)[0m  [1mSELECT COUNT(*) FROM "users" WHERE "users"."slug" = 'admin-admin'[0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "users" ("authentication_token", "avatar_content_type", "avatar_file_name", "avatar_file_size", "avatar_updated_at", "birthday_date", "created_at", "current_language", "current_sign_in_at", "current_sign_in_ip", "description", "email", "encrypted_password", "facebook_url", "first_name", "gender", "is_admin", "last_name", "last_sign_in_at", "last_sign_in_ip", "remember_created_at", "reset_password_sent_at", "reset_password_token", "sign_in_count", "slug", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16, $17, $18, $19, $20, $21, $22, $23, $24, $25, $26) RETURNING "id"  [["authentication_token", nil], ["avatar_content_type", nil], ["avatar_file_name", nil], ["avatar_file_size", nil], ["avatar_updated_at", nil], ["birthday_date", nil], ["created_at", Wed, 18 Dec 2013 18:10:07 CET +01:00], ["current_language", nil], ["current_sign_in_at", nil], ["current_sign_in_ip", nil], ["description", nil], ["email", "admin@gmail.com"], ["encrypted_password", "$2a$04$6TMcgiCFD9qtDcaS96qHJuwEscratkYSme2lMVuRoPXfwH7K7ssIy"], ["facebook_url", nil], ["first_name", "admin"], ["gender", nil], ["is_admin", true], ["last_name", "admin"], ["last_sign_in_at", nil], ["last_sign_in_ip", nil], ["remember_created_at", nil], ["reset_password_sent_at", nil], ["reset_password_token", nil], ["sign_in_count", 0], ["slug", "admin-admin"], ["updated_at", Wed, 18 Dec 2013 18:10:07 CET +01:00]]
+  [1m[36m (0.4ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "translations" ("created_at", "interpolations", "is_proc", "key", "locale", "updated_at", "value") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["created_at", Wed, 18 Dec 2013 18:10:07 CET +01:00], ["interpolations", nil], ["is_proc", false], ["key", "hello"], ["locale", "en"], ["updated_at", Wed, 18 Dec 2013 18:10:07 CET +01:00], ["value", "Hello"]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by TraductionsController#new as HTML
+  [1m[36mSetting Load (0.5ms)[0m  [1mSELECT "settings".* FROM "settings" WHERE "settings"."title" = 'SITE_VISIBLE' LIMIT 1[0m
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 18 LIMIT 1
+  [1m[36mSetting Load (0.4ms)[0m  [1mSELECT "settings".* FROM "settings" WHERE "settings"."title" = 'ADMIN_STRONG_AUTH' LIMIT 1[0m
+Completed 200 OK in 6ms (Views: 2.2ms | ActiveRecord: 1.4ms)
+  [1m[35m (0.4ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.4ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.7ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'admin@gmail.com' LIMIT 1[0m
+  [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM "users" WHERE "users"."slug" = 'admin-admin'
+  [1m[36mSQL (0.9ms)[0m  [1mINSERT INTO "users" ("authentication_token", "avatar_content_type", "avatar_file_name", "avatar_file_size", "avatar_updated_at", "birthday_date", "created_at", "current_language", "current_sign_in_at", "current_sign_in_ip", "description", "email", "encrypted_password", "facebook_url", "first_name", "gender", "is_admin", "last_name", "last_sign_in_at", "last_sign_in_ip", "remember_created_at", "reset_password_sent_at", "reset_password_token", "sign_in_count", "slug", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16, $17, $18, $19, $20, $21, $22, $23, $24, $25, $26) RETURNING "id"[0m  [["authentication_token", nil], ["avatar_content_type", nil], ["avatar_file_name", nil], ["avatar_file_size", nil], ["avatar_updated_at", nil], ["birthday_date", nil], ["created_at", Wed, 18 Dec 2013 18:10:07 CET +01:00], ["current_language", nil], ["current_sign_in_at", nil], ["current_sign_in_ip", nil], ["description", nil], ["email", "admin@gmail.com"], ["encrypted_password", "$2a$04$hho2tkPIhiC9U2uTaorxi.quIlS4Zw1gDyQWIl1CcmJDrgN3GNwLG"], ["facebook_url", nil], ["first_name", "admin"], ["gender", nil], ["is_admin", true], ["last_name", "admin"], ["last_sign_in_at", nil], ["last_sign_in_ip", nil], ["remember_created_at", nil], ["reset_password_sent_at", nil], ["reset_password_token", nil], ["sign_in_count", 0], ["slug", "admin-admin"], ["updated_at", Wed, 18 Dec 2013 18:10:07 CET +01:00]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "translations" ("created_at", "interpolations", "is_proc", "key", "locale", "updated_at", "value") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["created_at", Wed, 18 Dec 2013 18:10:07 CET +01:00], ["interpolations", nil], ["is_proc", false], ["key", "hello"], ["locale", "en"], ["updated_at", Wed, 18 Dec 2013 18:10:07 CET +01:00], ["value", "Hello"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by TraductionsController#edit as HTML
+  Parameters: {"id"=>"14"}
+  [1m[35mSetting Load (0.5ms)[0m  SELECT "settings".* FROM "settings" WHERE "settings"."title" = 'SITE_VISIBLE' LIMIT 1
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 19 LIMIT 1[0m
+  [1m[35mSetting Load (0.4ms)[0m  SELECT "settings".* FROM "settings" WHERE "settings"."title" = 'ADMIN_STRONG_AUTH' LIMIT 1
+  [1m[36mTranslation Load (0.5ms)[0m  [1mSELECT "translations".* FROM "translations" WHERE "translations"."id" = $1 LIMIT 1[0m  [["id", "14"]]
+Completed 200 OK in 8ms (Views: 2.1ms | ActiveRecord: 1.9ms)
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.5ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'admin@gmail.com' LIMIT 1[0m
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "users" WHERE "users"."slug" = 'admin-admin'
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "users" ("authentication_token", "avatar_content_type", "avatar_file_name", "avatar_file_size", "avatar_updated_at", "birthday_date", "created_at", "current_language", "current_sign_in_at", "current_sign_in_ip", "description", "email", "encrypted_password", "facebook_url", "first_name", "gender", "is_admin", "last_name", "last_sign_in_at", "last_sign_in_ip", "remember_created_at", "reset_password_sent_at", "reset_password_token", "sign_in_count", "slug", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16, $17, $18, $19, $20, $21, $22, $23, $24, $25, $26) RETURNING "id"[0m  [["authentication_token", nil], ["avatar_content_type", nil], ["avatar_file_name", nil], ["avatar_file_size", nil], ["avatar_updated_at", nil], ["birthday_date", nil], ["created_at", Wed, 18 Dec 2013 18:10:07 CET +01:00], ["current_language", nil], ["current_sign_in_at", nil], ["current_sign_in_ip", nil], ["description", nil], ["email", "admin@gmail.com"], ["encrypted_password", "$2a$04$cGR343i/FFquSNl9zADDR.IFWOuXJQRlSTTsPWWExext5K0caYjSy"], ["facebook_url", nil], ["first_name", "admin"], ["gender", nil], ["is_admin", true], ["last_name", "admin"], ["last_sign_in_at", nil], ["last_sign_in_ip", nil], ["remember_created_at", nil], ["reset_password_sent_at", nil], ["reset_password_token", nil], ["sign_in_count", 0], ["slug", "admin-admin"], ["updated_at", Wed, 18 Dec 2013 18:10:07 CET +01:00]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "translations" ("created_at", "interpolations", "is_proc", "key", "locale", "updated_at", "value") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["created_at", Wed, 18 Dec 2013 18:10:07 CET +01:00], ["interpolations", nil], ["is_proc", false], ["key", "hello"], ["locale", "en"], ["updated_at", Wed, 18 Dec 2013 18:10:07 CET +01:00], ["value", "Hello"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM "translations" 
+Processing by TraductionsController#create as HTML
+  Parameters: {"key"=>"hello", "value"=>{"en"=>"Hello"}}
+  [1m[36mSetting Load (0.5ms)[0m  [1mSELECT "settings".* FROM "settings" WHERE "settings"."title" = 'SITE_VISIBLE' LIMIT 1[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 20 LIMIT 1
+  [1m[36mSetting Load (0.3ms)[0m  [1mSELECT "settings".* FROM "settings" WHERE "settings"."title" = 'ADMIN_STRONG_AUTH' LIMIT 1[0m
+  [1m[35mTranslation Load (0.3ms)[0m  SELECT "translations".* FROM "translations" WHERE "translations"."locale" = 'en' AND "translations"."key" = 'hello' LIMIT 1
+Redirected to http://test.host/traductions
+Completed 302 Found in 5ms (ActiveRecord: 1.6ms)
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "translations" [0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.5ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'admin@gmail.com' LIMIT 1[0m
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "users" WHERE "users"."slug" = 'admin-admin'
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "users" ("authentication_token", "avatar_content_type", "avatar_file_name", "avatar_file_size", "avatar_updated_at", "birthday_date", "created_at", "current_language", "current_sign_in_at", "current_sign_in_ip", "description", "email", "encrypted_password", "facebook_url", "first_name", "gender", "is_admin", "last_name", "last_sign_in_at", "last_sign_in_ip", "remember_created_at", "reset_password_sent_at", "reset_password_token", "sign_in_count", "slug", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16, $17, $18, $19, $20, $21, $22, $23, $24, $25, $26) RETURNING "id"[0m  [["authentication_token", nil], ["avatar_content_type", nil], ["avatar_file_name", nil], ["avatar_file_size", nil], ["avatar_updated_at", nil], ["birthday_date", nil], ["created_at", Wed, 18 Dec 2013 18:10:07 CET +01:00], ["current_language", nil], ["current_sign_in_at", nil], ["current_sign_in_ip", nil], ["description", nil], ["email", "admin@gmail.com"], ["encrypted_password", "$2a$04$gUI470L.SWwJa2ZJwtVMw.MhtFUc.kgpXhrwjXorClpoo4lbdQ9YC"], ["facebook_url", nil], ["first_name", "admin"], ["gender", nil], ["is_admin", true], ["last_name", "admin"], ["last_sign_in_at", nil], ["last_sign_in_ip", nil], ["remember_created_at", nil], ["reset_password_sent_at", nil], ["reset_password_token", nil], ["sign_in_count", 0], ["slug", "admin-admin"], ["updated_at", Wed, 18 Dec 2013 18:10:07 CET +01:00]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "translations" ("created_at", "interpolations", "is_proc", "key", "locale", "updated_at", "value") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["created_at", Wed, 18 Dec 2013 18:10:07 CET +01:00], ["interpolations", nil], ["is_proc", false], ["key", "hello"], ["locale", "en"], ["updated_at", Wed, 18 Dec 2013 18:10:07 CET +01:00], ["value", "Hello"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "translations" 
+Processing by TraductionsController#create as HTML
+  Parameters: {"key"=>"test", "value"=>{"en"=>"Hello"}}
+  [1m[36mSetting Load (0.5ms)[0m  [1mSELECT "settings".* FROM "settings" WHERE "settings"."title" = 'SITE_VISIBLE' LIMIT 1[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 21 LIMIT 1
+  [1m[36mSetting Load (0.4ms)[0m  [1mSELECT "settings".* FROM "settings" WHERE "settings"."title" = 'ADMIN_STRONG_AUTH' LIMIT 1[0m
+  [1m[35mTranslation Load (0.4ms)[0m  SELECT "translations".* FROM "translations" WHERE "translations"."locale" = 'en' AND "translations"."key" = 'test' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "translations" ("created_at", "interpolations", "is_proc", "key", "locale", "updated_at", "value") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["created_at", Wed, 18 Dec 2013 18:10:07 CET +01:00], ["interpolations", nil], ["is_proc", false], ["key", "test"], ["locale", "en"], ["updated_at", Wed, 18 Dec 2013 18:10:07 CET +01:00], ["value", "Hello"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/traductions
+Completed 302 Found in 7ms (ActiveRecord: 2.5ms)
+  [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM "translations" 
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.3ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.4ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = 'admin@gmail.com' LIMIT 1
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "users" WHERE "users"."slug" = 'admin-admin'[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "users" ("authentication_token", "avatar_content_type", "avatar_file_name", "avatar_file_size", "avatar_updated_at", "birthday_date", "created_at", "current_language", "current_sign_in_at", "current_sign_in_ip", "description", "email", "encrypted_password", "facebook_url", "first_name", "gender", "is_admin", "last_name", "last_sign_in_at", "last_sign_in_ip", "remember_created_at", "reset_password_sent_at", "reset_password_token", "sign_in_count", "slug", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16, $17, $18, $19, $20, $21, $22, $23, $24, $25, $26) RETURNING "id"  [["authentication_token", nil], ["avatar_content_type", nil], ["avatar_file_name", nil], ["avatar_file_size", nil], ["avatar_updated_at", nil], ["birthday_date", nil], ["created_at", Wed, 18 Dec 2013 18:10:07 CET +01:00], ["current_language", nil], ["current_sign_in_at", nil], ["current_sign_in_ip", nil], ["description", nil], ["email", "admin@gmail.com"], ["encrypted_password", "$2a$04$9JyacZIUP09hx4uk6H9St.94JzXFq8eZfCulIVpdD128NkNLjyZUe"], ["facebook_url", nil], ["first_name", "admin"], ["gender", nil], ["is_admin", true], ["last_name", "admin"], ["last_sign_in_at", nil], ["last_sign_in_ip", nil], ["remember_created_at", nil], ["reset_password_sent_at", nil], ["reset_password_token", nil], ["sign_in_count", 0], ["slug", "admin-admin"], ["updated_at", Wed, 18 Dec 2013 18:10:07 CET +01:00]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "translations" ("created_at", "interpolations", "is_proc", "key", "locale", "updated_at", "value") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["created_at", Wed, 18 Dec 2013 18:10:07 CET +01:00], ["interpolations", nil], ["is_proc", false], ["key", "hello"], ["locale", "en"], ["updated_at", Wed, 18 Dec 2013 18:10:07 CET +01:00], ["value", "Hello"]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "translations" [0m
+Processing by TraductionsController#update as HTML
+  Parameters: {"key"=>"hello", "value"=>{"en"=>"new hello"}, "id"=>"18"}
+  [1m[35mSetting Load (0.5ms)[0m  SELECT "settings".* FROM "settings" WHERE "settings"."title" = 'SITE_VISIBLE' LIMIT 1
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 22 LIMIT 1[0m
+  [1m[35mSetting Load (0.4ms)[0m  SELECT "settings".* FROM "settings" WHERE "settings"."title" = 'ADMIN_STRONG_AUTH' LIMIT 1
+  [1m[36mTranslation Load (0.4ms)[0m  [1mSELECT "translations".* FROM "translations" WHERE "translations"."key" = 'hello'[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.7ms)[0m  [1mUPDATE "translations" SET "value" = 'new hello', "updated_at" = '2013-12-18 17:10:07.872993' WHERE "translations"."id" = 18[0m
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/traductions
+Completed 302 Found in 10ms (ActiveRecord: 2.8ms)
+  [1m[36m (0.6ms)[0m  [1mSELECT COUNT(*) FROM "translations" [0m
+  [1m[35mTranslation Load (0.5ms)[0m  SELECT "translations".* FROM "translations" WHERE "translations"."id" = $1 LIMIT 1  [["id", 18]]
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.6ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = 'admin@gmail.com' LIMIT 1
+  [1m[36m (0.6ms)[0m  [1mSELECT COUNT(*) FROM "users" WHERE "users"."slug" = 'admin-admin'[0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "users" ("authentication_token", "avatar_content_type", "avatar_file_name", "avatar_file_size", "avatar_updated_at", "birthday_date", "created_at", "current_language", "current_sign_in_at", "current_sign_in_ip", "description", "email", "encrypted_password", "facebook_url", "first_name", "gender", "is_admin", "last_name", "last_sign_in_at", "last_sign_in_ip", "remember_created_at", "reset_password_sent_at", "reset_password_token", "sign_in_count", "slug", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16, $17, $18, $19, $20, $21, $22, $23, $24, $25, $26) RETURNING "id"  [["authentication_token", nil], ["avatar_content_type", nil], ["avatar_file_name", nil], ["avatar_file_size", nil], ["avatar_updated_at", nil], ["birthday_date", nil], ["created_at", Wed, 18 Dec 2013 18:10:07 CET +01:00], ["current_language", nil], ["current_sign_in_at", nil], ["current_sign_in_ip", nil], ["description", nil], ["email", "admin@gmail.com"], ["encrypted_password", "$2a$04$M90E9ZyhZ7LikO1APtp3z.f2vkp4XzWeEnLrV3D3h8u6Zkm8QxNJK"], ["facebook_url", nil], ["first_name", "admin"], ["gender", nil], ["is_admin", true], ["last_name", "admin"], ["last_sign_in_at", nil], ["last_sign_in_ip", nil], ["remember_created_at", nil], ["reset_password_sent_at", nil], ["reset_password_token", nil], ["sign_in_count", 0], ["slug", "admin-admin"], ["updated_at", Wed, 18 Dec 2013 18:10:07 CET +01:00]]
+  [1m[36m (0.3ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "translations" ("created_at", "interpolations", "is_proc", "key", "locale", "updated_at", "value") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["created_at", Wed, 18 Dec 2013 18:10:07 CET +01:00], ["interpolations", nil], ["is_proc", false], ["key", "hello"], ["locale", "en"], ["updated_at", Wed, 18 Dec 2013 18:10:07 CET +01:00], ["value", "Hello"]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.4ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "translations" ("created_at", "interpolations", "is_proc", "key", "locale", "updated_at", "value") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["created_at", Wed, 18 Dec 2013 18:10:07 CET +01:00], ["interpolations", nil], ["is_proc", false], ["key", "hello"], ["locale", "es"], ["updated_at", Wed, 18 Dec 2013 18:10:07 CET +01:00], ["value", "Hola"]]
+  [1m[36m (0.3ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "translations" 
+Processing by TraductionsController#update as HTML
+  Parameters: {"key"=>"hello", "value"=>{"es"=>""}, "id"=>"19"}
+  [1m[36mSetting Load (0.6ms)[0m  [1mSELECT "settings".* FROM "settings" WHERE "settings"."title" = 'SITE_VISIBLE' LIMIT 1[0m
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 23 LIMIT 1
+  [1m[36mSetting Load (0.5ms)[0m  [1mSELECT "settings".* FROM "settings" WHERE "settings"."title" = 'ADMIN_STRONG_AUTH' LIMIT 1[0m
+  [1m[35mTranslation Load (0.4ms)[0m  SELECT "translations".* FROM "translations" WHERE "translations"."key" = 'hello'
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.6ms)[0m  DELETE FROM "translations" WHERE "translations"."id" = $1  [["id", 20]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/traductions
+Completed 302 Found in 9ms (ActiveRecord: 2.9ms)
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "translations" 
+  [1m[36mTranslation Load (0.4ms)[0m  [1mSELECT "translations".* FROM "translations" WHERE "translations"."id" = $1 LIMIT 1[0m  [["id", 19]]
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.6ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'admin@gmail.com' LIMIT 1[0m
+  [1m[35m (0.6ms)[0m  SELECT COUNT(*) FROM "users" WHERE "users"."slug" = 'admin-admin'
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "users" ("authentication_token", "avatar_content_type", "avatar_file_name", "avatar_file_size", "avatar_updated_at", "birthday_date", "created_at", "current_language", "current_sign_in_at", "current_sign_in_ip", "description", "email", "encrypted_password", "facebook_url", "first_name", "gender", "is_admin", "last_name", "last_sign_in_at", "last_sign_in_ip", "remember_created_at", "reset_password_sent_at", "reset_password_token", "sign_in_count", "slug", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16, $17, $18, $19, $20, $21, $22, $23, $24, $25, $26) RETURNING "id"[0m  [["authentication_token", nil], ["avatar_content_type", nil], ["avatar_file_name", nil], ["avatar_file_size", nil], ["avatar_updated_at", nil], ["birthday_date", nil], ["created_at", Wed, 18 Dec 2013 18:10:07 CET +01:00], ["current_language", nil], ["current_sign_in_at", nil], ["current_sign_in_ip", nil], ["description", nil], ["email", "admin@gmail.com"], ["encrypted_password", "$2a$04$fI4HdgkkP3ObAQsLYew73.L6W8u3Fz55sGzbVvrnkJNZPbVTOGiRC"], ["facebook_url", nil], ["first_name", "admin"], ["gender", nil], ["is_admin", true], ["last_name", "admin"], ["last_sign_in_at", nil], ["last_sign_in_ip", nil], ["remember_created_at", nil], ["reset_password_sent_at", nil], ["reset_password_token", nil], ["sign_in_count", 0], ["slug", "admin-admin"], ["updated_at", Wed, 18 Dec 2013 18:10:07 CET +01:00]]
+  [1m[35m (0.3ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.4ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.9ms)[0m  INSERT INTO "translations" ("created_at", "interpolations", "is_proc", "key", "locale", "updated_at", "value") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["created_at", Wed, 18 Dec 2013 18:10:07 CET +01:00], ["interpolations", nil], ["is_proc", false], ["key", "hello"], ["locale", "en"], ["updated_at", Wed, 18 Dec 2013 18:10:07 CET +01:00], ["value", "Hello"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "translations" 
+Processing by TraductionsController#update as HTML
+  Parameters: {"key"=>"hello", "value"=>{"fr"=>"nouveau hello"}, "id"=>"21"}
+  [1m[36mSetting Load (0.5ms)[0m  [1mSELECT "settings".* FROM "settings" WHERE "settings"."title" = 'SITE_VISIBLE' LIMIT 1[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 24 LIMIT 1
+  [1m[36mSetting Load (0.3ms)[0m  [1mSELECT "settings".* FROM "settings" WHERE "settings"."title" = 'ADMIN_STRONG_AUTH' LIMIT 1[0m
+  [1m[35mTranslation Load (0.6ms)[0m  SELECT "translations".* FROM "translations" WHERE "translations"."key" = 'hello'
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "translations" ("created_at", "interpolations", "is_proc", "key", "locale", "updated_at", "value") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["created_at", Wed, 18 Dec 2013 18:10:08 CET +01:00], ["interpolations", nil], ["is_proc", false], ["key", "hello"], ["locale", "fr"], ["updated_at", Wed, 18 Dec 2013 18:10:08 CET +01:00], ["value", "nouveau hello"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/traductions
+Completed 302 Found in 8ms (ActiveRecord: 2.8ms)
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "translations" 
+  [1m[36mTranslation Load (0.4ms)[0m  [1mSELECT "translations".* FROM "translations" WHERE "translations"."id" = $1 LIMIT 1[0m  [["id", 21]]
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.5ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'test@gmail.com' LIMIT 1[0m
+  [1m[35m (0.6ms)[0m  SELECT COUNT(*) FROM "users" WHERE "users"."slug" = 'user-user'
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "users" ("authentication_token", "avatar_content_type", "avatar_file_name", "avatar_file_size", "avatar_updated_at", "birthday_date", "created_at", "current_language", "current_sign_in_at", "current_sign_in_ip", "description", "email", "encrypted_password", "facebook_url", "first_name", "gender", "is_admin", "last_name", "last_sign_in_at", "last_sign_in_ip", "remember_created_at", "reset_password_sent_at", "reset_password_token", "sign_in_count", "slug", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16, $17, $18, $19, $20, $21, $22, $23, $24, $25, $26) RETURNING "id"[0m  [["authentication_token", nil], ["avatar_content_type", nil], ["avatar_file_name", nil], ["avatar_file_size", nil], ["avatar_updated_at", nil], ["birthday_date", nil], ["created_at", Wed, 18 Dec 2013 18:10:08 CET +01:00], ["current_language", nil], ["current_sign_in_at", nil], ["current_sign_in_ip", nil], ["description", nil], ["email", "test@gmail.com"], ["encrypted_password", "$2a$04$EYXRaz9ZrBxAk62/uX7Kau0TZjo7v6FmWHJw78ft2pJzKdyiVmcsS"], ["facebook_url", nil], ["first_name", "user"], ["gender", nil], ["is_admin", false], ["last_name", "user"], ["last_sign_in_at", nil], ["last_sign_in_ip", nil], ["remember_created_at", nil], ["reset_password_sent_at", nil], ["reset_password_token", nil], ["sign_in_count", 0], ["slug", "user-user"], ["updated_at", Wed, 18 Dec 2013 18:10:08 CET +01:00]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.4ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (3.6ms)[0m  INSERT INTO "individual_types" ("created_at", "title", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["created_at", Wed, 18 Dec 2013 18:10:08 CET +01:00], ["title", "test"], ["updated_at", Wed, 18 Dec 2013 18:10:08 CET +01:00]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by IndividualTypesController#new as HTML
+  [1m[35mSetting Load (0.7ms)[0m  SELECT "settings".* FROM "settings" WHERE "settings"."title" = 'SITE_VISIBLE' LIMIT 1
+Completed 200 OK in 10ms (Views: 5.2ms | ActiveRecord: 0.7ms)
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.4ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "individual_types" ("created_at", "title", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["created_at", Wed, 18 Dec 2013 18:10:08 CET +01:00], ["title", "test"], ["updated_at", Wed, 18 Dec 2013 18:10:08 CET +01:00]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by IndividualTypesController#edit as HTML
+  Parameters: {"id"=>"9"}
+  [1m[35mSetting Load (0.4ms)[0m  SELECT "settings".* FROM "settings" WHERE "settings"."title" = 'SITE_VISIBLE' LIMIT 1
+  [1m[36mIndividualType Load (0.6ms)[0m  [1mSELECT "individual_types".* FROM "individual_types" WHERE "individual_types"."id" = $1 LIMIT 1[0m  [["id", "9"]]
+Completed 200 OK in 6ms (Views: 2.3ms | ActiveRecord: 1.1ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "individual_types" ("created_at", "title", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", Wed, 18 Dec 2013 18:10:08 CET +01:00], ["title", "test"], ["updated_at", Wed, 18 Dec 2013 18:10:08 CET +01:00]]
+  [1m[35m (0.3ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM "individual_types" [0m
+Processing by IndividualTypesController#create as HTML
+  Parameters: {"article"=>{"title"=>"test"}}
+  [1m[35mSetting Load (0.5ms)[0m  SELECT "settings".* FROM "settings" WHERE "settings"."title" = 'SITE_VISIBLE' LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.9ms)[0m  INSERT INTO "individual_types" ("created_at", "title", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["created_at", Wed, 18 Dec 2013 18:10:08 CET +01:00], ["title", nil], ["updated_at", Wed, 18 Dec 2013 18:10:08 CET +01:00]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/individual_types
+Completed 302 Found in 6ms (ActiveRecord: 1.8ms)
+  [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM "individual_types" 
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "individual_types" ("created_at", "title", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["created_at", Wed, 18 Dec 2013 18:10:08 CET +01:00], ["title", "test"], ["updated_at", Wed, 18 Dec 2013 18:10:08 CET +01:00]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by IndividualTypesController#update as HTML
+  Parameters: {"individual_type"=>{"title"=>"new_test"}, "id"=>"12"}
+  [1m[35mSetting Load (0.7ms)[0m  SELECT "settings".* FROM "settings" WHERE "settings"."title" = 'SITE_VISIBLE' LIMIT 1
+  [1m[36mIndividualType Load (0.9ms)[0m  [1mSELECT "individual_types".* FROM "individual_types" WHERE "individual_types"."id" = $1 LIMIT 1[0m  [["id", "12"]]
+  [1m[35m (0.3ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.5ms)[0m  [1mUPDATE "individual_types" SET "title" = 'new_test', "updated_at" = '2013-12-18 17:10:08.164722' WHERE "individual_types"."id" = 12[0m
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/individual_types
+Completed 302 Found in 10ms (ActiveRecord: 2.6ms)
+  [1m[36mIndividualType Load (0.5ms)[0m  [1mSELECT "individual_types".* FROM "individual_types" WHERE "individual_types"."id" = $1 LIMIT 1[0m  [["id", 12]]
+  [1m[35m (0.2ms)[0m  ROLLBACK

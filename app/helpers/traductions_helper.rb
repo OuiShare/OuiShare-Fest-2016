@@ -1,0 +1,2 @@
+module TraductionsHelper
+end

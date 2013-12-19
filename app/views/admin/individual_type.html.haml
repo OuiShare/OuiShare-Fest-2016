@@ -1,0 +1,16 @@
+.container
+  .row
+    .col-md-12
+      %h1 
+        Manage
+        = @individual_type.title
+      = link_to "Individuals", individuals_path
+
+.container
+  / upper section
+  .row
+    .col-md-3
+      = render '/admin/partial/menu', :active => 'individuals', :active_sub_panel => @individual_type.title
+      
+    .col-md-9
+      = render "/individual_types/partials/show_partial", :admin_panel => true
