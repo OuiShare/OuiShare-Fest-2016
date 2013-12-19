@@ -4,7 +4,9 @@ class HomeController < ApplicationController
   before_filter :contact_captcha, :only => [:contact, :contact_email]
   
   def index
-    @team_members = IndividualType.find_by_title('Team').get_members
+    if IndividualType.find_by_title('Team')
+      @team_members = IndividualType.find_by_title('Team').get_members
+    end
   end
 
   def faq
