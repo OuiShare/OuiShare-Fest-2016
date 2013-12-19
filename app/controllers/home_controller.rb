@@ -5,6 +5,7 @@ class HomeController < ApplicationController
   
   def index
     @team_members = IndividualType.find_by_title('Team').get_members
+    @speakers = IndividualType.find_by_title('Speakers').get_members
   end
 
   def faq
