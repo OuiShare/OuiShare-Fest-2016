@@ -1,0 +1,16 @@
+.container
+  .row
+    .col-md-12
+      %h1
+        Traductions index
+.container
+  .row
+    .col-md-3
+      = render '/admin/partial/menu', :active => 'settings_list'
+    .col-md-9  
+      %strong        
+        %i.glyphicon.glyphicon-link
+        Settings list
+      %hr/
+      %br
+      = render "settings", :settings => @settings

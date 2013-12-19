@@ -1,0 +1,11 @@
+.form-group.individual-type-checkboxes#indiv_types_checkboxes_area
+  .row
+    .col-lg-12      
+      - IndividualType.all.each do |type|        
+        %label.btn
+          = t(type.title)
+          - if defined?(is_checked) && is_checked == type.title
+            
+            = check_box_tag "individual_type", type.id, IndividualTypeAssociation.find_by_individual_id_and_individual_type_id(@individual.id, type.id), :name => '[individual_types][]', :class => "individual-type-checkbox", :checked => true
+          - else
+            = check_box_tag "individual_type", type.id, IndividualTypeAssociation.find_by_individual_id_and_individual_type_id(@individual.id, type.id), :name => '[individual_types][]', :class => "individual-type-checkbox", :checked => false

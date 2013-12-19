@@ -1,0 +1,12 @@
+.container
+  .row
+    .col-md-12
+      %h1 
+        = @individual_type.title     
+
+.container
+  / upper section
+  .row     
+    .col-md-12
+      = render "/individual_types/partials/show_partial", :admin_panel => false
+      

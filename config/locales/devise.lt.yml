@@ -1,0 +1,34 @@
+lt:
+  devise:
+    sessions:
+      link: 'Prisijungti'
+      signed_in: 'Prisijungėte sėkmingai.'
+      signed_out: 'Atsijungėte sėkmingai.'
+      unauthenticated: 'Prieš tęsiant reikia prisijungti arba užsiregistruoti.'
+      unconfirmed: 'Prieš tęsiant reikia patvirtinti savo vartotoją.'
+      locked: 'Jūsų prisijungimas blokuojamas.'
+      invalid: 'Neteisingas el. paštas arba slaptažodis.'
+      invalid_token: 'Neteisingas aktyvacijos kodas.'
+      timeout: 'Jūsų prisijungimo laikas baigėsi, prašome prisijungti iš naujo.'
+      inactive: 'Jūsų prisijungimas dar neaktyvuotas.'
+    passwords:
+      link: 'Pamiršote slaptažodį?'
+      send_instructions: 'Jūs gausite el. laišką su slaptažodžio priminimo instrukcijomis kelių minučių bėgyje.'
+      updated: 'Jūsų slaptažodis sėkmingai pakeistas. Jūs dabar esate prisijungęs.'
+    confirmations:
+      link: "Negavote vartotojo patvirtinimo instrukcijų?"
+      send_instructions: 'Už keletos minučių el. paštu gausite instrukcijas, kaip patvirtinti savo vartotoją.'
+      confirmed: 'Jūsų vartotojas sėkmingai patvirtintas. Dabar jūs esate prisijungę.'
+    registrations:
+      link: 'Užsiregistruoti'
+      signed_up: 'Jūs sėkmingai užsiregistravote. Jeigu nustatytą, tai gausite patvirtinimo laišką el. paštu.'
+      updated: 'Sėkmingai atnaujinote vartotojo informaciją.'
+      destroyed: 'Viso geriausio! Jūsų vartotojas buvo pašalintas, tikimės kad ateityje naudositės mūsų paslaugomis.'
+    unlocks:
+      link: "Negavote vartotojo atblokavimo instrukcijų?"
+      send_instructions: 'Už keletos minučių el. paštu gausite instrukcijas, kaip atblokuoti savo prisijungimą.'
+      unlocked: 'Jūsų vartotojas sėkmingai atblokuotas. Dabar galite prisijungti.'
+    mailer:
+      confirmation_instructions: 'Vartotojo patvirtinimo instrukcija'
+      reset_password_instructions: 'Slaptažodžio priminimo instrukcija'
+      unlock_instructions: 'Vartotojo atblokavimo instrukcija'

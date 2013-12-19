@@ -1,0 +1,11 @@
+.container
+  %h1
+    Index of all users:
+
+  %p  
+    -@users.each do |user|
+      %ul
+        %li
+          = user.email + ' '
+          = user.slug
+          =link_to user.email , user_path(user)

@@ -1,0 +1,57 @@
+%strong 
+  - if admin_panel      
+    = link_to new_individual_path(:is_checked => @individual_type.title) do
+      %i.glyphicon.glyphicon-plus-sign
+      Create new individual to 
+  = @individual_type.title
+  group
+
+  %hr/      
+  %br
+  %table.table.table-hover
+    %thead
+      %tr
+        %th #
+        %th First Name
+        %th Last Name
+        %th Email
+        %th Birthday
+        %th Twitter account
+        %th Company name
+        %th Description
+        %th Function
+        %th URL
+        - if admin_panel
+          %th Actions
+    %tbody
+    - if !@members.blank?
+      - @members.each do |individual|
+        %tr
+          %td
+            = image_tag individual.attachment.url(:small)
+          %td
+            = individual.first_name
+          %td 
+            = individual.last_name
+          %td
+            = individual.email
+          %td
+            = individual.birthday
+          %td
+            = individual.twitter_account
+          %td
+            = individual.company_name
+          %td
+            = individual.description
+          %td
+            = individual.function
+          %td
+            = individual.url
+          - if admin_panel
+            %td 
+              = link_to 'Show', individual_path(individual)
+              - if current_user.is_admin
+                %br
+                = link_to 'Edit', edit_individual_path(individual)
+                %br
+                = link_to 'Delete', individual_path(individual), 'data-method' => :delete, :confirm => 'Are you sure ?'        

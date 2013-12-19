@@ -1,0 +1,33 @@
+.modal.fade#contact_modal
+  .modal-dialog
+    .modal-content
+      .modal-header
+        %button.close{"aria-hidden" => "true", "data-dismiss" => "modal", :type => "button"} &times;
+        %h4.modal-title Contact us
+      -@contact_captcha = NegativeCaptcha.new(secret: NEGATIVE_CAPTCHA_SECRET,spinner: request.remote_ip, fields: [:name, :email, :message], params: params)
+
+      - user_name = current_user.fullname if current_user
+      - user_email = current_user.email if current_user
+      - user_name ||= ""
+      - user_email ||= ""
+
+      = form_tag home_contact_path do 
+        = raw negative_captcha(@contact_captcha)
+        .modal-body                
+          .form-group.row
+            = negative_label_tag(@contact_captcha, :name,"Your name")
+            = negative_text_field_tag @contact_captcha, :name, :class => 'form-control', :value => user_name
+            
+          .form-group.row            
+            = negative_label_tag(@contact_captcha, :name,'Your email')            
+            = negative_text_field_tag @contact_captcha, :email, :class => 'form-control', :value => user_email
+          .form-group.row            
+            = negative_label_tag(@contact_captcha, :name,"Your message")
+            = negative_text_area_tag @contact_captcha, :message, :class => 'form-control', :rows => 5, :cols => 10
+                
+        .modal-footer
+          %button{:type => "button", :class => "btn btn-default", "data-dismiss" => "modal"}
+            Cancel
+          
+          %button{:type => "submit", :class => "btn btn-primary"}
+            Send

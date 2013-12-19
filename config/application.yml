@@ -1,0 +1,15 @@
+# Company Information
+COMPANY_PHONE_NUMBER: "(+33) 1 82 83 17 80"
+COMPANY_CONTACT_MAIL: "contact@pitch-me.fr"
+COMPANY_TWITTER_ACCOUNT: "@pitchme"
+COMPANY_FACEBOOK_PAGE: "https://www.facebook.com/pitchme"
+COMPANY_ADDRESS_1: "18, rue Yves Toudic"
+COMPANY_ADDRESS_2: "75010 Paris"
+COMPANY_ADDRESS_3: "France"
+COMPANY_LAT: "48.869932"
+COMPANY_LONG: "2.363753"
+
+# Facebook : Pitchme-rails-backbone
+FACEBOOK_APP_ID_DEV: ""
+FACEBOOK_APP_SECRET_DEV: ""
+
