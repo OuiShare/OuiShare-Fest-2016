@@ -47,23 +47,24 @@
     %br
     %hr
     %br
-    .ch-grid
-      - @displayed_speakers.each do |speaker|
-        .col-lg-3
-          %li
-            = render "/individuals/partials/speaker_display", :speaker => speaker
-      - if !@hidden_speakers.blank?
-        #allspeakers{style: "display: none;"}  
-          - @hidden_speakers.each do |speaker|
-            .col-lg-3
-              %li
-                = render "/individuals/partials/speaker_display", :speaker => speaker              
-        %div
-          %a#btn_showspeakers_down
-            %button.btn.btn-embossed.btn-primary Show all the speakers
-        / %div
-        /   %a#btn_showspeakers_up{:style => "display:none;"}
-        /     %button.btn.btn-embossed.btn-primary Hide some speakers
+    -if !@displayed_speakers.blank?
+      .ch-grid
+        - @displayed_speakers.each do |speaker|
+          .col-lg-3
+            %li
+              = render "/individuals/partials/speaker_display", :speaker => speaker
+        - if !@hidden_speakers.blank?
+          #allspeakers{style: "display: none;"}  
+            - @hidden_speakers.each do |speaker|
+              .col-lg-3
+                %li
+                  = render "/individuals/partials/speaker_display", :speaker => speaker              
+          %div
+            %a#btn_showspeakers_down
+              %button.btn.btn-embossed.btn-primary Show all the speakers
+          / %div
+          /   %a#btn_showspeakers_up{:style => "display:none;"}
+          /     %button.btn.btn-embossed.btn-primary Hide some speakers
 
 #anc_getinvolved{style: "padding-top:20px;"}
 
