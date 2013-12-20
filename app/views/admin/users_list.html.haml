@@ -35,6 +35,6 @@
               %td 
                 - if user != current_user
                   - if user.is_admin 
-                    = button_to 'Demote admin', toggle_admin_admin_path(user), :class => "btn btn-warning"
+                    = button_to 'Revoke admin', toggle_admin_admin_path(user), :class => "btn btn-warning"
                   - else
-                    = button_to 'Promote admin', toggle_admin_admin_path(user), :class => "btn btn-success"
+                    = button_to 'Grant admin', toggle_admin_admin_path(user), :class => "btn btn-success"

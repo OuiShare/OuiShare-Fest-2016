@@ -1,8 +1,4 @@
-.container
-  .row
-    .col-md-12
-      %h1
-        Traductions index
+%br
 .container
   .row
     .col-md-3
@@ -11,29 +7,31 @@
       %strong
         = link_to new_traduction_path do
           %i.glyphicon.glyphicon-plus-sign
-          Create new Trad
+          Create a new translation key
       %hr/
-      %br
       -@traduction_keys.each do |translation|    
-        %h3
-          =translation.key
+        %p
           - trans_id = Translation.find_by_key(translation.key)
-          = link_to "Edit", edit_traduction_path(trans_id)
-          = link_to "Delete", traduction_path(trans_id), "data-method" => :delete, :confirm => "Are you sure?"
         %table.table
           %thead
+            %th.text-center
+              %code
+                = translation.key
             %th
-              Locale
-            %th
-              Value
+              %i.glyphicon.glyphicon-edit
+              = link_to "Edit", edit_traduction_path(trans_id)
+              &nbsp;
+              %i.glyphicon.glyphicon-remove
+              = link_to "Delete", traduction_path(trans_id), "data-method" => :delete, :confirm => "Are you sure?"
           %tbody
             -Translation.where(:key => translation.key).order("locale ASC").each do |translation|
               %tr
-                %td
-                  = image_tag "/assets/flags_test/" + translation.locale + ".png"
+                %td.col-md-2.text-center
+                  = image_tag "/assets/flags_test/" + translation.locale + ".png", :width => "32px"
+                  %span.badge
+                    = translation.locale
                 %td
                   =translation.value
-        %hr
   
       
 

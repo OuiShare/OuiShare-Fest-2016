@@ -93,7 +93,7 @@ end
 gem 'google-analytics-rails'
 
 #google Map gem
-gem 'gmaps4rails'
+gem 'gmaps4rails', '1.5.6'
 
 #Geolocalisation IP
 gem 'geoip'
