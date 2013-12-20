@@ -1,34 +1,50 @@
+%br
 .container
+  / upper section
   .row
-    .col-md-12
-      %h1 
-        Show Individual
-      %hr
-.container
-  .row
-    .col-md-12
-      %br
-      = image_tag @individual.attachment.url(:small)
-      %br
-      = @individual.first_name
-      %br
-      = @individual.last_name
-      %br
-      = @individual.email
-      %br
-      = @individual.birthday
-      %br
-      = @individual.twitter_account
-      %br
-      = @individual.company_name
-      %br
-      = @individual.description
-      %br
-      = @individual.function
-      %br
-      = @individual.url
-      %br
-
-      = link_to 'Edit', edit_individual_path(@individual)
-      = " - "
-      = link_to 'Return to index', individuals_path
+    .col-md-3
+      = render '/admin/partial/menu', :active => 'admin_index'
+    .col-md-9
+      %strong
+        %i.glyphicon.glyphicon-user
+        =@individual.fullname
+        profile
+      %hr/
+      .container
+        .row
+          .col-md-2
+            %strong
+              = image_tag "/assets/flat_icons/29.png"
+              = link_to 'Edit this profile', edit_individual_path(@individual)
+          .col-md-2
+            %strong
+              = image_tag "/assets/flat_icons/47.png"
+              = link_to 'Return to index', individuals_list_admin_index_path
+        %hr
+        
+        .row
+          .col-md-3
+            %br
+            = image_tag @individual.attachment.url(:custom)
+          .col-md-9
+            %br
+            = @individual.first_name
+            %br
+            = @individual.last_name
+            %br
+            = @individual.email
+            %br
+            = @individual.birthday
+            %br
+            = @individual.twitter_account
+            %br
+            = @individual.company_name
+            %br
+            = @individual.description
+            %br
+            = @individual.function
+            %br
+            = @individual.url
+            %br         
+            
+            

@@ -3,7 +3,9 @@ class HomeController < ApplicationController
   # For negative captcha
   before_filter :contact_captcha, :only => [:contact, :contact_email]
   
-  def index
+  require 'eventbrite-client'
+  
+  def index    
 
     if IndividualType.find_by_title('Team')
       @team_members = IndividualType.find_by_title('Team').get_members
@@ -20,6 +22,14 @@ class HomeController < ApplicationController
       @displayed_speakers = @speakers.first(displayed_speakers_number)
       @hidden_speakers = @speakers.last(@speakers.count - displayed_speakers_number)
     end
+
+    eventbrite_instance = connect_to_eventbrite()
+    begin
+      @ouishare_fest_attendees = eventbrite_instance.event_list_attendees({ "id" => ENV["EVENTBRITE_EVENT_ID"] })
+    rescue
+      @ouishare_fest_attendees = nil
+    end
+  
   end
 
   def faq
@@ -74,4 +84,11 @@ private
       params: params
     )
   end  
+
+  def connect_to_eventbrite
+
+    eb_auth_tokens = { app_key: ENV['EVENTBRITE_APP_KEY'],
+                   user_key: ENV['EVENTBRITE_USER_KEY']}
+    eb_client = EventbriteClient.new(eb_auth_tokens)
+  end
 end

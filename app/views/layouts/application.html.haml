@@ -9,7 +9,9 @@
     = analytics_init if Rails.env.production?
   %body
     = render 'layouts/flash_messages'
-    = render 'layouts/header'
+    - if controller.action_name != "site_off"
+      = render 'layouts/header'
     = yield
-    = render 'layouts/footer'
+    - if controller.action_name != "site_off"
+      = render 'layouts/footer'
 

@@ -93,6 +93,9 @@ GEM
       warden (~> 1.2.3)
     diff-lcs (1.2.5)
     erubis (2.7.0)
+    eventbrite-client (0.1.4)
+      httparty (~> 0.8.0)
+      tzinfo (~> 0.3.22)
     execjs (2.0.2)
     factory_girl (4.3.0)
       activesupport (>= 3.0.0)
@@ -129,6 +132,9 @@ GEM
       haml (>= 4.0.0.rc.1)
       hpricot (~> 0.8.6)
       ruby_parser (~> 3.1.1)
+    httparty (0.8.3)
+      multi_json (~> 1.0)
+      multi_xml
     httpauth (0.2.0)
     httpclient (2.3.4.1)
     i18n (0.6.1)
@@ -153,6 +159,7 @@ GEM
     mime-types (1.25.1)
     mini_portile (0.5.2)
     multi_json (1.8.2)
+    multi_xml (0.5.5)
     multipart-post (1.2.0)
     negative_captcha (0.3.3)
       actionpack
@@ -291,6 +298,7 @@ DEPENDENCIES
   bootstrap-sass (~> 3.0.3.0)
   coffee-rails (~> 3.2.1)
   devise
+  eventbrite-client
   factory_girl_rails
   fb_graph
   figaro
