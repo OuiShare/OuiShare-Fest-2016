@@ -24,5 +24,5 @@ def secure_token
   end
 end
 
-# PitchmeRailsBackbone::Application.config.secret_token = 'eb9e96d1b499081997d1b187ecc2ac07a8d19b307ddd240160b072208ff44ed2938dd1ed9947a202f7e65bff9484fcb30125921acbdd2310005500c3e3329892'
-PitchmeRailsBackbone::Application.config.secret_token = secure_token
+# OuiShareFest::Application.config.secret_token = 'eb9e96d1b499081997d1b187ecc2ac07a8d19b307ddd240160b072208ff44ed2938dd1ed9947a202f7e65bff9484fcb30125921acbdd2310005500c3e3329892'
+OuiShareFest::Application.config.secret_token = secure_token
