@@ -1,0 +1,48 @@
+%table.table.table-hover.table-nonfluid
+  %thead
+    %tr
+      %th #
+      %th Identity
+      %th Information
+      %th Description
+      - if admin_panel
+        %th Actions
+  %tbody
+    - individuals.each do |individual|
+      %tr
+        %td
+          = image_tag individual.attachment.url(:small)
+        %td
+
+          = individual.fullname
+          - if !individual.email.blank?
+            %br
+            = individual.email
+          - if !individual.birthday.blank?
+            %br
+            Birthday : 
+            = individual.birthday           
+        %td
+          - if !individual.twitter_account.blank?
+            %a{href: "http://www.twitter.com/" + individual.twitter_account, target: "_blank"}
+              = "@" + individual.twitter_account
+          - if !individual.company_name.blank?
+            %br
+            = individual.company_name
+          - if !individual.function.blank?
+            %br
+            = individual.function
+          - if !individual.url.blank?
+            %br
+            %a{href: individual.url, target: "_blank"}
+              = individual.url
+        %td
+          - if !individual.description.blank?
+            = truncate(individual.description, :length  => 100)
+        %td 
+          = link_to 'Show', individual_path(individual)
+          - if admin_panel
+            %br
+            = link_to 'Edit', edit_individual_path(individual)
+            %br
+            = link_to 'Delete', individual_path(individual), 'data-method' => :delete, :confirm => 'Are you sure ?'        

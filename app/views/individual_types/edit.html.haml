@@ -1,5 +1,11 @@
+%br
 .container
-  %h1 
-    Edit Type
-
-  = render "form"
+  .row
+    .col-md-3
+      = render '/admin/partial/menu', :active => 'traductions'
+    .col-md-9  
+      %strong    
+        %i.glyphicon.glyphicon-edit
+        Edit a new individual type
+        %hr
+      = render "form"

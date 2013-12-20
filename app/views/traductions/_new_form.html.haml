@@ -1,32 +1,36 @@
 = form_tag traductions_path do |f|
-  .form-group.row
-    .col-lg-1
-      =label_tag "Key:"
-    .col-lg-5
-      - if controller.action_name == "edit"
-        = text_field_tag :key,@translation.key, :class => "form-control", :disabled => true 
-      -else
-        = text_field_tag :key, "", :class => "form-control"
+  .form-group.row    
+    .col-lg-2.text-center
+      =label_tag "New Key:"
+    .col-lg-10      
+      = text_field_tag :key, "", :class => "form-control"
   -@availables_languages.each do |locale|
     
-    - if controller.action_name == "edit"
-      - if current_translation = Translation.find_by_key_and_locale(@translation.key, locale.to_s)
-        .form-group.row
-          .col-lg-1
-            = image_tag "/assets/flags_test/" + locale.to_s + ".png"
-          .col-lg-5
-            = text_field_tag :value,current_translation.value, :class => "form-control", :name => "[value][" + locale.to_s + "]"
-      - else
-        .form-group.row
-          .col-lg-1
-            = image_tag "/assets/flags_test/" + locale.to_s + ".png"
-          .col-lg-5
-            = text_field_tag :value,"", :class => "form-control", :name => "[value][" + locale.to_s + "]"
-    - else
-      .form-group.row
-        .col-lg-1
-          = image_tag "/assets/flags_test/" + locale.to_s + ".png"
-        .col-lg-5
-          = text_field_tag :value,"", :class => "form-control", :name => "[value][" + locale.to_s + "]"
+    / - if controller.action_name == "edit"
+    /   - if current_translation = Translation.find_by_key_and_locale(@translation.key, locale.to_s)
+    /     .form-group.row
+    /       .col-lg-2.text-center
+    /         = image_tag "/assets/flags_test/" + locale.to_s + ".png", :width => "32px"
+    /         %span.badge
+    /           = current_translation.locale    
+    /       .col-lg-10
+    /         = text_field_tag :value,current_translation.value, :class => "form-control", :name => "[value][" + locale.to_s + "]"
+    /   - else
+    /     .form-group.row
+    /       .col-lg-2.text-center
+    /         = image_tag "/assets/flags_test/" + locale.to_s + ".png", :width => "32px"
+    /         %span.badge
+    /           = current_translation.locale  
+    /       .col-lg-10
+    /         = text_field_tag :value,"", :class => "form-control", :name => "[value][" + locale.to_s + "]"
+    / - else
+    .form-group.row
+      .col-lg-2.text-center
+        = image_tag "/assets/flags_test/" + locale.to_s + ".png", :width => "32px"
+        %span.badge
+          = locale
+      .col-lg-10
+        = text_field_tag :value,"", :class => "form-control", :name => "[value][" + locale.to_s + "]"
   .form-group.row
-    = submit_tag "Save Trad"
+    .col-lg-offset-2.col-lg-10.text-center
+      = submit_tag "Save Trad", :class => "btn btn-success"

@@ -1,4 +1,11 @@
+%br
 .container
-  %h1 
-    Create New Type
-  = render "form"
+  .row
+    .col-md-3
+      = render '/admin/partial/menu', :active => 'traductions'
+    .col-md-9  
+      %strong    
+        %i.glyphicon.glyphicon-edit
+        Create a new individual type
+        %hr
+      = render "form"

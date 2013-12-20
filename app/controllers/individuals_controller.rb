@@ -24,9 +24,9 @@ class IndividualsController < ApplicationController
 
     if @individual.save      
       updateIndividualTypes(params[:individual_types])      
-      redirect_to individuals_path, :notice => 'Creation successfull'
+      redirect_to individuals_list_admin_index_path, :notice => 'Creation successfull'
     else
-      redirect_to individuals_path, :alert => 'An error occured'
+      redirect_to individuals_list_admin_index_path, :alert => 'An error occured'
     end
 
   end
@@ -40,9 +40,9 @@ class IndividualsController < ApplicationController
     @individual = Individual.find_by_slug(params[:id])
     if @individual.update_attributes(params[:individual])      
       updateIndividualTypes(params[:individual_types])      
-      redirect_to individual_path(@individual), :notice => 'Update successfull'
+      redirect_to individuals_list_admin_index_path, :notice => 'Update successfull'
     else
-      redirect_to individual_path(@individual), :alert => 'An error occured'
+      redirect_to individuals_list_admin_index_path, :alert => 'An error occured'
     end
 
   end
@@ -50,9 +50,9 @@ class IndividualsController < ApplicationController
   def destroy
     @individual = Individual.find_by_slug(params[:id])
     if @individual.destroy 
-      redirect_to individuals_path, :notice => 'Deleted successfully'
+      redirect_to individuals_list_admin_index_path, :notice => 'Deleted successfully'
     else
-      redirect_to individuals_path, :alert => 'An error occured'
+      redirect_to individuals_list_admin_index_path, :alert => 'An error occured'
     end
   end
   private

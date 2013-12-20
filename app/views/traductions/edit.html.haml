@@ -1,3 +1,12 @@
+%br
 .container
-  %h1 Traductions#edit
-  =render "edit_form"
+  .row
+    .col-md-3
+      = render '/admin/partial/menu', :active => 'traductions'
+    .col-md-9  
+      %strong    
+        %i.glyphicon.glyphicon-edit
+        Edit translation key    
+        %hr
+      =render "edit_form"  
+  
