@@ -10,6 +10,8 @@
     - if !@individual.attachment.blank?
       = image_tag @individual.attachment.url(:small)
     = f.file_field :attachment
+    %span.help-block
+      The image size should be at least 220x220 to have an optimal display
   .form_group
     = f.label :twitter_account, 'Twitter account'
     = f.text_field :twitter_account, :class => "form-control", :placeholder => "Twitter account without @"
