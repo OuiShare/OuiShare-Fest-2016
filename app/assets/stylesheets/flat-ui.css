@@ -4152,7 +4152,7 @@ a.list-group-item.active > .badge,
 }
 .nav-pills > li.active > a,
 .nav-pills > li.active > a:hover {
-  background-color: #16a085;
+  background-color: #1D7E6B;
 }
 @media (max-width: 480px) {
   .nav-pills > li {
@@ -4183,7 +4183,7 @@ a.list-group-item.active > .badge,
   background-color: #48c9b0;
 }
 .nav-pills > li > a:active {
-  background-color: #16a085;
+  background-color: #1B836E;
 }
 @media (max-width: 480px) {
   .nav-pills > li > a {
