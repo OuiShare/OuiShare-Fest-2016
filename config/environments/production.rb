@@ -57,13 +57,13 @@ PitchmeRailsBackbone::Application.configure do
   config.action_mailer.delivery_method = :smtp
 
   config.action_mailer.smtp_settings = {
-  address: "",
+  address: ENV["MAILER_SMTP_ADDRESS"],
   port: 587,
-  domain: "",
+  domain: ENV["MAILER_DOMAIN"],
   authentication: "plain",
   enable_starttls_auto: true,
-  user_name: "",
-  password: ""
+  user_name: ENV["MAILER_USERNAME"],
+  password: ENV["MAILER_PASSWORD"]
   }
 
   ActionMailer::Base.default :from => "Pitch Me <contact@pitch-me.fr>"

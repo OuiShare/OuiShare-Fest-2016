@@ -15,8 +15,14 @@ $(document).ready ->
     , 900, "swing", ->
       window.location.hash = target
 
-  $("#btn_showspeakers").click ->
+  $("#btn_showspeakers_down").click ->
     $("#allspeakers").slideDown "slow"
-    $("#btn_showspeakers").hide()
+    $("#btn_showspeakers_down").hide()
+    # $("#btn_showspeakers_up").show()
+
+  # $("#btn_showspeakers_up").click ->
+  #   $("#allspeakers").slideUp "slow"
+  #   $("#btn_showspeakers_up").hide()
+  #   $("#btn_showspeakers_down").show()
 
 

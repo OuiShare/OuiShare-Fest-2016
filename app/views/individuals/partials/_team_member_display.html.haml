@@ -1,0 +1,23 @@
+.ch-item{style: "background-image:url(" + team_member.attachment.url(:custom) + ")"}
+  .ch-info
+    - if !team_member.twitter_account.blank?
+      %a{href: "http://www.twitter.com/" + team_member.twitter_account, target: "_blank"}
+        %h3
+          = team_member.fullname
+    - else
+      %h3
+        = team_member.fullname
+    - if !team_member.twitter_account.blank?
+      %p
+        %a{href: "http://www.twitter.com/" + team_member.twitter_account, target: "_blank"}
+          = "@" + team_member.twitter_account
+%h6
+  %b
+  = team_member.fullname
+  %br/
+  = team_member.function
+  %br/
+  %br/
+  %small 
+    = team_member.description
+    /= t('bio_' + team_member.first_name + team_member.last_name)
