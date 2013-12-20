@@ -1,5 +1,15 @@
+/ .container
+/   %h1 
+/     Create a new Traduction
+/   = render "new_form"
+%br
 .container
-  %h1 
-    Create a new Traduction
-  = render "new_form"
-  
+  .row
+    .col-md-3
+      = render '/admin/partial/menu', :active => 'traductions'
+    .col-md-9  
+      %strong    
+        %i.glyphicon.glyphicon-edit
+        Create a new Traduction   
+        %hr
+      =render "new_form"  

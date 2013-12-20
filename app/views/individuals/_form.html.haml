@@ -21,7 +21,8 @@
     = f.text_area :description, :class => 'form-control'
   .form-group
     = f.label :birthday, 'Birthday'
-    = f.date_select :birthday, :class => 'form-control'
+    = f.date_select :birthday,{:class => 'form-control', :start_year => 1950, :include_blank => true, :default => nil}
+    / = f.date_select :birthday, {:include_blank => true, :default => nil}
   .form-group.individual-email-zone
     = f.label :email, 'Email'
     = f.text_field :email, :class => "form-control", :required => true

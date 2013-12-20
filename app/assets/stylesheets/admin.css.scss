@@ -2,11 +2,28 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.nav.nav-pills.nav-stacked{
+.nav.nav-stacked{
   li{
-    .nav.nav-pills.nav-stacked{   
+    &.active{
+      a.main-list{
+        background-color: #e7e7e7;
+      }
+    }  
+    .nav.nav-stacked{   
       margin-top: 2px;  
       padding-left: 40px;
     }
   }
+  ul{
+    li{
+      a{
+        background-color: #FFFFFF;
+      }
+      &.active{
+        a{
+          background-color: #e7e7e7;
+        }
+      }
+    }
+  }        
 }

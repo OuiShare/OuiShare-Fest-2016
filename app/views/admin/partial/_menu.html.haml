@@ -2,34 +2,35 @@
   %i.glyphicon.glyphicon-briefcase
   Toolbox
 %hr/
-%ul.nav.nav-pills.nav-stacked
-  %li{:class => ('active' if active == 'admin_index')}
-    = link_to admin_index_path do
-      %i.glyphicon.glyphicon-flash
-      Admin Panel
-  %li{:class => ('active' if active == 'individuals')}
-    = link_to individuals_list_admin_index_path do
-      %i.glyphicon.glyphicon-flash
-      Manage Individuals
-    %ul.nav.nav-pills.nav-stacked.nested_list
-      - IndividualType.all.each do |type|
-        %li{:class => ('active' if defined?(active_sub_panel) && active_sub_panel == type.title)}
-          = link_to type.title, individual_type_admin_path(type)
-      
-  %li{:class => ('active' if active == 'individual_types')}
-    = link_to individual_types_list_admin_index_path do
-      %i.glyphicon.glyphicon-record
-      Manage Individuals Types
-  %li{:class => ('active' if active == 'users_list')}
-    = link_to users_list_admin_index_path do
-      %i.glyphicon.glyphicon-user
-      Manage Users
-  %li{:class => ('active' if active == 'traductions')}
-    = link_to traductions_path do
-      %i.glyphicon.glyphicon-globe
-      Manage Translations
-  %li{:class => ('active' if active == 'settings_list')}
-    = link_to settings_list_admin_index_path do
-      %i.glyphicon.glyphicon-cog
-      Global settings      
+.tabbable
+  %ul.nav.nav-stacked
+    %li{:class => ('active' if active == 'admin_index')}
+      = link_to admin_index_path, :class => "main-list" do
+        %i.glyphicon.glyphicon-flash
+        Admin Panel
+    %li{:class => ('active' if active == 'individuals')}
+      = link_to individuals_list_admin_index_path, :class => "main-list" do
+        %i.glyphicon.glyphicon-flash
+        Manage Individuals
+      %ul.nav.nav-stacked.nested_list
+        - IndividualType.all.each do |type|
+          %li{:class => ('active' if defined?(active_sub_panel) && active_sub_panel == type.title)}
+            = link_to type.title, individual_type_admin_path(type)
+        
+    %li{:class => ('active' if active == 'individual_types')}
+      = link_to individual_types_list_admin_index_path, :class => "main-list" do
+        %i.glyphicon.glyphicon-record
+        Manage Individuals Types
+    %li{:class => ('active' if active == 'users_list')}
+      = link_to users_list_admin_index_path, :class => "main-list" do
+        %i.glyphicon.glyphicon-user
+        Manage Users
+    %li{:class => ('active' if active == 'traductions')}
+      = link_to traductions_path, :class => "main-list" do
+        %i.glyphicon.glyphicon-globe
+        Manage Translations
+    %li{:class => ('active' if active == 'settings_list')}
+      = link_to settings_list_admin_index_path, :class => "main-list" do
+        %i.glyphicon.glyphicon-cog
+        Global settings      
  

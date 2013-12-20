@@ -8,10 +8,10 @@
     .col-md-3
       = render '/admin/partial/menu', :active => 'individual_types'
     .col-md-9    
-      %strong
+      %b
         =link_to new_individual_type_path do
           %i.glyphicon.glyphicon-plus-sign
-          Create new Type
+          Create a new Individual Type
       %hr/
       %br
       = render '/individual_types/partials/index_partial', :admin_panel => true

@@ -7,7 +7,7 @@ class AdminMailer < ActionMailer::Base
     @message = message unless !message
     @name = name unless !name
     @email = email unless !email       
-    mail(to: "contact@pitch-me.fr", subject: '[Pitch Me] ' + 'New contact from ' + @name).deliver
+    mail(to: "frederic.grais@gmail.com", subject: '[Pitch Me] ' + 'New contact from ' + @name).deliver
     
   end
 
