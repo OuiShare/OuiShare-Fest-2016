@@ -100,3 +100,6 @@ gem 'geoip'
 
 #Gem pour securiser les params
 gem 'strong_parameters'
+
+#Gem API with eventbrite
+gem 'eventbrite-client'
