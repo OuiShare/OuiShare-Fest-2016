@@ -31,12 +31,14 @@
             =t('blog')
         %li
           = select_languages
-        - if current_user && current_user.is_admin
-          %li
-            = link_to admin_index_path do
-              %i.glyphicon.glyphicon-cog
+        - if current_user          
+          - if current_user.is_admin
+            %li
+              = link_to admin_index_path do
+                %i.glyphicon.glyphicon-cog
           %li
             = link_to logout_path, :method => :delete do
               %i.glyphicon.glyphicon-remove
+            
 
 #anc_about

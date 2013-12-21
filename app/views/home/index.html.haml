@@ -43,7 +43,7 @@
 
 .container.sinfo
   .row.centered
-    %h3 Speakers (picture + name + company + twitter handle)
+    %h3 Speakers 
     %br
     %hr
     %br
@@ -65,6 +65,54 @@
           / %div
           /   %a#btn_showspeakers_up{:style => "display:none;"}
           /     %button.btn.btn-embossed.btn-primary Hide some speakers
+
+#sp1{:style => "min-height:100px"}
+  .container
+    .row
+     
+.container.sinfo
+  .row
+    %h4 Event Partners
+    %br
+      %hr
+        %br
+  
+  = render "/individuals/partials/event_partners_display"
+  %br
+  .row
+    %h4 Program Partners
+    %br
+      %hr
+        %br
+  
+  = render "/individuals/partials/program_partners_display"
+    
+  %br
+  .row
+    %h4 Media Partners
+    %br
+      %hr
+        %br
+  
+  = render "/individuals/partials/media_partners_display"
+
+  %br
+  .row
+    %h4 Supporters
+    %br
+      %hr
+        %br
+  
+  = render "/individuals/partials/supporters_display"
+
+.row.centered
+  %br
+  %br
+  %br
+  %h3
+    If you would like to become a partner, please contact us at
+    %br
+    %a{:href => "#"} contribute@ouisharefest.com
 
 #anc_getinvolved{style: "padding-top:20px;"}
 
@@ -112,6 +160,13 @@
           %a{href: "http://www.eventbrite.fr?ref=etckt", style: "color:#ddd; text-decoration:none;", target: "_blank"} Eventbrite
 
       %h4 Who's already coming
+      - if !@ouishare_fest_attendees["attendees"].blank?
+        %ul
+          -@ouishare_fest_attendees["attendees"].each do |attendee|
+            %li
+              = attendee["attendee"]["first_name"]
+              = attendee["attendee"]["last_name"]
+              = attendee["attendee"]["email"]
       %br/
       %br/
 
@@ -123,7 +178,7 @@
       %br/
       %br/
       %h3
-        =t('team') + " (picture + name + hashtags + twitter handle)"
+        =t('team') 
       %br/
       %hr/
       %h6
