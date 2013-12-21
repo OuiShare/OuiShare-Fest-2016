@@ -160,7 +160,7 @@
           %a{href: "http://www.eventbrite.fr?ref=etckt", style: "color:#ddd; text-decoration:none;", target: "_blank"} Eventbrite
 
       %h4 Who's already coming
-      - if !@ouishare_fest_attendees["attendees"].blank?
+      - if @ouishare_fest_attendees && !@ouishare_fest_attendees["attendees"].blank?
         %ul
           -@ouishare_fest_attendees["attendees"].each do |attendee|
             %li
