@@ -1,4 +1,4 @@
-PitchmeRailsBackbone::Application.routes.draw do
+OuiShareFest::Application.routes.draw do
 
   resources :traductions
   resources :individual_types
