@@ -4,6 +4,7 @@ class HomeController < ApplicationController
   before_filter :contact_captcha, :only => [:contact, :contact_email]
   
   require 'eventbrite-client'
+  require 'net/http'
   
   def index    
 
@@ -23,6 +24,10 @@ class HomeController < ApplicationController
       @hidden_speakers = @speakers.last(@speakers.count - displayed_speakers_number)
     end
 
+    if IndividualType.find_by_title('Partners')
+      @partners = Individual.get_partners_by_function
+    end
+
     eventbrite_instance = connect_to_eventbrite()
     begin
       @ouishare_fest_attendees = eventbrite_instance.event_list_attendees({ "id" => ENV["EVENTBRITE_EVENT_ID"] })
@@ -36,6 +41,10 @@ class HomeController < ApplicationController
   end
 
   def site_off
+  end
+
+  def sched_test
+    # @request_response = connect_to_sched().force_encoding('UTF-8')
   end
 
   def contact
@@ -91,4 +100,27 @@ private
                    user_key: ENV['EVENTBRITE_USER_KEY']}
     eb_client = EventbriteClient.new(eb_auth_tokens)
   end
+
+  # def connect_to_sched
+  #   base_url = "http://testfffffffff2013.sched.org/api"
+  #   api_secret = "9c0e4074626d1d193078b9d0ed443f53"
+  #   username = "frederic.grais@gmail.com"
+  #   password = "258741"    
+  #   request_url = "/auth/login?api_key=#{api_secret}&username=#{username}&password=#{password}"
+  #   request_response = nil
+  #   uri = URI(base_url + request_url)
+    
+  #   res = Net::HTTP.start(uri.host, uri.port) do |http|
+  #     request = Net::HTTP::Get.new uri.request_uri
+  #     response = http.request request
+  #     # res = MultiJson.load(response.body)
+  #     schedule_uri = "/schedule/get?api_key=#{api_secret}&se=#{response.body}&l=1"
+  #     new_uri = URI(base_url + schedule_uri)
+  #     request = Net::HTTP::Get.new new_uri.request_uri
+  #     response = http.request request
+  #     request_response = response.body
+      
+  #   end
+  #   return request_response
+  # end
 end

@@ -71,39 +71,80 @@
     .row
      
 .container.sinfo
-  .row
-    %h4 Event Partners
-    %br
-      %hr
-        %br
-  
-  = render "/individuals/partials/event_partners_display"
-  %br
-  .row
-    %h4 Program Partners
-    %br
-      %hr
-        %br
-  
-  = render "/individuals/partials/program_partners_display"
-    
-  %br
-  .row
-    %h4 Media Partners
-    %br
-      %hr
-        %br
-  
-  = render "/individuals/partials/media_partners_display"
 
-  %br
-  .row
-    %h4 Supporters
-    %br
-      %hr
-        %br
+  - if !@partners.blank?
+         
+    - array_buffer= []
+   
+    - @partners.each do |function| 
+      - function.each do |key,values| 
+        .row
+          %h4 
+            =key.capitalize
+          %br
+          %hr
+          %br
+        
+
+        - partner_number = 1   
+        - values.each do |partner| 
+          
+          - array_buffer.push(partner)      
+          - if partner_number % 6 == 0 || partner_number == values.count        
+            .row.centered
+              - array_buffer.each do |partner|
+                .col-lg-2
+                  %a{:href => partner.url, :target => "_blank"}
+                    %img{:alt => partner.first_name, :src => partner.attachment.url(:partner_size)}
+                    
+              - array_buffer.clear
+          - partner_number += 1
+              
+
+            
+        
+        
+      / - if partner_number%6 == 0 && partner_number <= @partners.count       
+      /   - i = partner_number      
+      /   = i
+      /   = i + 6   
+      /   .row.centered
+      /     - for partner in i...i+6
+      /       .col-lg-2
+      /         %a{:href => "http://www.shareable.net/", :target => "_blank"}
+      /           %img{:alt => "Shareable", :src => "http://farm9.staticflickr.com/8226/8526959247_4ee1074239_o.png"}
+      /       - partner_number += 1
+
+    
   
-  = render "/individuals/partials/supporters_display"
+  
+  / = render "/individuals/partials/event_partners_display"
+  / %br
+  / .row
+  /   %h4 Program Partners
+  /   %br
+  /     %hr
+  /       %br
+  
+  / = render "/individuals/partials/program_partners_display"
+    
+  / %br
+  / .row
+  /   %h4 Media Partners
+  /   %br
+  /     %hr
+  /       %br
+  
+  / = render "/individuals/partials/media_partners_display"
+
+  / %br
+  / .row
+  /   %h4 Supporters
+  /   %br
+  /     %hr
+  /       %br
+  
+  / = render "/individuals/partials/supporters_display"
 
 .row.centered
   %br
@@ -164,6 +205,7 @@
         %ul
           -@ouishare_fest_attendees["attendees"].each do |attendee|
             %li
+              = display_gravatar(attendee["attendee"]["email"])
               = attendee["attendee"]["first_name"]
               = attendee["attendee"]["last_name"]
               = attendee["attendee"]["email"]
