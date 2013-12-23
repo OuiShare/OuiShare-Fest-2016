@@ -18,6 +18,10 @@ $(document).ready ->
   $("#btn_showspeakers_down").click ->
     $("#allspeakers").slideDown "slow"
     $("#btn_showspeakers_down").hide()
+
+  $("#btn_attendees_down").click ->
+    $("#allattendees").slideDown "slow"
+    $("#btn_attendees_down").hide()
     # $("#btn_showspeakers_up").show()
 
   # $("#btn_showspeakers_up").click ->

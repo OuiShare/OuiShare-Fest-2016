@@ -78,73 +78,28 @@
    
     - @partners.each do |function| 
       - function.each do |key,values| 
-        .row
-          %h4 
-            =key.capitalize
-          %br
-          %hr
-          %br
-        
-
-        - partner_number = 1   
-        - values.each do |partner| 
+        - if !key.blank?
+          .row
+            %h4 
+              =key.capitalize
+            %br
+            %hr
+            %br
           
-          - array_buffer.push(partner)      
-          - if partner_number % 6 == 0 || partner_number == values.count        
-            .row.centered
-              - array_buffer.each do |partner|
-                .col-lg-2
-                  %a{:href => partner.url, :target => "_blank"}
-                    %img.grayscale{:alt => partner.first_name, :src => partner.attachment.url(:partner_size)}
-                    
-              - array_buffer.clear
-          - partner_number += 1
-              
 
+          - partner_number = 1   
+          - values.each do |partner| 
             
-        
-        
-      / - if partner_number%6 == 0 && partner_number <= @partners.count       
-      /   - i = partner_number      
-      /   = i
-      /   = i + 6   
-      /   .row.centered
-      /     - for partner in i...i+6
-      /       .col-lg-2
-      /         %a{:href => "http://www.shareable.net/", :target => "_blank"}
-      /           %img{:alt => "Shareable", :src => "http://farm9.staticflickr.com/8226/8526959247_4ee1074239_o.png"}
-      /       - partner_number += 1
-
-    
-  
-  
-  / = render "/individuals/partials/event_partners_display"
-  / %br
-  / .row
-  /   %h4 Program Partners
-  /   %br
-  /     %hr
-  /       %br
-  
-  / = render "/individuals/partials/program_partners_display"
-    
-  / %br
-  / .row
-  /   %h4 Media Partners
-  /   %br
-  /     %hr
-  /       %br
-  
-  / = render "/individuals/partials/media_partners_display"
-
-  / %br
-  / .row
-  /   %h4 Supporters
-  /   %br
-  /     %hr
-  /       %br
-  
-  / = render "/individuals/partials/supporters_display"
+            - array_buffer.push(partner)      
+            - if partner_number % 6 == 0 || partner_number == values.count        
+              .row.centered
+                - array_buffer.each do |partner|
+                  .col-lg-2
+                    %a{:href => partner.url, :target => "_blank"}
+                      %img.grayscale{:alt => partner.first_name, :src => partner.attachment.url(:partner_size)}
+                      
+                - array_buffer.clear
+            - partner_number += 1   
 
 .row.centered
   %br
@@ -203,12 +158,23 @@
       %h4 Who's already coming
       - if @ouishare_fest_attendees && !@ouishare_fest_attendees["attendees"].blank?
         %ul
-          -@ouishare_fest_attendees["attendees"].each do |attendee|
+          -@ouishare_fest_attendees["attendees"].first(ENV["EVENTBRITE_ATTENDEES_DISPLAY_NUMBER"].to_i).each do |attendee|
             %li
               = display_gravatar(attendee["attendee"]["email"])
               = attendee["attendee"]["first_name"]
               = attendee["attendee"]["last_name"]
               = attendee["attendee"]["email"]
+          - if @ouishare_fest_attendees["attendees"].count > ENV["EVENTBRITE_ATTENDEES_DISPLAY_NUMBER"].to_i  
+            #all_attendees
+              -@ouishare_fest_attendees["attendees"].last(@ouishare_fest_attendees["attendees"].count - ENV["EVENTBRITE_ATTENDEES_DISPLAY_NUMBER"].to_i).each do |attendee|
+                %li
+                  = display_gravatar(attendee["attendee"]["email"])
+                  = attendee["attendee"]["first_name"]
+                  = attendee["attendee"]["last_name"]
+                  = attendee["attendee"]["email"]
+            %div
+              %a#btn_attendees_down
+                %button.btn.btn-embossed.btn-primary Show all the attendees
       %br/
       %br/
 
