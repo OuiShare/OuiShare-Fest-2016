@@ -51,6 +51,7 @@ OuiShareFest::Application.routes.draw do
     get :contact
     post :contact, :action => :contact_email
     get :site_off
+    get :sched_test
   end
 
   namespace :me do

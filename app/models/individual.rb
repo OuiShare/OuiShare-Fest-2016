@@ -10,7 +10,7 @@ class Individual < ActiveRecord::Base
   end
 
   has_attached_file :attachment, :default_url => "/assets/individual_default_avatar-:style.png", 
-  :styles => {mini: '30x30#',small: '100x100>',medium: '300x300>',custom: '220x220#'},
+  :styles => {mini: '30x30#',small: '100x100>',medium: '300x300>',custom: '220x220#', partner_size: '177x140>'},
   :path => ":rails_root/public/system/:class_name_individual/:id/attachment/:style_:attachment",
   :url => "/system/:class_name_individual/:id/attachment/:style_:attachment"
 
@@ -56,5 +56,17 @@ class Individual < ActiveRecord::Base
 
   def to_param
     self.slug    
+  end
+
+  def self.get_partners_by_function
+    @partners_array = []
+    @partners = Individual.joins(:individual_types).merge(IndividualType.where(:title => "Partners"))
+    @functions = @partners.select("DISTINCT(function)").order("function ASC")
+    @functions.each do |function|
+      @partners = Individual.where(:function => function.function)
+      @partners_array.push({function.function => @partners})
+      
+    end    
+    @partners_array
   end
 end
