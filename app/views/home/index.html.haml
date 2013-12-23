@@ -95,7 +95,7 @@
               - array_buffer.each do |partner|
                 .col-lg-2
                   %a{:href => partner.url, :target => "_blank"}
-                    %img{:alt => partner.first_name, :src => partner.attachment.url(:partner_size)}
+                    %img.grayscale{:alt => partner.first_name, :src => partner.attachment.url(:partner_size)}
                     
               - array_buffer.clear
           - partner_number += 1

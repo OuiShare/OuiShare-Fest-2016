@@ -15,9 +15,7 @@
       %ul.nav.nav-stacked.nested_list
         - IndividualType.all.each do |type|
           %li{:class => ('active' if defined?(active_sub_panel) && active_sub_panel == type.title)}
-            = link_to type.title + ' ( ' + type.get_member_number.to_s + ' )', individual_type_admin_path(type) 
-
-        
+            = link_to type.title + ' ( ' + type.get_member_number.to_s + ' )', individual_type_admin_path(type)         
     %li{:class => ('active' if active == 'individual_types')}
       = link_to individual_types_list_admin_index_path, :class => "main-list" do
         %i.glyphicon.glyphicon-record
