@@ -4,26 +4,7 @@
       =label_tag "New Key:"
     .col-lg-10      
       = text_field_tag :key, "", :class => "form-control"
-  -@availables_languages.each do |locale|
-    
-    / - if controller.action_name == "edit"
-    /   - if current_translation = Translation.find_by_key_and_locale(@translation.key, locale.to_s)
-    /     .form-group.row
-    /       .col-lg-2.text-center
-    /         = image_tag "/assets/flags_test/" + locale.to_s + ".png", :width => "32px"
-    /         %span.badge
-    /           = current_translation.locale    
-    /       .col-lg-10
-    /         = text_field_tag :value,current_translation.value, :class => "form-control", :name => "[value][" + locale.to_s + "]"
-    /   - else
-    /     .form-group.row
-    /       .col-lg-2.text-center
-    /         = image_tag "/assets/flags_test/" + locale.to_s + ".png", :width => "32px"
-    /         %span.badge
-    /           = current_translation.locale  
-    /       .col-lg-10
-    /         = text_field_tag :value,"", :class => "form-control", :name => "[value][" + locale.to_s + "]"
-    / - else
+  -@availables_languages.each do |locale|   
     .form-group.row
       .col-lg-2.text-center
         = image_tag "/assets/flags_test/" + locale.to_s + ".png", :width => "32px"
