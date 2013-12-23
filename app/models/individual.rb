@@ -14,13 +14,16 @@ class Individual < ActiveRecord::Base
   :path => ":rails_root/public/system/:class_name_individual/:id/attachment/:style_:attachment",
   :url => "/system/:class_name_individual/:id/attachment/:style_:attachment"
 
-  belongs_to :individual_type, :class_name => "IndividualType", :foreign_key => :individual_type_id
+  # belongs_to :individual_type, :class_name => "IndividualType", :foreign_key => :individual_type_id
 
   has_many :individual_types_assocs, :class_name => "IndividualTypeAssociation", :foreign_key => :individual_id, :dependent => :delete_all
   has_many :individual_types, :class_name => "IndividualType", :through => :individual_types_assocs
- 
-  before_create :generate_slug
+  
+  has_many :event_indiv_assoc, :class_name => "EventIndividualAssociation", :foreign_key => :individual_id
+  has_many :events, :class_name => "Event", :through => :event_indiv_assoc
 
+  before_create :generate_slug
+  
   def generate_slug    
     if self.first_name != '' && self.last_name != '' && !self.slug 
       if Individual.where(:slug => self.fullname.parameterize).count > 0
@@ -35,6 +38,25 @@ class Individual < ActiveRecord::Base
         
       end
     end  
+  end
+
+  def add_to_current_event
+    
+    event = Event.find_by_edition_year(ENV["OUISHARE_FEST_EVENT_YEAR"])
+   
+    if !EventIndividualAssociation.find_by_event_id_and_individual_id(event.id, self.id)
+      
+      self.individual_types.each do |indiv_type|
+        assoc = {
+          :event_id => event.id,
+          :individual_type_id => indiv_type.id,
+          :individual_id => self.id
+        }
+        EventIndividualAssociation.create(assoc)
+
+      end 
+    end   
+    
   end
 
   # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #  
@@ -52,10 +74,6 @@ class Individual < ActiveRecord::Base
     end
 
     @fullname
-  end
-
-  def to_param
-    self.slug    
   end
 
   def self.get_partners_by_function
