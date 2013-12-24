@@ -1,0 +1,9 @@
+bn:
+  devise:
+    confirmations:
+      confirmed: "fezfezfzef"
+      confirmed_and_signed_in: "fezfzefezf"
+      send_instructions: "fezfzef"
+      send_paranoid_instructions: "fezfzefze"
+    failure:
+      already_authenticated: "fezfzefz"

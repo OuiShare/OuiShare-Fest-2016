@@ -1,0 +1,23 @@
+www.transifex.com/projects/p/ouishare-fest-test
+
+file_filter = translations/ouishare-fest-test.enyml/<lang>.yml
+
+file_filter = config/locales/<lang>.yml
+source_file = config/locales/en.yml
+source_lang = en
+type = YML
+
+[ouishare-fest-test.ouishare_enyml]
+file_filter = config/locales/ouishare_<lang>.yml
+source_lang = en
+type = YML
+
+[ouishare-fest-test.enyml]
+file_filter = translations/ouishare-fest-test.enyml/<lang>.yml
+source_lang = en
+type = YML
+
+[ouishare-fest-test.devise_enyml]
+file_filter = translations/ouishare-fest-test.devise_enyml/devise_<lang>.yml
+source_lang = en
+type = YML

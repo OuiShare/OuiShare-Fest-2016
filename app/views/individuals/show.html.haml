@@ -34,6 +34,9 @@
             %br
             = @individual.email
             %br
+            - slug = @individual.slug
+            = t('individuals_biography.' + slug)
+            %br
             = @individual.birthday
             %br
             = @individual.twitter_account
