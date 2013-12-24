@@ -23,6 +23,7 @@ class TraductionsController < ApplicationController
                          :value => value[1]
                         }                      
           new_trans = Translation.new(translation)
+          
           if !new_trans.save  
             save_successfull=false
           end
@@ -95,5 +96,5 @@ class TraductionsController < ApplicationController
     else
       redirect_to traductions_path, :notice => "An error occured"
     end
-  end
+  end  
 end

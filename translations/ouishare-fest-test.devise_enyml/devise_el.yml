@@ -1,0 +1,9 @@
+el:
+  devise:
+    confirmations:
+      confirmed: "ljilljil"
+      confirmed_and_signed_in: "liljlji"
+      send_instructions: "lijljil"
+      send_paranoid_instructions: "lijljilij"
+    failure:
+      already_authenticated: "ljiljilij"

@@ -23,6 +23,34 @@ class Individual < ActiveRecord::Base
   has_many :events, :class_name => "Event", :through => :event_indiv_assoc
 
   before_create :generate_slug
+  after_save :export_to_yaml
+  after_destroy :delete_from_yaml
+
+
+  def export_to_yaml
+    if description_changed?
+      d = YAML::load_file(ENV['YAML_BIOGRAPHIES_FILE_PATH']) #Load
+      
+      if d['en']['individuals_biography'].blank?
+        d['en']['individuals_biography'] = {}
+      end            
+      d['en']['individuals_biography'][self.slug] = self.description
+      File.open(ENV['YAML_BIOGRAPHIES_FILE_PATH'], 'w') {|f| f.write d.to_yaml }
+    
+      connect_and_push_to_transifex()
+    end
+  end
+
+  def delete_from_yaml
+    d = YAML::load_file(ENV['YAML_BIOGRAPHIES_FILE_PATH'])
+    if !d['en']['individuals_biography'][self.slug].blank?
+        d['en']['individuals_biography'].delete self.slug
+    end 
+    
+    File.open(ENV['YAML_BIOGRAPHIES_FILE_PATH'], 'w') {|f| f.write d.to_yaml }
+  
+    connect_and_push_to_transifex()
+  end
   
   def generate_slug    
     if self.first_name != '' && self.last_name != '' && !self.slug 
@@ -87,4 +115,34 @@ class Individual < ActiveRecord::Base
     end    
     @partners_array
   end
+
+
+  private 
+
+  def connect_and_push_to_transifex
+    base_url = ENV['TRANSIFEX_BASE_URL']
+       
+    request_response = nil    
+    d = YAML::load_file(ENV['YAML_BIOGRAPHIES_FILE_PATH'])
+    file = {}
+    file['content'] = d.to_yaml
+    file = file.to_json
+
+    request_url = ENV['TRANSIFEX_BIOGRAPHIES_URL']
+    uri = URI(base_url + request_url)
+
+    res = Net::HTTP.start(uri.host, 80) do |http|
+      request = Net::HTTP::Put.new uri.request_uri
+      request.basic_auth ENV['TRANSIFEX_CREDENTIAL_LOGIN'], ENV['TRANSIFEX_CREDENTIAL_SECRET']
+      request.content_type = "application/json"
+      request.body = file
+      
+      response = http.request request
+     
+      request_response = response.body
+      
+    end
+    return request_response
+  end
+
 end
