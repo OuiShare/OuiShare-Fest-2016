@@ -23,14 +23,12 @@ if $LOADED_FEATURES.grep(/spec\/spec_helper\.rb/).any?
   end
 end
 
-
-
-
-
 ENV["RAILS_ENV"] ||= 'test'
 require File.expand_path("../../config/environment", __FILE__)
 require 'rspec/rails'
 require 'rspec/autorun'
+
+require 'coco'
 
 # Requires supporting ruby files with custom matchers and macros, etc,
 # in spec/support/ and its subdirectories.
