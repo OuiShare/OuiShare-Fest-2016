@@ -18,6 +18,5 @@
   = team_member.function
   %br/
   %br/
-  %small 
-    = team_member.description
-    /= t('bio_' + team_member.first_name + team_member.last_name)
+  %small
+    = t('individuals_biography.' + team_member.slug)

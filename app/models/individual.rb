@@ -29,25 +29,25 @@ class Individual < ActiveRecord::Base
 
   def export_to_yaml
     if description_changed?
-      d = YAML::load_file(ENV['YAML_BIOGRAPHIES_FILE_PATH']) #Load
+      d = YAML::load_file(ENV['YAML_INDIVIDUALS_FILE_PATH']) #Load
       
       if d['en']['individuals_biography'].blank?
         d['en']['individuals_biography'] = {}
       end            
       d['en']['individuals_biography'][self.slug] = self.description
-      File.open(ENV['YAML_BIOGRAPHIES_FILE_PATH'], 'w') {|f| f.write d.to_yaml }
+      File.open(ENV['YAML_INDIVIDUALS_FILE_PATH'], 'w') {|f| f.write d.to_yaml }
     
       connect_and_push_to_transifex()
     end
   end
 
   def delete_from_yaml
-    d = YAML::load_file(ENV['YAML_BIOGRAPHIES_FILE_PATH'])
+    d = YAML::load_file(ENV['YAML_INDIVIDUALS_FILE_PATH'])
     if !d['en']['individuals_biography'][self.slug].blank?
         d['en']['individuals_biography'].delete self.slug
     end 
     
-    File.open(ENV['YAML_BIOGRAPHIES_FILE_PATH'], 'w') {|f| f.write d.to_yaml }
+    File.open(ENV['YAML_INDIVIDUALS_FILE_PATH'], 'w') {|f| f.write d.to_yaml }
   
     connect_and_push_to_transifex()
   end
@@ -123,12 +123,12 @@ class Individual < ActiveRecord::Base
     base_url = ENV['TRANSIFEX_BASE_URL']
        
     request_response = nil    
-    d = YAML::load_file(ENV['YAML_BIOGRAPHIES_FILE_PATH'])
+    d = YAML::load_file(ENV['YAML_INDIVIDUALS_FILE_PATH'])
     file = {}
     file['content'] = d.to_yaml
     file = file.to_json
 
-    request_url = ENV['TRANSIFEX_BIOGRAPHIES_URL']
+    request_url = ENV['TRANSIFEX_INDIVIDUALS_URL']
     uri = URI(base_url + request_url)
 
     res = Net::HTTP.start(uri.host, 80) do |http|

@@ -16,7 +16,7 @@ class ApplicationController < ActionController::Base
   end
 
   def after_sign_in_path_for(user)    
-    request.env["omniauth.origin"] || me_dashboard_path
+    request.env["omniauth.origin"] || admin_index_path
   end
 
   def after_sign_out_path_for(resource_or_scope)    

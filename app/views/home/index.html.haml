@@ -73,33 +73,57 @@
 .container.sinfo
 
   - if !@partners.blank?
+    .row
+      %h4 
+        Partners
+      %br
+      %hr
+      %br
+    
+    - array_buffer = []
+    - partner_number = 1   
+    - @partners.each do |partner| 
+      
+      - array_buffer.push(partner)      
+      - if partner_number % 6 == 0 || partner_number == @partners.count
+        .row.centered
+          - array_buffer.each do |partner|
+            .col-lg-2
+              %a{:href => partner.url, :target => "_blank"}
+                %img.grayscale{:alt => partner.first_name, :src => partner.attachment.url(:partner_size)}
+                
+          - array_buffer.clear
+      - partner_number += 1   
+
+
+  / - if !@partners.blank?
          
-    - array_buffer= []
+  /   - array_buffer= []
    
-    - @partners.each do |function| 
-      - function.each do |key,values| 
-        - if !key.blank?
-          .row
-            %h4 
-              =key.capitalize
-            %br
-            %hr
-            %br
+  /   - @partners.each do |function| 
+  /     - function.each do |key,values| 
+  /       - if !key.blank?
+  /         .row
+  /           %h4 
+  /             =key.capitalize
+  /           %br
+  /           %hr
+  /           %br
           
 
-          - partner_number = 1   
-          - values.each do |partner| 
+  /         - partner_number = 1   
+  /         - values.each do |partner| 
             
-            - array_buffer.push(partner)      
-            - if partner_number % 6 == 0 || partner_number == values.count        
-              .row.centered
-                - array_buffer.each do |partner|
-                  .col-lg-2
-                    %a{:href => partner.url, :target => "_blank"}
-                      %img.grayscale{:alt => partner.first_name, :src => partner.attachment.url(:partner_size)}
+  /           - array_buffer.push(partner)      
+  /           - if partner_number % 6 == 0 || partner_number == values.count        
+  /             .row.centered
+  /               - array_buffer.each do |partner|
+  /                 .col-lg-2
+  /                   %a{:href => partner.url, :target => "_blank"}
+  /                     %img.grayscale{:alt => partner.first_name, :src => partner.attachment.url(:partner_size)}
                       
-                - array_buffer.clear
-            - partner_number += 1   
+  /               - array_buffer.clear
+  /           - partner_number += 1   
 
 .row.centered
   %br
