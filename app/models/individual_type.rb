@@ -9,7 +9,7 @@ class IndividualType < ActiveRecord::Base
   end
 
   def get_members
-    self.individuals    
+    self.individuals.order('display_order ASC')    
   end
 
   def to_param

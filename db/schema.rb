@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20131223164421) do
+ActiveRecord::Schema.define(:version => 20140103170130) do
 
   create_table "admin_one_shot_codes", :force => true do |t|
     t.integer  "admin_id",   :null => false
@@ -80,13 +80,14 @@ ActiveRecord::Schema.define(:version => 20131223164421) do
     t.string   "function"
     t.string   "url"
     t.integer  "individual_type_id"
-    t.datetime "created_at",              :null => false
-    t.datetime "updated_at",              :null => false
+    t.datetime "created_at",                                :null => false
+    t.datetime "updated_at",                                :null => false
     t.string   "attachment_file_name"
     t.string   "attachment_content_type"
     t.integer  "attachment_file_size"
     t.datetime "attachment_updated_at"
     t.string   "slug"
+    t.integer  "display_order",           :default => 9999
   end
 
   add_index "individuals", ["slug"], :name => "index_individuals_on_slug", :unique => true

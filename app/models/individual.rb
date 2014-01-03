@@ -1,6 +1,6 @@
 class Individual < ActiveRecord::Base
   attr_accessible :birthday, :company_name, :description, :first_name, :function, :last_name, :individual_type_id, :twitter_account, :url, :email
-  attr_accessible :attachment, :slug
+  attr_accessible :attachment, :slug, :display_order
   Paperclip.interpolates :attachment do |attachment, style|
   attachment.instance.attachment_file_name # or whatever you've named your User's login/username/etc. attribute
   end
