@@ -21,9 +21,11 @@ class Translation < ActiveRecord::Base
 
   def delete_from_yaml
     d = YAML::load_file(ENV['YAML_OUISHARE_FILE_PATH'])
-    if !d['en']['dynamic_translations'][self.key].blank?
-        d['en']['dynamic_translations'].delete self.key
-    end 
+    if !d['en']['dynamic_translations'].blank?
+      if !d['en']['dynamic_translations'][self.key].blank?
+          d['en']['dynamic_translations'].delete self.key
+      end 
+    end
     
     File.open(ENV['YAML_OUISHARE_FILE_PATH'], 'w') {|f| f.write d.to_yaml }
   

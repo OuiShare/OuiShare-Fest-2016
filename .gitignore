@@ -18,3 +18,7 @@ pickle-email-*.html
 .project
 config/application.yml
 log/*
+.tx/config
+get-pip.py
+transifex url.txt
+translations/*
