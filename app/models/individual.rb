@@ -35,8 +35,11 @@ class Individual < ActiveRecord::Base
         d['en']['individuals_biography'] = {}
       end            
       d['en']['individuals_biography'][self.slug] = self.description
-      File.open(ENV['YAML_INDIVIDUALS_FILE_PATH'], 'w') {|f| f.write d.to_yaml }
-    
+      
+      
+      File.open(ENV['YAML_INDIVIDUALS_FILE_PATH'], 'w') do |f|
+        f.write d.to_yaml
+      end
       connect_and_push_to_transifex()
     end
   end
@@ -45,10 +48,11 @@ class Individual < ActiveRecord::Base
     d = YAML::load_file(ENV['YAML_INDIVIDUALS_FILE_PATH'])
     if !d['en']['individuals_biography'][self.slug].blank?
         d['en']['individuals_biography'].delete self.slug
-    end 
+    end   
     
-    File.open(ENV['YAML_INDIVIDUALS_FILE_PATH'], 'w') {|f| f.write d.to_yaml }
-  
+    File.open(ENV['YAML_INDIVIDUALS_FILE_PATH'], 'w') do |f|
+      f.write d.to_yaml
+    end
     connect_and_push_to_transifex()
   end
   

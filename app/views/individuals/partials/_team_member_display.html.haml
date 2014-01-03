@@ -18,5 +18,6 @@
   = team_member.function
   %br/
   %br/
-  %small
-    = t('individuals_biography.' + team_member.slug)
+  - if !team_member.slug.blank?
+    %small
+      = t('individuals_biography.' + team_member.slug)
