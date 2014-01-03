@@ -1,8 +1,18 @@
-/ FOOTER
 #f
   .container
     .row
       .col-lg-5
+        - if current_user          
+          - if current_user.is_admin
+            %h5 Administration
+            %p
+              = link_to admin_index_path do
+                %i.glyphicon.glyphicon-cog 
+                Admin Panel
+              %br
+              = link_to logout_path, :method => :delete do
+                %i.glyphicon.glyphicon-remove 
+                Logout
         %h5 Contact
         %p
           General questions:

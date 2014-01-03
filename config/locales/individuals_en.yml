@@ -1,14 +1,5 @@
 ---
 en:
-  test: test
   individuals_biography:
-    frederic-grais: ! "Né le 14477441\r\nFait ceci\r\nFait cela\r\nblalblalblalblza"
-    api-transifex: ! "Né le 123123564456\r\nFait ceci\r\nFait cela\r\nblablablablalblalblalbla"
-    jean-pierre: ! "Jean pierre est né le 17 avril 2014\r\nIl aime bien faire du vélo\r\nIl
-      aime bien manger des fruits"
-    nathan-pierre: ! "Born vregvfergfe\r\nEnglaisdh regergerg\r\nregergerg"
-    yann-kastelnik-2: ''
-    yann-kastelnik-3: ''
-    yann-kastelnik-4: ''
-    nathan-pierre: "Born vregvfergfe\r\nEnglaisdh regergerg\r\nregergerg"
-    ! '': ''
+    yann-kastelnik-1: Yann's Bio
+    igor-d-osgorre: Don't search you're wrong !
