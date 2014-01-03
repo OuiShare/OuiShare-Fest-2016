@@ -1,9 +1,0 @@
-et:
-  devise:
-    confirmations:
-      confirmed: "fezfezfze"
-      confirmed_and_signed_in: "fezfzefze"
-      send_instructions: "fezfzefzef"
-      send_paranoid_instructions: "fezfzefzef"
-    failure:
-      inactive: "gtrgrrr"
