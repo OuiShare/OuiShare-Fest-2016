@@ -27,12 +27,15 @@
     / = f.date_select :birthday, {:include_blank => true, :default => nil}
   .form-group.individual-email-zone
     = f.label :email, 'Email'
-    = f.text_field :email, :class => "form-control", :required => true
+    = f.text_field :email, :class => "form-control"
   .form-group
     = f.label :function, 'Function'
     = f.text_field :function, :class => "form-control"
   .form-group
     = f.label :url, 'URL'
     = f.text_field :url, :class => "form-control", :placeholder => "External URL: http://www.myurl.com"
+  .form-group
+    =f.label :display_order
+    =f.number_field :display_order, :class => "form-control"
   .form-group  
     = f.submit "Save", :class => "btn btn-primary btn-block", :id => "save_individual_button"
