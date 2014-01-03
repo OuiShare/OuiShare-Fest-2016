@@ -1,7 +1,0 @@
-ar:
-  devise:
-    confirmations:
-      confirmed: "freferferfer"
-      confirmed_and_signed_in: "ferferfer"
-      send_instructions: "freferferf"
-      send_paranoid_instructions: "frferferf"
