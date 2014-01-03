@@ -13,7 +13,10 @@ class Translation < ActiveRecord::Base
         d['en']['dynamic_translations'] = {}
       end            
       d['en']['dynamic_translations'][self.key] = self.value
-      File.open(ENV['YAML_OUISHARE_FILE_PATH'], 'w') {|f| f.write d.to_yaml }
+      
+      File.open(ENV['YAML_OUISHARE_FILE_PATH'], 'w') do |f|
+        f.write d.to_yaml
+      end
     
       connect_and_push_to_transifex()
     end
@@ -27,7 +30,9 @@ class Translation < ActiveRecord::Base
       end 
     end
     
-    File.open(ENV['YAML_OUISHARE_FILE_PATH'], 'w') {|f| f.write d.to_yaml }
+    File.open(ENV['YAML_OUISHARE_FILE_PATH'], 'w') do |f|
+        f.write d.to_yaml
+    end
   
     connect_and_push_to_transifex()
   end
