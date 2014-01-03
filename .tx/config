@@ -1,7 +1,7 @@
 [main]
 host = https://www.transifex.com
 
-[ouishare-fest.enyml]
-file_filter = translations/ouishare-fest.enyml/<lang>.yml
+[ouishare-fest.ouishare_enyml]
+file_filter = translations/ouishare/ouishare_<lang>.yml
 source_lang = en
 type = YML
