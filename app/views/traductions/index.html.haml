@@ -24,14 +24,11 @@
               %i.glyphicon.glyphicon-remove
               = link_to "Delete", traduction_path(trans_id), "data-method" => :delete, :confirm => "Are you sure?"
           %tbody
-            -Translation.where(:key => translation.key).order("locale ASC").each do |translation|
+            -Translation.where(:key => translation.key).where(:locale => 'en').each do |translation|
               %tr
                 %td.col-md-2.text-center
                   = image_tag "/assets/flags_test/" + translation.locale + ".png", :width => "32px"
                   %span.badge
                     = translation.locale
                 %td
-                  =translation.value
-  
-      
-
+                  = translation.value

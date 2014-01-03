@@ -34,7 +34,7 @@ validate_form = ->
     all_checkbox_checked : [false, ["individual-type-checkboxes"], "You must select at least one group"]
     fname_lname_company_typed : [false, ["individual-fname-zone","individual-lname-zone", "individual-company-zone"],"You must enter either a first name, last name or a company"]
     # lname_typed : [false, "individual-lname-zone","You must enter either a first name, last name or a company"]
-    email_typed : [false, ["individual-email-zone"],"You must enter an email"]
+    # email_typed : [false, ["individual-email-zone"],"You must enter an email"]
     # company_typed : [false, "individual-company-zone","You must enter either a first name, last name or a company"]
   validation_status = {}
   # fname_lname_company_missing = true
@@ -44,8 +44,8 @@ validate_form = ->
     if $(this).prop("checked")
       validators.all_checkbox_checked[0] = true
 
-  if $("#individual_email").val().length > 0
-    validators.email_typed[0] = true
+  #if $("#individual_email").val().length > 0
+  #  validators.email_typed[0] = true
 
   if $("#individual_first_name").val().length > 0 
     validators.fname_lname_company_typed[0] = true

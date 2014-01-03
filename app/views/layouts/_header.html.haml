@@ -5,40 +5,31 @@
         %span.icon-bar
         %span.icon-bar
         %span.icon-bar
-      %a.navbar-brand{href: root_path} OUISHARE FEST 2014
+      %a.navbar-brand{href: root_path} 
+        OUISHARE FEST 2014
     .navbar-collapse.collapse
       %ul.nav.navbar-nav
         %li
           %a{href: "#anc_about"} 
-            =t('about')
+            =t('dynamic_translations.about')
         %li
           %a{href: "#anc_speakers"}
-            =t('speakers')
+            =t('dynamic_translations.speakers')
         %li
           %a{href: "#anc_getinvolved"}
-            =t('get_involved')
+            =t('dynamic_translations.get_involved')
         %li
           %a{href: "#anc_tickets"}
-            =t('tickets')
+            =t('dynamic_translations.tickets')
         %li
           %a{href: "#anc_partners"}
-            =t('partners')
+            =t('dynamic_translations.partners')
         %li
           %a{href: "#anc_team"}
-            =t('team')
+            =t('dynamic_translations.team')
         %li
           %a{href: "http://blog.ouisharefest.com", target: "_blank"}
-            =t('blog')
+            =t('dynamic_translations.blog')
         %li
           = select_languages
-        - if current_user          
-          - if current_user.is_admin
-            %li
-              = link_to admin_index_path do
-                %i.glyphicon.glyphicon-cog
-          %li
-            = link_to logout_path, :method => :delete do
-              %i.glyphicon.glyphicon-remove
-            
-
 #anc_about
