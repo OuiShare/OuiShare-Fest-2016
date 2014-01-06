@@ -13,31 +13,45 @@
               = link_to logout_path, :method => :delete do
                 %i.glyphicon.glyphicon-remove 
                 Logout
-        %h5 Contact
+        %h5 
+          = t('dynamic_translations.footer.contact')
+          / Contact
         %p
-          General questions:
+          = t('dynamic_translations.footer.general_questions')
+          / General questions:
           %a{href: "mailto:hello@ouishare.net", target: "_blank"} hello@ouisharefest.com
           %br/
-          Volunteers:
+          = t('dynamic_translations.footer.volunteers')
+          / Volunteers:
           %a{href: "mailto:volunteers@ouishare.net", target: "_blank"} volunteers@ouisharefest.com
           %br/
-          Partners  Sponsors:
+          = t('dynamic_translations.footer.partners_sponsors')
+          / Partners  Sponsors:
           %a{href: "partners:press@ouishare.net", target: "_blank"} partners@ouisharefest.com
           / %br/
           / = link_to 'Contact Us', home_contact_path
           / %br/
           / = link_to 'Contact Us with PopUp', "#", :id => 'link_contact_modal'
         %p
-          About
+          = t('dynamic_translations.about.title')
+          / About
           %a{href: "http://ouishare.net/about/", target: "_blank"} OuiShare
       .col-lg-2
-        %h5 Press
+        %h5 
+          = t('dynamic_translations.footer.press')
+          / Press
         %p
-          %a{href: "#"} Download press kit
+          %a{href: "#"} 
+            =t('dynamic_translations.footer.download_press_kit')
+            / Download press kit
         %p
-          %a{href: "mailto:press@ouishare.net", target: "_blank"} Press Contact
+          %a{href: "mailto:press@ouishare.net", target: "_blank"} 
+            = t('dynamic_translations.footer.press_contact')
+            / Press Contact
       .col-lg-2
-        %h5 Location
+        %h5 
+          = t('dynamic_translations.footer.location')
+          / Location
         %p
           %small
             Cabaret Sauvage
