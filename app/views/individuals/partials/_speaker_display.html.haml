@@ -19,7 +19,4 @@
     %a{href: speaker.url, target: "_blank"}
       = speaker.company_name
   
-  - if !speaker.twitter_account.blank?
-    %p
-      %a{href: "http://www.twitter.com/" + speaker.twitter_account, target: "_blank"}
-        = "@" + speaker.twitter_account
+  

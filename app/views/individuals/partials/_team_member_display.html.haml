@@ -3,10 +3,10 @@
     - if !team_member.twitter_account.blank?
       %a{href: "http://www.twitter.com/" + team_member.twitter_account, target: "_blank"}
         %h3
-          = team_member.fullname
-    - else
-      %h3
-        = team_member.fullname
+          = team_member.function
+    / - else
+    /   %h3
+    /     = team_member.fullname
     - if !team_member.twitter_account.blank?
       %p
         %a{href: "http://www.twitter.com/" + team_member.twitter_account, target: "_blank"}
@@ -15,9 +15,9 @@
   %b
   = team_member.fullname
   %br/
-  = team_member.function
-  %br/
-  %br/
-  - if !team_member.slug.blank?
-    %small
-      = t('individuals_biography.' + team_member.slug)
+  = team_member.description
+  / %br/
+  / %br/
+  / - if !team_member.slug.blank?
+  /   %small
+  /     = t('individuals_biography.' + team_member.slug)
