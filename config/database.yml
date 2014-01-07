@@ -19,11 +19,12 @@ test:
   timeout: 5432
 
 #Webfaction database credentials
+
  
 production:
   adapter: postgresql
   encoding: unicode
-  database: pitchme_rails_backbone_production
+  database: ouishare_fest_production
   host: localhost
   username: pitchme
   password: pitchme
