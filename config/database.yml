@@ -19,7 +19,7 @@ test:
   timeout: 5432
 
 #Webfaction database credentials
-
+ 
 production:
   adapter: postgresql
   encoding: unicode
