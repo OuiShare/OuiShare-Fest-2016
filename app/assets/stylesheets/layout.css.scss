@@ -5,11 +5,17 @@
   
 }
 .navbar.navbar-default{
-  .language-header-not-connected{
+  .language-header{
     width: 115px;
+    position: relative;
+    top: 5px;
+    right: -83px;
   }
 }
 
 .table-nonfluid {
    width: auto;
+}
+.unstyled{
+  list-style: none;
 }
