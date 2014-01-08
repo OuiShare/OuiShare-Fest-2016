@@ -15,26 +15,30 @@ class TraductionsController < ApplicationController
   end
 
   def create    
-    save_successfull = true    
-    params[:value].each do |value|
-      if !value[1].blank?
-        if !Translation.find_by_locale_and_key(value[0], params[:key])
-          translation = {:locale => value[0],
-                         :key => params[:key],
-                         :value => value[1]
-                        }                      
-          new_trans = Translation.new(translation)
-          
-          if !new_trans.save  
-            save_successfull=false
+    if params[:key].split('.').length == 2
+      save_successfull = true    
+      params[:value].each do |value|
+        if !value[1].blank?
+          if !Translation.find_by_locale_and_key(value[0], params[:key])
+            translation = {:locale => value[0],
+                           :key => params[:key],
+                           :value => value[1]
+                          }                      
+            new_trans = Translation.new(translation)
+            
+            if !new_trans.save  
+              save_successfull=false
+            end
           end
         end
+      end    
+      if save_successfull
+        redirect_to traductions_path, :notice => "Trads Succesfully added"
+      else
+        redirect_to traductions_path, :notice => "An error occured"
       end
-    end    
-    if save_successfull
-      redirect_to traductions_path, :notice => "Trads Succesfully added"
     else
-      redirect_to traductions_path, :notice => "An error occured"
+      redirect_to :back, :notice => "Please enter a key following this pattern : main_key.sub_key"
     end
   end
 
