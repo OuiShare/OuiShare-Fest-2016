@@ -107,3 +107,5 @@ gem 'strong_parameters'
 
 #Gem API with eventbrite
 gem 'eventbrite-client'
+
+#test commit
