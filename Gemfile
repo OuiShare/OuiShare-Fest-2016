@@ -83,9 +83,9 @@ group :development, :test do
 
 end
 
-group :production do
-  gem "therubyracer"
-end
+# group :production do
+#   gem "therubyracer"
+# end
 
 platforms :ruby do
   group :development, :test do
