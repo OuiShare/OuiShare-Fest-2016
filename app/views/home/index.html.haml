@@ -272,11 +272,13 @@
             - if @ouishare_fest_attendees["attendees"].count > ENV["EVENTBRITE_ATTENDEES_DISPLAY_NUMBER"].to_i  
               #all_attendees
                 -@ouishare_fest_attendees["attendees"].last(@ouishare_fest_attendees["attendees"].count - ENV["EVENTBRITE_ATTENDEES_DISPLAY_NUMBER"].to_i).each do |attendee|
-                  %li
-                    = display_gravatar(attendee["attendee"]["email"])
-                    .row
-                      = attendee["attendee"]["last_name"][0]+'.'
-                      = attendee["attendee"]["first_name"]
+                  -15.times do        
+                    .col-lg-2
+                      %li
+                        =image_tag display_gravatar(attendee["attendee"]["email"]), :class => 'img-circle'
+                        .row                      
+                          = attendee["attendee"]["first_name"]
+                          = attendee["attendee"]["last_name"][0]+'.'
                     
                     
               %div
