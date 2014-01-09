@@ -7,7 +7,7 @@ set :scm, :git
 
 set :deploy_to, "/home/pitchme/webapps/ouishare_fest"
 
-set :default_environment, {
+set :default_env, {
   'PATH' => "#{deploy_to}/bin:$PATH",
   'GEM_HOME' => "#{deploy_to}/gems" 
 }
