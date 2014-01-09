@@ -29,8 +29,16 @@
           %a{href: "#anc_team"}
             =t('dynamic_translations.team.title')
         %li
-          %a{href: "http://blog.ouisharefest.com", target: "_blank"}
-            =t('dynamic_translations.blog.title')
-        %li
-          = select_languages
-#anc_about
+          .text-center.social-media-icons-header
+            %a{href: "https://www.facebook.com/OuiShare", target: "_blank"}
+              %img{src: "/assets/facebook.svg", width: "24px"}/        
+            %a{href: "https://twitter.com/OuiShareFest", target: "_blank"}
+              %img{src: "/assets/twitter.svg", width: "24px"}/
+        
+        
+        / %li
+        /   %a{href: "http://blog.ouisharefest.com", target: "_blank"}
+        /     =t('dynamic_translations.blog.title')
+        / %li
+        /   = select_languages
+

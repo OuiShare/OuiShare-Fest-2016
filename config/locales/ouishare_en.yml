@@ -41,7 +41,7 @@ en:
       title: Partners
       become_a_partner: If you would like to become a partner, please contact us at
     get_involved:
-      title: Get involved
+      title: Get Involved
       description: 'OuiShare Fest is a participative festival, co-designed by you.
         There are many ways you can get involved in its co-creation:'
       option_1: Submit a session or satellite event for the program. If you proposal
@@ -80,4 +80,3 @@ en:
       press_contact: Press Contact
     blog:
       title: Blog
-    
