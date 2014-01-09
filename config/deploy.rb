@@ -37,6 +37,8 @@ default_run_options[:pty] = true
 #   end
 # end
 
+before "deploy:assets:precompile", "bundle:install"
+
 namespace :deploy do
   desc "Restart nginx"
   task :restart do
