@@ -14,12 +14,8 @@
 %h6
   %b
   = team_member.fullname
-  %br/
-  - if !team_member.description.blank?
-    %small
-      = team_member.description
-  -else
-    %br
+  / %br/
+  / = team_member.description
   / %br/
   / %br/
   / - if !team_member.slug.blank?
