@@ -2,7 +2,7 @@
 .main-section
   #headerwrap
     .container
-      .row{style: "background-color:rgba(0, 0, 0, 0.5);padding:20px;-moz-border-radius: 15px;border-radius: 15px;"}      
+      .row{style: "padding:20px;-moz-border-radius: 15px;border-radius: 15px;"}      
         = image_tag "/assets/logo_index_main_section.png"
         %h1
           = t('dynamic_translations.main.title')
@@ -13,16 +13,18 @@
           %p
             %strong
               = t('dynamic_translations.main.subtitle')
-              / 3 days of conference, co-creating and connecting. 
+              / 3 days of conference, co-creating and connecting.
+
         %br/
+        
         %a{href: "https://www.facebook.com/OuiShare", target: "_blank"}
           %img{src: "/assets/facebook.svg", width: "48px"}/
         %a{href: "https://twitter.com/OuiShareFest", target: "_blank"}
           %img{src: "/assets/twitter.svg", width: "48px"}/
 
-#cta
+#about.grey_bg
   .container
-    %h3 
+    %h3.text-center#anc_about 
       = t('dynamic_translations.about.title')
       / About
     %p 
@@ -48,51 +50,188 @@
       / We believe in saying things out loud. To act. To get practical and down to earth. In a time when many have thoughts and few act, and many have things, space and ideas that they want to keep to themselves or their group - we want to spin the world the other way around. We want to spin our heads, open our arms and share. Openly and freely. And we invite you to join in everything we do, from the smallest dance move to holding a speech of your own. Giving as much as you want and is able to, to make this Fest together with us. As a community.
 
 
-#anc_speakers
-#sp1{:style => "min-height:100px"}
-  .container
-    .row
 
-.container.sinfo
-  .row.centered
-    %h3 
-      = t('dynamic_translations.speakers.title')
-      / Speakers 
-    %br
-    %hr
-    %br
-    -if !@displayed_speakers.blank?
-      .ch-grid
-        - @displayed_speakers.each do |speaker|
-          .col-lg-3.individuals-list-display
-            %li
-              = render "/individuals/partials/speaker_display", :speaker => speaker
-        - if !@hidden_speakers.blank?
-          %div
-            #allspeakers{style: "display: none;"}  
-              - @hidden_speakers.each do |speaker|
-                .col-lg-3.individuals-list-display
-                  %li
-                    = render "/individuals/partials/speaker_display", :speaker => speaker              
-            %div.row
-              %a#btn_showspeakers_down
-                %button.btn.btn-embossed.btn-primary 
-                  = t('dynamic_translations.speakers.show_all')
-                  / Show all the speakers
-            %div.row            
-              %button.btn.btn-embossed.btn-primary.hide#btn_showspeakers_up
-                Hide some speakers
-
-#sp1{:style => "min-height:100px"}
+/ #sp1{:style => "min-height:100px"}
+/   .container
+/     .row
+#speakers.blank_bg
   .container
-    .row
-#anc_partners
+    .row.centered
+      %h3#anc_speakers 
+        = t('dynamic_translations.speakers.title')
+        / Speakers 
+      %br
+      %hr
+      %br
+      -if !@displayed_speakers.blank?
+        .ch-grid
+          - @displayed_speakers.each do |speaker|
+            .col-lg-3.individuals-list-display
+              %li
+                = render "/individuals/partials/speaker_display", :speaker => speaker
+          - if !@hidden_speakers.blank?
+            %div
+              #allspeakers{style: "display: none;"}  
+                - @hidden_speakers.each do |speaker|
+                  .col-lg-3.individuals-list-display
+                    %li
+                      = render "/individuals/partials/speaker_display", :speaker => speaker              
+              %div.row
+                %a#btn_showspeakers_down
+                  %button.btn.btn-embossed.btn-primary 
+                    = t('dynamic_translations.speakers.show_all')
+                    / Show all the speakers
+              %div.row            
+                %button.btn.btn-embossed.btn-primary.hide#btn_showspeakers_up
+                  Hide some speakers
+
+
+
+/ #sp1{:style => "min-height:100px"}
+/   .container
+/     .row
+#involved.grey_bg
+  .get-involved-section
+    .container.sinfo
+      .row.centered
+        %h3#anc_getinvolved
+          = t('dynamic_translations.get_involved.title')
+        %br
+        %hr
+        %br
+      .container
+      %br  
+      %p.text-center
+        = t('dynamic_translations.get_involved.description')
+      %br
+        / OuiShare Fest is a participative festival, co-designed by you. There are many ways you can get involved in its co-creation:
+      .row.get-involved-options-choice
+        .col-md-9.span-centered
+          .row
+            .col-md-6.pricing-table.turquoise.bordered.plain
+              %ul.centered.alt
+                %li.title
+                  Call for proposals
+                
+                %li
+                  = t('dynamic_translations.get_involved.option_1')
+                  
+                
+                %li.button
+                  %a.btn.btn-large.button-call-to-action-option{href: "https://docs.google.com/forms/d/1ejne9y3aDW8Xfejdt9_2ErZxXNc_VHccsaO-LHvKI4U/edit", :target => "_blank"} 
+                    Submit
+                  / %button.btn.btn-large
+                  /   %i.icon-shopping-cart>
+                  /   \&nbsp;&nbsp;Sign Up
+            .col-md-6.pricing-table.turquoise.bordered.plain
+              %ul.centered.alt
+                %li.title
+                  Join the Team
+                
+                
+                %li
+                  = t('dynamic_translations.get_involved.option_2')
+                %li.button
+                  %a.btn.btn-large.button-call-to-action-option{href: "https://docs.google.com/forms/d/15QpVEkvXR9-DpAKLYoUSPOXrfnYRG9aCPnMoK3WUrJo/edit", :target => "_blank"}
+                    Join
+                  
+            / .col-md-4.pricing-table.turquoise.bordered.plain
+            /   %ul.centered.alt
+            /     %li.title
+            /       Volunteer
+                
+            /     %li
+            /       = t('dynamic_translations.get_involved.option_3')
+            /     %li.button
+            /       %a.btn.btn-large.button-call-to-action-option{href: "#"}
+            /         Volunteer
+      %br
+      %br
+      %br
+  
+#tickets.triangle_bg
+  .container.tickets-section  
+    .row.centered
+      %br
+      %h3#anc_tickets 
+        = t('dynamic_translations.tickets.title')
+      %br
+      / %hr
+      %br    
+      
+      / .container
+      / .row.centered      
+      %h4
+        = t('dynamic_translations.tickets.description')
+        / We would like to create an event that anyone can join. There are many ways you can receive a free ticket, from contributing to the festival by co-creating a session, to becoming a volunteer or team member. If you are unable to contribute to the event organization,
+
+        %a{href: "#"} 
+          = t('dynamic_translations.tickets.apply_tickets_link')
+          / you can apply for a sponsored ticket.
+      %br
+      %h4
+        = t('dynamic_translations.tickets.sponsored_tickets')
+        / If you would like to sponsor someone elses ticket, get in touch.
+      %br
+      %div#attendees_list{style: "width:100%; text-align:left;"}
+        %iframe{allowtransparency: "true", frameborder: "0", height: "214", hspace: "0", marginheight: "5", marginwidth: "5", scrolling: "auto", src: "http://www.eventbrite.fr/tickets-external?eid=9833418018&ref=etckt&v=2", vspace: "0", width: "100%"}
+        %div{style: "font-family:Helvetica, Arial; font-size:10px; padding:5px 0 5px; margin:2px; width:100%; text-align:left;"}
+          %a{href: "http://www.eventbrite.fr/r/etckt", style: "color:#ddd; text-decoration:none;", target: "_blank"} Inscription en ligne pour un événement
+          %span{style: "color:#ddd;"} pour
+          %a{href: "https://ouisharefest14.eventbrite.es/?ref=etckt", style: "color:#ddd; text-decoration:none;", target: "_blank"} OuiShare Fest 14
+          %span{style: "color:#ddd;"} réalisé par
+          %a{href: "http://www.eventbrite.fr?ref=etckt", style: "color:#ddd; text-decoration:none;", target: "_blank"} Eventbrite
+
+      %h4.who-s-coming-title
+        = t('dynamic_translations.tickets.who_s_coming') 
+        / Who's already coming
+      - if @ouishare_fest_attendees && !@ouishare_fest_attendees["attendees"].blank?
+
+        %ul.unstyled.attendees-list
+          -@ouishare_fest_attendees["attendees"] = @ouishare_fest_attendees["attendees"]*13
+
+          -@ouishare_fest_attendees["attendees"].first(ENV["EVENTBRITE_ATTENDEES_DISPLAY_NUMBER"].to_i).each do |attendee|
+            .col-lg-2
+              %li.attendee-items
+                =image_tag display_gravatar(attendee["attendee"]["email"]), :class => 'img-circle'
+                .row                      
+                  = attendee["attendee"]["first_name"]
+                  = attendee["attendee"]["last_name"][0]+'.'
+              
+          - if @ouishare_fest_attendees["attendees"].count > ENV["EVENTBRITE_ATTENDEES_DISPLAY_NUMBER"].to_i  
+            %div
+              #allattendees{style: "display: none;"} 
+                -@ouishare_fest_attendees["attendees"].last(@ouishare_fest_attendees["attendees"].count - ENV["EVENTBRITE_ATTENDEES_DISPLAY_NUMBER"].to_i).each do |attendee|
+                        
+                  .col-lg-2
+                    %li.attendee-items
+                      =image_tag display_gravatar(attendee["attendee"]["email"]), :class => 'img-circle'
+                      .row                      
+                        = attendee["attendee"]["first_name"]
+                        = attendee["attendee"]["last_name"][0]+'.'
+                    
+              %br   
+              %div.row
+                %a.individuals-list-btn#btn_attendees_down
+                  %button.btn.btn-embossed.btn-primary 
+                    = t('dynamic_translations.tickets.show_all_attendees') 
+                    / Show all the attendees
+              %div.row 
+                %a.individuals-list-btn.hide#btn_attendees_up        
+                  %button.btn.btn-embossed.btn-primary
+                    Hide team members
+              
+      %br/  
+      %br/
+/ #sp1{:style => "min-height:100px"}
+/   .container
+/     .row
 .partners-container
   .container.sinfo
 
     - if !@partners.blank?
       .row.centered
-        %h3 
+        %h3#anc_partners 
           = t('dynamic_translations.partners.title')
           
         %br
@@ -115,196 +254,23 @@
         - partner_number += 1   
 
 
-    / - if !@partners.blank?
-           
-    /   - array_buffer= []
-     
-    /   - @partners.each do |function| 
-    /     - function.each do |key,values| 
-    /       - if !key.blank?
-    /         .row
-    /           %h4 
-    /             =key.capitalize
-    /           %br
-    /           %hr
-    /           %br
-            
-
-    /         - partner_number = 1   
-    /         - values.each do |partner| 
-              
-    /           - array_buffer.push(partner)      
-    /           - if partner_number % 6 == 0 || partner_number == values.count        
-    /             .row.centered
-    /               - array_buffer.each do |partner|
-    /                 .col-lg-2
-    /                   %a{:href => partner.url, :target => "_blank"}
-    /                     %img.grayscale{:alt => partner.first_name, :src => partner.attachment.url(:partner_size)}
-                        
-    /               - array_buffer.clear
-    /           - partner_number += 1   
+    
 .get-involved-section
   .row.centered.get-involved-punchline
   
-    %h3
+    %h6
       = t('dynamic_translations.partners.become_a_partner')
       / If you would like to become a partner, please contact us at
       %br
       %a{:href => "#"} contribute@ouisharefest.com
 
-#anc_getinvolved
-#sp1{:style => "min-height:100px"}
-  .container
-    .row
-.get-involved-section
-  .container.sinfo
-    .row.centered
-      %h3
-        = t('dynamic_translations.get_involved.title')
-      %br
-      %hr
-      %br
-    .container
-    %br  
-    %p.text-center
-      = t('dynamic_translations.get_involved.description')
-    %br
-      / OuiShare Fest is a participative festival, co-designed by you. There are many ways you can get involved in its co-creation:
-    .row.get-involved-options-choice
-      .col-md-9.span-centered
-        .row
-          .col-md-4.pricing-table.turquoise.bordered.plain
-            %ul.centered.alt
-              %li.title
-                Call for proposals
-              
-              %li
-                = t('dynamic_translations.get_involved.option_1')
-                
-              
-              %li.button
-                %a.btn.btn-large.button-call-to-action-option{href: "#"} 
-                  Submit
-                / %button.btn.btn-large
-                /   %i.icon-shopping-cart>
-                /   \&nbsp;&nbsp;Sign Up
-          .col-md-4.pricing-table.turquoise.bordered.plain
-            %ul.centered.alt
-              %li.title
-                Join the Team
-              
-              
-              %li
-                = t('dynamic_translations.get_involved.option_2')
-              %li.button
-                %a.btn.btn-large.button-call-to-action-option{href: "#"}
-                  Join
-                
-          .col-md-4.pricing-table.turquoise.bordered.plain
-            %ul.centered.alt
-              %li.title
-                Volunteer
-              
-              %li
-                = t('dynamic_translations.get_involved.option_3')
-              %li.button
-                %a.btn.btn-large.button-call-to-action-option{href: "#"}
-                  Volunteer
-    %br
-    %br
-    %br
-  
-#sp1{:style => "min-height:100px"}
-  .container
-    .row
-#anc_tickets{:style => "padding-top:20px;"}
-.row.centered
-  %br
-  %h3 
-    = t('dynamic_translations.tickets.title')
-  %br
-  / %hr
-  %br
-.tickets-section
-  #cta
-    .container.tickets-font-color    
-      .row.centered
-        / %h3 
-        /   = t('dynamic_translations.tickets.title')
-        / Tickets
-        %h4
-          = t('dynamic_translations.tickets.description')
-          / We would like to create an event that anyone can join. There are many ways you can receive a free ticket, from contributing to the festival by co-creating a session, to becoming a volunteer or team member. If you are unable to contribute to the event organization,
 
-          %a{href: "#"} 
-            = t('dynamic_translations.tickets.apply_tickets_link')
-            / you can apply for a sponsored ticket.
-        %br
-        %h4 
-          = t('dynamic_translations.tickets.sponsored_tickets')
-          / If you would like to sponsor someone elses ticket, get in touch.
-        %br
-        %div#attendees_list{style: "width:100%; text-align:left;"}
-          %iframe{allowtransparency: "true", frameborder: "0", height: "214", hspace: "0", marginheight: "5", marginwidth: "5", scrolling: "auto", src: "http://www.eventbrite.fr/tickets-external?eid=9833418018&ref=etckt&v=2", vspace: "0", width: "100%"}
-          %div{style: "font-family:Helvetica, Arial; font-size:10px; padding:5px 0 5px; margin:2px; width:100%; text-align:left;"}
-            %a{href: "http://www.eventbrite.fr/r/etckt", style: "color:#ddd; text-decoration:none;", target: "_blank"} Inscription en ligne pour un événement
-            %span{style: "color:#ddd;"} pour
-            %a{href: "https://ouisharefest14.eventbrite.es/?ref=etckt", style: "color:#ddd; text-decoration:none;", target: "_blank"} OuiShare Fest 14
-            %span{style: "color:#ddd;"} réalisé par
-            %a{href: "http://www.eventbrite.fr?ref=etckt", style: "color:#ddd; text-decoration:none;", target: "_blank"} Eventbrite
-
-        %h4.who-s-coming-title
-          = t('dynamic_translations.tickets.who_s_coming') 
-          / Who's already coming
-        - if @ouishare_fest_attendees && !@ouishare_fest_attendees["attendees"].blank?
-
-          %ul.unstyled.attendees-list
-            -@ouishare_fest_attendees["attendees"] = @ouishare_fest_attendees["attendees"]*13
-
-            -@ouishare_fest_attendees["attendees"].first(ENV["EVENTBRITE_ATTENDEES_DISPLAY_NUMBER"].to_i).each do |attendee|
-              .col-lg-2
-                %li
-                  =image_tag display_gravatar(attendee["attendee"]["email"]), :class => 'img-circle'
-                  .row                      
-                    = attendee["attendee"]["first_name"]
-                    = attendee["attendee"]["last_name"][0]+'.'
-                
-            - if @ouishare_fest_attendees["attendees"].count > ENV["EVENTBRITE_ATTENDEES_DISPLAY_NUMBER"].to_i  
-              %div
-                #allattendees{style: "display: none;"} 
-                  -@ouishare_fest_attendees["attendees"].last(@ouishare_fest_attendees["attendees"].count - ENV["EVENTBRITE_ATTENDEES_DISPLAY_NUMBER"].to_i).each do |attendee|
-                          
-                    .col-lg-2
-                      %li
-                        =image_tag display_gravatar(attendee["attendee"]["email"]), :class => 'img-circle'
-                        .row                      
-                          = attendee["attendee"]["first_name"]
-                          = attendee["attendee"]["last_name"][0]+'.'
-                      
-                %br   
-                %div.row
-                  %a.individuals-list-btn#btn_attendees_down
-                    %button.btn.btn-embossed.btn-primary 
-                      = t('dynamic_translations.tickets.show_all_attendees') 
-                      / Show all the attendees
-                %div.row 
-                  %a.individuals-list-btn.hide#btn_attendees_up        
-                    %button.btn.btn-embossed.btn-primary
-                      Hide team members
-                
-        %br/  
-        %br/
-#sp1{:style => "min-height:100px"}
-  .container
-    .row
-#anc_team
-
-#g
+#team.blank_bg
   .container
     .row.centered
       %br/
       %br/
-      %h3
+      %h3#anc_team
         =t('dynamic_translations.team.title') 
       %br/
       %hr/

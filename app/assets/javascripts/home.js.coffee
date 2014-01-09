@@ -14,9 +14,10 @@ $(document).ready ->
   $("a[href^=\"#anc\"]").on "click", (e) ->
     e.preventDefault()
     target = @hash
-    $target = $(target)
+    $target = $(target)    
+    scroll_position = $target.offset().top - $('.navbar').height()  
     $("html, body").stop().animate
-      scrollTop: $target.offset().top
+      scrollTop: scroll_position
     , 900, "swing", ->
       window.location.hash = target
 
@@ -30,7 +31,7 @@ $(document).ready ->
     toggle_class("#btn_showspeakers_up", "hide")    
     $("#allspeakers").slideUp "slow"
     $('html,body').animate({
-    scrollTop: $("#anc_speakers").offset().top
+    scrollTop: $("#anc_speakers").offset().top - $('.navbar').height()
     },
     'slow') 
     $("#btn_showspeakers_down").show()
@@ -45,24 +46,15 @@ $(document).ready ->
     toggle_class("#btn_team_members_up", "hide")    
     $("#allteam_members").slideUp "slow"
     $('html,body').animate({
-    scrollTop: $("#anc_team").offset().top
+    scrollTop: $("#anc_team").offset().top - $('.navbar').height()
     },
     'slow') 
-    $("#btn_team_members_down").show()
-
-  # $("#btn_attendees_down").click ->    
-  #   $("#btn_attendees_down").hide()
-  #   $("#allattendees").slideDown "slow"  
-
-  # $("#btn_attendees_up").click ->    
-  #   $("#btn_attendees_down").hide()
-  #   $("#allattendees").slideDown "slow"   
+    $("#btn_team_members_down").show()   
     
   $("#btn_attendees_down").click ->
     $("#btn_attendees_down").hide()
     $("#allattendees").slideDown "slow"
-    toggle_class("#btn_attendees_up", "hide")
-    
+    toggle_class("#btn_attendees_up", "hide")    
 
   $("#btn_attendees_up").click ->
     toggle_class("#btn_attendees_up", "hide")    
