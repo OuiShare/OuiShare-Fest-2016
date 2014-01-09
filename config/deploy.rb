@@ -7,6 +7,11 @@ set :scm, :git
 
 set :deploy_to, "/home/pitchme/webapps/ouishare_fest"
 
+set :default_environment, {
+  'PATH' => "#{deploy_to}/bin:$PATH",
+  'GEM_HOME' => "#{deploy_to}/gems" 
+}
+
 role :web, "pitchme.webfactional.com"                          # Your HTTP server, Apache/etc
 role :app, "pitchme.webfactional.com"                          # This may be the same as your `Web` server
 role :db,  "pitchme.webfactional.com", :primary => true # This is where Rails migrations will run
