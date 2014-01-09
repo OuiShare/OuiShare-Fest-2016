@@ -6,9 +6,12 @@
  * Version: 1.0
  * URL: http://alvarez.is
  */
-
+.height-ref{
+	height: 100%;
+}
 body {
   padding-top: 55px;
+  height: 100%;
 }
 
 .centered {
@@ -224,8 +227,8 @@ body {
 
 /****** Headerwrap ******/
 #headerwrap {
-	/*background: url(/assets/header-bg.jpg) no-repeat center top;*/
-	background: url(/assets/background_main_section.png) no-repeat center top;
+	
+	/*background: url(/assets/background_main_section.png) no-repeat center top;
 	margin-top: 0px;
 	padding-top:160px;
 	text-align:center;
@@ -242,7 +245,7 @@ body {
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
-    background-size: cover;
+    background-size: cover;*/
 }
 
 #headerwrap h1 {
@@ -304,7 +307,7 @@ body {
 #servicewrap {
 	background: url(/assets/service-bg.jpg) no-repeat center top;
 	margin-top: 0px;
-	padding-top:120px;
+	padding-top:100px;
 	text-align:center;
 	background-attachment: relative;
 	background-position: center center;
@@ -330,7 +333,7 @@ body {
 #testwrap {
 	background: url(/assets/test-bg.jpg) no-repeat center top;
 	margin-top: 0px;
-	padding-top:120px;
+	padding-top:100px;
 	text-align:center;
 	background-attachment: relative;
 	background-position: center center;
@@ -411,7 +414,7 @@ body {
 
 .blank_bg {
 	background-color: #F7F7F7;
-	min-height: 120%;
+	min-height: 100%;
 	width: 100%;
 	margin-top: 0px;
 	padding-top: 130px;
@@ -426,7 +429,7 @@ body {
 	text-align: center;
 	background-attachment: relative;
 	background-position: center center;
-	min-height: 120%;
+	min-height: 100%;
 	-webkit-background-size: 200px 140px;
 	-moz-background-size: 200px 140px;
 	-o-background-size: 200px 140px;
@@ -452,7 +455,23 @@ body {
 	padding-bottom: 100px;
 	text-align: center;
 	background-attachment: relative;
-	min-height: 120%;
+	min-height: 100%;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+.blue_bg {
+	background: url(/assets/background_main_section.png) no-repeat center top;
+	/*background-color: #33FF99; */
+	margin-top: 0px;
+	padding-top:100px;
+	text-align:center;
+	background-attachment: relative;
+	background-position: center center;
+	min-height: 100%;
+
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
@@ -473,7 +492,7 @@ body {
 	padding-bottom: 100px;
 	text-align: center;
 	background-attachment: relative;
-	min-height: 120%;
+	min-height: 100%;
 	width: 100%;
 	-webkit-background-size: 100%;
 	-moz-background-size: 100%;
@@ -502,7 +521,7 @@ text-transform: none;
 	padding-bottom: 100px;
 	text-align: center;
 	background-attachment: relative;
-	min-height: 120%;
+	min-height: 100%;
 	width: 100%;
 	color: #20203D;
 	-webkit-background-size: 100%;

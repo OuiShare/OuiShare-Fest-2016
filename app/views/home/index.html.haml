@@ -1,19 +1,19 @@
-/ Headerwrap
-.main-section
-  #headerwrap
-    .container
-      .row{style: "padding:20px;-moz-border-radius: 15px;border-radius: 15px;"}      
+
+#headerwrap.blue_bg
+  .container
+    .row.main-section   
+      #head_logo   
         = image_tag "/assets/logo_index_main_section.png"
+      .col-md-8.col-md-offset-2
         %h1
           = t('dynamic_translations.main.title')
           %br
           %p
             = t('dynamic_translations.main.event')
             
-          %p
-            %strong
-              = t('dynamic_translations.main.subtitle')
-              / 3 days of conference, co-creating and connecting.
+          %p         
+            = t('dynamic_translations.main.subtitle')
+            / 3 days of conference, co-creating and connecting.
 
         %br/
         
