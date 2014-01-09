@@ -64,23 +64,24 @@
     -if !@displayed_speakers.blank?
       .ch-grid
         - @displayed_speakers.each do |speaker|
-          .col-lg-3
+          .col-lg-3.individuals-list-display
             %li
               = render "/individuals/partials/speaker_display", :speaker => speaker
         - if !@hidden_speakers.blank?
-          #allspeakers{style: "display: none;"}  
-            - @hidden_speakers.each do |speaker|
-              .col-lg-3
-                %li
-                  = render "/individuals/partials/speaker_display", :speaker => speaker              
           %div
-            %a#btn_showspeakers_down
-              %button.btn.btn-embossed.btn-primary 
-                = t('dynamic_translations.speakers.show_all')
-                / Show all the speakers
-          / %div
-          /   %a#btn_showspeakers_up{:style => "display:none;"}
-          /     %button.btn.btn-embossed.btn-primary Hide some speakers
+            #allspeakers{style: "display: none;"}  
+              - @hidden_speakers.each do |speaker|
+                .col-lg-3.individuals-list-display
+                  %li
+                    = render "/individuals/partials/speaker_display", :speaker => speaker              
+            %div.row
+              %a#btn_showspeakers_down
+                %button.btn.btn-embossed.btn-primary 
+                  = t('dynamic_translations.speakers.show_all')
+                  / Show all the speakers
+            %div.row            
+              %button.btn.btn-embossed.btn-primary.hide#btn_showspeakers_up
+                Hide some speakers
 
 #sp1{:style => "min-height:100px"}
   .container
@@ -243,7 +244,7 @@
           = t('dynamic_translations.tickets.sponsored_tickets')
           / If you would like to sponsor someone elses ticket, get in touch.
         %br
-        %div{style: "width:100%; text-align:left;"}
+        %div#attendees_list{style: "width:100%; text-align:left;"}
           %iframe{allowtransparency: "true", frameborder: "0", height: "214", hspace: "0", marginheight: "5", marginwidth: "5", scrolling: "auto", src: "http://www.eventbrite.fr/tickets-external?eid=9833418018&ref=etckt&v=2", vspace: "0", width: "100%"}
           %div{style: "font-family:Helvetica, Arial; font-size:10px; padding:5px 0 5px; margin:2px; width:100%; text-align:left;"}
             %a{href: "http://www.eventbrite.fr/r/etckt", style: "color:#ddd; text-decoration:none;", target: "_blank"} Inscription en ligne pour un événement
@@ -256,37 +257,42 @@
           = t('dynamic_translations.tickets.who_s_coming') 
           / Who's already coming
         - if @ouishare_fest_attendees && !@ouishare_fest_attendees["attendees"].blank?
+
           %ul.unstyled.attendees-list
+            -@ouishare_fest_attendees["attendees"] = @ouishare_fest_attendees["attendees"]*13
+
             -@ouishare_fest_attendees["attendees"].first(ENV["EVENTBRITE_ATTENDEES_DISPLAY_NUMBER"].to_i).each do |attendee|
-              -15.times do        
-                .col-lg-2
-                  %li
-                    =image_tag display_gravatar(attendee["attendee"]["email"]), :class => 'img-circle'
-                    .row                      
-                      = attendee["attendee"]["first_name"]
-                      = attendee["attendee"]["last_name"][0]+'.'
-                
-                  
-                  
+              .col-lg-2
+                %li
+                  =image_tag display_gravatar(attendee["attendee"]["email"]), :class => 'img-circle'
+                  .row                      
+                    = attendee["attendee"]["first_name"]
+                    = attendee["attendee"]["last_name"][0]+'.'
                 
             - if @ouishare_fest_attendees["attendees"].count > ENV["EVENTBRITE_ATTENDEES_DISPLAY_NUMBER"].to_i  
-              #all_attendees
-                -@ouishare_fest_attendees["attendees"].last(@ouishare_fest_attendees["attendees"].count - ENV["EVENTBRITE_ATTENDEES_DISPLAY_NUMBER"].to_i).each do |attendee|
-                  -15.times do        
+              %div
+                #allattendees{style: "display: none;"} 
+                  -@ouishare_fest_attendees["attendees"].last(@ouishare_fest_attendees["attendees"].count - ENV["EVENTBRITE_ATTENDEES_DISPLAY_NUMBER"].to_i).each do |attendee|
+                          
                     .col-lg-2
                       %li
                         =image_tag display_gravatar(attendee["attendee"]["email"]), :class => 'img-circle'
                         .row                      
                           = attendee["attendee"]["first_name"]
                           = attendee["attendee"]["last_name"][0]+'.'
-                    
-                    
-              %div
-                %a#btn_attendees_down
-                  %button.btn.btn-embossed.btn-primary 
-                    = t('dynamic_translations.tickets.show_all_attendees') 
-                    / Show all the attendees
-        %br/
+                      
+                %br   
+                %div.row
+                  %a.individuals-list-btn#btn_attendees_down
+                    %button.btn.btn-embossed.btn-primary 
+                      = t('dynamic_translations.tickets.show_all_attendees') 
+                      / Show all the attendees
+                %div.row 
+                  %a.individuals-list-btn.hide#btn_attendees_up        
+                    %button.btn.btn-embossed.btn-primary
+                      Hide team members
+                
+        %br/  
         %br/
 #sp1{:style => "min-height:100px"}
   .container
@@ -309,7 +315,23 @@
       %br/
       - if !@team_members.blank?
         .ch-grid
-          - @team_members.each do |team_member|
-            .col-lg-3
+          - @displayed_team_members.each do |team_member|
+            .col-lg-3.individuals-list-display
               %li
-                = render "/individuals/partials/team_member_display", :team_member => team_member
+                = render "/individuals/partials/team_member_display", :team_member => team_member          
+          - if !@hidden_team_members.blank?
+            %div
+              #allteam_members{style: "display: none;"}  
+                - @hidden_team_members.each do |team_member|
+                  .col-lg-3.individuals-list-display
+                    %li
+                      = render "/individuals/partials/team_member_display", :team_member => team_member           
+              %div.row
+                %a#btn_team_members_down
+                  %button.btn.btn-embossed.btn-primary 
+                    / = t('dynamic_translations.team.show_all')
+                    Show all team members
+              %div.row  
+                %a.hide#btn_team_members_up            
+                  %button.btn.btn-embossed.btn-primary
+                    Hide team members
