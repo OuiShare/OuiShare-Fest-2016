@@ -329,6 +329,7 @@ DEPENDENCIES
   rspec-rails
   sass-rails (~> 3.2.3)
   strong_parameters
+  therubyracer
   turbolinks
   tweet-button
   uglifier (>= 1.0.3)
