@@ -8,7 +8,6 @@ gem 'pg', '0.17.0'
 
 #JS Runtime
 gem 'execjs'
-gem 'therubyracer'
 
 # HAML
 gem 'haml', '4.0.3'
