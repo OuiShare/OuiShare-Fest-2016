@@ -41,6 +41,13 @@
   font-style: normal;
 }
 @font-face {
+  font-family: 'varela_roundregular';
+  src: url('/assets/varela/varelaround-regular-webfont.eot');
+  src: url('/assets/varela/varelaround-regular-webfont.eot?#iefix') format('embedded-opentype'), url('/assets/varela/varelaround-regular-webfont.woff') format('woff'), url('/assets/varela/varelaround-regular-webfont.ttf') format('truetype'), url('/assets/varela/varelaround-regular-webfont.svg#varelaregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
   font-family: "Flat-UI-Icons";
   src: url("/assets/Flat-UI-Icons.eot");
   src: url("/assets/Flat-UI-Icons.eot?#iefix") format("embedded-opentype"), url("/assets/Flat-UI-Icons.woff") format("woff"), url("/assets/Flat-UI-Icons.ttf") format("truetype"), url("/assets/Flat-UI-Icons.svg#Flat-UI-Icons") format("svg");
@@ -432,20 +439,21 @@ you can use the generic selector below, but it's slower:
   border-top-color: #34495e !important;
 }
 body {
-  font-family: 'Lato', Helvetica, Arial, sans-serif;
+  font-family: 'varela_roundregular', Helvetica, Arial, sans-serif;
   font-size: 14px;
   line-height: 1.231;
   color: #34495e;
   background-color: #ffffff;
 }
 a {
-  color: #16a085;
+  color: #00cd98;
   text-decoration: none;
   -webkit-transition: 0.25s;
   -moz-transition: 0.25s;
   -o-transition: 0.25s;
   transition: 0.25s;
   -webkit-backface-visibility: hidden;
+  text-shadow: white 1px 1px;
 }
 a:hover,
 a:focus {
@@ -540,7 +548,7 @@ h6,
 .h4,
 .h5,
 .h6 {
-  font-family: 'Lato', Helvetica, Arial, sans-serif;
+  font-family: 'varela_roundregular', Helvetica, Arial, sans-serif;
   font-weight: 300;
   line-height: 1.2;
 }
@@ -563,6 +571,7 @@ h2,
 h3 {
   margin-top: 2px;
   margin-bottom: 4px;
+  text-shadow: 1px 1px #F7F7F7, -1px -1px #000000;
 }
 h4,
 h5,
@@ -1043,7 +1052,7 @@ address {
   line-height: 29.55px;
   font-weight: 900;
   margin-left: -15px;
-  padding: 23px 28px 24px 17px;
+  padding: 14px 28px 14px 17px;
   text-shadow: none;
   display: inline-block;
 }
@@ -1121,7 +1130,7 @@ address {
   font-weight: 300;
   font-size: 15px;
   line-height: 28px;
-  padding: 22px 20px;
+  padding: 14px 20px;
   text-shadow: none;
   -webkit-transition: background-color .25s, color .25s, border-bottom-color .25s;
   -moz-transition: background-color .25s, color .25s, border-bottom-color .25s;
