@@ -15,10 +15,8 @@
   %b
     = speaker.fullname
   %br
-  - if !speaker.company_name.blank?
-    %small
-      %a{href: speaker.url, target: "_blank"}
-        = speaker.company_name
-  - else
-    %br
+  %small
+    %a{href: speaker.url, target: "_blank"}
+      = speaker.company_name
+  
   
