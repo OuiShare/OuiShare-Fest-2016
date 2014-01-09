@@ -7,7 +7,8 @@ gem 'nokogiri'
 gem 'pg', '0.17.0'
 
 #JS Runtime
-gem 'execjs'
+gem 'therubyracer', :platforms => :ruby
+gem 'execjs', :platforms => :ruby
 
 # HAML
 gem 'haml', '4.0.3'
