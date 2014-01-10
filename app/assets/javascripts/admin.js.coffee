@@ -4,13 +4,17 @@
 $(document).ready ->
   $('#restart_server_btn').click (e) ->
     e.preventDefault()    
+    $('#server_modal').modal('show')
     $.ajax({
+      beforeSend: ->
+        $('#restarting_loader')
       type: "GET",
       url: "/admin/restart_nginx_server"
+
     })
-    setTimeout (->
-      location.reload()
-    ), 5000
+    # setTimeout (->
+    #   location.reload()
+    # ), 5000
     
 
 
