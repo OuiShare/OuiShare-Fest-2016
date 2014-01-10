@@ -17,6 +17,7 @@ rerun.txt
 pickle-email-*.html
 .project
 config/application.yml
+config/database.yml
 log/*
 .tx/config
 get-pip.py
