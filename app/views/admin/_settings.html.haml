@@ -3,8 +3,7 @@
     - @settings.each do |setting|
       = define_setting_action(setting)
   %br
-  .row
-    =link_to restart_nginx_server_admin_index_path do
-      %button{:type => "button", :class => "btn btn-warning", :id => "restart_server_btn"}
-        Restart server      
+  .row    
+    %button{:type => "button", :class => "btn btn-warning", :id => "restart_server_btn"}
+      Restart server      
   = render '/modals/server_loader'
