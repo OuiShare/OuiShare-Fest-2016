@@ -88,7 +88,9 @@ class AdminController < ApplicationController
   def restart_nginx_server
 
     executed_bash = "restart"
-    today = system(ENV['PATH_BIN'] + executed_bash)   
+    bash_cmd = ENV['PATH_BIN'] + executed_bash
+    xx
+    today = system(bash_cmd)   
     
     if current_directory_contents
       redirect_to :back, :notice => "Server succesfully restarted"

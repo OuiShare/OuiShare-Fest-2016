@@ -169,7 +169,7 @@
         %h3#anc_partners 
           = t('dynamic_translations.partners.title')
         %hr
-      = render "/individuals/partials/partners_display", :partners => @partners, :important_partners_display => true, :important_partners_count => 3
+      = render "/individuals/partials/partners_display", :partners => @partners, :important_partners_display => false
     - if !@friends.blank?
       .row.centered
         %h3#anc_partners 
