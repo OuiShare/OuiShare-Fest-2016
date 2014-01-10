@@ -2,10 +2,9 @@
   .row
     - @settings.each do |setting|
       = define_setting_action(setting)
+  %br
   .row
     =link_to restart_nginx_server_admin_index_path do
       %button{:type => "button", :class => "btn btn-warning", :id => "restart_server_btn"}
-        Restart server
-      / #restarting_loader
-      /   =image_tag "/assets/ajax-loader.gif"
+        Restart server      
   = render '/modals/server_loader'
