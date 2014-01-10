@@ -6,7 +6,7 @@ gem 'nokogiri'
 
 gem 'pg', '0.17.0'
 
-#JS Runtime OK
+#JS Runtime
 gem 'therubyracer', :platforms => :ruby
 gem 'execjs', :platforms => :ruby
 
