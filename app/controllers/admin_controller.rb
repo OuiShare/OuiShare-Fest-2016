@@ -92,9 +92,5 @@ class AdminController < ApplicationController
     current_directory_contents = system(bash_cmd) 
     
     render :nothing => true
-    # respond_to do |format|
-
-    #   format.json { render :json => current_directory_contents }
-    # end
   end
 end
