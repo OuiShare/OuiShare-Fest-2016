@@ -46,8 +46,7 @@ class HomeController < ApplicationController
       @ouishare_fest_attendees = eventbrite_instance.event_list_attendees({ "id" => ENV["EVENTBRITE_EVENT_ID"] })
     rescue
       @ouishare_fest_attendees = nil
-    end
-  
+    end    
   end
 
   def faq
