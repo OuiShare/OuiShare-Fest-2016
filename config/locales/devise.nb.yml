@@ -1,0 +1,46 @@
+nb:
+  errors:
+    messages:
+      not_found: "ikke funnet"
+      already_confirmed: "har allerede blitt bekreftet. Prøv å logg inn."
+      not_locked: "var ikke låst"
+      not_saved:
+        one: "Én feil gjorde at %{resource} ikke kunne lagres:"
+        other: "%{count} feil gjorde at %{resource} ikke kunne lagres:"
+  
+  devise:
+    failure:
+      unauthenticated: 'Du må logge inn eller registrere deg for å kunne fortsette.'
+      unconfirmed: 'Du må bekrefte kontoen din for å kunne fortsette.'
+      locked: 'Din konto er låst.'
+      invalid: 'Epost-adresse eller passord er ikke gyldig.'
+      invalid_token: 'Ugyldig autentiserings-token.'
+      timeout: 'Din sesjon er utløpt. Logg inn igjen for å kunne fortsette.'
+      inactive: 'Din konto er ikke aktivert.'
+    sessions:
+      signed_in: 'Du er nå innlogget.'
+      signed_out: 'Du er nå logget ut.'
+    passwords:
+      send_instructions: 'Du vil snart motta en epost med instruksjoner for å nullstille passordet ditt.'
+      updated: 'Ditt passord er endret og du er nå innlogget.'
+    confirmations:
+      send_instructions: 'Du vil snart motta en epost med instruksjoner for å aktivere din konto.'
+      confirmed: 'Din konto er aktiveret og du er nå innlogget.'
+    registrations:
+      signed_up: 'Velkommen! Din registrering er vellykket.'
+      inactive_signed_up: 'Din registrering er vellykket, men vi kunne ikke logge deg inn på grunn av at din konto er %{reason}.'
+      updated: 'Din profil er oppdatert.'
+      destroyed: 'Farvel. Din konto er nå slettet.'
+    unlocks:
+      send_instructions: 'Du vil snart motta en epost med instruksjon for å gjenåpne din konto.'
+      unlocked: 'Din konto er gjenåpnet og du er nå innlogget.'
+    omniauth_callbacks:
+      success: 'Vellykket autorisering fra %{kind}.'
+      failure: 'Kunne ikke autorisere deg fra %{kind} fordi "%{reason}".'
+    mailer:
+      confirmation_instructions:
+        subject: 'Bekreftelsesinstruksjoner'
+      reset_password_instructions:
+        subject: 'Nullstilling av passord'
+      unlock_instructions:
+        subject: 'Gjenåpning av konto'
