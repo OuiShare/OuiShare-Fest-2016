@@ -6,7 +6,7 @@
     - partners.first(important_partners_count).each do |important_partner|
       .col-lg-4
         %a{:href => important_partner.url, :target => "_blank"}
-          %img.grayscale{:alt => important_partner.first_name, :src => important_partner.attachment.url(:original), :style => "width:100%;"}
+          %img.grayscale{:alt => important_partner.first_name, :src => important_partner.attachment.url(:original), :style => "width:60%;"}
 
 - else
   -important_partners_count = 0
