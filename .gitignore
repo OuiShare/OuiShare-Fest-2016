@@ -24,3 +24,4 @@ transifex url.txt
 translations/*
 config/locales/ouishare*
 config/locales/individuals*
+config/database.yml

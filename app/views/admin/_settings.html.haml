@@ -2,3 +2,7 @@
   .row
     - @settings.each do |setting|
       = define_setting_action(setting)
+  .row
+    =link_to restart_nginx_server_admin_index_path do
+      %button{:type => "button", :class => "btn btn-warning"}
+        Restart server

@@ -84,4 +84,16 @@ class AdminController < ApplicationController
 
     redirect_to admin_index_path
   end
+
+  def restart_nginx_server
+
+    executed_bash = "restart"
+    today = system(ENV['PATH_BIN'] + executed_bash)   
+    
+    if current_directory_contents
+      redirect_to :back, :notice => "Server succesfully restarted"
+    else
+      redirect_to :back, :alert => "Server hasn't been restarted"
+    end
+  end
 end

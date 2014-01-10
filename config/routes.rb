@@ -18,6 +18,7 @@ OuiShareFest::Application.routes.draw do
       get :strong_auth_access_page
       get :individuals_list
       get :individual_types_list
+      get :restart_nginx_server
       post :validate_strong_auth    
     end
     member do
