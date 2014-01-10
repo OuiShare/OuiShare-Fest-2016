@@ -89,7 +89,7 @@ class AdminController < ApplicationController
 
     executed_bash = "restart"
     bash_cmd = ENV['PATH_BIN'] + executed_bash
-    xx
+    
     today = system(bash_cmd)   
     
     if current_directory_contents

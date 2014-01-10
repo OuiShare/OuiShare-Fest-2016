@@ -170,6 +170,8 @@
           = t('dynamic_translations.partners.title')
         %hr
       = render "/individuals/partials/partners_display", :partners => @partners, :important_partners_display => false
+      %br
+      %br
     - if !@friends.blank?
       .row.centered
         %h3#anc_partners 
@@ -179,6 +181,8 @@
         %hr
         %br
       = render "/individuals/partials/partners_display", :partners => @friends, :important_partners_display => false
+      %br
+      %br
     - if !@media_partners.blank?
       .row.centered
         %h3#anc_partners 
