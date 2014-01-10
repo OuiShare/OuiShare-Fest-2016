@@ -6,7 +6,7 @@ gem 'nokogiri'
 
 gem 'pg', '0.17.0'
 
-#JS Runtimes
+#JS Runtimes to enable JS compatibility on Unix Server
 gem 'therubyracer', :platforms => :ruby
 gem 'execjs', :platforms => :ruby
 
