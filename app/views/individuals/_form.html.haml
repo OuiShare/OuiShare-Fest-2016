@@ -9,7 +9,8 @@
   .form-group
     - if !@individual.attachment.blank?
       = image_tag @individual.attachment.url(:small)
-    = f.file_field :attachment
+    = f.file_field :attachment, :id => "individual_attachment"
+    #file_attachment_error
     %span.help-block
       The image size should be at least 220x220 to have an optimal display
   .form_group
