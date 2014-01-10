@@ -90,7 +90,7 @@ class AdminController < ApplicationController
     executed_bash = "restart"
     bash_cmd = ENV['PATH_BIN'] + executed_bash
     
-    today = system(bash_cmd)   
+    current_directory_contents = system(bash_cmd)   
     
     if current_directory_contents
       redirect_to :back, :notice => "Server succesfully restarted"
