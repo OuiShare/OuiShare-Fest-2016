@@ -1,24 +1,24 @@
 set :application, "OuiShare-Fest"
-set :repository,  "pitchme@pitchme.webfactional.com:webapps/git/repos/OuiShare-Fest.git"
+set :repository,  "ouishare@ouishare.webfactional.com:webapps/git/repos/OuiShare-Fest.git"
 
 # set :scm, :git # You can set :scm explicitly or Capistrano will make an intelligent guess based on known version control directory names
 # Or: `accurev`, `bzr`, `cvs`, `darcs`, `git`, `mercurial`, `perforce`, `subversion` or `none`
 set :scm, :git
 
-set :deploy_to, "/home/pitchme/webapps/ouishare_fest"
+set :deploy_to, "~/webapps/ouishare_fest"
 
-set :default_environment, {
+set :default_env, {
   'PATH' => "#{deploy_to}/bin:$PATH",
   'GEM_HOME' => "#{deploy_to}/gems" 
 }
 
-role :web, "pitchme.webfactional.com"                          # Your HTTP server, Apache/etc
-role :app, "pitchme.webfactional.com"                          # This may be the same as your `Web` server
-role :db,  "pitchme.webfactional.com", :primary => true # This is where Rails migrations will run
-# role :db,  "your slave db-server here"
+role :web, "ouishare.webfactional.com"                          # Your HTTP server, Apache/etc
+role :app, "ouishare.webfactional.com"                          # This may be the same as your `Web` server
+role :db,  "ouishare.webfactional.com", :primary => true # This is where Rails migrations will run
+## role :db,  "your slave db-server here"
 
-set :user, "pitchme"
-set :scm_username, "pitchme"
+set :user, "ouishare"
+set :scm_username, "ouishare"
 set :use_sudo, false
 default_run_options[:pty] = true
 

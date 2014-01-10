@@ -6,6 +6,10 @@ gem 'nokogiri'
 
 gem 'pg', '0.17.0'
 
+#JS Runtime
+gem 'therubyracer', :platforms => :ruby
+gem 'execjs', :platforms => :ruby
+
 # HAML
 gem 'haml', '4.0.3'
 gem 'html2haml'
@@ -86,9 +90,6 @@ end
 platforms :ruby do
   group :development, :test do
     gem 'railroady'
-  end
-  group :production do
-    gem "therubyracer"
   end
 end
 
