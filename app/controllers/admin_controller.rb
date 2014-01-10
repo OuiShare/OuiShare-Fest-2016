@@ -86,16 +86,15 @@ class AdminController < ApplicationController
   end
 
   def restart_nginx_server
-
     executed_bash = "restart"
     bash_cmd = ENV['PATH_BIN'] + executed_bash
 
-    current_directory_contents = system(bash_cmd)   
-    sleep 5
-    if current_directory_contents
-      redirect_to :back, :notice => "Server succesfully restarted"
-    else
-      redirect_to :back, :alert => "Server hasn't been restarted"
-    end
+    current_directory_contents = system(bash_cmd) 
+    
+    render :nothing => true
+    # respond_to do |format|
+
+    #   format.json { render :json => current_directory_contents }
+    # end
   end
 end
