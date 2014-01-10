@@ -1,0 +1,58 @@
+sl:
+  errors:
+    messages:
+      expired: "je potekel, prosimo zahtevajte novega"
+      not_found: "ni bil najden"
+      already_confirmed: "je že potrjen, prosimo poskusite se prijaviti"
+      not_locked: "ni bil zaklenjen"
+      not_saved:
+        one: "1 napaka preprečuje, da bi se podatek %{resource} shranil:"
+        two: "2 napaki preprečujeta, da bi se podatek %{resource} shranil:"
+        few: "%{count} napake preprečujejo, da bi se podatek %{resource} shranil:"
+        other: "%{count} napak preprečuje, da bi se podatek %{resource} shranil:"
+
+  devise:
+    failure:
+      already_authenticated: 'Ste že prijavljeni.'
+      unauthenticated: 'Pred nadaljevanjem se morate prijaviti ali ustvariti nov uporabniški račun.'
+      unconfirmed: 'Pred nadaljevanjem morate potrditi vaš uporabniški račun.'
+      locked: 'Vaš uporabniški račun je zaklenjen.'
+      invalid: 'Napačno uporabniško ime ali geslo.'
+      invalid_token: 'Nepravilni žeton za avtentikacijo.'
+      timeout: 'Vaša seja je potekla. Prosimo, prijavite se ponovno.'
+      inactive: 'Vaš uporabniški račun še ni bil aktiviran.'
+    sessions:
+      signed_in: 'Prijava uspešna.'
+      signed_out: 'Odjava uspešna.'
+    passwords:
+      send_instructions: 'V nekaj minutah boste prejeli elektronsko sporočilo z navodili za ponastavitev vašega gesla.'
+      updated: 'Vaše geslo je bilo uspešno spremenjeno. Sedaj ste prijavljeni.'
+      updated_not_active: 'Vaše geslo je bilo uspešno spremenjeno.'
+      send_paranoid_instructions: "Če je vaš elektronski naslov v naši bazi podatkov, boste na ta naslov v nekaj minutah prejeli povezavo za ponastavitev gesla."
+      no_token: "Do te strani lahko dostopate samo iz elektronskega sporočila za ponastavitev gesla. V kolikor ste na stran prišli iz tega sporočila, prosimo preverite, da ste uporabili celotni naveden naslov."
+    confirmations:
+      send_instructions: 'V nekaj minutah boste prejeli elektronsko sporočilo z navodili za potrditev vašega uporabniškega računa.'
+      send_paranoid_instructions: 'Če je vaš elektronski naslov v naši bazi podatkov, boste na ta naslov v nekaj minutah prejeli navodila za potrditev vašega uporabniškega računa.'
+      confirmed: 'Vaš uporabniški račun je bil uspešno potrjen. Sedaj ste prijavljeni.'
+    registrations:
+      signed_up: 'Dobrodošli! Uspešno ste ustvarili nov uporabniški račun.'
+      signed_up_but_unconfirmed: 'Sporočilo s povezavo za potrditev je bilo poslano na vaš elektronski naslov. Za aktivacijo vašega računa prosimo, sledite povezavi.'
+      signed_up_but_inactive: 'Uspešno ste ustvarili nov uporabniški račun, vendar se ne morete prijaviti, ker vaš račun še ni bil aktiviran.'
+      signed_up_but_locked: 'Uspešno ste ustvarili nov uporabniški račun, vendar se ne morete prijaviti, ker je vaš račun zaklenjen.'
+      updated: 'Vaš uporabniški račun je bil uspešno posodobljen.'
+      update_needs_confirmation: "Vaš račun je bil uspešno posodobljen, vendar moramo preveriti vaš elektronski naslov. Prosimo, preverite vašo elektronsko pošto in kliknite na povezavo za potrditev da bo posodobitev vašega računa dokončna."
+      destroyed: 'Nasvidenje! Vaš račun je bil uspešno preklican. Upamo, da se kmalu spet oglasite.'
+    unlocks:
+      send_instructions: 'V nekaj minutah boste prejeli elektronsko sporočilo z navodili za odklepanje vašega uporabniškega računa.'
+      unlocked: 'Vaš uporabniški račun je bil uspešno odklenjen. Prosimo, prijavite se za nadaljevanje.'
+      send_paranoid_instructions: 'Če vaš uporabniški račun obstaja, boste v nekaj minutah prejeli elektronsko sporočilo z navodili za odklepanje.'
+    omniauth_callbacks:
+      success: 'Uspešna avtenikacija iz računa vrste %{kind}.'
+      failure: 'Avtentikacija iz računa vrste %{kind} ni mogoča, ker "%{reason}".'
+    mailer:
+      confirmation_instructions:
+        subject: 'Navodila za potrditev'
+      reset_password_instructions:
+        subject: 'Navodila za ponastavitev gesla'
+      unlock_instructions:
+        subject: 'Navodila za odklepanje'
