@@ -22,3 +22,4 @@ log/*
 get-pip.py
 transifex url.txt
 translations/*
+config/locales/*

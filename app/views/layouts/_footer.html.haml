@@ -6,52 +6,44 @@
           - if current_user.is_admin
             %h5 Administration
             %p
-              = link_to admin_index_path do
-                %i.glyphicon.glyphicon-cog 
-                Admin Panel
-              %br
-              = link_to logout_path, :method => :delete do
-                %i.glyphicon.glyphicon-remove 
-                Logout
+              %small
+                = link_to admin_index_path do
+                  %i.glyphicon.glyphicon-cog 
+                  Admin Panel
+                %br
+                = link_to logout_path, :method => :delete do
+                  %i.glyphicon.glyphicon-remove 
+                  Logout
         %h5 
           = t('dynamic_translations.footer.contact')
-          / Contact
+
         %p
-          = t('dynamic_translations.footer.general_questions')
-          / General questions:
-          %a{href: "mailto:hello@ouishare.net", target: "_blank"} hello@ouisharefest.com
-          %br/
-          = t('dynamic_translations.footer.volunteers')
-          / Volunteers:
-          %a{href: "mailto:volunteers@ouishare.net", target: "_blank"} volunteers@ouisharefest.com
-          %br/
-          = t('dynamic_translations.footer.partners_sponsors')
-          / Partners  Sponsors:
-          %a{href: "partners:press@ouishare.net", target: "_blank"} partners@ouisharefest.com
-          / %br/
-          / = link_to 'Contact Us', home_contact_path
-          / %br/
-          / = link_to 'Contact Us with PopUp', "#", :id => 'link_contact_modal'
-        %p
-          = t('dynamic_translations.about.title')
-          / About
-          %a{href: "http://ouishare.net/about/", target: "_blank"} OuiShare
+          %small
+            = t('dynamic_translations.footer.general_questions')
+            %a{href: "mailto:hello@ouishare.net", target: "_blank"} hello@ouisharefest.com
+            %br/
+            = t('dynamic_translations.footer.volunteers')
+            %a{href: "mailto:volunteers@ouishare.net", target: "_blank"} volunteers@ouisharefest.com
+            %br/
+            = t('dynamic_translations.footer.partners_sponsors')
+            %a{href: "partners:press@ouishare.net", target: "_blank"} partners@ouisharefest.com
+            %br/
+            = t('dynamic_translations.about.title')
+            %a{href: "http://ouishare.net/about/", target: "_blank"} OuiShare
       .col-lg-2
         %h5 
           = t('dynamic_translations.footer.press')
-          / Press
+
         %p
-          %a{href: "#"} 
-            =t('dynamic_translations.footer.download_press_kit')
-            / Download press kit
-        %p
-          %a{href: "mailto:press@ouishare.net", target: "_blank"} 
-            = t('dynamic_translations.footer.press_contact')
-            / Press Contact
+          %small
+            %a{href: "#"} 
+              =t('dynamic_translations.footer.download_press_kit')
+            %br/
+            %a{href: "mailto:press@ouishare.net", target: "_blank"} 
+              = t('dynamic_translations.footer.press_contact')
       .col-lg-2
         %h5 
           = t('dynamic_translations.footer.location')
-          / Location
         %p
           %small
             Cabaret Sauvage
@@ -64,6 +56,15 @@
         %p
           %a{href: "https://maps.google.fr/maps?q=Cabaret+Sauvage,+Paris=fr=UTF8=48.895308,2.392101=0.01975,0.045362=48.895345,2.392168=0.009875,0.022681=caba=Cabaret+Sauvage,=Paris,+%C3%8Ele-de-France=m=15", target: "_blank"}
             %img.img-responsive.img-thumbnail{src: "/assets/small_map.png"}/
+    .row
+      .col-lg-offset-9.col-lg-3
+        %p.pull-right
+          %small
+            Powered by 
 
+            =link_to "http://www.pitch-me.fr", :target => "_blank" do
+              = image_tag '/assets/logo_pitchme_footer.png', :style => "width : 24px; position:relative;top:-5px;"
+              Pitch Me
+            
 = yield :scripts
 =render '/modals/contact_modal'

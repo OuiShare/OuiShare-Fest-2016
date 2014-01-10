@@ -15,7 +15,7 @@ $(document).ready ->
     e.preventDefault()
     target = @hash
     $target = $(target)    
-    scroll_position = $target.offset().top - $('.navbar').height()  
+    scroll_position = $target.offset().top - $('.navbar').height()-10  
     $("html, body").stop().animate
       scrollTop: scroll_position
     , 900, "swing", ->

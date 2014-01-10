@@ -31,9 +31,14 @@ class HomeController < ApplicationController
       @hidden_team_members = @team_members.last(@team_members.count - displayed_team_members_number)
     end
 
-    if IndividualType.find_by_title('Partners')
-      # @partners = Individual.get_partners_by_function
+    if IndividualType.find_by_title('Partners')      
       @partners = IndividualType.find_by_title('Partners').get_members
+    end
+    if IndividualType.find_by_title('Friends')      
+      @friends = IndividualType.find_by_title('Friends').get_members
+    end
+    if IndividualType.find_by_title('Media Partners')      
+      @media_partners = IndividualType.find_by_title('Media Partners').get_members
     end
 
     eventbrite_instance = connect_to_eventbrite()

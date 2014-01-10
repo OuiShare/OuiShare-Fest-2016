@@ -1,0 +1,23 @@
+- array_buffer = []
+- partner_number = 1
+
+-if important_partners_display
+  .row.centered
+    - partners.first(important_partners_count).each do |important_partner|
+      .col-lg-4
+        %a{:href => important_partner.url, :target => "_blank"}
+          %img.grayscale{:alt => important_partner.first_name, :src => important_partner.attachment.url(:original), :style => "width:100%;"}
+
+- else
+  -important_partners_count = 0
+- partners.last(partners.size-important_partners_count).each do |partner|
+  - array_buffer.push(partner)      
+  - if partner_number % 6 == 0 || partner_number == @partners.count
+    .row.centered
+      - array_buffer.each do |partner|
+        .col-lg-2
+          %a{:href => partner.url, :target => "_blank"}
+            %img.grayscale{:alt => partner.first_name, :src => partner.attachment.url(:partner_size)}
+            
+      - array_buffer.clear
+  - partner_number += 1
