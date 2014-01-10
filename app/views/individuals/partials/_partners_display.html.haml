@@ -12,7 +12,7 @@
   -important_partners_count = 0
 - partners.last(partners.size-important_partners_count).each do |partner|
   - array_buffer.push(partner)      
-  - if partner_number % 6 == 0 || partner_number == @partners.count
+  - if partner_number % 6 == 0 || partner_number == (partners.count - important_partners_count)
     .row.centered
       - array_buffer.each do |partner|
         .col-lg-2
