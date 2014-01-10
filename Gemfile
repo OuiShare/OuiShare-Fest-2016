@@ -72,9 +72,6 @@ gem 'i18n-active_record',
     :git => 'git://github.com/svenfuchs/i18n-active_record.git',
     :require => 'i18n/active_record'
 
-#SMS sender API
-gem 'nexmo'
-
 group :development, :test do
   gem "better_errors"
   gem "rspec-rails"
