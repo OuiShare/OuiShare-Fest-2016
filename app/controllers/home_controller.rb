@@ -47,6 +47,7 @@ class HomeController < ApplicationController
     rescue
       @ouishare_fest_attendees = nil
     end    
+    
   end
 
   def faq
