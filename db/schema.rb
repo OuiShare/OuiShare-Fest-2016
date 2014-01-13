@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140103170130) do
+ActiveRecord::Schema.define(:version => 20140113165748) do
 
   create_table "admin_one_shot_codes", :force => true do |t|
     t.integer  "admin_id",   :null => false
@@ -91,6 +91,14 @@ ActiveRecord::Schema.define(:version => 20140103170130) do
   end
 
   add_index "individuals", ["slug"], :name => "index_individuals_on_slug", :unique => true
+
+  create_table "newsletter_subscribers", :force => true do |t|
+    t.string   "email",      :null => false
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  add_index "newsletter_subscribers", ["email"], :name => "index_newsletter_subscribers_on_email", :unique => true
 
   create_table "settings", :force => true do |t|
     t.string   "title",      :null => false

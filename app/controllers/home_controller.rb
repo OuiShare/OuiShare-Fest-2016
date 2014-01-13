@@ -95,6 +95,20 @@ class HomeController < ApplicationController
     end
   end
 
+  def newsletter_collect_email
+    email = params[:email_address]
+    if !NewsletterSubscriber.find_by_email(email)
+      new_newsletter_email = NewsletterSubscriber.new(:email => email)
+      if new_newsletter_email.save 
+        redirect_to root_path 
+      else
+        redirect_to root_path
+      end
+    else
+      redirect_to root_path
+    end
+  end
+
 private
   def contact_captcha()
     @contact_captcha = NegativeCaptcha.new(

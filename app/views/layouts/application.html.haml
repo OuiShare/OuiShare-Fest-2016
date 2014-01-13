@@ -8,6 +8,7 @@
     = csrf_meta_tags
     = analytics_init if Rails.env.production?
   %body
+    
     = render 'layouts/flash_messages'
     - if controller.action_name != "site_off"
       = render 'layouts/header'

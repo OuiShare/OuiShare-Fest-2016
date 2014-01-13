@@ -53,6 +53,7 @@ OuiShareFest::Application.routes.draw do
     post :contact, :action => :contact_email
     get :site_off
     get :program
+    post :newsletter_collect_email
   end
 
   namespace :me do
