@@ -1,7 +1,7 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery
 
-  # before_filter :authenticate!
+  before_filter :authenticate!
   before_filter :set_locale
 
   before_filter :is_site_open
@@ -10,7 +10,7 @@ class ApplicationController < ActionController::Base
   
   def authenticate!
     login = authenticate_or_request_with_http_basic do |login, password|
-      login == "pitchme" && password == "pitchme"
+      login == "ouishare-fest" && password == "community2014"
     end
     session[:login] = login
   end

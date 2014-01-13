@@ -46,10 +46,16 @@
   }
 
 }
+.partners-container{
+  .logo-centered{
+    position: relative;
+    top: 25%;
+  }
+}
 .get-involved-section{
   .get-involved-options-choice{
     li{
-      min-height: 75px;
+      min-height: 90px;
     }
   }
 }
