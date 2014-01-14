@@ -11,7 +11,7 @@ $(document).ready ->
   $('#link_contact_modal').click (e) ->
     $('#contact_modal').modal('toggle')
 
-  $("a[href^=\"#anc\"]").on "click", (e) ->
+  $("a[href^=\"#_\"]").on "click", (e) ->
     e.preventDefault()
     target = @hash
     $target = $(target)    
@@ -31,7 +31,7 @@ $(document).ready ->
     toggle_class("#btn_showspeakers_up", "hide")    
     $("#allspeakers").slideUp "slow"
     $('html,body').animate({
-    scrollTop: $("#anc_speakers").offset().top - $('.navbar').height()
+    scrollTop: $("#_speakers").offset().top - $('.navbar').height()
     },
     'slow') 
     $("#btn_showspeakers_down").show()
@@ -46,7 +46,7 @@ $(document).ready ->
     toggle_class("#btn_team_members_up", "hide")    
     $("#allteam_members").slideUp "slow"
     $('html,body').animate({
-    scrollTop: $("#anc_team").offset().top - $('.navbar').height()
+    scrollTop: $("#_team").offset().top - $('.navbar').height()
     },
     'slow') 
     $("#btn_team_members_down").show()   
