@@ -4,7 +4,7 @@
     .row.main-section   
       #head_logo   
         = image_tag "/assets/logo_index_main_section.png"
-      .col-md-10.col-md-offset-1
+      .col-md-10.col-md-offset-1.margin-bot
         %h1
           = t('dynamic_translations.main.title')
           %br
@@ -26,8 +26,8 @@
 
 #about.grey_bg
   .container{:style => "width:60% !important;"}
-    %h3.text-center#anc_about 
-      = t('dynamic_translations.about.title')
+    %h3.text-center#anc_about{:style => "font-size:30px;"}
+      = t('dynamic_translations.about.subtitle')
     %p 
       = t('dynamic_translations.about.description')
     %br
