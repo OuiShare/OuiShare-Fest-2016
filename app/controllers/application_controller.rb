@@ -1,7 +1,7 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery
 
-  before_filter :authenticate!
+  # before_filter :authenticate!
   before_filter :set_locale
 
   before_filter :is_site_open
