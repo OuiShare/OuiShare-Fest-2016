@@ -16,6 +16,16 @@ class AdminController < ApplicationController
     end
   end
 
+  def export_newsletter_subscribers
+
+    @newsletter_subscribers = NewsletterSubscriber.all
+    respond_to do |format|
+      format.html
+      format.csv {send_data NewsletterSubscriber.to_csv}
+      format.xls 
+    end
+  end
+
   def toggle_admin
     @user = User.find_by_slug(params[:id])
     previous_state = @user.is_admin

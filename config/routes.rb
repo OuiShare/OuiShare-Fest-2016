@@ -13,6 +13,7 @@ OuiShareFest::Application.routes.draw do
   resources :admin, only: [:index] do
     collection do
       get :export_users
+      get :export_newsletter_subscribers
       get :users_list
       get :settings_list 
       get :strong_auth_access_page
