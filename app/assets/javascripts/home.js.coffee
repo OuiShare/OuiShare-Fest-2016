@@ -15,11 +15,14 @@ $(document).ready ->
     e.preventDefault()
     target = @hash
     $target = $(target)    
-    scroll_position = $target.offset().top - $('.navbar').height()-10  
-    $("html, body").stop().animate
+    scroll_position = $target.offset().top - $('.navbar').height()-10
+    $('html,body').animate
       scrollTop: scroll_position
-    , 900, "swing", ->
-      window.location.hash = target
+      ,'slow', "swing"       
+    # $("html, body").stop().animate
+    #   scrollTop: scroll_position
+    # , 900, "swing", ->
+    #   window.location.hash = target
 
   $("#btn_showspeakers_down").click ->
     $("#btn_showspeakers_down").hide()
