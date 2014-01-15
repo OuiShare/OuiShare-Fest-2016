@@ -8,10 +8,12 @@
     <Table>
       <Row>
         <Cell><Data ss:Type="String">Email</Data></Cell>
+        <Cell><Data ss:Type="String">Subscription Date</Data></Cell>
       </Row>
     <% @newsletter_subscribers.each do |newsletter_subscriber| %>
       <Row>
         <Cell><Data ss:Type="String"><%= newsletter_subscriber.email %></Data></Cell>
+        <Cell><Data ss:Type="String"><%= newsletter_subscriber.created_at %></Data></Cell>
       </Row>
     <% end %>
     </Table>
