@@ -79,3 +79,20 @@
   top: -21px;
   left: 1px;
 }
+
+.blue_bg{
+  .container{
+    .main-section{
+      .main-title{
+        font-size: 34px;
+      }
+      .main-section-paragraphes{
+        font-size:22px;
+        margin-top: 10px;
+      }
+      .twitter-hashtag{
+        color: #fff;
+      }
+    }
+  }
+}

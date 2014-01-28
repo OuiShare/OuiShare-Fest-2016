@@ -6,9 +6,12 @@
         = image_tag "/assets/logo_index_main_section.png"
       .col-md-10.col-md-offset-1.margin-bot
         %h1
-          = t('dynamic_translations.main.title')
-          %br
-          %p{:style => "font-size:22px;"}
+          .main-title
+            = t('dynamic_translations.main.title')
+          %p.main-section-paragraphes
+            = t('dynamic_translations.main.subtitle')
+            / A three-day festival about the collaborative economy
+          %p.main-section-paragraphes
             = t('dynamic_translations.main.event')
                      
           = form_tag home_newsletter_collect_email_path, :class => "form-inline" do
@@ -23,6 +26,8 @@
           %img{src: "/assets/facebook.svg", width: "48px"}/
         %a{href: "https://twitter.com/OuiShareFest", target: "_blank"}
           %img{src: "/assets/twitter.svg", width: "48px"}/
+        %span.twitter-hashtag
+          \#OSFest14
 
 #about.grey_bg
   .container{:style => "width:60% !important;"}
