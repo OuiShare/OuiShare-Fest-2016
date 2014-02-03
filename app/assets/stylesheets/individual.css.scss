@@ -11,3 +11,22 @@
     }
   }  
 }
+
+img.grayscale {
+  filter: url("grayscale.svg#greyscale");
+  // -webkit-filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter ….3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale");
+  filter: gray;
+  -webkit-filter: grayscale(100%);
+  -webkit-transition: all .6s ease;
+  -webkit-backface-visibility: hidden;
+  transition: all .6s ease;
+  &:hover{
+    filter: none;
+    // filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter …\'1 0 0 0 0, 0 1 0 0 0, 0 0 1 0 0, 0 0 0 1 0\'/></filter></svg>#grayscale");
+    -webkit-filter: grayscale(0%);
+    -webkit-transition: all .6s ease;
+    transition: all .6s ease;
+    // -moz-filter: grayscale(0%);
+  }
+}
+

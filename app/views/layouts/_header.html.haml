@@ -5,38 +5,39 @@
         %span.icon-bar
         %span.icon-bar
         %span.icon-bar
-      %a.navbar-brand{href: root_path} OUISHARE FEST 2014
+      %a.navbar-brand{href: root_path} 
+        = image_tag "/assets/logo_ouishare.png", :class => "header-logo"
+        
     .navbar-collapse.collapse
       %ul.nav.navbar-nav
         %li
-          %a{href: "#anc_about"} 
-            =t('about')
+          %a{href: "#_about"} 
+            =t('dynamic_translations.about.title')
         %li
-          %a{href: "#anc_speakers"}
-            =t('speakers')
+          %a{href: "#_speakers"}
+            =t('dynamic_translations.speakers.title')
         %li
-          %a{href: "#anc_getinvolved"}
-            =t('get_involved')
+          %a{href: "#_getinvolved"}
+            =t('dynamic_translations.get_involved.title')
         %li
-          %a{href: "#anc_tickets"}
-            =t('tickets')
+          %a{href: "#_tickets"}
+            =t('dynamic_translations.tickets.title')
         %li
-          %a{href: "#anc_partners"}
-            =t('partners')
+          %a{href: "#_partners"}
+            =t('dynamic_translations.partners.title')
         %li
-          %a{href: "#anc_team"}
-            =t('team')
+          %a{href: "#_team"}
+            =t('dynamic_translations.team.title')
         %li
           %a{href: "http://blog.ouisharefest.com", target: "_blank"}
-            =t('blog')
+            =t('dynamic_translations.blog.title')
         %li
-          = select_languages
-        - if current_user && current_user.is_admin
-          %li
-            = link_to admin_index_path do
-              %i.glyphicon.glyphicon-cog
-          %li
-            = link_to logout_path, :method => :delete do
-              %i.glyphicon.glyphicon-remove
+          .text-center.social-media-icons-header
+            %a{href: "https://www.facebook.com/OuiShare", target: "_blank"}
+              %img{src: "/assets/facebook.svg", width: "24px"}/        
+            %a{href: "https://twitter.com/OuiShareFest", target: "_blank"}
+              %img{src: "/assets/twitter.svg", width: "24px"}/ 
+        
+        / %li
+        /   = select_languages
 
-#anc_about

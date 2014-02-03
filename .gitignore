@@ -16,6 +16,13 @@ capybara-*.html
 rerun.txt
 pickle-email-*.html
 .project
-config/initializers/secret_token.rb
 config/application.yml
+config/database.yml
 log/*
+.tx/config
+get-pip.py
+transifex url.txt
+translations/*
+config/locales/ouishare*
+config/locales/individuals*
+

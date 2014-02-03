@@ -11,7 +11,7 @@ class IndividualsController < ApplicationController
   end
 
   def show
-    @individual = Individual.find_by_slug(params[:id])
+    @individual = Individual.find(params[:id])
   end
 
   def new
@@ -20,10 +20,11 @@ class IndividualsController < ApplicationController
   end
 
   def create
-    @individual = Individual.new(params[:individual])
+    # @individual = Individual.new(params[:individual])
 
-    if @individual.save      
-      updateIndividualTypes(params[:individual_types])      
+    if @individual = Individual.create(params[:individual])         
+      updateIndividualTypes(params[:individual_types])     
+      @individual.add_to_current_event   
       redirect_to individuals_list_admin_index_path, :notice => 'Creation successfull'
     else
       redirect_to individuals_list_admin_index_path, :alert => 'An error occured'
@@ -32,12 +33,12 @@ class IndividualsController < ApplicationController
   end
 
   def edit
-    @individual = Individual.find_by_slug(params[:id])
+    @individual = Individual.find(params[:id])
   end
 
   def update
 
-    @individual = Individual.find_by_slug(params[:id])
+    @individual = Individual.find(params[:id])
     if @individual.update_attributes(params[:individual])      
       updateIndividualTypes(params[:individual_types])      
       redirect_to individuals_list_admin_index_path, :notice => 'Update successfull'
@@ -48,7 +49,7 @@ class IndividualsController < ApplicationController
   end
 
   def destroy
-    @individual = Individual.find_by_slug(params[:id])
+    @individual = Individual.find(params[:id])
     if @individual.destroy 
       redirect_to individuals_list_admin_index_path, :notice => 'Deleted successfully'
     else

@@ -6,6 +6,10 @@ gem 'nokogiri'
 
 gem 'pg', '0.17.0'
 
+#JS Runtimes to enable JS compatibility on Unix Server
+gem 'therubyracer', :platforms => :ruby
+gem 'execjs', :platforms => :ruby
+
 # HAML
 gem 'haml', '4.0.3'
 gem 'html2haml'
@@ -68,9 +72,6 @@ gem 'i18n-active_record',
     :git => 'git://github.com/svenfuchs/i18n-active_record.git',
     :require => 'i18n/active_record'
 
-#SMS sender API
-gem 'nexmo'
-
 group :development, :test do
   gem "better_errors"
   gem "rspec-rails"
@@ -100,3 +101,6 @@ gem 'geoip'
 
 #Gem pour securiser les params
 gem 'strong_parameters'
+
+#Gem API with eventbrite
+gem 'eventbrite-client'

@@ -10,13 +10,13 @@ class ApplicationController < ActionController::Base
   
   def authenticate!
     login = authenticate_or_request_with_http_basic do |login, password|
-      login == "pitchme" && password == "pitchme"
+      login == "ouishare-fest" && password == "community2014"
     end
     session[:login] = login
   end
 
   def after_sign_in_path_for(user)    
-    request.env["omniauth.origin"] || me_dashboard_path
+    request.env["omniauth.origin"] || admin_index_path
   end
 
   def after_sign_out_path_for(resource_or_scope)    

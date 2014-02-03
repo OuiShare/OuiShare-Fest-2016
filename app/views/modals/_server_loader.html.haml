@@ -1,0 +1,19 @@
+.modal.fade#server_modal
+  .modal-dialog{:style => "display: block;margin-top: 25%;position: initial;"}
+    .modal-content
+      .modal-header.text-center
+        Are you sure you want to restart the server?
+      .modal-body.text-center
+        .row
+          Your website will be unavailable during a short period.
+        .row
+          Restarting will update on the pages the changes made on translations.
+      .modal-footer
+        #control-zone.text-center 
+          %button{:type => "button", :class => "btn btn-warning", "data-dismiss" => "modal"}
+            Cancel         
+          %button{:type => "button", :class => "btn btn-danger", :id => "perfom_restart"}
+            Restart
+          
+        
+          

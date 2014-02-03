@@ -2,18 +2,21 @@
   = render "individual_type_form", :is_checked => is_checked
   .form-group.individual-fname-zone
     = f.label :first_name, 'First name'
-    = f.text_field :first_name, :autofocus => true, :class => "form-control", :required => true
+    = f.text_field :first_name, :autofocus => true, :class => "form-control"
   .form-group.individual-lname-zone
     = f.label :last_name, 'Last name'
-    = f.text_field :last_name, :class => "form-control", :required => true
+    = f.text_field :last_name, :class => "form-control"
   .form-group
     - if !@individual.attachment.blank?
       = image_tag @individual.attachment.url(:small)
-    = f.file_field :attachment
+    = f.file_field :attachment, :id => "individual_attachment"
+    #file_attachment_error
+    %span.help-block
+      The image size should be at least 220x220 to have an optimal display
   .form_group
     = f.label :twitter_account, 'Twitter account'
     = f.text_field :twitter_account, :class => "form-control", :placeholder => "Twitter account without @"
-  .form-group
+  .form-group.individual-company-zone
     = f.label :company_name, 'Company name'
     = f.text_field :company_name, :class => "form-control"
   .form-group
@@ -25,12 +28,15 @@
     / = f.date_select :birthday, {:include_blank => true, :default => nil}
   .form-group.individual-email-zone
     = f.label :email, 'Email'
-    = f.text_field :email, :class => "form-control", :required => true
+    = f.text_field :email, :class => "form-control"
   .form-group
     = f.label :function, 'Function'
     = f.text_field :function, :class => "form-control"
   .form-group
     = f.label :url, 'URL'
     = f.text_field :url, :class => "form-control", :placeholder => "External URL: http://www.myurl.com"
+  .form-group
+    =f.label :display_order
+    =f.number_field :display_order, :class => "form-control"
   .form-group  
     = f.submit "Save", :class => "btn btn-primary btn-block", :id => "save_individual_button"

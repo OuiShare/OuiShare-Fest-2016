@@ -1,15 +1,25 @@
 !!!
-%html
+%html.height-ref
   %head
-    %title OUISHARE FEST 2014
+    %title 
+      OuiShare Fest 2014: The Age of Communities.
     = stylesheet_link_tag    "application", :media => "all"
     = javascript_include_tag "application"
     = favicon_link_tag 'favicon/favicon.ico'
     = csrf_meta_tags
+    %meta{ name: 'description', content: "1000 collaborative economy visionaries coming together for three days of conference, co-creating and connecting. Paris, May 5-7 2014." }
+    %meta{ name: 'keywords', content: "ouishare, fest, communities, community, collaborative, economy, consumption, makers, open, source, crowdfunding, cities" }
+    %meta{:content => "http://ouisharefest.com", :property => "og:url"}/
+    %meta{:content => "OuiShare Fest 2014: The Age of Communities.\n", :property => "og:title"}/
+    %meta{:content => "http://ouisharefest.com/assets/POST-FB-TEXTE.jpg", :property => "og:image"}/
+    %meta{:content => "1000 collaborative economy visionaries coming together for three days of conference, co-creating and connecting. Paris, May 5-7 2014.", :property => "og:description"}/
     = analytics_init if Rails.env.production?
   %body
+    
     = render 'layouts/flash_messages'
-    = render 'layouts/header'
+    - if controller.action_name != "site_off"
+      = render 'layouts/header'
     = yield
-    = render 'layouts/footer'
+    - if controller.action_name != "site_off"
+      = render 'layouts/footer'
 

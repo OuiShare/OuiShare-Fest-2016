@@ -4,9 +4,9 @@ class MeController < ApplicationController
   # Get the current user then
   # Direct to the edit.html.haml
   # where he will manage his profile
-
+  require 'yaml'
   def dashboard
-    @user = current_user
+    @user = current_user  
     
   end
   

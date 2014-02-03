@@ -1,8 +1,8 @@
-.container
+.container.admin-container
   .row
     .col-md-12
-      %h1 Admin Dashboard
-      = link_to "Individuals", individuals_path
+      %h4
+        Admin Dashboard     
 
 .container
   / upper section
@@ -26,8 +26,12 @@
       = link_to "See Users list", users_list_admin_index_path
 
       %br
+      / %i.glyphicon.glyphicon-list
+      / = link_to "Newsletter Subscribers- CSV", export_newsletter_subscribers_admin_index_path(:format => :csv)
       %br
-
+      %i.glyphicon.glyphicon-list
+      = link_to "Newsletter Subscribers- Excel", export_newsletter_subscribers_admin_index_path(:format => :xls)
+      
       = render "settings", :settings => @settings
 
 %footer.text-center

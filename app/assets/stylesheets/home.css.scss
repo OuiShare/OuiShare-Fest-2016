@@ -1,3 +1,98 @@
 // Place all the styles related to the home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.parnters-bg{
+  padding-top: 100px;
+}
+.downpage{
+  .downpage-icon{
+    margin-top: 20px;
+  }
+  .downpage-text{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-family: 'Lato';
+  }
+}
+.main-section{
+  #headerwrap{
+    padding-top: 55px;
+  }
+  .margin-bot{
+    margin-bottom: 10px;
+  }
+  
+}
+.speakers-container{
+  .container.sinfo{
+    padding-top: 31px;
+  }
+}
+.get-involved-section{
+  .get-involved-punchline{
+    background-color: #34495e;
+    color: #ffffff;
+    padding-top: 1px;
+  }
+}
+.button-call-to-action-option{
+  border-radius: 10px !important;
+}
+.tickets-section{
+  .tickets-font-color{
+    color: #c5c5c5;
+  }
+  .gravatar-display{
+    width: 50px;
+  }
+  .who-s-coming-title{
+    margin-top: 20px;
+    margin-bottom: 30px;
+  }
+  .attendee-items{
+    margin-bottom: 10px;
+  }
+
+}
+.partners-container{
+  .logo-centered{
+    position: relative;
+    top: 25%;
+  }
+}
+.get-involved-section{
+  .get-involved-options-choice{
+    li{
+      min-height: 90px;
+    }
+  }
+}
+.individuals-list-display{
+  min-height: 320px;
+}
+.individuals-list-btn{
+  position: relative;
+  top: 20px;
+}
+.design-team-footer{
+  position: relative;
+  top: -21px;
+  left: 1px;
+}
+
+.blue_bg{
+  .container{
+    .main-section{
+      .main-title{
+        font-size: 34px;
+      }
+      .main-section-paragraphes{
+        font-size:22px;
+        margin-top: 10px;
+      }
+      .twitter-hashtag{
+        color: #fff;
+      }
+    }
+  }
+}
