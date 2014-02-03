@@ -1130,7 +1130,7 @@ address {
   font-weight: 300;
   font-size: 15px;
   line-height: 28px;
-  padding: 14px 20px;
+  padding: 14px 14px;
   text-shadow: none;
   -webkit-transition: background-color .25s, color .25s, border-bottom-color .25s;
   -moz-transition: background-color .25s, color .25s, border-bottom-color .25s;
