@@ -1,4 +1,4 @@
-PitchmeRailsBackbone::Application.configure do
+OuiShareFest::Application.configure do
   # Settings specified here will take precedence over those in config/application.rb
 
   # Code is not reloaded between requests
@@ -50,7 +50,7 @@ PitchmeRailsBackbone::Application.configure do
 
   # Mailer configuration 
   config.action_mailer.perform_deliveries = true
-  config.action_mailer.default_url_options = { :host => 'localhost:3000' }
+  config.action_mailer.default_url_options = { :host => 'ouisharefest.com' }
   config.action_mailer.raise_delivery_errors = true
   config.action_mailer.default :charset => "utf-8"
 
@@ -66,7 +66,7 @@ PitchmeRailsBackbone::Application.configure do
   password: ENV["MAILER_PASSWORD"]
   }
 
-  ActionMailer::Base.default :from => "Pitch Me <contact@pitch-me.fr>"
+  ActionMailer::Base.default :from => "OuiShare Team <no-reply@ouisharefest.com>"
 
   #s3 paperclip upload
   config.paperclip_defaults = {
@@ -92,6 +92,6 @@ PitchmeRailsBackbone::Application.configure do
   # with SQLite, MySQL, and PostgreSQL)
   # config.active_record.auto_explain_threshold_in_seconds = 0.5
 
-  GA.tracker = "UA-xxxxxx-x"
+  GA.tracker = ENV["GA_CREDENTIALS"]
 
 end

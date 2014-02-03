@@ -15,11 +15,10 @@
   %b
     = speaker.fullname
   %br
-  %small
-    %a{href: speaker.url, target: "_blank"}
-      = speaker.company_name
+  - if !speaker.company_name.blank?
+    %small
+      %a{href: speaker.url, target: "_blank"}
+        = speaker.company_name
+  - else
+    %br
   
-  - if !speaker.twitter_account.blank?
-    %p
-      %a{href: "http://www.twitter.com/" + speaker.twitter_account, target: "_blank"}
-        = "@" + speaker.twitter_account

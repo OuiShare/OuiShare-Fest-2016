@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20131219060327) do
+ActiveRecord::Schema.define(:version => 20140113165748) do
 
   create_table "admin_one_shot_codes", :force => true do |t|
     t.integer  "admin_id",   :null => false
@@ -30,6 +30,27 @@ ActiveRecord::Schema.define(:version => 20131219060327) do
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
+
+  create_table "event_individual_associations", :force => true do |t|
+    t.integer  "event_id",           :null => false
+    t.integer  "individual_type_id", :null => false
+    t.integer  "individual_id",      :null => false
+    t.datetime "created_at",         :null => false
+    t.datetime "updated_at",         :null => false
+  end
+
+  add_index "event_individual_associations", ["event_id", "individual_type_id", "individual_id"], :name => "index_on_events_assoc", :unique => true
+
+  create_table "events", :force => true do |t|
+    t.string   "edition_year", :null => false
+    t.date     "start_date"
+    t.date     "end_date"
+    t.string   "location"
+    t.datetime "created_at",   :null => false
+    t.datetime "updated_at",   :null => false
+  end
+
+  add_index "events", ["edition_year"], :name => "index_events_on_edition_year", :unique => true
 
   create_table "individual_type_associations", :force => true do |t|
     t.integer  "individual_id",      :null => false
@@ -59,16 +80,25 @@ ActiveRecord::Schema.define(:version => 20131219060327) do
     t.string   "function"
     t.string   "url"
     t.integer  "individual_type_id"
-    t.datetime "created_at",              :null => false
-    t.datetime "updated_at",              :null => false
+    t.datetime "created_at",                                :null => false
+    t.datetime "updated_at",                                :null => false
     t.string   "attachment_file_name"
     t.string   "attachment_content_type"
     t.integer  "attachment_file_size"
     t.datetime "attachment_updated_at"
     t.string   "slug"
+    t.integer  "display_order",           :default => 9999
   end
 
   add_index "individuals", ["slug"], :name => "index_individuals_on_slug", :unique => true
+
+  create_table "newsletter_subscribers", :force => true do |t|
+    t.string   "email",      :null => false
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  add_index "newsletter_subscribers", ["email"], :name => "index_newsletter_subscribers_on_email", :unique => true
 
   create_table "settings", :force => true do |t|
     t.string   "title",      :null => false

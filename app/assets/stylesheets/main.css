@@ -6,9 +6,12 @@
  * Version: 1.0
  * URL: http://alvarez.is
  */
-
+.height-ref{
+	height: 100%;
+}
 body {
-  padding-top: 75px;
+  /*padding-top: 55px;*/
+  height: 100%;
 }
 
 .centered {
@@ -138,26 +141,22 @@ body {
 
 .ch-info {
 	position: absolute;
-	background: rgba(63,147,147, 0.8);
+	background: rgba(0,255,153, 0.8);
 	width: inherit;
 	height: inherit;
 	border-radius: 50%;
 	opacity: 0;
-	
 	-webkit-transition: all 0.4s ease-in-out;
 	-moz-transition: all 0.4s ease-in-out;
 	-o-transition: all 0.4s ease-in-out;
 	-ms-transition: all 0.4s ease-in-out;
 	transition: all 0.4s ease-in-out;
-	
 	-webkit-transform: scale(0);
 	-moz-transform: scale(0);
 	-o-transform: scale(0);
 	-ms-transform: scale(0);
 	transform: scale(0);
-	
 	-webkit-backface-visibility: hidden;
-
 }
 
 
@@ -200,7 +199,7 @@ body {
 	font-size: 9px;
 	letter-spacing: 1px;
 	padding-top: 4px;
-	font-family: 'Lato', Arial, sans-serif;
+	font-family: 'varela_roundregular', Arial, sans-serif;
 }
 
 .ch-info p a:hover {
@@ -210,8 +209,8 @@ body {
 
 .ch-item:hover {
 	box-shadow: 
-		inset 0 0 0 1px rgba(255,255,255,0.1),
-		0 1px 2px rgba(0,0,0,0.1);
+	inset 0 0 0 1px rgba(255,255,255,0.1),
+	0 1px 2px rgba(0,0,0,0.1);
 }
 .ch-item:hover .ch-info {
 	-webkit-transform: scale(1);
@@ -227,27 +226,6 @@ body {
 }
 
 /****** Headerwrap ******/
-#headerwrap {
-	/*background: url(/assets/header-bg.jpg) no-repeat center top;*/
-	background: url(/assets/background.jpg) no-repeat center top;
-	margin-top: 0px;
-	padding-top:160px;
-	text-align:center;
-	background-attachment: relative;
-	background-position: center center;
-	min-height: 600px;
-	width: 100%;
-	
-    -webkit-background-size: 100%;
-    -moz-background-size: 100%;
-    -o-background-size: 100%;
-    background-size: 100%;
-
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-}
 
 #headerwrap h1 {
 	color: #ffffff;
@@ -308,7 +286,7 @@ body {
 #servicewrap {
 	background: url(/assets/service-bg.jpg) no-repeat center top;
 	margin-top: 0px;
-	padding-top:120px;
+	padding-top:100px;
 	text-align:center;
 	background-attachment: relative;
 	background-position: center center;
@@ -334,7 +312,7 @@ body {
 #testwrap {
 	background: url(/assets/test-bg.jpg) no-repeat center top;
 	margin-top: 0px;
-	padding-top:120px;
+	padding-top:100px;
 	text-align:center;
 	background-attachment: relative;
 	background-position: center center;
@@ -413,56 +391,134 @@ body {
 	color: #ffffff;
 }
 
-
-
-
-/***** Spacer Wraps *****/
-#sp1 {
-	background: url(/assets/bg_cover.jpg) no-repeat center top;
+.blank_bg {
+	background-color: #F7F7F7;
+	min-height: 100%;
+	width: 100%;
 	margin-top: 0px;
-	padding-top:30px;
-	padding-bottom: 0px;
+	padding-top: 130px;
+	padding-bottom: 100px;
+}
+
+.triangle_bg {
+	background: url(/assets/bg-pat_02.png) repeat right top;
+	background-color: #33FF99;
+	margin-top: 0px;
+	padding-top: 100px;
+	text-align: center;
+	background-attachment: relative;
+	background-position: center center;
+	min-height: 100%;
+	-webkit-background-size: 200px 140px;
+	-moz-background-size: 200px 140px;
+	-o-background-size: 200px 140px;
+	background-size: 200px 140px;
+}
+#tickets h3,h4{
+	color: #F7F7F7;
+}
+
+#tickets a{
+	color: #F7F7F7;
+	text-decoration: underline;
+}
+
+#about{
+	color: #20203D;
+}
+
+.grey_bg {
+	background: url(/assets/head_img_grey.jpg) repeat right top;
+	margin-top: 0px;
+	padding-top: 130px;
+	padding-bottom: 100px;
+	text-align: center;
+	background-attachment: relative;
+	min-height: 100%;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+.blue_bg {
+	background: url(/assets/background_main_section.png) no-repeat center top;
+	/*background-color: #33FF99; */
+	margin-top: 0px;
+	padding-top:5%;
 	text-align:center;
 	background-attachment: relative;
 	background-position: center center;
-	min-height: 240px;
-	width: 100%;
-	
-    -webkit-background-size: 100%;
-    -moz-background-size: 100%;
-    -o-background-size: 100%;
-    background-size: 100%;
+	min-height: 100%;
 
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
 }
+
+#about h3{
+	color: #20203D;
+	font-weight: 300;
+	text-transform: uppercase;
+	padding: 20px;
+}
+/***** Spacer Wraps *****/
+#sp1 {
+	background: url(/assets/head_img.png) repeat right top;
+	margin-top: 0px;
+	padding-top: 130px;
+	padding-bottom: 100px;
+	text-align: center;
+	background-attachment: relative;
+	min-height: 100%;
+	width: 100%;
+	-webkit-background-size: 100%;
+	-moz-background-size: 100%;
+	-o-background-size: 100%;
+	background-size: 100%;
+	}
 
 #sp1 h3 {
 	color: #ffffff;
 	font-weight: 100;
 }
 
+#sp1 h4 {
+color: #eeeeee;
+font-weight: 100;
+text-transform: none;
+}
 
 
 /***** Call To Action *****/
 
 #cta {
-	background-color: #34495e;
-	padding-top: 35px;
-	padding-bottom: 35px;
+	background-color: #ffffff;
+	margin-top: 0px;
+	padding-top: 130px;
+	padding-bottom: 100px;
+	text-align: center;
+	background-attachment: relative;
+	min-height: 100%;
+	width: 100%;
+	color: #20203D;
+	-webkit-background-size: 100%;
+	-moz-background-size: 100%;
+	-o-background-size: 100%;
+	background-size: 100%;
 	
 }
 
 #cta h3 {
-	color: #ffffff;
-	font-weight: 100;
+	font-weight: 300;
+	text-transform: uppercase;
+	padding: 20px;
 }
 
 #cta p {
 	font-weight: 300;
-	color: #c5c5c5;
+	/*color: #c5c5c5;*/
 }
 
 /***** Grey Wrap *****/
@@ -543,7 +599,7 @@ body {
 /***** Services Info - Homepage *****/
 
 .sinfo {
-	padding-top: 60px;
+	padding-top: 31px;
 	padding-bottom: 60px;
 }
 

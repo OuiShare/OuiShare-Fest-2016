@@ -4,4 +4,4 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-PitchmeRailsBackbone::Application.load_tasks
+OuiShareFest::Application.load_tasks

@@ -3,34 +3,18 @@
     .col-lg-2.text-center
       =label_tag "New Key:"
     .col-lg-10      
-      = text_field_tag :key, "", :class => "form-control"
-  -@availables_languages.each do |locale|
-    
-    / - if controller.action_name == "edit"
-    /   - if current_translation = Translation.find_by_key_and_locale(@translation.key, locale.to_s)
-    /     .form-group.row
-    /       .col-lg-2.text-center
-    /         = image_tag "/assets/flags_test/" + locale.to_s + ".png", :width => "32px"
-    /         %span.badge
-    /           = current_translation.locale    
-    /       .col-lg-10
-    /         = text_field_tag :value,current_translation.value, :class => "form-control", :name => "[value][" + locale.to_s + "]"
-    /   - else
-    /     .form-group.row
-    /       .col-lg-2.text-center
-    /         = image_tag "/assets/flags_test/" + locale.to_s + ".png", :width => "32px"
-    /         %span.badge
-    /           = current_translation.locale  
-    /       .col-lg-10
-    /         = text_field_tag :value,"", :class => "form-control", :name => "[value][" + locale.to_s + "]"
-    / - else
+      = text_field_tag :key, "", :class => "form-control", :required => true
+      %span.help-block
+        Please enter a key matching the following pattern: mainkey.subkey
+        ex : main.title, footer.subtible ...
+  -@availables_languages.each do |locale|   
     .form-group.row
       .col-lg-2.text-center
         = image_tag "/assets/flags_test/" + locale.to_s + ".png", :width => "32px"
         %span.badge
           = locale
       .col-lg-10
-        = text_field_tag :value,"", :class => "form-control", :name => "[value][" + locale.to_s + "]"
+        = text_area_tag :value, nil, {:class => "form-control", :name => "[value][" + locale.to_s + "]", :size => "25x10", :required => true}
   .form-group.row
     .col-lg-offset-2.col-lg-10.text-center
       = submit_tag "Save Trad", :class => "btn btn-success"

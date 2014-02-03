@@ -1,4 +1,4 @@
-PitchmeRailsBackbone::Application.routes.draw do
+OuiShareFest::Application.routes.draw do
 
   resources :traductions
   resources :individual_types
@@ -13,11 +13,13 @@ PitchmeRailsBackbone::Application.routes.draw do
   resources :admin, only: [:index] do
     collection do
       get :export_users
+      get :export_newsletter_subscribers
       get :users_list
       get :settings_list 
       get :strong_auth_access_page
       get :individuals_list
       get :individual_types_list
+      get :restart_nginx_server
       post :validate_strong_auth    
     end
     member do
@@ -51,6 +53,8 @@ PitchmeRailsBackbone::Application.routes.draw do
     get :contact
     post :contact, :action => :contact_email
     get :site_off
+    get :program
+    post :newsletter_collect_email
   end
 
   namespace :me do

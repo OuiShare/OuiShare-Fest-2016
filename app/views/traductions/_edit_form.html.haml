@@ -15,15 +15,15 @@
           %span.badge
             = current_translation.locale          
         .col-lg-10
-          = text_field_tag :value,current_translation.value, :class => "form-control", :name => "[value][" + locale.to_s + "]"
+          = text_area_tag :value, current_translation.value, {:class => "form-control", :name => "[value][" + locale.to_s + "]", :size => "25x10"}
     - else
       .form-group.row
         .col-lg-2.text-center
           = image_tag "/assets/flags_test/" + locale.to_s + ".png", :width => "32px"
           %span.badge
-            = current_translation.locale            
+            = locale            
         .col-lg-10
-          = text_field_tag :value,"", :class => "form-control", :name => "[value][" + locale.to_s + "]"
+          = text_area_tag :value, nil, {:class => "form-control", :name => "[value][" + locale.to_s + "]", :size => "25x10"}
     
   .form-group.row
     .col-lg-offset-2.col-lg-10.text-center

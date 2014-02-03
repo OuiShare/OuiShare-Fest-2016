@@ -10,17 +10,20 @@
           Please fill in your information
       %hr.invisible
       
-      = form_tag new_user_session_path, :class => 'navbar-form navbar-left' do
-        .form-group
+      = form_tag new_user_session_path do
+        .form-group.row.text-center
           = text_field_tag 'user[email]', '', :placeholder => 'Your Email', :class => 'form-control'
-        .form-group  
+        .form-group.row.text-center
           = password_field_tag 'user[password]', '', :placeholder => 'Your password', :class => 'form-control'
-        .checkbox
+        .form-group.row.text-center
+          / .checkbox
           = check_box_tag 'user[remember_me]'
-        = label_tag 'user[remember_me]', 'Remember me'
-        %button.btn.btn-primary
-          Sign in
-        .form-group.text-center
+          = label_tag 'user[remember_me]', 'Remember me'
+        .form-group.row.text-center
           = link_to "Forgotten password?", new_password_path(resource_name)
+        .form-group.row.text-center
+          %button.btn.btn-primary
+            Sign in
+        
 
           

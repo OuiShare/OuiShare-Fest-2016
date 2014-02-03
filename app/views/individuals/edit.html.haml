@@ -1,5 +1,23 @@
+%br
 .container
+  / upper section
   .row
-    .col-md-6
-      %h1 Edit
-      = render 'form', :is_checked => @is_checked 
+    .col-md-3
+      = render '/admin/partial/menu', :active => 'admin_index'
+    .col-md-9
+      %strong
+        %i.glyphicon.glyphicon-user
+        =@individual.fullname
+        profile
+      %hr/
+      .container
+        .row          
+          .col-md-2
+            %strong
+              = image_tag "/assets/flat_icons/47.png"
+              = link_to 'Return to index', individuals_list_admin_index_path
+        %hr
+        .row
+          .col-md-6
+            %h1 Edit
+            = render 'form', :is_checked => @is_checked 

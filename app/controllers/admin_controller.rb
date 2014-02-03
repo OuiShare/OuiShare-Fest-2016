@@ -16,6 +16,16 @@ class AdminController < ApplicationController
     end
   end
 
+  def export_newsletter_subscribers
+
+    @newsletter_subscribers = NewsletterSubscriber.all
+    respond_to do |format|
+      format.html
+      format.csv {send_data NewsletterSubscriber.to_csv}
+      format.xls 
+    end
+  end
+
   def toggle_admin
     @user = User.find_by_slug(params[:id])
     previous_state = @user.is_admin
@@ -83,5 +93,14 @@ class AdminController < ApplicationController
     end
 
     redirect_to admin_index_path
+  end
+
+  def restart_nginx_server
+    executed_bash = "restart"
+    bash_cmd = ENV['PATH_BIN'] + executed_bash
+
+    current_directory_contents = system(bash_cmd) 
+    
+    render :nothing => true
   end
 end
