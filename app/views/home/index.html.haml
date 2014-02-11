@@ -26,8 +26,8 @@
           %img{src: "/assets/facebook.svg", width: "48px"}/
         %a{href: "https://twitter.com/OuiShareFest", target: "_blank"}
           %img{src: "/assets/twitter.svg", width: "48px"}/
-        %span.twitter-hashtag
-          \#OSFest14
+        / %span.twitter-hashtag
+        /   \#OSFest14
 
 #about.grey_bg
   .container{:style => "width:60% !important;"}
@@ -151,39 +151,39 @@
           %a{:href => "http://www.eventbrite.com?ref=etckt", :style => "color:#ddd; text-decoration:none;", :target => "_blank"} Eventbrite
 
       
-      / - if @ouishare_fest_attendees && !@ouishare_fest_attendees["attendees"].blank?
-      /   %h4.who-s-coming-title
-      /     = t('dynamic_translations.tickets.who_s_coming') 
-      /   %ul.unstyled.attendees-list
-      /     -@ouishare_fest_attendees["attendees"].first(ENV["EVENTBRITE_ATTENDEES_DISPLAY_NUMBER"].to_i).each do |attendee|
-      /       .col-lg-2
-      /         %li.attendee-items
-      /           =image_tag display_gravatar(attendee["attendee"]["email"]), :class => 'img-circle'
-      /           .row{:style => "color:white;"}                  
-      /             = attendee["attendee"]["first_name"]
-      /             = attendee["attendee"]["last_name"][0]+'.'
+      - if @ouishare_fest_attendees && !@ouishare_fest_attendees["attendees"].blank?
+        %h4.who-s-coming-title
+          = t('dynamic_translations.tickets.who_s_coming') 
+        %ul.unstyled.attendees-list
+          -@ouishare_fest_attendees["attendees"].first(ENV["EVENTBRITE_ATTENDEES_DISPLAY_NUMBER"].to_i).each do |attendee|
+            .col-lg-2
+              %li.attendee-items
+                =image_tag display_gravatar(attendee["attendee"]["email"]), :class => 'img-circle'
+                .row{:style => "color:white;"}                  
+                  = attendee["attendee"]["first_name"]
+                  = attendee["attendee"]["last_name"][0]+'.'
               
-      /     - if @ouishare_fest_attendees["attendees"].count > ENV["EVENTBRITE_ATTENDEES_DISPLAY_NUMBER"].to_i  
-      /       %div
-      /         #allattendees{style: "display: none;"} 
-      /           -@ouishare_fest_attendees["attendees"].last(@ouishare_fest_attendees["attendees"].count - ENV["EVENTBRITE_ATTENDEES_DISPLAY_NUMBER"].to_i).each do |attendee|
+          - if @ouishare_fest_attendees["attendees"].count > ENV["EVENTBRITE_ATTENDEES_DISPLAY_NUMBER"].to_i  
+            %div
+              #allattendees{style: "display: none;"} 
+                -@ouishare_fest_attendees["attendees"].last(@ouishare_fest_attendees["attendees"].count - ENV["EVENTBRITE_ATTENDEES_DISPLAY_NUMBER"].to_i).each do |attendee|
                         
-      /             .col-lg-2
-      /               %li.attendee-items
-      /                 =image_tag display_gravatar(attendee["attendee"]["email"]), :class => 'img-circle'
-      /                 .row{:style => "color:white;"}                     
-      /                   = attendee["attendee"]["first_name"]
-      /                   = attendee["attendee"]["last_name"][0]+'.'
+                  .col-lg-2
+                    %li.attendee-items
+                      =image_tag display_gravatar(attendee["attendee"]["email"]), :class => 'img-circle'
+                      .row{:style => "color:white;"}                     
+                        = attendee["attendee"]["first_name"]
+                        = attendee["attendee"]["last_name"][0]+'.'
                     
-      /         %br   
-      /         %div.row
-      /           %a.individuals-list-btn#btn_attendees_down
-      /             %button.btn.btn-embossed.btn-primary 
-      /               = t('dynamic_translations.tickets.show_all_attendees')
-      /         %div.row 
-      /           %a.individuals-list-btn.hide#btn_attendees_up        
-      /             %button.btn.btn-embossed.btn-primary
-      /               = t('dynamic_translations.tickets.hide_all_attendees')
+              %br   
+              %div.row
+                %a.individuals-list-btn#btn_attendees_down
+                  %button.btn.btn-embossed.btn-primary 
+                    = t('dynamic_translations.tickets.show_all_attendees')
+              %div.row 
+                %a.individuals-list-btn.hide#btn_attendees_up        
+                  %button.btn.btn-embossed.btn-primary
+                    = t('dynamic_translations.tickets.hide_all_attendees')
      
 .partners-container
   .container.sinfo
