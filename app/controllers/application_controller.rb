@@ -2,11 +2,22 @@ class ApplicationController < ActionController::Base
   protect_from_forgery
 
   # before_filter :authenticate!
+  before_filter :first_visit
+
   before_filter :set_locale
 
   before_filter :is_site_open
 
   before_filter :configure_permitted_parameters, if: :devise_controller?
+
+  def first_visit
+    if session[:visited]
+      @visited = true
+    else
+      session[:visited] = true
+    end
+
+  end
   
   def authenticate!
     login = authenticate_or_request_with_http_basic do |login, password|

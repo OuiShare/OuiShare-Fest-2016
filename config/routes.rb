@@ -50,8 +50,8 @@ OuiShareFest::Application.routes.draw do
 
   namespace :home, :path => nil do
     get :faq
-    get :contact
-    post :contact, :action => :contact_email
+    # get :contact
+    # post :contact, :action => :contact_email
     get :site_off
     get :program
     post :newsletter_collect_email
