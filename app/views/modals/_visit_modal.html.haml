@@ -1,19 +1,17 @@
 .modal.fade#visit_modal
   .modal-dialog{:style => "display: block;margin-top: 20%;position: initial;"}
     .modal-content
-      / .modal-header.text-center
-      /   Popup Title
       .modal-body.text-center
         .row
-          You have ideas for the OuiShare Fest program or would like to propose a session? 
+          = t('involve_popup.line1')
         .row
-          You have till February 24th to submit them to our
+          = t('involve_popup.line2')
           %a.get-involved-link{:href => "#_getinvolved"}
-            call for proposals
+            = t('involve_popup.callforproposals')
       .modal-footer
         #control-zone.text-center 
           %button{:type => "button", :class => "btn btn-success", "data-dismiss" => "modal"}
-            Close
+            = t('involve_popup.close')
           
         
           
