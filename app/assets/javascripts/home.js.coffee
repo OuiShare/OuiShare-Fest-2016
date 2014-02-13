@@ -68,5 +68,54 @@ $(document).ready ->
     'slow') 
     $("#btn_attendees_down").show()
 
+  # Chargement du carousel
+  $(".carousel").carousel()
 
+  
+  #Slideshow
+  $(".banner").revolution
+    delay: 9000
+    startwidth: 1040
+    startheight: 463
+    onHoverStop: "off" # Stop Banner Timet at Hover on Slide on/off
+    thumbWidth: 100 # Thumb With and Height and Amount (only if navigation Tyope set to thumb !)
+    thumbHeight: 50
+    thumbAmount: 3
+    hideThumbs: 0
+    navigationType: "bullet" # bullet, thumb, none
+    navigationArrows: "none" # nexttobullets, solo (old name verticalcentered), none
+    navigationStyle: "round-old" # round,square,navbar,round-old,square-old,navbar-old, or any from the list in the docu (choose between 50+ different item), custom
+    navigationHAlign: "center" # Vertical Align top,center,bottom
+    navigationVAlign: "bottom" # Horizontal Align left,center,right
+    navigationHOffset: -419
+    navigationVOffset: 72
+    touchenabled: "on" # Enable Swipe Function : on/off
+    stopAtSlide: -1 # Stop Timer if Slide "x" has been Reached. If stopAfterLoops set to 0, then it stops already in the first Loop at slide X which defined. -1 means do not stop at any slide. stopAfterLoops has no sinn in this case.
+    stopAfterLoops: -1 # Stop Timer if All slides has been played "x" times. IT will stop at THe slide which is defined via stopAtSlide:x, if set to -1 slide never stop automatic
+    hideCaptionAtLimit: 0 # It Defines if a caption should be shown under a Screen Resolution ( Basod on The Width of Browser)
+    hideAllCaptionAtLilmit: 0 # Hide all The Captions if Width of Browser is less then this value
+    hideSliderAtLimit: 0 # Hide the whole slider, and stop also functions if Width of Browser is less than this value
+    fullWidth: "on"
+    shadow: 0 #0 = no Shadow, 1,2,3 = 3 Different Art of Shadows -  (No Shadow in Fullwidth Version !)
+
+
+  init_map = ->
+    myOptions =
+      zoom: 14
+      center: new google.maps.LatLng(48.856614, 2.3522219000000177)
+      mapTypeId: google.maps.MapTypeId.ROADMAP
+
+    map = new google.maps.Map(document.getElementById("gmap_canvas"), myOptions)
+    marker = new google.maps.Marker(
+      map: map
+      position: new google.maps.LatLng(48.856614, 2.3522219000000177)
+    )
+    infowindow = new google.maps.InfoWindow(content: "<div style='position:relative;line-height:1.34;overflow:hidden;white-space:nowrap;display:block;'><div style='margin-bottom:2px;font-weight:500;'>Ouishare Fest</div><span>Cabaret Sauvage <br>  Paris</span></div>")
+    google.maps.event.addListener marker, "click", ->
+      infowindow.open map, marker
+      return
+
+    infowindow.open map, marker
+    return
+  google.maps.event.addDomListener window, "load", init_map
 

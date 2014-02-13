@@ -48,6 +48,8 @@ OuiShareFest::Application.routes.draw do
   # Home routes
   root :to => 'home#index'
 
+  match '/about' => 'home#about'
+
   namespace :home, :path => nil do
     get :faq
     get :contact

@@ -18,4 +18,6 @@
 
 //= require ./libs/libs
 
+//= require ./jquery.themepunch.revolution.min.js
+
 //= require_tree .
