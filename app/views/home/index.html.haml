@@ -258,3 +258,6 @@
       .container
         %p
           =t('dynamic_translations.team.description') 
+
+- if !@visited
+  = render "modals/visit_modal"

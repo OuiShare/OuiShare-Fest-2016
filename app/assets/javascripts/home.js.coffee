@@ -8,6 +8,15 @@ toggle_class = (element,class_name) ->
     $(element).addClass class_name
 
 $(document).ready ->
+  if $('#visit_modal').length > 0
+    setTimeout (->
+      $('#visit_modal').modal('show')
+      return
+    ), 7000
+
+  $('.get-involved-link').click (e) ->
+    $('#visit_modal').modal('hide')
+
   $('#link_contact_modal').click (e) ->
     $('#contact_modal').modal('toggle')
 
