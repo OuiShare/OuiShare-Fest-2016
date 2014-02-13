@@ -37,7 +37,7 @@ body {
 #slideshow-container {
 	width:100% !important;
 	max-height:463px;
-	background:#e4e6e6;
+	/*background:#e4e6e6;*/
 	position:relative;
 	overflow:hidden;
 	padding:0;
