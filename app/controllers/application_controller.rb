@@ -11,7 +11,8 @@ class ApplicationController < ActionController::Base
   before_filter :configure_permitted_parameters, if: :devise_controller?
 
   def first_visit
-    if session[:visited]
+
+    if session[:visited] || Date.current() > Date.parse("2014-02-24")
       @visited = true
     else
       session[:visited] = true
