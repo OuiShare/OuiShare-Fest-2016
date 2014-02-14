@@ -8,6 +8,7 @@ toggle_class = (element,class_name) ->
     $(element).addClass class_name
 
 $(document).ready ->
+
   if $('#visit_modal').length > 0
     setTimeout (->
       $('#visit_modal').modal('show')
@@ -110,14 +111,19 @@ $(document).ready ->
 
   init_map = ->
     myOptions =
-      zoom: 14
-      center: new google.maps.LatLng(48.856614, 2.3522219000000177)
+      zoom: 16
+      center: new google.maps.LatLng(48.895322, 2.392119)
       mapTypeId: google.maps.MapTypeId.ROADMAP
+      scrollwheel: false
+      navigationControl: false
+      mapTypeControl: false
+      scaleControl: false
+      draggable: false
 
     map = new google.maps.Map(document.getElementById("gmap_canvas"), myOptions)
     marker = new google.maps.Marker(
       map: map
-      position: new google.maps.LatLng(48.856614, 2.3522219000000177)
+      position: new google.maps.LatLng(48.895322, 2.392119)
     )
     infowindow = new google.maps.InfoWindow(content: "<div style='position:relative;line-height:1.34;overflow:hidden;white-space:nowrap;display:block;'><div style='margin-bottom:2px;font-weight:500;'>Ouishare Fest</div><span>Cabaret Sauvage <br>  Paris</span></div>")
     google.maps.event.addListener marker, "click", ->
