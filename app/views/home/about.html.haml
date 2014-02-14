@@ -2,7 +2,7 @@
   .container
     .row.main-section 
       .col-md-10.col-md-offset-1.margin-bot
-        %h1
+        %h1#_about_about
           About OuiShare Fest
 
 
@@ -48,44 +48,81 @@
 
   
 
-  #highlight.grey_bg
-    .container
-      .row.centered#_highlights
-        %h3
-          Highlights from 2013 
-        %iframe{allowfullscreen: "", frameborder: "0", height: "315", src: "//www.youtube.com/embed/kXXPbkdKB7M", width: "560"}
-        %p
-          "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"
-
-        .col-md-4
-          %a.btn.btn-large.button-call-to-action-option{href: "https://docs.google.com/forms/d/1ejne9y3aDW8Xfejdt9_2ErZxXNc_VHccsaO-LHvKI4U/viewform", :target => "_blank"} 
-            Watch Button
-        .col-md-4
-          %a.btn.btn-large.button-call-to-action-option{href: "https://docs.google.com/forms/d/1ejne9y3aDW8Xfejdt9_2ErZxXNc_VHccsaO-LHvKI4U/viewform", :target => "_blank"} 
-            Watch Button
-
-  #location.blank_bg
+  #highlights.grey_bg
     .container
       .row.centered
-        %h3#_location
-          Location 
+        %h3#_about_highlights
+          Highlights from 2013
+        .col-md-9.span-centered.margin_25
+          %iframe{allowfullscreen: "", frameborder: "0", height: "315", src: "//www.youtube.com/embed/kXXPbkdKB7M", width: "560"}
+        %p
+          "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"
+        .col-md-2
+        .col-md-4
+          %a.btn.btn-large.btn-primary{href: "http://www.youtube.com/user/OuiShareTV", :target => "_blank"} 
+            Watch Button
+        .col-md-4
+          %a.btn.btn-large.btn-primary{href: "http://live.ouisharefest.com", :target => "_blank"} 
+            See Button
 
-        %div{style: "overflow:hidden;height:500px;width:600px;"}
-          #gmap_canvas{style: "height:500px;width:600px;"}
+  #location.triangle_bg
+    .container
+      .row.centered
+        %h3#_about_location
+          Location 
+        .col-md-12
+          %object{height: "375", width: "500"}
+            %param{name: "flashvars", value: "offsite=true&lang=fr-fr&page_show_url=%2Fphotos%2Fouishare%2Fsets%2F72157633422542238%2Fshow%2F&page_show_back_url=%2Fphotos%2Fouishare%2Fsets%2F72157633422542238%2F&set_id=72157633422542238&jump_to="}/
+            %param{name: "movie", value: "http://www.flickr.com/apps/slideshow/show.swf?v=140556"}/
+            %param{name: "allowFullScreen", value: "true"}/
+            %embed{allowfullscreen: "true", flashvars: "offsite=true&lang=fr-fr&page_show_url=%2Fphotos%2Fouishare%2Fsets%2F72157633422542238%2Fshow%2F&page_show_back_url=%2Fphotos%2Fouishare%2Fsets%2F72157633422542238%2F&set_id=72157633422542238&jump_to=", height: "375", src: "http://www.flickr.com/apps/slideshow/show.swf?v=140556", type: "application/x-shockwave-flash", width: "500"}
+        .col-md-12{style: "margin-top:50px;"}
+          .col-md-4
+            %p
+              "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas
+          .col-md-8
+            #gmap_canvas{style: "height:300px;width:100%;margin-bottom:20px;"}
+          
+
 
   #press.grey_bg
     .container
       .row.centered
-        %h3#_press
+        %h3#_about_press
           Press Coverage
+
+        .container.sinfo
+          .row
+            .col-lg-5.col-lg-offset-1
+              .testi-container
+                .testi-text
+                  %p There’s more to design than meets the eye. It’s when it meets the heart that design creates a meaningful, lasting connection with the audience. First, your brand has to matter to consumers. This is where your emotional connection begins...
+              / /testi-container
+              %p
+                %img.img-circle{alt: "", height: "80", src: "assets/press/BFM_Business.png", width: "80"}/
+                \-
+                %small Paul Hudson - BFM Business
+            .col-lg-5
+              .testi-container
+                .testi-text
+                  %p There’s more to design than meets the eye. It’s when it meets the heart that design creates a meaningful, lasting connection with the audience. First, your brand has to matter to consumers. This is where your emotional connection begins...
+              / /testi-container
+              %p
+                %img.img-circle{alt: "", height: "80", src: "assets/press/wired.png", width: "80"}/
+                \-
+                %small David Wayne - Wired
+          / /row
+
+
+
   #testimonial.blank_bg
     .container
       .row.centered
-        %h3#_testimonials
+        %h3#_about_testimonials
           Testimonials 
-        .row
+        .row.margin_25
           .col-md-8.col-xs-8
-            %h2
+            %h3
               %b Paul Harrison
             %h6 Co-Funder | CEO
             %br/
@@ -98,7 +135,7 @@
           .col-md-4.col-xs-4
             %img.img-responsive{alt: "", src: "assets/team/paul.jpg"}/
           .col-md-8.col-xs-8
-            %h2
+            %h3
               %b David Harrison
             %h6 Co-Funder | CEO
             %br/
