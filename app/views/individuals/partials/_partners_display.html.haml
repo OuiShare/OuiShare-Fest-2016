@@ -15,7 +15,7 @@
   - if partner_number % 6 == 0 || partner_number == (partners.count - important_partners_count)
     .row.centered
       - array_buffer.each do |partner|
-        .col-lg-2
+        .col-lg-2.home_partners
           %a{:href => partner.url, :target => "_blank"}
             %img.grayscale{:alt => partner.first_name, :src => partner.attachment.url(:medium)}
             
