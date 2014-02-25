@@ -12,7 +12,7 @@ class ApplicationController < ActionController::Base
 
   def first_visit
 
-    if session[:visited] || Date.current() > Date.parse("2014-02-24")
+    if session[:visited] || Date.current() > Date.parse("2014-03-02")
       @visited = true
     else
       session[:visited] = true
