@@ -49,6 +49,23 @@ class HomeController < ApplicationController
     end        
   end
 
+  def about
+
+    @lng = '39.8331'
+    @lat = '-94.822794'
+
+    
+    @description = render_to_string(:partial => "/home/partials/contact_infowindow").squish.gsub('"','\'')
+
+    @picture = "assets/markers/marker_002.png"
+    @title = "Title"
+    @width = "32"
+    @height = "32"
+
+    @marker = '[{"description":"' + @description + '","picture":"' + @picture + '","width":' + @width + ',"height":' + @height + ',"title":"' + @title + '","lng":' + @lng + ', "lat": ' + @lat + '}]'
+
+  end
+
   def faq
   end
 
@@ -61,9 +78,8 @@ class HomeController < ApplicationController
 
   def contact
     # Set marker options for contact map
-    @lng = ENV['COMPANY_LONG']
-    @lat = ENV['COMPANY_LAT']
-
+    @lng = '39.8331'
+    @lat = '-94.822794'
     
     @description = render_to_string(:partial => "/home/partials/contact_infowindow").squish.gsub('"','\'')
 

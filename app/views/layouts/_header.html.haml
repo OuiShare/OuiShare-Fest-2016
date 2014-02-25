@@ -10,9 +10,25 @@
         
     .navbar-collapse.collapse
       %ul.nav.navbar-nav
-        %li
-          %a{href: "#_about"} 
+        / %li
+        /   %a{href: "#_about"} 
+        /     =t('dynamic_translations.about.title')
+
+        %li.dropdown
+          %a.dropdown-toggle{"data-toggle" => "dropdown", href: "/about"}
             =t('dynamic_translations.about.title')
+            %b.caret
+          %ul.dropdown-menu
+            %li
+              %a{href: "about#_about_about"} The Event
+            %li
+              %a{href: "about#_about_highlights"} Hightlights from 2013
+            %li
+              %a{href: "about#_about_location"} Location
+            %li
+              %a{href: "about#_about_press"} Press Coverage
+            %li
+              %a{href: "about#_about_testimonials"} Testimonals
         %li
           %a{href: "#_speakers"}
             =t('dynamic_translations.speakers.title')

@@ -37,7 +37,7 @@ body {
 #slideshow-container {
 	width:100% !important;
 	max-height:463px;
-	background:#e4e6e6;
+	/*background:#e4e6e6;*/
 	position:relative;
 	overflow:hidden;
 	padding:0;
@@ -798,4 +798,25 @@ text-transform: none;
 	height: 55px;
 	float: left;
 	margin-right: 10px;
+}
+
+
+
+/****** Ajout Pitch Me ***/
+
+/**** Dropdown ****/
+
+.dropdown-arrow-inverse {
+  border-bottom-color: #000002 !important;
+  border-top-color: #000002 !important;
+}
+
+.margin_25 {
+	margin:25px;
+}
+
+.round_fond {
+	background-color: rgba(0, 0, 0, 0.36);
+	border-radius: 15px;
+	padding: 10px;
 }
