@@ -6,6 +6,8 @@ module HomeHelper
     languages_array = [{"en" => "EN"}, 
                        {"fr" => "FR"},
                        {"es" => "ES"},
+                       {"nl" => "NL"},
+                       {"hu" => "HU"},
                       ]
     # select_tag :language, options_for_select([["Francais",set_new_language_path(:language_code => "fr")],['English',set_new_language_path(:language_code => "en")]], getcurrentlanguage)
     select_tag :language, options_for_select(languages_array.map { |h| [h.values.first, set_language_set_new_language_path(:language_code => h.keys.first)]}, getcurrentlanguage), :class => "form-control header-vertical-align language-header"
