@@ -193,7 +193,7 @@
         %h3#_partners 
           = t('dynamic_translations.partners.title')
         %hr
-      = render "/individuals/partials/partners_display", :partners => @partners, :important_partners_display => false
+      = render "/individuals/partials/partners_display", :partners => @partners, :important_partners_display => true, :important_partners_count => 2
       %br
       %br
     - if !@friends.blank?
