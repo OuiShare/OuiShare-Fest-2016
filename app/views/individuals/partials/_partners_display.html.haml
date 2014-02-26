@@ -4,9 +4,9 @@
 - if important_partners_display
   .row.centered
     - partners.first(important_partners_count).each do |important_partner|
-      .col-lg-6
+      .col-lg-4
         %a{:href => important_partner.url, :target => "_blank"}
-          %img.grayscale{:alt => important_partner.first_name, :src => important_partner.attachment.url(:medium)}
+          %img.grayscale{:alt => important_partner.first_name, :src => important_partner.attachment.url(:large)}
 
 - else
   - important_partners_count = 0
