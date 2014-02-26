@@ -38,7 +38,7 @@ website:   	http://www.themepunch.com
 .tp-caption { z-index:1;}
 .tp-caption.general_caption h1 {
 			color:#fff;
-			font-family:'Roboto', Helvetica, Arial;
+			font-family:'naiv_normal_thin', Helvetica, Arial;
 			font-size:42px;
 			text-transform:uppercase;	
 }

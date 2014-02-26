@@ -1,5 +1,5 @@
 
-#headerwrap.blue_bg
+#headerwrap.main_bg
   .container
     .row.main-section   
       #head_logo   
@@ -47,7 +47,7 @@
     %p
       = t('dynamic_translations.what_is_community.text3')
 
-#speakers.blank_bg#_speakers 
+#speakers.blue_bg#_speakers 
   .container
     .row.centered
       %h3.naiv_thin
@@ -66,12 +66,12 @@
                   .col-lg-3.individuals-list-display
                     %li
                       = render "/individuals/partials/speaker_display", :speaker => speaker              
-              %div.row
+              %div.row.mb_20
                 %a#btn_showspeakers_down
                   %button.btn.btn-embossed.btn-primary 
                     = t('dynamic_translations.speakers.show_all')
                     
-              %div.row            
+              %div.row.mb_20      
                 %button.btn.btn-embossed.btn-primary.hide#btn_showspeakers_up
                   = t('dynamic_translations.speakers.hide_all')
 

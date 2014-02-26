@@ -442,8 +442,26 @@ body {
 	background-size: cover;
 }
 
-.blue_bg {
+.main_bg {
 	background: url(/assets/cover_ouishare.jpg) no-repeat center top;
+
+	/*background-color: #33FF99; */
+	margin-top: 0px;
+	padding-top:5%;
+	text-align:center;
+	background-attachment: relative;
+	background-position: center center;
+	min-height: 100%;
+
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+.blue_bg {
+	background: url(/assets/background_main_section.png) no-repeat center top;
+
 	/*background-color: #33FF99; */
 	margin-top: 0px;
 	padding-top:5%;
@@ -706,6 +724,7 @@ text-transform: none;
 	padding:10px 14px 0px 14px;
 	font-weight: 200;
 	min-height:240px;
+	line-height:240px;
 }
 
 
