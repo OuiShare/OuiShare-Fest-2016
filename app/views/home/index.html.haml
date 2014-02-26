@@ -50,7 +50,7 @@
 #speakers.blue_bg#_speakers 
   .container
     .row.centered
-      %h3.naiv_thin
+      %h3.naiv_thin_white
         = t('dynamic_translations.speakers.title')
       %hr
       -if !@displayed_speakers.blank?
@@ -68,10 +68,10 @@
                       = render "/individuals/partials/speaker_display", :speaker => speaker              
               %div.row.mb_20
                 %a#btn_showspeakers_down
-                  %button.btn.btn-embossed.btn-primary 
+                  %button.btn.btn-embossed.btn-primary.mt_20
                     = t('dynamic_translations.speakers.show_all')
                     
-              %div.row.mb_20      
+              %div.row.mb_20.mt_20
                 %button.btn.btn-embossed.btn-primary.hide#btn_showspeakers_up
                   = t('dynamic_translations.speakers.hide_all')
 
