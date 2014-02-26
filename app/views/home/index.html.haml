@@ -193,20 +193,10 @@
         %h3.naiv_thin
           = t('dynamic_translations.partners.title')
         %hr
-      = render "/individuals/partials/partners_display", :partners => @partners, :important_partners_display => true, :important_partners_count => 2
+      = render "/individuals/partials/partners_display", :partners => @partners, :important_partners_display => true, :important_partners_count => 3
       %br
       %br
-    - if !@friends.blank?
-      .row.centered
-        %h3.naiv_thin
-          = t('dynamic_translations.partners.friends_title')
-          
-        %br
-        %hr
-        %br
-      = render "/individuals/partials/partners_display", :partners => @friends, :important_partners_display => false
-      %br
-      %br
+
     - if !@media_partners.blank?
       .row.centered
         %h3.naiv_thin
@@ -216,6 +206,19 @@
         %hr
         %br
       = render "/individuals/partials/partners_display", :partners => @media_partners, :important_partners_display => false
+
+      %br
+      %br
+
+    - if !@friends.blank?
+      .row.centered
+        %h3.naiv_thin
+          = t('dynamic_translations.partners.friends_title')
+          
+        %br
+        %hr
+        %br
+      = render "/individuals/partials/partners_display", :partners => @friends, :important_partners_display => false
 
 .get-involved-section
   .centered.get-involved-punchline    
