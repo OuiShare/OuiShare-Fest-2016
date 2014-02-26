@@ -20,15 +20,20 @@
             %b.caret
           %ul.dropdown-menu
             %li
-              %a{href: "about#_about_about"} The Event
+              %a{href: "about#_about_about"}
+                = t('dynamic_translations.about.the_event')
             %li
-              %a{href: "about#_about_highlights"} Hightlights from 2013
+              %a{href: "about#_about_highlights"}
+                = t('dynamic_translations.highlight.title')
             %li
-              %a{href: "about#_about_location"} Location
+              %a{href: "about#_about_location"}
+                = t('dynamic_translations.footer.location')
             %li
-              %a{href: "about#_about_press"} Press Coverage
+              %a{href: "about#_about_press"}
+                = t('dynamic_translations.press.press_coverage')
             %li
-              %a{href: "about#_about_testimonials"} Testimonals
+              %a{href: "about#_about_testimonials"}
+                = t('dynamic_translations.testimonials.title')
         %li
           %a{href: "/#_speakers"}
             =t('dynamic_translations.speakers.title')
