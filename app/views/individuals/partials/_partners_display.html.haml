@@ -1,15 +1,15 @@
 - array_buffer = []
 - partner_number = 1
 
--if important_partners_display
+- if important_partners_display
   .row.centered
     - partners.first(important_partners_count).each do |important_partner|
       .col-lg-6
         %a{:href => important_partner.url, :target => "_blank"}
-          %img.grayscale{:alt => important_partner.first_name, :src => important_partner.attachment.url(:original), :style => "width:60%;"}
+          %img.grayscale{:alt => important_partner.first_name, :src => important_partner.attachment.url(:medium)}
 
 - else
-  -important_partners_count = 0
+  - important_partners_count = 0
 - partners.last(partners.size-important_partners_count).each do |partner|
   - array_buffer.push(partner)      
   - if partner_number % 6 == 0 || partner_number == (partners.count - important_partners_count)
