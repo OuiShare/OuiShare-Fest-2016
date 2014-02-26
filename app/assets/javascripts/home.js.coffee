@@ -101,7 +101,7 @@ $(document).ready ->
   
   #Slideshow
   $(".banner").revolution
-    delay: 9000
+    delay: 4000
     startwidth: 1040
     startheight: 600
     onHoverStop: "off" # Stop Banner Timet at Hover on Slide on/off
