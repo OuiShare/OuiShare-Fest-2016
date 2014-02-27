@@ -83,10 +83,11 @@ $(document).ready ->
 
   
   #Slideshow
+  
   $(".banner").revolution
     delay: 9000
     startwidth: 1040
-    startheight: 463
+    startheight: 600
     onHoverStop: "off" # Stop Banner Timet at Hover on Slide on/off
     thumbWidth: 100 # Thumb With and Height and Amount (only if navigation Tyope set to thumb !)
     thumbHeight: 50

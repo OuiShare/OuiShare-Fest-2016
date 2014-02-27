@@ -36,7 +36,7 @@ body {
 /***** Slideshow Stylesheet *****/
 #slideshow-container {
 	width:100% !important;
-	max-height:463px;
+	max-height:80%;
 	/*background:#e4e6e6;*/
 	position:relative;
 	overflow:hidden;
@@ -45,7 +45,7 @@ body {
 
 .banner {
 	width:100%;
-	max-height:463px !important;
+	max-height:80% !important;
 	position:relative;
 	overflow:hidden;
 	margin:0 auto;
