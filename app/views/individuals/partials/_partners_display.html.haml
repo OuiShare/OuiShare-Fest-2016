@@ -17,7 +17,7 @@
       - array_buffer.each do |partner|
         .col-lg-2.home_partners
           %a{:href => partner.url, :target => "_blank"}
-            %img.img-responsive.display-inline{:alt => partner.first_name, :src => partner.attachment.url(:medium), :style => "max-width: 173px;"}
+            %img.img-responsive.display-inline{:alt => partner.first_name, :src => partner.attachment.url(:medium)}
             
       - array_buffer.clear
   - partner_number += 1
