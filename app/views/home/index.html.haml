@@ -201,10 +201,8 @@
       .row.centered
         %h3.naiv_thin
           = t('dynamic_translations.partners.media_partner_title')
-          
-        %br
+
         %hr
-        %br
       = render "/individuals/partials/partners_display", :partners => @media_partners, :important_partners_display => false
 
       %br
@@ -214,10 +212,8 @@
       .row.centered
         %h3.naiv_thin
           = t('dynamic_translations.partners.friends_title')
-          
-        %br
+
         %hr
-        %br
       = render "/individuals/partials/partners_display", :partners => @friends, :important_partners_display => false
 
 .get-involved-section
