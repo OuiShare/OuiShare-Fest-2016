@@ -80,21 +80,20 @@
   left: 1px;
 }
 
-.blue_bg{
-  .container{
-    .main-section{
-      .main-title{
-        font-size: 34px;
-        font-family: 'naiv_normal_thin';
-      }
-      .main-section-paragraphes{
-        font-size:22px;
-        font-family: 'naiv_normal_thin';
-        margin-top: 10px;
-      }
-      .twitter-hashtag{
-        color: #fff;
-      }
+
+.container{
+  .main-section{
+    .main-title{
+      font-size: 45px;
+      font-family: 'naiv_normal_thin';
+    }
+    .main-section-paragraphes{
+      font-size:22px;
+      font-family: 'naiv_normal_thin';
+      margin-top: 10px;
+    }
+    .twitter-hashtag{
+      color: #fff;
     }
   }
 }
