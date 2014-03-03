@@ -157,7 +157,7 @@
           = t('dynamic_translations.tickets.who_s_coming') 
         %ul.unstyled.attendees-list
           -@ouishare_fest_attendees["attendees"].first(ENV["EVENTBRITE_ATTENDEES_DISPLAY_NUMBER"].to_i).each do |attendee|
-            .col-lg-2
+            .col-lg-2.col-sm-4
               %li.attendee-items
                 =image_tag display_gravatar(attendee["attendee"]["email"]), :class => 'img-circle'
                 .row{:style => "color:white;"}                  
@@ -169,7 +169,7 @@
               #allattendees{style: "display: none;"} 
                 -@ouishare_fest_attendees["attendees"].last(@ouishare_fest_attendees["attendees"].count - ENV["EVENTBRITE_ATTENDEES_DISPLAY_NUMBER"].to_i).each do |attendee|
                         
-                  .col-lg-2
+                  .col-lg-2.col-sm-4
                     %li.attendee-items
                       =image_tag display_gravatar(attendee["attendee"]["email"]), :class => 'img-circle'
                       .row{:style => "color:white;"}                     
