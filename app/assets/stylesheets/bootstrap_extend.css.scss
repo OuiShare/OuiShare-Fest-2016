@@ -18,3 +18,59 @@
 .container{
   width: 80% !important;
 }
+
+.round_fond {
+  background-color: rgba(0,0,0,0.36);
+  border-radius: 15px;
+  padding: 10px;
+}
+
+h3.naiv_thin{
+  font-family:'naiv_normal_thin';
+  .white
+  {
+    color:#ffffff;
+  }
+}
+
+h3.naiv_thin_white{
+  font-family:'naiv_normal_thin';
+  color:#ffffff;
+}
+
+h3.naiv
+{
+  font-family:'naiv_normal';
+  .white
+  {
+    color:#ffffff;
+  }  
+}
+
+h1.slider_naiv_thin
+{
+  font-family:'naiv_normal';
+  font-weight: bold;
+}
+
+.mb_20
+{
+  margin-bottom: 20px;
+}
+
+.mt_20
+{
+  margin-top: 20px;
+}
+
+
+p.testimonial
+{
+  display: inline-block !important;
+  vertical-align: middle !important;
+}
+
+p.white
+{
+  color: #ffffff;
+}

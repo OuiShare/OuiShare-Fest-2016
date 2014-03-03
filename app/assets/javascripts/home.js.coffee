@@ -21,6 +21,7 @@ $(document).ready ->
   $('#link_contact_modal').click (e) ->
     $('#contact_modal').modal('toggle')
 
+  # Home Page
   $("a[href^=\"#_\"]").on "click", (e) ->
     e.preventDefault()
     target = @hash
@@ -33,6 +34,22 @@ $(document).ready ->
     #   scrollTop: scroll_position
     # , 900, "swing", ->
     #   window.location.hash = target
+
+  # Page About
+  $("a[href^=\"about#_about_\"]").on "click", (e) ->
+    e.preventDefault()
+    target = @hash
+    if $(this).pathname == "/about"
+      $target = $(target)    
+      scroll_position = $target.offset().top - $('.navbar').height()-10
+      $('html,body').animate
+        scrollTop: scroll_position
+        ,'slow', "swing"       
+    else
+      # window.location.href = window.location.hostname + target
+      # console.log $(this).attr('href')
+      window.location = $(this).attr('href')
+
 
   $("#btn_showspeakers_down").click ->
     $("#btn_showspeakers_down").hide()
@@ -85,7 +102,7 @@ $(document).ready ->
   #Slideshow
   
   $(".banner").revolution
-    delay: 9000
+    delay: 4000
     startwidth: 1040
     startheight: 600
     onHoverStop: "off" # Stop Banner Timet at Hover on Slide on/off
@@ -99,7 +116,7 @@ $(document).ready ->
     navigationHAlign: "center" # Vertical Align top,center,bottom
     navigationVAlign: "bottom" # Horizontal Align left,center,right
     navigationHOffset: -419
-    navigationVOffset: 72
+    navigationVOffset: 150
     touchenabled: "on" # Enable Swipe Function : on/off
     stopAtSlide: -1 # Stop Timer if Slide "x" has been Reached. If stopAfterLoops set to 0, then it stops already in the first Loop at slide X which defined. -1 means do not stop at any slide. stopAfterLoops has no sinn in this case.
     stopAfterLoops: -1 # Stop Timer if All slides has been played "x" times. IT will stop at THe slide which is defined via stopAtSlide:x, if set to -1 slide never stop automatic

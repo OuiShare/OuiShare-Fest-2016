@@ -1,5 +1,5 @@
 
-#headerwrap.blue_bg
+#headerwrap.main_bg
   .container
     .row.main-section   
       #head_logo   
@@ -8,6 +8,7 @@
         %h1
           .main-title
             = t('dynamic_translations.main.title')
+
           %p.main-section-paragraphes
             = t('dynamic_translations.main.subtitle')
             / A three-day festival about the collaborative economy
@@ -29,14 +30,14 @@
         / %span.twitter-hashtag
         /   \#OSFest14
 
-#about.grey_bg
+#about.grey_bg#_about
   .container{:style => "width:60% !important;"}
-    %h3.text-center#_about{:style => "font-size:25px;text-transform:none;"}
+    %h3.naiv_thin.text-center{:style => "font-size:25px;text-transform:none;padding:20px;"}
       = t('dynamic_translations.about.subtitle')
     %p 
       = t('dynamic_translations.about.description')
     %br
-
+    %br
     %p
       = t('dynamic_translations.what_is_community.text1')
     %br
@@ -46,10 +47,10 @@
     %p
       = t('dynamic_translations.what_is_community.text3')
 
-#speakers.blank_bg
+#speakers.blue_bg#_speakers 
   .container
     .row.centered
-      %h3#_speakers 
+      %h3.naiv_thin_white
         = t('dynamic_translations.speakers.title')
       %hr
       -if !@displayed_speakers.blank?
@@ -65,20 +66,20 @@
                   .col-lg-3.individuals-list-display
                     %li
                       = render "/individuals/partials/speaker_display", :speaker => speaker              
-              %div.row
+              %div.row.mb_20
                 %a#btn_showspeakers_down
-                  %button.btn.btn-embossed.btn-primary 
+                  %button.btn.btn-embossed.btn-primary.mt_20
                     = t('dynamic_translations.speakers.show_all')
                     
-              %div.row            
+              %div.row.mb_20.mt_20
                 %button.btn.btn-embossed.btn-primary.hide#btn_showspeakers_up
                   = t('dynamic_translations.speakers.hide_all')
 
-#involved.grey_bg
+#involved.grey_bg#_getinvolved{:style => 'padding-top:130px'}
   .get-involved-section
     .container.sinfo
       .row.centered
-        %h3#_getinvolved
+        %h3.naiv_thin
           = t('dynamic_translations.get_involved.title')
         %hr
       .container
@@ -94,7 +95,7 @@
               %ul.centered.alt
                 %li.title
                   = t('dynamic_translations.get_involved.call_for_proposal')
-                %li{:style => "min-height:105px;"}
+                %li{:style => "min-height:140px;"}
                   = t('dynamic_translations.get_involved.option_1')
                 %li.button
                   %a.btn.btn-large.button-call-to-action-option{href: "https://docs.google.com/forms/d/1ejne9y3aDW8Xfejdt9_2ErZxXNc_VHccsaO-LHvKI4U/viewform", :target => "_blank"} 
@@ -103,7 +104,7 @@
               %ul.centered.alt
                 %li.title
                   =t('dynamic_translations.get_involved.join_the_team') 
-                %li{:style => "min-height:105px;"}
+                %li{:style => "min-height:140px;"}
                   = t('dynamic_translations.get_involved.option_2')
                 %li.button
                   %a.btn.btn-large.button-call-to-action-option{href: "https://docs.google.com/forms/d/15QpVEkvXR9-DpAKLYoUSPOXrfnYRG9aCPnMoK3WUrJo/viewform", :target => "_blank"}
@@ -112,21 +113,21 @@
               %ul.centered.alt
                 %li.title
                   =t('dynamic_translations.get_involved.idea_wall') 
-                %li{:style => "min-height:105px;"}
+                %li{:style => "min-height:140px;"}
                   = t('dynamic_translations.get_involved.option_3')
                 %li.button
                   %a.btn.btn-large.button-call-to-action-option{href: "http://padlet.com/wall/ouisharefest14", :target => "_blank"}
                     = t('dynamic_translations.get_involved.idea_wall_button')
       
-#tickets.triangle_bg
+#tickets.triangle_bg#_tickets 
   .container.tickets-section 
     .row.centered
       %br
-      %h3#_tickets 
+      %h3.naiv_thin
         = t('dynamic_translations.tickets.title')
       %br      
       %br
-      .container.round_fond        
+      .container.round_fond
         %h4{:style => "font-size:18px;"}
           = t('dynamic_translations.tickets.description')
           %a{href: "http://bit.ly/OSF14SponsoredTicketForm"} 
@@ -185,37 +186,39 @@
                   %button.btn.btn-embossed.btn-primary
                     = t('dynamic_translations.tickets.hide_all_attendees')
      
-.partners-container
+.partners-container#_partners{:style => 'padding-top:130px'}
   .container.sinfo
-
     - if !@partners.blank?
       .row.centered
-        %h3#_partners 
+        %h3.naiv_thin
           = t('dynamic_translations.partners.title')
         %hr
-      = render "/individuals/partials/partners_display", :partners => @partners, :important_partners_display => false
+      = render "/individuals/partials/partners_display", :partners => @partners, :important_partners_display => true, :important_partners_count => 3
       %br
       %br
-    - if !@friends.blank?
-      .row.centered
-        %h3
-          = t('dynamic_translations.partners.friends_title')
-          
-        %br
-        %hr
-        %br
-      = render "/individuals/partials/partners_display", :partners => @friends, :important_partners_display => false
-      %br
-      %br
+
     - if !@media_partners.blank?
       .row.centered
-        %h3 
+        %h3.naiv_thin
           = t('dynamic_translations.partners.media_partner_title')
           
         %br
         %hr
         %br
       = render "/individuals/partials/partners_display", :partners => @media_partners, :important_partners_display => false
+
+      %br
+      %br
+
+    - if !@friends.blank?
+      .row.centered
+        %h3.naiv_thin
+          = t('dynamic_translations.partners.friends_title')
+          
+        %br
+        %hr
+        %br
+      = render "/individuals/partials/partners_display", :partners => @friends, :important_partners_display => false
 
 .get-involved-section
   .centered.get-involved-punchline    
@@ -225,10 +228,10 @@
       %a{:href => "mailto:partners@ouisharefest.com"} partners@ouisharefest.com
 
 
-#team.blank_bg
+#team.blank_bg#_team
   .container
     .row.centered
-      %h3#_team
+      %h3.naiv_thin
         =t('dynamic_translations.team.title')     
       %hr/   
       - if !@team_members.blank?

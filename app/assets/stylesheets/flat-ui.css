@@ -54,6 +54,24 @@
   font-weight: normal;
   font-style: normal;
 }
+
+
+/* Font Naiv */
+@font-face {
+  font-family: "naiv_normal";
+  src: url("/assets/naiv/Naiv-Normal.otf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "naiv_normal_thin";
+  src: url("/assets/naiv/Naiv-Thin.otf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+
 /* Use the following CSS code if you want to use data attributes for inserting your icons */
 [data-icon]:before {
   font-family: 'Flat-UI-Icons';

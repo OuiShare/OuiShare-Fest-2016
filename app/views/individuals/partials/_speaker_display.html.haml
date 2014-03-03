@@ -12,9 +12,9 @@
         %a{href: "http://www.twitter.com/" + speaker.twitter_account, target: "_blank"}
           = "@" + speaker.twitter_account
 %h6
-  %b
-    = speaker.fullname
-  %br
+  %p.white
+    %b
+      = speaker.fullname
   - if !speaker.company_name.blank?
     %small
       %a{href: speaker.url, target: "_blank"}
