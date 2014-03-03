@@ -4,9 +4,9 @@
 - if important_partners_display
   .row.centered
     - partners.first(important_partners_count).each do |important_partner|
-      .col-lg-4
+      .col-lg-3
         %a{:href => important_partner.url, :target => "_blank"}
-          %img.grayscale{:alt => important_partner.first_name, :src => important_partner.attachment.url(:medium), :style => "max-height:150px;"}
+          %img.img-responsive.display-inline{:alt => important_partner.first_name, :src => important_partner.attachment.url(:medium)}
 
 - else
   - important_partners_count = 0
@@ -17,7 +17,7 @@
       - array_buffer.each do |partner|
         .col-lg-2.home_partners
           %a{:href => partner.url, :target => "_blank"}
-            %img.grayscale{:alt => partner.first_name, :src => partner.attachment.url(:medium), :style => "max-width: 173px;"}
+            %img.img-responsive.display-inline{:alt => partner.first_name, :src => partner.attachment.url(:medium)}
             
       - array_buffer.clear
   - partner_number += 1
