@@ -84,13 +84,13 @@ $(document).ready ->
   $("#btn_attendees_down").click ->
     $("#btn_attendees_down").hide()
     $("#allattendees").slideDown "slow"
-    toggle_class("#btn_attendees_up", "hide")    
+    $("#btn_attendees_up").show()
 
   $("#btn_attendees_up").click ->
-    toggle_class("#btn_attendees_up", "hide")    
+    $("#btn_attendees_up").hide()
     $("#allattendees").slideUp "slow"
     $('html,body').animate({
-    scrollTop: $("#attendees_list").offset().top
+    scrollTop: $(".who-s-coming-title").offset().top - 77
     },
     'slow') 
     $("#btn_attendees_down").show()
