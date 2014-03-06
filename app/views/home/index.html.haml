@@ -163,6 +163,8 @@
                 .row{:style => "color:white;"}                  
                   = attendee["attendee"]["first_name"]
                   = attendee["attendee"]["last_name"][0]+'.'
+                .row
+                  = attendee["attendee"]["company"]
               
           - if @ouishare_fest_attendees["attendees"].count > ENV["EVENTBRITE_ATTENDEES_DISPLAY_NUMBER"].to_i  
             %div
