@@ -140,7 +140,7 @@
           =t('dynamic_translations.tickets.sponsored_tickets_text2')
       %br
       %div{:style => "width:100%; text-align:left;"}
-        %iframe{:allowtransparency => "true", :frameborder => "0", :height => "600", :hspace => "0", :marginheight => "5", :marginwidth => "5", :scrolling => "auto", :src => "http://www.eventbrite.com/tickets-external?eid=10108670305&ref=etckt&v=2", :vspace => "0", :width => "100%"}
+        %iframe{:allowtransparency => "true", :frameborder => "0", :height => "800", :hspace => "0", :marginheight => "5", :marginwidth => "5", :scrolling => "auto", :src => "http://www.eventbrite.com/tickets-external?eid=10108670305&ref=etckt&v=2", :vspace => "0", :width => "100%"}
         %div{:style => "font-family:Helvetica, Arial; font-size:10px; padding:5px 0 5px; margin:2px; width:100%; text-align:left;"}
           %a{:href => "http://www.eventbrite.com/r/etckt", :style => "color:#ddd; text-decoration:none;", :target => "_blank"} 
             =t('dynamic_translations.tickets.event_registration_online')
@@ -157,7 +157,7 @@
           = t('dynamic_translations.tickets.who_s_coming') 
         %ul.unstyled.attendees-list
           -@ouishare_fest_attendees["attendees"].first(ENV["EVENTBRITE_ATTENDEES_DISPLAY_NUMBER"].to_i).each do |attendee|
-            .col-lg-2
+            .col-xs-4.col-sm-2.col-md-2.col-lg-2
               %li.attendee-items
                 =image_tag display_gravatar(attendee["attendee"]["email"]), :class => 'img-circle'
                 .row{:style => "color:white;"}                  
@@ -169,7 +169,7 @@
               #allattendees{style: "display: none;"} 
                 -@ouishare_fest_attendees["attendees"].last(@ouishare_fest_attendees["attendees"].count - ENV["EVENTBRITE_ATTENDEES_DISPLAY_NUMBER"].to_i).each do |attendee|
                         
-                  .col-lg-2
+                  .col-xs-4.col-sm-2.col-md-2.col-lg-2
                     %li.attendee-items
                       =image_tag display_gravatar(attendee["attendee"]["email"]), :class => 'img-circle'
                       .row{:style => "color:white;"}                     
@@ -182,7 +182,7 @@
                   %button.btn.btn-embossed.btn-primary 
                     = t('dynamic_translations.tickets.show_all_attendees')
               %div.row 
-                %a.individuals-list-btn.hide#btn_attendees_up        
+                %a.individuals-list-btn#btn_attendees_up        
                   %button.btn.btn-embossed.btn-primary
                     = t('dynamic_translations.tickets.hide_all_attendees')
      
@@ -193,7 +193,7 @@
         %h3.naiv_thin
           = t('dynamic_translations.partners.title')
         %hr
-      = render "/individuals/partials/partners_display", :partners => @partners, :important_partners_display => true, :important_partners_count => 4
+      = render "/individuals/partials/partners_display", :partners => @partners, :important_partners_display => true, :important_partners_count => 5
       %br
       %br
 
@@ -201,10 +201,8 @@
       .row.centered
         %h3.naiv_thin
           = t('dynamic_translations.partners.media_partner_title')
-          
-        %br
+
         %hr
-        %br
       = render "/individuals/partials/partners_display", :partners => @media_partners, :important_partners_display => false
 
       %br
@@ -214,10 +212,8 @@
       .row.centered
         %h3.naiv_thin
           = t('dynamic_translations.partners.friends_title')
-          
-        %br
+
         %hr
-        %br
       = render "/individuals/partials/partners_display", :partners => @friends, :important_partners_display => false
 
 .get-involved-section

@@ -1,6 +1,9 @@
 // Place all the styles related to the home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+#btn_attendees_up{
+  display: none;
+}
 .parnters-bg{
   padding-top: 100px;
 }
@@ -80,21 +83,20 @@
   left: 1px;
 }
 
-.blue_bg{
-  .container{
-    .main-section{
-      .main-title{
-        font-size: 34px;
-        font-family: 'naiv_normal_thin';
-      }
-      .main-section-paragraphes{
-        font-size:22px;
-        font-family: 'naiv_normal_thin';
-        margin-top: 10px;
-      }
-      .twitter-hashtag{
-        color: #fff;
-      }
+
+.container{
+  .main-section{
+    .main-title{
+      font-size: 45px;
+      font-family: 'naiv_normal_thin';
+    }
+    .main-section-paragraphes{
+      font-size:22px;
+      font-family: 'naiv_normal_thin';
+      margin-top: 10px;
+    }
+    .twitter-hashtag{
+      color: #fff;
     }
   }
 }
