@@ -15,9 +15,26 @@
     }
   }
 }
-.container{
+
+.container:not(.special-container-navbar){
   width: 80% !important;
 }
+
+/**** Header display corrective (because languages change his width) ******/
+
+@media (min-width: 1070px) and (max-width: 1999px){
+  .special-container-navbar{
+    width: 1100px;
+  }
+}
+
+@media (max-width: 1069px){
+  .navbar-header{
+    float: none;
+  }
+}
+/*************************************************************************/
+
 
 .round_fond {
   background-color: rgba(0,0,0,0.36);
