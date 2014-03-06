@@ -157,11 +157,10 @@
           = t('dynamic_translations.tickets.who_s_coming') 
         %ul.unstyled.attendees-list
           - attendees = @ouishare_fest_attendees["attendees"].first(ENV["EVENTBRITE_ATTENDEES_DISPLAY_NUMBER"].to_i)
-          - attendees.uniq!
           - attendees.each do |attendee|
             .col-xs-4.col-sm-2.col-md-2.col-lg-2
               %li.attendee-items
-                =image_tag display_gravatar(attendee["attendee"]["email"]), :class => 'img-circle'
+                / =image_tag display_gravatar(attendee["attendee"]["email"]), :class => 'img-circle'
                 .row{:style => "color:white;"}                  
                   = attendee["attendee"]["first_name"]
                   = attendee["attendee"]["last_name"][0]+'.'
@@ -172,12 +171,11 @@
             %div
               #allattendees{style: "display: none;"} 
                 - attendees = @ouishare_fest_attendees["attendees"].last(@ouishare_fest_attendees["attendees"].count - ENV["EVENTBRITE_ATTENDEES_DISPLAY_NUMBER"].to_i)
-                - attendees.uniq!
                 - attendees.each do |attendee|
                         
                   .col-xs-4.col-sm-2.col-md-2.col-lg-2
                     %li.attendee-items
-                      =image_tag display_gravatar(attendee["attendee"]["email"]), :class => 'img-circle'
+                      / =image_tag display_gravatar(attendee["attendee"]["email"]), :class => 'img-circle'
                       .row{:style => "color:white;"}                     
                         = attendee["attendee"]["first_name"]
                         = attendee["attendee"]["last_name"][0]+'.'
