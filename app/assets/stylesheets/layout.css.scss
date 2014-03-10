@@ -1,4 +1,23 @@
 .nav.navbar-nav{
+
+  .tickets-highlight{
+    padding: 17px 7px;
+  }
+
+  .highlight{
+    color: white;
+    padding: 10px;
+    background-color: red;
+    -o-transition: 800ms;
+    -ms-transition: 800ms;
+    -moz-transition: 800ms;
+    -webkit-transition: 800ms;
+    transition: 800ms;
+  }
+  .highlight:hover{
+    background-color: black;
+  }
+
   .header-vertical-align{
     margin-top: 10px;
   }
