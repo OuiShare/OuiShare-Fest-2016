@@ -41,8 +41,9 @@
           %a{href: "/#_getinvolved"}
             =t('dynamic_translations.get_involved.title')
         %li
-          %a{href: "/#_tickets"}
-            =t('dynamic_translations.tickets.title')
+          .tickets-highlight
+            %a{href: "/#_tickets", :class => 'highlight'}
+              =t('dynamic_translations.tickets.title')
         %li
           %a{href: "/#_partners"}
             =t('dynamic_translations.partners.title')
