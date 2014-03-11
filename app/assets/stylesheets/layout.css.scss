@@ -7,7 +7,8 @@
   .highlight{
     color: white;
     padding: 10px;
-    background-color: red;
+    border-radius: 5px;
+    background-color: #48c9b0;
     -o-transition: 800ms;
     -ms-transition: 800ms;
     -moz-transition: 800ms;
@@ -15,7 +16,7 @@
     transition: 800ms;
   }
   .highlight:hover{
-    background-color: black;
+    background-color: #34495e;
   }
 
   .header-vertical-align{
