@@ -27,7 +27,7 @@
   - while !array_buffer.empty? do
     .row.centered
       - array_buffer.first(4).each do |partner|
-        .col-lg-4
+        .col-lg-3
           %a{:href => partner.url, :target => "_blank"}
             %img.img-responsive.display-inline{:alt => partner.first_name, :src => partner.attachment.url(:medium)}
         - array_buffer.delete_at(0)
