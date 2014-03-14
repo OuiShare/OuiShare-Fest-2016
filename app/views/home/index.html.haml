@@ -156,25 +156,31 @@
         %h4.who-s-coming-title
           = t('dynamic_translations.tickets.who_s_coming') 
         %ul.unstyled.attendees-list
-          -@ouishare_fest_attendees["attendees"].first(ENV["EVENTBRITE_ATTENDEES_DISPLAY_NUMBER"].to_i).each do |attendee|
+          - attendees = @ouishare_fest_attendees["attendees"].first(ENV["EVENTBRITE_ATTENDEES_DISPLAY_NUMBER"].to_i)
+          - attendees.each do |attendee|
             .col-xs-4.col-sm-2.col-md-2.col-lg-2
               %li.attendee-items
-                =image_tag display_gravatar(attendee["attendee"]["email"]), :class => 'img-circle'
+                / =image_tag display_gravatar(attendee["attendee"]["email"]), :class => 'img-circle'
                 .row{:style => "color:white;"}                  
                   = attendee["attendee"]["first_name"]
                   = attendee["attendee"]["last_name"][0]+'.'
+                .row
+                  = attendee["attendee"]["company"]
               
           - if @ouishare_fest_attendees["attendees"].count > ENV["EVENTBRITE_ATTENDEES_DISPLAY_NUMBER"].to_i  
             %div
               #allattendees{style: "display: none;"} 
-                -@ouishare_fest_attendees["attendees"].last(@ouishare_fest_attendees["attendees"].count - ENV["EVENTBRITE_ATTENDEES_DISPLAY_NUMBER"].to_i).each do |attendee|
+                - attendees = @ouishare_fest_attendees["attendees"].last(@ouishare_fest_attendees["attendees"].count - ENV["EVENTBRITE_ATTENDEES_DISPLAY_NUMBER"].to_i)
+                - attendees.each do |attendee|
                         
                   .col-xs-4.col-sm-2.col-md-2.col-lg-2
                     %li.attendee-items
-                      =image_tag display_gravatar(attendee["attendee"]["email"]), :class => 'img-circle'
+                      / =image_tag display_gravatar(attendee["attendee"]["email"]), :class => 'img-circle'
                       .row{:style => "color:white;"}                     
                         = attendee["attendee"]["first_name"]
                         = attendee["attendee"]["last_name"][0]+'.'
+                      .row
+                        = attendee["attendee"]["company"]
                     
               %br   
               %div.row
@@ -193,7 +199,7 @@
         %h3.naiv_thin
           = t('dynamic_translations.partners.title')
         %hr
-      = render "/individuals/partials/partners_display", :partners => @partners, :important_partners_display => true, :important_partners_count => 5
+      = render "/individuals/partials/partners_display", :partners => @partners, :important_partners_display => true, :important_partners_count => 6
       %br
       %br
 
