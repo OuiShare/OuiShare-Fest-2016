@@ -69,8 +69,10 @@
               Pitch Me
     .row.design-team-footer
       .col-lg-offset-7.col-lg-5
-        %p.pull-right
+        %p.pull-right{:style => 'margin-top: 10px;'}
           %small          
-            Design: Johann Aussage, Anne-Marine Bonniec
+            Design:
+            %a{ :href => "http://www.corp-lab.com"}
+              \.CORP
             
 = yield :scripts
