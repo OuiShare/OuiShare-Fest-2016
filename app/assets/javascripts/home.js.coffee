@@ -9,6 +9,12 @@ toggle_class = (element,class_name) ->
 
 $(document).ready ->
 
+  if window.location.search.replace('?', '') == 'tickets'
+    $tabs = $(".tabbable li")
+    $tabs.filter(".active").next("li").find("a[data-toggle=\"tab\"]").tab "show"
+    $("html, body").animate({ scrollTop: 0 }, 600)
+    $('#calendar').fullCalendar('render')  
+
   if $('#visit_modal').length > 0
     setTimeout (->
       $('#visit_modal').modal('show')
