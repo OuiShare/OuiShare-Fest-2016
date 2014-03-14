@@ -5,7 +5,7 @@
 - if important_partners_display
   - partners.first(important_partners_count).each do |partner|
     - array_buffer.push(partner)
-  - remain = important_partners_count % 3
+  - remain = important_partners_count % 4
   - if remain > 0
     .row.centered
       - array_buffer.first(remain).each do |partner|
@@ -17,17 +17,17 @@
           .col-lg-6
             %a{:href => partner.url, :target => "_blank"}
               %img.img-responsive.display-inline{:alt => partner.first_name, :src => partner.attachment.url(:medium)}
-        / - elsif remain == 3
-        /   .col-lg-4
-        /     %a{:href => partner.url, :target => "_blank"}
-        /       %img.img-responsive.display-inline{:alt => partner.first_name, :src => partner.attachment.url(:medium)}
+        - elsif remain == 3
+          .col-lg-4
+            %a{:href => partner.url, :target => "_blank"}
+              %img.img-responsive.display-inline{:alt => partner.first_name, :src => partner.attachment.url(:medium)}
         - array_buffer.delete_at(0)
 
 
   - while !array_buffer.empty? do
     .row.centered
-      - array_buffer.first(3).each do |partner|
-        .col-lg-4
+      - array_buffer.first(4).each do |partner|
+        .col-lg-3
           %a{:href => partner.url, :target => "_blank"}
             %img.img-responsive.display-inline{:alt => partner.first_name, :src => partner.attachment.url(:medium)}
         - array_buffer.delete_at(0)
