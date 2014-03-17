@@ -471,7 +471,6 @@ a {
   -o-transition: 0.25s;
   transition: 0.25s;
   -webkit-backface-visibility: hidden;
-  text-shadow: white 1px 1px;
 }
 a:hover,
 a:focus {
