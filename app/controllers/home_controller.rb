@@ -67,7 +67,14 @@ class HomeController < ApplicationController
   end
 
   def participants
-
+     if IndividualType.find_by_title('Speakers')
+      @speakers = IndividualType.find_by_title('Speakers').get_members
+      if ENV["DISPLAYED_SPEAKERS"].to_i > @speakers.count
+        displayed_speakers_number = @speakers.count
+      else
+        displayed_speakers_number = ENV["DISPLAYED_SPEAKERS"].to_i
+      end
+    end
     
   end
 
