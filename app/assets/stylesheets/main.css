@@ -402,7 +402,7 @@ body {
 }
 
 .triangle_bg {
-	background: url(/assets/bg-pat_02.png) repeat right top;
+	background: url(/assets/fond_vert.png) repeat right top;
 	background-color: #33FF99;
 	margin-top: 0px;
 	padding-top: 130px;
@@ -410,10 +410,10 @@ body {
 	background-attachment: relative;
 	background-position: center center;
 	min-height: 100%;
-	-webkit-background-size: 200px 140px;
+	/*-webkit-background-size: 200px 140px;
 	-moz-background-size: 200px 140px;
 	-o-background-size: 200px 140px;
-	background-size: 200px 140px;
+	background-size: 200px 140px;*/
 }
 #tickets h3,h4{
 	color: #F7F7F7;
