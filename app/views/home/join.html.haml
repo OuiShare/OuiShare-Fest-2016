@@ -1,0 +1,75 @@
+#tickets.triangle_bg#_tickets 
+  .container.tickets-section 
+    .row.centered
+      %br
+      %h3.naiv_thin
+        = t('dynamic_translations.tickets.title')
+      %br      
+      %br
+      .container.round_fond
+        %h4{:style => "font-size:18px;"}
+          = t('dynamic_translations.tickets.description')
+          %a{href: "http://bit.ly/OSF14SponsoredTicketForm"} 
+            = t('dynamic_translations.tickets.apply_tickets_link')
+        
+          = t('dynamic_translations.tickets.sponsored_tickets')
+          %a{:href => "http://bit.ly/OSF14StudentForm"}
+            = t('dynamic_translations.tickets.sponsored_tickets_link')
+        %h4{:style => "font-size:18px;"}
+          =t('dynamic_translations.tickets.sponsored_tickets_text2')
+      %br
+      %div{:style => "width:100%; text-align:left;"}
+        %iframe{:allowtransparency => "true", :frameborder => "0", :height => "800", :hspace => "0", :marginheight => "5", :marginwidth => "5", :scrolling => "auto", :src => "http://www.eventbrite.com/tickets-external?eid=10108670305&ref=etckt&v=2", :vspace => "0", :width => "100%"}
+        %div{:style => "font-family:Helvetica, Arial; font-size:10px; padding:5px 0 5px; margin:2px; width:100%; text-align:left;"}
+          %a{:href => "http://www.eventbrite.com/r/etckt", :style => "color:#ddd; text-decoration:none;", :target => "_blank"} 
+            =t('dynamic_translations.tickets.event_registration_online')
+          %span{:style => "color:#ddd;"} 
+            =t('dynamic_translations.tickets.for')
+          %a{:href => "https://www.eventbrite.es/e/ouishare-fest-2014-tickets-10108670305?ref=etckt", :style => "color:#ddd; text-decoration:none;", :target => "_blank"} OuiShare Fest 2014
+          %span{:style => "color:#ddd;"} 
+            =t('dynamic_translations.tickets.powered_by')
+          %a{:href => "http://www.eventbrite.com?ref=etckt", :style => "color:#ddd; text-decoration:none;", :target => "_blank"} Eventbrite
+
+#involved.grey_bg#_getinvolved{:style => 'padding-top:130px'}
+  .get-involved-section
+    .container.sinfo
+      .row.centered
+        %h3.naiv_thin
+          = t('dynamic_translations.get_involved.title')
+        %hr
+      .container
+      %br  
+      %p.text-center
+        = t('dynamic_translations.get_involved.description')
+      %br
+        
+      .row.get-involved-options-choice
+        .col-md-9.span-centered
+          .row
+            .col-md-4.pricing-table.turquoise.bordered.plain
+              %ul.centered.alt
+                %li.title
+                  = t('dynamic_translations.get_involved.call_for_proposal')
+                %li{:style => "min-height:140px;"}
+                  = t('dynamic_translations.get_involved.option_1')
+                %li.button
+                  %a.btn.btn-large.button-call-to-action-option{href: "https://docs.google.com/forms/d/1xwFAL9C5AHZgBAeC6tGD6_eX0Ca1u00ZawZEueHczII/viewform", :target => "_blank"} 
+                    =t('dynamic_translations.get_involved.submit')
+            .col-md-4.pricing-table.turquoise.bordered.plain
+              %ul.centered.alt
+                %li.title
+                  =t('dynamic_translations.get_involved.join_the_team') 
+                %li{:style => "min-height:140px;"}
+                  = t('dynamic_translations.get_involved.option_2')
+                %li.button
+                  %a.btn.btn-large.button-call-to-action-option{href: "https://docs.google.com/forms/d/15QpVEkvXR9-DpAKLYoUSPOXrfnYRG9aCPnMoK3WUrJo/viewform", :target => "_blank"}
+                    = t('dynamic_translations.get_involved.join')
+            .col-md-4.pricing-table.turquoise.bordered.plain
+              %ul.centered.alt
+                %li.title
+                  =t('dynamic_translations.get_involved.idea_wall') 
+                %li{:style => "min-height:140px;"}
+                  = t('dynamic_translations.get_involved.option_3')
+                %li.button
+                  %a.btn.btn-large.button-call-to-action-option{href: "http://awards.ouisharefest.com", :target => "_blank"}
+                    = t('dynamic_translations.get_involved.idea_wall_button')

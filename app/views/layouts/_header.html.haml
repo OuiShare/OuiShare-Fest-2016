@@ -51,18 +51,49 @@
             %li
               %a{href: "participants#_partners"}
                 = t('dynamic_translations.partners.title')
+        %li.dropdown
+          %a.dropdown-toggle{"data-toggle" => "dropdown", href: "/program"}
+            =t('dynamic_translations.participants.title')
+            %b.caret
+          %ul.dropdown-menu
+            %li
+              %a{href: "program#_speakers"}
+                = t('dynamic_translations.program.main_schedule')
+            %li
+              %a{href: "program#_team"}
+                = t('dynamic_translations.program.satellite_events')
+            %li
+              %a{href: "program#_whoscomming"}
+                = t('dynamic_translations.program.ouishare_village')
+        %li.dropdown
+          %a.dropdown-toggle{"data-toggle" => "dropdown", href: "/join"}
+            =t('dynamic_translations.join.title')
+            %b.caret
+          %ul.dropdown-menu
+            %li
+              %a{href: "join#_tickets"}
+                = t('dynamic_translations.tickets.title')
+            %li
+              %a{href: "join#_getinvolved"}
+                = t('dynamic_translations.get_involved.title')
+            %li
+              %a{href: "join#_awards"}
+                = t('dynamic_translations.ouishare_awards.title')
+            %li
+              %a{href: "join#_prepare"}
+                = t('dynamic_translations.prepare_trip.title')
         / %li
         /   %a{href: "/#_speakers"}
         /     =t('dynamic_translations.speakers.title')
-        %li
-          %a{href: "/#_getinvolved"}
-            =t('dynamic_translations.get_involved.title')
-        %li
-          %a{href: "/#_partners"}
-            =t('dynamic_translations.partners.title')
-        %li
-          %a{href: "/#_team"}
-            =t('dynamic_translations.team.title')
+        / %li
+        /   %a{href: "/#_getinvolved"}
+        /     =t('dynamic_translations.get_involved.title')
+        / %li
+        /   %a{href: "/#_partners"}
+        /     =t('dynamic_translations.partners.title')
+        / %li
+        /   %a{href: "/#_team"}
+        /     =t('dynamic_translations.team.title')
         %li
           %a{href: "http://blog.ouisharefest.com", target: "_blank"}
             =t('dynamic_translations.blog.title')
