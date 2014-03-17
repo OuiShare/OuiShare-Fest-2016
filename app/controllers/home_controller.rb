@@ -66,6 +66,11 @@ class HomeController < ApplicationController
 
   end
 
+  def participants
+
+    
+  end
+
   def faq
   end
 
