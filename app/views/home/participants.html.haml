@@ -68,7 +68,7 @@
         %ul.unstyled.attendees-list
           - attendees = @ouishare_fest_attendees["attendees"].first(ENV["EVENTBRITE_ATTENDEES_DISPLAY_NUMBER"].to_i)
           - attendees.each do |attendee|
-            .col-xs-12.col-sm-4.col-md-2.col-lg-2.attendee-container
+            .col-xs-12.col-sm-4.col-md-3.col-lg-2.attendee-container
               %li.attendee-items
                 / =image_tag display_gravatar(attendee["attendee"]["email"]), :class => 'img-circle'
                 .row{:style => "color:white;"}                  
@@ -83,7 +83,7 @@
                 - attendees = @ouishare_fest_attendees["attendees"].last(@ouishare_fest_attendees["attendees"].count - ENV["EVENTBRITE_ATTENDEES_DISPLAY_NUMBER"].to_i)
                 - attendees.each do |attendee|
                         
-                  .col-xs-12.col-sm-4.col-md-2.col-lg-2.attendee-container
+                  .col-xs-12.col-sm-4.col-md-3.col-lg-2.attendee-container
                     %li.attendee-items
                       / =image_tag display_gravatar(attendee["attendee"]["email"]), :class => 'img-circle'
                       .row{:style => "color:white;"}                     
