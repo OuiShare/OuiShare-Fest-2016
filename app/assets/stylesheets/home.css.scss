@@ -52,9 +52,20 @@
     margin-top: 20px;
     margin-bottom: 30px;
   }
+  .attendee-container{
+    border-bottom: 1px solid #f9f9f9;
+    background: rgba(0, 0, 0, 0.15);
+  }
+  .attendee-container:hover{
+    background: rgba(0, 0, 0, 0.5);
+  }
   .attendee-items{
     margin-bottom: 10px;
+    margin-left: 15px;
+    text-align: left;
     height: 40px;
+    color: #fff;
+    padding-top: 10px;
   }
 
 }
