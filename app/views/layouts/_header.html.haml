@@ -34,9 +34,26 @@
             %li
               %a{href: "about#_about_testimonials"}
                 = t('dynamic_translations.testimonials.title')
-        %li
-          %a{href: "/#_speakers"}
-            =t('dynamic_translations.speakers.title')
+        %li.dropdown
+          %a.dropdown-toggle{"data-toggle" => "dropdown", href: "/participants"}
+            =t('dynamic_translations.participants.title')
+            %b.caret
+          %ul.dropdown-menu
+            %li
+              %a{href: "participants#_speakers"}
+                = t('dynamic_translations.speakers.title')
+            %li
+              %a{href: "participants#_team"}
+                = t('dynamic_translations.team.title')
+            %li
+              %a{href: "participants#_whoscomming"}
+                = t('dynamic_translations.tickets.who_s_coming')
+            %li
+              %a{href: "participants#_partners"}
+                = t('dynamic_translations.partners.title')
+        / %li
+        /   %a{href: "/#_speakers"}
+        /     =t('dynamic_translations.speakers.title')
         %li
           %a{href: "/#_getinvolved"}
             =t('dynamic_translations.get_involved.title')
