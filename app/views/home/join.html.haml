@@ -1,7 +1,6 @@
-#tickets.triangle_bg#_tickets 
+.triangle_bg#_tickets 
   .container.tickets-section 
     .row.centered
-      %br
       %h3.naiv_thin
         = t('dynamic_translations.tickets.title')
       %br      
@@ -30,7 +29,7 @@
             =t('dynamic_translations.tickets.powered_by')
           %a{:href => "http://www.eventbrite.com?ref=etckt", :style => "color:#ddd; text-decoration:none;", :target => "_blank"} Eventbrite
 
-#involved.grey_bg#_getinvolved{:style => 'padding-top:130px'}
+.grey_bg#_getinvolved{:style => 'padding-top:130px'}
   .get-involved-section
     .container.sinfo
       .row.centered
@@ -73,3 +72,20 @@
                 %li.button
                   %a.btn.btn-large.button-call-to-action-option{href: "http://awards.ouisharefest.com", :target => "_blank"}
                     = t('dynamic_translations.get_involved.idea_wall_button')
+
+#_awards.blue_bg
+  .container
+    .row.center
+      %h3.naiv_thin
+        = t('dynamic_translations.ouishare_awards.title')
+      %br      
+      %br
+      .container.round_fond
+        %h4{:style => "font-size:18px;"}
+          = t('dynamic_translations.ouishare_awards.description')
+          %br
+          %br
+          %a{:href => "http://ouishare.net/en/projects/ouishare-awards"}
+            = t('dynamic_translations.ouishare_awards.link')
+
+

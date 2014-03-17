@@ -1,4 +1,4 @@
-#speakers.blue_bg#_speakers 
+.blue_bg#_speakers 
   .container
     .row.centered
       %h3.naiv_thin_white
@@ -26,7 +26,7 @@
           /       %button.btn.btn-embossed.btn-primary.hide#btn_showspeakers_up
           /         = t('dynamic_translations.speakers.hide_all')
 
-#team.blank_bg#_team
+.blank_bg#_team
   .container
     .row.centered
       %h3.naiv_thin
@@ -59,7 +59,7 @@
         %p
           =t('dynamic_translations.team.description') 
 
-#tickets.triangle_bg#_whoscomming 
+.triangle_bg#_whoscomming 
   .container.tickets-section 
     .row.centered
       - if @ouishare_fest_attendees && !@ouishare_fest_attendees["attendees"].blank?
