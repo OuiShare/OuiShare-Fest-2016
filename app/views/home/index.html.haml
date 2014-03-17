@@ -79,49 +79,6 @@
               /   %button.btn.btn-embossed.btn-primary.hide#btn_showspeakers_up
               /     = t('dynamic_translations.speakers.hide_all')
 
-#involved.grey_bg#_getinvolved{:style => 'padding-top:130px'}
-  .get-involved-section
-    .container.sinfo
-      .row.centered
-        %h3.naiv_thin
-          = t('dynamic_translations.get_involved.title')
-        %hr
-      .container
-      %br  
-      %p.text-center
-        = t('dynamic_translations.get_involved.description')
-      %br
-        
-      .row.get-involved-options-choice
-        .col-md-9.span-centered
-          .row
-            .col-md-4.pricing-table.turquoise.bordered.plain
-              %ul.centered.alt
-                %li.title
-                  = t('dynamic_translations.get_involved.call_for_proposal')
-                %li{:style => "min-height:140px;"}
-                  = t('dynamic_translations.get_involved.option_1')
-                %li.button
-                  %a.btn.btn-large.button-call-to-action-option{href: "https://docs.google.com/forms/d/1xwFAL9C5AHZgBAeC6tGD6_eX0Ca1u00ZawZEueHczII/viewform", :target => "_blank"} 
-                    =t('dynamic_translations.get_involved.submit')
-            .col-md-4.pricing-table.turquoise.bordered.plain
-              %ul.centered.alt
-                %li.title
-                  =t('dynamic_translations.get_involved.join_the_team') 
-                %li{:style => "min-height:140px;"}
-                  = t('dynamic_translations.get_involved.option_2')
-                %li.button
-                  %a.btn.btn-large.button-call-to-action-option{href: "https://docs.google.com/forms/d/15QpVEkvXR9-DpAKLYoUSPOXrfnYRG9aCPnMoK3WUrJo/viewform", :target => "_blank"}
-                    = t('dynamic_translations.get_involved.join')
-            .col-md-4.pricing-table.turquoise.bordered.plain
-              %ul.centered.alt
-                %li.title
-                  =t('dynamic_translations.get_involved.idea_wall') 
-                %li{:style => "min-height:140px;"}
-                  = t('dynamic_translations.get_involved.option_3')
-                %li.button
-                  %a.btn.btn-large.button-call-to-action-option{href: "http://awards.ouisharefest.com", :target => "_blank"}
-                    = t('dynamic_translations.get_involved.idea_wall_button')
       
 #tickets.triangle_bg#_tickets 
   .container.tickets-section 
@@ -154,47 +111,6 @@
           %span{:style => "color:#ddd;"} 
             =t('dynamic_translations.tickets.powered_by')
           %a{:href => "http://www.eventbrite.com?ref=etckt", :style => "color:#ddd; text-decoration:none;", :target => "_blank"} Eventbrite
-
-      
-      - if @ouishare_fest_attendees && !@ouishare_fest_attendees["attendees"].blank?
-        %h4.who-s-coming-title
-          = t('dynamic_translations.tickets.who_s_coming') 
-        %ul.unstyled.attendees-list
-          - attendees = @ouishare_fest_attendees["attendees"].first(ENV["EVENTBRITE_ATTENDEES_DISPLAY_NUMBER"].to_i)
-          - attendees.each do |attendee|
-            .col-xs-4.col-sm-2.col-md-2.col-lg-2
-              %li.attendee-items
-                / =image_tag display_gravatar(attendee["attendee"]["email"]), :class => 'img-circle'
-                .row{:style => "color:white;"}                  
-                  = attendee["attendee"]["first_name"]
-                  = attendee["attendee"]["last_name"][0]+'.'
-                .row
-                  = attendee["attendee"]["company"]
-              
-          - if @ouishare_fest_attendees["attendees"].count > ENV["EVENTBRITE_ATTENDEES_DISPLAY_NUMBER"].to_i  
-            %div
-              #allattendees{style: "display: none;"} 
-                - attendees = @ouishare_fest_attendees["attendees"].last(@ouishare_fest_attendees["attendees"].count - ENV["EVENTBRITE_ATTENDEES_DISPLAY_NUMBER"].to_i)
-                - attendees.each do |attendee|
-                        
-                  .col-xs-4.col-sm-2.col-md-2.col-lg-2
-                    %li.attendee-items
-                      / =image_tag display_gravatar(attendee["attendee"]["email"]), :class => 'img-circle'
-                      .row{:style => "color:white;"}                     
-                        = attendee["attendee"]["first_name"]
-                        = attendee["attendee"]["last_name"][0]+'.'
-                      .row
-                        = attendee["attendee"]["company"]
-                    
-              %br   
-              %div.row
-                %a.individuals-list-btn#btn_attendees_down
-                  %button.btn.btn-embossed.btn-primary 
-                    = t('dynamic_translations.tickets.show_all_attendees')
-              %div.row 
-                %a.individuals-list-btn#btn_attendees_up        
-                  %button.btn.btn-embossed.btn-primary
-                    = t('dynamic_translations.tickets.hide_all_attendees')
      
 .partners-container#_partners{:style => 'padding-top:130px'}
   .container.sinfo
@@ -233,39 +149,6 @@
       %br
       %a{:href => "mailto:partners@ouisharefest.com"} partners@ouisharefest.com
 
-
-#team.blank_bg#_team
-  .container
-    .row.centered
-      %h3.naiv_thin
-        =t('dynamic_translations.team.title')     
-      %hr/   
-      - if !@team_members.blank?
-        .ch-grid
-          - @team_members.each do |team_member|
-            .col-lg-3.individuals-list-display
-              %li
-                = render "/individuals/partials/team_member_display", :team_member => team_member          
-          / - if !@hidden_team_members.blank?
-          /   %div
-          /     #allteam_members{style: "display: none;"}  
-          /       - @hidden_team_members.each do |team_member|
-          /         .col-lg-3.individuals-list-display
-          /           %li
-          /             = render "/individuals/partials/team_member_display", :team_member => team_member           
-          /     %div.row
-          /       %a#btn_team_members_down
-          /         %button.btn.btn-embossed.btn-primary 
-          /           = t('dynamic_translations.team.show_all')
-          /     %div.row  
-          /       %a.hide#btn_team_members_up            
-          /         %button.btn.btn-embossed.btn-primary
-          /           = t('dynamic_translations.team.hide_all')
-      %br
-      %br
-      .container
-        %p
-          =t('dynamic_translations.team.description') 
 
 - if !@visited
   = render "modals/visit_modal"
