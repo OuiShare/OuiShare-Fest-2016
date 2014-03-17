@@ -368,7 +368,7 @@ body {
 
 /***** Team Wrap *****/
 #faqwrap {
-	background: url(/assets/faq-bg.jpg) no-repeat center top;
+	background: url(/assets/faq-bg.jpg) repeat center top;
 	margin-top: 0px;
 	padding-top:100px;
 	text-align:center;
@@ -382,10 +382,10 @@ body {
     -o-background-size: 100%;
     background-size: 100%;
 
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    -o-background-size: contain;
+    background-size: contain;
 }
 
 #faqwrap h1 {
@@ -402,7 +402,7 @@ body {
 }
 
 .triangle_bg {
-	background: url(/assets/fond_vert.png) repeat right top;
+	background: url(/assets/fond_vert.png) repeat center top;
 	background-color: #33FF99;
 	margin-top: 0px;
 	padding-top: 130px;
@@ -410,10 +410,10 @@ body {
 	background-attachment: relative;
 	background-position: center center;
 	min-height: 100%;
-	/*-webkit-background-size: 200px 140px;
-	-moz-background-size: 200px 140px;
-	-o-background-size: 200px 140px;
-	background-size: 200px 140px;*/
+	-webkit-background-size: contain;
+	-moz-background-size: contain;
+	-o-background-size: contain;
+	background-size: contain;
 }
 #tickets h3,h4{
 	color: #F7F7F7;
@@ -460,7 +460,7 @@ body {
 }
 
 .blue_bg {
-	background: url(/assets/background_main_section.png) no-repeat center top;
+	background: url(/assets/fond_bleu.png) no-repeat center top;
 
 	/*background-color: #33FF99; */
 	margin-top: 0px;
