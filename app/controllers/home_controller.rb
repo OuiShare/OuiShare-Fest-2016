@@ -67,13 +67,40 @@ class HomeController < ApplicationController
   end
 
   def participants
-     if IndividualType.find_by_title('Speakers')
+
+    if IndividualType.find_by_title('Team')
+      @team_members = IndividualType.find_by_title('Team').get_members
+      if ENV["DISPLAYED_TEAM_MEMBERS"].to_i > @team_members.count
+        displayed_team_members_number = @team_members.count
+      else
+        displayed_team_members_number = ENV["DISPLAYED_TEAM_MEMBERS"].to_i
+      end
+    end
+
+    if IndividualType.find_by_title('Speakers')
       @speakers = IndividualType.find_by_title('Speakers').get_members
       if ENV["DISPLAYED_SPEAKERS"].to_i > @speakers.count
         displayed_speakers_number = @speakers.count
       else
         displayed_speakers_number = ENV["DISPLAYED_SPEAKERS"].to_i
       end
+    end
+
+    eventbrite_instance = connect_to_eventbrite()
+    begin
+      @ouishare_fest_attendees = eventbrite_instance.event_list_attendees({ "id" => ENV["EVENTBRITE_EVENT_ID"] })
+    rescue
+      @ouishare_fest_attendees = nil
+    end
+
+    if IndividualType.find_by_title('Partners')      
+      @partners = IndividualType.find_by_title('Partners').get_members
+    end
+    if IndividualType.find_by_title('Friends')      
+      @friends = IndividualType.find_by_title('Friends').get_members
+    end
+    if IndividualType.find_by_title('Media Partners')      
+      @media_partners = IndividualType.find_by_title('Media Partners').get_members
     end
     
   end
