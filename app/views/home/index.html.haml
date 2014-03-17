@@ -72,16 +72,12 @@
       %br      
       %br
       .container.round_fond
-        %h4{:style => "font-size:18px;"}
-          = t('dynamic_translations.tickets.description')
-          %a{href: "http://bit.ly/OSF14SponsoredTicketForm"} 
-            = t('dynamic_translations.tickets.apply_tickets_link')
         
-          = t('dynamic_translations.tickets.sponsored_tickets')
-          %a{:href => "http://bit.ly/OSF14StudentForm"}
-            = t('dynamic_translations.tickets.sponsored_tickets_link')
         %h4{:style => "font-size:18px;"}
-          =t('dynamic_translations.tickets.sponsored_tickets_text2')
+          =t('dynamic_translations.tickets.short_description')
+        %h4{:style => "font-size:18px;"}
+          %a{href: "join#_tickets"} 
+            = t('dynamic_translations.tickets.find_out_more')
       %br
       %div{:style => "width:100%; text-align:left;"}
         %iframe{:allowtransparency => "true", :frameborder => "0", :height => "800", :hspace => "0", :marginheight => "5", :marginwidth => "5", :scrolling => "auto", :src => "http://www.eventbrite.com/tickets-external?eid=10108670305&ref=etckt&v=2", :vspace => "0", :width => "100%"}
