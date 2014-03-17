@@ -92,13 +92,15 @@
         /   %a{href: "/#_team"}
         /     =t('dynamic_translations.team.title')
         %li
-          %a{href: "http://blog.ouisharefest.com", target: "_blank"}
-            =t('dynamic_translations.blog.title')
-        
-        %li
           .tickets-highlight
             %a{href: "/#_tickets", :class => 'highlight'}
               =t('dynamic_translations.tickets.title')
+              
+        %li
+          %a{href: "http://blog.ouisharefest.com", target: "_blank"}
+            =t('dynamic_translations.blog.title')
+        
+        
         %li
           .text-center.social-media-icons-header
             %a{href: "https://www.facebook.com/OuiShare", target: "_blank"}
