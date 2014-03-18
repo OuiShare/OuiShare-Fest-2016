@@ -588,7 +588,7 @@ h2,
 h3 {
   margin-top: 2px;
   margin-bottom: 4px;
-  text-shadow: 1px 1px #F7F7F7, -1px -1px #000000;
+  /*text-shadow: 1px 1px #F7F7F7, -1px -1px #000000;*/
 }
 h4,
 h5,

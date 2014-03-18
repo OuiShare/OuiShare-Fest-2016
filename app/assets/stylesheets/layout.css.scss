@@ -1,3 +1,58 @@
+#myCarousel{
+  margin-top: 25px;
+}
+.ouishare_stencil{
+  text-transform: uppercase;
+  font-family: 'ouisharestencilbold';
+}
+
+.press-content{
+  height:200px;
+  background-color: #fff;
+  display: table;
+  width: 85%;
+  margin: auto;
+}
+
+.quote-left-carousel{
+  position: absolute;
+  left: 30px;
+  top: -30px;
+}
+
+.overflow-visible{
+  overflow: visible;
+}
+
+.quote-right-carousel{
+  position: absolute;
+  right: 30px;
+  bottom: 0px;
+
+}
+
+.press-text{
+  h3{
+    font-size:25px;
+  }
+  
+  height: auto;
+  width: 80%;
+  vertical-align: middle;
+  display: table-row;
+}
+
+.label-press{
+  a{
+    color: #0b0b6d;
+    font-family:'naiv_normal';
+  }
+  color: #0b0b6d;
+  font-family:'naiv_normal';
+  text-align: left;
+  margin-top: 15px;
+  margin-left: 7.5%;
+}
 
 /* Header showing dropdown on hover */
 .navbar .nav li.dropdown:hover .dropdown-menu {
@@ -7,10 +62,14 @@
   visibility: visible;
 }
 
+h3{
+  color: #0b0b6d;
+}
+
 .nav.navbar-nav{
 
   .tickets-highlight{
-    padding: 17px 5px 0px 5px;
+    padding: 17px 20px 0px 5px;
   }
 
   .highlight{

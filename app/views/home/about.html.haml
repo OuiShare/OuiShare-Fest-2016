@@ -43,7 +43,7 @@
   
   #about.grey_bg
     .container{:style => "width:60% !important;"}
-      %h3.naiv_thin.text-center#_about{:style => "font-size:25px;text-transform:none;"}
+      %h3.ouishare_stencil.text-center#_about{:style => "font-size:25px;"}
         = t('dynamic_translations.about.subtitle')
       %p 
         = t('dynamic_translations.about.description')
@@ -61,7 +61,7 @@
   #highlights.blue_bg#_about_highlights
     .container
       .row.centered
-        %h3.naiv_thin_white
+        %h3.ouishare_stencil.white
           = t('dynamic_translations.highlight.title')
           / Highlights from 2013
       .row.centered
@@ -92,7 +92,7 @@
   #location.triangle_bg#_about_location
     .container
       .row.centered
-        %h3.naiv_thin
+        %h3.ouishare_stencil
           = t('dynamic_translations.location.title')
           / A Magical Location
           %br
@@ -118,96 +118,201 @@
         %br
         %br
 
-  #press.grey_bg#_about_press
+  .grey_bg
     .container
       .row.centered
-        %h3.naiv_thin
+        %h3.ouishare_stencil
           = t('dynamic_translations.press.title')
-          / What The Press Said
-        .container.sinfo
-          .row
-            .col-lg-5.col-lg-offset-1
-              .testi-container
-                .testi-text
-                  %p.testimonial
-                    / = "“" + = t('dynamic_translations.press.quote_ft') + "”"
-                    “The sense of optimism amongst the crowd was intoxicating”
-              %p
-                %img{alt: "", src: "assets/logo/ft.png", width: "80"}/
-                \-
-                %small
-                  = link_to "Izabella Kaminska, Financial Times", "http://ftalphaville.ft.com/2013/05/13/1490712/a-new-type-of-growth-is-emerging/", :target => '_blank'
 
-            .col-lg-5
-              .testi-container
-                .testi-text
-                  %p.testimonial
-                    / = "“" + = t('dynamic_translations.press.quote_shareable') + "”"
-                    “In its best moments, OuiShare Fest had me believing that sharing is the answer to every problem we face, from sustainability to loneliness to economic opportunities”
-              %p
-                %img{alt: "",  src: "assets/logo/shareable.png", width: "80"}/
-                \-
-                %small 
-                  = link_to "Ariane Conrad, Shareable.net", "http://www.shareable.net/blog/a-fittingly-nonlinear-and-whimsical-report-back-on-ouishare-fest", :target => '_blank'
+      #myCarousel.carousel.slide.col-xs-12.col-md-offset-1.col-lg-offset-2.col-md-10.col-lg-8{ 'data-ride' => "carousel"}
 
-          .row
-            .col-lg-5.col-lg-offset-1
-              .testi-container
-                .testi-text
-                  %p.testimonial
-                    / = "“" + = t('dynamic_translations.press.quote_lci') + "”"
-                    “Grâce au web 2.0, toute une nouvelle manière de consommer, d’échanger et de produire est en train de voir le jour”
-              %p
-                %img{alt: "",src: "assets/logo/lci.png", width: "80"}/
-                \-
-                %small 
-                  = link_to "LCI - L’économie collaborative en fête","http://www.wat.tv/video/economie-collaborative-en-6950h_2exyh_.html", :target => '_blank'
+        /Wrapper for slides
+        .carousel-inner.overflow-visible
+          .item.active
+            .press-content
+              %img.quote-left-carousel{:src => '/assets/quote_left.png', :alt => 'quote left'}
+              %img.quote-right-carousel{:src => '/assets/quote_left.png', :alt => 'quote right'}
+              .press-text
+                %h3.naiv
+                  “The sense of optimism amongst the crowd was intoxicating”
+            .label-press
+              = link_to "Izabella Kaminska, Financial Times", "http://ftalphaville.ft.com/2013/05/13/1490712/a-new-type-of-growth-is-emerging/", :target => '_blank'
+          .item
+            .press-content
+              %img.quote-left-carousel{:src => '/assets/quote_left.png', :alt => 'quote left'}
+              %img.quote-right-carousel{:src => '/assets/quote_left.png', :alt => 'quote right'}
+              .press-text
+                %h3.naiv
+                  “Grâce au web 2.0, toute une nouvelle manière de consommer, d’échanger et de produire est en train de voir le jour”
+            .label-press
+              = link_to "LCI - L’économie collaborative en fête","http://www.wat.tv/video/economie-collaborative-en-6950h_2exyh_.html", :target => '_blank'
+          .item
+            .press-content
+              %img.quote-left-carousel{:src => '/assets/quote_left.png', :alt => 'quote left'}
+              %img.quote-right-carousel{:src => '/assets/quote_left.png', :alt => 'quote right'}
+              .press-text
+                %h3.naiv
+                  “In its best moments, OuiShare Fest had me believing that sharing is the answer to every problem we face, from sustainability to loneliness to economic opportunities”
+            .label-press
+              = link_to "Ariane Conrad, Shareable.net", "http://www.shareable.net/blog/a-fittingly-nonlinear-and-whimsical-report-back-on-ouishare-fest", :target => '_blank'
+          .item
+            .press-content
+              %img.quote-left-carousel{:src => '/assets/quote_left.png', :alt => 'quote left'}
+              %img.quote-right-carousel{:src => '/assets/quote_left.png', :alt => 'quote right'}
+              .press-text
+                %h3.naiv
+                  “No tomaron la Bastilla, pero conquistaron el Cabaret Sauvage, que quedaba por allí cerca. El Ouishare Fest ha convertido el parque de La Villette en inmejorable y delirante muestrario de la economía colaborativa”
+            .label-press
+              = link_to "LCI - L’économie collaborative en fête","http://www.wat.tv/video/economie-collaborative-en-6950h_2exyh_.html", :target => '_blank'
 
-            .col-lg-5
-              .testi-container
-                .testi-text
-                  %p.testimonial
-                    / = "“" + = t('dynamic_translations.press.quote_elmundo') + "”"
-                    “No tomaron la Bastilla, pero conquistaron el Cabaret Sauvage, que quedaba por allí cerca. El Ouishare Fest ha convertido el parque de La Villette en inmejorable y delirante muestrario de la economía colaborativa”
-              %p
-                %img{alt: "", src: "assets/logo/elmundo.png", width: "80"}/
-                \-
-                %small 
-                  = link_to "Carlos Fresneda, El Mundo", "http://www.elmundo.es/elmundo/2013/05/05/economia/1367754203.html", :target => '_blank'
+        / Controls
+        %a.left.carousel-control{:href => "#myCarousel", 'data-slide' => "prev"}
+          &lsaquo;
+
+        %a.right.carousel-control{:href => "#myCarousel", 'data-slide' => "next" }
+          &rsaquo;
+
+
+  / #press.grey_bg#_about_press
+  /   .container
+  /     .row.centered
+  /       %h3.ouishare_stencil
+  /         = t('dynamic_translations.press.title')
+  /         / What The Press Said
+  /       .container.sinfo
+  /         .row
+  /           .col-lg-5.col-lg-offset-1
+  /             .testi-container
+  /               .testi-text
+  /                 %p.testimonial
+  /                   / = "“" + = t('dynamic_translations.press.quote_ft') + "”"
+  /                   “The sense of optimism amongst the crowd was intoxicating”
+  /             %p
+  /               %img{alt: "", src: "assets/logo/ft.png", width: "80"}/
+  /               \-
+  /               %small
+  /                 = link_to "Izabella Kaminska, Financial Times", "http://ftalphaville.ft.com/2013/05/13/1490712/a-new-type-of-growth-is-emerging/", :target => '_blank'
+
+  /           .col-lg-5
+  /             .testi-container
+  /               .testi-text
+  /                 %p.testimonial
+  /                   / = "“" + = t('dynamic_translations.press.quote_shareable') + "”"
+  /                   “In its best moments, OuiShare Fest had me believing that sharing is the answer to every problem we face, from sustainability to loneliness to economic opportunities”
+  /             %p
+  /               %img{alt: "",  src: "assets/logo/shareable.png", width: "80"}/
+  /               \-
+  /               %small 
+  /                 = link_to "Ariane Conrad, Shareable.net", "http://www.shareable.net/blog/a-fittingly-nonlinear-and-whimsical-report-back-on-ouishare-fest", :target => '_blank'
+
+  /         .row
+  /           .col-lg-5.col-lg-offset-1
+  /             .testi-container
+  /               .testi-text
+  /                 %p.testimonial
+  /                   / = "“" + = t('dynamic_translations.press.quote_lci') + "”"
+  /                   “Grâce au web 2.0, toute une nouvelle manière de consommer, d’échanger et de produire est en train de voir le jour”
+  /             %p
+  /               %img{alt: "",src: "assets/logo/lci.png", width: "80"}/
+  /               \-
+  /               %small 
+  /                 = link_to "LCI - L’économie collaborative en fête","http://www.wat.tv/video/economie-collaborative-en-6950h_2exyh_.html", :target => '_blank'
+
+  /           .col-lg-5
+  /             .testi-container
+  /               .testi-text
+  /                 %p.testimonial
+  /                   / = "“" + = t('dynamic_translations.press.quote_elmundo') + "”"
+  /                   “No tomaron la Bastilla, pero conquistaron el Cabaret Sauvage, que quedaba por allí cerca. El Ouishare Fest ha convertido el parque de La Villette en inmejorable y delirante muestrario de la economía colaborativa”
+  /             %p
+  /               %img{alt: "", src: "assets/logo/elmundo.png", width: "80"}/
+  /               \-
+  /               %small 
+  /                 = link_to "Carlos Fresneda, El Mundo", "http://www.elmundo.es/elmundo/2013/05/05/economia/1367754203.html", :target => '_blank'
 
   #testimonial.blank_bg#_about_testimonials
     .container
       .row.centered
-        %h3.naiv_thin
+        %h3.ouishare_stencil
           = t('dynamic_translations.testimonials.title')
+      %br
+      %br
+      #testimonialCarousel.carousel.slide.col-xs-12.col-md-offset-1.col-lg-offset-2.col-md-10.col-lg-8{ 'data-ride' => "carousel"}
+
+        /Wrapper for slides
+        .carousel-inner.overflow-visible
+          .item.active
+            .press-content
+              %img.quote-left-carousel{:src => '/assets/quote_left.png', :alt => 'quote left'}
+              %img.quote-right-carousel{:src => '/assets/quote_left.png', :alt => 'quote right'}
+              .press-text
+                %h3.naiv
+                  = "“" + t('dynamic_translations.testimonials.hansschoenburg') + "”"
+            .label-press
+              Hans Schoenburg | web developer | Yerdle
+          .item
+            .press-content
+              %img.quote-left-carousel{:src => '/assets/quote_left.png', :alt => 'quote left'}
+              %img.quote-right-carousel{:src => '/assets/quote_left.png', :alt => 'quote right'}
+              .press-text
+                %h3.naiv
+                  = "“" + t('dynamic_translations.testimonials.albertobandolini') + "”"
+            .label-press
+              Alberto Bandolini | software entrepreneur
+          .item
+            .press-content
+              %img.quote-left-carousel{:src => '/assets/quote_left.png', :alt => 'quote left'}
+              %img.quote-right-carousel{:src => '/assets/quote_left.png', :alt => 'quote right'}
+              .press-text
+                %h3.naiv
+                  = "“" + t('dynamic_translations.testimonials.michelbauwens') + "”"
+            .label-press
+              Michel Bauwens | founder | Peer-to-Peer Foundation
+          
+
+        / Controls
+        %a.left.carousel-control{:href => "#testimonialCarousel", 'data-slide' => "prev"}
+          &lsaquo;
+
+        %a.right.carousel-control{:href => "#testimonialCarousel", 'data-slide' => "next" }
+          &rsaquo;
+
+
+
+
+
+
+
+
+
+
           / Testimonials
-          %br
-          %br
-      .row
-        %p
-          = "“" + t('dynamic_translations.testimonials.hansschoenburg') + "”"
-          / “OuiShare Fest 2013 was a great opportunity to connect in real life with people from so many different countries and backgrounds involved in the collaborative economy”
-      .row.text-right
-        %h6
-          %small
-            Hans Schoenburg | web developer | Yerdle          
-          %br
-          %br
-      .row
-        %p
-          = "“" + t('dynamic_translations.testimonials.albertobandolini') + "”"
-          / “Coming to OuiShare Fest gave me many good ideas on of how to interact with my customers”
-      .row.text-right
-        %h6
-          %small
-            Alberto Bandolini | software entrepreneur
-            %br
-            %br
-      .row
-        %p
-          = "“" + t('dynamic_translations.testimonials.michelbauwens') + "”"
-          / “If you want to meet the pioneers making this peer-to-peer revolution happen, you can't miss OuiShare Fest, the gathering of social hackers that are profoundly changing the way we create and share value”
-      .row.text-right
-        %h6
-          %small
-            Michel Bauwens | founder | Peer-to-Peer Foundation
+          
+      / .row
+      /   %p
+      /     = "“" + t('dynamic_translations.testimonials.hansschoenburg') + "”"
+      /     / “OuiShare Fest 2013 was a great opportunity to connect in real life with people from so many different countries and backgrounds involved in the collaborative economy”
+      / .row.text-right
+      /   %h6
+      /     %small
+      /       Hans Schoenburg | web developer | Yerdle          
+      /     %br
+      /     %br
+      / .row
+      /   %p
+      /     = "“" + t('dynamic_translations.testimonials.albertobandolini') + "”"
+      /     / “Coming to OuiShare Fest gave me many good ideas on of how to interact with my customers”
+      / .row.text-right
+      /   %h6
+      /     %small
+      /       Alberto Bandolini | software entrepreneur
+      /       %br
+      /       %br
+      / .row
+      /   %p
+      /     = "“" + t('dynamic_translations.testimonials.michelbauwens') + "”"
+      /     / “If you want to meet the pioneers making this peer-to-peer revolution happen, you can't miss OuiShare Fest, the gathering of social hackers that are profoundly changing the way we create and share value”
+      / .row.text-right
+      /   %h6
+      /     %small
+      /       Michel Bauwens | founder | Peer-to-Peer Foundation
