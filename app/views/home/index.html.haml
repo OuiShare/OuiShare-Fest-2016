@@ -33,7 +33,7 @@
 #speakers.blue_bg#_speakers 
   .container
     .row.centered
-      %h3.naiv_thin_white
+      %h3.ouishare_stencil.white
         = t('dynamic_translations.speakers.title')
       %hr
       -if !@displayed_speakers.blank?
@@ -66,7 +66,7 @@
 #tickets.triangle_bg#_tickets 
   .container.tickets-section 
     .row.centered
-      %h3.naiv_thin
+      %h3.ouishare_stencil
         = t('dynamic_translations.tickets.title')
       %br      
       %br
@@ -94,7 +94,7 @@
   .container.sinfo
     - if !@partners.blank?
       .row.centered
-        %h3.naiv_thin
+        %h3.ouishare_stencil
           = t('dynamic_translations.partners.title')
         %hr
       = render "/individuals/partials/partners_display", :partners => @partners, :important_partners_display => true, :important_partners_count => 7
@@ -103,7 +103,7 @@
 
     - if !@media_partners.blank?
       .row.centered
-        %h3.naiv_thin
+        %h3.ouishare_stencil
           = t('dynamic_translations.partners.media_partner_title')
 
         %hr
@@ -114,7 +114,7 @@
 
     - if !@friends.blank?
       .row.centered
-        %h3.naiv_thin
+        %h3.ouishare_stencil
           = t('dynamic_translations.partners.friends_title')
 
         %hr
