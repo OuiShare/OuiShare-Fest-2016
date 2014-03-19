@@ -63,7 +63,7 @@
   .container.tickets-section 
     .row.centered
       - if @ouishare_fest_attendees && !@ouishare_fest_attendees["attendees"].blank?
-        %h4.who-s-coming-title
+        %h3.ouishare_stencil
           = t('dynamic_translations.tickets.who_s_coming') 
         %ul.unstyled.attendees-list
           - attendees = @ouishare_fest_attendees["attendees"].first(ENV["EVENTBRITE_ATTENDEES_DISPLAY_NUMBER"].to_i)
