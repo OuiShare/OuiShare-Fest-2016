@@ -106,6 +106,7 @@ $(document).ready ->
 
   
   #Slideshow
+  
   $(".banner").revolution
     delay: 4000
     startwidth: 1040
