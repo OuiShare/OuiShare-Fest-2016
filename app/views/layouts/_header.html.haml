@@ -92,13 +92,12 @@
         /   %a{href: "/#_team"}
         /     =t('dynamic_translations.team.title')
         
-        %li
-          %a{href: "http://blog.ouisharefest.com", target: "_blank"}
+        %li.blog-highlight
+          %a.highlight{href: "http://blog.ouisharefest.com", target: "_blank"}
             =t('dynamic_translations.blog.title')
-        %li
-          .tickets-highlight
-            %a{href: "http://www.eventbrite.co.uk/e/ouishare-fest-2014-tickets-10108670305", :target => '_blank', :class => 'highlight'}
-              =t('dynamic_translations.tickets.title')
+        %li.tickets-highlight
+          %a.highlight{href: "http://www.eventbrite.co.uk/e/ouishare-fest-2014-tickets-10108670305", :target => '_blank'}
+            =t('dynamic_translations.tickets.title')
         
         %li
           .text-center.social-media-icons-header

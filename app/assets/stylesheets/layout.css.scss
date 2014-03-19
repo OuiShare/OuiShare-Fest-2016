@@ -39,7 +39,7 @@
   height: auto;
   width: 80%;
   vertical-align: middle;
-  display: table-row;
+  display: table-cell;
 }
 
 .label-press{
@@ -62,20 +62,24 @@
   visibility: visible;
 }
 
+.navbar .navbar-brand{
+  padding: 12px 28px 11px 17px;
+}
+
 h3{
   color: #0b0b6d;
+}
+
+.navbar .nav > li > a{
+
+  padding: 12px 14px;
 }
 
 .nav.navbar-nav{
 
   .tickets-highlight{
-    padding: 17px 20px 0px 5px;
-  }
-
-  .highlight{
+    .highlight{
     color: white;
-    padding: 10px;
-    border-radius: 5px;
     background-color: #48c9b0;
     -o-transition: 800ms;
     -ms-transition: 800ms;
@@ -83,9 +87,28 @@ h3{
     -webkit-transition: 800ms;
     transition: 800ms;
   }
-  .highlight:hover{
-    background-color: #34495e;
+    .highlight:hover{
+      background-color: #34495e;
+    }
   }
+
+  .blog-highlight{
+    .highlight{
+    color: white;
+    background-color: #0b0b6d;
+    color: #fff;
+    -o-transition: 800ms;
+    -ms-transition: 800ms;
+    -moz-transition: 800ms;
+    -webkit-transition: 800ms;
+    transition: 800ms;
+  }
+    .highlight:hover{
+      background-color: #34495e;
+    }
+  }
+
+  
 
   .header-vertical-align{
     margin-top: 10px;
