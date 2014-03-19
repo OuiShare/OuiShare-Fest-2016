@@ -117,10 +117,17 @@ h3{
 }
 .navbar.navbar-default{
   .language-header{
-    width: 65px;
-    position: relative;
-    top: -2px;
-    right: -32px;
+    color: #0b0b6d;
+    font-weight: bold;
+    margin-left: 10px;
+    font-family: naiv_normal;
+    border: none;
+    width: 50px;
+    background: url("/assets/arrow_language.png") no-repeat right;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    margin-top: 15px;
+    outline: none;
   }
 }
 
