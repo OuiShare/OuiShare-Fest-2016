@@ -854,7 +854,7 @@ text-transform: none;
 }
 
 .round_fond {
-	background-color: rgba(0, 0, 0, 0.36);
+	/*background-color: rgba(0, 0, 0, 0.36);*/
 	border-radius: 15px;
 	padding: 10px;
 }
