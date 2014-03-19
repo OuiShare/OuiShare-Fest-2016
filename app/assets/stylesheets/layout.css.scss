@@ -77,34 +77,36 @@ h3{
 
 .nav.navbar-nav{
 
-  .tickets-highlight{
-    .highlight{
+  .highlight{
     color: white;
-    background-color: #48c9b0;
-    -o-transition: 800ms;
-    -ms-transition: 800ms;
-    -moz-transition: 800ms;
-    -webkit-transition: 800ms;
-    transition: 800ms;
-  }
-    .highlight:hover{
-      background-color: #34495e;
-    }
-  }
-
-  .blog-highlight{
-    .highlight{
-    color: white;
-    background-color: #0b0b6d;
     color: #fff;
     -o-transition: 800ms;
     -ms-transition: 800ms;
     -moz-transition: 800ms;
     -webkit-transition: 800ms;
     transition: 800ms;
+    font-family: arial;
+    font-weight: bold;
+  }
+
+  .tickets-highlight{
+    margin-right: 10px;
+    .highlight{
+      background-color: #48c9b0;
   }
     .highlight:hover{
       background-color: #34495e;
+      color: #fff;
+    }
+  }
+
+  .blog-highlight{
+    .highlight{
+    background-color: #0b0b6d;
+  }
+    .highlight:hover{
+      background-color: #34495e;
+      color: #fff;
     }
   }
 
