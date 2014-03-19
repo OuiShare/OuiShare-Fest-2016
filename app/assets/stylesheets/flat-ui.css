@@ -1142,7 +1142,7 @@ address {
   left: 100%;
 }
 .navbar .nav > li > a {
-  color: #526476;
+  color: #0b0b6d;
   display: inline-block;
   font-weight: 300;
   font-size: 15px;
@@ -1157,7 +1157,7 @@ address {
 }
 .navbar .nav > li > a:hover,
 .navbar .nav > li > a:focus {
-  color: #BDC3C7;
+  color: #1abc9c;
   background-color: transparent;
 }
 .navbar .nav > li > a[class*="fui-"] {
