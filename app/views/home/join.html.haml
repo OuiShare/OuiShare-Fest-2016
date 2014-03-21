@@ -84,19 +84,84 @@
         .row
           .col-xs-12.col-md-6.col-lg-6
             %p.justify
-              / = t('dynamic_translations.ouishare_awards.description')
-              After the first edition of the OuiShare Awards in 2013 with over 100 applicants, the OuiShare Awards are back this year with five new award categories and attractive prizes from the OuiShare community.
+              = t('dynamic_translations.ouishare_awards.first_part')
               %br
               %br
-              The 2014 OuiShare Awards put exceptional collaborative economy initiatives from across the globe in the spotlight and provide them with support to develop further. Since the awards will be given on the third day of OuiShare Fest, all nominees are invited to the festival to present their projects. 
+
+              = t('dynamic_translations.ouishare_awards.second_part')
               %br
               %br
           .col-xs-12.col-md-6.col-lg-6
             %img{:src => '/assets/awards.png', :alt => 'ouishare awards logo'}
         .row
-          %a{:href => 'http://awards.ouisharefest.com/', :target => 'blank'}
+          %a{:href => 'http://awards.ouisharefest.com/', :target => '_blank'}
             %button.btn.btn-embossed.btn-primary
-              / = t('dynamic_translations.ouishare_awards.link')
-              Learn more and apply!
+              = t('dynamic_translations.ouishare_awards.link')
+#_prepare.blank_bg
+  .container
+    .row.centered
+      %h3.ouishare_stencil
+        = t('dynamic_translations.prepare_your_trip.title')
+      %br      
+      %br
+      .container
+        .row
+          .col-xs-12.col-md-6.col-lg-6
+            %p
+              = t('dynamic_translations.travel_information.title')
+            %p.text-left.little.justify
+              = t('dynamic_translations.travel_information.first_part')
+              %a{:href => 'http://share.ouisharefest.com'}
+                = t('dynamic_translations.share_ouishare.link_title')
+                
+              = t('dynamic_translations.travel_information.second_part')
+              
+            .row
+              %a{:href => 'http://www.tumblr.com/blog/ouisharefest', :target => '_blank'}
+                %button.btn.btn-embossed.btn-primary
+                  
+                  = t('dynamic_translations.see_travel_options.link_title')
 
+
+            %br
+            %p
+              = t('dynamic_translations.accomodation.title')
+            %p.text-left.little.justify
+              = t('dynamic_translations.accomodation.first_part')
+              
+              %a{:href => 'https://www.couchsurfing.org/group.html?gid=56268'}
+                
+                = t('dynamic_translations.couchsurfing_ouishare.link_title')
+              = t('dynamic_translations.accomodation.second_part')
+               
+              %a{:href => 'https://www.airbnb.fr/'}
+                Airbnb
+              = t('dynamic_translations.accomodation.third_part')
+              
+            .row
+              %a{:href => 'http://www.tumblr.com/blog/ouisharefest', :target => '_blank'}
+                %button.btn.btn-embossed.btn-primary
+                  / = t('dynamic_translations.ouishare_awards.link')
+                  
+                  = t('dynamic_translations.see_accommodation_options.link_title')
+
+
+            %br
+            %p
+              = t('dynamic_translations.getting_to_venue.title')
+              
+            %p.text-left.little.justify
+              = t('dynamic_translations.getting_to_venue.first_part')
+              
+            .row
+              %a{:href => 'http://www.tumblr.com/blog/ouisharefest', :target => '_blank'}
+                %button.btn.btn-embossed.btn-primary
+                  = t('dynamic_translations.see_map_instructions.link_title')
+                  
+          .col-xs-12.col-md-6.col-lg-6
+            %img{:src => '/assets/OuiShare_Fest_Map_large.png', :alt => 'ouishare coming map'}
+
+
+
+          
 
