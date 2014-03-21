@@ -1100,7 +1100,7 @@ address {
 .navbar .nav > li {
   position: relative;
   display: inline-block;
-  font-family: Verdana;
+  /*font-family: Verdana;*/
 }
 .navbar .nav > li:hover > ul {
   opacity: 1;
