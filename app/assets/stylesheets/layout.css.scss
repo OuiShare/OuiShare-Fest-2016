@@ -67,6 +67,11 @@ p.little{
   margin-left: 7.5%;
 }
 
+.navbar .nav li.dropdown:hover{
+  background-color: #0b0b6d;
+}
+
+
 /* Header showing dropdown on hover */
 .navbar .nav li.dropdown:hover .dropdown-menu {
   background-color: #34495e;
