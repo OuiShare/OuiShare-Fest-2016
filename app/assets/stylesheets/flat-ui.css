@@ -74,7 +74,7 @@
 /* Font OuiShare Stencil */
 @font-face {
   font-family: "ouisharestencilbold";
-  src: url("/assets/ouishare-stencil-bold.otf.otf");
+  src: url("/assets/ouishare-stencil-bold.otf");
   font-weight: normal;
   font-style: normal;
 }
