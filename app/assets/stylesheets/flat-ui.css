@@ -71,6 +71,14 @@
   font-style: normal;
 }
 
+/* Font OuiShare Stencil */
+@font-face {
+  font-family: "ouisharestencilbold";
+  src: url("/assets/ouishare-stencil-bold.otf.otf");
+  font-weight: normal;
+  font-style: normal;
+}
+
 
 /* Use the following CSS code if you want to use data attributes for inserting your icons */
 [data-icon]:before {
