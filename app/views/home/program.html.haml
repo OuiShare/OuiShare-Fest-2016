@@ -1,26 +1,40 @@
 
-#_schedule.section
+#_schedule.triangle_bg
   .container
     .row.centered
       %h3.ouishare_stencil
-        = t('dynamic_translations.program.main_schedule')
+        = t('dynamic_translations.main_schedule.title')
       %br
       %br
       .container
         %p
-          The OuiShare Fest program is being co-created with our community based on over 150 submissions to our open call for proposals. You can see all confirmed sessions below, but the program will grow and evolve till the day the festival begins.
+          = t('dynamic_translations.main_schedule.first_part')
+          
           %br
           %br
           %br
-          To make this a truly collaborative experience, the festival will feature 3 days of interactive sessions in 4 areas, mixing traditional formats such as keynotes, panels and Q & As’ with participative formats such as unpanels, co-creation workshops, networking sessions, and many more you have never heard of.
-    %br
-    %br
+          = t('dynamic_translations.main_schedule.second_part')
+          
+
+.blank_bg
+  .container
     .row.centered
       %a#sched-embed{:href => "http://ouisharefest14.sched.org/"}
       %script{:type => "text/javascript", :src => "http://ouisharefest14.sched.org/js/embed.js"}
 
+.grey_bg#_events
+  .container
     .row.centered
       %h3.ouishare_stencil
-        = t('dynamic_translations.program.satellite_events')
+        = t('dynamic_translations.satellite_events.title')
+    .row.centered
+      %p
+        = t('dynamic_translations.satellite_events.text')
+    .row
+      %a{:href => 'http://awards.ouisharefest.com/', :target => '_blank'}
+        %button.btn.btn-embossed.btn-primary
+          = t('dynamic_translations.satellite_event.link_title')
+
+      
 
     
