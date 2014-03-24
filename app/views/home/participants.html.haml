@@ -59,6 +59,36 @@
         %p
           =t('dynamic_translations.team.description') 
 
+.partners-container#_partners{:style => 'padding-top:130px'}
+  .container.sinfo
+    - if !@partners.blank?
+      .row.centered
+        %h3.ouishare_stencil
+          = t('dynamic_translations.partners.title')
+        %hr
+      = render "/individuals/partials/partners_display", :partners => @partners, :important_partners_display => true, :important_partners_count => 7
+      %br
+      %br
+
+    - if !@media_partners.blank?
+      .row.centered
+        %h3.ouishare_stencil
+          = t('dynamic_translations.partners.media_partner_title')
+
+        %hr
+      = render "/individuals/partials/partners_display", :partners => @media_partners, :important_partners_display => false
+
+      %br
+      %br
+
+    - if !@friends.blank?
+      .row.centered
+        %h3.ouishare_stencil
+          = t('dynamic_translations.partners.friends_title')
+
+        %hr
+      = render "/individuals/partials/partners_display", :partners => @friends, :important_partners_display => false
+
 .triangle_bg#_whoscomming 
   .container.tickets-section 
     .row.centered
@@ -101,33 +131,3 @@
                 %a.individuals-list-btn#btn_attendees_up        
                   %button.btn.btn-embossed.btn-primary
                     = t('dynamic_translations.tickets.hide_all_attendees')
-
-.partners-container#_partners{:style => 'padding-top:130px'}
-  .container.sinfo
-    - if !@partners.blank?
-      .row.centered
-        %h3.ouishare_stencil
-          = t('dynamic_translations.partners.title')
-        %hr
-      = render "/individuals/partials/partners_display", :partners => @partners, :important_partners_display => true, :important_partners_count => 7
-      %br
-      %br
-
-    - if !@media_partners.blank?
-      .row.centered
-        %h3.ouishare_stencil
-          = t('dynamic_translations.partners.media_partner_title')
-
-        %hr
-      = render "/individuals/partials/partners_display", :partners => @media_partners, :important_partners_display => false
-
-      %br
-      %br
-
-    - if !@friends.blank?
-      .row.centered
-        %h3.ouishare_stencil
-          = t('dynamic_translations.partners.friends_title')
-
-        %hr
-      = render "/individuals/partials/partners_display", :partners => @friends, :important_partners_display => false
