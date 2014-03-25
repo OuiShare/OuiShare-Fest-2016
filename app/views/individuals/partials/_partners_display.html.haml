@@ -22,7 +22,9 @@
             %a{:href => partner.url, :target => "_blank"}
               %img.img-responsive.display-inline{:alt => partner.first_name, :src => partner.attachment.url(:medium)}
         - array_buffer.delete_at(0)
-
+    %hr
+    %br
+    %br
 
   - while !array_buffer.empty? do
     .row.centered

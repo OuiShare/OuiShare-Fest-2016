@@ -95,11 +95,11 @@ $(document).ready ->
   $("#btn_attendees_up").click ->
     $("#btn_attendees_up").hide()
     $("#allattendees").slideUp "slow"
+    $("#btn_attendees_down").show()
     $('html,body').animate({
     scrollTop: $(".who-s-coming-title").offset().top - 77
     },
-    'slow') 
-    $("#btn_attendees_down").show()
+    'slow')
 
   # Chargement du carousel
   $(".carousel").carousel()
