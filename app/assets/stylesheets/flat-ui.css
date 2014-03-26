@@ -79,6 +79,13 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: "ouisharestencilbold";
+  src: url("/assets/ouishare-stencil-bold.woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
 
 /* Use the following CSS code if you want to use data attributes for inserting your icons */
 [data-icon]:before {
