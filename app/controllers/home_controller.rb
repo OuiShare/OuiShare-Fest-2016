@@ -40,6 +40,9 @@ class HomeController < ApplicationController
     if IndividualType.find_by_title('Media Partners')      
       @media_partners = IndividualType.find_by_title('Media Partners').get_members
     end
+    if IndividualType.find_by_title('Supporters')      
+      @supporters = IndividualType.find_by_title('Supporters').get_members
+    end
 
     eventbrite_instance = connect_to_eventbrite()
     begin
