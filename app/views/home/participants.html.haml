@@ -81,6 +81,18 @@
       %br
       %br
 
+    - if !@supporters.blank?
+      .row.centered
+        %h3.ouishare_stencil
+          = t('dynamic_translations.partners.supporters_title')
+
+        %hr
+      = render "/individuals/partials/partners_display", :partners => @supporters, :important_partners_display => false
+
+      %br
+      %br
+
+
     - if !@friends.blank?
       .row.centered
         %h3.ouishare_stencil
