@@ -37,15 +37,13 @@
     %p 
       = t('dynamic_translations.about.description')
     %br
-    
-    %p
-      = t('dynamic_translations.what_is_community.text1')
+    .row
+      %a{:href => 'about#_about'}
+        %button.btn.btn-embossed.btn-primary
+          = t('dynamic_translations.see_map_instructions.link_title')
     %br
-    %p
-      = t('dynamic_translations.what_is_community.text2')
-    %br
-    %p
-      = t('dynamic_translations.what_is_community.text3')
+    .row
+      %iframe{:width => "640", :height => "390", :src => "//www.youtube.com/embed/e-5H02dpHXM", :frameborder => "0", :allowfullscreen => 'true'}
 
 #speakers.blue_bg#_speakers 
   .container
