@@ -135,18 +135,6 @@
         %hr
       = render "/individuals/partials/partners_display", :partners => @friends, :important_partners_display => false
 
-      %br
-      %br
-
-    - if !@supporters.blank?
-      .row.centered
-        %h3.ouishare_stencil
-          = t('dynamic_translations.partners.supporters_title')
-
-        %hr
-      = render "/individuals/partials/partners_display", :partners => @supporters, :important_partners_display => false
-
-
 .get-involved-section
   .centered.get-involved-punchline    
     %h6
