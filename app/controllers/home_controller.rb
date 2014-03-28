@@ -123,7 +123,7 @@ class HomeController < ApplicationController
   end
 
   def program
-    # @request_response = connect_to_sched().force_encoding('UTF-8')
+    @request_response = connect_to_sched().force_encoding('UTF-8')
   end
 
   def contact
@@ -194,26 +194,26 @@ private
     
   end
 
-  # def connect_to_sched
-  #   base_url = "http://testfffffffff2013.sched.org/api"
-  #   api_secret = "9c0e4074626d1d193078b9d0ed443f53"
-  #   username = "frederic.grais@gmail.com"
-  #   password = "258741"    
-  #   request_url = "/auth/login?api_key=#{api_secret}&username=#{username}&password=#{password}"
-  #   request_response = nil
-  #   uri = URI(base_url + request_url)
+  def connect_to_sched
+    base_url = "http://testfffffffff2013.sched.org/api"
+    api_secret = "9c0e4074626d1d193078b9d0ed443f53"
+    username = "frederic.grais@gmail.com"
+    password = "258741"    
+    request_url = "/auth/login?api_key=#{api_secret}&username=#{username}&password=#{password}"
+    request_response = nil
+    uri = URI(base_url + request_url)
     
-  #   res = Net::HTTP.start(uri.host, uri.port) do |http|
-  #     request = Net::HTTP::Get.new uri.request_uri
-  #     response = http.request request
-  #     # res = MultiJson.load(response.body)
-  #     schedule_uri = "/schedule/get?api_key=#{api_secret}&se=#{response.body}&l=1"
-  #     new_uri = URI(base_url + schedule_uri)
-  #     request = Net::HTTP::Get.new new_uri.request_uri
-  #     response = http.request request
-  #     request_response = response.body
+    res = Net::HTTP.start(uri.host, uri.port) do |http|
+      request = Net::HTTP::Get.new uri.request_uri
+      response = http.request request
+      # res = MultiJson.load(response.body)
+      schedule_uri = "/schedule/get?api_key=#{api_secret}&se=#{response.body}&l=1"
+      new_uri = URI(base_url + schedule_uri)
+      request = Net::HTTP::Get.new new_uri.request_uri
+      response = http.request request
+      request_response = response.body
       
-  #   end
-  #   return request_response
-  # end
+    end
+    return request_response
+  end
 end

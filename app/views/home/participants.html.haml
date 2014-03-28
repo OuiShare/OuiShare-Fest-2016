@@ -63,19 +63,21 @@
   .container.sinfo
     - if !@partners.blank?
       .row.centered
+        %br
         %h3.ouishare_stencil
           = t('dynamic_translations.partners.title')
-        %hr
+        %hr.partners
       = render "/individuals/partials/partners_display", :partners => @partners, :important_partners_display => true, :important_partners_count => 7
       %br
       %br
 
     - if !@media_partners.blank?
       .row.centered
+        %br
         %h3.ouishare_stencil
           = t('dynamic_translations.partners.media_partner_title')
 
-        %hr
+        %hr.partners
       = render "/individuals/partials/partners_display", :partners => @media_partners, :important_partners_display => false
 
       %br
@@ -84,10 +86,11 @@
 
     - if !@friends.blank?
       .row.centered
+        %br
         %h3.ouishare_stencil
           = t('dynamic_translations.partners.friends_title')
 
-        %hr
+        %hr.partners
       = render "/individuals/partials/partners_display", :partners => @friends, :important_partners_display => false
 
       %br
@@ -95,10 +98,11 @@
 
     - if !@supporters.blank?
       .row.centered
+        %br
         %h3.ouishare_stencil
           = t('dynamic_translations.partners.supporters_title')
 
-        %hr
+        %hr.partners
       = render "/individuals/partials/partners_display", :partners => @supporters, :important_partners_display => false
 
       
