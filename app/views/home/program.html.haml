@@ -10,11 +10,14 @@
         %p
           = t('dynamic_translations.main_schedule.first_part')
           
-          %br
-          %br
-          %br
-          = t('dynamic_translations.main_schedule.second_part')
+          / %br
+          / %br
+          / %br
+          / = t('dynamic_translations.main_schedule.second_part')
 
+    .row.centered
+      %a#sched-embed{:href => "http://ouisharefest14.sched.org/"}
+      %script{:type => "text/javascript", :src => "http://ouisharefest14.sched.org/js/embed.js"}
 
 
 .grey_bg#_events
