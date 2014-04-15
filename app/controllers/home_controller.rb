@@ -49,7 +49,8 @@ class HomeController < ApplicationController
       @ouishare_fest_attendees = eventbrite_instance.event_list_attendees({ "id" => ENV["EVENTBRITE_EVENT_ID"] })
     rescue
       @ouishare_fest_attendees = nil
-    end        
+    end
+
   end
 
   def about
@@ -95,6 +96,7 @@ class HomeController < ApplicationController
     rescue
       @ouishare_fest_attendees = nil
     end
+
 
     if IndividualType.find_by_title('Partners')      
       @partners = IndividualType.find_by_title('Partners').get_members
@@ -191,7 +193,7 @@ private
     eb_auth_tokens = { app_key: ENV['EVENTBRITE_APP_KEY'],
                    user_key: ENV['EVENTBRITE_USER_KEY']}
     eb_client = EventbriteClient.new(eb_auth_tokens)
-    
+
   end
 
   def connect_to_sched
