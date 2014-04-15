@@ -59,6 +59,9 @@
               %a{href: "program#_schedule"}
                 = t('dynamic_translations.program.main_schedule')
             %li
+              %a{href: "program#_sharing_fair"}
+                = t('dynamic_translations.sharing_fair.title')
+            %li
               %a{href: "program#_events"}
                 = t('dynamic_translations.program.satellite_events')
         %li.dropdown
@@ -94,7 +97,7 @@
           %a.highlight{href: "http://blog.ouisharefest.com", target: "_blank"}
             =t('dynamic_translations.blog.title')
         %li.tickets-highlight
-          %a.highlight{href: "http://www.eventbrite.co.uk/e/ouishare-fest-2014-tickets-10108670305", :target => '_blank'}
+          %a.highlight{href: "http://www.ouisharefest.com/join#_tickets"}
             =t('dynamic_translations.tickets.title')
         
         %li
@@ -103,6 +106,9 @@
               %img{src: "/assets/facebook.svg", width: "24px"}/        
             %a{href: "https://twitter.com/OuiShareFest", target: "_blank"}
               %img{src: "/assets/twitter.svg", width: "24px"}/ 
+            %a{href: "https://plus.google.com/+OuishareNet", target: "_blank"}
+              %img{src: "/assets/g-plus-icon-vector.svg", width: "24px"}/
+              
         
         %li
           = select_languages
