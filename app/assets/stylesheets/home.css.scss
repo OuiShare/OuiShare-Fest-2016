@@ -41,6 +41,24 @@
 .button-call-to-action-option{
   border-radius: 10px !important;
 }
+.events-section{
+  .events-container{
+    border-bottom: 1px solid #f9f9f9;
+    background: rgba(0, 0, 0, 0.15);
+    height: 70px;
+  }
+  .events-container:hover{
+    background: rgba(0, 0, 0, 0.5);
+  }
+  .events-items{
+    margin-bottom: 10px;
+    margin-left: 15px;
+    text-align: left;
+    height: 40px;
+    color: #fff;
+    padding-top: 10px;
+  }
+}
 .tickets-section{
   .tickets-font-color{
     color: #c5c5c5;
