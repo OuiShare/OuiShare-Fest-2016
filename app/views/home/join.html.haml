@@ -45,7 +45,7 @@
       .row.get-involved-options-choice
         .col-md-9.span-centered
           .row
-            .col-md-4.pricing-table.turquoise.bordered.plain
+            .col-md-4.pricing-table.turquoise.bordered.plain.col-md-offset-2
               %ul.centered.alt
                 %li.title
                   = t('dynamic_translations.get_involved.call_for_proposal')
@@ -54,15 +54,6 @@
                 %li.button
                   %a.btn.btn-large.button-call-to-action-option{href: "https://docs.google.com/forms/d/1xwFAL9C5AHZgBAeC6tGD6_eX0Ca1u00ZawZEueHczII/viewform", :target => "_blank"} 
                     =t('dynamic_translations.get_involved.submit')
-            .col-md-4.pricing-table.turquoise.bordered.plain
-              %ul.centered.alt
-                %li.title
-                  =t('dynamic_translations.get_involved.join_the_team') 
-                %li{:style => "min-height:140px;"}
-                  = t('dynamic_translations.get_involved.option_2')
-                %li.button
-                  %a.btn.btn-large.button-call-to-action-option{href: "https://docs.google.com/forms/d/15QpVEkvXR9-DpAKLYoUSPOXrfnYRG9aCPnMoK3WUrJo/viewform", :target => "_blank"}
-                    = t('dynamic_translations.get_involved.join')
             .col-md-4.pricing-table.turquoise.bordered.plain
               %ul.centered.alt
                 %li.title
