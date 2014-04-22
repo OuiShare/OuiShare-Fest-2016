@@ -57,7 +57,7 @@
         = t('dynamic_translations.satellite_events.title')
     %br
     %br
-    .col-xs-12.col-md-6.col-lg-6
+    .col-xs-12.col-md-12.col-lg-12
       
       
       .row.centered
@@ -67,18 +67,18 @@
       %br
       
       .row
-      %a{:href => 'https://docs.google.com/forms/d/1xwFAL9C5AHZgBAeC6tGD6_eX0Ca1u00ZawZEueHczII/viewform', :target => '_blank'}
-        %button.btn.btn-embossed.btn-primary
-          = t('dynamic_translations.satellite_event.link_title')
-    .col-xs-12.col-md-6.col-lg-6      
-      %img{:src => '/assets/SteBo_5093_Mid_medium.png', :alt => 'satellite event picture', :style => 'width: 560px;'}
-  
+        %a{:href => 'https://docs.google.com/forms/d/1xwFAL9C5AHZgBAeC6tGD6_eX0Ca1u00ZawZEueHczII/viewform', :target => '_blank'}
+          %button.btn.btn-embossed.btn-primary
+            = t('dynamic_translations.satellite_event.link_title')
+    
   %br
   %br
 
-  %iframe{ :src => "https://mapsengine.google.com/map/embed?mid=zvpA9LZ7Vptw.k0O0o696Lyvk", :width => "100%", :height => "480"}
-  %br
-  %br
+  .col-md-12
+    .col-md-12{:style => " height: 451px; overflow: hidden; "}
+      %iframe{ :src => "https://mapsengine.google.com/map/embed?mid=zvpA9LZ7Vptw.k0O0o696Lyvk", :width => "100%", :height => "480", :style => "position: absolute; left: 0; bottom: 0"}
+
+
   .container.events-section
     .row.centered
       %h3.ouishare_stencil
