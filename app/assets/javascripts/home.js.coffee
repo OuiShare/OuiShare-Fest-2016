@@ -9,7 +9,7 @@ toggle_class = (element,class_name) ->
 
 $(document).ready ->
 
-  $('.special_tooltip').tooltip()
+  # $('.special_tooltip').tooltip()
 
   if window.location.search.replace('?', '') == 'tickets'
     $tabs = $(".tabbable li")
