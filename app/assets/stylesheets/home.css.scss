@@ -65,7 +65,7 @@
   .events-container{
     border-bottom: 1px solid #f9f9f9;
     background: rgba(0, 0, 0, 0.15);
-    height: 70px;
+    height: 85px;
   }
   .events-container:hover{
     background: rgba(0, 0, 0, 0.5);
@@ -78,6 +78,9 @@
     height: 40px;
     color: #fff;
     padding-top: 10px;
+    a{
+      color: #0b0b6d;
+    }
   }
 }
 .tickets-section{
