@@ -1,0 +1,12 @@
+.triangle_bg
+  .container
+    .row.centered
+      %h3.ouishare_stencil
+        = t('dynamic_translations.live_reporting.title')
+      %br      
+      %br
+    .row.centered
+      .storify
+        %iframe{ :src => "http://storify.com/OuiShare/getting-started/embed?border=false", :width => "100%", :height =>"750", :frameborder => "no", :allowtransparency => :true, :style => "margin:auto;"}
+
+        %script{ :src => "http://storify.com/OuiShare/getting-started.js?border=false"}
