@@ -16,18 +16,17 @@
           - special = "tooltip.laposte"
         - if partner.first_name == 'Castorama'
           - special = "tooltip.castorama"
-        / , :data => {'original-title' => t(special), 'placement' => 'right'}
         - if remain == 1
           .col-lg-12
-            %a{:href => partner.url, :target => "_blank", :class => "special_tooltip"}
+            %a{:href => partner.url, :target => "_blank", :class => "special_tooltip", :data => {'original-title' => t(special), 'placement' => 'right'}}
               %img.img-responsive.display-inline{:alt => partner.first_name, :src => partner.attachment.url(:medium)}
         - elsif remain == 2
           .col-lg-6
-            %a{:href => partner.url, :target => "_blank", :class => "special_tooltip"}
+            %a{:href => partner.url, :target => "_blank", :class => "special_tooltip", :data => {'original-title' => t(special), 'placement' => 'right'}}
               %img.img-responsive.display-inline{:alt => partner.first_name, :src => partner.attachment.url(:medium)}
         - elsif remain == 3
           .col-lg-4
-            %a{:href => partner.url, :target => "_blank", :class => "special_tooltip"}
+            %a{:href => partner.url, :target => "_blank", :class => "special_tooltip", :data => {'original-title' => t(special), 'placement' => 'right'}}
               %img.img-responsive.display-inline{:alt => partner.first_name, :src => partner.attachment.url(:medium)}
         - array_buffer.delete_at(0)
     %hr
