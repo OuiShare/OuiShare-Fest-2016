@@ -57,7 +57,6 @@ OuiShareFest::Application.routes.draw do
     get :about
     get :participants
     get :join
-    get :live
     post :newsletter_collect_email
   end
 
