@@ -15,9 +15,10 @@
           %p.main-section-paragraphes
             = t('dynamic_translations.main.event')
                      
-          = form_tag home_newsletter_collect_email_path, :class => "form-inline" do
+          %a{:href => '/#_live'}
             .row.text-center       
-              = submit_tag t('dynamix_translations.main.follow_event'), :class => "btn follow-event-button"
+              %button.btn.follow-event-button
+                = t('dynamic_translations.main.follow_event')
         %br
         
         %a{href: "https://www.facebook.com/OuiShare", target: "_blank"}
