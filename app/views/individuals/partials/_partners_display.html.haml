@@ -1,6 +1,9 @@
 - array_buffer = []
 - partner_number = 1
 - test = true
+- special = ''
+- three_col = 1
+- placement = ''
 
 - if important_partners_display
   - partners.first(important_partners_count).each do |partner|
@@ -9,18 +12,29 @@
   - if remain > 0
     .row.centered
       - array_buffer.first(remain).each do |partner|
+        - if partner.first_name == 'Orange'
+          - special = "tooltip.orange"
+        - if partner.first_name == 'La Poste'
+          - special = "tooltip.laposte"
+        - if partner.first_name == 'Castorama'
+          - special = "tooltip.castorama"
         - if remain == 1
           .col-lg-12
-            %a{:href => partner.url, :target => "_blank"}
+            %a{:href => partner.url, :target => "_blank", :class => "special_tooltip", :data => {'original-title' => t(special), 'placement' => 'right'}}
               %img.img-responsive.display-inline{:alt => partner.first_name, :src => partner.attachment.url(:medium)}
         - elsif remain == 2
           .col-lg-6
-            %a{:href => partner.url, :target => "_blank"}
+            %a{:href => partner.url, :target => "_blank", :class => "special_tooltip", :data => {'original-title' => t(special), 'placement' => 'right'}}
               %img.img-responsive.display-inline{:alt => partner.first_name, :src => partner.attachment.url(:medium)}
         - elsif remain == 3
+          - if three_col == 3
+            - placement = 'left'
+          - else
+            - placement = 'right'
           .col-lg-4
-            %a{:href => partner.url, :target => "_blank"}
+            %a{:href => partner.url, :target => "_blank", :class => "special_tooltip", :data => {'original-title' => t(special), 'placement' => placement}}
               %img.img-responsive.display-inline{:alt => partner.first_name, :src => partner.attachment.url(:medium)}
+          - three_col = three_col + 1
         - array_buffer.delete_at(0)
     %hr
     %br
