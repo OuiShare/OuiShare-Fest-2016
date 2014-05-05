@@ -1,6 +1,30 @@
 // Place all the styles related to the home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.tooltip-inner{
+  font-size: 11px;
+  line-height: 1.4;
+  max-width: 400px;
+  padding: 8px;
+  width: 320px;
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+  background-color: #000;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  font-family: 'Ubuntu','Helvetica Neue','Helvetica','Arial','sans-serif';
+}
+
+.tooltip-arrow{
+  border-right-color: #000 !important;
+}
+
+.follow-event-button{
+  background-color: #d5544b;
+}
+
 #btn_attendees_up{
   display: none;
 }
@@ -40,6 +64,28 @@
 }
 .button-call-to-action-option{
   border-radius: 10px !important;
+}
+.events-section{
+  .events-container{
+    border-bottom: 1px solid #f9f9f9;
+    background: rgba(0, 0, 0, 0.15);
+    height: 85px;
+  }
+  .events-container:hover{
+    background: rgba(0, 0, 0, 0.5);
+  }
+  .events-items{
+    margin-bottom: 10px;
+    margin-left: 15px;
+    font-size: 18px;
+    text-align: left;
+    height: 40px;
+    color: #fff;
+    padding-top: 10px;
+    a{
+      color: #0b0b6d;
+    }
+  }
 }
 .tickets-section{
   .tickets-font-color{
