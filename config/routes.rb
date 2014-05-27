@@ -57,9 +57,11 @@ OuiShareFest::Application.routes.draw do
     get :about
     get :participants
     get :join
-    get :stories
+    # get :stories
     post :newsletter_collect_email
   end
+
+  resources :stories, :only => [:index, :show], :singular => :story
 
   namespace :me do
     get :dashboard

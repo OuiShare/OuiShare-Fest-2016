@@ -1,0 +1,8 @@
+%p
+  = @adesias_video.first_name
+  %br
+  = image_tag '/assets/adesias/citation_' + @adesias_video.first_name + '.png'
+  = image_tag '/assets/adesias/post-it_' + @adesias_video.first_name + '.jpg'
+  %p{:style => 'background-image: url(/assets/adesias/ad_video_cadre_video.png); background-repeat:no-repeat;width:640px;height:400px;margin: auto;'}
+    %iframe{:style => "margin:90px 25px auto;margin-top:14px;", :allowfullscreen => "", :frameborder => "0", :height => "328", :src => @adesias_video.description, :width => "588"}     
+    = image_tag '/assets/adesias/Visuels_' + @adesias_video.first_name + '.png' 
