@@ -114,14 +114,16 @@ class HomeController < ApplicationController
   end
 
   def program
-
-    
   end
 
   def faq
   end
 
   def site_off
+  end
+
+  # Nouvelle page Adesias
+  def stories
   end
 
   def program
