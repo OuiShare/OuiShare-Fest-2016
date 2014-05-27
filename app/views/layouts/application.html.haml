@@ -19,9 +19,9 @@
   %body
     
     = render 'layouts/flash_messages'
-    - if controller.action_name != "site_off"
+    - if controller.action_name != "site_off" && controller.controller_name != "stories"
       = render 'layouts/header'
     = yield
-    - if controller.action_name != "site_off"
+    - if controller.action_name != "site_off" && controller.controller_name != "stories"
       = render 'layouts/footer'
 

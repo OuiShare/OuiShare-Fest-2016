@@ -122,10 +122,6 @@ class HomeController < ApplicationController
   def site_off
   end
 
-  # Nouvelle page Adesias
-  def stories
-  end
-
   def program
     @request_response = connect_to_sched().force_encoding('UTF-8')
   end
