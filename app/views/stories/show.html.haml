@@ -1,8 +1,27 @@
 %p
-  = @adesias_video.first_name
+  = "#" + @adesias_video.first_name.upcase
+  %br
+  = link_to image_tag('/assets/adesias/ad_video_btn_videoprecedente.png'), story_path(@previous_video) 
+  = link_to image_tag('/assets/adesias/ad_video_btn_videosuivante.png'), story_path(@next_video) 
+  = link_to image_tag('/assets/adesias/ad_video_btn_retour.png'), stories_path
   %br
   = image_tag '/assets/adesias/citation_' + @adesias_video.first_name + '.png'
   = image_tag '/assets/adesias/post-it_' + @adesias_video.first_name + '.jpg'
+
   %p{:style => 'background-image: url(/assets/adesias/ad_video_cadre_video.png); background-repeat:no-repeat;width:640px;height:400px;margin: auto;'}
     %iframe{:style => "margin:90px 25px auto;margin-top:14px;", :allowfullscreen => "", :frameborder => "0", :height => "328", :src => @adesias_video.description, :width => "588"}     
     = image_tag '/assets/adesias/Visuels_' + @adesias_video.first_name + '.png' 
+
+  / Sharing Zone
+  %p
+    .fb-share-button{"data-href" => @adesias_video.description, "data-type" => "button"}
+
+/ Zone autres videos
+%p
+  = image_tag '/assets/adesias/ad_video_zone_autresvideo.png' 
+-if !@next_videos.blank?
+  .ch-grid
+    - @next_videos.each do |video|
+      .col-lg-4.individuals-list-display
+        %li
+          = link_to video.first_name, story_path(video), :id => video.first_name
