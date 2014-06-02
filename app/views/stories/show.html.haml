@@ -1,53 +1,54 @@
-=render 'header', :adesias_video => @adesias_video
-.video_box.col-lg-12
-  .citation
-    = image_tag "/assets/adesias/quotes/C_#{@adesias_video.first_name}.png"
-  .content.col-lg-12
-    .col-left.col-lg-2
-      .row
+.container{:id =>'adesias_home'}
+  =render 'header', :adesias_video => @adesias_video
+  .video_box.col-lg-12
+    .citation
+      = image_tag "/assets/adesias/quotes/C_#{@adesias_video.first_name}.png"
+    .content.col-lg-12
+      .col-left.col-lg-2
+        .row
+          .video_nav.col-lg-12
+            .prev
+              = link_to image_tag('/assets/adesias/ad_video_btn_videoprecedente.png'), story_path(@previous_video)
+          .post_it.col-lg-12
+            = image_tag "/assets/adesias/keywords/post-IT_#{@adesias_video.first_name}.jpg"
+      .col-center.col-lg-6
+        .content_video
+          .video_cadre
+            %iframe{:style => "margin:90px 25px auto;margin-top:14px;", :allowfullscreen => "", :frameborder => "0", :height => "328", :src => @adesias_video.description, :width => "588"}
+          / Mettre le player video à cet endroit
+      .col-right.col-lg-2
         .video_nav.col-lg-12
-          .prev
-            = link_to image_tag('/assets/adesias/ad_video_btn_videoprecedente.png'), story_path(@previous_video)
-        .post_it.col-lg-12
-          = image_tag "/assets/adesias/keywords/post-IT_#{@adesias_video.first_name}.jpg"
-    .col-center.col-lg-6
-      .content_video
-        .video_cadre
-          %iframe{:style => "margin:90px 25px auto;margin-top:14px;", :allowfullscreen => "", :frameborder => "0", :height => "328", :src => @adesias_video.description, :width => "588"}
-        / Mettre le player video à cet endroit
-    .col-right.col-lg-2
-      .video_nav.col-lg-12
-        .next
-          = link_to image_tag('/assets/adesias/ad_video_btn_videosuivante.png'), story_path(@next_video)
-      .visuel.col-lg-12
-        = image_tag "/assets/adesias/visuels/Visuels_#{@adesias_video.first_name}.png"
+          .next
+            = link_to image_tag('/assets/adesias/ad_video_btn_videosuivante.png'), story_path(@next_video)
+        .visuel.col-lg-12
+          = image_tag "/assets/adesias/visuels/Visuels_#{@adesias_video.first_name}.png"
 
-.sharing_zone.col-lg-12
-  .infos.col-lg-5.col-lg-offset-2
-    .vert
-      = "-#{@adesias_video.last_name}-"
-    .bleu
-      = image_tag "/assets/adesias/ad_twitter.png"
-      = link_to @adesias_video.twitter_account, "https://twitter.com/#{@adesias_video.twitter_account}"
-  .infos.col-lg-5.col-lg-offset-2
-    .vert
-      = link_to @adesias_video.company_name, @adesias_video.company_name
-  .col-lg-12
-    .fb-share-button{"data-href" => @adesias_video.description, "data-type" => "button"}
-    %a.twitter-share-button{"data-hashtags" => "OuiShareFest", "data-related" => "adesias", "data-url" => "https://www.youtube.com/watch?v=bnZiMM3EOEc", "data-via" => "ouishare", :href => "https://twitter.com/share"} Tweet
-    :javascript
-      !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
+  .sharing_zone.col-lg-12
+    .infos.col-lg-5.col-lg-offset-2
+      .vert
+        = "-#{@adesias_video.last_name}-"
+      .bleu
+        = image_tag "/assets/adesias/ad_twitter.png"
+        = link_to @adesias_video.twitter_account, "https://twitter.com/#{@adesias_video.twitter_account}"
+    .infos.col-lg-5.col-lg-offset-2
+      .vert
+        = link_to @adesias_video.company_name, @adesias_video.company_name
+    .col-lg-12
+      .fb-share-button{"data-href" => @adesias_video.description, "data-type" => "button"}
+      %a.twitter-share-button{"data-hashtags" => "OuiShareFest", "data-related" => "adesias", "data-url" => "https://www.youtube.com/watch?v=bnZiMM3EOEc", "data-via" => "ouishare", :href => "https://twitter.com/share"} Tweet
+      :javascript
+        !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
 
-.other_video_block.col-lg-12
-  .other_video.col-lg-12
-    -if !@next_videos.blank?
-      .ch-grid
-        - @next_videos.each do |video|
-          .col-lg-4.individuals-list-display
-            %li
-              = link_to video.first_name, story_path(video), :id => video.first_name
+  .other_video_block.col-lg-12
+    .other_video.col-lg-12
+      -if !@next_videos.blank?
+        .ch-grid
+          - @next_videos.each do |video|
+            .col-lg-4.individuals-list-display
+              %li
+                = link_to video.first_name, story_path(video), :id => video.first_name
 
-.footer.col-lg-12
+  .footer.col-lg-12
   
 / %p
 /   %br
