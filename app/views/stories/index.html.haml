@@ -1,25 +1,31 @@
 .container{:style => 'width:100% !important;background-image: url(/assets/adesias/ad_background.jpg);width:100%; height:100%;'}
-  .row.centered
+  .row
+    %p.text-center{:style => 'width:100% !important;background-position: left top;background-repeat: no-repeat;background-image: url(/assets/adesias/ad_header2.png);height:210px;background-size: 100%;'}
+      %span{:style => 'font-family:BebasNeue;font-size:150px;color:#FFF;'}
+        = "# AGE OF COMMUNITIES"
+  .row.text-center{:style => 'width:100% !important;background-position: center top;background-repeat: no-repeat;background-image: url(/assets/adesias/ad_intro.png);height:520px;'}
 
-    = image_tag '/assets/adesias/ad_intro.png'
-    = image_tag '/assets/adesias/ad_header.png'
-    = image_tag '/assets/adesias/ad_logo.png'
-    = image_tag '/assets/adesias/ad_texte.png'
-
+    .ad_logo{:style => 'margin: 0 0 0 20px;float:left;'}
+      = image_tag '/assets/adesias/ad_logo.png'
+    .ad_texte{:style => 'font-size:25px;font-family:BebasNeue;margin: 200px 560px 0px 280px;'}
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+      quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+      consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+      cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+      proident, sunt in culpa qui officia deserunt mollit anim id est laborum.            
 
     / TODO :
     / Header
     / ScollDown sur click flèche
-    / Vidéos suivantes et précédentes
-    / Autres vidéos (3 suivantes)
+    / OK - Vidéos suivantes et précédentes
+    / OK - Autres vidéos (3 suivantes)
     / Mise en forme
-    / Liens partager sur Facebook, Twitter
+    / OK - Liens partager sur Facebook, Twitter
     / SEO Spécifique à la page
     / intégration des polices de caractères
 
-  .row.centered
-    = image_tag '/assets/adesias/ad_header.png'
-
+  .row.centered{:style => 'width:100% !important;background-position: left top;background-repeat: no-repeat;background-image: url(/assets/adesias/ad-zone-mozaicvideo.png);background-size: 100%;'}
     -if !@adesias_videos.blank?
       .ch-grid
         - @adesias_videos.each do |video|
