@@ -70,7 +70,7 @@
                 background-image: url(/assets/adesias/ad_video_cadre_video.png);
                 background-repeat:no-repeat;
                 width:640px;
-                height:400px;
+                height:360px;
                 position: relative;
             }
         }
@@ -84,6 +84,7 @@
             }
             .next{
                 float: left;
+                margin-left: 30px;
             }
         }
 
@@ -98,14 +99,47 @@
     }   
 }
 
+.sharing_zone .infos{
+    font-family: 'BebasNeue';
+    font-size: 30px;
+    display: inline;
+    text-align: right;
+    
+    .bleu{
+        display: inline-block;
+        color: #00ACEE;
+        text-align: right;
+    }
+    .vert{
+        display: inline-block;
+        color: #518D91;
+        padding: 0;
+        text-align: right;
+    }
+    
+}
+
 .other_video_block{
     width: 100%;
     background-image: url(/assets/adesias/ad_video_zone_autresvideo.png);
     background-size: 100% 100%;
     height: 290px;
+    margin-top: 10px;
     .other_video{
         margin-top: 40px;
+
+        .individuals-list-display{
+            min-height: 189px;
+        }
     }
+}
+
+.footer{
+    width: 100%;
+    height: 77px;
+    background-image: url(/assets/adesias/ad_footer.png);
+    background-size: 100% 100%;
+    margin-top: -15px;
 }
 
 .adesias_main_title
