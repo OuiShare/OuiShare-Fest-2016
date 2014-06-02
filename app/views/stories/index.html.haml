@@ -1,13 +1,12 @@
-.container{:style => 'width:100% !important;background-image: url(/assets/adesias/ad_background.jpg);width:100%; height:100%;'}
+.container{:id =>'adesias_home'}
   .row
-    %p.text-center{:style => 'width:100% !important;background-position: left top;background-repeat: no-repeat;background-image: url(/assets/adesias/ad_header2.png);height:210px;background-size: 100%;'}
-      %span{:style => 'font-family:BebasNeue;font-size:150px;color:#FFF;'}
+    %p.adesias_header.text-center
+      %span.adesias_main_title
         = "# AGE OF COMMUNITIES"
-  .row.text-center{:style => 'width:100% !important;background-position: center top;background-repeat: no-repeat;background-image: url(/assets/adesias/ad_intro.png);height:520px;'}
-
-    .ad_logo{:style => 'margin: 0 0 0 20px;float:left;'}
+  .row.adesias_main_content.text-center
+    .adesias_main_logo
       = image_tag '/assets/adesias/ad_logo.png'
-    .ad_texte{:style => 'font-size:25px;font-family:BebasNeue;margin: 200px 560px 0px 280px;'}
+    .adesias_main_text
       Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
       tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
       quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
@@ -25,7 +24,7 @@
     / SEO Spécifique à la page
     / intégration des polices de caractères
 
-  .row.centered{:style => 'width:100% !important;background-position: left top;background-repeat: no-repeat;background-image: url(/assets/adesias/ad-zone-mozaicvideo.png);background-size: 100%;'}
+  .row.adesias_videos_index.centered
     -if !@adesias_videos.blank?
       .ch-grid
         - @adesias_videos.each do |video|
