@@ -15,7 +15,7 @@
         .video_cadre
           %iframe{:style => "margin:90px 25px auto;margin-top:14px;", :allowfullscreen => "", :frameborder => "0", :height => "328", :src => @adesias_video.description, :width => "588"}
         / Mettre le player video à cet endroit
-    .col-left.col-lg-2
+    .col-right.col-lg-2
       .video_nav.col-lg-12
         .next
           = link_to image_tag('/assets/adesias/ad_video_btn_videosuivante.png'), story_path(@next_video)
@@ -31,7 +31,7 @@
       = link_to @adesias_video.twitter_account, "https://twitter.com/#{@adesias_video.twitter_account}"
   .infos.col-lg-5.col-lg-offset-2
     .vert
-      Adresse du site web
+      = link_to @adesias_video.company_name, @adesias_video.company_name
   .col-lg-12
     .fb-share-button{"data-href" => @adesias_video.description, "data-type" => "button"}
     %a.twitter-share-button{"data-hashtags" => "OuiShareFest", "data-related" => "adesias", "data-url" => "https://www.youtube.com/watch?v=bnZiMM3EOEc", "data-via" => "ouishare", :href => "https://twitter.com/share"} Tweet

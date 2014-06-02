@@ -1,8 +1,9 @@
 .container{:id =>'adesias_home'}
   .row
-    %p.adesias_header.text-center
-      %span.adesias_main_title
-        = "# AGE OF COMMUNITIES"
+    .adesias_header
+      .block_header.col-lg-12
+        .header_video_name_header.col-lg-12
+          = "# AGE OF COMMUNITIES"
   .row.adesias_main_content.text-center
     .adesias_main_logo
       = image_tag '/assets/adesias/ad_logo.png'
@@ -28,3 +29,4 @@
           .col-lg-4.individuals-list-display
             %li
               = link_to video.first_name, story_path(video), :id => video.first_name
+  .footer
