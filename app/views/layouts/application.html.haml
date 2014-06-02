@@ -17,7 +17,17 @@
     %meta{:content => "1000 collaborative economy visionaries coming together for three days of conference, co-creating and connecting. Paris, May 5-7 2014.", :property => "og:description"}/
     = analytics_init if Rails.env.production?
   %body
-    
+
+    #fb-root
+    :javascript
+      (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/fr_FR/sdk.js#xfbml=1&appId=661085250597998&version=v2.0";
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));
+
     = render 'layouts/flash_messages'
     - if controller.action_name != "site_off" && controller.controller_name != "stories"
       = render 'layouts/header'

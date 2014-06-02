@@ -1,79 +1,360 @@
+@charset "utf-8";
+
+@font-face {
+    font-family: 'BebasNeue';
+    src: url('/assets/BebasNeue/BebasNeue Regular.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'BebasNeue';
+    src: url('/assets/BebasNeue/BebasNeue Bold.otf') format('opentype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'BebasNeue Book';
+    src: url('/assets/BebasNeue/BebasNeue Book.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'BebasNeue Light';
+    src: url('/assets/BebasNeue/BebasNeue Light.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'BebasNeue Thin';
+    src: url('/assets/BebasNeue/BebasNeue Thin.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'BebasNeue Thin';
+    src: url('/assets/BebasNeue/BebasNeue Thin.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'OwnHand';
+    src: url('/assets/OwnHand/OwnHand.ttf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
 
 
-#biohackerspace {
-    background: url('/assets/adesias/biohackerspace_OFF.png');
+#SHAREABLE{
+    background: url('/assets/adesias/previews/shareable_OFF.png');
     text-indent:-9999px;
     display: block;
     width: 322px;
     height: 189px;
 }
-#biohackerspace:hover {
-    background: url('/assets/adesias/biohackerspace_ON.png');
-    text-indent:-9999px;
-    display: block;
-    width: 322px;
-    height: 189px;    
-}
 
-#climatechange {
-    background: url('/assets/adesias/climatechange_OFF.png');
+
+#COMMUNITIES{
+    background: url('/assets/adesias/previews/communities_OFF.png');
     text-indent:-9999px;
     display: block;
     width: 322px;
     height: 189px;
 }
-#climatechange:hover {
-    background: url('/assets/adesias/climatechange_ON.png');
-    text-indent:-9999px;
-    display: block;
-    width: 322px;
-    height: 189px;    
-}
 
-#communities {
-    background: url('/assets/adesias/communities_OFF.png');
+#CLIMATECHANGE{
+    background: url('/assets/adesias/previews/climatechange_OFF.png');
     text-indent:-9999px;
     display: block;
     width: 322px;
     height: 189px;
 }
-#communities:hover {
-    background: url('/assets/adesias/communities_ON.png');
-    text-indent:-9999px;
-    display: block;
-    width: 322px;
-    height: 189px;    
-}
 
-
-#coworking {
-    background: url('/assets/adesias/coworking_OFF.png');
+#FOOD{
+    background: url('/assets/adesias/previews/food_OFF.png');
     text-indent:-9999px;
     display: block;
     width: 322px;
     height: 189px;
 }
-#coworking:hover {
-    background: url('/assets/adesias/coworking_ON.png');
-    text-indent:-9999px;
-    display: block;
-    width: 322px;
-    height: 189px;    
-}
 
-
-#currency {
-    background: url('/assets/adesias/currency_OFF.png');
+#TRANSPORTATION{
+    background: url('/assets/adesias/previews/transportation_OFF.png');
     text-indent:-9999px;
     display: block;
     width: 322px;
     height: 189px;
 }
-#currency:hover {
-    background: url('/assets/adesias/currency_ON.png');
+
+#COWORKING{
+    background: url('/assets/adesias/previews/coworking_OFF.png');
     text-indent:-9999px;
     display: block;
     width: 322px;
-    height: 189px;    
+    height: 189px;
 }
+
+#BIOHACKERSPACE{
+    background: url('/assets/adesias/previews/biohackerspace_OFF.png');
+    text-indent:-9999px;
+    display: block;
+    width: 322px;
+    height: 189px;
+}
+
+#FABLAB{
+    background: url('/assets/adesias/previews/fablab_OFF.png');
+    text-indent:-9999px;
+    display: block;
+    width: 322px;
+    height: 189px;
+}
+
+#FREESPACE{
+    background: url('/assets/adesias/previews/freespace_OFF.png');
+    text-indent:-9999px;
+    display: block;
+    width: 322px;
+    height: 189px;
+}
+
+#JOURNALISM{
+    background: url('/assets/adesias/previews/journalism_OFF.png');
+    text-indent:-9999px;
+    display: block;
+    width: 322px;
+    height: 189px;
+}
+
+#DEMOCRACY{
+    background: url('/assets/adesias/previews/democracy_OFF.png');
+    text-indent:-9999px;
+    display: block;
+    width: 322px;
+    height: 189px;
+}
+
+#EDUCATION{
+    background: url('/assets/adesias/previews/education_OFF.png');
+    text-indent:-9999px;
+    display: block;
+    width: 322px;
+    height: 189px;
+}
+
+#KNOWLEDGE{
+    background: url('/assets/adesias/previews/knowledge_OFF.png');
+    text-indent:-9999px;
+    display: block;
+    width: 322px;
+    height: 189px;
+}
+
+#CURRENCY{
+    background: url('/assets/adesias/previews/currency_OFF.png');
+    text-indent:-9999px;
+    display: block;
+    width: 322px;
+    height: 189px;
+}
+
+#MONEY{
+    background: url('/assets/adesias/previews/money_OFF.png');
+    text-indent:-9999px;
+    display: block;
+    width: 322px;
+    height: 189px;
+}
+
+#EXPERIENCES{
+    background: url('/assets/adesias/previews/experiences_OFF.png');
+    text-indent:-9999px;
+    display: block;
+    width: 322px;
+    height: 189px;
+}
+
+#SHARINGISSEXY{
+    background: url('/assets/adesias/previews/sharingissexy_OFF.png');
+    text-indent:-9999px;
+    display: block;
+    width: 322px;
+    height: 189px;
+}
+
+#TRUST{
+    background: url('/assets/adesias/previews/trust_OFF.png');
+    text-indent:-9999px;
+    display: block;
+    width: 322px;
+    height: 189px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+#SHAREABLE:hover{
+    background: url('/assets/adesias/previews/shareable_ON.png');
+    text-indent:-9999px;
+    display: block;
+    width: 322px;
+    height: 189px;
+}
+
+
+#COMMUNITIES:hover{
+    background: url('/assets/adesias/previews/communities_ON.png');
+    text-indent:-9999px;
+    display: block;
+    width: 322px;
+    height: 189px;
+}
+
+#CLIMATECHANGE:hover{
+    background: url('/assets/adesias/previews/climatechange_ON.png');
+    text-indent:-9999px;
+    display: block;
+    width: 322px;
+    height: 189px;
+}
+
+#FOOD:hover{
+    background: url('/assets/adesias/previews/food_ON.png');
+    text-indent:-9999px;
+    display: block;
+    width: 322px;
+    height: 189px;
+}
+
+#TRANSPORTATION:hover{
+    background: url('/assets/adesias/previews/transportation_ON.png');
+    text-indent:-9999px;
+    display: block;
+    width: 322px;
+    height: 189px;
+}
+
+#COWORKING:hover{
+    background: url('/assets/adesias/previews/coworking_ON.png');
+    text-indent:-9999px;
+    display: block;
+    width: 322px;
+    height: 189px;
+}
+
+#BIOHACKERSPACE:hover{
+    background: url('/assets/adesias/previews/biohackerspace_ON.png');
+    text-indent:-9999px;
+    display: block;
+    width: 322px;
+    height: 189px;
+}
+
+#FABLAB:hover{
+    background: url('/assets/adesias/previews/fablab_ON.png');
+    text-indent:-9999px;
+    display: block;
+    width: 322px;
+    height: 189px;
+}
+
+#FREESPACE:hover{
+    background: url('/assets/adesias/previews/freespace_ON.png');
+    text-indent:-9999px;
+    display: block;
+    width: 322px;
+    height: 189px;
+}
+
+#JOURNALISM:hover{
+    background: url('/assets/adesias/previews/journalism_ON.png');
+    text-indent:-9999px;
+    display: block;
+    width: 322px;
+    height: 189px;
+}
+
+#DEMOCRACY:hover{
+    background: url('/assets/adesias/previews/democracy_ON.png');
+    text-indent:-9999px;
+    display: block;
+    width: 322px;
+    height: 189px;
+}
+
+#EDUCATION:hover{
+    background: url('/assets/adesias/previews/education_ON.png');
+    text-indent:-9999px;
+    display: block;
+    width: 322px;
+    height: 189px;
+}
+
+#KNOWLEDGE:hover{
+    background: url('/assets/adesias/previews/knowledge_ON.png');
+    text-indent:-9999px;
+    display: block;
+    width: 322px;
+    height: 189px;
+}
+
+#CURRENCY:hover{
+    background: url('/assets/adesias/previews/currency_ON.png');
+    text-indent:-9999px;
+    display: block;
+    width: 322px;
+    height: 189px;
+}
+
+#MONEY:hover{
+    background: url('/assets/adesias/previews/money_ON.png');
+    text-indent:-9999px;
+    display: block;
+    width: 322px;
+    height: 189px;
+}
+
+#EXPERIENCES:hover{
+    background: url('/assets/adesias/previews/experiences_ON.png');
+    text-indent:-9999px;
+    display: block;
+    width: 322px;
+    height: 189px;
+}
+
+#SHARINGISSEXY:hover{
+    background: url('/assets/adesias/previews/sharingissexy_ON.png');
+    text-indent:-9999px;
+    display: block;
+    width: 322px;
+    height: 189px;
+}
+
+#TRUST:hover{
+    background: url('/assets/adesias/previews/trust_ON.png');
+    text-indent:-9999px;
+    display: block;
+    width: 322px;
+    height: 189px;
+}
+
+
+
+
+
+
+
 
