@@ -1,34 +1,68 @@
 =render 'header', :adesias_video => @adesias_video
-%p
-  = "#" + @adesias_video.first_name
-  %br
-  = link_to image_tag('/assets/adesias/ad_video_btn_videoprecedente.png'), story_path(@previous_video) 
-  = link_to image_tag('/assets/adesias/ad_video_btn_videosuivante.png'), story_path(@next_video) 
-  = link_to image_tag('/assets/adesias/ad_video_btn_retour.png'), stories_path
-  %br
-  = image_tag '/assets/adesias/quotes/C_' + @adesias_video.first_name + '.png'
-  = image_tag '/assets/adesias/keywords/post-IT_' + @adesias_video.first_name + '.jpg'
+.video_box.col-lg-12
+  .citation
+    = image_tag "/assets/adesias/quotes/C_#{@adesias_video.first_name}.png"
+  .content.col-lg-12
+    .col-left.col-lg-2
+      .row
+        .video_nav.col-lg-12
+          .prev
+            = link_to image_tag('/assets/adesias/ad_video_btn_videoprecedente.png'), story_path(@previous_video)
+        .post_it.col-lg-12
+          = image_tag "/assets/adesias/keywords/post-IT_#{@adesias_video.first_name}.jpg"
+    .col-center.col-lg-6
+      .content_video.col-lg-6
+        .video_cadre
+          %iframe{:style => "margin:90px 25px auto;margin-top:14px;", :allowfullscreen => "", :frameborder => "0", :height => "328", :src => @adesias_video.description, :width => "588"}
+        / Mettre le player video à cet endroit
+    .col-left.col-lg-2
+      .video_nav.col-lg-12
+        .next
+          = link_to image_tag('/assets/adesias/ad_video_btn_videosuivante.png'), story_path(@next_video)
+      .visuel.col-lg-12
+        = image_tag "/assets/adesias/visuels/Visuels_#{@adesias_video.first_name}.png"
 
-  %p{:style => 'background-image: url(/assets/adesias/ad_video_cadre_video.png); background-repeat:no-repeat;width:640px;height:400px;margin: auto;'}
-    %iframe{:style => "margin:90px 25px auto;margin-top:14px;", :allowfullscreen => "", :frameborder => "0", :height => "328", :src => @adesias_video.description, :width => "588"}     
-    = image_tag '/assets/adesias/visuels/Visuels_' + @adesias_video.first_name + '.png' 
+.sharing_zone.col-lg-12
+  %p
+    .fb-share-button{"data-href" => @adesias_video.description, "data-type" => "button"}
+  %p
+    %a.twitter-share-button{"data-hashtags" => "OuiShareFest", "data-related" => "adesias", "data-url" => "https://www.youtube.com/watch?v=bnZiMM3EOEc", "data-via" => "ouishare", :href => "https://twitter.com/share"} Tweet
+    :javascript
+      !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
 
-/ Sharing Zone
-/ Check best practices on https://developers.facebook.com/docs/plugins/checklist/
-%p
-  .fb-share-button{"data-href" => @adesias_video.description, "data-type" => "button"}
-%p
-  %a.twitter-share-button{"data-hashtags" => "OuiShareFest", "data-related" => "adesias", "data-url" => "https://www.youtube.com/watch?v=bnZiMM3EOEc", "data-via" => "ouishare", :href => "https://twitter.com/share"} Tweet
-  :javascript
-    !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
+.other_video_block.col-lg-12
+  .other_video.col-lg-12
+    -if !@next_videos.blank?
+      .ch-grid
+        - @next_videos.each do |video|
+          .col-lg-4.individuals-list-display
+            %li
+              = link_to video.first_name, story_path(video), :id => video.first_name
+
+  
+/ %p
+/   %br
+/   = link_to image_tag('/assets/adesias/ad_video_btn_videoprecedente.png'), story_path(@previous_video) 
+/   = link_to image_tag('/assets/adesias/ad_video_btn_videosuivante.png'), story_path(@next_video) 
+/   %br
+/   = image_tag '/assets/adesias/quotes/C_' + @adesias_video.first_name + '.png'
+/   = image_tag '/assets/adesias/keywords/post-IT_' + @adesias_video.first_name + '.jpg'
+
+/   %p{:style => 'background-image: url(/assets/adesias/ad_video_cadre_video.png); background-repeat:no-repeat;width:640px;height:400px;margin: auto;'}
+/     %iframe{:style => "margin:90px 25px auto;margin-top:14px;", :allowfullscreen => "", :frameborder => "0", :height => "328", :src => @adesias_video.description, :width => "588"}     
+/     = image_tag '/assets/adesias/visuels/Visuels_' + @adesias_video.first_name + '.png' 
+
+/ / Sharing Zone
+/ / Check best practices on https://developers.facebook.com/docs/plugins/checklist/
 
 
-/ Zone autres videos
-%p
-  = image_tag '/assets/adesias/ad_video_zone_autresvideo.png' 
--if !@next_videos.blank?
-  .ch-grid
-    - @next_videos.each do |video|
-      .col-lg-4.individuals-list-display
-        %li
-          = link_to video.first_name, story_path(video), :id => video.first_name
+
+/ / Zone autres videos
+/ %p
+/   = image_tag '/assets/adesias/ad_video_zone_autresvideo.png' 
+/ -if !@next_videos.blank?
+/   .ch-grid
+/     - @next_videos.each do |video|
+/       .col-lg-4.individuals-list-display
+/         %li
+/           = link_to video.first_name, story_path(video), :id => video.first_name
