@@ -15,6 +15,32 @@
     background-image: url(/assets/adesias/ad_header2.png);
     height:210px;
     background-size: 100%;
+    margin-top: 52px;
+}
+
+.block_header{
+    display: inline-block;
+    width: 100%;
+    height: inherit;
+    position: relative;
+    .header_video_name_header{
+        font-family:'BebasNeue';
+        font-size:150px;
+        color:#FFF;
+        height: inherit;
+    }
+
+    .back_to_home_header{
+        height: inherit;
+        img{
+            float: left;
+            margin-top: 45px;
+        }
+    }
+}
+
+.clearboth{
+    clear: both;
 }
 
 .adesias_main_title
