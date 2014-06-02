@@ -5,7 +5,7 @@
     background-image: url(/assets/adesias/ad_background.jpg);
     width:100%;
     height:100%;
-    padding-top:50px;
+    padding: 50px 0 0 0;
 }
 
 .adesias_header{
@@ -18,128 +18,6 @@
     margin-top: 52px;
     position: relative;
     z-index: 10;
-}
-
-.block_header{
-    display: inline-block;
-    width: 100%;
-    height: inherit;
-    position: relative;
-    .header_video_name_header{
-        font-family:'BebasNeue';
-        font-size:150px;
-        color:#FFF;
-        height: inherit;
-    }
-
-    .back_to_home_header{
-        height: inherit;
-        img{
-            float: left;
-            margin-top: 45px;
-        }
-    }
-}
-
-.clearboth{
-    clear: both;
-}
-
-.video_box{
-    width: inherit;
-    margin-top: -40px;
-    .citation{
-        margin-top: 30px;
-        img{
-            margin-top: -60px;
-            margin-left: 5%;
-        }
-    }
-
-    .content{
-        z-index: 1;
-        width: 100%;
-        margin-top: -90px;
-        .col-center{
-            width: 45%;
-        }
-        .content_video{
-            padding: 0;
-            width: inherit;
-            .video_cadre{
-                background-image: url(/assets/adesias/ad_video_cadre_video.png);
-                background-repeat:no-repeat;
-                width:640px;
-                height:360px;
-                position: relative;
-            }
-        }
-        
-
-        .video_nav{
-            padding: 0;
-            margin-top: 35px;
-            .prev{
-                float: right;
-            }
-            .next{
-                float: left;
-                margin-left: 30px;
-            }
-        }
-
-        .post_it{
-            margin-left: 65px;
-            z-index: 10;
-        }
-
-        .visuel{
-            margin-top: 70px;
-        }
-    }   
-}
-
-.sharing_zone .infos{
-    font-family: 'BebasNeue';
-    font-size: 30px;
-    display: inline;
-    text-align: right;
-    
-    .bleu{
-        display: inline-block;
-        color: #00ACEE;
-        text-align: right;
-    }
-    .vert{
-        display: inline-block;
-        color: #518D91;
-        padding: 0;
-        text-align: right;
-    }
-    
-}
-
-.other_video_block{
-    width: 100%;
-    background-image: url(/assets/adesias/ad_video_zone_autresvideo.png);
-    background-size: 100% 100%;
-    height: 290px;
-    margin-top: 10px;
-    .other_video{
-        margin-top: 40px;
-
-        .individuals-list-display{
-            min-height: 189px;
-        }
-    }
-}
-
-.footer{
-    width: 100%;
-    height: 77px;
-    background-image: url(/assets/adesias/ad_footer.png);
-    background-size: 100% 100%;
-    margin-top: -15px;
 }
 
 .adesias_main_title
@@ -176,11 +54,154 @@
     background-position: left top;
     background-repeat: no-repeat;
     background-image: url('/assets/adesias/ad-zone-mozaicvideo.png');
-    background-size: 100%;    
+    background-size: 100%;
+    margin: 0;
+    .individuals-list-display{
+        min-height: 260px; 
+    }
+    
 }
 
 
+/********************************************************
+ *                     PAGE SHOW                        *
+ ********************************************************/
+.block_header{
+    display: inline-block;
+    width: 100%;
+    height: inherit;
+    position: relative;
+    .header_video_name_header{
+        font-family:'BebasNeue';
+        font-size:150px;
+        color:#FFF;
+        height: inherit;
+        -webkit-transform: rotate(-2deg); 
+        -moz-transform: rotate(-2deg); 
+    }
 
+    .back_to_home_header{
+        height: inherit;
+        img{
+            float: left;
+            margin-top: 45px;
+        }
+    }
+}
+
+.clearboth{
+    clear: both;
+}
+
+.video_box{
+    width: inherit;
+    margin-top: -40px;
+    .citation{
+        margin-top: 30px;
+        img{
+            margin-top: -60px;
+            margin-left: 5%;
+        }
+    }
+
+    .content{
+        z-index: 1;
+        width: 100%;
+        margin-top: -90px;
+        .content_video{
+            padding: 0;
+            .video_cadre{
+                background-image: url(/assets/adesias/ad_video_cadre_video.png);
+                background-repeat:no-repeat;
+                width:640px;
+                height:360px;
+                position: relative;
+            }
+        }
+        
+
+        .video_nav{
+            padding: 0;
+            margin-top: 35px;
+            .prev{
+                float: right;
+            }
+            .next{
+                float: left;
+                padding: 0;
+            }
+        }
+
+        .post_it{
+            margin-left: 65px;
+            z-index: 10;
+        }
+
+        .visuel{
+            margin-top: 70px;
+            img{
+                max-height: 180px;
+            }
+        }
+    }   
+}
+
+.sharing_zone .infos{
+    font-family: 'BebasNeue';
+    font-size: 30px;
+    display: inline;
+    text-align: right;
+    text-transform: uppercase;
+    line-height: 0.80;
+    .bleu{
+        display: inline-block;
+        color: #00ACEE;
+        text-align: right;
+        a{
+            color: #00ACEE;
+
+        }
+    }
+    .vert{
+        display: inline-block;
+        color: #518D91;
+        padding: 0;
+        text-align: right;
+        a{
+            font-size: 20px;
+            color: #518D91;
+        }
+    }
+    
+}
+
+.other_video_block{
+    width: 100%;
+    background-image: url(/assets/adesias/ad_video_zone_autresvideo.png);
+    background-size: 100% 100%;
+    height: 290px;
+    margin-top: 10px;
+    .other_video{
+        margin-top: 40px;
+
+        .individuals-list-display{
+            min-height: 189px;
+        }
+    }
+}
+
+.footer{
+    width: 100%;
+    height: 77px;
+    background-image: url(/assets/adesias/ad_footer.png);
+    background-size: 100% 100%;
+    margin-top: -15px;
+}
+
+
+/********************************************************
+ *                   OTHER DECLARATIONS                 *
+ ********************************************************/
 @font-face {
     font-family: 'BebasNeue';
     src: url('/assets/BebasNeue/BebasNeue Regular.otf') format('opentype');
