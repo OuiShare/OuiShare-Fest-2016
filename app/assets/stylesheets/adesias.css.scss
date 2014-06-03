@@ -104,8 +104,9 @@
         font-size:150px;
         color:#FFF;
         height: inherit;
+        margin-left: 6%;
         -webkit-transform: rotate(-2deg); 
-        -moz-transform: rotate(-2deg); 
+        -moz-transform: rotate(-2deg);
     }
 
     .back_to_home_header{
@@ -121,6 +122,10 @@
     clear: both;
 }
 
+.no-padding{
+    padding: 0!important;
+}
+
 .video_box{
     width: inherit;
     margin-top: -40px;
@@ -128,7 +133,7 @@
         margin-top: 30px;
         img{
             margin-top: -60px;
-            margin-left: 5%;
+            margin-left: 10%;
         }
     }
 
@@ -136,16 +141,20 @@
         z-index: 1;
         width: 100%;
         margin-top: -90px;
-        .content_video{
-            padding: 0;
-            .video_cadre{
-                background-image: url(/assets/adesias/ad_video_cadre_video.png);
-                background-repeat:no-repeat;
-                width:640px;
-                height:360px;
-                position: relative;
+        .col-center{
+            width: 625px;
+            .content_video{
+                padding: 0;
+                .video_cadre{
+                    background-image: url(/assets/adesias/ad_video_cadre_video.png);
+                    background-repeat:no-repeat;
+                    width:640px;
+                    height:360px;
+                    position: relative;
+                }
             }
         }
+        
         
 
         .video_nav{
@@ -178,6 +187,8 @@
     font-family: 'BebasNeue';
     font-size: 30px;
     display: inline;
+    width: 640px;
+    margin-left: 25%;
     text-align: right;
     text-transform: uppercase;
     line-height: 0.80;
@@ -199,6 +210,19 @@
             font-size: 20px;
             color: #518D91;
         }
+    }
+
+    #twitter-widget-0{
+        width: 90px!important;
+        height: 20px;
+        float: left;
+        margin-left: 10px;
+        margin-top: 4px;
+    }
+    .fb_iframe_widget{
+        float: left;
+        display: inline-block;
+        position: relative;
     }
     
 }
