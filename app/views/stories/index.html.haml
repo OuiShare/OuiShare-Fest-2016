@@ -1,7 +1,7 @@
 .container{:id =>'adesias_home'}
   .row
     .adesias_header
-      .block_header.col-lg-12
+      .block_header_index.col-lg-12
         .header_video_name_header.col-lg-12
           = "# AGE OF COMMUNITIES"
   .row.adesias_main_content.text-center
@@ -9,6 +9,7 @@
       = image_tag '/assets/adesias/ad_logo.png'
     .adesias_main_text
       At Adesias, we deeply believe in the collaborative economy, sharing economy, connected economy... whatever the name is! Thanks to the Ouishare team, this already worldwide movement was showcased in Paris at the OUISHAREFEST to discuss  "the age of communities". 
+      %br
       %br
       Here are 18 videos to meet the people making this happen. Some big stars, some great speakers, some small entrepreneurs - have a look at our discussions with the fucking inspiring people you could have met if you came!            
 
@@ -24,9 +25,9 @@
 
   .row.adesias_videos_index.centered
     -if !@adesias_videos.blank?
-      .ch-grid
+      .container_list_video_index
         - @adesias_videos.each do |video|
-          .col-lg-4.individuals-list-display
+          .col
             %li
               = link_to video.first_name, story_path(video), :id => video.first_name
   .footer

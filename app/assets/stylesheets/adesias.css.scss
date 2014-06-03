@@ -1,10 +1,15 @@
 @charset "utf-8";
 
+.container_adesias{
+    width: 100%;
+    background-image: url(/assets/adesias/ad_background.jpg);
+    height:100%;
+    padding: 50px 0 0 0;
+}
 #adesias_home{
     width:100% !important;
     background-image: url(/assets/adesias/ad_background.jpg);
-    width:100%;
-    height:100%;
+    min-height:100%;
     padding: 50px 0 0 0;
 }
 
@@ -29,22 +34,23 @@
 .adesias_main_content
 {
     width:100% !important;
-    background-position: center top;
-    background-repeat: no-repeat;
+    background-position: top right;
+    background-repeat: no-repeat; 
     background-image: url('/assets/adesias/ad_intro.png');
-    height:520px;    
+    background-size: 90% 100%;
+    height:512px;    
 }
 
 .adesias_main_logo
 {
-    margin: 0 0 0 20px;float:left;
+    margin: 0 0 0 8%;float:left;
 }
 
 .adesias_main_text
 {
     font-size:25px;
     font-family:'BebasNeue';
-    margin: 200px 560px 0px 280px;    
+    margin: 155px 450px 0px 230px;
 }
 
 .adesias_videos_index
@@ -60,7 +66,30 @@
     }
     
 }
-
+.block_header_index{
+    width: 88%;
+    height: inherit;
+    margin-left: 6%;
+    margin-right: 6%; 
+    .header_video_name_header{
+        font-family:'BebasNeue';
+        font-size:150px;
+        color:#FFF;
+        height: inherit;
+        -webkit-transform: rotate(-2deg); 
+        -moz-transform: rotate(-2deg); 
+    }
+}
+.container_list_video_index{
+    width: 100%;
+    padding: 0 14%;
+    margin: 50px 0;
+    .col{
+        display: inline-block;
+        width: 327px;
+        padding: 0 2.5px;
+    }
+}
 
 /********************************************************
  *                     PAGE SHOW                        *
