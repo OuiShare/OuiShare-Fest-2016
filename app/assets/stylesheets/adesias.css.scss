@@ -184,69 +184,83 @@
     }   
 }
 
-.sharing_zone .infos{
-    font-family: 'BebasNeue';
-    font-size: 30px;
-    display: inline;
-    width: 640px;
-    margin-left: 25%;
-    text-align: right;
-    text-transform: uppercase;
-    line-height: 0.80;
-    .bleu{
-        display: inline-block;
-        color: #00ACEE;
+
+.sharing_zone{
+    margin-bottom: 5%;
+    .infos{
+        font-family: 'BebasNeue';
+        font-size: 30px;
+        display: inline;
+        width: 640px;
+        margin-left: 25%;
         text-align: right;
-        a{
+        text-transform: uppercase;
+        line-height: 0.80;
+        .bleu{
+            display: inline-block;
             color: #00ACEE;
+            text-align: right;
+            a{
+                color: #00ACEE;
 
+            }
         }
-    }
-    .vert{
-        display: inline-block;
-        color: #518D91;
-        padding: 0;
-        text-align: right;
-    }
-
-    .vert.info_url{
-        display: inline-block;
-        color: #518D91;
-        text-align: right;
-        background-image: url(/assets/adesias/barre_jaune_info.png);
-        background-size: 100% 100%;
-        padding: 0px 0 5px 20px;
-        a{
-            font-size: 20px;
+        .vert{
+            display: inline-block;
             color: #518D91;
-            width: inherit;
+            padding: 0;
+            text-align: right;
         }
-    }
 
-    #twitter-widget-0{
-        width: 90px!important;
-        height: 20px;
-        float: left;
-        margin-left: 10px;
-        margin-top: 4px;
+        .vert.info_url{
+            display: inline-block;
+            color: #518D91;
+            text-align: right;
+            background-image: url(/assets/adesias/barre_jaune_info.png);
+            background-size: 100% 100%;
+            padding: 0px 0 5px 20px;
+            a{
+                font-size: 20px;
+                color: #518D91;
+                width: inherit;
+            }
+        }
+
+        #twitter-widget-0{
+            width: 90px!important;
+            height: 20px;
+            float: left;
+            margin-left: 10px;
+            margin-top: 4px;
+        }
+        .fb_iframe_widget{
+            float: left;
+            display: inline-block;
+            position: relative;
+        }
+        
     }
-    .fb_iframe_widget{
-        float: left;
-        display: inline-block;
-        position: relative;
-    }
-    
 }
 
 .other_video_block{
     width: 100%;
-    background-image: url(/assets/adesias/ad_video_zone_autresvideo.png);
+    background-image: url(/assets/adesias/video_zone_autresvideo.png);
     background-size: 100% 100%;
     height: 290px;
     margin-top: 10px;
-    .other_video{
-        margin-top: 40px;
 
+    .title{
+        color: #5694B8;
+        font-family: 'BebasNeue';
+        font-size: 80px;
+        font-weight: bold;
+        margin-top: -40px;
+        margin-left: 2%;
+    }
+    .other_video{
+        .container_list_video_index{
+            margin: 0;
+        }
         .individuals-list-display{
             min-height: 189px;
         }
