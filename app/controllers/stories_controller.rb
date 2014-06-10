@@ -38,7 +38,7 @@ class StoriesController < ApplicationController
     if !@next_video.nil?
       @next_video
     else
-      @adesias_videos.first(:order => 'id ASC')
+      @adesias_videos.first
     end
 
   end 
@@ -51,7 +51,7 @@ class StoriesController < ApplicationController
     if !@previous_video.nil?
       @previous_video
     else
-      @adesias_videos.first(:order => 'id DESC')
+      @adesias_videos.last
     end
   end
 
