@@ -46,7 +46,7 @@ class StoriesController < ApplicationController
   def get_previous_video
     @adesias_videos = IndividualType.find_by_title('adesias_videos').get_members
 
-    @previous_video = @adesias_videos.first(:conditions => ['individuals.id < ?', params[:id]], :order => 'id DESC')
+    @previous_video = @adesias_videos.last(:conditions => ['individuals.id < ?', params[:id]])
 
     if !@previous_video.nil?
       @previous_video
