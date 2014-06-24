@@ -70,7 +70,7 @@ class HomeController < ApplicationController
 
   end
 
-  def participants
+  def fest2014
 
     if IndividualType.find_by_title('Team')
       @team_members = IndividualType.find_by_title('Team').get_members
