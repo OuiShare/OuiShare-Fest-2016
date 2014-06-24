@@ -1,0 +1,130 @@
+#highlights.grey_bg#_highlights
+  .container
+    .row.centered
+      %h3.ouishare_stencil
+        = t('dynamic_translations.highlight.title_simple')
+        / Highlights from 2013
+    .row.centered
+      .col-md-9.span-centered.margin_25
+        %br
+        %br
+        %iframe{allowfullscreen: "", frameborder: "0", height: "315", src: "//www.youtube.com/embed/QiXmsACpfRY", width: "560"}   
+    .row.centered       
+      %p
+        %br
+        %br
+        = t('dynamic_translations.highlight.description_2014')
+        / In its first edition, OuiShare Fest brought together 700 attendees from 24 countries for a two-day conference-style event, followed by an open day featuring various collaborative economy initiatives with over 3000 visitors. Building on the success of our experiment in program co-design during this edition, we are taking this participative approach to the next level this year. To get a better impression of what OuiShare Fest is all about,
+        %br
+        %br
+
+    .row.mb_20
+      .col-md-2
+      .col-md-4
+        %a.btn.btn-large.btn-primary{href: "http://www.youtube.com/user/OuiShareTV", :target => "_blank"} 
+          = t('dynamic_translations.highlight.btn_watch_2014_sessions')
+          / Watch all sessions from 2013
+      .col-md-4
+        %a.btn.btn-large.btn-primary{href: "http://ouisharefest.com/stories", :target => "_blank"} 
+          = t('dynamic_translations.highlight.btn_see_2014_stories')
+          / See 2013 coverage
+
+.blue_bg#_speakers 
+  .container
+    .row.centered
+      %h3.ouishare_stencil.white
+        = t('dynamic_translations.speakers.title')
+      %hr
+      -if !@speakers.blank?
+        .ch-grid
+          - @speakers.each do |speaker|
+            .col-lg-3.individuals-list-display
+              %li
+                = render "/individuals/partials/speaker_display", :speaker => speaker
+
+.yellow_bg#_coverage
+  .container
+    .row.centered
+      %h3.ouishare_stencil
+        = t('dynamic_translations.coverage.title')
+      %br      
+      %br
+    
+    .row.centered.top-buffer
+
+      %iframe{ :src => "http://eventifier.com/event/ouisharefest/popular?full_embed=true", :width => "100%", :height => "1150px", :frameborder => "0"}
+    
+    .row.centered.top-buffer
+      %h3.ouishare_stencil
+        = t('dynamic_translations.live_reporting.stories')
+
+    .row.centered.top-buffer
+      .col-sm-12.col-md-6.col-lg-6
+        %iframe{ :src => "https://storify.com/OuiShare", :width => "100%", :height =>"674", :frameborder => "no", :allowtransparency => :true, :style => "margin:auto;"}
+
+      .col-sm-12.col-md-6.col-lg-6
+        %iframe{ :src => "http://blog.ouisharefest.com/", :width => "100%", :height =>"674", :frameborder => "no", :allowtransparency => :true, :style => "margin:auto;"}
+
+
+    .row.centered.top-buffer
+      %h3.ouishare_stencil
+        = t('dynamic_translations.live_reporting.listen')
+
+    .row.centered.top-buffer
+      %iframe{ :width => '940', :height => '546', :style => "-ms-zoom: 1; -moz-transform: scale(1); -moz-transform-origin: 0 0; -o-transform: scale(1); -o-transform-origin: 0 0; -webkit-transform: scale(1); -webkit-transform-origin: 0 0;", :src => "http://bobler.com/embedmap/app/index.html#/?id=2914", :frameborder => "0"}
+
+.blank_bg#_program
+  .container
+    .row.centered
+      %h3.ouishare_stencil
+        = t('dynamic_translations.2014program.title')
+      %br
+      %br
+    .row.centered
+      %a#sched-embed{:href => "http://ouisharefest14.sched.org/"}
+      %script{:type => "text/javascript", :src => "http://ouisharefest14.sched.org/js/embed.js"}
+
+.partners-container#_partners{:style => 'padding-top:130px'}
+  .container.sinfo
+    - if !@partners.blank?
+      .row.centered
+        %br
+        %h3.ouishare_stencil
+          = t('dynamic_translations.partners.title')
+        %hr.partners
+      = render "/individuals/partials/partners_display", :partners => @partners, :important_partners_display => true, :important_partners_count => 7
+      %br
+      %br
+
+    - if !@media_partners.blank?
+      .row.centered
+        %br
+        %h3.ouishare_stencil
+          = t('dynamic_translations.partners.media_partner_title')
+
+        %hr.partners
+      = render "/individuals/partials/partners_display", :partners => @media_partners, :important_partners_display => false
+
+      %br
+      %br
+
+    - if !@friends.blank?
+      .row.centered
+        %br
+        %h3.ouishare_stencil
+          = t('dynamic_translations.partners.friends_title')
+
+        %hr.partners
+      = render "/individuals/partials/partners_display", :partners => @friends, :important_partners_display => false
+
+      %br
+      %br
+
+    - if !@supporters.blank?
+      .row.centered
+        %br
+        %h3.ouishare_stencil
+          = t('dynamic_translations.partners.supporters_title')
+
+        %hr.partners
+      = render "/individuals/partials/partners_display", :partners => @supporters, :important_partners_display => false
