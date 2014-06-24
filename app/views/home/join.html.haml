@@ -1,33 +1,53 @@
-.triangle_bg#_tickets 
-  .container.tickets-section 
-    .row.centered
-      %h3.ouishare_stencil
-        = t('dynamic_translations.tickets.title')
-      %br      
-      %br
-      .container.round_fond
-        %h4{:style => "font-size:18px;"}
-          = t('dynamic_translations.tickets.description')
-          %a{href: "http://bit.ly/OSF14SponsoredTicketForm"} 
-            = t('dynamic_translations.tickets.apply_tickets_link')
+/ .triangle_bg#_tickets 
+/   .container.tickets-section 
+/     .row.centered
+/       %h3.ouishare_stencil
+/         = t('dynamic_translations.tickets.title')
+/       %br      
+/       %br
+/       .container.round_fond
+/         %h4{:style => "font-size:18px;"}
+/           = t('dynamic_translations.tickets.description')
+/           %a{href: "http://bit.ly/OSF14SponsoredTicketForm"} 
+/             = t('dynamic_translations.tickets.apply_tickets_link')
         
-          = t('dynamic_translations.tickets.sponsored_tickets')
-          %a{:href => "http://bit.ly/OSF14StudentForm"}
-            = t('dynamic_translations.tickets.sponsored_tickets_link')
-        %h4{:style => "font-size:18px;"}
-          =t('dynamic_translations.tickets.sponsored_tickets_text2')
+/           = t('dynamic_translations.tickets.sponsored_tickets')
+/           %a{:href => "http://bit.ly/OSF14StudentForm"}
+/             = t('dynamic_translations.tickets.sponsored_tickets_link')
+/         %h4{:style => "font-size:18px;"}
+/           =t('dynamic_translations.tickets.sponsored_tickets_text2')
+/       %br
+/       %div{:style => "width:100%; text-align:left;"}
+/         %iframe{:allowtransparency => "true", :frameborder => "0", :height => "800", :hspace => "0", :marginheight => "5", :marginwidth => "5", :scrolling => "auto", :src => "http://www.eventbrite.com/tickets-external?eid=10108670305&ref=etckt&v=2", :vspace => "0", :width => "100%"}
+/         %div{:style => "font-family:Helvetica, Arial; font-size:10px; padding:5px 0 5px; margin:2px; width:100%; text-align:left;"}
+/           %a{:href => "http://www.eventbrite.com/r/etckt", :style => "color:#ddd; text-decoration:none;", :target => "_blank"} 
+/             =t('dynamic_translations.tickets.event_registration_online')
+/           %span{:style => "color:#ddd;"} 
+/             =t('dynamic_translations.tickets.for')
+/           %a{:href => "https://www.eventbrite.es/e/ouishare-fest-2014-tickets-10108670305?ref=etckt", :style => "color:#ddd; text-decoration:none;", :target => "_blank"} OuiShare Fest 2014
+/           %span{:style => "color:#ddd;"} 
+/             =t('dynamic_translations.tickets.powered_by')
+/           %a{:href => "http://www.eventbrite.com?ref=etckt", :style => "color:#ddd; text-decoration:none;", :target => "_blank"} Eventbrite
+
+.blue_bg#_stayposted
+  .container
+    .row.centered
+      %h3.ouishare_stencil.white
+        = t('dynamic_translations.stayposted.title')
+      %hr
       %br
-      %div{:style => "width:100%; text-align:left;"}
-        %iframe{:allowtransparency => "true", :frameborder => "0", :height => "800", :hspace => "0", :marginheight => "5", :marginwidth => "5", :scrolling => "auto", :src => "http://www.eventbrite.com/tickets-external?eid=10108670305&ref=etckt&v=2", :vspace => "0", :width => "100%"}
-        %div{:style => "font-family:Helvetica, Arial; font-size:10px; padding:5px 0 5px; margin:2px; width:100%; text-align:left;"}
-          %a{:href => "http://www.eventbrite.com/r/etckt", :style => "color:#ddd; text-decoration:none;", :target => "_blank"} 
-            =t('dynamic_translations.tickets.event_registration_online')
-          %span{:style => "color:#ddd;"} 
-            =t('dynamic_translations.tickets.for')
-          %a{:href => "https://www.eventbrite.es/e/ouishare-fest-2014-tickets-10108670305?ref=etckt", :style => "color:#ddd; text-decoration:none;", :target => "_blank"} OuiShare Fest 2014
-          %span{:style => "color:#ddd;"} 
-            =t('dynamic_translations.tickets.powered_by')
-          %a{:href => "http://www.eventbrite.com?ref=etckt", :style => "color:#ddd; text-decoration:none;", :target => "_blank"} Eventbrite
+      %br
+      %p.text-center.white
+        = t('dynamic_translations.stayposted.subtitle')
+      %br
+      %br
+            
+      = form_tag home_newsletter_collect_email_path, :class => "form-inline" do
+        .row.text-center
+          .col-md-offset-3.col-md-4
+            = text_field_tag :email_address,"", :class => "form-control flat", :placeholder => t('dynamic_translations.main.placeholder_stay_posted')
+          .col-md-2.submit-email-button        
+            = submit_tag t('dynamic_translations.main.stay_posted'), :class => "btn btn-primary" 
 
 .grey_bg#_getinvolved{:style => 'padding-top:130px'}
   .get-involved-section
@@ -49,17 +69,13 @@
               %ul.centered.alt
                 %li.title
                   = t('dynamic_translations.get_involved.call_for_proposal')
-                %li{:style => "min-height:140px;"}
-                  = t('dynamic_translations.get_involved.option_1')
                 %li.button
-                  %a.btn.btn-large.button-call-to-action-option{href: "https://docs.google.com/forms/d/1xwFAL9C5AHZgBAeC6tGD6_eX0Ca1u00ZawZEueHczII/viewform", :target => "_blank"} 
+                  %a.btn.btn-large.button-call-to-action-option{href: "mailto:francesca@ouishare.net"} 
                     =t('dynamic_translations.get_involved.submit')
             .col-md-4.pricing-table.turquoise.bordered.plain
               %ul.centered.alt
                 %li.title
-                  =t('dynamic_translations.get_involved.idea_wall') 
-                %li{:style => "min-height:140px;"}
-                  = t('dynamic_translations.get_involved.option_3')
+                  =t('dynamic_translations.get_involved.idea_wall')
                 %li.button
                   %a.btn.btn-large.button-call-to-action-option{href: "http://awards.ouisharefest.com", :target => "_blank"}
                     = t('dynamic_translations.get_involved.idea_wall_button')
@@ -75,81 +91,82 @@
         .row
           .col-xs-12.col-md-6.col-lg-6
             %p.justify
-              = t('dynamic_translations.ouishare_awards.first_part')
+              
+              %br
+              %br
               %br
               %br
 
-              = t('dynamic_translations.ouishare_awards.second_part')
-              %br
-              %br
+              = t('dynamic_translations.ouishare_awards.first_part')
+
           .col-xs-12.col-md-6.col-lg-6
             %img{:src => '/assets/ouishare-award.png', :alt => 'ouishare awards logo'}
         .row
-          %a{:href => 'http://awards.ouisharefest.com/', :target => '_blank'}
+          %a{:href => 'http://awards.ouisharefest.com/#winners-2014', :target => '_blank'}
             %button.btn.btn-embossed.btn-primary
               = t('dynamic_translations.ouishare_awards.link')
-#_prepare.yellow_bg
-  .container
-    .row.centered
-      %h3.ouishare_stencil
-        = t('dynamic_translations.prepare_your_trip.title')
-      %br      
-      %br
-      .container
-        .row
-          .col-xs-12.col-md-6.col-lg-6
-            %p.text-left
-              = t('dynamic_translations.travel_information.title')
-            %p.text-left.little.justify
-              = t('dynamic_translations.travel_information.first_part')
-              %a.visible-link{:href => 'http://share.ouisharefest.com'}
-                = t('dynamic_translations.share_ouishare.link_title')
+/ #_prepare.yellow_bg
+/   .container
+/     .row.centered
+/       %h3.ouishare_stencil
+/         = t('dynamic_translations.prepare_your_trip.title')
+/       %br      
+/       %br
+/       .container
+/         .row
+/           .col-xs-12.col-md-6.col-lg-6
+/             %p.text-left
+/               = t('dynamic_translations.travel_information.title')
+/             %p.text-left.little.justify
+/               = t('dynamic_translations.travel_information.first_part')
+/               %a.visible-link{:href => 'http://share.ouisharefest.com'}
+/                 = t('dynamic_translations.share_ouishare.link_title')
                 
-              = t('dynamic_translations.travel_information.second_part')
+/               = t('dynamic_translations.travel_information.second_part')
               
-            .row
-              %a{:href => 'http://blog.ouisharefest.com/post/80157248886/ouishare-travel', :target => '_blank'}
-                %button.btn.btn-embossed.btn-primary
+/             .row
+/               %a{:href => 'http://blog.ouisharefest.com/post/80157248886/ouishare-travel', :target => '_blank'}
+/                 %button.btn.btn-embossed.btn-primary
                   
-                  = t('dynamic_translations.see_travel_options.link_title')
+/                   = t('dynamic_translations.see_travel_options.link_title')
 
 
-            %br
-            %p.text-left
-              = t('dynamic_translations.accomodation.title')
-            %p.text-left.little.justify
-              = t('dynamic_translations.accomodation.first_part')
+/             %br
+/             %p.text-left
+/               = t('dynamic_translations.accomodation.title')
+/             %p.text-left.little.justify
+/               = t('dynamic_translations.accomodation.first_part')
               
-              %a.visible-link{:href => 'https://www.couchsurfing.org/group.html?gid=56268'}
+/               %a.visible-link{:href => 'https://www.couchsurfing.org/group.html?gid=56268'}
                 
-                = t('dynamic_translations.couchsurfing_ouishare.link_title')
-              = t('dynamic_translations.accomodation.second_part')
+/                 = t('dynamic_translations.couchsurfing_ouishare.link_title')
+/               = t('dynamic_translations.accomodation.second_part')
                
-              %a.visible-link{:href => 'https://www.airbnb.fr/'}
-                Airbnb
-              = t('dynamic_translations.accomodation.third_part')
+/               %a.visible-link{:href => 'https://www.airbnb.fr/'}
+/                 Airbnb
+/               = t('dynamic_translations.accomodation.third_part')
               
-            .row
-              %a{:href => 'http://blog.ouisharefest.com/post/80157730873/yes-ouishare-accomodation', :target => '_blank'}
-                %button.btn.btn-embossed.btn-primary
+/             .row
+/               %a{:href => 'http://blog.ouisharefest.com/post/80157730873/yes-ouishare-accomodation', :target => '_blank'}
+/                 %button.btn.btn-embossed.btn-primary
                   
-                  = t('dynamic_translations.see_accommodation_options.link_title')
+/                   = t('dynamic_translations.see_accommodation_options.link_title')
 
 
-            %br
-            %p.text-left
-              = t('dynamic_translations.getting_to_venue.title')
+/             %br
+/             %p.text-left
+/               = t('dynamic_translations.getting_to_venue.title')
               
-            %p.text-left.little.justify
-              = t('dynamic_translations.getting_to_venue.first_part')
+/             %p.text-left.little.justify
+/               = t('dynamic_translations.getting_to_venue.first_part')
               
-            .row
-              %a{:href => 'http://blog.ouisharefest.com/post/80154771095/getting-to-the-venue-moving-around-paris', :target => '_blank'}
-                %button.btn.btn-embossed.btn-primary
-                  = t('dynamic_translations.see_map_instructions.link_title')
+/             .row
+/               %a{:href => 'http://blog.ouisharefest.com/post/80154771095/getting-to-the-venue-moving-around-paris', :target => '_blank'}
+/                 %button.btn.btn-embossed.btn-primary
+/                   = t('dynamic_translations.see_map_instructions.link_title')
                   
-          .col-xs-12.col-md-6.col-lg-6
-            %img{:src => '/assets/OuiShare_Fest_Map_large.png', :alt => 'ouishare coming map'}
+/           .col-xs-12.col-md-6.col-lg-6
+/             %img{:src => '/assets/OuiShare_Fest_Map_large.png', :alt => 'ouishare coming map'}
 
 
 
