@@ -83,12 +83,21 @@ class HomeController < ApplicationController
 
     if IndividualType.find_by_title('Speakers')
       @speakers = IndividualType.find_by_title('Speakers').get_members
+      
       if ENV["DISPLAYED_SPEAKERS"].to_i > @speakers.count
         displayed_speakers_number = @speakers.count
       else
         displayed_speakers_number = ENV["DISPLAYED_SPEAKERS"].to_i
       end
+
+      @displayed_speakers = @speakers.first(displayed_speakers_number)
+      @hidden_speakers = @speakers.last(@speakers.count - displayed_speakers_number)
+      @displayed_team_members = @team_members.first(displayed_team_members_number)
+      @hidden_team_members = @team_members.last(@team_members.count - displayed_team_members_number)
+
     end
+
+
 
     eventbrite_instance = connect_to_eventbrite()
     begin
