@@ -3,7 +3,7 @@
     .row.centered
       %h3.ouishare_stencil
         = t('dynamic_translations.highlight.title_simple')
-        / Highlights from 2013
+
     .row.centered
       .col-md-9.span-centered.margin_25
         %br
@@ -14,7 +14,7 @@
         %br
         %br
         = t('dynamic_translations.highlight.description_2014')
-        / In its first edition, OuiShare Fest brought together 700 attendees from 24 countries for a two-day conference-style event, followed by an open day featuring various collaborative economy initiatives with over 3000 visitors. Building on the success of our experiment in program co-design during this edition, we are taking this participative approach to the next level this year. To get a better impression of what OuiShare Fest is all about,
+
         %br
         %br
 
@@ -23,17 +23,17 @@
       .col-md-4
         %a.btn.btn-large.btn-primary{href: "http://www.youtube.com/user/OuiShareTV", :target => "_blank"} 
           = t('dynamic_translations.highlight.btn_watch_2014_sessions')
-          / Watch all sessions from 2013
+
       .col-md-4
         %a.btn.btn-large.btn-primary{href: "http://ouisharefest.com/stories", :target => "_blank"} 
           = t('dynamic_translations.highlight.btn_see_2014_stories')
-          / See 2013 coverage
+
 
 .blue_bg#_speakers 
   .container
     .row.centered
       %h3.ouishare_stencil.white
-        = t('dynamic_translations.speakers.title')
+        = t('dynamic_translations.speakers.2014title')
       %hr
       -if !@displayed_speakers.blank?
         .ch-grid
@@ -62,7 +62,7 @@
   .container
     .row.centered
       %h3.ouishare_stencil
-        = t('dynamic_translations.coverage.title')
+        = t('dynamic_translations.coverage.2014title')
       %br      
       %br
     
@@ -72,13 +72,11 @@
     
     .row.centered.top-buffer
       %h3.ouishare_stencil
-        = t('dynamic_translations.live_reporting.stories')
+        = t('dynamic_translations.live_reporting.2014stories')
 
     .row.centered.top-buffer
-      .col-sm-12.col-md-6.col-lg-6
-        %iframe{ :src => "http://storify.com/OuiShare", :width => "100%", :height =>"674", :frameborder => "no", :allowtransparency => :true, :style => "margin:auto;"}
 
-      .col-sm-12.col-md-6.col-lg-6
+      .col-sm-12.col-md-12.col-lg-12
         %iframe{ :src => "http://blog.ouisharefest.com/", :width => "100%", :height =>"674", :frameborder => "no", :allowtransparency => :true, :style => "margin:auto;"}
 
 
@@ -95,7 +93,7 @@
       .row.centered
         %br
         %h3.ouishare_stencil
-          = t('dynamic_translations.partners.title')
+          = t('dynamic_translations.partners.2014title')
         %hr.partners
       = render "/individuals/partials/partners_display", :partners => @partners, :important_partners_display => true, :important_partners_count => 7
       %br
@@ -105,7 +103,7 @@
       .row.centered
         %br
         %h3.ouishare_stencil
-          = t('dynamic_translations.partners.media_partner_title')
+          = t('dynamic_translations.partners.2014media_partner_title')
 
         %hr.partners
       = render "/individuals/partials/partners_display", :partners => @media_partners, :important_partners_display => false
@@ -117,7 +115,7 @@
       .row.centered
         %br
         %h3.ouishare_stencil
-          = t('dynamic_translations.partners.friends_title')
+          = t('dynamic_translations.partners.2014friends_title')
 
         %hr.partners
       = render "/individuals/partials/partners_display", :partners => @friends, :important_partners_display => false
@@ -129,7 +127,7 @@
       .row.centered
         %br
         %h3.ouishare_stencil
-          = t('dynamic_translations.partners.supporters_title')
+          = t('dynamic_translations.partners.2014supporters_title')
 
         %hr.partners
       = render "/individuals/partials/partners_display", :partners => @supporters, :important_partners_display => false
