@@ -4,7 +4,9 @@ gem 'rails', '3.2.13'
 
 gem 'nokogiri'
 
-gem 'pg', '0.17.0'
+gem 'pg', '0.17.1'
+
+gem 'feedjira'
 
 #JS Runtimes to enable JS compatibility on Unix Server
 gem 'therubyracer', :platforms => :ruby

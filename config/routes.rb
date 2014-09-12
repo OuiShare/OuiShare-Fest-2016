@@ -2,6 +2,7 @@ OuiShareFest::Application.routes.draw do
 
   resources :traductions
   resources :individual_types
+  resources :magazines
 
   # SetLanguage routes
   namespace :set_language do
