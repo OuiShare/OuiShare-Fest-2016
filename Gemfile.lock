@@ -84,6 +84,7 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.6.3)
+    curb (0.8.6)
     debug_inspector (0.0.2)
     devise (3.2.2)
       bcrypt-ruby (~> 3.0)
@@ -109,6 +110,10 @@ GEM
       multi_json (>= 1.3)
       rack-oauth2 (>= 0.14.4)
       tzinfo
+    feedjira (1.4.0)
+      curb (~> 0.8)
+      loofah (~> 2.0)
+      sax-machine (~> 1.0)
     figaro (0.7.0)
       bundler (~> 1.0)
       rails (>= 3, < 5)
@@ -150,6 +155,8 @@ GEM
     jwt (0.1.8)
       multi_json (>= 1.5)
     libv8 (3.16.14.3)
+    loofah (2.0.1)
+      nokogiri (>= 1.5.9)
     mail (2.5.4)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
@@ -196,8 +203,8 @@ GEM
       activesupport (>= 3.0.0)
       cocaine (~> 0.5.3)
       mime-types
-    pg (0.17.0)
-    pg (0.17.0-x86-mingw32)
+    pg (0.17.1)
+    pg (0.17.1-x86-mingw32)
     polyglot (0.3.3)
     rack (1.4.5)
     rack-cache (1.2)
@@ -254,6 +261,7 @@ GEM
       railties (~> 3.2.0)
       sass (>= 3.1.10)
       tilt (~> 1.3)
+    sax-machine (1.0.0)
     sexp_processor (4.4.1)
     sprockets (2.2.2)
       hike (~> 1.2)
@@ -307,6 +315,7 @@ DEPENDENCIES
   execjs
   factory_girl_rails
   fb_graph
+  feedjira
   figaro
   geoip
   gmaps4rails (= 1.5.6)
@@ -327,7 +336,7 @@ DEPENDENCIES
   omniauth-linkedin-oauth2!
   omniauth-twitter!
   paperclip
-  pg (= 0.17.0)
+  pg (= 0.17.1)
   railroady
   rails (= 3.2.13)
   rails-i18n (~> 3.0.0.pre)

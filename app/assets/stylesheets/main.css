@@ -402,7 +402,7 @@ body {
 }
 
 .triangle_bg {
-	background: url(/assets/fond_vert.png) repeat center top;
+	background: url(/assets/fond_vert.jpg) repeat center top;
 	background-color: #33FF99;
 	margin-top: 0px;
 	padding-top: 130px;
@@ -429,7 +429,7 @@ body {
 }
 
 .grey_bg {
-	background: url(/assets/fond_gris.png) repeat right top;
+	background: url(/assets/fond_gris.jpg) repeat right top;
 	margin-top: 0px;
 	padding-top: 130px;
 	padding-bottom: 100px;
@@ -460,7 +460,7 @@ body {
 }
 
 .blue_bg {
-	background: url(/assets/fond_bleu.png) repeat center top;
+	background: url(/assets/fond_bleu.jpg) repeat center top;
 
 	/*background-color: #33FF99; */
 	margin-top: 0px;
@@ -477,7 +477,7 @@ body {
 }
 
 .yellow_bg {
-	background: url(/assets/fond_jaune.png) repeat center top;
+	background: url(/assets/fond_jaune.jpg) repeat center top;
 
 	/*background-color: #33FF99; */
 	margin-top: 0px;
