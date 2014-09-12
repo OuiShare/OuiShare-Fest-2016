@@ -6,8 +6,8 @@
         %span.icon-bar
         %span.icon-bar
         %span.icon-bar
-      %a.navbar-brand{href: root_path} 
-        = image_tag "/assets/logo_ouishare_2015.png", :class => "header-logo"
+      %a.navbar-brand.nopadding{href: root_path} 
+        = image_tag "/assets/logo_ouishare_fest_2015.png", :class => "header-logo"
         
     .navbar-collapse.collapse
       %ul.nav.navbar-nav
@@ -45,9 +45,9 @@
             %li
               %a{href: "fest2014#_speakers"}
                 = t('dynamic_translations.speakers.title')
-            %li
-              %a{href: "participants#_team"}
-                = t('dynamic_translations.team.title')
+            / %li
+            /   %a{href: "participants#_team"}
+            /     = t('dynamic_translations.team.title')
             %li
               %a{href: "fest2014#_coverage"}
                 = t('dynamic_translations.coverage.title')
