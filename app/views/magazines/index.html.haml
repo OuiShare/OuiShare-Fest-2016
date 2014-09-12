@@ -1,0 +1,18 @@
+- @magazines.each do |f|
+  %li
+    %a{href: "#{f.url}", target:"blank"}
+      %h5.title
+        = truncate(f.name, length: 70)
+      %img.article{src: "#{f.content.split(' ')[3].split('"')[1]}"}
+      %div.author
+        / - author = User.where(name: f.author).first
+        / - if author.present?
+        /   %img.avatar{src:"#{author.avatar_url(45)}"}
+        / %p.name 
+        /   = "by #{f.author}"
+        %p.date 
+          = f.published_at
+    %div.tags
+      - if f.tags.present?
+        - f.tags[0..2].each do |t|
+          %span.label.blue = t
