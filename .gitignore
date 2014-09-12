@@ -30,3 +30,9 @@ config/locales/individuals*
 config/locales/old en:fr/en.yml
 
 config/locales/old en:fr/fr.yml
+
+config/locales/en.yml
+
+config/locales/fr.yml
+
+config/initializers/locale.rb
