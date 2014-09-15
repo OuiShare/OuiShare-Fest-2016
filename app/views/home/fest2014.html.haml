@@ -57,7 +57,39 @@
                 %button.btn.btn-embossed.btn-primary.hide#btn_showspeakers_up
                   = t('dynamic_translations.speakers.hide_all')
 
-
+.blank_bg#_team
+  .container
+    .row.centered
+      %h3.ouishare_stencil
+        =t('dynamic_translations.team.title')     
+      %hr
+      - if !@team_members.blank?
+        .ch-grid
+          - @team_members.each do |team_member|
+            .col-lg-3.individuals-list-display
+              %li
+                = render "/individuals/partials/team_member_display", :team_member => team_member          
+          / - if !@hidden_team_members.blank?
+          /   %div
+          /     #allteam_members{style: "display: none;"}  
+          /       - @hidden_team_members.each do |team_member|
+          /         .col-lg-3.individuals-list-display
+          /           %li
+          /             = render "/individuals/partials/team_member_display", :team_member => team_member           
+          /     %div.row
+          /       %a#btn_team_members_down
+          /         %button.btn.btn-embossed.btn-primary 
+          /           = t('dynamic_translations.team.show_all')
+          /     %div.row  
+          /       %a.hide#btn_team_members_up            
+          /         %button.btn.btn-embossed.btn-primary
+          /           = t('dynamic_translations.team.hide_all')
+      %br
+      %br
+      .container
+        %p
+          =t('dynamic_translations.team.description')
+          
 .yellow_bg#_coverage
   .container
     .row.centered
