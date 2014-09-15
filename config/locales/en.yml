@@ -1,0 +1,273 @@
+---
+en:
+  dynamic_translations:
+    speakers:
+      title: Contributors
+      show_all: Show all the speakers
+      hide_all: Hide speakers
+      2014title: 2014 Contributors
+    about:
+      description: OuiShare Fest is a three-day festival that brings together 1000
+        actors from the collaborative economy in Paris each year.
+      title: About
+      subtitle: '1000 collaborative economy visionaries, coming together for three
+        days of conference, co-creating and connecting. '
+      the_event: About the event
+    main:
+      title: The Age of Communities
+      event: Paris. May 5-7 at Cabaret Sauvage
+      subtitle: A three-day festival about the collaborative economy
+      follow_event: Follow the event live
+      live: Live!
+      placeholder_stay_posted: Write your email here
+      stay_posted: Stay posted
+    what_is_community:
+      text3: If you are ready for a unique experience which will produce knowledge,
+        accelerate projects and foster new collaborations, then join us in Paris for
+        our next edition.
+      text2: OuiShare Fest gathers entrepreneurs and social innovators, non-profit
+        and business leaders, grassroots activists and public officials in one place
+        to build a common vision of a collaborative society.
+      text1: Connected by shared values, knowledge, resources or by digital and physical
+        spaces, communities are transforming cities, organizations and civic action
+        everywhere in the world. They are driving movements such as collaborative
+        consumption, open source, makers and fablabs, coworking, crowdfunding, alternative
+        currencies and more. How do these pieces fit together? What is the bigger
+        picture?
+    partners:
+      title: Partners
+      become_a_partner: If you would like to become a partner, please contact us at
+      friends_title: Friends
+      media_partner_title: Media partners
+      supporters_title: Supporters
+      2014friends_title: 2014 Friends
+      2014media_partner_title: 2014 Media partners
+      2014supporters_title: 2014 Supporters
+      2014title: 2014 Partners
+    report:
+      title: Report
+      2014_title: OuiShare Fest 2014 Report
+      2014_description: This report tells the story behind OuiShare Fest 2014 and highlights important insights and lessons learned throughout its organization, as well as facts and figures. 
+      link: View full report
+    get_involved:
+      title: Get Involved
+      description: As the next OuiShare Fest comes closer, there will be many ways
+        you can get involved in its organization or participate as a partner.
+      option_1: We invite you to organize OuiShare Fest satellite events in Paris
+        for the evenings of day 1 and 2 , or where ever you like in the world! Just
+        fill out the form below and we'll get in touch!
+      option_2: 'We''d love you to join the OuiShare Fest team as a volunteer before
+        or during the event! Just fill out the form below and tell us how you would
+        like to help. '
+      option_3: Are you an early-stage startup or project from the Collaborative Economy?
+        Then you can apply for a OuiShare Award or vote for a project!
+      call_for_proposal: Would you like to join the project?
+      submit: Join the Fest team
+      join_the_team: 'Become a volunteer '
+      join: Join
+      idea_wall: Would like to join the Fest as a company or organization?
+      idea_wall_button: Become a Fest partner
+    links:
+      title: Links
+    link:
+      sample_link: Sample link
+    tickets:
+      title: BUY TICKETS
+      description: We would like to create an event that anyone can join. There are
+        many ways you can receive a free ticket, from contributing to the festival
+        by co-creating a session, to becoming a volunteer or team member. If you are
+        unable to contribute to the event organization,
+      apply_tickets_link: you can apply for a sponsored ticket.
+      sponsored_tickets: "If you are a student, you can apply for a\r\n"
+      who_s_coming: See who's coming
+      show_all_attendees: Show all the attendees
+      event_registration_online: Event registration online
+      for: for
+      powered_by: Powered by
+      hide_all_attendees: Hide attendees
+      sponsored_tickets_link: student discount
+      sponsored_tickets_text2: All tickets include food, drinks and access to the
+        OuiShare party on the 3rd day.
+      short_description: There are many ways to join and contribute to the event.
+      find_out_more: Click here to find out more
+      register_for_free: Register for free
+    team:
+      title: Team
+      description: OuiShare is a global network empowering citizens, public institutions
+        and companies to build a society in which every person has access to the resources
+        and opportunities they need to thrive. We believe that an economy based on
+        sharing, collaboration and openness can solve many of the complex challenges
+        the world faces.
+      show_all: Show all
+      hide_all: Hide team members
+    footer:
+      general_questions: 'General questions:'
+      volunteers: 'Volunteers:'
+      partners_sponsors: 'Partners  Sponsors:'
+      press: Press
+      location: Location
+      contact: Contact
+      download_press_kit: Download press kit
+      press_contact: 'For a press pass, please send an email to '
+    blog:
+      title: Blog
+    involve_popup:
+      line1: You have ideas for the OuiShare Fest program or would like to propose
+        a session?
+      line2: You have till February 24th to submit them to our
+      callforproposals: call for proposals
+      close: Close
+    reminder_ticket:
+      line1: 'Reminder: early bird ticket sales end this Sunday, March 2nd! '
+      getyourtickets: Get your tickets
+    highlight:
+      title: Highlights from 2014
+      description: In its first edition, OuiShare Fest brought together 700 attendees
+        from 24 countries for a two-day conference-style event, followed by an open
+        day featuring various collaborative economy initiatives with over 3000 visitors.
+        Building on the success of our experiment in program co-design during this
+        edition, we are taking this participative approach to the next level this
+        year. To get a better impression of what OuiShare Fest is all about,
+      btn_watch_all_sessions: Watch all sessions from 2013
+      btn_see_coverage: See 2013 coverage
+      title_simple: Highlights
+      see_video_2014: See videos from 2014 sessions
+      description_2014: In its second edition, OuiShare Fest brought together 1000
+        participants from 30 countries for a three-day conference-style event, which
+        was co-designed with over 140 contributors.
+      btn_watch_2014_sessions: Watch 2014 sessions
+      btn_see_2014_stories: See 2014 stories
+    location:
+      title: A Magical Location
+      description: 'We look forward to welcoming you at the Cabaret Sauvage in northeastern
+        Paris: a magical venue with a circus-like hall, located by the canal in the
+        Parc de la Villette. '
+    press:
+      title: What The Press Says
+      press_coverage: Press Coverage
+    testimonials:
+      title: Testimonials
+      hansschoenburg: OuiShare Fest 2013 was a great opportunity to connect in real
+        life with people from so many different countries and backgrounds involved
+        in the collaborative economy
+      albertobandolini: Coming to OuiShare Fest gave me many good ideas on of how
+        to interact with my customers
+      michelbauwens: If you want to meet the pioneers making this peer-to-peer revolution
+        happen, you can't miss OuiShare Fest, the gathering of social hackers that
+        are profoundly changing the way we create and share value
+    participants:
+      title: Participants
+    program:
+      main_schedule: Main Schedule
+      satellite_events: The Satellite Events
+      ouishare_village: OuiShare Village at Foire de Paris
+      title: Program
+    ouishare_awards:
+      title: Ouishare Awards
+      description: Hello, i'm the text talking about OuiShare Awards, please write
+        me ^-^
+      link: See 2014 Winners
+      first_part: The OuiShare Awards put exceptional collaborative economy initiatives
+        from across the globe in the spotlight and provide them with support to develop
+        further. Applications for the next round of the OuiShare Awards will be opened
+        in early 2015.
+      second_part: The 2014 OuiShare Awards put exceptional collaborative economy
+        initiatives from across the globe in the spotlight and provide them with support
+        to develop further. Since the awards will be given on the third day of OuiShare
+        Fest, all nominees are invited to the festival to present their projects.
+    prepare_trip:
+      title: Prepare Your Trip
+    join:
+      title: Join
+    prepare_your_trip:
+      title: Prepare your Trip
+    travel_information:
+      title: Travel information
+      first_part: Coming from far away? You are not the only one! Connect with other
+        participants on our special
+      second_part: to share rides, couches and more, or take a look at our overview
+        of collaborative and traditional travel options to Paris
+    share_ouishare:
+      link_title: OuiShare Fest sharing platform
+    see_travel_options:
+      link_title: see all travel options
+    accomodation:
+      title: Accommodation
+      first_part: This is your first time in Paris and you don’t know anybody yet?
+        Then you should make friends, get a good night’s sleep and save money by finding
+        an nice accommodation on the
+      second_part: or our official hosting partner
+      third_part: ', for which you can receive a OuiShare Fest discount code of 15
+        €.'
+    couchsurfing_ouishare:
+      link_title: OuiShare community group on Couchsurfing
+    see_accommodation_options:
+      link_title: see all accommodation options
+    getting_to_venue:
+      title: Getting to the venue
+      first_part: Don’t want to get lost in Paris and make sure not to miss your favorite
+        session? The Cabaret Sauvage is accessible both from the “Porte de la Villette”
+        & “Porte de Pantin” Metro stations, by taking either line 5 or 7.
+    see_map_instructions:
+      link_title: see map and instructions
+    main_schedule:
+      title: Main Schedule
+      first_part: The OuiShare Fest program is being co-created with our community
+        based on over 150 submissions to our open call for proposals. You can see
+        all confirmed sessions below, but the program will grow and evolve till the
+        day the festival begins.
+      second_part: To make this a truly collaborative experience, the festival will
+        feature 3 days of interactive sessions in 4 areas, mixing traditional formats
+        such as keynotes, panels and Q & As’ with participative formats such as unpanels,
+        co-creation workshops, networking sessions, and many more you have never heard
+        of.
+    satellite_events:
+      title: Satellite Events
+      text: OuiShare Fest will not only happen at the Cabaret Sauvage. On the evenings
+        of March 5th and 6th, there will be satellite events all over Paris and all
+        over the world. If your organization, coworking space, startup or other would
+        like to host a satellite event, please fill out the form below and we'll get
+        in touch!
+    satellite_event:
+      link_title: host a satellite event
+    readmore:
+      title: Read more
+    sharing_fair:
+      title: Sharing Fair
+      text: During afternoon of May 7th, we invite the public to join our Sharing
+        Fair to meet and connect with the collaborative economy’s most innovative
+        projects and OuiShare members from around the globe! And if you are looking
+        for your dream job, you will have the opportunity to participate in speed
+        recruiting sessions with your favorite companies and projects!
+    tooltip:
+      orange: Operating in 30 countries, the Orange Group serves over 236 million
+        customers, including 178 million mobile customers and 15 million high speed
+        fixed line customers worldwide. As such, the Group has a major role to play
+        in accelerating the spread of the digital transformation and supporting innovations
+        that encourage economic, social, environmental progress. Because Orange believes
+        that the digital resources can support the emerging of new, more responsible,
+        more cooperative and fairer economic models, it strives to support initiatives
+        that help to accelerate this shift.
+    love_party:
+      title: OuiShare Love Party
+      text: To bring OuiShare Fest to a close, join us on May 7th for an all-night
+        long party at our magical event venue, the Cabaret Sauvage.
+      see_lineup: See the lineup
+    live_reporting:
+      title: Live from OuiShare Fest 2014
+      paragraph: See what's happening now
+      stories: Stories
+      listen: Listen
+      2014stories: 2014 Stories
+    fest2014:
+      title: Fest 2014
+    coverage:
+      title: Coverage
+      2014title: 2014 Coverage
+    2014program:
+      title: 2014 Program
+    stayposted:
+      title: Stay posted
+      subtitle: Interested in OuiShare Fest 2015?
+      subtitle2: Sign-up for updates below and you’ll be the first to know when early
+        bird ticket sales open!
