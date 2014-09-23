@@ -36,6 +36,8 @@ gem 'turbolinks'
 gem 'paperclip'
 gem 'aws-sdk'
 
+gem 'exception_notification'
+
 # Front-end
 gem 'jquery-rails'
 
