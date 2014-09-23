@@ -97,6 +97,9 @@ GEM
     eventbrite-client (0.1.4)
       httparty (~> 0.8.0)
       tzinfo (~> 0.3.22)
+    exception_notification (4.0.1)
+      actionmailer (>= 3.0.4)
+      activesupport (>= 3.0.4)
     execjs (2.0.2)
     factory_girl (4.3.0)
       activesupport (>= 3.0.0)
@@ -312,6 +315,7 @@ DEPENDENCIES
   coffee-rails (~> 3.2.1)
   devise
   eventbrite-client
+  exception_notification
   execjs
   factory_girl_rails
   fb_graph
