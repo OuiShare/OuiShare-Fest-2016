@@ -97,13 +97,18 @@ class HomeController < ApplicationController
 
     end
 
-
-
-    eventbrite_instance = connect_to_eventbrite()
+    def participants
+      eb_auth_tokens = { app_key: ENV['EVENTBRITE_APP_KEY'],
+                   access_token: ENV['EVENTBRITE_USER_KEY']}
+      eb_client = EventbriteClient.new(eb_auth_tokens)
+      eventbrite_instance = connect_to_eventbrite()
     begin
       @ouishare_fest_attendees = eventbrite_instance.event_list_attendees({ "id" => ENV["EVENTBRITE_EVENT_ID"] })
+      #@ouishare_fest_attendees = eb_client.event_list_attendees({ "id" => ENV["EVENTBRITE_EVENT_ID"] })
     rescue
       @ouishare_fest_attendees = nil
+    end
+
     end
 
 

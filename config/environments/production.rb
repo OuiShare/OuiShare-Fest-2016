@@ -92,6 +92,13 @@ OuiShareFest::Application.configure do
   # with SQLite, MySQL, and PostgreSQL)
   # config.active_record.auto_explain_threshold_in_seconds = 0.5
 
+  OuiShareFest::Application.config.middleware.use ExceptionNotification::Rack,
+  :email => {
+    :email_prefix => "[OuiShareFest ERR] ",
+    :sender_address => %{"OuiShare Team" <no-reply@ouisharefest.com>},
+    :exception_recipients => %w{karim.mortabit@gmail.com}
+  }
+  
   GA.tracker = ENV["GA_CREDENTIALS"]
 
 end
