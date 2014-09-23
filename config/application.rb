@@ -62,7 +62,14 @@ module OuiShareFest
     config.assets.paths << "#{Rails.root}/app/assets/fonts"
 
     # Version of your assets, change this if you want to expire all your assets
-    config.assets.version = '1.0'
+    config.assets.version = '1.0' 
+
+      OuiShareFest::Application.config.middleware.use ExceptionNotification::Rack,
+      :email => {
+        :email_prefix => "[OuiShareFest ERR] ",
+        :sender_address => %{"OuiShare Team" <no-reply@ouisharefest.com>},
+        :exception_recipients => %w{karim.mortabit@gmail.com}
+      }
 
     config.generators do |g|
       g.template_engine :haml
