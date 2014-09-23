@@ -25,7 +25,7 @@ translations/*
 config/locales/ouishare*
 config/locales/individuals*
 
-
+config/application.yml
 config/locales/old en:fr/en.yml
 
 config/locales/old en:fr/fr.yml
