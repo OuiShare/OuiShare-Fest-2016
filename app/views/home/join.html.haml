@@ -29,27 +29,27 @@
             =t('dynamic_translations.tickets.powered_by')
           %a{:href => "http://www.eventbrite.com?ref=etckt", :style => "color:#ddd; text-decoration:none;", :target => "_blank"} Eventbrite
 
-.blue_bg#_stayposted
-  .container
-    .row.centered
-      %h3.ouishare_stencil.white
-        = t('dynamic_translations.stayposted.title')
-      %hr
-      %br
-      %br
-      %p.text-center.white
-        = t('dynamic_translations.stayposted.subtitle')
-        %br
-        = t('dynamic_translations.stayposted.subtitle2')
-      %br
-      %br
+/ .blue_bg#_stayposted
+/   .container
+/     .row.centered
+/       %h3.ouishare_stencil.white
+/         = t('dynamic_translations.stayposted.title')
+/       %hr
+/       %br
+/       %br
+/       %p.text-center.white
+/         = t('dynamic_translations.stayposted.subtitle')
+/         %br
+/         = t('dynamic_translations.stayposted.subtitle2')
+/       %br
+/       %br
             
-      = form_tag home_newsletter_collect_email_path, :class => "form-inline" do
-        .row.text-center
-          .col-md-offset-3.col-md-4
-            = text_field_tag :email_address,"", :class => "form-control flat", :placeholder => t('dynamic_translations.main.placeholder_stay_posted')
-          .col-md-2.submit-email-button        
-            = submit_tag t('dynamic_translations.main.stay_posted'), :class => "btn btn-primary" 
+/       = form_tag home_newsletter_collect_email_path, :class => "form-inline" do
+/         .row.text-center
+/           .col-md-offset-3.col-md-4
+/             = text_field_tag :email_address,"", :class => "form-control flat", :placeholder => t('dynamic_translations.main.placeholder_stay_posted')
+/           .col-md-2.submit-email-button        
+/             = submit_tag t('dynamic_translations.main.stay_posted'), :class => "btn btn-primary" 
 
 .grey_bg#_getinvolved{:style => 'padding-top:130px'}
   .get-involved-section

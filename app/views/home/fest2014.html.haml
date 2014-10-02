@@ -29,95 +29,95 @@
           = t('dynamic_translations.highlight.btn_see_2014_stories')
 
 
-.blue_bg#_speakers 
-  .container
-    .row.centered
-      %h3.ouishare_stencil.white
-        = t('dynamic_translations.speakers.2014title')
-      %hr
-      -if !@displayed_speakers.blank?
-        .ch-grid
-          - @displayed_speakers.each do |speaker|
-            .col-lg-3.individuals-list-display
-              %li
-                = render "/individuals/partials/speaker_display", :speaker => speaker
-          - if !@hidden_speakers.blank?
-            %div
-              #allspeakers{style: "display: none;"}  
-                - @hidden_speakers.each do |speaker|
-                  .col-lg-3.individuals-list-display
-                    %li
-                      = render "/individuals/partials/speaker_display", :speaker => speaker              
-              %div.row.mb_20
-                %a#btn_showspeakers_down
-                  %button.btn.btn-embossed.btn-primary.mt_20
-                    = t('dynamic_translations.speakers.show_all')
+/ .blue_bg#_speakers 
+/   .container
+/     .row.centered
+/       %h3.ouishare_stencil.white
+/         = t('dynamic_translations.speakers.2014title')
+/       %hr
+/       -if !@displayed_speakers.blank?
+/         .ch-grid
+/           - @displayed_speakers.each do |speaker|
+/             .col-lg-3.individuals-list-display
+/               %li
+/                 = render "/individuals/partials/speaker_display", :speaker => speaker
+/           - if !@hidden_speakers.blank?
+/             %div
+/               #allspeakers{style: "display: none;"}  
+/                 - @hidden_speakers.each do |speaker|
+/                   .col-lg-3.individuals-list-display
+/                     %li
+/                       = render "/individuals/partials/speaker_display", :speaker => speaker              
+/               %div.row.mb_20
+/                 %a#btn_showspeakers_down
+/                   %button.btn.btn-embossed.btn-primary.mt_20
+/                     = t('dynamic_translations.speakers.show_all')
                     
-              %div.row.mb_20.mt_20
-                %button.btn.btn-embossed.btn-primary.hide#btn_showspeakers_up
-                  = t('dynamic_translations.speakers.hide_all')
+/               %div.row.mb_20.mt_20
+/                 %button.btn.btn-embossed.btn-primary.hide#btn_showspeakers_up
+/                   = t('dynamic_translations.speakers.hide_all')
 
-.blank_bg#_team
-  .container
-    .row.centered
-      %h3.ouishare_stencil
-        =t('dynamic_translations.team.title')     
-      %hr
-      - if !@team_members.blank?
-        .ch-grid
-          - @team_members.each do |team_member|
-            .col-lg-3.individuals-list-display
-              %li
-                = render "/individuals/partials/team_member_display", :team_member => team_member          
-          / - if !@hidden_team_members.blank?
-          /   %div
-          /     #allteam_members{style: "display: none;"}  
-          /       - @hidden_team_members.each do |team_member|
-          /         .col-lg-3.individuals-list-display
-          /           %li
-          /             = render "/individuals/partials/team_member_display", :team_member => team_member           
-          /     %div.row
-          /       %a#btn_team_members_down
-          /         %button.btn.btn-embossed.btn-primary 
-          /           = t('dynamic_translations.team.show_all')
-          /     %div.row  
-          /       %a.hide#btn_team_members_up            
-          /         %button.btn.btn-embossed.btn-primary
-          /           = t('dynamic_translations.team.hide_all')
-      %br
-      %br
-      .container
-        %p
-          =t('dynamic_translations.team.description')
+/ .blank_bg#_team
+/   .container
+/     .row.centered
+/       %h3.ouishare_stencil
+/         =t('dynamic_translations.team.title')     
+/       %hr
+/       - if !@team_members.blank?
+/         .ch-grid
+/           - @team_members.each do |team_member|
+/             .col-lg-3.individuals-list-display
+/               %li
+/ = render "/individuals/partials/team_member_display", :team_member => team_member          
+/ - if !@hidden_team_members.blank?
+/   %div
+/     #allteam_members{style: "display: none;"}  
+/       - @hidden_team_members.each do |team_member|
+/         .col-lg-3.individuals-list-display
+/           %li
+/             = render "/individuals/partials/team_member_display", :team_member => team_member           
+/     %div.row
+/       %a#btn_team_members_down
+/         %button.btn.btn-embossed.btn-primary 
+/           = t('dynamic_translations.team.show_all')
+/     %div.row  
+/       %a.hide#btn_team_members_up            
+/         %button.btn.btn-embossed.btn-primary
+/           = t('dynamic_translations.team.hide_all')
+/ %br
+/ %br
+/ .container
+/   %p
+/     =t('dynamic_translations.team.description')
           
-.yellow_bg#_coverage
-  .container
-    .row.centered
-      %h3.ouishare_stencil
-        = t('dynamic_translations.coverage.2014title')
-      %br      
-      %br
+/ .yellow_bg#_coverage
+/   .container
+/     .row.centered
+/       %h3.ouishare_stencil
+/         = t('dynamic_translations.coverage.2014title')
+/       %br      
+/       %br
     
-    .row.centered.top-buffer
+/     .row.centered.top-buffer
 
-      %iframe{ :src => "http://eventifier.com/event/ouisharefest/popular?full_embed=true", :width => "100%", :height => "1150px", :frameborder => "0"}
+/       %iframe{ :src => "http://eventifier.com/event/ouisharefest/popular?full_embed=true", :width => "100%", :height => "1150px", :frameborder => "0"}
     
-    .row.centered.top-buffer
-      %h3.ouishare_stencil
-        = t('dynamic_translations.live_reporting.2014stories')
+/     .row.centered.top-buffer
+/       %h3.ouishare_stencil
+/         = t('dynamic_translations.live_reporting.2014stories')
 
-    .row.centered.top-buffer
+/     .row.centered.top-buffer
 
-      .col-sm-12.col-md-12.col-lg-12
-        %iframe{ :src => "http://blog.ouisharefest.com/", :width => "100%", :height =>"674", :frameborder => "no", :allowtransparency => :true, :style => "margin:auto;"}
+/       .col-sm-12.col-md-12.col-lg-12
+/         %iframe{ :src => "http://blog.ouisharefest.com/", :width => "100%", :height =>"674", :frameborder => "no", :allowtransparency => :true, :style => "margin:auto;"}
 
 
-    .row.centered.top-buffer
-      %h3.ouishare_stencil
-        = t('dynamic_translations.live_reporting.listen')
+/     .row.centered.top-buffer
+/       %h3.ouishare_stencil
+/         = t('dynamic_translations.live_reporting.listen')
 
-    .row.centered.top-buffer
-      %iframe{ :width => '940', :height => '546', :style => "-ms-zoom: 1; -moz-transform: scale(1); -moz-transform-origin: 0 0; -o-transform: scale(1); -o-transform-origin: 0 0; -webkit-transform: scale(1); -webkit-transform-origin: 0 0;", :src => "http://bobler.com/embedmap/app/index.html#/?id=2914", :frameborder => "0"}
+/     .row.centered.top-buffer
+/       %iframe{ :width => '940', :height => '546', :style => "-ms-zoom: 1; -moz-transform: scale(1); -moz-transform-origin: 0 0; -o-transform: scale(1); -o-transform-origin: 0 0; -webkit-transform: scale(1); -webkit-transform-origin: 0 0;", :src => "http://bobler.com/embedmap/app/index.html#/?id=2914", :frameborder => "0"}
 
 .blank_bg#_report{:style => 'padding-top:130px'}
   .container
@@ -137,66 +137,68 @@
               = t('dynamic_translations.report.2014_description')
             %p.centered
               %br
-            
               %a{:href => 'http://bit.ly/OuiShareFest14_Report', :target => '_blank'}
                 %button.btn.btn-embossed.btn-primary
                   = t('dynamic_translations.report.link')
+              %a{:href => 'http://2014.ouisharefest.com', :target => '_blank'}
+                %button.btn.btn-embossed.btn-primary
+                  = t('dynamic_translations.report.old_site')
           .col-xs-12.col-md-6.col-lg-6
             %a{:href => 'http://bit.ly/OuiShareFest14_Report', :target => '_blank'}
               %img{:src => '/assets/osf_2014_report.jpg', :alt => 'OuiShare Fest 2014 Report'}
 
-.partners-container#_partners{:style => 'padding-top:130px'}
-  .container.sinfo
-    - if !@partners.blank?
-      .row.centered
-        %br
-        %h3.ouishare_stencil
-          = t('dynamic_translations.partners.2014title')
-        %hr.partners
-      = render "/individuals/partials/partners_display", :partners => @partners, :important_partners_display => true, :important_partners_count => 7
-      %br
-      %br
+/ .partners-container#_partners{:style => 'padding-top:130px'}
+/   .container.sinfo
+/     - if !@partners.blank?
+/       .row.centered
+/         %br
+/         %h3.ouishare_stencil
+/           = t('dynamic_translations.partners.2014title')
+/         %hr.partners
+/       = render "/individuals/partials/partners_display", :partners => @partners, :important_partners_display => true, :important_partners_count => 7
+/       %br
+/       %br
 
-    - if !@media_partners.blank?
-      .row.centered
-        %br
-        %h3.ouishare_stencil
-          = t('dynamic_translations.partners.2014media_partner_title')
+/     - if !@media_partners.blank?
+/       .row.centered
+/         %br
+/         %h3.ouishare_stencil
+/           = t('dynamic_translations.partners.2014media_partner_title')
 
-        %hr.partners
-      = render "/individuals/partials/partners_display", :partners => @media_partners, :important_partners_display => false
+/         %hr.partners
+/       = render "/individuals/partials/partners_display", :partners => @media_partners, :important_partners_display => false
 
-      %br
-      %br
+/       %br
+/       %br
 
-    - if !@friends.blank?
-      .row.centered
-        %br
-        %h3.ouishare_stencil
-          = t('dynamic_translations.partners.2014friends_title')
+/     - if !@friends.blank?
+/       .row.centered
+/         %br
+/         %h3.ouishare_stencil
+/           = t('dynamic_translations.partners.2014friends_title')
 
-        %hr.partners
-      = render "/individuals/partials/partners_display", :partners => @friends, :important_partners_display => false
+/         %hr.partners
+/       = render "/individuals/partials/partners_display", :partners => @friends, :important_partners_display => false
 
-      %br
-      %br
+/       %br
+/       %br
 
-    - if !@supporters.blank?
-      .row.centered
-        %br
-        %h3.ouishare_stencil
-          = t('dynamic_translations.partners.2014supporters_title')
+/     - if !@supporters.blank?
+/       .row.centered
+/         %br
+/         %h3.ouishare_stencil
+/           = t('dynamic_translations.partners.2014supporters_title')
 
-        %hr.partners
-      = render "/individuals/partials/partners_display", :partners => @supporters, :important_partners_display => false
+/         %hr.partners
+/       = render "/individuals/partials/partners_display", :partners => @supporters, :important_partners_display => false
 
-.blank_bg#_program
-  .container
-    .row.centered
-      %h3.ouishare_stencil
-        = t('dynamic_translations.2014program.title')
-      %br
-      %br
-    .row.centered
-      %a#sched-embed{:href => "http://ouisharefest14.sched.org/"}
-      %script{:type => "text/javascript", :src => "http://ouisharefest14.sched.org/js/embed.js"}
+/ .blank_bg#_program
+/   .container
+/     .row.centered
+/       %h3.ouishare_stencil
+/         = t('dynamic_translations.2014program.title')
+/       %br
+/       %br
+/     .row.centered
+/       %a#sched-embed{:href => "http://ouisharefest14.sched.org/"}
+/       %script{:type => "text/javascript", :src => "http://ouisharefest14.sched.org/js/embed.js"}
