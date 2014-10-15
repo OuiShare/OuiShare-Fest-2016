@@ -91,9 +91,9 @@
         /     %li
         /       %a{href: "program#_love_party"}
         /         = t('dynamic_translations.love_party.title')
-        %li.tickets-highlight.dropdown
+        %li.blog-highlight.dropdown
           %a.dropdown-toggle.highlight{href: "/join"}
-            =t('dynamic_translations.tickets.title')
+            =t('dynamic_translations.join.title')
           %ul.dropdown-menu
             %li
               %a{href: "join#_tickets"}
@@ -122,8 +122,10 @@
           /   %li
           /     %a{href: "/#_team"}
           /       =t('dynamic_translations.team.title')
-        
-        %li.tickets-highlight
+        %li.tickets-highlight.dropdown
+          %a.dropdown-toggle.highlight{href: "/join"}
+            =t('dynamic_translations.tickets.title')
+          / %li.tickets-highlight
           / %a.highlight{href: stories_path}
           /   = "#OSFest14 Stories"
         %li.blog-highlight

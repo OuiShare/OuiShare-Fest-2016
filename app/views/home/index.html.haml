@@ -253,13 +253,20 @@
       .row.get-involved-options-choice
         .col-md-9.span-centered
           .row
-            .col-md-4.pricing-table.turquoise.bordered.plain.col-md-offset-2
+            .col-md-4.pricing-table.turquoise.bordered.plain
               %ul.centered.alt
                 %li.title
                   = t('dynamic_translations.get_involved.call_for_proposal')
                 %li.button
-                  %a.btn.btn-large.button-call-to-action-option{href: "mailto:francesca@ouishare.net"} 
+                  %a.btn.btn-large.button-call-to-action-option{href: "#"} 
                     =t('dynamic_translations.get_involved.submit')
+            .col-md-4.pricing-table.turquoise.bordered.plain
+              %ul.centered.alt
+                %li.title
+                  =t('dynamic_translations.get_involved.idea_wall')
+                %li.button
+                  %a.btn.btn-large.button-call-to-action-option{href: "#"}
+                    = t('dynamic_translations.get_involved.idea_wall_button')
             .col-md-4.pricing-table.turquoise.bordered.plain
               %ul.centered.alt
                 %li.title
