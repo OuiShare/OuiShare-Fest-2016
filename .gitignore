@@ -33,3 +33,7 @@ config/locales/old en:fr/fr.yml
 config/locales/fr.yml
 
 config/initializers/locale.rb
+
+.powenv
+
+Gemfile.lock

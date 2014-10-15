@@ -7,18 +7,20 @@
       %br
       .container.round_fond
         %h4{:style => "font-size:18px;"}
-          = t('dynamic_translations.tickets.description')
+          = t('dynamic_translations.tickets.description1')
+          %a{href: "#_getinvolved"} 
+            = t('dynamic_translations.tickets.get_involved')
+          = t('dynamic_translations.tickets.description2')
           %a{href: "http://bit.ly/OSF14SponsoredTicketForm"} 
             = t('dynamic_translations.tickets.apply_tickets_link')
-        
-          = t('dynamic_translations.tickets.sponsored_tickets')
-          %a{:href => "http://bit.ly/OSF14StudentForm"}
-            = t('dynamic_translations.tickets.sponsored_tickets_link')
+        %br
         %h4{:style => "font-size:18px;"}
-          =t('dynamic_translations.tickets.sponsored_tickets_text2')
+          = t('dynamic_translations.tickets.sponsored_tickets_text2')
       %br
       %div{:style => "width:100%; text-align:left;"}
-        %iframe{:allowtransparency => "true", :frameborder => "0", :height => "800", :hspace => "0", :marginheight => "5", :marginwidth => "5", :scrolling => "auto", :src => "http://www.eventbrite.com/tickets-external?eid=13148891689&ref=etckt&v=2", :vspace => "0", :width => "100%"}
+        %iframe{:allowtransparency => "true", :frameborder => "0", :height => "420", :hspace => "0", :marginheight => "5", :marginwidth => "5", :scrolling => "auto", :src => "http://www.eventbrite.com/tickets-external?eid=13148891689&ref=etckt&v=2", :vspace => "0", :width => "100%"}
+        %p{:style => "font-size:14px;"}
+          = t('dynamic_translations.tickets.prices')
         %div{:style => "font-family:Helvetica, Arial; font-size:10px; padding:5px 0 5px; margin:2px; width:100%; text-align:left;"}
           %a{:href => "http://www.eventbrite.com/r/etckt", :style => "color:#ddd; text-decoration:none;", :target => "_blank"} 
             =t('dynamic_translations.tickets.event_registration_online')
@@ -67,13 +69,20 @@
       .row.get-involved-options-choice
         .col-md-9.span-centered
           .row
-            .col-md-4.pricing-table.turquoise.bordered.plain.col-md-offset-2
+            .col-md-4.pricing-table.turquoise.bordered.plain
               %ul.centered.alt
                 %li.title
                   = t('dynamic_translations.get_involved.call_for_proposal')
                 %li.button
-                  %a.btn.btn-large.button-call-to-action-option{href: "mailto:francesca@ouishare.net"} 
+                  %a.btn.btn-large.button-call-to-action-option{href: "#"} 
                     =t('dynamic_translations.get_involved.submit')
+            .col-md-4.pricing-table.turquoise.bordered.plain
+              %ul.centered.alt
+                %li.title
+                  =t('dynamic_translations.get_involved.idea_wall')
+                %li.button
+                  %a.btn.btn-large.button-call-to-action-option{href: "#"}
+                    = t('dynamic_translations.get_involved.idea_wall_button')
             .col-md-4.pricing-table.turquoise.bordered.plain
               %ul.centered.alt
                 %li.title

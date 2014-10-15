@@ -165,7 +165,6 @@ class HomeController < ApplicationController
     end
 
   def join
-    redirect_to root_path
   end
 
   def program
