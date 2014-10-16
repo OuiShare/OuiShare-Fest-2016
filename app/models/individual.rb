@@ -14,6 +14,8 @@ class Individual < ActiveRecord::Base
   :path => ":rails_root/public/system/:class_name_individual/:id/attachment/:style_:attachment",
   :url => "/system/:class_name_individual/:id/attachment/:style_:attachment"
 
+  validates_attachment_content_type :attachment, :content_type => %w(image/jpeg image/jpg image/png)
+
   # belongs_to :individual_type, :class_name => "IndividualType", :foreign_key => :individual_type_id
 
   has_many :individual_types_assocs, :class_name => "IndividualTypeAssociation", :foreign_key => :individual_id, :dependent => :delete_all
