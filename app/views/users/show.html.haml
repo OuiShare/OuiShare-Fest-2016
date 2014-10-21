@@ -4,7 +4,7 @@
       .well.well-sm
         .row
           .col-sm-6.col-md-4
-            = image_tag @user.avatar.url(:small), :class => 'img-rounded.img-responsive'
+            = image_tag @user.avatar.url(:small), :class => 'img-rounded.img-responsive' unless @user.nil?
             %br
             - if current_user && current_user.id == @user.id
               = link_to 'Edit my profile', me_edit_profile_path                        
