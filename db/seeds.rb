@@ -29,8 +29,8 @@ logger.debug(created_elems.to_s + ' Settings seeded')
 
 speakers_individual_type = IndividualType.find_by_title('Speakers')
 people_individual_type = IndividualType.find_by_title('People')
-logger.debug(speakers_individual_type.title + ' Individual Type id is : ' + speakers_individual_type.id)
-logger.debug(people_individual_type.title + ' Individual Type id is : ' + people_individual_type.id)
+logger.debug(speakers_individual_type.title + ' Individual Type id is : ' + speakers_individual_type.id.to_s)
+logger.debug(people_individual_type.title + ' Individual Type id is : ' + people_individual_type.id.to_s)
 created_elems = 0
 
 Individual.all.each do |individual|
