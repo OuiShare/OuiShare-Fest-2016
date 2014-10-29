@@ -6,6 +6,9 @@ gem 'nokogiri'
 
 gem 'pg', '0.17.1'
 
+# DB export
+gem 'yaml_db'
+
 gem 'feedjira'
 
 #JS Runtimes to enable JS compatibility on Unix Server
