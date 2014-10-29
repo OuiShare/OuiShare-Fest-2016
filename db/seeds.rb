@@ -34,5 +34,6 @@ Individual.all.each do |individual|
   if IndividualTypeAssociation.find_by_individual_id_and_individual_type_id(individual.id, 2) 
     IndividualTypeAssociation.find_by_individual_id_and_individual_type_id(individual.id, 2) do |individual_type_association|
     IndividualTypeAssociation.create(:individual_id => individual.id, :individual_type_id => 17) unless IndividualTypeAssociation.find_by_individual_id_and_individual_type_id(individual.id, 17)
+    end
   end
 end  
