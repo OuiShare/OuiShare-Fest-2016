@@ -39,6 +39,7 @@ Individual.all.each do |individual|
     if !IndividualTypeAssociation.find_by_individual_id_and_individual_type_id(individual.id, people_individual_type.id)
       IndividualTypeAssociation.create(:individual_id => individual.id, :individual_type_id => people_individual_type.id)
       created_elems += 1 
+    end
     individual_type_association.destroy
     end
   end
