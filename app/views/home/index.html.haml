@@ -157,29 +157,29 @@
 /               /     = t('dynamic_translations.speakers.hide_all')
 
      
-/ .partners-container#_partners{:style => 'padding-top:130px'}
-/   .container.sinfo
-/     - if !@partners.blank?
-/       .row.centered
-/         %br
-/         %h3.ouishare_stencil
-/           = t('dynamic_translations.partners.title')
-/         %hr.partners
-/       = render "/individuals/partials/partners_display", :partners => @partners, :important_partners_display => true, :important_partners_count => 7
-/       %br
-/       %br
+.partners-container#_partners{:style => 'padding-top:130px'}
+  .container.sinfo
+    - if !@partners.blank?
+      .row.centered
+        %br
+        %h3.ouishare_stencil
+          = t('dynamic_translations.partners.title')
+        %hr.partners
+      = render "/individuals/partials/partners_display", :partners => @partners, :important_partners_display => true, :important_partners_count => 7
+      %br
+      %br
 
-/     - if !@media_partners.blank?
-/       .row.centered
-/         %br
-/         %h3.ouishare_stencil
-/           = t('dynamic_translations.partners.media_partner_title')
+    - if !@media_partners.blank?
+      .row.centered
+        %br
+        %h3.ouishare_stencil
+          = t('dynamic_translations.partners.media_partner_title')
 
-/         %hr.partners
-/       = render "/individuals/partials/partners_display", :partners => @media_partners, :important_partners_display => false
+        %hr.partners
+      = render "/individuals/partials/partners_display", :partners => @media_partners, :important_partners_display => false
 
-/       %br
-/       %br
+      %br
+      %br
 
 / - if !@friends.blank?
 /   .row.centered

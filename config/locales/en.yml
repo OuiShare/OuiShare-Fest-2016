@@ -92,6 +92,13 @@ en:
       short_description: There are many ways to join and contribute to the event.
       find_out_more: Click here to find out more
       register_for_free: Register for free
+      freelancers_small_business: 'Freelancers & small businesses'
+      freelancers_small_business_desc:  with < 1 M € funding or revenue
+      entreprises: 'Entreprises'
+      entreprises_desc: 'with > 1 M € funding or revenue'
+      entreprises_tickets: 'Want like more than 5 tickets or a customized offer? Contact us at'
+      entreprises_email: 'mailto:partners@ouishare.net'
+
     team:
       title: Team
       description: OuiShare is a global network empowering citizens, public institutions
