@@ -27,21 +27,24 @@ settings.each do |setting|
 end
 logger.debug(created_elems.to_s + ' Settings seeded')
 
-speakers_individual_type = IndividualType.find_by_title('Speakers')
-people_individual_type = IndividualType.find_by_title('People')
-logger.debug(speakers_individual_type.title + ' Individual Type id is : ' + speakers_individual_type.id.to_s)
-logger.debug(people_individual_type.title + ' Individual Type id is : ' + people_individual_type.id.to_s)
-created_elems = 0
 
-Individual.all.each do |individual|
-  if IndividualTypeAssociation.find_by_individual_id_and_individual_type_id(individual.id, speakers_individual_type.id) 
-    IndividualTypeAssociation.find_by_individual_id_and_individual_type_id(individual.id, speakers_individual_type.id) do |individual_type_association|
-    if !IndividualTypeAssociation.find_by_individual_id_and_individual_type_id(individual.id, people_individual_type.id)
-      IndividualTypeAssociation.create(:individual_id => individual.id, :individual_type_id => people_individual_type.id)
-      created_elems += 1 
-    end
-    individual_type_association.destroy
-    end
-  end
-end 
-logger.debug(created_elems.to_s + ' Speakers moved to People Individual type')
+# This script below was used to move all speakers to a new 'People' Category for the OSfest '15 launch. It's not needed now.
+
+# speakers_individual_type = IndividualType.find_by_title('Speakers')
+# people_individual_type = IndividualType.find_by_title('People')
+# logger.debug(speakers_individual_type.title + ' Individual Type id is : ' + speakers_individual_type.id.to_s)
+# logger.debug(people_individual_type.title + ' Individual Type id is : ' + people_individual_type.id.to_s)
+# created_elems = 0
+
+# Individual.all.each do |individual|
+#   if IndividualTypeAssociation.find_by_individual_id_and_individual_type_id(individual.id, speakers_individual_type.id) 
+#     IndividualTypeAssociation.find_by_individual_id_and_individual_type_id(individual.id, speakers_individual_type.id) do |individual_type_association|
+#     if !IndividualTypeAssociation.find_by_individual_id_and_individual_type_id(individual.id, people_individual_type.id)
+#       IndividualTypeAssociation.create(:individual_id => individual.id, :individual_type_id => people_individual_type.id)
+#       created_elems += 1 
+#     end
+#     individual_type_association.destroy
+#     end
+#   end
+# end 
+# logger.debug(created_elems.to_s + ' Speakers moved to People Individual type')
