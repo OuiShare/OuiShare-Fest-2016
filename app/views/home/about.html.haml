@@ -242,52 +242,79 @@
 /               %small 
 /                 = link_to "Carlos Fresneda, El Mundo", "http://www.elmundo.es/elmundo/2013/05/05/economia/1367754203.html", :target => '_blank'
 
-#testimonial.yellow_bg#_about_testimonials
+/ Testimonials
+
+/ #testimonial.yellow_bg#_about_testimonials
+/   .container
+/     .row.centered
+/         = t('dynamic_translations.testimonials.title')
+/     %br
+/     %br
+/     #testimonialCarousel.carousel.slide.col-xs-12.col-md-offset-1.col-lg-offset-2.col-md-10.col-lg-8{ 'data-ride' => "carousel"}
+
+      /Wrapper for slides
+/       .carousel-inner
+/         .item.active
+/           .press-content
+/             .press-text
+/               %h3.naiv
+/                 = "“" + t('dynamic_translations.testimonials.hansschoenburg') + "”"
+/           .label-press
+/             Hans Schoenburg | web developer | Yerdle
+/         .item
+/           .press-content
+/             .press-text
+/               %h3.naiv
+/                 = "“" + t('dynamic_translations.testimonials.albertobandolini') + "”"
+/           .label-press
+/             Alberto Bandolini | software entrepreneur
+/         .item
+/           .press-content
+/             .press-text
+/               %h3.naiv
+/                 = "“" + t('dynamic_translations.testimonials.michelbauwens') + "”"
+/           .label-press
+/             Michel Bauwens | founder | Peer-to-Peer Foundation
+        
+/       %img.quote-left-carousel{:src => '/assets/quote_left.png', :alt => 'quote left'}
+/       %img.quote-right-carousel{:src => '/assets/quote_left.png', :alt => 'quote right'}
+
+      / Controls
+/       %a.left.carousel-control{:href => "#testimonialCarousel", 'data-slide' => "prev"}
+/         &lsaquo;
+
+/       %a.right.carousel-control{:href => "#testimonialCarousel", 'data-slide' => "next" }
+/         &rsaquo;
+
+
+
+/ About OuiShare
+
+#_ouishare.blank_bg
   .container
     .row.centered
       %h3.ouishare_stencil
-        = t('dynamic_translations.testimonials.title')
-    %br
-    %br
-    #testimonialCarousel.carousel.slide.col-xs-12.col-md-offset-1.col-lg-offset-2.col-md-10.col-lg-8{ 'data-ride' => "carousel"}
+        = t('dynamic_translations.about.ouishare_title')
+      %br      
+      %br
+      .container.round_fond
+        .row
+          .col-xs-12.col-md-6.col-lg-6
+            %p.justify
+              
+              %br
+              %br
 
-      /Wrapper for slides
-      .carousel-inner
-        .item.active
-          .press-content
-            .press-text
-              %h3.naiv
-                = "“" + t('dynamic_translations.testimonials.hansschoenburg') + "”"
-          .label-press
-            Hans Schoenburg | web developer | Yerdle
-        .item
-          .press-content
-            .press-text
-              %h3.naiv
-                = "“" + t('dynamic_translations.testimonials.albertobandolini') + "”"
-          .label-press
-            Alberto Bandolini | software entrepreneur
-        .item
-          .press-content
-            .press-text
-              %h3.naiv
-                = "“" + t('dynamic_translations.testimonials.michelbauwens') + "”"
-          .label-press
-            Michel Bauwens | founder | Peer-to-Peer Foundation
-        
-      %img.quote-left-carousel{:src => '/assets/quote_left.png', :alt => 'quote left'}
-      %img.quote-right-carousel{:src => '/assets/quote_left.png', :alt => 'quote right'}
+              = t('dynamic_translations.about.ouishare_text')
 
-      / Controls
-      %a.left.carousel-control{:href => "#testimonialCarousel", 'data-slide' => "prev"}
-        &lsaquo;
+            %p.centered
+              %br
+              %a{:href => 'http://ouishare.net/en/users/sign_up', :target => '_blank'}
+                %button.btn.btn-embossed.btn-primary
+                  = t('dynamic_translations.about.ouishare_btn')
 
-      %a.right.carousel-control{:href => "#testimonialCarousel", 'data-slide' => "next" }
-        &rsaquo;
-
-
-
-
+          .col-xs-12.col-md-6.col-lg-6
+            %img{:src => '/assets/ouishare-400.png', :alt => 'OuiShare logo'}
 
 
 

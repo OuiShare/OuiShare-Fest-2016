@@ -161,6 +161,50 @@
               /   %button.btn.btn-embossed.btn-primary.hide#btn_showspeakers_up
               /     = t('dynamic_translations.speakers.hide_all')
 
+/ Tickets
+
+.triangle_bg#_tickets 
+  .container.tickets-section 
+    .row.centered
+      %h3.ouishare_stencil
+        = t('dynamic_translations.tickets.title')
+      %br      
+      %br
+      .container.round_fond
+        %h4{:style => "font-size:18px;"}
+          %p
+            = t('dynamic_translations.tickets.description1')
+            %a{href: "/join#_getinvolved"} 
+              = t('dynamic_translations.tickets.get_involved')
+              = "."
+          %p 
+            = t('dynamic_translations.tickets.description2')
+            %a{href: "http://bit.ly/OSFest14ticketapplication"} 
+              = t('dynamic_translations.tickets.apply_tickets_link')
+        %br
+        %br
+        .row.get-involved-options-choice
+          .col-md-9.span-centered
+            .row
+              .col-md-4.pricing-table.turquoise.bordered.plain.col-md-offset-1
+                %a{href: home_freelancers_path}
+                  %ul.centered.alt
+                    %li.title
+                      = t('dynamic_translations.tickets.freelancers_small_business')
+                    %li.button
+                      = t('dynamic_translations.tickets.freelancers_small_business_desc')
+              .col-md-4.pricing-table.turquoise.bordered.plain.col-md-offset-2
+                %a{href: home_entreprises_path}
+                  %ul.centered.alt
+                    %li.title
+                      =t('dynamic_translations.tickets.entreprises')
+                      %br
+                    %li.button
+                      = t('dynamic_translations.tickets.entreprises_desc')
+                      %br
+                      %br
+
+/ Partners
      
 .partners-container#_partners{:style => 'padding-top:130px'}
   .container.sinfo
@@ -197,6 +241,9 @@
 
 /   %br
 /   %br
+
+/ Team
+
 .blank_bg#_team
   .container
     .row.centered
@@ -242,6 +289,8 @@
 /       %br
 /       %a{:href => "mailto:partners@ouisharefest.com"} partners@ouisharefest.com
 
+/ Get Involved
+
 .yellow_bg#_getinvolved{:style => 'padding-top:130px'}
   .get-involved-section
     .container.sinfo
@@ -280,6 +329,34 @@
                   %a.btn.btn-large.button-call-to-action-option{href: "mailto:partners@ouishare.net", :target => "_blank"}
                     = t('dynamic_translations.get_involved.idea_wall_button')
 
+
+/ About OuiShare - copy of the block in about.html
+
+#_ouishare.blank_bg
+  .container
+    .row.centered
+      %h3.ouishare_stencil
+        = t('dynamic_translations.about.ouishare_title')
+      %br      
+      %br
+      .container.round_fond
+        .row
+          .col-xs-12.col-md-6.col-lg-6
+            %p.justify
+              
+              %br
+              %br
+
+              = t('dynamic_translations.about.ouishare_text')
+
+            %p.centered
+              %br
+              %a{:href => 'http://ouishare.net/en/users/sign_up', :target => '_blank'}
+                %button.btn.btn-embossed.btn-primary
+                  = t('dynamic_translations.about.ouishare_btn')
+
+          .col-xs-12.col-md-6.col-lg-6
+            %img{:src => '/assets/ouishare-400.png', :alt => 'OuiShare logo'}
 
 - if !@visited
   = render "modals/visit_modal"
