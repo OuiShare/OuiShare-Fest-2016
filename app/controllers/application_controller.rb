@@ -89,7 +89,7 @@ class ApplicationController < ActionController::Base
     I18n.locale = session[:locale] || cookies.signed[:locale] ||I18n.default_locale
     session[:locale] = I18n.locale    
     # force local to en for now
-    I18n.locale = ":en"
+    # I18n.locale = ":en"
   end  
 
   def is_site_open
