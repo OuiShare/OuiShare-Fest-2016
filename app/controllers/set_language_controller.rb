@@ -8,11 +8,11 @@ class SetLanguageController < ApplicationController
   private
   def set_session_and_redirect
     session[:locale] = I18n.locale
-    if current_use
+    if current_user
       current_user.set_language(I18n.locale)
       cookies.permanent.signed[:locale] = I18n.locale   
     else
-      cookies.permanent.signed[:locale] = I18n.locale  
+      cookies.permanent.signed[:locale] = I18n.locale
     end
     redirect_to :back
     rescue ActionController::RedirectBackError
