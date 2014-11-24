@@ -58,7 +58,7 @@ OuiShareFest::Application.routes.draw do
     get :site_off
     get :program
     get :about
-    # get :participants
+    get :participants
     get :join
     get :freelancers
     get :entreprises
