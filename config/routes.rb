@@ -40,6 +40,8 @@ OuiShareFest::Application.routes.draw do
     get '/login', :to => 'devise/sessions#new', :as => 'new_user_session'
     post '/login', :to => 'devise/sessions#create'
     delete '/logout', :to => 'devise/sessions#destroy'
+    get '/users/sign_in', to: redirect('/login')
+    get '/users/sign_up', to: redirect('/register')
     # get '/password/change', :to => 'devise/registrations#edit', :as => 'change_password'
     # TODO: delete the route of cancel account, by delete defaut routes of registrations (:skip => [:registrations]) and only keeping custom ones
     end
