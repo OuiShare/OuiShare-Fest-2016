@@ -15,14 +15,6 @@
         /   %a{href: "#_about"} 
         /     =t('dynamic_translations.about.title')
 
-        %li
-          .text-center.social-media-icons-header
-            %a{href: "https://www.facebook.com/OuiShare", target: "_blank"}
-              %img{src: "/assets/facebook.svg", width: "24px"}/        
-            %a{href: "https://twitter.com/OuiShareFest", target: "_blank"}
-              %img{src: "/assets/twitter.svg", width: "24px"}/ 
-            %a{href: "https://plus.google.com/+OuishareNet", target: "_blank"}
-              %img{src: "/assets/g-plus-icon-vector.svg", width: "24px"}/
 
         %li.dropdown
           %a.dropdown-toggle{href: "/about"}
@@ -44,6 +36,9 @@
             %li
               %a{href: "about#_about_testimonials"}
                 = t('dynamic_translations.testimonials.title')
+            %li
+              %a{href: "about#_ouishare"}
+                = t('dynamic_translations.about.ouishare_title')
         %li.dropdown
           %a.dropdown-toggle{href: "/fest2014"}
             =t('dynamic_translations.fest2014.title')
@@ -105,7 +100,7 @@
         /       %a{href: "program#_love_party"}
         /         = t('dynamic_translations.love_party.title')
         %li.blog-highlight.dropdown
-          %a.dropdown-toggle.highlight{href: "/join#_tickets"}
+          %a.dropdown-toggle.highlight{href: "/join"}
             =t('dynamic_translations.join.title')
           %ul.dropdown-menu
             %li
@@ -136,14 +131,22 @@
           /     %a{href: "/#_team"}
           /       =t('dynamic_translations.team.title')
         %li.tickets-highlight.dropdown
-          %a.dropdown-toggle.highlight{href: "/join"}
+          %a.dropdown-toggle.highlight{href: "/join#_tickets"}
             =t('dynamic_translations.tickets.title')
           / %li.tickets-highlight
           / %a.highlight{href: stories_path}
           /   = "#OSFest14 Stories"
         %li.blog-highlight
-          %a.highlight{href: "http://blog.ouisharefest.com", target: "_blank"}
+          %a.highlight{href: "http://magazine.ouishare.net/tag/ouisharefest/", target: "_blank"}
             =t('dynamic_translations.blog.title')       
         %li
           = select_languages
+        %li
+          .text-center.social-media-icons-header
+            %a{href: "https://www.facebook.com/OuiShare", target: "_blank"}
+              %img{src: "/assets/facebook.svg", width: "24px"}/        
+            %a{href: "https://twitter.com/OuiShareFest", target: "_blank"}
+              %img{src: "/assets/twitter.svg", width: "24px"}/ 
+            %a{href: "https://plus.google.com/+OuishareNet", target: "_blank"}
+              %img{src: "/assets/g-plus-icon-vector.svg", width: "24px"}/
 
