@@ -12,6 +12,13 @@
             = t('dynamic_translations.main.subtitle')
           %p.main-section-paragraphes
             = t('dynamic_translations.main.event')
+          %p.centered
+            %br
+            %a{:href => 'join#_tickets'}
+              %button.btn.btn-embossed.btn-primary
+                = t('dynamic_translations.tickets.title')
+            %br
+
             
           = form_tag home_newsletter_collect_email_path, :class => "form-inline" do
             .row.text-center
@@ -21,13 +28,14 @@
                 = submit_tag t('dynamic_translations.main.stay_posted'), :class => "btn btn-primary"        
 
         %br
-        
-        %a{href: "https://www.facebook.com/OuiShare", target: "_blank"}
-          %img{src: "/assets/facebook.svg", width: "48px"}/
-        %a{href: "https://twitter.com/OuiShareFest", target: "_blank"}
-          %img{src: "/assets/twitter.svg", width: "48px"}/
-        %a{href: "https://plus.google.com/+OuishareNet", target: "_blank"}
-          %img{src: "/assets/g-plus-icon-vector.svg", width: "48px"}/
+
+        / Social media buttons
+        / %a{href: "https://www.facebook.com/OuiShare", target: "_blank"}
+        /   %img{src: "/assets/facebook.svg", width: "48px"}/
+        / %a{href: "https://twitter.com/OuiShareFest", target: "_blank"}
+        /   %img{src: "/assets/twitter.svg", width: "48px"}/
+        / %a{href: "https://plus.google.com/+OuishareNet", target: "_blank"}
+        /   %img{src: "/assets/g-plus-icon-vector.svg", width: "48px"}/
         / %span.twitter-hashtag
         /   \#OSFest14
 
@@ -186,14 +194,14 @@
         .row.get-involved-options-choice
           .col-md-9.span-centered
             .row
-              .col-md-4.pricing-table.turquoise.bordered.plain.col-md-offset-1
+              .col-md-5.pricing-table.turquoise.bordered.plain
                 %a{href: home_freelancers_path}
                   %ul.centered.alt
                     %li.title
                       = t('dynamic_translations.tickets.freelancers_small_business')
                     %li.button
                       = t('dynamic_translations.tickets.freelancers_small_business_desc')
-              .col-md-4.pricing-table.turquoise.bordered.plain.col-md-offset-2
+              .col-md-5.pricing-table.turquoise.bordered.plain.col-md-offset-2
                 %a{href: home_entreprises_path}
                   %ul.centered.alt
                     %li.title
@@ -218,68 +226,76 @@
       %br
       %br
 
-    / - if !@media_partners.blank?
-    /   .row.centered
-    /     %br
-    /     %h3.ouishare_stencil
-    /       = t('dynamic_translations.partners.media_partner_title')
+/ Media partners
 
-    /     %hr.partners
-    /   = render "/individuals/partials/partners_display", :partners => @media_partners, :important_partners_display => false
+    - if !@media_partners.blank?
+      .row.centered
+        %br
+        %h3.ouishare_stencil
+          = t('dynamic_translations.partners.media_partner_title')
 
-    /   %br
-    /   %br
+        %hr.partners
+      = render "/individuals/partials/partners_display", :partners => @media_partners, :important_partners_display => false
 
-/ - if !@friends.blank?
-/   .row.centered
-/     %br
-/     %h3.ouishare_stencil
-/       = t('dynamic_translations.partners.friends_title')
+      %br
+      %br
 
-/     %hr.partners
-/   = render "/individuals/partials/partners_display", :partners => @friends, :important_partners_display => false
+/ Friends
 
-/   %br
-/   %br
+    - if !@friends.blank?
+      .row.centered
+        %br
+        %h3.ouishare_stencil
+          = t('dynamic_translations.partners.friends_title')
+
+        %hr.partners
+      = render "/individuals/partials/partners_display", :partners => @friends, :important_partners_display => false
+
+      %br
+      %br
+
+/ Supporters
+
+    - if !@supporters.blank?
+      .row.centered
+        %br
+        %h3.ouishare_stencil
+          = t('dynamic_translations.partners.supporters_title')
+
+        %hr.partners
+      = render "/individuals/partials/partners_display", :partners => @supporters, :important_partners_display => false
+
 
 / Team
 
-.blank_bg#_team
-  .container
-    .row.centered
-      %h3.ouishare_stencil
-        =t('dynamic_translations.team.title')     
-      %hr
-      - if !@team_members.blank?
-        .ch-grid
-          - @team_members.each do |team_member|
-            .col-lg-3.individuals-list-display
-              %li
-                = render "/individuals/partials/team_member_display", :team_member => team_member          
-          / - if !@hidden_team_members.blank?
-          /   %div
-          /     #allteam_members{style: "display: none;"}  
-          /       - @hidden_team_members.each do |team_member|
-          /         .col-lg-3.individuals-list-display
-          /           %li
-          /             = render "/individuals/partials/team_member_display", :team_member => team_member           
-          /     %div.row
-          /       %a#btn_team_members_down
-          /         %button.btn.btn-embossed.btn-primary 
-          /           = t('dynamic_translations.team.show_all')
-          /     %div.row  
-          /       %a.hide#btn_team_members_up            
-          /         %button.btn.btn-embossed.btn-primary
-          /           = t('dynamic_translations.team.hide_all')
+/ .blank_bg#_team
+/   .container
+/     .row.centered
+/       %h3.ouishare_stencil
+/         =t('dynamic_translations.team.title')     
+/       %hr
+/       - if !@team_members.blank?
+/         .ch-grid
+/           - @team_members.each do |team_member|
+/             .col-lg-3.individuals-list-display
+/               %li
+/                 = render "/individuals/partials/team_member_display", :team_member => team_member          
+/            - if !@hidden_team_members.blank?
+/              %div
+/                #allteam_members{style: "display: none;"}  
+/                  - @hidden_team_members.each do |team_member|
+/                    .col-lg-3.individuals-list-display
+/                      %li
+/                        = render "/individuals/partials/team_member_display", :team_member => team_member           
+/                %div.row
+/                  %a#btn_team_members_down
+/                    %button.btn.btn-embossed.btn-primary 
+/                      = t('dynamic_translations.team.show_all')
+/                %div.row  
+/                  %a.hide#btn_team_members_up            
+/                    %button.btn.btn-embossed.btn-primary
+/                      = t('dynamic_translations.team.hide_all')
 
-/     - if !@supporters.blank?
-/       .row.centered
-/         %br
-/         %h3.ouishare_stencil
-/           = t('dynamic_translations.partners.supporters_title')
-
-/         %hr.partners
-/       = render "/individuals/partials/partners_display", :partners => @supporters, :important_partners_display => false
 
 
 / .get-involved-section
@@ -287,7 +303,7 @@
 /     %h6
 /       = t('dynamic_translations.partners.become_a_partner')
 /       %br
-/       %a{:href => "mailto:partners@ouisharefest.com"} partners@ouisharefest.com
+/       %a{:href => "mailto:partners@ouishare.net"} partners@ouishare.net
 
 / Get Involved
 
