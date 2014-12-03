@@ -424,6 +424,10 @@ body {
 	text-decoration: underline;
 }
 
+.topics img{
+	height: 170px;
+}
+
 #about{
 	color: #20203D;
 }

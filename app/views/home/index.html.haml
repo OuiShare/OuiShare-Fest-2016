@@ -141,6 +141,49 @@
 /       %iframe{ :width => '940', :height => '546', :style => "-ms-zoom: 1; -moz-transform: scale(1); -moz-transform-origin: 0 0; -o-transform: scale(1); -o-transform-origin: 0 0; -webkit-transform: scale(1); -webkit-transform-origin: 0 0;", :src => "http://bobler.com/embedmap/app/index.html#/?id=2914", :frameborder => "0"}
 
 
+.container.sinfo
+  .row.centered
+    %h3.ouishare_stencil
+      = t('dynamic_translations.topics.title')
+      /Key topics
+    %br/
+    %br/
+    .col-lg-3
+      %p.topics
+        = image_tag "/assets/collab-economy-icon-GREY.png"
+      %p 
+        = t('dynamic_translations.topics.collcon_title')
+        / #Sharing: People connecting to swap, rent, borrow, gift or trade goods and services.
+    .col-lg-3
+      %p.topics
+        = image_tag "/assets/crowdfunding-icon.png"
+      %p 
+        = t('dynamic_translations.topics.cf_title')
+        / #Capital: Funding projects by enabling circulation of capital and equity between individuals 
+    .col-lg-3
+      %p.topics
+        = image_tag "/assets/open-knowledge-icon.png"
+      %p 
+        = t('dynamic_translations.topics.ok_title')
+        / #Commons: Giving everyone equal access to knowledge, data, source code or designs.
+    .col-lg-3
+      %p.topics
+        = image_tag "/assets/making-manufacturing-icon.png"
+      %p 
+        = t('dynamic_translations.topics.om_title')
+        / #Makers: Democratizing design & distributing production of physical goods through DIY, open knowledge, fablabs and makerspaces.
+    .col-lg-3
+      %p.topics
+        = image_tag "/assets/horizontal-governance-icon.png"
+      %p 
+        = t('dynamic_translations.topics.gov_title')
+        / #Empowerment: Using networks and collaborative practices to transform organizations and institutions.
+  %br/
+  %hr/
+
+
+
+
 #speakers.blue_bg#_speakers 
   .container
     .row.centered
