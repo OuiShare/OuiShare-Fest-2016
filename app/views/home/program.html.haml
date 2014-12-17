@@ -1,3 +1,15 @@
+.blank_bg#_track_leader
+  .container
+    .row.centered
+      %h3.ouishare_stencil
+        =t('dynamic_translations.track_leader.title')     
+      %hr
+      - if !@track_leaders.blank?
+        .ch-grid
+          - @track_leaders.each do |track_leader|
+            .col-lg-3.individuals-list-display
+              %li
+                = render "/individuals/partials/track_leaders_display", :track_leader => track_leader  
 
 #_schedule.blank_bg
   .container
