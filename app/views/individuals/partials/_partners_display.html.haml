@@ -21,11 +21,11 @@
             - special = "tooltip.castorama"
           - if remain == 1
             .col-lg-12
-              %a{:href => partner.url, :target => "_blank", :class => "special_tooltip", :data => {'original-title' => t(special), 'placement' => 'right'}}
+              %a{:href => partner.url, :target => "_blank", :class => "special_tooltip", :data => {'original-title' => t(special, :default => ""), 'placement' => 'right'}}
                 %img.img-responsive.display-inline{:alt => partner.first_name, :src => partner.attachment.url(:medium)}
           - elsif remain == 2
             .col-lg-6
-              %a{:href => partner.url, :target => "_blank", :class => "special_tooltip", :data => {'original-title' => t(special), 'placement' => 'right'}}
+              %a{:href => partner.url, :target => "_blank", :class => "special_tooltip", :data => {'original-title' => t(special, :default => ""), 'placement' => 'right'}}
                 %img.img-responsive.display-inline{:alt => partner.first_name, :src => partner.attachment.url(:medium)}
           - elsif remain == 3
             - if three_col == 3
