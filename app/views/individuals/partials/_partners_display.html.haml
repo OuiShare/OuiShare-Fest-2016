@@ -34,7 +34,7 @@
               - placement = 'right'
             .col-lg-4
               - if !special.blank?
-                %a{:href => partner.url, :target => "_blank", :class => "special_tooltip", :data => {'original-title' => I18n.t(special, :default => ""), 'placement' => placement}}
+                %a{:href => partner.url, :target => "_blank", :class => "special_tooltip", :data => {'original-title' => t(special, :default => ""), 'placement' => placement}}
                   %img.img-responsive.display-inline{:alt => partner.first_name, :src => partner.attachment.url(:medium)}
               - else
                 %a{:href => partner.url, :target => "_blank", :class => "special_tooltip", :data => {'original-title' => "", 'placement' => placement}}
