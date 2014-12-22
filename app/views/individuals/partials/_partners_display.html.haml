@@ -9,7 +9,7 @@
   - if important_partners_display
     - partners.first(important_partners_count).each do |partner|
       - array_buffer.push(partner)
-    - remain = important_partners_count % 4
+    - remain = important_partners_count % 6
     - if remain > 0
       .row.centered
         - array_buffer.first(remain).each do |partner|
