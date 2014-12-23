@@ -43,9 +43,9 @@
   .container{:style => "width:60% !important;"}
     %h3.ouishare_stencil.text-center#_about{:style => "font-size:25px;"}
       = t('dynamic_translations.about.subtitle')
-    %br
-    .row
-      %iframe{:width => "640", :height => "390", :src => "//www.youtube.com/embed/QiXmsACpfRY", :frameborder => "0", :allowfullscreen => 'true'}
+    / %br
+    / .row
+    /   %iframe{:width => "640", :height => "390", :src => "//www.youtube.com/embed/QiXmsACpfRY", :frameborder => "0", :allowfullscreen => 'true'}
 
     %br
     %p 
@@ -138,23 +138,25 @@
       .col-md-9.span-centered.margin_25
         %br
         %br
-        %iframe{allowfullscreen: "", frameborder: "0", height: "315", src: "//www.youtube.com/embed/QiXmsACpfRY", width: "560"}
-    .row.centered
+        %iframe{allowfullscreen: "", frameborder: "0", height: "315", src: "//www.youtube.com/embed/QiXmsACpfRY", width: "560"}   
+    .row.centered       
       %p
         %br
         %br
         = t('dynamic_translations.highlight.description_2014')
-        %br
-        %br
-      .row.mb_20
-        .col-md-2
-          .col-md-4
-            %a.btn.btn-large.btn-primary{href: "http://www.youtube.com/user/OuiShareTV", :target => "_blank"}
-              = t('dynamic_translations.highlight.btn_watch_2014_sessions')
 
-          .col-md-4
-            %a.btn.btn-large.btn-primary{href: "http://ouisharefest.com/stories", :target => "_blank"}
-              = t('dynamic_translations.highlight.btn_see_2014_stories')
+        %br
+        %br
+
+    .row.mb_20
+      .col-md-2
+      .col-md-4
+        %a.btn.btn-large.btn-primary{href: "http://www.youtube.com/user/OuiShareTV", :target => "_blank"} 
+          = t('dynamic_translations.highlight.btn_watch_2014_sessions')
+
+      .col-md-4
+        %a.btn.btn-large.btn-primary{href: "http://ouisharefest.com/stories", :target => "_blank"} 
+          = t('dynamic_translations.highlight.btn_see_2014_stories')
 
 / OSFest14 report
 .blank_bg#_report{:style => 'padding-top:130px'}
@@ -185,37 +187,6 @@
             %img{:src => '/assets/osf_2014_report.jpg', :alt => 'OuiShare Fest 2014 Report'}
 
 
-/ #highlights.blue_bg#_about_highlights
-/   .container
-/     .row.centered
-/       %h3.ouishare_stencil.white
-/         = t('dynamic_translations.highlight.title')
-/         / Highlights from 2013
-/     .row.centered
-/       .col-md-9.span-centered.margin_25
-/         %br
-/         %br
-/         %iframe{allowfullscreen: "", frameborder: "0", height: "315", src: "//www.youtube.com/embed/kXXPbkdKB7M", width: "560"}   
-/     .row.centered       
-/       %p{:style => 'color:#ffffff;'}
-/         %br
-/         %br
-/         = t('dynamic_translations.highlight.description')
-/         / In its first edition, OuiShare Fest brought together 700 attendees from 24 countries for a two-day conference-style event, followed by an open day featuring various collaborative economy initiatives with over 3000 visitors. Building on the success of our experiment in program co-design during this edition, we are taking this participative approach to the next level this year. To get a better impression of what OuiShare Fest is all about,
-/         %br
-/         %br
-
-/     .row.mb_20
-/       .col-md-2
-/       .col-md-4
-/         %a.btn.btn-large.btn-primary{href: "http://www.youtube.com/user/OuiShareTV", :target => "_blank"} 
-/           = t('dynamic_translations.highlight.btn_watch_all_sessions')
-/           / Watch all sessions from 2013
-/       .col-md-4
-/         %a.btn.btn-large.btn-primary{href: "http://live.ouisharefest.com", :target => "_blank"} 
-/           = t('dynamic_translations.highlight.btn_see_coverage')
-/           / See 2013 coverage
-
 / #location.triangle_bg#_about_location
 /   .container
 /     .row.centered
@@ -245,118 +216,61 @@
 /       %br
 /       %br
 
-/ .grey_bg#_about_press
-/   .container
-/     .row.centered
-/       %h3.ouishare_stencil
-/         = t('dynamic_translations.press.title')
+.grey_bg#_about_press
+  .container
+    .row.centered
+      %h3.ouishare_stencil
+        = t('dynamic_translations.press.title')
 
-/     #myCarousel.carousel.slide.col-xs-12.col-md-offset-1.col-lg-offset-2.col-md-10.col-lg-8{ 'data-ride' => "carousel"}
+    #myCarousel.carousel.slide.col-xs-12.col-md-offset-1.col-lg-offset-2.col-md-10.col-lg-8{ 'data-ride' => "carousel"}
 
-/       /Wrapper for slides
-/       .carousel-inner
-/         .item.active
-/           .press-content
-/             .press-text
-/               %h3.naiv
-/                 “For anyone under the impression that the rise of the sharing economy is simply a blip reaction to the recession, the OuiShare conference is proving otherwise”
-/           .label-press
-/             The Guardian
-/         .item
-/           .press-content
-/             .press-text
-/               %h3.naiv
-/                 This year’s theme, the Age of Communities, was broad enough to welcome all sides of the movement: venture capitalists alongside black markets, slow foodies alongside Bitcoin promoters.
-/           .label-press
-/             Al Jazeera
-/         .item
-/           .press-content
-/             .press-text
-/               %h3.naiv
-/                 “Parmi les trois points sensibles évoqués à l'occasion du OuiShareFest: le rapport aux institutions, la possibilité de participer à la réduction des inégalités, et la durabilité du modèle collaboratif”
-/           .label-press
-/             Le Monde
-/         .item
-/           .press-content
-/             .press-text
-/               %h3.naiv
-/                 \...este festival sin orden pero con sentido..
-/           .label-press
-/             El Pais
-/         .item
-/           .press-content
-/             .press-text
-/               %h3.naiv
-/                 The atmosphere was positive and driven. This was an assembly of doers, creators, and thinkers.
-/           .label-press
-/             Shareable
+      /Wrapper for slides
+      .carousel-inner
+        .item.active
+          .press-content
+            .press-text
+              %h3.naiv
+                “For anyone under the impression that the rise of the sharing economy is simply a blip reaction to the recession, the OuiShare conference is proving otherwise”
+          .label-press
+            The Guardian
+        .item
+          .press-content
+            .press-text
+              %h3.naiv
+                This year’s theme, the Age of Communities, was broad enough to welcome all sides of the movement: venture capitalists alongside black markets, slow foodies alongside Bitcoin promoters.
+          .label-press
+            Al Jazeera
+        .item
+          .press-content
+            .press-text
+              %h3.naiv
+                “Parmi les trois points sensibles évoqués à l'occasion du OuiShareFest: le rapport aux institutions, la possibilité de participer à la réduction des inégalités, et la durabilité du modèle collaboratif”
+          .label-press
+            Le Monde
+        .item
+          .press-content
+            .press-text
+              %h3.naiv
+                \...este festival sin orden pero con sentido..
+          .label-press
+            El Pais
+        .item
+          .press-content
+            .press-text
+              %h3.naiv
+                The atmosphere was positive and driven. This was an assembly of doers, creators, and thinkers.
+          .label-press
+            Shareable
 
-/       %img.quote-left-carousel{:src => '/assets/quote_left.png', :alt => 'quote left'}
-/       %img.quote-right-carousel{:src => '/assets/quote_left.png', :alt => 'quote right'}
-/       / Controls
-/       %a.left.carousel-control{:href => "#myCarousel", 'data-slide' => "prev"}
-/         &lsaquo;
+      %img.quote-left-carousel{:src => '/assets/quote_left.png', :alt => 'quote left'}
+      %img.quote-right-carousel{:src => '/assets/quote_left.png', :alt => 'quote right'}
+      / Controls
+      %a.left.carousel-control{:href => "#myCarousel", 'data-slide' => "prev"}
+        &lsaquo;
 
-/       %a.right.carousel-control{:href => "#myCarousel", 'data-slide' => "next" }
-/         &rsaquo;
+      %a.right.carousel-control{:href => "#myCarousel", 'data-slide' => "next" }
+        &rsaquo;
 
-
-/ #press.grey_bg#_about_press
-/   .container
-/     .row.centered
-/       %h3.ouishare_stencil
-/         = t('dynamic_translations.press.title')
-/         / What The Press Said
-/       .container.sinfo
-/         .row
-/           .col-lg-5.col-lg-offset-1
-/             .testi-container
-/               .testi-text
-/                 %p.testimonial
-/                   / = "“" + = t('dynamic_translations.press.quote_ft') + "”"
-/                   “The sense of optimism amongst the crowd was intoxicating”
-/             %p
-/               %img{alt: "", src: "assets/logo/ft.png", width: "80"}/
-/               \-
-/               %small
-/                 = link_to "Izabella Kaminska, Financial Times", "http://ftalphaville.ft.com/2013/05/13/1490712/a-new-type-of-growth-is-emerging/", :target => '_blank'
-
-/           .col-lg-5
-/             .testi-container
-/               .testi-text
-/                 %p.testimonial
-/                   / = "“" + = t('dynamic_translations.press.quote_shareable') + "”"
-/                   “In its best moments, OuiShare Fest had me believing that sharing is the answer to every problem we face, from sustainability to loneliness to economic opportunities”
-/             %p
-/               %img{alt: "",  src: "assets/logo/shareable.png", width: "80"}/
-/               \-
-/               %small 
-/                 = link_to "Ariane Conrad, Shareable.net", "http://www.shareable.net/blog/a-fittingly-nonlinear-and-whimsical-report-back-on-ouishare-fest", :target => '_blank'
-
-/         .row
-/           .col-lg-5.col-lg-offset-1
-/             .testi-container
-/               .testi-text
-/                 %p.testimonial
-/                   / = "“" + = t('dynamic_translations.press.quote_lci') + "”"
-/                   “Grâce au web 2.0, toute une nouvelle manière de consommer, d’échanger et de produire est en train de voir le jour”
-/             %p
-/               %img{alt: "",src: "assets/logo/lci.png", width: "80"}/
-/               \-
-/               %small 
-/                 = link_to "LCI - L’économie collaborative en fête","http://www.wat.tv/video/economie-collaborative-en-6950h_2exyh_.html", :target => '_blank'
-
-/           .col-lg-5
-/             .testi-container
-/               .testi-text
-/                 %p.testimonial
-/                   / = "“" + = t('dynamic_translations.press.quote_elmundo') + "”"
-/                   “No tomaron la Bastilla, pero conquistaron el Cabaret Sauvage, que quedaba por allí cerca. El Ouishare Fest ha convertido el parque de La Villette en inmejorable y delirante muestrario de la economía colaborativa”
-/             %p
-/               %img{alt: "", src: "assets/logo/elmundo.png", width: "80"}/
-/               \-
-/               %small 
-/                 = link_to "Carlos Fresneda, El Mundo", "http://www.elmundo.es/elmundo/2013/05/05/economia/1367754203.html", :target => '_blank'
 
 / Testimonials
 
