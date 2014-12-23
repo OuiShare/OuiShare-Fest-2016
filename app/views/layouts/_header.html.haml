@@ -24,9 +24,12 @@
             %li
               %a{href: "about#_about"}
                 = t('dynamic_translations.about.the_event')
-            / %li
-            /   %a{href: "about#_about_highlights"}
-            /     = t('dynamic_translations.highlight.title')
+            %li
+              %a{href: "about#_highlights"}
+                = t('dynamic_translations.highlight.title')
+            %li
+              %a{href: "about#_report"}
+                = t('dynamic_translations.partners.report') 
             / %li
             /   %a{href: "about#_about_location"}
             /     = t('dynamic_translations.location.title')
@@ -36,34 +39,34 @@
             %li
               %a{href: "about#_ouishare"}
                 = t('dynamic_translations.about.ouishare_title')
-        %li.dropdown
-          %a.dropdown-toggle{href: "/fest2014"}
-            =t('dynamic_translations.fest2014.title')
-          %ul.dropdown-menu
-            %li
-              %a{href: stories_path}
-                = "#OSFest14 Stories"
-            %li
-              %a{href: "fest2014#_highlights"}
-                = t('dynamic_translations.highlight.title_simple')
-            / %li
-            /   %a{href: "fest2014#_speakers"}
-            /     = t('dynamic_translations.speakers.title')
-            / %li
-            /   %a{href: "fest2014#_team"}
-            /     = t('dynamic_translations.team.title')
-            / %li
-            /   %a{href: "fest2014#_coverage"}
-            /     = t('dynamic_translations.coverage.title')
-            / %li
-            /   %a{href: "fest2014#_partners"}
-            /     = t('dynamic_translations.partners.title')
-            %li
-              %a{href: "fest2014#_report"}
-                = t('dynamic_translations.partners.report')                
-            / %li
-            /   %a{href: "fest2014#_program"}
-            /     = t('dynamic_translations.program.title')
+/       %li.dropdown
+/         %a.dropdown-toggle{href: "/fest2014"}
+/           =t('dynamic_translations.fest2014.title')
+/         %ul.dropdown-menu
+/           %li
+/             %a{href: stories_path}
+/               = "#OSFest14 Stories"
+/           %li
+/             %a{href: "fest2014#_highlights"}
+/               = t('dynamic_translations.highlight.title_simple')
+/           %li
+/             %a{href: "fest2014#_speakers"}
+/               = t('dynamic_translations.speakers.title')
+/           %li
+/             %a{href: "fest2014#_team"}
+/               = t('dynamic_translations.team.title')
+/           %li
+/             %a{href: "fest2014#_coverage"}
+/               = t('dynamic_translations.coverage.title')
+/           %li
+/             %a{href: "fest2014#_partners"}
+/               = t('dynamic_translations.partners.title')
+/           %li
+/             %a{href: "fest2014#_report"}
+/               = t('dynamic_translations.partners.report')                
+/           %li
+/             %a{href: "fest2014#_program"}
+/               = t('dynamic_translations.program.title')
         %li.dropdown
           %a.dropdown-toggle{href: "/participants"}
             =t('dynamic_translations.participants.title')
