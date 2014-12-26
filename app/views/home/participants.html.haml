@@ -4,9 +4,9 @@
       %h3.ouishare_stencil.white
         = t('dynamic_translations.speakers.title')
       %hr
-      -if !@speakers.blank?
+      -if !@displayed_speakers.blank?
         .ch-grid
-          - @speakers.each do |speaker|
+          - @displayed_speakers.each do |speaker|
             .col-lg-3.individuals-list-display
               %li
                 = render "/individuals/partials/speaker_display", :speaker => speaker
