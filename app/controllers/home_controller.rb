@@ -178,6 +178,15 @@ class HomeController < ApplicationController
 
   def program
     @request_response = connect_to_sched().force_encoding('UTF-8')
+
+    if IndividualType.find_by_title('Track leaders')
+      @track_leaders = IndividualType.find_by_title('Track leaders').get_members
+      if ENV["DISPLAYED_TRACK_LEADERS"].to_i > @track_leaders.count
+        displayed_track_leaders_number = @track_leaders.count
+      else
+        displayed_track_leaders_number = ENV["DISPLAYED_TRACK_LEADERS"].to_i
+      end
+    end
   end
 
   def contact

@@ -23,9 +23,18 @@
             %li
               %a{href: "about#_about"}
                 = t('dynamic_translations.about.the_event')
+<<<<<<< HEAD
             / %li
             /   %a{href: "about#_highlights"}
             /     = t('dynamic_translations.highlight.title')
+=======
+            %li
+              %a{href: "about#_highlights"}
+                = t('dynamic_translations.highlight.title')
+            %li
+              %a{href: "about#_report"}
+                = t('dynamic_translations.partners.report')
+>>>>>>> preprod
             / %li
             /   %a{href: "about#_report"}
             /     = t('dynamic_translations.partners.report') 
@@ -38,34 +47,36 @@
             %li
               %a{href: "about#_ouishare"}
                 = t('dynamic_translations.about.ouishare_title')
-        %li.dropdown
-          %a.dropdown-toggle{href: "/fest2014"}
-            =t('dynamic_translations.fest2014.title')
-          %ul.dropdown-menu
-            %li
-              %a{href: stories_path}
-                = "#OSFest14 Stories"
-            %li
-              %a{href: "fest2014#_highlights"}
-                = t('dynamic_translations.highlight.title_simple')
-            / %li
-            /   %a{href: "fest2014#_speakers"}
-            /     = t('dynamic_translations.speakers.title')
-            / %li
-            /   %a{href: "fest2014#_team"}
-            /     = t('dynamic_translations.team.title')
-            / %li
-            /   %a{href: "fest2014#_coverage"}
-            /     = t('dynamic_translations.coverage.title')
-            / %li
-            /   %a{href: "fest2014#_partners"}
-            /     = t('dynamic_translations.partners.title')
-            %li
-              %a{href: "fest2014#_report"}
-                = t('dynamic_translations.partners.report')                
-            / %li
-            /   %a{href: "fest2014#_program"}
-            /     = t('dynamic_translations.program.title')
+
+        / %li.dropdown
+        /   %a.dropdown-toggle{href: "/fest2014"}
+        /     =t('dynamic_translations.fest2014.title')
+        /   %ul.dropdown-menu
+        /     %li
+        /       %a{href: stories_path}
+        /         = "#OSFest14 Stories"
+        /     %li
+        /       %a{href: "fest2014#_highlights"}
+        /         = t('dynamic_translations.highlight.title_simple')
+        /     %li
+        /       %a{href: "fest2014#_speakers"}
+        /         = t('dynamic_translations.speakers.title')
+        /     %li
+        /       %a{href: "fest2014#_team"}
+        /         = t('dynamic_translations.team.title')
+        /     %li
+        /       %a{href: "fest2014#_coverage"}
+        /         = t('dynamic_translations.coverage.title')
+        /     %li
+        /       %a{href: "fest2014#_partners"}
+        /         = t('dynamic_translations.partners.title')
+        /     %li
+        /       %a{href: "fest2014#_report"}
+        /         = t('dynamic_translations.partners.report')                
+        /     %li
+        /       %a{href: "fest2014#_program"}
+        /         = t('dynamic_translations.program.title')
+                
         %li.dropdown
           %a.dropdown-toggle{href: "/participants"}
             =t('dynamic_translations.participants.title')
@@ -82,22 +93,29 @@
             %li
               %a{href: "participants#_whoscoming"}
                 = t('dynamic_translations.tickets.who_s_coming')
-        / %li.dropdown
-        /   %a.dropdown-toggle{href: "/program"}
-        /     =t('dynamic_translations.program.title')
-        /   %ul.dropdown-menu
-        /     %li
-        /       %a{href: "program#_schedule"}
-        /         = t('dynamic_translations.program.main_schedule')
-        /     %li
-        /       %a{href: "program#_sharing_fair"}
-        /         = t('dynamic_translations.sharing_fair.title')
-        /     %li
-        /       %a{href: "program#_events"}
-        /         = t('dynamic_translations.program.satellite_events')
-        /     %li
-        /       %a{href: "program#_love_party"}
-        /         = t('dynamic_translations.love_party.title')
+
+        %li.dropdown
+          %a.dropdown-toggle{href: "/program"}
+            =t('dynamic_translations.program.title')
+          %ul.dropdown-menu
+            %li
+              %a{href: "program#_schedule"}
+                = t('dynamic_translations.program.main_schedule')
+            %li
+              %a{href: "program#_tracks"}
+                = t('dynamic_translations.track.title')
+            %li
+              %a{href: "program#_track_leader"}
+                = t('dynamic_translations.track_leader.title')
+            / %li
+            /   %a{href: "program#_sharing_fair"}
+            /     = t('dynamic_translations.sharing_fair.title')
+            / %li
+            /   %a{href: "program#_events"}
+            /     = t('dynamic_translations.program.satellite_events')
+            / %li
+            /   %a{href: "program#_love_party"}
+            /     = t('dynamic_translations.love_party.title')
         %li.blog-highlight.dropdown
           %a.dropdown-toggle.highlight{href: "/join"}
             =t('dynamic_translations.join.title')

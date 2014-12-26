@@ -9,7 +9,7 @@
   - if important_partners_display
     - partners.first(important_partners_count).each do |partner|
       - array_buffer.push(partner)
-    - remain = important_partners_count % 4
+    - remain = important_partners_count % 6
     - if remain > 0
       .row.centered
         - array_buffer.first(remain).each do |partner|
@@ -21,11 +21,11 @@
             - special = "tooltip.castorama"
           - if remain == 1
             .col-lg-12
-              %a{:href => partner.url, :target => "_blank", :class => "special_tooltip", :data => {'original-title' => t(special), 'placement' => 'right'}}
+              %a{:href => partner.url, :target => "_blank", :class => "special_tooltip", :data => {'original-title' => "", 'placement' => 'right'}}
                 %img.img-responsive.display-inline{:alt => partner.first_name, :src => partner.attachment.url(:medium)}
           - elsif remain == 2
             .col-lg-6
-              %a{:href => partner.url, :target => "_blank", :class => "special_tooltip", :data => {'original-title' => t(special), 'placement' => 'right'}}
+              %a{:href => partner.url, :target => "_blank", :class => "special_tooltip", :data => {'original-title' => "", 'placement' => 'right'}}
                 %img.img-responsive.display-inline{:alt => partner.first_name, :src => partner.attachment.url(:medium)}
           - elsif remain == 3
             - if three_col == 3
@@ -34,7 +34,7 @@
               - placement = 'right'
             .col-lg-4
               - if !special.blank?
-                %a{:href => partner.url, :target => "_blank", :class => "special_tooltip", :data => {'original-title' => I18n.t(special, :default => ""), 'placement' => placement}}
+                %a{:href => partner.url, :target => "_blank", :class => "special_tooltip", :data => {'original-title' => "", 'placement' => placement}}
                   %img.img-responsive.display-inline{:alt => partner.first_name, :src => partner.attachment.url(:medium)}
               - else
                 %a{:href => partner.url, :target => "_blank", :class => "special_tooltip", :data => {'original-title' => "", 'placement' => placement}}
