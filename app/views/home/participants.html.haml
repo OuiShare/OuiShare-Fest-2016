@@ -10,21 +10,21 @@
             .col-lg-3.individuals-list-display
               %li
                 = render "/individuals/partials/speaker_display", :speaker => speaker
-          / - if !@hidden_speakers.blank?
-          /   %div
-          /     #allspeakers{style: "display: none;"}  
-          /       - @hidden_speakers.each do |speaker|
-          /         .col-lg-3.individuals-list-display
-          /           %li
-          /             = render "/individuals/partials/speaker_display", :speaker => speaker              
-          /     %div.row.mb_20
-          /       %a#btn_showspeakers_down
-          /         %button.btn.btn-embossed.btn-primary.mt_20
-          /           = t('dynamic_translations.speakers.show_all')
+          - if !@hidden_speakers.blank?
+            %div
+              #allspeakers{style: "display: none;"}  
+                - @hidden_speakers.each do |speaker|
+                  .col-lg-3.individuals-list-display
+                    %li
+                      = render "/individuals/partials/speaker_display", :speaker => speaker              
+              %div.row.mb_20
+                %a#btn_showspeakers_down
+                  %button.btn.btn-embossed.btn-primary.mt_20
+                    = t('dynamic_translations.speakers.show_all')
                     
-          /     %div.row.mb_20.mt_20
-          /       %button.btn.btn-embossed.btn-primary.hide#btn_showspeakers_up
-          /         = t('dynamic_translations.speakers.hide_all')
+              %div.row.mb_20.mt_20
+                %button.btn.btn-embossed.btn-primary.hide#btn_showspeakers_up
+                  = t('dynamic_translations.speakers.hide_all')
 
 .blank_bg#_team
   .container
