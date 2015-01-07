@@ -280,7 +280,8 @@
         %h3.ouishare_stencil
           = t('dynamic_translations.partners.title')
         %hr.partners
-      = render "/individuals/partials/partners_display", :partners => @partners, :important_partners_display => true, :important_partners_count => 7
+      / = render "/individuals/partials/partners_display", :partners => @partners, :important_partners_display => true, :important_partners_count => 7
+      = render "/individuals/partials/partners_display", :partners => @partners, :important_partners_display => true, :important_partners_count => 9
       %br
       %br
 
@@ -292,7 +293,6 @@
 
         %hr.partners
       = render "/individuals/partials/partners_display", :partners => @media_partners, :important_partners_display => false
-
       %br
       %br
 
