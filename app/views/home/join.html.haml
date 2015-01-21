@@ -19,23 +19,37 @@
         %br
         %br
         .row.get-involved-options-choice
-          .col-md-9.span-centered
+          .col-md-12.span-centered
             .row
-              .col-md-5.pricing-table.turquoise.bordered.plain
+              .col-md-4.pricing-table.turquoise.bordered.plain
                 %a{href: home_freelancers_path}
                   %ul.centered.alt
                     %li.title
                       = t('dynamic_translations.tickets.freelancers_small_business')
                     %li.button
                       = t('dynamic_translations.tickets.freelancers_small_business_desc')
-              .col-md-5.pricing-table.turquoise.bordered.plain.col-md-offset-2
+                      %br
+                      %br
+              .col-md-4.pricing-table.turquoise.bordered.plain
                 %a{href: home_entreprises_path}
                   %ul.centered.alt
                     %li.title
                       =t('dynamic_translations.tickets.entreprises')
                       %br
+                      %br
                     %li.button
                       = t('dynamic_translations.tickets.entreprises_desc')
+                      %br
+                      %br
+              .col-md-4.pricing-table.turquoise.bordered.plain
+                %a{href: home_press_and_media_path}
+                  %ul.centered.alt
+                    %li.title
+                      =t('dynamic_translations.tickets.press_media')
+                      %br
+                      %br
+                    %li.button
+                      / = t('dynamic_translations.tickets.entreprises_desc')
                       %br
                       %br
 .grey_bg#_getinvolved{:style => 'padding-top:30px'}
