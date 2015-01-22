@@ -247,9 +247,9 @@
         %br
         %br
         .row.get-involved-options-choice
-          .col-md-9.span-centered
+          .col-md-12.span-centered
             .row
-              .col-md-5.pricing-table.turquoise.bordered.plain
+              .col-md-4.pricing-table.turquoise.bordered.plain
                 %a{href: home_freelancers_path}
                   %ul.centered.alt
                     %li.title
@@ -258,7 +258,7 @@
                       = t('dynamic_translations.tickets.freelancers_small_business_desc')
                       %br
                       %br
-              .col-md-5.pricing-table.turquoise.bordered.plain.col-md-offset-2
+              .col-md-4.pricing-table.turquoise.bordered.plain
                 %a{href: home_entreprises_path}
                   %ul.centered.alt
                     %li.title
@@ -267,6 +267,17 @@
                       %br
                     %li.button
                       = t('dynamic_translations.tickets.entreprises_desc')
+                      %br
+                      %br
+              .col-md-4.pricing-table.turquoise.bordered.plain
+                %a{href: home_press_and_media_path}
+                  %ul.centered.alt
+                    %li.title
+                      =t('dynamic_translations.tickets.press_media')
+                      %br
+                      %br
+                    %li.button
+                      / = t('dynamic_translations.tickets.entreprises_desc')
                       %br
                       %br
 
@@ -350,12 +361,12 @@
 
 
 
-/ .get-involved-section
-/   .centered.get-involved-punchline    
-/     %h6
-/       = t('dynamic_translations.partners.become_a_partner')
-/       %br
-/       %a{:href => "mailto:partners@ouishare.net"} partners@ouishare.net
+.get-involved-section
+  .centered.get-involved-punchline    
+    %h6{:style => "margin-bottom:0px; padding-bottom:15px;"}
+      = t('dynamic_translations.partners.become_a_partner')
+      %br
+      %a{:href => "mailto:partners@ouishare.net"} partners@ouishare.net
 
 / Get Involved
 

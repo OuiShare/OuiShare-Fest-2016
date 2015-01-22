@@ -62,6 +62,7 @@ OuiShareFest::Application.routes.draw do
     get :join
     get :freelancers
     get :entreprises
+    get :press_and_media
     get :fest2014
     # get :stories
     post :newsletter_collect_email
