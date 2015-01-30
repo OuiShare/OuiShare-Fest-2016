@@ -5,9 +5,9 @@ module HomeHelper
   def select_languages
     languages_array = [{"en" => "EN"}, 
                        {"fr" => "FR"},
+                       {"de" => "DE"},
+                       {"it" => "IT"},
                        # {"es" => "ES"},
-                       # {"de" => "DE"},
-                       # {"it" => "IT"},
                        # {"nl" => "NL"},
                       ]
     # select_tag :language, options_for_select([["Francais",set_new_language_path(:language_code => "fr")],['English',set_new_language_path(:language_code => "en")]], getcurrentlanguage)
