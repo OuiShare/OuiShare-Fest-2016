@@ -810,12 +810,12 @@ address {
   padding-right: 30px;
 }
 .btn.btn-primary {
-  background-color: #1abc9c;
+  background-color: #001E60;
 }
 .btn.btn-primary:hover,
 .btn.btn-primary:focus,
 .btn-group:focus .btn.btn-primary.dropdown-toggle {
-  background-color: #48c9b0;
+  background-color: rgba(0, 30, 96, 0.43);
 }
 .btn.btn-primary:active,
 .btn-group.open .btn.btn-primary.dropdown-toggle,
@@ -1159,7 +1159,7 @@ address {
   left: 100%;
 }
 .navbar .nav > li > a {
-  color: #0b0b6d;
+  color: white;
   display: inline-block;
   font-weight: 300;
   font-size: 15px;
