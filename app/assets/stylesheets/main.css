@@ -142,7 +142,7 @@ body {
 
 .ch-info {
 	position: absolute;
-	background: #E03E52;
+	background: rgb(224,62,82);
 	width: inherit;
 	height: inherit;
 	border-radius: 50%;
