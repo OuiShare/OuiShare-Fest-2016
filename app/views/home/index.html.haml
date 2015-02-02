@@ -1,207 +1,129 @@
-
-#headerwrap.main_bg
+.first-part
   .container
-    .row.main-section   
-      #head_logo   
-        = image_tag "/assets/landing_logo.png", :style => "height:250px;margin:35px 0px 25px 0px;"
-      .col-md-10.col-md-offset-1
-        %h1
-          .main-title   
-            = t('dynamic_translations.main.title')
-          %p.main-section-paragraphes
-            = t('dynamic_translations.main.subtitle')
-          %p.main-section-paragraphes
-            = t('dynamic_translations.main.event')
-          %p.centered
-            %br
-            %a{:href => 'join#_tickets'}
-              %button.btn.btn-embossed.btn-primary
-                = t('dynamic_translations.reminder_ticket.getyourtickets')
-            %br
+    .main-section
+      .row
+        .col-xs-6.col-sm-offset-3
+          #head_logo
+            = image_tag "/assets/landing_logo.png", :style => "height:250px;margin:35px 0px 25px -25px;"
+      .row
+        .col-md-10.col-md-offset-1
+          %h1
+            .main-title.white
+              = t('dynamic_translations.main.title')
+            %p.main-section-paragraphes.white
+              = t('dynamic_translations.main.subtitle')
+            %p.main-section-paragraphes.white
+              = t('dynamic_translations.main.event')
+            %p.centered.white
+              %br
+              %a{:href => 'join#_tickets'}
+                %button.btn.btn-embossed.btn-primary{:style => "background-color: white; color: #E03E51"}
+                  = t('dynamic_translations.reminder_ticket.getyourtickets')
+      .row
+        = form_tag home_newsletter_collect_email_path, :class => "form-inline" do
+          .row
+            .col-md-offset-3.col-md-4
+              = text_field_tag :email_address,"", :class => "form-control flat", :placeholder => t('dynamic_translations.main.placeholder_stay_posted')
+            .col-md-2.submit-email-button
+              = submit_tag t('dynamic_translations.main.stay_posted'), :class => "btn btn-primary"
 
-            
-          = form_tag home_newsletter_collect_email_path, :class => "form-inline" do
-            .row.text-center
-              .col-md-offset-3.col-md-4
-                = text_field_tag :email_address,"", :class => "form-control flat", :placeholder => t('dynamic_translations.main.placeholder_stay_posted')
-              .col-md-2.submit-email-button        
-                = submit_tag t('dynamic_translations.main.stay_posted'), :class => "btn btn-primary"        
+    .second-section
+      .row
+        %h3.col-md-8.col-md-offset-2.ouishare_stencil.white.text-center#_about{:style => "font-size:35px;"}
+          = t('dynamic_translations.about.subtitle')
+      .row
+        .col-md-8.col-md-offset-2
+          %br
+          %br
+          %p.white
+            = t('dynamic_translations.about.description')
+          %br
 
-        %br
+          %p.white
+            = t('dynamic_translations.what_is_community.text1')
+          %br
+          %p.white
+            = t('dynamic_translations.what_is_community.text2')
+          %br
+          %p.white
+            = t('dynamic_translations.what_is_community.text3')
+          %br
+          %p.white
+            = t('dynamic_translations.what_is_community.text4')
+          %br
+          %p.white
+            = t('dynamic_translations.what_is_community.text5')
+          %br
+          %br
+          %p.topics.row.centered
+            = image_tag "/assets/coeur-key-topic.png"
 
-        / Social media buttons
-        / %a{href: "https://www.facebook.com/OuiShare", target: "_blank"}
-        /   %img{src: "/assets/facebook.svg", width: "48px"}/
-        / %a{href: "https://twitter.com/OuiShareFest", target: "_blank"}
-        /   %img{src: "/assets/twitter.svg", width: "48px"}/
-        / %a{href: "https://plus.google.com/+OuishareNet", target: "_blank"}
-        /   %img{src: "/assets/g-plus-icon-vector.svg", width: "48px"}/
-        / %span.twitter-hashtag
-        /   \#OSFest14
+    .third-section
+      .row.centered
+        %h3.ouishare_stencil.white
+          = t('dynamic_translations.topics.title')
+          /Key topics
+        %br/
+        %br/
+      .row
+        .col-md-6.col-md-offset-3
+          .row
+            .col-md-2
+              %p.topics
+                = image_tag "/assets/collab-economy-icon.png"
+            .col-md-4
+              %h5
+                = t('dynamic_translations.topics.collcon_title')
+            .col-md-6
+              %p.white
+                = t('dynamic_translations.topics.collcon_desc')
+          .row
+            .col-md-2
+              %p.topics
+                = image_tag "/assets/crowdfunding-icon.png"
+            .col-md-4
+              %h5
+                = t('dynamic_translations.topics.cf_title')
+            .col-md-6
+              %p.white
+                = t('dynamic_translations.topics.cf_desc')
+          .row
+            .col-md-2
+              %p.topics
+                = image_tag "/assets/open-knowledge-icon.png"
+            .col-md-4
+              %h5
+                = t('dynamic_translations.topics.ok_title')
+            .col-md-6
+              %p.white
+                = t('dynamic_translations.topics.ok_desc')
+          .row
+            .col-md-2
+              %p.topics
+                = image_tag "/assets/making-manufacturing-icon.png"
+            .col-md-4
+              %h5
+                = t('dynamic_translations.topics.om_title')
+            .col-md-6
+              %p.white
+                = t('dynamic_translations.topics.om_desc')
+          .row
+            .col-md-2
+              %p.topics
+                = image_tag "/assets/horizontal-governance-icon.png"
+            .col-md-4
+              %h5
+                = t('dynamic_translations.topics.gov_title')
+            .col-md-6
+              %p.white
+                = t('dynamic_translations.topics.gov_desc')
+      %br/
 
-#about.triangle_bg
-  .container{:style => "width:60% !important;"}
-    %h3.ouishare_stencil.text-center#_about{:style => "font-size:25px;"}
-      = t('dynamic_translations.about.subtitle')
-    
-    %br
-    %br
-    %p 
-      = t('dynamic_translations.about.description')
-    %br
-    
-    %p
-      = t('dynamic_translations.what_is_community.text1')
-    %br
-    %p
-      = t('dynamic_translations.what_is_community.text2')
-    %br
-    %p{:style =>"font-weight:bold;"}
-      = t('dynamic_translations.what_is_community.text3')
-    %br
-    %p
-      = t('dynamic_translations.what_is_community.text4')
-    %br
-    %p
-      = t('dynamic_translations.what_is_community.text5')
-    %br
-    %br
-
-/ #highlights.grey_bg#_about_highlights
-/   .container
-/     .row.centered
-/       %h3.ouishare_stencil
-/         = t('dynamic_translations.highlight.title')
-/         / Highlights from 2013
-/     .row.centered
-/       .col-md-9.span-centered.margin_25
-/         %br
-/         %br
-/         %iframe{allowfullscreen: "", frameborder: "0", height: "315", src: "//www.youtube.com/embed/QiXmsACpfRY", width: "560"}   
-/     / .row.centered       
-/     /   %p{:style => 'color:#ffffff;'}
-/     /     %br
-/     /     %br
-/     /     = t('dynamic_translations.highlight.description')
-/     /     %br
-/     /     %br
-
-/     .row.mb_20
-/       .col-md-12
-/         %a.btn.btn-large.btn-primary{href: "https://www.youtube.com/watch?v=QiXmsACpfRY", :target => "_blank"} 
-/           = t('dynamic_translations.highlight.see_video_2014')
-
-/     .row.centered.top-buffer
-
-/ %iframe{ :src => "http://eventifier.com/event/ouisharefest/popular?full_embed=true", :width => "100%", :height => "1150px", :frameborder => "0"}
-
-/     .row.mb_20
-/       .col-md-2
-/       .col-md-4
-/         %a.btn.btn-large.btn-primary{href: "http://www.youtube.com/user/OuiShareTV", :target => "_blank"} 
-/           = t('dynamic_translations.highlight.btn_watch_all_sessions')
-/           / Watch all sessions from 2013
-/       .col-md-4
-/         %a.btn.btn-large.btn-primary{href: "http://live.ouisharefest.com", :target => "_blank"} 
-/           = t('dynamic_translations.highlight.btn_see_coverage')
-/           / See 2013 coverage
-
-/ .grey_bg#_live
-/   .container
-/     .row.centered
-/       %h3.ouishare_stencil
-/         = t('dynamic_translations.live_reporting.title')
-/       %br      
-/       %br
-/       .container
-/         %p
-/           = t('dynamic_translations.live_reporting.paragraph')
-    
-/     .row.centered.top-buffer
-
-/       %iframe{ :src => "http://eventifier.com/event/ouisharefest/popular?full_embed=true", :width => "100%", :height => "1150px", :frameborder => "0"}
-    
-/     .row.centered.top-buffer
-/       %h3.ouishare_stencil
-/         = t('dynamic_translations.live_reporting.stories')
-
-/     .row.centered.top-buffer
-/       .col-sm-12.col-md-6.col-lg-6
-/         %iframe{ :src => "http://storify.com/OuiShare", :width => "100%", :height =>"674", :frameborder => "no", :allowtransparency => :true, :style => "margin:auto;"}
-
-/       .col-sm-12.col-md-6.col-lg-6
-/         %iframe{ :src => "http://blog.ouisharefest.com/", :width => "100%", :height =>"674", :frameborder => "no", :allowtransparency => :true, :style => "margin:auto;"}
-
-
-/     .row.centered.top-buffer
-/       %h3.ouishare_stencil
-/         = t('dynamic_translations.live_reporting.listen')
-
-/     .row.centered.top-buffer
-/       %iframe{ :width => '940', :height => '546', :style => "-ms-zoom: 1; -moz-transform: scale(1); -moz-transform-origin: 0 0; -o-transform: scale(1); -o-transform-origin: 0 0; -webkit-transform: scale(1); -webkit-transform-origin: 0 0;", :src => "http://bobler.com/embedmap/app/index.html#/?id=2914", :frameborder => "0"}
-
-
-.container.sinfo
-  .row.centered
-    %h3.ouishare_stencil
-      = t('dynamic_translations.topics.title')
-      /Key topics
-    %br/
-    %br/
-  .row
-    .col-lg-12
-      .col-lg-2
-        %p.topics
-          = image_tag "/assets/collab-economy-icon.png"
-      .col-lg-10
-        %h5 
-          = t('dynamic_translations.topics.collcon_title')
-        %p 
-          = t('dynamic_translations.topics.collcon_desc')
-    .col-lg-12
-      .col-lg-2
-        %p.topics
-          = image_tag "/assets/crowdfunding-icon.png"
-      .col-lg-10
-        %h5
-          = t('dynamic_translations.topics.cf_title')
-        %p 
-          = t('dynamic_translations.topics.cf_desc')
-    .col-lg-12
-      .col-lg-2
-        %p.topics
-          = image_tag "/assets/open-knowledge-icon.png"
-      .col-lg-10
-        %h5
-          = t('dynamic_translations.topics.ok_title')
-        %p 
-          = t('dynamic_translations.topics.ok_desc')
-    .col-lg-12
-      .col-lg-2
-        %p.topics
-          = image_tag "/assets/making-manufacturing-icon.png"
-      .col-lg-10
-        %h5 
-          = t('dynamic_translations.topics.om_title')
-        %p 
-          = t('dynamic_translations.topics.om_desc')
-    .col-lg-12
-      .col-lg-2
-        %p.topics
-          = image_tag "/assets/horizontal-governance-icon.png"
-      .col-lg-10
-        %h5
-          = t('dynamic_translations.topics.gov_title')
-        %p 
-          = t('dynamic_translations.topics.gov_desc')
-  %br/
-
-#speakers.blue_bg#_speakers 
+#speakers.no_bg
   .container
     .row.centered
-      %h3.ouishare_stencil.white
+      %h3.ouishare_stencil{style: "color: #E03E52;"}
         = t('dynamic_translations.speakers.title')
-      %hr
       - if !@displayed_speakers.blank?
         .ch-grid
           - @displayed_speakers.each do |speaker|
@@ -210,39 +132,37 @@
                 = render "/individuals/partials/speaker_display", :speaker => speaker
           - if !@hidden_speakers.blank?
             %div
-              #allspeakers{style: "display: none;"}  
+              #allspeakers{style: "display: none;"}
                 - @hidden_speakers.each do |speaker|
                   .col-lg-3.individuals-list-display
                     %li
-                      = render "/individuals/partials/speaker_display", :speaker => speaker              
+                      = render "/individuals/partials/speaker_display", :speaker => speaker
               %div.row.mb_20
                 %a#btn_showspeakers_down
                   %button.btn.btn-embossed.btn-primary.mt_20
                     = t('dynamic_translations.speakers.show_all')
-                    
+
               %div.row.mb_20.mt_20
                 %button.btn.btn-embossed.btn-primary.hide#btn_showspeakers_up
                   = t('dynamic_translations.speakers.hide_all')
 
-/ Tickets 
-
-.triangle_bg#_tickets 
-  .container.tickets-section 
+.tickets
+  .container.tickets-section
     .row.centered
-      %h3.ouishare_stencil
+      %h3.ouishare_stencil.white
         = t('dynamic_translations.tickets.title')
-      %br      
+      %br
       %br
       .container.round_fond
         %h4{:style => "font-size:18px;"}
           %p
             = t('dynamic_translations.tickets.description1')
-            %a{href: "/join#_getinvolved"} 
+            %a{href: "/join#_getinvolved"}
               = t('dynamic_translations.tickets.get_involved')
               = "."
-          %p 
+          %p
             = t('dynamic_translations.tickets.description2')
-            %a{href: "http://bit.ly/OSFest14ticketapplication"} 
+            %a{href: "http://bit.ly/OSFest14ticketapplication"}
               = t('dynamic_translations.tickets.apply_tickets_link')
         %br
         %br
@@ -281,8 +201,7 @@
                       %br
                       %br
 
-/ Partners
-     
+
 .partners-container#_partners{:style => 'padding-top:130px'}
   .container.sinfo
     - if !@partners.blank?
@@ -291,7 +210,6 @@
         %h3.ouishare_stencil
           = t('dynamic_translations.partners.title')
         %hr.partners
-      / = render "/individuals/partials/partners_display", :partners => @partners, :important_partners_display => true, :important_partners_count => 7
       = render "/individuals/partials/partners_display", :partners => @partners, :important_partners_display => true, :important_partners_count => 9
       %br
       %br
@@ -330,110 +248,71 @@
       = render "/individuals/partials/partners_display", :partners => @supporters, :important_partners_display => false
 
 
-/ Team
-
-/ .blank_bg#_team
-/   .container
-/     .row.centered
-/       %h3.ouishare_stencil
-/         =t('dynamic_translations.team.title')     
-/       %hr
-/       - if !@team_members.blank?
-/         .ch-grid
-/           - @team_members.each do |team_member|
-/             .col-lg-3.individuals-list-display
-/               %li
-/                 = render "/individuals/partials/team_member_display", :team_member => team_member          
-/            - if !@hidden_team_members.blank?
-/              %div
-/                #allteam_members{style: "display: none;"}  
-/                  - @hidden_team_members.each do |team_member|
-/                    .col-lg-3.individuals-list-display
-/                      %li
-/                        = render "/individuals/partials/team_member_display", :team_member => team_member           
-/                %div.row
-/                  %a#btn_team_members_down
-/                    %button.btn.btn-embossed.btn-primary 
-/                      = t('dynamic_translations.team.show_all')
-/                %div.row  
-/                  %a.hide#btn_team_members_up            
-/                    %button.btn.btn-embossed.btn-primary
-/                      = t('dynamic_translations.team.hide_all')
-
-
-
-.get-involved-section
-  .centered.get-involved-punchline    
-    %h6{:style => "margin-bottom:0px; padding-bottom:15px;"}
-      = t('dynamic_translations.partners.become_a_partner')
-      %br
-      %a{:href => "mailto:partners@ouishare.net"} partners@ouishare.net
+.centered.get-involved-punchline
+  %h6{:style => "margin-bottom:0px; padding-bottom:15px;"}
+    = t('dynamic_translations.partners.become_a_partner')
+    %br
+    %a{:href => "mailto:partners@ouishare.net"} partners@ouishare.net
 
 / Get Involved
 
-.yellow_bg#_getinvolved{:style => 'padding-top:130px'}
-  .get-involved-section
-    .container.sinfo
-      .row.centered
-        %h3.ouishare_stencil
-          = t('dynamic_translations.get_involved.title')
-        %hr
-      .container
-      %br  
-      %p.text-center
-        = t('dynamic_translations.get_involved.description')
-      %br
-        
-      .row.get-involved-options-choice
-        .col-md-9.span-centered
-          .row
-            .col-md-4.pricing-table.turquoise.bordered.plain
-              %ul.centered.alt
-                %li.title
+.get-involved-section
+  .container.sinfo
+    .row.centered
+      %h3.ouishare_stencil
+        = t('dynamic_translations.get_involved.title')
+      %hr
+    .container
+    %br
+    %p.text-center
+      = t('dynamic_translations.get_involved.description')
+    %br
+
+    .centered.get-involved-options-choice
+      .span-centered
+        .col-md-10.col-md-offset-1
+          .centered.alt
+            .row
+              .col-md-4
+                .title
                   = t('dynamic_translations.get_involved.call_for_proposal')
-                %li.button
-                  %a.btn.btn-large.button-call-to-action-option{href: "https://docs.google.com/forms/d/1ZTTDVAieu70jO4gL1IvgKtueJJv7A6i86fC_1-vX_sQ/viewform#start=openform"} 
+                .button
+                  %a.btn.btn-large.button-call-to-action-option{href: "https://docs.google.com/forms/d/1ZTTDVAieu70jO4gL1IvgKtueJJv7A6i86fC_1-vX_sQ/viewform#start=openform"}
                     =t('dynamic_translations.get_involved.submit')
-            .col-md-4.pricing-table.turquoise.bordered.plain
-              %ul.centered.alt
-                %li.title
+              .col-md-4
+                .title
                   =t('dynamic_translations.get_involved.contribute')
-                %li.button
-                  %a.btn.btn-large.button-call-to-action-option{href: "https://docs.google.com/forms/d/146wWTvYuyHrUSXQbWopx5-0JJQymzKUxRxpUd8cVX60/viewform"}
-                    = t('dynamic_translations.get_involved.contribute_button')
-            .col-md-4.pricing-table.turquoise.bordered.plain
-              %ul.centered.alt
-                %li.title
+                .button
+                  %a.btn.btn-large.button-call-to-action-option{href: "https://docs.google.com/forms/d/1ZTTDVAieu70jO4gL1IvgKtueJJv7A6i86fC_1-vX_sQ/viewform#start=openform"}
+                    =t('dynamic_translations.get_involved.submit')
+              .col-md-4
+                .title
                   =t('dynamic_translations.get_involved.idea_wall')
-                %li.button
+                .button
                   %a.btn.btn-large.button-call-to-action-option{href: "mailto:partners@ouishare.net", :target => "_blank"}
                     = t('dynamic_translations.get_involved.idea_wall_button')
-
-
-/ About OuiShare - copy of the block in about.html
-
-#_ouishare.blank_bg
+.aboutouishare-section
   .container
     .row.centered
       %h3.ouishare_stencil
         = t('dynamic_translations.about.ouishare_title')
-      %br      
+      %br
       %br
       .container.round_fond
         .row
-          .col-xs-12.col-md-6.col-lg-6
-            %p.justify
-              
+          .col-xs-8.col-xs-offset-2
+            %p
               = t('dynamic_translations.about.ouishare_text')
 
-            %p.centered
-              %br
+        .row
+          .col-xs-8.col-xs-offset-2
+            .col-xs-6
+              %img{:src => '/assets/coeur-aboutouishare.png', :alt => 'OuiShare logo'}
+            .col-xs-6
+
               %a{:href => 'http://ouishare.net/en/users/sign_up', :target => '_blank'}
                 %button.btn.btn-embossed.btn-primary
                   = t('dynamic_translations.about.ouishare_btn')
 
-          .col-xs-12.col-md-6.col-lg-6
-            %img{:src => '/assets/ouishare-400.png', :alt => 'OuiShare logo'}
-
-- if !@visited
-  = render "modals/visit_modal"
+  - if !@visited
+    = render "modals/visit_modal"
