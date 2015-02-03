@@ -32,7 +32,7 @@
         %h3.col-md-8.col-md-offset-2.ouishare_stencil.white.text-center#_about{:style => "font-size:35px;"}
           = t('dynamic_translations.about.subtitle')
       .row
-        .col-md-8.col-md-offset-2
+        .col-xs-8.col-xs-offset-2
           %br
           %br
           %p.white
@@ -202,7 +202,7 @@
                       %br
 
 
-.partners-container#_partners{:style => 'padding-top:130px'}
+.partners-container
   .container.sinfo
     - if !@partners.blank?
       .row.centered
@@ -261,7 +261,6 @@
     .row.centered
       %h3.ouishare_stencil
         = t('dynamic_translations.get_involved.title')
-      %hr
     .container
     %br
     %p.text-center
@@ -276,21 +275,26 @@
               .col-md-4
                 .title
                   = t('dynamic_translations.get_involved.call_for_proposal')
-                .button
-                  %a.btn.btn-large.button-call-to-action-option{href: "https://docs.google.com/forms/d/1ZTTDVAieu70jO4gL1IvgKtueJJv7A6i86fC_1-vX_sQ/viewform#start=openform"}
-                    =t('dynamic_translations.get_involved.submit')
               .col-md-4
                 .title
                   =t('dynamic_translations.get_involved.contribute')
+              .col-md-4
+                .title
+                  =t('dynamic_translations.get_involved.idea_wall')
+            .row
+              .col-md-4
                 .button
                   %a.btn.btn-large.button-call-to-action-option{href: "https://docs.google.com/forms/d/1ZTTDVAieu70jO4gL1IvgKtueJJv7A6i86fC_1-vX_sQ/viewform#start=openform"}
                     =t('dynamic_translations.get_involved.submit')
               .col-md-4
-                .title
-                  =t('dynamic_translations.get_involved.idea_wall')
+                .button
+                  %a.btn.btn-large.button-call-to-action-option{href: "https://docs.google.com/forms/d/1ZTTDVAieu70jO4gL1IvgKtueJJv7A6i86fC_1-vX_sQ/viewform#start=openform"}
+                    =t('dynamic_translations.get_involved.submit')
+              .col-md-4
                 .button
                   %a.btn.btn-large.button-call-to-action-option{href: "mailto:partners@ouishare.net", :target => "_blank"}
                     = t('dynamic_translations.get_involved.idea_wall_button')
+
 .aboutouishare-section
   .container
     .row.centered
