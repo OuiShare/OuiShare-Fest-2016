@@ -32,7 +32,7 @@
         %h3.col-md-8.col-md-offset-2.ouishare_stencil.white.text-center#_about{:style => "font-size:35px;"}
           = t('dynamic_translations.about.subtitle')
       .row
-        .col-xs-8.col-xs-offset-2
+        .col-xs-6.col-xs-offset-3
           %br
           %br
           %p.white
@@ -155,12 +155,12 @@
       %br
       .container.round_fond
         %h4{:style => "font-size:18px;"}
-          %p
+          %p.col-xs-6.col-xs-offset-3
             = t('dynamic_translations.tickets.description1')
             %a{href: "/join#_getinvolved"}
               = t('dynamic_translations.tickets.get_involved')
               = "."
-          %p
+          %p.col-xs-6.col-xs-offset-3
             = t('dynamic_translations.tickets.description2')
             %a{href: "http://bit.ly/OSFest14ticketapplication"}
               = t('dynamic_translations.tickets.apply_tickets_link')
@@ -209,7 +209,7 @@
         %br
         %h3.ouishare_stencil
           = t('dynamic_translations.partners.title')
-        %hr.partners
+        .partners
       = render "/individuals/partials/partners_display", :partners => @partners, :important_partners_display => true, :important_partners_count => 9
       %br
       %br
@@ -220,7 +220,7 @@
         %h3.ouishare_stencil
           = t('dynamic_translations.partners.media_partner_title')
 
-        %hr.partners
+        .partners
       = render "/individuals/partials/partners_display", :partners => @media_partners, :important_partners_display => false
       %br
       %br
@@ -231,7 +231,7 @@
         %h3.ouishare_stencil
           = t('dynamic_translations.partners.friends_title')
 
-        %hr.partners
+        .partners
       = render "/individuals/partials/partners_display", :partners => @friends, :important_partners_display => false
 
       %br
@@ -244,7 +244,7 @@
         %h3.ouishare_stencil
           = t('dynamic_translations.partners.supporters_title')
 
-        %hr.partners
+        .partners
       = render "/individuals/partials/partners_display", :partners => @supporters, :important_partners_display => false
 
 
@@ -257,13 +257,12 @@
 / Get Involved
 
 .get-involved-section
-  .container.sinfo
+  .container
     .row.centered
       %h3.ouishare_stencil
         = t('dynamic_translations.get_involved.title')
-    .container
     %br
-    %p.text-center
+    %p.col-xs-6.col-xs-offset-3
       = t('dynamic_translations.get_involved.description')
     %br
 

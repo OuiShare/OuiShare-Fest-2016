@@ -179,7 +179,7 @@
 .tickets {
   background: url(/assets/fest2.png);
   background-size: cover;
-  margin-top: -10%;
+  margin-top: -12%;
   padding-top: 18%;
 }
 
@@ -213,16 +213,16 @@ p.white {
 }
 
 .tickets-section > div:nth-child(1) {
-  padding-top: 17%;
-  padding-bottom: 40%;
+  padding-top: 12%;
+  padding-bottom: 32%;
 }
 .third-section {
   padding-bottom: 15%;
 }
 
 .get-involved-section > div {
-  padding-top: 15%;
-  padding-bottom: 27%;
+  padding-top: 10%;
+  padding-bottom: 20%;
 }
 div.container:nth-child(11) > div:nth-child(1) {
   padding-top: 10%;
@@ -271,4 +271,8 @@ div.alt > div:nth-child(1) {
 
 .tickets-section > div:nth-child(1) > div:nth-child(4) {
   text-align: left;
+}
+
+p.col-xs-6:nth-child(2) {
+  padding-bottom: 7%;
 }
