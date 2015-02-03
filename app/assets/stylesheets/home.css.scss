@@ -286,3 +286,15 @@ hr {
   width: 120px;
   background-color: black;
 }
+
+p.col-xs-6:nth-child(1) {
+  text-align: left;
+}
+
+p.col-xs-6:nth-child(2) {
+  text-align: left;
+}
+
+.aboutouishare-section > div:nth-child(1) > div:nth-child(1) > div:nth-child(5) > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) {
+  padding-top: 5%;
+}
