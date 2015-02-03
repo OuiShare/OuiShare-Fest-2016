@@ -80,7 +80,7 @@
 }
 
 @font-face {
-  font-family: "ouisharestencilbold";
+  font-family: "naiv_normal",Helvetica,Arial,sans-serif;
   src: url("/assets/ouishare-stencil-bold.woff");
   font-weight: normal;
   font-style: normal;
@@ -472,7 +472,7 @@ you can use the generic selector below, but it's slower:
   border-top-color: #34495e !important;
 }
 body {
-  font-family: 'naiv_normal', Helvetica, Arial, sans-serif;
+  font-family: 'regular', Open Sans, Arial, sans-serif;
   font-size: 14px;
   line-height: 1.231;
   color: #34495e;
@@ -502,7 +502,7 @@ a:focus {
   margin: 24px 0;
 }
 p {
-  font-size: 18px;
+  font-size: 15px;
   line-height: 1.71109;
 }
 .lead {

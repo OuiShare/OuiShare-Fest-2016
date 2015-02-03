@@ -58,7 +58,7 @@
 .get-involved-section{
   .get-involved-punchline{
     background-color: white;
-    color: #E03E52;
+    color: #FF7777;
     padding-top: 1px;
   }
 }
@@ -177,15 +177,18 @@
   padding-top: 10%;
 }
 .tickets {
-  background: url(/assets/redblob.jpg);
+  background: url(/assets/fest2.png);
   background-size: cover;
+  margin-top: -12%;
+  padding-top: 18%;
 }
 
 .get-involved-section {
-  background: url(/assets/greyblob.png);
+  background: url(/assets/fest3.png);
   background-size: cover;
-  padding-top: 15%;
+  padding-top: 21%;
   min-height: 100%;
+  margin-top: -8%;
 }
 
 .third-section > div > div > div > div > h5 {
@@ -194,11 +197,12 @@
 }
 
 .first-part {
-  background: url(/assets/headbackground.png) no-repeat;
+  background: url(/assets/fest1.png) no-repeat;
 
   /*background-color: #33FF99; */
   margin-top: 0px;
   padding-top:5%;
+  padding-bottom: 4%;
   text-align:center;
   background-position: center center;
   background-size: cover;
@@ -209,16 +213,16 @@ p.white {
 }
 
 .tickets-section > div:nth-child(1) {
-  padding-top: 17%;
-  padding-bottom: 40%;
+  padding-top: 12%;
+  padding-bottom: 32%;
 }
 .third-section {
   padding-bottom: 15%;
 }
 
 .get-involved-section > div {
-  padding-top: 15%;
-  padding-bottom: 16%;
+  padding-top: 10%;
+  padding-bottom: 20%;
 }
 div.container:nth-child(11) > div:nth-child(1) {
   padding-top: 10%;
@@ -234,7 +238,6 @@ a.btn:nth-child(3) {
 
 .aboutouishare-section {
   padding-bottom: 10%;
-  padding-top: 10%;
 }
 
 .aboutouishare-section > div:nth-child(1) > div:nth-child(1) > div:nth-child(4) > div:nth-child(2) {
@@ -247,4 +250,39 @@ div.col-xs-6:nth-child(2) {
 
 .col-md-12 > div:nth-child(1) {
   color: #E03E51 ;
+}
+
+div.centered:nth-child(2) {
+  padding-top: 7%;
+  padding-bottom: 7%;
+}
+
+div.row:nth-child(11) {
+  padding-top: 5%;
+}
+
+div.alt > div:nth-child(2) {
+  padding-top: 5%;
+}
+
+div.alt > div:nth-child(1) {
+  padding-top: 10%;
+}
+
+.tickets-section > div:nth-child(1) > div:nth-child(4) {
+  text-align: left;
+}
+
+p.col-xs-6:nth-child(2) {
+  padding-bottom: 7%;
+}
+
+p.centered:nth-child(4) > a:nth-child(2) > button:nth-child(1) {
+  margin-bottom: 30px;
+}
+
+hr {
+  border-width: 4px;
+  width: 120px;
+  background-color: black;
 }

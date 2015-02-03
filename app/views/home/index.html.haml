@@ -32,7 +32,7 @@
         %h3.col-md-8.col-md-offset-2.ouishare_stencil.white.text-center#_about{:style => "font-size:35px;"}
           = t('dynamic_translations.about.subtitle')
       .row
-        .col-md-8.col-md-offset-2
+        .col-xs-6.col-xs-offset-3
           %br
           %br
           %p.white
@@ -63,6 +63,7 @@
         %h3.ouishare_stencil.white
           = t('dynamic_translations.topics.title')
           /Key topics
+        %hr{:style => "background-color: white"}
         %br/
         %br/
       .row
@@ -119,11 +120,12 @@
                 = t('dynamic_translations.topics.gov_desc')
       %br/
 
-#speakers.no_bg
+#speakers
   .container
     .row.centered
       %h3.ouishare_stencil{style: "color: #E03E52;"}
         = t('dynamic_translations.speakers.title')
+      %hr
       - if !@displayed_speakers.blank?
         .ch-grid
           - @displayed_speakers.each do |speaker|
@@ -151,48 +153,49 @@
     .row.centered
       %h3.ouishare_stencil.white
         = t('dynamic_translations.tickets.title')
+      %hr
       %br
       %br
       .container.round_fond
         %h4{:style => "font-size:18px;"}
-          %p
+          %p.col-xs-6.col-xs-offset-3{:style => "font-family: Open sans, Arial, sans-serif;"}
             = t('dynamic_translations.tickets.description1')
             %a{href: "/join#_getinvolved"}
               = t('dynamic_translations.tickets.get_involved')
               = "."
-          %p
+          %p.col-xs-6.col-xs-offset-3{:style => "font-family: Open sans, Arial, sans-serif;"}
             = t('dynamic_translations.tickets.description2')
             %a{href: "http://bit.ly/OSFest14ticketapplication"}
               = t('dynamic_translations.tickets.apply_tickets_link')
         %br
         %br
-        .row.get-involved-options-choice
+        .get-involved-options-choice
           .col-md-12.span-centered
             .row
               .col-md-4.pricing-table.turquoise.bordered.plain
                 %a{href: home_freelancers_path}
                   %ul.centered.alt
-                    %li.title
+                    %li.title{:style => "font-family: naiv_normal,Helvetica; color:#E03E51;"}
                       = t('dynamic_translations.tickets.freelancers_small_business')
-                    %li.button
+                    %li.button{:style => "font-family: naiv_normal,Helvetica; padding-top:0px; color:#E03E51;"}
                       = t('dynamic_translations.tickets.freelancers_small_business_desc')
                       %br
                       %br
               .col-md-4.pricing-table.turquoise.bordered.plain
                 %a{href: home_entreprises_path}
                   %ul.centered.alt
-                    %li.title
+                    %li.title{:style => "font-family: naiv_normal,Helvetica; color:#E03E51;"}
                       =t('dynamic_translations.tickets.entreprises')
                       %br
                       %br
-                    %li.button
+                    %li.button{:style => "font-family: naiv_normal,Helvetica; padding-top:0px; color:#E03E51;"}
                       = t('dynamic_translations.tickets.entreprises_desc')
                       %br
                       %br
               .col-md-4.pricing-table.turquoise.bordered.plain
                 %a{href: home_press_and_media_path}
                   %ul.centered.alt
-                    %li.title
+                    %li.title{:style => "font-family: naiv_normal,Helvetica; color:#E03E51;"}
                       =t('dynamic_translations.tickets.press_media')
                       %br
                       %br
@@ -202,14 +205,15 @@
                       %br
 
 
-.partners-container#_partners{:style => 'padding-top:130px'}
+.partners-container
   .container.sinfo
     - if !@partners.blank?
       .row.centered
         %br
         %h3.ouishare_stencil
           = t('dynamic_translations.partners.title')
-        %hr.partners
+        %hr
+        .partners
       = render "/individuals/partials/partners_display", :partners => @partners, :important_partners_display => true, :important_partners_count => 9
       %br
       %br
@@ -220,7 +224,7 @@
         %h3.ouishare_stencil
           = t('dynamic_translations.partners.media_partner_title')
 
-        %hr.partners
+        .partners
       = render "/individuals/partials/partners_display", :partners => @media_partners, :important_partners_display => false
       %br
       %br
@@ -230,8 +234,8 @@
         %br
         %h3.ouishare_stencil
           = t('dynamic_translations.partners.friends_title')
-
-        %hr.partners
+        %hr
+        .partners
       = render "/individuals/partials/partners_display", :partners => @friends, :important_partners_display => false
 
       %br
@@ -243,8 +247,8 @@
         %br
         %h3.ouishare_stencil
           = t('dynamic_translations.partners.supporters_title')
-
-        %hr.partners
+        %hr
+        .partners
       = render "/individuals/partials/partners_display", :partners => @supporters, :important_partners_display => false
 
 
@@ -257,14 +261,13 @@
 / Get Involved
 
 .get-involved-section
-  .container.sinfo
+  .container
     .row.centered
       %h3.ouishare_stencil
         = t('dynamic_translations.get_involved.title')
       %hr
-    .container
     %br
-    %p.text-center
+    %p.col-xs-6.col-xs-offset-3
       = t('dynamic_translations.get_involved.description')
     %br
 
@@ -276,26 +279,32 @@
               .col-md-4
                 .title
                   = t('dynamic_translations.get_involved.call_for_proposal')
-                .button
-                  %a.btn.btn-large.button-call-to-action-option{href: "https://docs.google.com/forms/d/1ZTTDVAieu70jO4gL1IvgKtueJJv7A6i86fC_1-vX_sQ/viewform#start=openform"}
-                    =t('dynamic_translations.get_involved.submit')
               .col-md-4
                 .title
                   =t('dynamic_translations.get_involved.contribute')
+              .col-md-4
+                .title
+                  =t('dynamic_translations.get_involved.idea_wall')
+            .row
+              .col-md-4
                 .button
                   %a.btn.btn-large.button-call-to-action-option{href: "https://docs.google.com/forms/d/1ZTTDVAieu70jO4gL1IvgKtueJJv7A6i86fC_1-vX_sQ/viewform#start=openform"}
                     =t('dynamic_translations.get_involved.submit')
               .col-md-4
-                .title
-                  =t('dynamic_translations.get_involved.idea_wall')
+                .button
+                  %a.btn.btn-large.button-call-to-action-option{href: "https://docs.google.com/forms/d/1ZTTDVAieu70jO4gL1IvgKtueJJv7A6i86fC_1-vX_sQ/viewform#start=openform"}
+                    =t('dynamic_translations.get_involved.submit')
+              .col-md-4
                 .button
                   %a.btn.btn-large.button-call-to-action-option{href: "mailto:partners@ouishare.net", :target => "_blank"}
                     = t('dynamic_translations.get_involved.idea_wall_button')
+
 .aboutouishare-section
   .container
     .row.centered
       %h3.ouishare_stencil
         = t('dynamic_translations.about.ouishare_title')
+      %hr
       %br
       %br
       .container.round_fond
