@@ -172,7 +172,7 @@
         .get-involved-options-choice
           .col-md-12.span-centered
             .row
-              .col-md-4.pricing-table.turquoise.bordered.plain
+              .col-xs-4.col-xs-offset-4.pricing-table.turquoise.bordered.plain
                 %a{href: home_freelancers_path}
                   %ul.centered.alt
                     %li.title{:style => "font-family: naiv_normal,Helvetica; color:#E03E51;"}
@@ -181,7 +181,7 @@
                       = t('dynamic_translations.tickets.freelancers_small_business_desc')
                       %br
                       %br
-              .col-md-4.pricing-table.turquoise.bordered.plain
+              .col-xs-4.col-xs-offset-4.pricing-table.turquoise.bordered.plain
                 %a{href: home_entreprises_path}
                   %ul.centered.alt
                     %li.title{:style => "font-family: naiv_normal,Helvetica; color:#E03E51;"}
@@ -192,17 +192,17 @@
                       = t('dynamic_translations.tickets.entreprises_desc')
                       %br
                       %br
-              .col-md-4.pricing-table.turquoise.bordered.plain
-                %a{href: home_press_and_media_path}
-                  %ul.centered.alt
-                    %li.title{:style => "font-family: naiv_normal,Helvetica; color:#E03E51;"}
-                      =t('dynamic_translations.tickets.press_media')
-                      %br
-                      %br
-                    %li.button
-                      / = t('dynamic_translations.tickets.entreprises_desc')
-                      %br
-                      %br
+              / .col-md-4.pricing-table.turquoise.bordered.plain
+              /   %a{href: home_press_and_media_path}
+              /     %ul.centered.alt
+              /       %li.title{:style => "font-family: naiv_normal,Helvetica; color:#E03E51;"}
+              /         =t('dynamic_translations.tickets.press_media')
+              /         %br
+              /         %br
+              /       %li.button
+              /         / = t('dynamic_translations.tickets.entreprises_desc')
+              /         %br
+              /         %br
 
 
 .partners-container
