@@ -330,3 +330,11 @@ div.row:nth-child(10) > hr:nth-child(3) {
 .aboutouishare-section > div:nth-child(1) > div:nth-child(1) > hr:nth-child(2) {
   border-color: #E03E51 -moz-use-text-color -moz-use-text-color;
 }
+
+div.col-xs-4:nth-child(1) {
+  padding-bottom: 20px;
+}
+
+p.col-xs-6 a {
+  color: #001E60;
+}
