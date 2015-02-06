@@ -174,7 +174,7 @@
 .third-section {
   min-height: 100%;
   text-align: left;
-  padding-top: 10%;
+  padding-top: 5%;
 }
 .tickets {
   background: url(/assets/fest2.png);
@@ -278,7 +278,7 @@ p.col-xs-6:nth-child(2) {
 }
 
 p.centered:nth-child(4) > a:nth-child(2) > button:nth-child(1) {
-  margin-bottom: 30px;
+  margin-bottom: 15px;
 }
 
 hr {
@@ -337,4 +337,87 @@ div.col-xs-4:nth-child(1) {
 
 p.col-xs-6 a {
   color: #001E60;
+}
+
+.btn {
+  border-radius: 3px;
+  box-shadow: none;
+}
+
+.navbar a {
+  text-transform: uppercase;
+  font-size: 10px;
+}
+
+#head_logo > img {
+  margin-left: auto;
+  margin-right: auto;
+  position: center;
+}
+
+#speakers > h6 {
+  color: #001E60;
+}
+
+.conatiner a {
+  text-decoration: underline;
+}
+
+body > div.navbar.navbar-default.navbar-fixed-top > div > div.navbar-collapse.collapse > ul > li > a:hover {
+  background-color: white;
+  color: #001E60;
+}
+
+body > div.navbar.navbar-default.navbar-fixed-top > div > div.navbar-collapse.collapse > ul > li.tickets-highlight.dropdown > a {
+  padding-bottom: 0px;
+  padding-top: 0px;
+  margin-top: 12px;
+}
+
+body > div.navbar.navbar-default.navbar-fixed-top > div {
+  width: 985px;
+}
+
+.ch-grid > div > li > h6 > small > a {
+  text-decoration: none;
+  color: #001E60;
+}
+
+button.mt_20:hover {
+  background-color: white;
+  color: #001E60;
+}
+
+p.col-xs-6 > a:nth-child(1) {
+  text-decoration: underline;
+  color: white;
+}
+
+p.col-xs-6 > a:hover {
+  color: #001E60;
+}
+
+.aboutouishare-section > div:nth-child(1) > div:nth-child(1) > h3:nth-child(1) {
+  color: #001E60;
+}
+
+body > div.get-involved-section > div > div.centered.get-involved-options-choice > div > div > div > div.button > a {
+  background-color: #E03E51;
+  font-family: 'naiv_normal';
+  padding: 19px 30px;
+  text-transform: uppercase;
+  border-radius: 3px !important;
+  font-size: 12px;
+}
+
+body > div.get-involved-section > div > div.centered.get-involved-options-choice > div > div > div > div.title {
+  min-height: 90px;
+  color: #E03E51;
+  text-transform: uppercase;
+  font-family: 'naiv_normal';
+}
+
+body > div.get-involved-section > div > div.row.centered > p {
+  padding: 22px 26%;
+  text-align: left;
 }
