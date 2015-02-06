@@ -18,13 +18,14 @@
               %a{:href => 'join#_tickets'}
                 %button.btn.btn-embossed.btn-primary{:style => "background-color: white; color: #E03E51"}
                   = t('dynamic_translations.reminder_ticket.getyourtickets')
-      .row
-        = form_tag home_newsletter_collect_email_path, :class => "form-inline" do
-          .row
-            .col-md-offset-3.col-md-4
-              = text_field_tag :email_address,"", :class => "form-control flat", :placeholder => t('dynamic_translations.main.placeholder_stay_posted')
-            .col-md-2.submit-email-button
-              = submit_tag t('dynamic_translations.main.stay_posted'), :class => "btn btn-primary"
+
+      = form_tag home_newsletter_collect_email_path, :class => "form-inline" do
+        .row.text-center
+          .col-md-offset-3.col-md-4
+            = text_field_tag :email_address,"", :class => "form-control flat", :placeholder => t('dynamic_translations.main.placeholder_stay_posted')
+          .col-md-2.submit-email-button
+            = submit_tag t('dynamic_translations.main.stay_posted'), :class => "btn btn-primary"
+
 
     .second-section
       .row
@@ -265,38 +266,32 @@
       %h3.ouishare_stencil
         = t('dynamic_translations.get_involved.title')
       %hr
-    %br
-    %p.col-xs-6.col-xs-offset-3
-      = t('dynamic_translations.get_involved.description')
+      %br
+      %p
+        = t('dynamic_translations.get_involved.description')
     %br
 
     .centered.get-involved-options-choice
       .span-centered
         .col-md-10.col-md-offset-1
-          .centered.alt
-            .row
-              .col-md-4
-                .title
-                  = t('dynamic_translations.get_involved.call_for_proposal')
-              .col-md-4
-                .title
-                  =t('dynamic_translations.get_involved.contribute')
-              .col-md-4
-                .title
-                  =t('dynamic_translations.get_involved.idea_wall')
-            .row
-              .col-md-4
-                .button
-                  %a.btn.btn-large.button-call-to-action-option{href: "https://docs.google.com/forms/d/1ZTTDVAieu70jO4gL1IvgKtueJJv7A6i86fC_1-vX_sQ/viewform#start=openform"}
-                    =t('dynamic_translations.get_involved.submit')
-              .col-md-4
-                .button
-                  %a.btn.btn-large.button-call-to-action-option{href: "https://docs.google.com/forms/d/1ZTTDVAieu70jO4gL1IvgKtueJJv7A6i86fC_1-vX_sQ/viewform#start=openform"}
-                    =t('dynamic_translations.get_involved.submit')
-              .col-md-4
-                .button
-                  %a.btn.btn-large.button-call-to-action-option{href: "mailto:partners@ouishare.net", :target => "_blank"}
-                    = t('dynamic_translations.get_involved.idea_wall_button')
+          .col-md-4
+            .title
+              = t('dynamic_translations.get_involved.call_for_proposal')
+            .button
+              %a.btn.btn-large.button-call-to-action-option{href: "https://docs.google.com/forms/d/1ZTTDVAieu70jO4gL1IvgKtueJJv7A6i86fC_1-vX_sQ/viewform#start=openform"}
+                =t('dynamic_translations.get_involved.submit')
+          .col-md-4
+            .title
+              =t('dynamic_translations.get_involved.contribute')
+            .button
+              %a.btn.btn-large.button-call-to-action-option{href: "https://docs.google.com/forms/d/1ZTTDVAieu70jO4gL1IvgKtueJJv7A6i86fC_1-vX_sQ/viewform#start=openform"}
+                =t('dynamic_translations.get_involved.submit')
+          .col-md-4
+            .title
+              =t('dynamic_translations.get_involved.idea_wall')
+            .button
+              %a.btn.btn-large.button-call-to-action-option{href: "mailto:partners@ouishare.net", :target => "_blank"}
+                = t('dynamic_translations.get_involved.idea_wall_button')
 
 .aboutouishare-section
   .container

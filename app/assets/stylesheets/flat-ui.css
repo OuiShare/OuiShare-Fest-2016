@@ -1219,7 +1219,7 @@ address {
   padding-left: 5px;
 }
 .navbar .nav ul li {
-  background-color: #34495e;
+  background-color: #001E60;
   padding: 0 3px 3px;
   position: relative;
 }
@@ -1251,7 +1251,8 @@ address {
   text-decoration: none;
 }
 .navbar .nav ul a:hover {
-  background-color: #1abc9c;
+  background-color: white;
+  color: #001E60;
 }
 .navbar .btn-navbar {
   background: none;
@@ -1427,7 +1428,6 @@ address {
 }
 .navbar .nav li.dropdown .dropdown-menu > li > a {
   border-radius: 3px;
-  color: #ffffff;
   padding: 6px 8px 8px;
 }
 .navbar .nav li.dropdown .dropdown-menu .divider {
@@ -1541,7 +1541,7 @@ address {
   .navbar.navbar-inverse .nav > li.active > a,
   .navbar.navbar-inverse .nav > li.active > a:hover,
   .navbar.navbar-inverse .nav > li.active > a:focus {
-    background-color: #1abc9c;
+    background-color: black;
   }
   .navbar.navbar-inverse .nav > li > a,
   .navbar.navbar-inverse .nav > li > a:hover {
@@ -2844,7 +2844,7 @@ textarea.input-group-sm > .input-group-btn > .btn {
 }
 .ui-datepicker td a:hover {
   background-color: #d7dbdd;
-  color: #34495e;
+  color: #001E60;
 }
 .ui-datepicker .ui-state-active {
   background-color: #1abc9c;
