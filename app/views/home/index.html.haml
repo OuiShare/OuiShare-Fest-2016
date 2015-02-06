@@ -2,9 +2,8 @@
   .container
     .main-section
       .row
-        .col-xs-6.col-sm-offset-3
-          #head_logo
-            = image_tag "/assets/landing_logo.png", :style => "height:250px;margin:35px 0px 25px -25px;"
+        #head_logo
+          = image_tag "/assets/landing_logo.png", :style => "height:250px;margin-top:40px"
       .row
         .col-md-10.col-md-offset-1
           %h1
@@ -29,7 +28,7 @@
 
     .second-section
       .row
-        %h3.col-md-8.col-md-offset-2.ouishare_stencil.white.text-center#_about{:style => "font-size:35px;"}
+        %h3.col-md-8.col-md-offset-2.ouishare_stencil.white.text-center#_about{:style => "font-size:25px;"}
           = t('dynamic_translations.about.subtitle')
       .row
         .col-xs-6.col-xs-offset-3

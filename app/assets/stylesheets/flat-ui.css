@@ -916,10 +916,10 @@ address {
   color: #ffffff;
 }
 .btn-toolbar .btn:first-child {
-  border-radius: 6px 0 0 6px;
+  border-radius: 3px 0 0 3px;
 }
 .btn-toolbar .btn:last-child {
-  border-radius: 0 6px 6px 0;
+  border-radius: 0 3px 3px 0;
 }
 .btn-toolbar .btn > [class^="fui-"] {
   font-size: 16px;
@@ -940,13 +940,13 @@ address {
 }
 .btn-group > .btn:first-of-type,
 .btn-group > .btn:first-of-type:not(:first-child):not(:last-child):not(.dropdown-toggle) {
-  border-top-left-radius: 6px;
-  border-bottom-left-radius: 6px;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
 }
 .btn-group > .btn:last-of-type,
 .btn-group > .btn:last-of-type:not(:first-child):not(:last-child):not(.dropdown-toggle) {
-  border-top-right-radius: 6px;
-  border-bottom-right-radius: 6px;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
 }
 .btn-group > .btn + .btn {
   margin-left: 0;
@@ -1162,7 +1162,7 @@ address {
   color: white;
   display: inline-block;
   font-weight: 300;
-  font-size: 15px;
+  font-size: 10px;
   line-height: 28px;
   padding: 14px 14px;
   text-shadow: none;
@@ -1172,6 +1172,12 @@ address {
   transition: background-color .25s, color .25s, border-bottom-color .25s;
   -webkit-backface-visibility: hidden;
 }
+
+#language > option {
+  font-size: 15px;
+}
+
+
 .navbar .nav > li > a:hover,
 .navbar .nav > li > a:focus {
   color: #1abc9c;
@@ -1218,11 +1224,11 @@ address {
   position: relative;
 }
 .navbar .nav ul li:first-child {
-  border-radius: 6px 6px 0 0;
+  border-radius: 3px 3px 0 0;
   padding-top: 3px;
 }
 .navbar .nav ul li:last-child {
-  border-radius: 0 0 6px 6px;
+  border-radius: 0 0 3px 3px;
 }
 .navbar .nav ul li.active > a,
 .navbar .nav ul li.active > a:hover,
