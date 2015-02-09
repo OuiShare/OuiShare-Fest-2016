@@ -113,7 +113,7 @@
 
 .triangle_bg#_whoscoming 
   .container.tickets-section 
-    .row.centered
+    .row.centered{:style => 'padding-top:0%;'}
       - if @ouishare_fest_attendees && !@ouishare_fest_attendees["attendees"].blank?
         %h3.ouishare_stencil
           = t('dynamic_translations.tickets.who_s_coming') 

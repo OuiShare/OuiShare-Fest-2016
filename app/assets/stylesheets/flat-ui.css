@@ -479,7 +479,7 @@ body {
   background-color: #ffffff;
 }
 a {
-  color: #00cd98;
+  color: #001E60;
   text-decoration: none;
   -webkit-transition: 0.25s;
   -moz-transition: 0.25s;
@@ -490,8 +490,8 @@ a {
 a:hover,
 a:focus {
 /*  color: #1abc9c;*/
-  color:#fff;
-  text-decoration: none;
+  color:#001E60;
+  text-decoration: underline;
 }
 .img-rounded {
   border-radius: 6px;

@@ -63,7 +63,7 @@
         %h3.ouishare_stencil.white
           = t('dynamic_translations.topics.title')
           /Key topics
-        %hr{:style => "background-color: white"}
+        %hr.white
         %br/
         %br/
       .row
@@ -126,7 +126,7 @@
     .row.centered
       %h3.ouishare_stencil{style: "color: #E03E52;"}
         = t('dynamic_translations.speakers.title')
-      %hr
+      %hr.pink
       - if !@displayed_speakers.blank?
         .ch-grid
           - @displayed_speakers.each do |speaker|
@@ -155,7 +155,7 @@
       .col-md-6.col-md-offset-3
         %h3.ouishare_stencil.white.centered
           = t('dynamic_translations.tickets.title')
-        %hr
+        %hr.white
         %br
         %br
         %p.white
@@ -215,7 +215,7 @@
         %br
         %h3.ouishare_stencil
           = t('dynamic_translations.partners.title')
-        %hr
+        %hr.pink
         .partners
       = render "/individuals/partials/partners_display", :partners => @partners, :important_partners_display => true, :important_partners_count => 9
       %br
@@ -226,7 +226,7 @@
         %br
         %h3.ouishare_stencil
           = t('dynamic_translations.partners.media_partner_title')
-        %hr
+        %hr.pink
         .partners
       = render "/individuals/partials/partners_display", :partners => @media_partners, :important_partners_display => false
       %br
@@ -237,7 +237,7 @@
         %br
         %h3.ouishare_stencil
           = t('dynamic_translations.partners.friends_title')
-        %hr
+        %hr.pink
         .partners
       = render "/individuals/partials/partners_display", :partners => @friends, :important_partners_display => false
 
@@ -250,7 +250,7 @@
         %br
         %h3.ouishare_stencil
           = t('dynamic_translations.partners.supporters_title')
-        %hr
+        %hr.pink
         .partners
       = render "/individuals/partials/partners_display", :partners => @supporters, :important_partners_display => false
 
@@ -268,7 +268,7 @@
     .row.centered
       %h3.ouishare_stencil
         = t('dynamic_translations.get_involved.title')
-      %hr
+      %hr.pink
       %br
       %p
         = t('dynamic_translations.get_involved.description')
@@ -301,7 +301,7 @@
     .row.centered
       %h3.ouishare_stencil
         = t('dynamic_translations.about.ouishare_title')
-      %hr
+      %hr.blue
       %br
       %br
       .container.round_fond

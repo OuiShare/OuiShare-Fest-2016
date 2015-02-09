@@ -290,10 +290,34 @@ p.centered:nth-child(4) > a:nth-child(2) > button:nth-child(1) {
   margin-bottom: 15px;
 }
 
-hr {
-  border-width: 4px;
+// hr {
+//   border-width: 4px;
+//   width: 120px;
+//   background-color: black;
+// }
+
+hr.white {
+  margin-top: 20px;
+  margin-bottom: 20px;
   width: 120px;
-  background-color: black;
+  border: 0;
+  border-top: 4px solid #fff;
+}
+
+hr.pink {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  width: 120px;
+  border: 0;
+  border-top: 4px solid #FF7777;
+}
+
+hr.blue {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  width: 120px;
+  border: 0;
+  border-top: 4px solid #001E60;
 }
 
 p.col-xs-6:nth-child(1) {
