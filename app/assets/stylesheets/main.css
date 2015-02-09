@@ -430,8 +430,24 @@ body {
 }
 
 #about{
-	background: url(/assets/fond_vert.jpg) center top;
+	/*background: url(/assets/fond_vert.jpg) center top;*/
+	/*background: url(/assets/background/01-background-01.png)*/
+  /*background-color: #33FF99; */
+/*  margin-top: 0px;
+  text-align:center;
+  background-attachment: relative;
+  background-position: center center;
+  min-height: 100%;
 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: contain;*/
+}
+
+.triangle_bg{
+	background: url(/assets/fond_vert.jpg) center top;
+	/*background: url(/assets/background/01-background-01.png);*/
   /*background-color: #33FF99; */
   margin-top: 0px;
   text-align:center;
@@ -444,6 +460,8 @@ body {
   -o-background-size: cover;
   background-size: contain;
 }
+
+
 
 .grey_bg {
 	background: url(/assets/fond_gris.jpg) repeat right top;
@@ -477,8 +495,8 @@ body {
 }
 
 .blue_bg {
-
-	background-color: #33FF99;
+	background: url(/assets/fond_bleu.jpg) repeat right top;
+	/*background-color: #33FF99;*/
 	margin-top: 0px;
 	padding-top:130px;
 	text-align:center;
@@ -636,6 +654,7 @@ text-transform: none;
 /***** Footer *****/
 
 #f {
+	/*background: #001E60;*/
 	background: #001E60;
 	padding-top: 35px;
 	padding-bottom: 35px;
@@ -643,13 +662,39 @@ text-transform: none;
 
 #f p {
 	font-weight: 300;
+	color: #fff;
+	font-size: 11px;
+}
+
+#f p a {
+	font-weight: 300;
+	color: #fff;
+	text-decoration: underline;
+	font-size: 11px;
+}
+
+/*#f p {
+	font-weight: 300;
 	color: #677786;
+}
+*/
+#f h4 {
+	color: #fff;
+	font-size: 11px;
+	font-weight: 300;
 }
 
 #f h5 {
-	color: #677786;
+	color: #fff;
+	text-transform: uppercase;
+	font-size: 10px;
 	font-weight: 300;
 }
+
+/*#f h5 {
+	color: #677786;
+	font-weight: 300;
+}*/
 
 /***** Map Wrap *****/
 

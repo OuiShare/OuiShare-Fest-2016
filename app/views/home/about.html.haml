@@ -39,7 +39,7 @@
           %h1{:style => "text-shadow: 2px 0px black"}
             And Dance
 
-#about.triangle_bg
+.triangle_bg
   .container{:style => "width:60% !important;"}
     %h3.ouishare_stencil.text-center#_about{:style => "font-size:25px;"}
       = t('dynamic_translations.about.subtitle')
@@ -70,59 +70,124 @@
     %br
 
 
-#about.container.sinfo
-  .row.centered
-    %h3.ouishare_stencil
-      = t('dynamic_translations.topics.title')
-      /Key topics
-    %br/
-    %br/
-  .row
-    .col-lg-12
-      .col-lg-2
-        %p.topics
-          = image_tag "/assets/collab-economy-icon.png"
-      .col-lg-10
-        %h5 
-          = t('dynamic_translations.topics.collcon_title')
-        %p 
-          = t('dynamic_translations.topics.collcon_desc')
-    .col-lg-12
-      .col-lg-2
-        %p.topics
-          = image_tag "/assets/crowdfunding-icon.png"
-      .col-lg-10
-        %h5
-          = t('dynamic_translations.topics.cf_title')
-        %p 
-          = t('dynamic_translations.topics.cf_desc')
-    .col-lg-12
-      .col-lg-2
-        %p.topics
-          = image_tag "/assets/open-knowledge-icon.png"
-      .col-lg-10
-        %h5
-          = t('dynamic_translations.topics.ok_title')
-        %p 
-          = t('dynamic_translations.topics.ok_desc')
-    .col-lg-12
-      .col-lg-2
-        %p.topics
-          = image_tag "/assets/making-manufacturing-icon.png"
-      .col-lg-10
-        %h5 
-          = t('dynamic_translations.topics.om_title')
-        %p 
-          = t('dynamic_translations.topics.om_desc')
-    .col-lg-12
-      .col-lg-2
-        %p.topics
-          = image_tag "/assets/horizontal-governance-icon.png"
-      .col-lg-10
-        %h5
-          = t('dynamic_translations.topics.gov_title')
-        %p 
-          = t('dynamic_translations.topics.gov_desc')
+.yellow_bg
+  .container
+    .row.centered
+      %h3.ouishare_stencil.white
+        = t('dynamic_translations.topics.title')
+        /Key topics
+      %hr{:style => "background-color: white"}
+      %br/
+      %br/
+    .row
+      .col-md-8.col-md-offset-2
+        .row
+          .col-md-2
+            %p.topics
+              = image_tag "/assets/collab-economy-icon-2-blue.png", :style => 'width: 100%;'
+          .col-md-4
+            %h5
+              = t('dynamic_translations.topics.collcon_title')
+          .col-md-6
+            %p.white
+              = t('dynamic_translations.topics.collcon_desc')
+        .row
+          .col-md-2
+            %p.topics
+              = image_tag "/assets/crowdfunding-icon-blue.png", :style => 'width: 100%;'
+          .col-md-4
+            %h5
+              = t('dynamic_translations.topics.cf_title')
+          .col-md-6
+            %p.white
+              = t('dynamic_translations.topics.cf_desc')
+        .row
+          .col-md-2
+            %p.topics
+              = image_tag "/assets/open-knowledge-icon.png", :style => 'width: 100%;'
+          .col-md-4
+            %h5
+              = t('dynamic_translations.topics.ok_title')
+          .col-md-6
+            %p.white
+              = t('dynamic_translations.topics.ok_desc')
+        .row
+          .col-md-2
+            %p.topics
+              = image_tag "/assets/collab-economy-icon-blue.png", :style => 'width: 100%;'
+          .col-md-4
+            %h5
+              = t('dynamic_translations.topics.om_title')
+          .col-md-6
+            %p.white
+              = t('dynamic_translations.topics.om_desc')
+        .row
+          .col-md-2
+            %p.topics
+              = image_tag "/assets/horizontal-governance-icon-blue.png", :style => 'width: 100%;'
+          .col-md-4
+            %h5
+              = t('dynamic_translations.topics.gov_title')
+          .col-md-6
+            %p.white
+              = t('dynamic_translations.topics.gov_desc')
+
+
+
+  / .row.centered
+  /   %h3.ouishare_stencil
+  /     = t('dynamic_translations.topics.title')
+  /     /Key topics
+  /   %br/
+  /   %br/
+  / .row
+  /   .col-lg-12
+  /     .col-lg-2
+  /       %p.topics
+  /         = image_tag "/assets/collab-economy-icon.png"
+  /     .col-lg-10
+  /       %h5 
+  /         = t('dynamic_translations.topics.collcon_title')
+  /       %p 
+  /         = t('dynamic_translations.topics.collcon_desc')
+  /   .col-lg-12
+  /     .col-lg-2
+  /       %p.topics
+  /         = image_tag "/assets/crowdfunding-icon.png"
+  /     .col-lg-10
+  /       %h5
+  /         = t('dynamic_translations.topics.cf_title')
+  /       %p 
+  /         = t('dynamic_translations.topics.cf_desc')
+  /   .col-lg-12
+  /     .col-lg-2
+  /       %p.topics
+  /         = image_tag "/assets/open-knowledge-icon.png"
+  /     .col-lg-10
+  /       %h5
+  /         = t('dynamic_translations.topics.ok_title')
+  /       %p 
+  /         = t('dynamic_translations.topics.ok_desc')
+  /   .col-lg-12
+  /     .col-lg-2
+  /       %p.topics
+  /         = image_tag "/assets/making-manufacturing-icon.png"
+  /     .col-lg-10
+  /       %h5 
+  /         = t('dynamic_translations.topics.om_title')
+  /       %p 
+  /         = t('dynamic_translations.topics.om_desc')
+  /   .col-lg-12
+  /     .col-lg-2
+  /       %p.topics
+  /         = image_tag "/assets/horizontal-governance-icon.png"
+  /     .col-lg-10
+  /       %h5
+  /         = t('dynamic_translations.topics.gov_title')
+  /       %p 
+  /         = t('dynamic_translations.topics.gov_desc')
+
+
   %br/
 
 
