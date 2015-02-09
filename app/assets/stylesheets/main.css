@@ -446,8 +446,8 @@ body {
 }
 
 .triangle_bg{
-	/*background: url(/assets/fond_vert.jpg) center top;*/
-	background: url(/assets/background/01-background-01.png);
+	background: url(/assets/fond_vert.jpg) center top;
+	/*background: url(/assets/background/01-background-01.png);*/
   /*background-color: #33FF99; */
   margin-top: 0px;
   text-align:center;
@@ -495,8 +495,8 @@ body {
 }
 
 .blue_bg {
-
-	background-color: #33FF99;
+	background: url(/assets/fond_bleu.jpg) repeat right top;
+	/*background-color: #33FF99;*/
 	margin-top: 0px;
 	padding-top:130px;
 	text-align:center;
