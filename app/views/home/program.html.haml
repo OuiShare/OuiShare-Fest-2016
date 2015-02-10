@@ -1,22 +1,42 @@
-.grey_bg#_schedule
+.first-part{:style => "background-size: 100% 100% !important;"}
   .container
-    .row.centered
-      %h3.ouishare_stencil
-        = t('dynamic_translations.main_schedule.title')
-      %br
-      %br
-      .container
-        %p
-          = t('dynamic_translations.main_schedule.second_part')
-          
-    /       / %br
-    /       / %br
-    /       / %br
-    /       / = t('dynamic_translations.main_schedule.second_part')
+    .main-section
+      .row
+        .col-md-10.col-md-offset-1
+          %h1.main-title.white
+            = t('dynamic_translations.main_schedule.title')
+        .col-md-8.col-md-offset-2
+          %p.main-section-paragraphes.white
+            = t('dynamic_translations.main_schedule.second_part')
 
-    / .row.centered
-    /   %a#sched-embed{:href => "http://ouisharefest14.sched.org/"}
-    /   %script{:type => "text/javascript", :src => "http://ouisharefest14.sched.org/js/embed.js"}
+      .row.centered
+        %a#sched-embed{:href => "http://ouisharefest14.sched.org/"}
+        %script{:type => "text/javascript", :src => "http://ouisharefest14.sched.org/js/embed.js"}
+
+    .second-section
+
+    .third-section
+
+
+/ .grey_bg#_schedule
+/   .container
+/     .row.centered
+/       %h3.ouishare_stencil
+/         = t('dynamic_translations.main_schedule.title')
+/       %br
+/       %br
+/       .container
+/         %p
+/           = t('dynamic_translations.main_schedule.second_part')
+          
+/           %br
+/           %br
+/           %br
+/           = t('dynamic_translations.main_schedule.second_part')
+
+/     .row.centered
+/       %a#sched-embed{:href => "http://ouisharefest14.sched.org/"}
+/       %script{:type => "text/javascript", :src => "http://ouisharefest14.sched.org/js/embed.js"}
 
 .triangle_bg#_tracks
   .container
@@ -100,12 +120,12 @@
             = t('dynamic_translations.track.city_text')
 
 
-.yellow_bg#_track_leader
+.blank_bg#_track_leader{:style => "padding-bottom: 10px;"}
   .container
     .row.centered
-      %h3.ouishare_stencil
+      %h3.ouishare_stencil.pink
         =t('dynamic_translations.track_leader.title')     
-      %hr
+      %hr.pink
       - if !@track_leaders.blank?
         .ch-grid
           - @track_leaders.each do |track_leader|
@@ -483,31 +503,54 @@
 /             17.05 to 18.05 9am - 5pm
 
 
-
-.triangle_bg#_love_party
+/ Love Party
+#_love_party.aboutouishare-section
   .container
     .row.centered
       %h3.ouishare_stencil
         = t('dynamic_translations.love_party.title')
-    %br
-    %br
-    .col-xs-12.col-md-6.col-lg-6
-      
-      
-      .row.centered
-        %p
-          = t('dynamic_translations.love_party.text')
+      %hr.blue
       %br
       %br
+      .container.round_fond
+        .row
+          .col-md-8.col-md-offset-2
+            %p
+              = t('dynamic_translations.love_party.text')
+
+        .row
+          .col-md-11.col-md-offset-1
+            .col-md-6
+              %img{:src => '/assets/love_party.jpg', :alt => 'love party picture', :style => 'width:100%;'}
+            .col-md-6
+              .btn.btn-pink{:style => 'margin: 40px 100px 0px 0px;'}
+                %a{:href => 'https://www.facebook.com/events/644013769005812/', :target => '_blank'}
+                  = t('dynamic_translations.love_party.see_lineup')
+
+/ .triangle_bg#_love_party
+/   .container
+/     .row.centered
+/       %h3.ouishare_stencil
+/         = t('dynamic_translations.love_party.title')
+/     %br
+/     %br
+/     .col-xs-12.col-md-6.col-lg-6
       
       
-      %a{:href => 'https://www.facebook.com/events/644013769005812/', :target => '_blank'}
-        %button.btn.btn-embossed.btn-primary
-          = t('dynamic_translations.love_party.see_lineup')
+/       .row.centered
+/         %p
+/           = t('dynamic_translations.love_party.text')
+/       %br
+/       %br
+      
+      
+/       %a{:href => 'https://www.facebook.com/events/644013769005812/', :target => '_blank'}
+/         %button.btn.btn-embossed.btn-primary
+/           = t('dynamic_translations.love_party.see_lineup')
 
 
-    .col-xs-12.col-md-6.col-lg-6      
-      %img{:src => '/assets/love_party.jpg', :alt => 'love party picture', :style => 'width: 560px;'}
+/     .col-xs-12.col-md-6.col-lg-6      
+/       %img{:src => '/assets/love_party.jpg', :alt => 'love party picture', :style => 'width: 560px;'}
     
 
       
