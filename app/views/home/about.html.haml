@@ -39,218 +39,179 @@
           %h1{:style => "text-shadow: 2px 0px black"}
             And Dance
 
-.triangle_bg
-  .container{:style => "width:60% !important;"}
-    %h3.ouishare_stencil.text-center#_about{:style => "font-size:25px;"}
-      = t('dynamic_translations.about.subtitle')
-    / %br
-    / .row
-    /   %iframe{:width => "640", :height => "390", :src => "//www.youtube.com/embed/QiXmsACpfRY", :frameborder => "0", :allowfullscreen => 'true'}
 
-    %br
-    %p 
-      = t('dynamic_translations.about.description')
-    %br
-    
-    %p
-      = t('dynamic_translations.what_is_community.text1')
-    %br
-    %p
-      = t('dynamic_translations.what_is_community.text2')
-    %br
-    %p{:style =>"font-weight:bold;"}
-      = t('dynamic_translations.what_is_community.text3')
-    %br
-    %p
-      = t('dynamic_translations.what_is_community.text4')
-    %br
-    %p
-      = t('dynamic_translations.what_is_community.text5')
-    %br
-    %br
-
-
-.yellow_bg
+.first-part{:style => "background-size: 100% 100% !important;"}
   .container
-    .row.centered
-      %h3.ouishare_stencil.white
-        = t('dynamic_translations.topics.title')
-        /Key topics
-      %hr{:style => "background-color: white"}
-      %br/
-      %br/
-    .row
-      .col-md-8.col-md-offset-2
-        .row
-          .col-md-2
-            %p.topics
-              = image_tag "/assets/collab-economy-icon-2-blue.png", :style => 'width: 100%;'
-          .col-md-4
-            %h5
-              = t('dynamic_translations.topics.collcon_title')
-          .col-md-6
-            %p.white
-              = t('dynamic_translations.topics.collcon_desc')
-        .row
-          .col-md-2
-            %p.topics
-              = image_tag "/assets/crowdfunding-icon-blue.png", :style => 'width: 100%;'
-          .col-md-4
-            %h5
-              = t('dynamic_translations.topics.cf_title')
-          .col-md-6
-            %p.white
-              = t('dynamic_translations.topics.cf_desc')
-        .row
-          .col-md-2
-            %p.topics
-              = image_tag "/assets/open-knowledge-icon.png", :style => 'width: 100%;'
-          .col-md-4
-            %h5
-              = t('dynamic_translations.topics.ok_title')
-          .col-md-6
-            %p.white
-              = t('dynamic_translations.topics.ok_desc')
-        .row
-          .col-md-2
-            %p.topics
-              = image_tag "/assets/collab-economy-icon-blue.png", :style => 'width: 100%;'
-          .col-md-4
-            %h5
-              = t('dynamic_translations.topics.om_title')
-          .col-md-6
-            %p.white
-              = t('dynamic_translations.topics.om_desc')
-        .row
-          .col-md-2
-            %p.topics
-              = image_tag "/assets/horizontal-governance-icon-blue.png", :style => 'width: 100%;'
-          .col-md-4
-            %h5
-              = t('dynamic_translations.topics.gov_title')
-          .col-md-6
-            %p.white
-              = t('dynamic_translations.topics.gov_desc')
-
-
-
-  / .row.centered
-  /   %h3.ouishare_stencil
-  /     = t('dynamic_translations.topics.title')
-  /     /Key topics
-  /   %br/
-  /   %br/
-  / .row
-  /   .col-lg-12
-  /     .col-lg-2
-  /       %p.topics
-  /         = image_tag "/assets/collab-economy-icon.png"
-  /     .col-lg-10
-  /       %h5 
-  /         = t('dynamic_translations.topics.collcon_title')
-  /       %p 
-  /         = t('dynamic_translations.topics.collcon_desc')
-  /   .col-lg-12
-  /     .col-lg-2
-  /       %p.topics
-  /         = image_tag "/assets/crowdfunding-icon.png"
-  /     .col-lg-10
-  /       %h5
-  /         = t('dynamic_translations.topics.cf_title')
-  /       %p 
-  /         = t('dynamic_translations.topics.cf_desc')
-  /   .col-lg-12
-  /     .col-lg-2
-  /       %p.topics
-  /         = image_tag "/assets/open-knowledge-icon.png"
-  /     .col-lg-10
-  /       %h5
-  /         = t('dynamic_translations.topics.ok_title')
-  /       %p 
-  /         = t('dynamic_translations.topics.ok_desc')
-  /   .col-lg-12
-  /     .col-lg-2
-  /       %p.topics
-  /         = image_tag "/assets/making-manufacturing-icon.png"
-  /     .col-lg-10
-  /       %h5 
-  /         = t('dynamic_translations.topics.om_title')
-  /       %p 
-  /         = t('dynamic_translations.topics.om_desc')
-  /   .col-lg-12
-  /     .col-lg-2
-  /       %p.topics
-  /         = image_tag "/assets/horizontal-governance-icon.png"
-  /     .col-lg-10
-  /       %h5
-  /         = t('dynamic_translations.topics.gov_title')
-  /       %p 
-  /         = t('dynamic_translations.topics.gov_desc')
-
-
-  %br/
+    .main-section
+      .row
+        %h3.col-md-6.col-md-offset-3.ouishare_stencil.white.text-center#_about{:style => "font-size:20px;"}
+          = t('dynamic_translations.about.subtitle')
+        .col-md-6.col-md-offset-3{:style => "text-align:left;"}
+          %p.white{:style => 'margin-top: 45px;'}
+            = t('dynamic_translations.about.description')
+          %br
+          
+          %p.white
+            = t('dynamic_translations.what_is_community.text1')
+          %br
+          %p.white
+            = t('dynamic_translations.what_is_community.text2')
+          %br
+          %p.white{:style =>"font-weight:bold;"}
+            = t('dynamic_translations.what_is_community.text3')
+          %br
+          %p.white
+            = t('dynamic_translations.what_is_community.text4')
+          %br
+          %p.white
+            = t('dynamic_translations.what_is_community.text5')
+          %br
+          %br
+          %br
+          %p.topics.row.centered
+            = image_tag "/assets/coeur-key-topic.png"
+    .third-section
+      .row.centered
+        %h3.ouishare_stencil.white
+          = t('dynamic_translations.topics.title')
+        %hr.white
+        %br/
+        %br/
+      .row
+        .col-md-6.col-md-offset-3
+          .row
+            .col-xs-2
+              %p.topics
+                = image_tag "/assets/collab-economy-icon-2-blue.png"
+            .col-md-4
+              %h5
+                = t('dynamic_translations.topics.collcon_title')
+            .col-md-6
+              %p.white
+                = t('dynamic_translations.topics.collcon_desc')
+          .row
+            .col-xs-2
+              %p.topics
+                = image_tag "/assets/crowdfunding-icon-blue.png"
+            .col-md-4
+              %h5
+                = t('dynamic_translations.topics.cf_title')
+            .col-md-6
+              %p.white
+                = t('dynamic_translations.topics.cf_desc')
+          .row
+            .col-xs-2
+              %p.topics
+                = image_tag "/assets/open-knowledge-icon.png"
+            .col-md-4
+              %h5
+                = t('dynamic_translations.topics.ok_title')
+            .col-md-6
+              %p.white
+                = t('dynamic_translations.topics.ok_desc')
+          .row
+            .col-xs-2
+              %p.topics
+                = image_tag "/assets/collab-economy-icon-blue.png"
+            .col-md-4
+              %h5
+                = t('dynamic_translations.topics.om_title')
+            .col-md-6
+              %p.white
+                = t('dynamic_translations.topics.om_desc')
+          .row
+            .col-xs-2
+              %p.topics
+                = image_tag "/assets/horizontal-governance-icon-blue.png"
+            .col-xs-4
+              %h5
+                = t('dynamic_translations.topics.gov_title')
+            .col-md-6
+              %p.white
+                = t('dynamic_translations.topics.gov_desc')
+        .col-md-6.col-md-offset-3.space_background
+          %br
 
 
 / Highlights from 2014
 
-#highlights.grey_bg#_highlights
+#highlights.background_1#_highlights
   .container
     .row.centered
       %h3.ouishare_stencil
         = t('dynamic_translations.highlight.title')
+      %hr.pink
 
-    .row.centered
-      .col-md-9.span-centered.margin_25
-        %br
-        %br
-        %iframe{allowfullscreen: "", frameborder: "0", height: "315", src: "//www.youtube.com/embed/QiXmsACpfRY", width: "560"}   
-    .row.centered       
-      %p
-        %br
-        %br
-        = t('dynamic_translations.highlight.description_2014')
+    .row.centered{:style => "padding-top: 15%;"}
+      .col-md-10.col-md-offset-1
+        .row
+          .col-md-6{:style => "padding-top: 15%;"}
+            .row
+              %p.white
+                = t('dynamic_translations.highlight.description_2014')
+            .row
+              .col-md-3
+                %a.btn.btn-large.btn-primary{href: "http://www.youtube.com/user/OuiShareTV", :target => "_blank"} 
+                  = t('dynamic_translations.highlight.btn_watch_2014_sessions')
+              .col-md-3
+              .col-md-3
+                %a.btn.btn-large.btn-primary{href: "http://ouisharefest.com/stories", :target => "_blank"} 
+                  = t('dynamic_translations.highlight.btn_see_2014_stories')
+          .col-md-6
+            %iframe{allowfullscreen: "", frameborder: "0", height: "315", src: "//www.youtube.com/embed/QiXmsACpfRY", width: "560"} 
 
-        %br
-        %br
 
-    .row.mb_20
-      .col-md-2
-      .col-md-4
-        %a.btn.btn-large.btn-primary{href: "http://www.youtube.com/user/OuiShareTV", :target => "_blank"} 
-          = t('dynamic_translations.highlight.btn_watch_2014_sessions')
 
-      .col-md-4
-        %a.btn.btn-large.btn-primary{href: "http://ouisharefest.com/stories", :target => "_blank"} 
-          = t('dynamic_translations.highlight.btn_see_2014_stories')
+    / .row.centered
+    /   .col-md-9.span-centered.margin_25
+    /     %iframe{allowfullscreen: "", frameborder: "0", height: "315", src: "//www.youtube.com/embed/QiXmsACpfRY", width: "560"}   
+    / .row.centered       
+    /   %p.white
+    /     = t('dynamic_translations.highlight.description_2014')
+
+    / .row.mb_20
+    /   .col-md-2
+    /   .col-md-4
+    /     %a.btn.btn-large.btn-primary{href: "http://www.youtube.com/user/OuiShareTV", :target => "_blank"} 
+    /       = t('dynamic_translations.highlight.btn_watch_2014_sessions')
+
+    /   .col-md-4
+    /     %a.btn.btn-large.btn-primary{href: "http://ouisharefest.com/stories", :target => "_blank"} 
+    /       = t('dynamic_translations.highlight.btn_see_2014_stories')
+
+
 
 / OSFest14 report
-.blank_bg#_report{:style => 'padding-top:130px'}
+
+#_report.aboutouishare-section
   .container
     .row.centered
       %h3.ouishare_stencil
         = t('dynamic_translations.report.2014_title')
-        %br
-        %br
-    .container.round_fond
-      .row
-        .col-xs-12.col-md-6.col-lg-6
-          %p.justify
-            %br
-            %br
+      %hr.blue
+      %br
+      %br
+      .container.round_fond
+        .row
+          .col-md-8.col-md-offset-2
+            %p
               = t('dynamic_translations.report.2014_description')
-          %p.centered
-            %br
-            %a{:href => 'http://bit.ly/OuiShareFest14_Report', :target => '_blank'}
-              %button.btn.btn-embossed.btn-primary{:style => "margin-bottom: 20px;"}
-                = t('dynamic_translations.report.link')
-            %br
-            %a{:href => 'http://2014.ouisharefest.com', :target => '_blank'}
-              %button.btn.btn-embossed.btn-primary{:style => "margin-bottom: 20px;"}
-                = t('dynamic_translations.report.old_site')
-        .col-xs-12.col-md-6.col-lg-6
-          %a{:href => 'http://bit.ly/OuiShareFest14_Report', :target => '_blank'}
-            %img{:src => '/assets/osf_2014_report.jpg', :alt => 'OuiShare Fest 2014 Report'}
 
+      .row
+        .col-md-12
+          .col-md-6
+            %a{:href => 'http://bit.ly/OuiShareFest14_Report', :target => '_blank'}
+              %img{:src => '/assets/osf_2014_report.jpg', :alt => 'OuiShare Fest 2014 Report'}
+          .col-md-6
+            %p.centered
+              %br
+              .btn.btn-pink{:style => 'margin: 40px 100px 0px 0px;'}
+                %a{:href => 'http://bit.ly/OuiShareFest14_Report', :target => '_blank'}
+                  = t('dynamic_translations.report.link')
+              %br
+              .btn.btn-pink{:style => 'margin: 40px 100px 0px 0px;'}
+                %a{:href => 'http://2014.ouisharefest.com', :target => '_blank'}
+                  = t('dynamic_translations.report.old_site')
 
 / #location.triangle_bg#_about_location
 /   .container
@@ -281,11 +242,13 @@
 /       %br
 /       %br
 
-.grey_bg#_about_press
+.background_2#_about_press
   .container
     .row.centered
-      %h3.ouishare_stencil
+      %h3.ouishare_stencil.white
         = t('dynamic_translations.press.title')
+      %hr.white
+      %br
 
     #myCarousel.carousel.slide.col-xs-12.col-md-offset-1.col-lg-offset-2.col-md-10.col-lg-8{ 'data-ride' => "carousel"}
 
@@ -384,62 +347,51 @@
 
 
 / About OuiShare 
-
-#_ouishare.blank_bg
+#_ouishare.aboutouishare-section
   .container
     .row.centered
       %h3.ouishare_stencil
         = t('dynamic_translations.about.ouishare_title')
-      %br      
+      %hr.blue
+      %br
       %br
       .container.round_fond
         .row
-          .col-xs-12.col-md-6.col-lg-6
-            %p.justify
-              
+          .col-md-8.col-md-offset-2
+            %p
               = t('dynamic_translations.about.ouishare_text')
 
-            %p.centered
-              %br
-              %a{:href => 'http://ouishare.net/en/users/sign_up', :target => '_blank'}
-                %button.btn.btn-embossed.btn-primary
+        .row
+          .col-md-8.col-md-offset-2
+            .col-md-6
+              %img{:src => '/assets/coeur-aboutouishare.png', :alt => 'OuiShare logo', :style => 'width:50%;'}
+            .col-md-6
+              .btn.btn-pink{:style => 'margin: 40px 100px 0px 0px;'}
+                %a{:href => 'http://ouishare.net/en/users/sign_up', :target => '_blank'}
                   = t('dynamic_translations.about.ouishare_btn')
 
-          .col-xs-12.col-md-6.col-lg-6
-            %img{:src => '/assets/ouishare-400.png', :alt => 'OuiShare logo'}
+/ #_ouishare.blank_bg
+/   .container
+/     .row.centered
+/       %h3.ouishare_stencil
+/         = t('dynamic_translations.about.ouishare_title')
+/       %br      
+/       %br
+/       .container.round_fond
+/         .row
+/           .col-xs-12.col-md-6.col-lg-6
+/             %p.justify
+              
+/               = t('dynamic_translations.about.ouishare_text')
+
+/             %p.centered
+/               %br
+/               %a{:href => 'http://ouishare.net/en/users/sign_up', :target => '_blank'}
+/                 %button.btn.btn-embossed.btn-primary
+/                   = t('dynamic_translations.about.ouishare_btn')
+
+/           .col-xs-12.col-md-6.col-lg-6
+/             %img{:src => '/assets/ouishare-400.png', :alt => 'OuiShare logo'}
 
 
 
-
-
-
-        / Testimonials
-        
-    / .row
-    /   %p
-    /     = "“" + t('dynamic_translations.testimonials.hansschoenburg') + "”"
-    /     / “OuiShare Fest 2013 was a great opportunity to connect in real life with people from so many different countries and backgrounds involved in the collaborative economy”
-    / .row.text-right
-    /   %h6
-    /     %small
-    /       Hans Schoenburg | web developer | Yerdle          
-    /     %br
-    /     %br
-    / .row
-    /   %p
-    /     = "“" + t('dynamic_translations.testimonials.albertobandolini') + "”"
-    /     / “Coming to OuiShare Fest gave me many good ideas on of how to interact with my customers”
-    / .row.text-right
-    /   %h6
-    /     %small
-    /       Alberto Bandolini | software entrepreneur
-    /       %br
-    /       %br
-    / .row
-    /   %p
-    /     = "“" + t('dynamic_translations.testimonials.michelbauwens') + "”"
-    /     / “If you want to meet the pioneers making this peer-to-peer revolution happen, you can't miss OuiShare Fest, the gathering of social hackers that are profoundly changing the way we create and share value”
-    / .row.text-right
-    /   %h6
-    /     %small
-    /       Michel Bauwens | founder | Peer-to-Peer Foundation

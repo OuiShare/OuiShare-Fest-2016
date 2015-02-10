@@ -490,8 +490,8 @@ a {
 a:hover,
 a:focus {
 /*  color: #1abc9c;*/
-  color:#001E60;
-  text-decoration: underline;
+/*  color:#001E60;
+  text-decoration: underline;*/
 }
 .img-rounded {
   border-radius: 6px;
