@@ -15,7 +15,7 @@ class User < ActiveRecord::Base
     attachment.instance.avatar_file_name # or whatever you've named your User's login/username/etc. attribute
   end
 
-  has_attached_file :avatar, :default_url => "/assets/avatar-:style.png", styles: {mini: '32x32#',small: '100x100>',medium: '300x300>'},
+  has_attached_file :avatar, :default_url => "/assets/avatar2-:style.png", styles: {mini: '32x32#',small: '100x100>',medium: '300x300>'},
   :path => ":rails_root/public/system/users_avatar/:id/:style_:avatar",
   :url => "/system/users_avatar/:id/:style_:avatar"
 
