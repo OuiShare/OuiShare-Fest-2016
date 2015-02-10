@@ -516,6 +516,17 @@ body {
 	padding-bottom: 50px;
 }
 
+.background_4 {
+	background: url(/assets/fest2.png) no-repeat;
+	background-size: 100% 150% !important;
+	background-position: 0% 30%;
+	text-align: center;
+	background-attachment: scroll;
+/*	min-height: 100%;*/
+	padding-top: 15%;
+	padding-bottom: 10%;
+}
+
 .main_bg {
 	background: url(/assets/osfest15-cover.jpg) no-repeat center top;
 
