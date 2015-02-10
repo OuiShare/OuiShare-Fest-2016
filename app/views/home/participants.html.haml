@@ -1,9 +1,9 @@
-.blue_bg#_speakers 
+.blank_bg#_speakers{:style => "padding-bottom: 10px;"}
   .container
     .row.centered
-      %h3.ouishare_stencil.white
+      %h3.ouishare_stencil
         = t('dynamic_translations.speakers.title')
-      %hr
+      %hr.pink
       -if !@displayed_speakers.blank?
         .ch-grid
           - @displayed_speakers.each do |speaker|
@@ -26,12 +26,12 @@
                 %button.btn.btn-embossed.btn-primary.hide#btn_showspeakers_up
                   = t('dynamic_translations.speakers.hide_all')
 
-.blank_bg#_team
+.blank_bg#_team{:style => "padding-top: 50px;"}
   .container
     .row.centered
       %h3.ouishare_stencil
         =t('dynamic_translations.team.title')     
-      %hr
+      %hr.pink
       - if !@team_members.blank?
         .ch-grid
           - @team_members.each do |team_member|
@@ -66,7 +66,7 @@
         %br
         %h3.ouishare_stencil
           = t('dynamic_translations.partners.title')
-        %hr.partners
+        %hr.pink
       = render "/individuals/partials/partners_display", :partners => @partners, :important_partners_display => true, :important_partners_count => 9
       %br
       %br
@@ -77,7 +77,7 @@
         %h3.ouishare_stencil
           = t('dynamic_translations.partners.media_partner_title')
 
-        %hr.partners
+        %hr.pink
       = render "/individuals/partials/partners_display", :partners => @media_partners, :important_partners_display => false
       %br
       %br
@@ -89,7 +89,7 @@
         %h3.ouishare_stencil
           = t('dynamic_translations.partners.friends_title')
 
-        %hr.partners
+        %hr.pink
       = render "/individuals/partials/partners_display", :partners => @friends, :important_partners_display => false
 
       %br
@@ -101,22 +101,30 @@
         %h3.ouishare_stencil
           = t('dynamic_translations.partners.supporters_title')
 
-        %hr.partners
+        %hr.pink
       = render "/individuals/partials/partners_display", :partners => @supporters, :important_partners_display => false
 
-.get-involved-section
-  .centered.get-involved-punchline    
-    %h6{:style => "margin-bottom:0px; padding-bottom:15px;"}
-      = t('dynamic_translations.partners.become_a_partner')
-      %br
-      %a{:href => "mailto:partners@ouishare.net"} partners@ouishare.net
+.become_partner
+  .container 
+    .row.centered
+      .col-md-5.col-md-offset-4
+        .btn.btn-pink{:style => 'margin: 40px 100px 0px 0px;'}
+          %a{:href => 'mailto:partners@ouishare.net'}
+            Become a partner
 
-.triangle_bg#_whoscoming 
+    / %h6{:style => "margin-bottom:0px; padding-bottom:15px;"}
+    /   = t('dynamic_translations.partners.become_a_partner')
+    /   %br
+    /   %a{:href => "mailto:partners@ouishare.net"} partners@ouishare.net
+
+.background_3#_whoscoming 
   .container.tickets-section 
     .row.centered{:style => 'padding-top:0%;'}
       - if @ouishare_fest_attendees && !@ouishare_fest_attendees["attendees"].blank?
-        %h3.ouishare_stencil
+        %h3.ouishare_stencil.white
           = t('dynamic_translations.tickets.who_s_coming') 
+        %hr.white
+        %br
         %ul.unstyled.attendees-list
           - attendees = @ouishare_fest_attendees["attendees"].first(ENV["EVENTBRITE_ATTENDEES_DISPLAY_NUMBER"].to_i)
           - attendees.each do |attendee|

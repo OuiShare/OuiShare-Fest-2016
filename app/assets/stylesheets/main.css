@@ -393,6 +393,13 @@ body {
 	color: #ffffff;
 }
 
+.become_partner {
+    background-color: #F7F7F7;
+    width: 100%;
+    margin-top: 0px;
+    padding-top: 10px;
+    padding-bottom: 44px;
+}
 .blank_bg {
 	background-color: #F7F7F7;
 	min-height: 100%;
@@ -495,6 +502,17 @@ body {
 	min-height: 100%;
 	padding-top: 15%;
 	padding-bottom: 10%;
+}
+
+.background_3 {
+	background: url(/assets/background/03-background-01.png) no-repeat;
+	background-size: 100% 100% !important;
+	background-position: 0% -300px;
+	text-align: center;
+	background-attachment: scroll;
+	min-height: 100%;
+	padding-top: 160px;
+	padding-bottom: 50px;
 }
 
 .main_bg {
