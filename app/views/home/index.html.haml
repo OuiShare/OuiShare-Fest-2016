@@ -255,11 +255,13 @@
       = render "/individuals/partials/partners_display", :partners => @supporters, :important_partners_display => false
 
 
-.centered.get-involved-punchline
-  %h6{:style => "margin-bottom:0px; padding-bottom:15px;"}
-    = t('dynamic_translations.partners.become_a_partner')
-    %br
-    %a{:href => "mailto:partners@ouishare.net"} partners@ouishare.net
+.become_partner
+  .container 
+    .row.centered
+      .col-md-5.col-md-offset-4
+        .btn.btn-pink{:style => 'margin: 40px 100px 0px 0px;'}
+          %a{:href => 'mailto:partners@ouishare.net'}
+            Become a partner
 
 / Get Involved
 

@@ -399,6 +399,7 @@ body {
     margin-top: 0px;
     padding-top: 10px;
     padding-bottom: 44px;
+    position: relative;
 }
 .blank_bg {
 	background-color: #F7F7F7;
@@ -507,7 +508,7 @@ body {
 .background_3 {
 	background: url(/assets/background/03-background-01.png) no-repeat;
 	background-size: 100% 200% !important;
-	background-position: 0% -200px;
+	background-position: 0% -300px;
 	text-align: center;
 	background-attachment: fixed;
 	min-height: 100%;
