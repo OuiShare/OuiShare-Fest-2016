@@ -507,7 +507,7 @@ body {
 .background_3 {
 	background: url(/assets/background/03-background-01.png) no-repeat;
 	background-size: 100% 200% !important;
-	background-position: 0% -100px;
+	background-position: 0% -200px;
 	text-align: center;
 	background-attachment: fixed;
 	min-height: 100%;
