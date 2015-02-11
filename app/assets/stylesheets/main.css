@@ -402,7 +402,8 @@ body {
     position: relative;
 }
 .blank_bg {
-	background-color: #F7F7F7;
+	/*background-color: #F7F7F7;*/
+	background-color: #FFF;
 	min-height: 100%;
 	width: 100%;
 	margin-top: 0px;
@@ -536,7 +537,7 @@ body {
 }
 
 .background_5 {
-	background: url(/assets/background/04-background-grey.png) no-repeat;
+	background: url(/assets/background/04-background-grey-3.png) no-repeat;
 	background-size: 100% 120% !important;
 	background-position: 0% 0%;
 	text-align: center;
