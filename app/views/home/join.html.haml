@@ -185,31 +185,55 @@
 /                   %a.btn.btn-large.button-call-to-action-option{href: "mailto:partners@ouishare.net", :target => "_blank"}
 /                     = t('dynamic_translations.get_involved.idea_wall_button')
 
-#_awards.blank_bg
+/ #_awards.blank_bg
+/   .container
+/     .row.centered
+/       %h3.ouishare_stencil
+/         = t('dynamic_translations.ouishare_awards.title')
+/       %br      
+/       %br
+/       .container.round_fond
+/         .row
+/           .col-xs-12.col-md-6.col-lg-6
+/             %p.justify
+              
+/               %br
+/               %br
+/               %br
+/               %br
+
+/               = t('dynamic_translations.ouishare_awards.first_part')
+
+/           .col-xs-12.col-md-6.col-lg-6
+/             %img{:src => '/assets/ouishare-award.png', :alt => 'ouishare awards logo'}
+/         .row
+/           %a{:href => 'http://awards.ouisharefest.com/#winners-2014', :target => '_blank'}
+/             %button.btn.btn-embossed.btn-primary
+/               = t('dynamic_translations.ouishare_awards.link')
+
+
+#_awards.aboutouishare-section
   .container
     .row.centered
       %h3.ouishare_stencil
         = t('dynamic_translations.ouishare_awards.title')
-      %br      
+      %hr.blue
+      %br
       %br
       .container.round_fond
         .row
-          .col-xs-12.col-md-6.col-lg-6
-            %p.justify
-              
-              %br
-              %br
-              %br
-              %br
-
+          .col-md-8.col-md-offset-2
+            %p
               = t('dynamic_translations.ouishare_awards.first_part')
 
-          .col-xs-12.col-md-6.col-lg-6
-            %img{:src => '/assets/ouishare-award.png', :alt => 'ouishare awards logo'}
         .row
-          %a{:href => 'http://awards.ouisharefest.com/#winners-2014', :target => '_blank'}
-            %button.btn.btn-embossed.btn-primary
-              = t('dynamic_translations.ouishare_awards.link')
+          .col-md-8.col-md-offset-2
+            .col-md-6
+              %img{:src => '/assets/ouishare-award.png', :alt => 'ouishare awards logo', :style => 'width:50%;'}
+            .col-md-6
+              .btn.btn-pink{:style => 'margin: 40px 100px 0px 0px;'}
+                %a{:href => 'http://awards.ouisharefest.com/#winners-2014', :target => '_blank'}
+                  = t('dynamic_translations.ouishare_awards.link')
 
 
 #_prepare.yellow_bg
