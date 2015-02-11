@@ -1,123 +1,186 @@
-.first-part{:style => "background-size: 100% 100% !important;"}
+.program-part
   .container
     .main-section
       .row
         .col-md-10.col-md-offset-1
-          %h1.main-title.white
+          %h3.ouishare_stencil
             = t('dynamic_translations.main_schedule.title')
+          %hr.pink
         .col-md-8.col-md-offset-2
-          %p.main-section-paragraphes.white
+          %p.main-section-paragraphes
             = t('dynamic_translations.main_schedule.second_part')
 
-      .row.centered
-        %a#sched-embed{:href => "http://ouisharefest14.sched.org/"}
-        %script{:type => "text/javascript", :src => "http://ouisharefest14.sched.org/js/embed.js"}
-
-    .second-section
-
-    .third-section
+      / .row.centered
+      /   %a#sched-embed{:href => "http://ouisharefest14.sched.org/"}
+      /   %script{:type => "text/javascript", :src => "http://ouisharefest14.sched.org/js/embed.js"}
 
 
-/ .grey_bg#_schedule
+.background_5#_tracks
+  .container
+    .row
+      .col-md-6.col-md-offset-3
+        %h3.ouishare_stencil.centered
+          = t('dynamic_translations.track.title')
+        %hr.pink
+        %br
+        %br
+    .row
+      .col-md-10.col-md-offset-1
+        .col-md-6
+          .tracks-block
+            %h6
+              = t('dynamic_translations.track.collab_title')
+            %p 
+              = t('dynamic_translations.track.collab_text')
+        .col-md-6
+          .tracks-block
+            %h6
+              = t('dynamic_translations.track.revolution_title')
+            %p 
+              = t('dynamic_translations.track.revolution_text')
+        .col-md-6
+          .tracks-block
+            %h6
+              = t('dynamic_translations.track.spirit_title')
+            %p 
+              = t('dynamic_translations.track.spirit_text')
+        .col-md-6
+          .tracks-block
+            %h6
+              = t('dynamic_translations.track.capital_title')
+            %p 
+              = t('dynamic_translations.track.capital_text')
+        .col-md-6
+          .tracks-block
+            %h6
+              = t('dynamic_translations.track.legacy_title')
+            %p 
+              = t('dynamic_translations.track.legacy_text')
+        .col-md-6
+          .tracks-block
+            %h6
+              = t('dynamic_translations.track.social_title')
+            %p 
+              = t('dynamic_translations.track.social_text')
+        .col-md-6
+          .tracks-block
+            %h6
+              = t('dynamic_translations.track.myth_title')
+            %p 
+              = t('dynamic_translations.track.myth_text')
+        .col-md-6
+          .tracks-block
+            %h6
+              = t('dynamic_translations.track.democracy_title')
+            %p 
+              = t('dynamic_translations.track.democracy_text')
+        .col-md-6
+          .tracks-block
+            %h6
+              = t('dynamic_translations.track.robot_title')
+            %p 
+              = t('dynamic_translations.track.robot_text')
+        .col-md-6
+          .tracks-block
+            %h6
+              = t('dynamic_translations.track.citizen_title')
+            %p 
+              = t('dynamic_translations.track.citizen_text')
+        .col-md-6
+          .tracks-block
+            %h6
+              = t('dynamic_translations.track.sharing_title')
+            %p 
+              = t('dynamic_translations.track.sharing_text')
+        .col-md-6
+          .tracks-block
+            %h6
+              = t('dynamic_translations.track.city_title')
+            %p 
+              = t('dynamic_translations.track.city_text')
+
+
+
+/ .triangle_bg#_tracks
 /   .container
 /     .row.centered
 /       %h3.ouishare_stencil
-/         = t('dynamic_translations.main_schedule.title')
+/         = t('dynamic_translations.track.title')
 /       %br
 /       %br
-/       .container
-/         %p
-/           = t('dynamic_translations.main_schedule.second_part')
-          
-/           %br
-/           %br
-/           %br
-/           = t('dynamic_translations.main_schedule.second_part')
-
-/     .row.centered
-/       %a#sched-embed{:href => "http://ouisharefest14.sched.org/"}
-/       %script{:type => "text/javascript", :src => "http://ouisharefest14.sched.org/js/embed.js"}
-
-.triangle_bg#_tracks
-  .container
-    .row.centered
-      %h3.ouishare_stencil
-        = t('dynamic_translations.track.title')
-      %br
-      %br
-    .row
-      .col-md-6
-        .bc
-          %h6
-            = t('dynamic_translations.track.collab_title')
-          %p 
-            = t('dynamic_translations.track.collab_text')
-      .col-md-6
-        .bc
-          %h6
-            = t('dynamic_translations.track.revolution_title')
-          %p 
-            = t('dynamic_translations.track.revolution_text')
-      .col-md-6
-        .bc
-          %h6
-            = t('dynamic_translations.track.spirit_title')
-          %p 
-            = t('dynamic_translations.track.spirit_text')
-      .col-md-6
-        .bc
-          %h6
-            = t('dynamic_translations.track.capital_title')
-          %p 
-            = t('dynamic_translations.track.capital_text')
-      .col-md-6
-        .bc
-          %h6
-            = t('dynamic_translations.track.legacy_title')
-          %p 
-            = t('dynamic_translations.track.legacy_text')
-      .col-md-6
-        .bc
-          %h6
-            = t('dynamic_translations.track.social_title')
-          %p 
-            = t('dynamic_translations.track.social_text')
-      .col-md-6
-        .bc
-          %h6
-            = t('dynamic_translations.track.myth_title')
-          %p 
-            = t('dynamic_translations.track.myth_text')
-      .col-md-6
-        .bc
-          %h6
-            = t('dynamic_translations.track.democracy_title')
-          %p 
-            = t('dynamic_translations.track.democracy_text')
-      .col-md-6
-        .bc
-          %h6
-            = t('dynamic_translations.track.robot_title')
-          %p 
-            = t('dynamic_translations.track.robot_text')
-      .col-md-6
-        .bc
-          %h6
-            = t('dynamic_translations.track.citizen_title')
-          %p 
-            = t('dynamic_translations.track.citizen_text')
-      .col-md-6
-        .bc
-          %h6
-            = t('dynamic_translations.track.sharing_title')
-          %p 
-            = t('dynamic_translations.track.sharing_text')
-      .col-md-6
-        .bc
-          %h6
-            = t('dynamic_translations.track.city_title')
-          %p 
-            = t('dynamic_translations.track.city_text')
+/     .row
+/       .col-md-6
+/         .bc
+/           %h6
+/             = t('dynamic_translations.track.collab_title')
+/           %p 
+/             = t('dynamic_translations.track.collab_text')
+/       .col-md-6
+/         .bc
+/           %h6
+/             = t('dynamic_translations.track.revolution_title')
+/           %p 
+/             = t('dynamic_translations.track.revolution_text')
+/       .col-md-6
+/         .bc
+/           %h6
+/             = t('dynamic_translations.track.spirit_title')
+/           %p 
+/             = t('dynamic_translations.track.spirit_text')
+/       .col-md-6
+/         .bc
+/           %h6
+/             = t('dynamic_translations.track.capital_title')
+/           %p 
+/             = t('dynamic_translations.track.capital_text')
+/       .col-md-6
+/         .bc
+/           %h6
+/             = t('dynamic_translations.track.legacy_title')
+/           %p 
+/             = t('dynamic_translations.track.legacy_text')
+/       .col-md-6
+/         .bc
+/           %h6
+/             = t('dynamic_translations.track.social_title')
+/           %p 
+/             = t('dynamic_translations.track.social_text')
+/       .col-md-6
+/         .bc
+/           %h6
+/             = t('dynamic_translations.track.myth_title')
+/           %p 
+/             = t('dynamic_translations.track.myth_text')
+/       .col-md-6
+/         .bc
+/           %h6
+/             = t('dynamic_translations.track.democracy_title')
+/           %p 
+/             = t('dynamic_translations.track.democracy_text')
+/       .col-md-6
+/         .bc
+/           %h6
+/             = t('dynamic_translations.track.robot_title')
+/           %p 
+/             = t('dynamic_translations.track.robot_text')
+/       .col-md-6
+/         .bc
+/           %h6
+/             = t('dynamic_translations.track.citizen_title')
+/           %p 
+/             = t('dynamic_translations.track.citizen_text')
+/       .col-md-6
+/         .bc
+/           %h6
+/             = t('dynamic_translations.track.sharing_title')
+/           %p 
+/             = t('dynamic_translations.track.sharing_text')
+/       .col-md-6
+/         .bc
+/           %h6
+/             = t('dynamic_translations.track.city_title')
+/           %p 
+/             = t('dynamic_translations.track.city_text')
 
 
 .blank_bg#_track_leader{:style => "padding-bottom: 10px;"}

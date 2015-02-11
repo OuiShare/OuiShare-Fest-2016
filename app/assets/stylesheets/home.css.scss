@@ -213,6 +213,42 @@
   background-size: cover;
 }
 
+.program-part {
+  // background: url(/assets/background/background-base.png) no-repeat;
+
+  min-height: 100%;
+  margin-top: 0px;
+  padding-top:10%;
+  padding-bottom: 4%;
+  text-align:center;
+  background-position: 0% 0%;
+  background-size: 100% 100% !important;
+}
+
+.tracks-block {
+  border-top: 2px solid #E03E52;
+  background: none;
+  min-height: 161px;
+  margin: 0px;
+  padding: 10px;
+
+  h6 {
+    font-size: 22px;
+    margin: 10px 0px 0px 7px;
+    text-align: left;
+    color:#E03E52;
+  }
+
+  p {
+    font-weight: 200;
+    text-align: left;
+    margin: 8px;
+    font-size: 15px;
+    line-height: 20px;
+    padding-left: 12px;
+  }
+}
+
 p.white {
   font-size: 16px;
 }
