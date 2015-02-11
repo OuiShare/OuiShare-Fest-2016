@@ -410,6 +410,14 @@ body {
 	padding-bottom: 100px;
 }
 
+.blank_bg a {
+	text-decoration: underline;
+}
+
+.blank_bg a:hover{
+	color:#E03E52;
+}
+
 .triangle_bg {
 	background: url(/assets/fond_vert.jpg) repeat center top;
 	background-color: #33FF99;
