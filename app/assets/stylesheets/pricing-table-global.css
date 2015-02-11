@@ -9,6 +9,7 @@
 .pricing-table {
   font-family: 'Lato', sans-serif;
   position: relative;
+  margin-bottom:25px;
 }
 .pricing-table .title,
 .pricing-table .price,
@@ -20,7 +21,7 @@
   color: #ecf0f1;
   font-size: 18px;
   font-weight: bold;
-  padding: 15px;
+  padding: 5px;
   text-align: center;
 }
 .pricing-table .label {
@@ -63,7 +64,7 @@
   color: #a3b6bb;
 }
 .pricing-table .button {
-  padding: 15px;
+  padding: 0px;
   text-align: center;
 }
 .pricing-table .button .btn {
@@ -145,7 +146,7 @@
 }
 .pricing-table.bordered ul {
   border: 5px solid #f5f7f7;
-  border-radius: 20px;
+  border-radius: 5px;
 }
 .pricing-table.standout {
   top: -24px;

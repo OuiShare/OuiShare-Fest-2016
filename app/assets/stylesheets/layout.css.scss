@@ -23,7 +23,7 @@ p.little{
 }
 .ouishare_stencil{
   text-transform: uppercase;
-  font-family: 'ouisharestencilbold';
+  // font-family: 'ouisharestencilbold';
 }
 .triangle_bg{
   a{
@@ -92,8 +92,15 @@ p.little{
   padding: 12px 28px 11px 17px;
 }
 
-h3{
-  color: #0b0b6d;
+h3 {
+  color: #E03E52;
+}
+
+.headline {
+  font-family: Calibri, "Helvetica", san-serif;
+  line-height: 1.5em;
+  color: black;
+  font-size: 10px;
 }
 
 .navbar .nav > li > a{
@@ -118,7 +125,7 @@ h3{
   .tickets-highlight{
     margin-right: 10px;
     .highlight{
-      background-color: #d5544b;
+      background-color: #09C894;
   }
     .highlight:hover{
       background-color: #34495e;
@@ -129,7 +136,7 @@ h3{
   .blog-highlight{
     .highlight{
     // background-color: #0b0b6d;
-    color: #0b0b6d;
+    color: white;
   }
     .highlight:hover{
       background-color: #34495e;
@@ -137,16 +144,16 @@ h3{
     }
   }
 
-  
+
 
   .header-vertical-align{
     margin-top: 10px;
   }
-  
+
 }
 .navbar.navbar-default{
   .language-header{
-    color: #0b0b6d;
+    color: white;
     font-weight: bold;
     margin-left: 10px;
     font-family: naiv_normal;
@@ -173,4 +180,8 @@ h3{
 
 .white{
   color: #ffffff;
+}
+
+.navbar {
+  background-color: #001e60;
 }

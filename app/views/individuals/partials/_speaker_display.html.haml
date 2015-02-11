@@ -12,13 +12,13 @@
         %a{href: "http://www.twitter.com/" + speaker.twitter_account, target: "_blank"}
           = "@" + speaker.twitter_account
 %h6
-  .white
+  .nada{:style => "color:#001E60;"}
     %b
       = speaker.fullname
   - if !speaker.company_name.blank?
     %small
-      %a{href: speaker.url, target: "_blank"}
+      %a{href: speaker.url, target: "_blank", :style => "color:#7F8C9A;"}
         = speaker.company_name
   - else
     %br
-  
+

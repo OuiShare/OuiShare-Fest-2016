@@ -33,6 +33,12 @@
     float: none;
   }
 }
+
+// @media (max-width: 1999px){
+//   .navbar-header{
+//     float: none;
+//   }
+// }
 /*************************************************************************/
 
 
@@ -87,9 +93,18 @@ p.testimonial
   vertical-align: middle !important;
 }
 
-p.white
+p.white, p.white a
 {
   color: #ffffff;
+}
+
+p.white a {
+  text-decoration: underline;
+}
+
+p.white a:hover {
+  text-decoration: underline;
+  color :#34495E;
 }
 
 hr.partners
