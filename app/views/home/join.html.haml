@@ -1,18 +1,18 @@
-.background_4
+.blank_bg
   .container
-    .row
+    .row.centered
       .col-md-6.col-md-offset-3
-        %h3.ouishare_stencil.white
+        %h3.ouishare_stencil
           = t('dynamic_translations.tickets.title')
-        %hr.white
+        %hr.pink
         %br
         %br
-        %p.white
+        %p.text-center
           = t('dynamic_translations.tickets.description1')
           %a{href: "/join#_getinvolved"}
             = t('dynamic_translations.tickets.get_involved')
             = "."
-        %p.white
+        %p.text-center
           = t('dynamic_translations.tickets.description2')
           %a{href: "http://bit.ly/OSFest14ticketapplication"}
             = t('dynamic_translations.tickets.apply_tickets_link')
@@ -23,36 +23,51 @@
 
         .col-md-12.centered
           .row.centered
-
-            .col-md-8.col-md-offset-2.pricing-table.turquoise.bordered.plain
-              %a{href: home_freelancers_path}
-
-                %ul.centered.alt
-                  %li.title{:style => "font-family: naiv_normal,Helvetica; color:#E03E51;"}
-                    = t('dynamic_translations.tickets.freelancers_small_business')
-                  %li.button{:style => "font-family: naiv_normal,Helvetica; padding-top:0px; color:#E03E51;"}
-                    = t('dynamic_translations.tickets.freelancers_small_business_desc')
+            .col-md-8.col-md-offset-2.pricing-table
+              .btn.btn-pink{:style => 'width: 270px;margin: 10px 100px 0px 0px;height: 85px;'}
+                %a{href: home_freelancers_path, :style => 'text-decoration:none;'}
+                  = t('dynamic_translations.tickets.freelancers_small_business')
+                  %br
+                  = t('dynamic_translations.tickets.freelancers_small_business_desc')
+              / %a{href: home_freelancers_path}
+              /   %ul.centered.alt
+              /     %li.title{:style => "font-family: naiv_normal,Helvetica; color:#E03E51;"}
+              /       = t('dynamic_translations.tickets.freelancers_small_business')
+              /     %li.button{:style => "font-family: naiv_normal,Helvetica; padding-top:0px; color:#E03E51;"}
+              /       = t('dynamic_translations.tickets.freelancers_small_business_desc')
             %br
             %br
+            .col-md-8.col-md-offset-2.pricing-table
+              .btn.btn-pink{:style => 'width: 270px;margin: 10px 100px 0px 0px;height: 85px;'}
+                %a{href: home_entreprises_path, :style => 'text-decoration:none;'}
+                  =t('dynamic_translations.tickets.entreprises')
+                  %br
+                  = t('dynamic_translations.tickets.entreprises_desc')
 
-            .col-md-8.col-md-offset-2.pricing-table.turquoise.bordered.plain
-              %a{href: home_entreprises_path}
+              / %a{href: home_entreprises_path}
 
-                %ul.centered.alt
-                  %li.title{:style => "font-family: naiv_normal,Helvetica; color:#E03E51;"}
-                    =t('dynamic_translations.tickets.entreprises')
-                  %li.button{:style => "font-family: naiv_normal,Helvetica; padding-top:0px; color:#E03E51;"}
-                    = t('dynamic_translations.tickets.entreprises_desc')
+              /   %ul.centered.alt
+              /     %li.title{:style => "font-family: naiv_normal,Helvetica; color:#E03E51;"}
+              /       =t('dynamic_translations.tickets.entreprises')
+              /     %li.button{:style => "font-family: naiv_normal,Helvetica; padding-top:0px; color:#E03E51;"}
+              /       = t('dynamic_translations.tickets.entreprises_desc')
             %br
             %br
-            .col-md-8.col-md-offset-2.pricing-table.turquoise.bordered.plain
-              %a{href: home_press_and_media_path}
-                %ul.centered.alt
-                  %li.title{:style => "font-family: naiv_normal,Helvetica; color:#E03E51;"}
-                    =t('dynamic_translations.tickets.press_media')
-                  %li.button{:style => "font-family: naiv_normal,Helvetica; padding-top:0px; color:#E03E51;"}
-                    %br
-                    / = t('dynamic_translations.tickets.entreprises_desc')
+            .col-md-8.col-md-offset-2.pricing-table
+              .btn.btn-pink{:style => 'width: 270px;margin: 10px 100px 0px 0px;height: 85px;'}
+                %a{href: home_press_and_media_path, :style => 'text-decoration:none;'}
+                  %br
+                  =t('dynamic_translations.tickets.press_media')
+                  %br
+
+
+              / %a{href: home_press_and_media_path}
+              /   %ul.centered.alt
+              /     %li.title{:style => "font-family: naiv_normal,Helvetica; color:#E03E51;"}
+              /       =t('dynamic_translations.tickets.press_media')
+              /     %li.button{:style => "font-family: naiv_normal,Helvetica; padding-top:0px; color:#E03E51;"}
+              /       %br
+              /       = t('dynamic_translations.tickets.entreprises_desc')
             %br
             %br
 
