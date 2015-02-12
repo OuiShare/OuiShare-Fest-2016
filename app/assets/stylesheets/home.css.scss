@@ -237,6 +237,10 @@
     margin: 10px 0px 0px 7px;
     text-align: left;
     color:#E03E52;
+
+    // :hover {
+    //   color:#FFF;
+    // }
   }
 
   p {
@@ -246,8 +250,21 @@
     font-size: 15px;
     line-height: 20px;
     padding-left: 12px;
+
+    // :hover{
+    //   color:#FFF;
+    // }
   }
 }
+
+.tracks-block:hover {
+  background-color: #E03E52;
+
+  h6, p {
+    color:#FFF;
+  }
+}
+
 
 p.white {
   font-size: 16px;
