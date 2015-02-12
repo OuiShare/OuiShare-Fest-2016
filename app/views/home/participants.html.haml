@@ -3,13 +3,8 @@
     .row.centered
       %h3.ouishare_stencil
         = t('dynamic_translations.speakers.title')
-<<<<<<< HEAD
-      %hr
-      -if !@speakers.blank?
-=======
       %hr.pink
       -if !@displayed_speakers.blank?
->>>>>>> preprod
         .ch-grid
           - @speakers.each do |speaker|
             .col-lg-3.individuals-list-display
