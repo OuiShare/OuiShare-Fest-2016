@@ -16,6 +16,9 @@
 //= require ./gmaps4rails/gmaps4rails.mapquest
 //= require ./gmaps4rails/gmaps4rails.openlayers
 
+//= require ./jssor/jssor
+//= require ./jssor/jssor.slider
+
 //= require ./libs/libs
 
 //= require ./jquery.themepunch.revolution.min.js
