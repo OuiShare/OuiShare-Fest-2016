@@ -1,6 +1,7 @@
 # Place all the behaviors and hooks related to the matching controller here.
 # All this logic will automatically be available in application.js.
 # You can use CoffeeScript in this file: http://jashkenas.github.com/coffee-script/
-$(document).ready (e)->
-  $('#language').change (e) ->    
-    window.location = $(this).val()
+# $(document).ready (e)->
+#   $('#language').change (e) -> 
+#     alert 'test'   
+#     window.location = $(this).val()
