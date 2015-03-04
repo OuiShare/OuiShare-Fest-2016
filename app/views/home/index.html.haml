@@ -278,23 +278,23 @@
 
     .centered.get-involved-options-choice
       .span-centered
-        .col-md-10.col-md-offset-1
+        .col-md-8.col-md-offset-2
           .col-md-4
             .title
               = t('dynamic_translations.get_involved.call_for_proposal')
-            .btn.btn-pink
+            .btn.btn-pink.get-involved-btn
               %a{href: "https://docs.google.com/forms/d/1ZTTDVAieu70jO4gL1IvgKtueJJv7A6i86fC_1-vX_sQ/viewform#start=openform"}
                 =t('dynamic_translations.get_involved.submit')
           .col-md-4
             .title
               =t('dynamic_translations.get_involved.contribute')
-            .btn.btn-pink
+            .btn.btn-pink.get-involved-btn
               %a{href: "http://awards.ouishare.net/2015/applications/", target: "_blank"}
                 =t('dynamic_translations.get_involved_closed.submit')
           .col-md-4
             .title
               =t('dynamic_translations.get_involved.idea_wall')
-            .btn.btn-pink
+            .btn.btn-pink.get-involved-btn
               %a{href: "mailto:partners@ouishare.net", :target => "_blank"}
                 = t('dynamic_translations.get_involved.idea_wall_button')
 
