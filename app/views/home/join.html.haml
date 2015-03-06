@@ -24,7 +24,7 @@
         .col-md-12.centered
           .row.centered
             .col-md-8.col-md-offset-2.pricing-table
-              .btn.btn-pink{:style => 'width: 270px;margin: 10px 100px 0px 0px;height: 85px;'}
+              .btn.btn-pink.buy-tickets-btn
                 %a{href: home_freelancers_path, :style => 'text-decoration:none;'}
                   = t('dynamic_translations.tickets.freelancers_small_business')
                   %br
@@ -35,10 +35,8 @@
               /       = t('dynamic_translations.tickets.freelancers_small_business')
               /     %li.button{:style => "font-family: naiv_normal,Helvetica; padding-top:0px; color:#E03E51;"}
               /       = t('dynamic_translations.tickets.freelancers_small_business_desc')
-            %br
-            %br
             .col-md-8.col-md-offset-2.pricing-table
-              .btn.btn-pink{:style => 'width: 270px;margin: 10px 100px 0px 0px;height: 85px;'}
+              .btn.btn-pink.buy-tickets-btn
                 %a{href: home_entreprises_path, :style => 'text-decoration:none;'}
                   =t('dynamic_translations.tickets.entreprises')
                   %br
@@ -51,14 +49,10 @@
               /       =t('dynamic_translations.tickets.entreprises')
               /     %li.button{:style => "font-family: naiv_normal,Helvetica; padding-top:0px; color:#E03E51;"}
               /       = t('dynamic_translations.tickets.entreprises_desc')
-            %br
-            %br
             .col-md-8.col-md-offset-2.pricing-table
-              .btn.btn-pink{:style => 'width: 270px;margin: 10px 100px 0px 0px;height: 85px;'}
+              .btn.btn-pink.buy-tickets-btn
                 %a{href: home_press_and_media_path, :style => 'text-decoration:none;'}
-                  %br
                   =t('dynamic_translations.tickets.press_media')
-                  %br
 
 
               / %a{href: home_press_and_media_path}
@@ -86,23 +80,23 @@
 
     .centered.get-involved-options-choice
       .span-centered
-        .col-md-10.col-md-offset-1
+        .col-md-10.col-md-offset-1.col-lg-8.col-lg-offset-2
           .col-md-4
             .title
               = t('dynamic_translations.get_involved.call_for_proposal')
-            .btn.btn-pink
+            .btn.btn-pink.get-involved-btn
               %a{href: "https://docs.google.com/forms/d/1ZTTDVAieu70jO4gL1IvgKtueJJv7A6i86fC_1-vX_sQ/viewform#start=openform"}
                 =t('dynamic_translations.get_involved.submit')
           .col-md-4
             .title
               =t('dynamic_translations.get_involved.contribute')
-            .btn.btn-pink
+            .btn.btn-pink.get-involved-btn
               %a{href: "http://awards.ouishare.net/2015/applications/", target: "_blank"}
                 =t('dynamic_translations.get_involved_closed.submit')
           .col-md-4
             .title
               =t('dynamic_translations.get_involved.idea_wall')
-            .btn.btn-pink
+            .btn.btn-pink.get-involved-btn
               %a{href: "mailto:partners@ouishare.net", :target => "_blank"}
                 = t('dynamic_translations.get_involved.idea_wall_button')
 
@@ -243,10 +237,10 @@
 
         .row
           .col-md-8.col-md-offset-2
-            .col-md-6
+            .col-md-12
               %img{:src => '/assets/ouishare-award.png', :alt => 'ouishare awards logo', :style => 'width:50%;'}
-            .col-md-6
-              .btn.btn-pink{:style => 'margin: 40px 100px 0px 0px;'}
+            .col-md-12
+              .btn.btn-pink{:style => 'margin: 30px 0px 0px 0px;'}
                 %a{:href => 'http://awards.ouishare.net/2015/applications/', :target => '_blank'}
                   = t('dynamic_translations.ouishare_awards.link')
 
