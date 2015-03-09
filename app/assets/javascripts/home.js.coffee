@@ -8,9 +8,9 @@ toggle_class = (element,class_name) ->
     $(element).addClass class_name
 
 $(document).ready (e)->
-  $('#language').change (e) ->  
+  $('#language').change (e) ->    
     window.location = $(this).val()
-
+    
 $(document).ready ->
 
   $('.special_tooltip').tooltip()
