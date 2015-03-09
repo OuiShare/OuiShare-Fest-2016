@@ -3,16 +3,31 @@ $(document).ready ->
 
 
 jssor_slider1_starter = (containerId) ->
+	console.log('test')
 	options = 
 		$AutoPlay: true
 		$PauseOnHover: 1
 		$ArrowKeyNavigation: true
+		$SlideWidth: 600
 		$SlideSpacing: 0
+		$DisplayPieces: 2
+		$ParkingPosition: 300
 		$ArrowNavigatorOptions:
 			$Class: $JssorArrowNavigator$
 			$ChanceToShow: 2
 			$AutoCenter: 2
 			$Steps: 1
+
+		$BulletNavigatorOptions:
+			$Class: $JssorBulletNavigator$
+			$ChanceToShow: 2
+			$AutoCenter: 1
+			$Steps: 1
+			$Lanes: 1
+			$SpacingX: 8
+			$SpacingY: 8
+			$Orientation: 1
+		
 	jssor_slider1 = new $JssorSlider$(containerId, options)
 	#responsive code begin
 	#you can remove responsive code if you don't want the slider scales while window resizes
@@ -20,16 +35,14 @@ jssor_slider1_starter = (containerId) ->
 	ScaleSlider = ->
 		parentWidth = jssor_slider1.$Elmt.parentNode.clientWidth
 		if parentWidth
-			jssor_slider1.$ScaleWidth(parentWidth/2)
-			$('#slider1_container').css('margin-left',parentWidth/(-4))
-			$('#slider1_container').css('overflow','visible')
+			jssor_slider1.$ScaleWidth(Math.min(parentWidth))
 		else
 			$Jssor$.$Delay ScaleSlider, 30
 		return
 
 	ScaleSlider()
 	$Jssor$.$AddEvent window, 'load', ScaleSlider
-	$Jssor$.$AddEvent window, 'resize', $Jssor$.$WindowResizeFilter(window, ScaleSlider)
+	$Jssor$.$AddEvent window, 'resize', ScaleSlider
 	$Jssor$.$AddEvent window, 'orientationchange', ScaleSlider
 	#responsive code end
 	return

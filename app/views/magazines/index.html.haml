@@ -17,40 +17,27 @@
 /         - f.tags[0..2].each do |t|
 /           %span.label.blue = t
 
-#slider-container{:style => "min-height:100%; overflow: hidden;"}
-  #slider1_container{:style => "position: relative; top: 0px; left: 50%; width: 600px; height: 300px; overflow: hidden;"}
-    / Slides Container
-    %div.scale-jssor{:style => "cursor: move; position: absolute; left: 0px; top: 0px; width: 600px; height: 300px; overflow: hidden;", :u => "slides"}
-      - @magazines.each do |f|
-        %div
-          %img{:src => "#{f.content.split(' ')[3].split('"')[1].gsub(/-150x150/, "")}", :u => "image"}
-            %span.presentation.ouishare_stencil.white
-              = f.name
-            %span.btn.btn-blue{:style => "position:absolute; width: 100px; height: 50px; top: 70%; left: 40%;"}
-              %a{href: "#{f.url}", target:"blank"}
-                Read More
-      / %div
-      /   %img{:src => "/assets/img/photography/002.jpg", :u => "image"}
-      /     %span{:style => "position: absolute;top: 10px; left: 10px; color:#fff; font-size: 30px"}
-      /       Bonjour1
-      / %div
-      /   %img{:src => "/assets/img/photography/003.jpg", :u => "image"}
-      /     %span{:style => "width: 40px; height: 50px; top: 150px; left: 100px; color:#000; position: absolute;"}
-      /       Bonjour2
-      / %div
-      /   %img{:src => "/assets/img/photography/004.jpg", :u => "image"}/
-      / %div
-      /   %img{:src => "/assets/img/photography/005.jpg", :u => "image"}/
-      / %div
-      /   %img{:src => "/assets/img/photography/006.jpg", :u => "image"}/
-      / %div
-      /   %img{:src => "/assets/img/photography/007.jpg", :u => "image"}/
-      / %div
-      /   %img{:src => "/assets/img/photography/008.jpg", :u => "image"}/
-      / %div
-      /   %img{:src => "/assets/img/photography/009.jpg", :u => "image"}/
+
+#slider-container.text-center{:style => "min-height:100%;"}
+	#slider1_container{:style => "position: relative; top: 0px; left: 0px; width: 1200px; height: 300px;"}
+		/ Slides Container
+		%div.scale-jssor{:style => "cursor: move; position: absolute; left: 0px; top: 0px; width: 1200px; height: 300px; overflow: hidden;", :u => "slides"}
+			- @magazines.each do |f|
+				%div
+					%img{:src => "#{f.content.split(' ')[3].split('"')[1].gsub(/-150x150/, "")}", :u => "image"}
+						%span.presentation.ouishare_stencil.white
+							= f.name
+						%span.btn.btn-blue{:style => "position:absolute; width: 100px; height: 50px; top: 70%; left: 40%;"}
+							%a{href: "#{f.url}", target:"blank"}
+								Read More
+
+		.jssorb21{ :u => "navigator", :style => "position: absolute; bottom: -26px; left: 6px;"}
+			%div{ :u => "prototype", :style => "position: absolute; width: 19px; height: 19px; text-align:center; line-height:19px; color:white; font-size:12px;"}
+
+		%span.jssora13l{:style => "width: 40px; height: 50px; top: 123px; left: 30px;", :u => "arrowleft"}
+		/ Arrow Right
+		%span.jssora13r{:style => "width: 40px; height: 50px; top: 123px; right: 30px", :u => "arrowright"}
 
 
-    %span.jssora13l{:style => "width: 40px; height: 50px; top: 123px; left: 30px;", :u => "arrowleft"}
-    / Arrow Right
-    %span.jssora13r{:style => "width: 40px; height: 50px; top: 123px; right: 30px", :u => "arrowright"}
+
+		
