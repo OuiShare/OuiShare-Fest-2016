@@ -8,6 +8,9 @@ class HomeController < ApplicationController
   
   def index    
 
+    Magazine.fetch_last_posts
+    @magazines = Magazine.all
+
     if IndividualType.find_by_title('Team')
       @team_members = IndividualType.find_by_title('Team').get_members
       if ENV["DISPLAYED_TEAM_MEMBERS"].to_i > @team_members.count

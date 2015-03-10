@@ -17,16 +17,6 @@ jssor_slider1_starter = (containerId) ->
 			$ChanceToShow: 2
 			$AutoCenter: 2
 			$Steps: 1
-
-		$BulletNavigatorOptions:
-			$Class: $JssorBulletNavigator$
-			$ChanceToShow: 2
-			$AutoCenter: 1
-			$Steps: 1
-			$Lanes: 1
-			$SpacingX: 8
-			$SpacingY: 8
-			$Orientation: 1
 		
 	jssor_slider1 = new $JssorSlider$(containerId, options)
 	#responsive code begin
