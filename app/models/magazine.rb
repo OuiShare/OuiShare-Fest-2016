@@ -2,7 +2,7 @@ class Magazine < ActiveRecord::Base
   attr_accessible :content, :guid, :name, :published_at, :tags, :url
 
   def self.fetch_last_posts
-  	feed_url = 'http://magazine.ouishare.net/feed'
+  	feed_url = 'http://magazine.ouishare.net/tag/ouisharefest/feed'
   	feed = Feedjira::Feed.fetch_and_parse feed_url
   	add_entries(feed.entries)
 	end
