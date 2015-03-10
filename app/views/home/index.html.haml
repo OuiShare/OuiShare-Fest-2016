@@ -21,7 +21,7 @@
       = form_tag home_newsletter_collect_email_path, :class => "form-inline" do
         .row.text-center
           .col-md-offset-3.col-md-4
-            = text_field_tag :email_address,"", :class => "form-control flat", :placeholder => t('dynamic_translations.main.placeholder_stay_posted')
+            = text_field_tag :email_address,"", :class => "form-control flat", :placeholder => t('dynamic_translations.main.placeholder_stay_posted'), :style => "width: 110%;"
           .col-md-2.submit-email-button
             = submit_tag t('dynamic_translations.main.stay_posted'), :class => "btn btn-primary"
 
@@ -38,7 +38,6 @@
           %p.white
             = t('dynamic_translations.about.description')
           %br
-
           %p.white
             = t('dynamic_translations.what_is_community.text1')
           %br
@@ -53,6 +52,7 @@
           %br
           %p.white
             = t('dynamic_translations.what_is_community.text5')
+          %br
           %br
           %br
           %p.topics.row.centered
@@ -259,7 +259,7 @@
   .container 
     .row.centered
       .col-md-5.col-md-offset-4
-        .btn.btn-pink{:style => 'margin: 40px 100px 0px 0px;'}
+        .btn.btn-pink.become-partner-btn
           %a{:href => 'mailto:partners@ouishare.net'}
             Become a partner
 
@@ -278,25 +278,51 @@
 
     .centered.get-involved-options-choice
       .span-centered
-        .col-md-10.col-md-offset-1
+        .col-md-10.col-md-offset-1.col-lg-8.col-lg-offset-2
           .col-md-4
             .title
               = t('dynamic_translations.get_involved.call_for_proposal')
-            .btn.btn-pink
+            .btn.btn-pink.get-involved-btn
               %a{href: "https://docs.google.com/forms/d/1ZTTDVAieu70jO4gL1IvgKtueJJv7A6i86fC_1-vX_sQ/viewform#start=openform"}
                 =t('dynamic_translations.get_involved.submit')
           .col-md-4
             .title
               =t('dynamic_translations.get_involved.contribute')
-            .btn.btn-pink
-              %a{href: "https://docs.google.com/forms/d/1ZTTDVAieu70jO4gL1IvgKtueJJv7A6i86fC_1-vX_sQ/viewform#start=openform"}
-                =t('dynamic_translations.get_involved.submit')
+            .btn.btn-pink.get-involved-btn
+              %a{href: "http://awards.ouishare.net/2015/applications/", target: "_blank"}
+                =t('dynamic_translations.get_involved_closed.submit')
           .col-md-4
             .title
               =t('dynamic_translations.get_involved.idea_wall')
-            .btn.btn-pink
+            .btn.btn-pink.get-involved-btn
               %a{href: "mailto:partners@ouishare.net", :target => "_blank"}
                 = t('dynamic_translations.get_involved.idea_wall_button')
+
+
+.ouishare-news-section
+  .container
+    .row.centered
+      %h3.ouishare_stencil
+        = t('dynamic_translations.ouishare-news.title')
+      %hr.pink
+
+  #slider-container.text-center{:style => "min-height:100%;"}
+    #slider1_container{:style => "position: relative; top: 0px; left: 0px; width: 1200px; height: 300px;"}
+      / Slides Container
+      %div.scale-jssor{:style => "cursor: move; position: absolute; left: 0px; top: 0px; width: 1200px; height: 300px; overflow: hidden;", :u => "slides"}
+        - @magazines.each do |f|
+          %div
+            %img{:src => "#{f.content.split(' ')[3].split('"')[1].gsub(/-150x150/, "")}", :u => "image"}
+              %span.presentation.ouishare_stencil.white
+                = f.name
+              %span.btn.btn-blue{:style => "position:absolute; width: 100px; height: 50px; top: 70%; left: 40%;"}
+                %a{href: "#{f.url}", target:"blank"}
+                  Read More
+
+      %span.jssora13l{:style => "width: 40px; height: 50px; top: 123px; left: 30px;", :u => "arrowleft"}
+      / Arrow Right
+      %span.jssora13r{:style => "width: 40px; height: 50px; top: 123px; right: 30px", :u => "arrowright"}
+
 
 .aboutouishare-section
   .container
@@ -314,10 +340,10 @@
 
         .row
           .col-md-8.col-md-offset-2
-            .col-md-6
-              %img{:src => '/assets/coeur-aboutouishare.png', :alt => 'OuiShare logo', :style => 'width:50%;'}
-            .col-md-6
-              .btn.btn-pink{:style => 'margin: 40px 100px 0px 0px;'}
+            .col-md-12
+              %img{:src => '/assets/coeur-aboutouishare.png', :alt => 'OuiShare logo'}
+            .col-md-12
+              .btn.btn-pink{:style => 'margin: 40px 0px 0px 0px;'}
                 %a{:href => 'http://ouishare.net/en/users/sign_up', :target => '_blank'}
                   = t('dynamic_translations.about.ouishare_btn')
 

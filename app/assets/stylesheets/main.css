@@ -394,7 +394,7 @@ body {
 }
 
 .become_partner {
-    background-color: #F7F7F7;
+    background-color: #E03E51;
     width: 100%;
     margin-top: 0px;
     padding-top: 10px;
@@ -402,12 +402,21 @@ body {
     position: relative;
 }
 .blank_bg {
-	background-color: #F7F7F7;
+	/*background-color: #F7F7F7;*/
+	background-color: #FFF;
 	min-height: 100%;
 	width: 100%;
 	margin-top: 0px;
 	padding-top: 130px;
 	padding-bottom: 100px;
+}
+
+.blank_bg a {
+	text-decoration: underline;
+}
+
+.blank_bg a:hover{
+	color:#E03E52;
 }
 
 .triangle_bg {
@@ -524,6 +533,17 @@ body {
 	background-attachment: scroll;
 /*	min-height: 100%;*/
 	padding-top: 15%;
+	padding-bottom: 10%;
+}
+
+.background_5 {
+	background: url(/assets/background/04-background-grey-3.png) no-repeat;
+	background-size: 100% 120% !important;
+	background-position: 0% 0%;
+	text-align: center;
+	background-attachment: scroll;
+	min-height: 100%;
+	padding-top: 10%;
 	padding-bottom: 10%;
 }
 

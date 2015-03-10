@@ -189,11 +189,7 @@
 
 
 .get-involved-section {
-  background: url(/assets/fest3.png);
-  background-size: cover;
-  padding-top: 21%;
   min-height: 100%;
-  margin-top: -8%;
 }
 
 .third-section > div > div > div > div > h5 {
@@ -209,12 +205,64 @@
   padding-top:5%;
   padding-bottom: 4%;
   text-align:center;
-  background-position: center center;
-  background-size: cover;
+  background-position: bottom;
 }
 
+.program-part {
+  // background: url(/assets/background/background-base.png) no-repeat;
+
+  min-height: 100%;
+  margin-top: 0px;
+  padding-top:10%;
+  padding-bottom: 4%;
+  text-align:center;
+  background-position: 0% 0%;
+  background-size: 100% 100% !important;
+}
+
+.tracks-block {
+  border-top: 2px solid #E03E52;
+  background: none;
+  min-height: 161px;
+  margin: 0px;
+  padding: 10px;
+
+  h6 {
+    font-size: 22px;
+    margin: 10px 0px 0px 7px;
+    text-align: left;
+    color:#E03E52;
+
+    // :hover {
+    //   color:#FFF;
+    // }
+  }
+
+  p {
+    font-weight: 200;
+    text-align: left;
+    margin: 8px;
+    font-size: 15px;
+    line-height: 20px;
+    padding-left: 12px;
+
+    // :hover{
+    //   color:#FFF;
+    // }
+  }
+}
+
+.tracks-block:hover {
+  background-color: #E03E52;
+
+  h6, p {
+    color:#FFF;
+  }
+}
+
+
 p.white {
-  font-size: 15px;
+  font-size: 16px;
 }
 
 .tickets-section > div:nth-child(1) {
@@ -453,4 +501,52 @@ body > div.get-involved-section > div > div.centered.get-involved-options-choice
 body > div.get-involved-section > div > div.row.centered > p {
   padding: 22px 26%;
   text-align: left;
+}
+
+.btn.btn-pink.become-partner-btn{
+  background-color: #fff;
+  font-size: 18px;
+  padding: 30px 50px;
+  margin: 40px 100px 0px 0px;
+
+  a{    
+    color: #E03E51;
+  }
+}
+
+.btn.btn-pink.become-partner-btn:hover{
+  background-color: #E03E51;
+  font-size: 18px;
+  padding: 30px 50px;
+  margin: 40px 100px 0px 0px;
+
+  a{    
+    color: #fff;
+  }
+}
+
+.btn.btn-pink.get-involved-btn{
+  padding: 25px 0px;
+  width: 180px;
+}
+
+.btn.btn-pink.buy-tickets-btn{
+  padding: 30px 30px;
+  width: 270px;
+}
+
+.ch-item{
+  .ch-info{
+     a{
+      text-decoration: none;
+    }
+  }
+}
+
+#slider-container{
+  padding-top: 130px;
+}
+
+.ouishare-news-section{
+  padding-bottom: 10%;
 }

@@ -26,18 +26,18 @@ class Magazine < ActiveRecord::Base
 	def self.add_entries(entries)
 		# feed_ouishare_fest = []
   	entries.each do |entry|
-  		if entry.categories.include? 'Analysis' # 'OuiShareFest'
-  			unless exists? :guid => entry.id
-  				create!(
-  					:name				=> entry.title,
-  					:content				=> entry.summary,
-  					:published_at				=> entry.published,
-  					:url				=> entry.url,
-  					:guid => entry.id
-  					)
-  			# feed_ouishare_fest << entriesOSF
-	  		end
-	  	end
+  		# if entry.categories.include? 'Analysis' # 'OuiShareFest'
+			unless exists? :guid => entry.entry_id
+				create!(
+					:name				=> entry.title,
+					:content				=> entry.summary,
+					:published_at				=> entry.published,
+					:url				=> entry.url,
+					:guid => entry.entry_id
+					)
+			# feed_ouishare_fest << entriesOSF
+  		end
+	  	# end
 		end
 	end
 

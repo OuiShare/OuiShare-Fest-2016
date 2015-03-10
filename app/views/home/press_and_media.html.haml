@@ -1,17 +1,18 @@
-.yellow_bg#press_media
+.blank_bg#press_media
   .container
     .row.centered
       %h3.ouishare_stencil
         = t('dynamic_translations.tickets.press_media')
+      %hr.pink  
       %br
       %br
       %br
-      %p.text-center{:style => "font-size: 20px;"}
+      %p.text-center{:style => "font-size: 20px; text-align: center;"}
         %a{:href => "mailto:press@ouishare.net"}
           = t('dynamic_translations.press_media.request')
         %br
         %br
-      %p.text-center{:style => "font-size: 20px;"}
+      %p.text-center{:style => "font-size: 20px; text-align: center;"}
         %a{href: "http://ouishare.net/en/press-room"} 
           = t('dynamic_translations.press_media.download')
         %br
