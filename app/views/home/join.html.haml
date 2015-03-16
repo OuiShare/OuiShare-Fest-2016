@@ -244,8 +244,70 @@
                 %a{:href => 'http://awards.ouishare.net/2015/applications/', :target => '_blank'}
                   = t('dynamic_translations.ouishare_awards.link')
 
+#_prepare.blank_bg
+  .container
+    .row.centered
+      .col-md-6.col-md-offset-3
+        %h3.ouishare_stencil
+          = t('dynamic_translations.prepare_your_trip.title')
+        %hr.pink
+        %br
+        %br
+        %p.text-center
+          %b
+            = t('dynamic_translations.prepare_your_trip.baseline')
+        %p.text-center
+          = t('dynamic_translations.prepare_your_trip.description')
+        %br
+        %br
+      
 
-/ #_prepare.yellow_bg
+      .col-md-10.col-md-offset-1.col-lg-8.col-lg-offset-2{:style => "margin-bottom: 20px;"}
+        .col-md-8
+          %p.text-center
+            %b
+              = t('dynamic_translations.travel_information.title')
+          %p.text-center
+            = t('dynamic_translations.travel_information.first_part')
+            %a{href: "https://massmosaic.com/groups/213/view/ouishare-commons", target: "_blank"}
+              = t('dynamic_translations.travel_information.link')
+            = t('dynamic_translations.travel_information.second_part')
+        .col-md-2
+          .btn.btn-pink{:style => "margin-top: 43px;"}
+            %a{href: home_travel_information_path, :style => 'text-decoration:none;'}
+              = t('dynamic_translations.travel_information.button')
+      
+
+      .col-md-10.col-md-offset-1.col-lg-8.col-lg-offset-2{:style => "margin-bottom: 20px;"}
+        .col-md-8
+          %p.text-center
+            %b
+              = t('dynamic_translations.where_to_stay.title')
+          %p.text-center
+            = t('dynamic_translations.where_to_stay.first_part')
+            %a{href: "#{}", target: "_blank"}
+              = t('dynamic_translations.where_to_stay.link')
+            = t('dynamic_translations.where_to_stay.second_part')
+        .col-md-2
+          .btn.btn-pink{:style => "margin-top: 43px;"}
+            %a{href: home_freelancers_path, :style => 'text-decoration:none;'}
+              = t('dynamic_translations.where_to_stay.button')
+      
+
+      .col-md-10.col-md-offset-1.col-lg-8.col-lg-offset-2{:style => "margin-bottom: 20px;"}
+        .col-md-8
+          %p.text-center
+            %b
+              = t('dynamic_translations.getting_venue.title')
+          %p.text-center
+            = t('dynamic_translations.getting_venue.first_part')
+        .col-md-2
+          .btn.btn-pink{:style => "margin-top: 43px;"}
+            %a{href: home_freelancers_path, :style => 'text-decoration:none;'}
+              = t('dynamic_translations.getting_venue.button')
+
+
+/ .yellow_bg
 /   .container
 /     .row.centered
 /       %h3.ouishare_stencil

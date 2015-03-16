@@ -64,6 +64,7 @@ OuiShareFest::Application.routes.draw do
     get :entreprises
     get :press_and_media
     get :fest2014
+    get :travel_information
     # get :stories
     post :newsletter_collect_email
   end

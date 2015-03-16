@@ -189,12 +189,47 @@ en:
       title: Join
     prepare_your_trip:
       title: Prepare your Trip
+      baseline: How to organize your trip to OuiShare Fest…collaboratively! 
+      description: Since we know many of your are coming to OuiShare Fest from all over the world, it is our priority to support you in finding the most affordable, environmentally friendly and fun travel options to get to Paris. Here’s some advice on how to plan your trip.
     travel_information:
-      title: Travel information
-      first_part: Coming from far away? You are not the only one! Connect with other
-        participants on our special
-      second_part: to share rides, couches and more, or take a look at our overview
-        of collaborative and traditional travel options to Paris
+      title: Travelling to paris
+      first_part: Coming from far away? You are not the only one! Connect with other participants on our special
+      second_part: to share rides, couches and more, or take a look at our overview of collaborative and traditional travel options to Paris.
+      link: OuiShare Fest sharing platform
+      button: See all travel options
+      ridesharing:
+        title: ridesharing
+        part_one: One of the most fun and affordable ways to get to OuiShare Fest! If you’d like to share a ride with another Fest participant, check out our special
+        part_two: to help you find a ride share. You might even make some new friends on the way!  
+        part_three: You can also use one of the many ride sharing platforms
+        link: OuiShare Fest sharing platform
+      carsharing:
+        title: Carsharing
+        part_one: Another great travel option is renting a car from a private owner on marketplaces such as
+        part_two: Other car sharing companies you can check out are 
+      train:
+        title: Train
+        part_one: Paris enjoys frequent direct train services from London, Brussels and other main towns and cities. For all train times and fares to Paris, visit the
+        part_two: to help you find a ride share. You might even make some new friends on the way!  
+        part_three: All 6 Parisian train stations are connected to the underground network.
+        link: SNCF website
+      coaches:
+        title: Coaches
+        part_one: You can easily get to Paris by road from around the close by cities using coach services.
+        part_two: all provide frequent services to Paris and affordable prices. 
+      fly:
+        title: Fly to Paris
+        part_one: If you live too far away, you can always fly in. You will arrive either from Roissy - Charles De Gaulle Airport (CDG) or from Orly Airport (ORY).
+    where_to_stay:
+      title: Where to stay
+      first_part: This is your first time in Paris and you don’t know anybody yet? Then you should make friends, get a good night’s sleep and save money by finding an nice accommodation on the 
+      second_part: or check out one of the many other options the collaborative economy offers. 
+      link: OuiShare Couchsurfing group
+      button: See all accommodation options
+    getting_venue:
+      title: Getting to the venue & moving around Paris
+      first_part: Don’t want to get lost in Paris and make sure not to miss your favorite session? The Cabaret Sauvage is accessible both from the “Porte de la Villette” & “Porte de Pantin” Metro stations, by taking either line 5 or 7.
+      button: See map and instructions
     share_ouishare:
       link_title: OuiShare Fest sharing platform
     see_travel_options:
