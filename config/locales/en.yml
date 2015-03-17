@@ -226,10 +226,64 @@ en:
       second_part: or check out one of the many other options the collaborative economy offers. 
       link: OuiShare Couchsurfing group
       button: See all accommodation options
+      P2P:
+        title: P2P Vacation Rentals
+        part_one: Check out our
+        link: Ouishare Fest Airbnb Wishlist
+        part_two: with places near the Cabaret that we would want to stay at if we were you :-)
+      home_swapping:
+        title: Home Swapping
+        part_one: Swap your apartment with a Parisian visiting your city on a home swapping platform like 
+      hotels:
+        title: Hotels
+        part_one: Here are some Hotels near the Cabaret! 
     getting_venue:
       title: Getting to the venue & moving around Paris
       first_part: Don’t want to get lost in Paris and make sure not to miss your favorite session? The Cabaret Sauvage is accessible both from the “Porte de la Villette” & “Porte de Pantin” Metro stations, by taking either line 5 or 7.
       button: See map and instructions
+      public_transportation: Public Transportation
+      underground:
+        title: Underground
+        part_one: Here is the
+        part_two: We strongly recommend you use the public transportation network (RATP) to get around. The easiest way to get to our festival location, “Le Cabaret Sauvage”, is from the metro stations
+        link: map of the underground network
+      bus:
+        title: Bus Stations
+        part_one: The nearest stations are
+      trams:
+        title: Trams
+        part_one: There are 3 tram stations on line T3b near ‘Cabaret Sauvage’
+        part_two: Porte de Pantin, Ella Fitzgerald & Porte de la Villette.
+      bike:
+        title: Bike / Velib’
+        part_one: is a bike sharing service operated by the city of Paris with over 20,000 bikes all over the city, available 24/7. It costs 1,7€/day and 8€/week. It’s definitely the most pleasant way to discover the city when the sun is out. You will find many stations near the Cabaret Sauvage (see the map below).
+      taxi: 
+        title: Taxi
+        part_one: Share a taxi with someone with the 
+        link: Taxi for Two app
+      airport: 
+        title: Coming from the Airport directly?
+        part_one: From Roissy - Charles De Gaulle Airport (CDG), you can
+        part_two: take the “RER B” until “Gare du Nord”,
+        part_three: and then change for metro line 5 (towards Bobigny) and get out at “Porte de Pantin”.
+        part_four: From Orly Airport (ORY), we recommend you to
+        part_five: take the “OrlyVal” to the station “Antony” of the “RER B”.
+        part_six: Then, take the RER until “Gare du Nord”.
+        part_seven: Eventually, change for line 5 towards Bobigny and get out at “Porte de Pantin” (this should only take you about 1h)
+      car: 
+        title: Coming by car?
+        part_one: Private parking spot rental
+        part_two: As a cheap and convenient alternative to classic parking, you can consider renting a private parking spot on
+        part_three: On-street parking
+        part_four: Parking spots are very limited and require you to buy tickets from machines located on the street that only accept special payment cards you can buy at newsstands.
+        part_five: Nearest parking lots
+        part_six: Parking Nord « Cité des Sciences », 61 bd Macdonald 75019 Paris (Porte de la Villette)
+        part_seven: Parking Sud « Cité de la Musique », 211 avenue Jean Jaurès (Porte de Pantin)
+
+
+
+
+
     share_ouishare:
       link_title: OuiShare Fest sharing platform
     see_travel_options:
