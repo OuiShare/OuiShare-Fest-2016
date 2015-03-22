@@ -314,8 +314,13 @@
           %div
             - if !f.content.split('img')[1].nil?
               %img{:src => "#{f.content.split(' ')[3].split('"')[1].gsub(/-150x150/, "")}", :u => "image"}
+              %span.presentation.ouishare_stencil.white
+                = f.name
+              %span.btn.btn-blue{:style => "position:absolute; width: 100px; height: 50px; top: 70%; left: 40%;"}
+                %a{href: "#{f.url}", target:"blank"}
+                  Read More
             - else
-              = image_tag "/assets/landing_logo.png", :style => "height:250px;"
+              = image_tag "/assets/landing_logo.png", :style => "height:150px;"
               %span.presentation.ouishare_stencil.white
                 = f.name
               %span.btn.btn-blue{:style => "position:absolute; width: 100px; height: 50px; top: 70%; left: 40%;"}
