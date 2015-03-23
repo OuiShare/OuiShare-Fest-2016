@@ -1,0 +1,61 @@
+.blank_bg
+  .container
+    .row.centered.travel_information
+      %h3.ouishare_stencil
+        = t('dynamic_translations.where_to_stay.title')
+      %hr.pink
+
+    .col-md-10.col-md-offset-1.col-lg-8.col-lg-offset-2
+      .row.travel_information
+        %h4
+          = t('dynamic_translations.where_to_stay.P2P.title')
+        %p.text-center
+          %a{href: "https://www.airbnb.com/", target: "_blank"} 
+            AirBnb:
+          = t('dynamic_translations.where_to_stay.P2P.part_one')
+          %a{href: "https://www.airbnb.de/wishlists/10206702", target: "_blank"}  
+            = t('dynamic_translations.where_to_stay.P2P.link')
+          = t('dynamic_translations.where_to_stay.P2P.part_two')
+          or
+          %a{href: "http://www.bedycasa.com/", target: "_blank"} 
+            Bedycasa,
+          %a{href: "https://www.homestay.com/", target: "_blank"} 
+            Homestay,
+          %a{href: "http://www.homeaway.com/", target: "_blank"} 
+            Homeaway
+
+
+      .row.travel_information
+        %h4
+          = t('dynamic_translations.where_to_stay.home_swapping.title')
+        %p.text-center
+          = t('dynamic_translations.where_to_stay.home_swapping.part_one')
+          %a{href: "http://www.homeforexchange.com/", target: "_blank"} 
+            Home For Exchange,
+          %a{href: "http://www.knok.com/", target: "_blank"} 
+            KNOK,
+          %a{href: "http://www.trocmaison.com/", target: "_blank"} 
+            TrocMaison,
+          %a{href: "http://www.guesttoguest.com/", target: "_blank"} 
+            GuestToGuest 
+          or
+          %a{href: "http://www.lovehomeswap.com/", target: "_blank"} 
+            LoveHomeSwap. 
+
+          \.
+
+
+
+      .row.travel_information
+        %h4
+          = t('dynamic_translations.where_to_stay.hotels.title')
+        %p.text-center
+          = t('dynamic_translations.where_to_stay.hotels.part_one')
+          %br
+          %a{href: "http://www.foresthill-hotels.com/", target: "_blank"} 
+            Hotel Forest Hill Paris
+          %br
+          %a{href: "http://www.hotel-de-paris.org/", target: "_blank"} 
+            Hotel de Paris
+
+       
