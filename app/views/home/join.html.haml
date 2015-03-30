@@ -24,44 +24,25 @@
         .col-md-12.centered
           .row.centered
             .col-md-8.col-md-offset-2.pricing-table
-              .btn.btn-pink.buy-tickets-btn
-                %a{href: home_freelancers_path, :style => 'text-decoration:none;'}
+              %a{href: home_freelancers_path, :style => 'text-decoration:none;'}
+                .btn.btn-pink.buy-tickets-btn
                   = t('dynamic_translations.tickets.freelancers_small_business')
                   %br
                   = t('dynamic_translations.tickets.freelancers_small_business_desc')
-              / %a{href: home_freelancers_path}
-              /   %ul.centered.alt
-              /     %li.title{:style => "font-family: naiv_normal,Helvetica; color:#E03E51;"}
-              /       = t('dynamic_translations.tickets.freelancers_small_business')
-              /     %li.button{:style => "font-family: naiv_normal,Helvetica; padding-top:0px; color:#E03E51;"}
-              /       = t('dynamic_translations.tickets.freelancers_small_business_desc')
+
             .col-md-8.col-md-offset-2.pricing-table
-              .btn.btn-pink.buy-tickets-btn
-                %a{href: home_entreprises_path, :style => 'text-decoration:none;'}
+              %a{href: home_entreprises_path, :style => 'text-decoration:none;'}
+                .btn.btn-pink.buy-tickets-btn     
                   =t('dynamic_translations.tickets.entreprises')
                   %br
                   = t('dynamic_translations.tickets.entreprises_desc')
 
-              / %a{href: home_entreprises_path}
 
-              /   %ul.centered.alt
-              /     %li.title{:style => "font-family: naiv_normal,Helvetica; color:#E03E51;"}
-              /       =t('dynamic_translations.tickets.entreprises')
-              /     %li.button{:style => "font-family: naiv_normal,Helvetica; padding-top:0px; color:#E03E51;"}
-              /       = t('dynamic_translations.tickets.entreprises_desc')
             .col-md-8.col-md-offset-2.pricing-table
-              .btn.btn-pink.buy-tickets-btn
-                %a{href: home_press_and_media_path, :style => 'text-decoration:none;'}
+              %a{href: home_press_and_media_path, :style => 'text-decoration:none;'}
+                .btn.btn-pink.buy-tickets-btn
                   =t('dynamic_translations.tickets.press_media')
 
-
-              / %a{href: home_press_and_media_path}
-              /   %ul.centered.alt
-              /     %li.title{:style => "font-family: naiv_normal,Helvetica; color:#E03E51;"}
-              /       =t('dynamic_translations.tickets.press_media')
-              /     %li.button{:style => "font-family: naiv_normal,Helvetica; padding-top:0px; color:#E03E51;"}
-              /       %br
-              /       = t('dynamic_translations.tickets.entreprises_desc')
             %br
             %br
 
