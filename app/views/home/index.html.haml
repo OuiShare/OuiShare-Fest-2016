@@ -217,7 +217,7 @@
           = t('dynamic_translations.partners.title')
         %hr.pink
         .partners
-      = render "/individuals/partials/partners_display", :partners => @partners, :important_partners_display => true, :important_partners_count => 9
+      = render "/individuals/partials/partners_display", :partners => @partners, :important_partners_display => true, :important_partners_count => 3
       %br
       %br
 
@@ -314,13 +314,18 @@
           %div
             - if !f.content.split('img')[1].nil?
               %img{:src => "#{f.content.split(' ')[3].split('"')[1].gsub(/-150x150/, "")}", :u => "image"}
-                %span.presentation.ouishare_stencil.white
-                  = f.name
-                %span.btn.btn-blue{:style => "position:absolute; width: 100px; height: 50px; top: 70%; left: 40%;"}
-                  %a{href: "#{f.url}", target:"blank"}
-                    Read More
+              %span.presentation.ouishare_stencil.white
+                = f.name
+              %span.btn.btn-blue{:style => "position:absolute; width: 100px; height: 50px; top: 70%; left: 40%;"}
+                %a{href: "#{f.url}", target:"blank"}
+                  Read More
             - else
               = image_tag "/assets/landing_logo.png", :style => "height:150px;"
+              %span.presentation.ouishare_stencil.white
+                = f.name
+              %span.btn.btn-blue{:style => "position:absolute; width: 100px; height: 50px; top: 70%; left: 40%;"}
+                %a{href: "#{f.url}", target:"blank"}
+                  Read More
 
       %span.jssora13l{:style => "width: 40px; height: 50px; top: 123px; left: 30px;", :u => "arrowleft"}
       / Arrow Right

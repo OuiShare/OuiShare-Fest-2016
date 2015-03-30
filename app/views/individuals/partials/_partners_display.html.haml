@@ -7,27 +7,26 @@
 
 - if !partners.blank?
   - if important_partners_display
-    - partners.first(important_partners_count).each do |partner|
+    - partners.each do |partner|
       - array_buffer.push(partner)
-    - remain = important_partners_count % 6
-    - if remain > 0
+    - if important_partners_count > 0
       .row.centered
-        - array_buffer.first(remain).each do |partner|
+        - array_buffer.first(important_partners_count).each do |partner|
           - if partner.first_name == 'Orange'
             - special = "tooltip.orange"
           - if partner.first_name == 'La Poste'
             - special = "tooltip.laposte"
           - if partner.first_name == 'Castorama'
             - special = "tooltip.castorama"
-          - if remain == 1
+          - if important_partners_count == 1
             .col-lg-12
               %a{:href => partner.url, :target => "_blank", :class => "special_tooltip", :data => {'original-title' => "", 'placement' => 'right'}}
                 %img.img-responsive.display-inline{:alt => partner.first_name, :src => partner.attachment.url(:medium)}
-          - elsif remain == 2
+          - elsif important_partners_count == 2
             .col-lg-6
               %a{:href => partner.url, :target => "_blank", :class => "special_tooltip", :data => {'original-title' => "", 'placement' => 'right'}}
                 %img.img-responsive.display-inline{:alt => partner.first_name, :src => partner.attachment.url(:medium)}
-          - elsif remain == 3
+          - elsif important_partners_count == 3
             - if three_col == 3
               - placement = 'left'
             - else
