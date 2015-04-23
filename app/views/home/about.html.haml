@@ -1,34 +1,34 @@
 %section#slideshow-container#_about
   .banner
     %ul
-    
+
       / slide 1
       %li{"data-transition" => "fade"}
         %img{alt: "", src: "assets/slider/new_inspire.jpg", style: "background:#1abc9c"}/
         .caption.general_caption.pst_media12.lft{"data-easing" => "easeOutExpo", "data-end" => "7900", "data-endeasing" => "easeInBack", "data-endspeed" => "900", "data-speed" => "600", "data-start" => "800", "data-x" => "58", "data-y" => "250"}
           %h1{:style => "text-shadow: 2px 0px black"}
             Inspire
-      
+
       / slide 2
       %li{"data-transition" => "fade"}
         %img{alt: "", src: "assets/slider/new_cocreate.jpg", style: "background:#1abc9c"}/
         .caption.general_caption.pst_media14.lfl.ltl{"data-easing" => "easeOutBack", "data-end" => "5700", "data-endeasing" => "easeInBack", "data-endspeed" => "900", "data-speed" => "900", "data-start" => "100", "data-x" => "56", "data-y" => "250"}
           %h1{:style => "text-shadow: 2px 0px black"}
             Co-create
-      
+
       / slide 3
       %li{"data-transition" => "fade"}
         %img{alt: "", src: "assets/slider/new_connect.jpg", style: "background:#1abc9c"}/
         .caption.general_caption.pst_media12.lft{"data-easing" => "easeOutExpo", "data-end" => "7900", "data-endeasing" => "easeInBack", "data-endspeed" => "900", "data-speed" => "600", "data-start" => "800", "data-x" => "58", "data-y" => "250"}
           %h1{:style => "text-shadow: 2px 0px black"}
             Connect
-      
+
       / slide 4
       %li{"data-transition" => "fade"}
         %img{alt: "", src: "assets/slider/new_img4.jpg", style: "background:#e4e6e6"}/
         .caption.general_caption.pst_media14.lfl.ltl{"data-easing" => "easeOutBack", "data-end" => "5700", "data-endeasing" => "easeInBack", "data-endspeed" => "900", "data-speed" => "900", "data-start" => "100", "data-x" => "56", "data-y" => "250"}
 
-      
+
       %li{"data-transition" => "fade"}
         %img{alt: "", src: "assets/slider/new_img5.jpg", style: "background:#1abc9c"}/
         .caption.general_caption.pst_media12.lft{"data-easing" => "easeOutExpo", "data-end" => "7900", "data-endeasing" => "easeInBack", "data-endspeed" => "900", "data-speed" => "600", "data-start" => "800", "data-x" => "58", "data-y" => "250"}
@@ -50,7 +50,7 @@
           %p.white{:style => 'margin-top: 45px;'}
             = t('dynamic_translations.about.description')
           %br
-          
+
           %p.white
             = t('dynamic_translations.what_is_community.text1')
           %br
@@ -137,11 +137,11 @@
 / Zero Waste banner
 
 .become_partner#_zerowaste
-  .container 
+  .container
     .row.centered
       .col-md-5.col-md-offset-4
         .btn.btn-pink.become-partner-btn
-          %a{href: zero_waste_event_path}
+          %a{href: home_zero_waste_event_path}
             = t('dynamic_translations.zerowaste.btn_text')
 
 
@@ -156,8 +156,8 @@
       .col-md-6.col-md-offset-3{style:"position: relative"}
         /* I know it's weird, just a hack that allow to scale an iframe before bootstrap 3.2 */
         %img{style:"display:block;width:100%;height:auto", src:"http://placehold.it/16x9"}
-        %iframe{allowfullscreen: "", frameborder: "0", src: "//www.youtube.com/embed/3g1BpJc-6PM", style:"position:absolute;top:0;left:0;width:100%;height:100%"} 
-      
+        %iframe{allowfullscreen: "", frameborder: "0", src: "//www.youtube.com/embed/3g1BpJc-6PM", style:"position:absolute;top:0;left:0;width:100%;height:100%"}
+
 
     .row.centered
       %h3.ouishare_stencil
@@ -172,34 +172,34 @@
         .row{:style => "margin-top:50px;"}
           .col-md-12
             / .col-md-4
-            /   %a.btn.btn-large.btn-primary{href: "http://www.youtube.com/user/OuiShareTV", :target => "_blank", :style => "width: 170px;"} 
+            /   %a.btn.btn-large.btn-primary{href: "http://www.youtube.com/user/OuiShareTV", :target => "_blank", :style => "width: 170px;"}
             /     = t('dynamic_translations.highlight.btn_watch_2014_impressions')
             .col-md-6
-              %a.btn.btn-large.btn-primary{href: "http://www.youtube.com/user/OuiShareTV", :target => "_blank", :style => "width: 170px;"} 
+              %a.btn.btn-large.btn-primary{href: "http://www.youtube.com/user/OuiShareTV", :target => "_blank", :style => "width: 170px;"}
                 = t('dynamic_translations.highlight.btn_watch_2014_sessions')
             .col-md-6
-              %a.btn.btn-large.btn-primary{href: "http://ouisharefest.com/stories", :target => "_blank", :style => "width: 170px;"} 
+              %a.btn.btn-large.btn-primary{href: "http://ouisharefest.com/stories", :target => "_blank", :style => "width: 170px;"}
                 = t('dynamic_translations.highlight.btn_see_2014_stories')
-    
-    
+
+
 
 
 
     / .row.centered
     /   .col-md-9.span-centered.margin_25
-    /     %iframe{allowfullscreen: "", frameborder: "0", height: "315", src: "//www.youtube.com/embed/QiXmsACpfRY", width: "560"}   
-    / .row.centered       
+    /     %iframe{allowfullscreen: "", frameborder: "0", height: "315", src: "//www.youtube.com/embed/QiXmsACpfRY", width: "560"}
+    / .row.centered
     /   %p.white
     /     = t('dynamic_translations.highlight.description_2014')
 
     / .row.mb_20
     /   .col-md-2
     /   .col-md-4
-    /     %a.btn.btn-large.btn-primary{href: "http://www.youtube.com/user/OuiShareTV", :target => "_blank"} 
+    /     %a.btn.btn-large.btn-primary{href: "http://www.youtube.com/user/OuiShareTV", :target => "_blank"}
     /       = t('dynamic_translations.highlight.btn_watch_2014_sessions')
 
     /   .col-md-4
-    /     %a.btn.btn-large.btn-primary{href: "http://ouisharefest.com/stories", :target => "_blank"} 
+    /     %a.btn.btn-large.btn-primary{href: "http://ouisharefest.com/stories", :target => "_blank"}
     /       = t('dynamic_translations.highlight.btn_see_2014_stories')
 
 
@@ -247,7 +247,7 @@
 /       .container.round_fond
 /         %h4{:style => "font-size:18px;"}
 /           = t('dynamic_translations.location.description')
-/           / We look forward to welcoming you at the Cabaret Sauvage in northeastern Paris: a magical venue with a circus-like hall, located by the canal in the Parc de la Villette. 
+/           / We look forward to welcoming you at the Cabaret Sauvage in northeastern Paris: a magical venue with a circus-like hall, located by the canal in the Parc de la Villette.
 /       %br
 /       %br
 /       .col-md-6
@@ -356,7 +356,7 @@
 /                 = "“" + t('dynamic_translations.testimonials.michelbauwens') + "”"
 /           .label-press
 /             Michel Bauwens | founder | Peer-to-Peer Foundation
-        
+
 /       %img.quote-left-carousel{:src => '/assets/quote_left.png', :alt => 'quote left'}
 /       %img.quote-right-carousel{:src => '/assets/quote_left.png', :alt => 'quote right'}
 
@@ -369,7 +369,7 @@
 
 
 
-/ About OuiShare 
+/ About OuiShare
 #_ouishare.aboutouishare-section
   .container
     .row.centered
@@ -398,13 +398,13 @@
 /     .row.centered
 /       %h3.ouishare_stencil
 /         = t('dynamic_translations.about.ouishare_title')
-/       %br      
+/       %br
 /       %br
 /       .container.round_fond
 /         .row
 /           .col-xs-12.col-md-6.col-lg-6
 /             %p.justify
-              
+
 /               = t('dynamic_translations.about.ouishare_text')
 
 /             %p.centered
