@@ -233,7 +233,7 @@
 .tracks-block {
   border-top: 2px solid #E03E52;
   background: none;
-  min-height: 161px;
+  min-height: 100px;
   margin: 0px;
   padding: 10px;
 
@@ -353,6 +353,10 @@ p.centered:nth-child(4) > a:nth-child(2) > button:nth-child(1) {
 //   width: 120px;
 //   background-color: black;
 // }
+
+#_tracks > div > div:nth-child(2) > div > div > div > p {
+  color: #34495e;
+}
 
 hr.white {
   margin-top: 20px;
@@ -519,7 +523,7 @@ body > div.get-involved-section > div > div.row.centered > p {
   padding: 30px 50px;
   margin: 40px 100px 0px 0px;
 
-  a{    
+  a{
     color: #E03E51;
   }
 }
@@ -530,7 +534,7 @@ body > div.get-involved-section > div > div.row.centered > p {
   padding: 30px 50px;
   margin: 40px 100px 0px 0px;
 
-  a{    
+  a{
     color: #fff;
   }
 }
