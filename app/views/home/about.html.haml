@@ -70,7 +70,7 @@
           %br
           %p.topics.row.centered
             = image_tag "/assets/coeur-key-topic.png"
-    .third-section#_key_topics
+    .third-section
       .row.centered
         %h3.ouishare_stencil.white
           = t('dynamic_translations.topics.title')
@@ -140,8 +140,8 @@
   .container 
     .row.centered
       .col-md-5.col-md-offset-4
-        %a{href: zero_waste_event_path, :style => 'text-decoration:none;'}
-          .btn.btn-pink.become-partner-btn
+        .btn.btn-pink.become-partner-btn
+          %a{href: zero_waste_event_path}
             = t('dynamic_translations.zerowaste.btn_text')
 
 
