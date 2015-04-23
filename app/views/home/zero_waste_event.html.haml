@@ -1,0 +1,83 @@
+.blank_bg
+  .container
+    .row.centered.travel_information
+      %h3.ouishare_stencil
+        = t('dynamic_translations.zerowaste.title')
+      %hr.pink
+
+    .col-md-10.col-md-offset-1.col-lg-8.col-lg-offset-2
+      .row.travel_information
+        %h4
+          = t('dynamic_translations.zerowaste_what.title')
+        %p.text-center
+          = t('dynamic_translations.zerowaste_what.text1')
+        %p.text-center
+          = t('dynamic_translations.zerowaste_what.text2')
+
+      .row.travel_information
+        %h4
+          = t('dynamic_translations.zerowaste_why.title')
+        %p.text-center
+          = t('dynamic_translations.zerowaste_why.text1')
+        %p.text-center
+          = t('dynamic_translations.zerowaste_why.text2')
+
+      .row.travel_information
+        %h4
+          = t('dynamic_translations.zerowaste_examples.title')
+        %p.text-center
+          %b
+            = t('dynamic_translations.zerowaste_examples.1_subtitle')
+          %br
+          = t('dynamic_translations.zerowaste_examples.1_text')
+        %p.text-center
+          %b
+            = t('dynamic_translations.zerowaste_examples.2_subtitle')
+          %br
+          = t('dynamic_translations.zerowaste_examples.2_text')
+        %p.text-center
+          %b
+            = t('dynamic_translations.zerowaste_examples.3_subtitle')
+          %br
+          %a{href: "http://ouishare.net/projects/ouikit", target: "_blank"}
+            Ouikit
+          = t('dynamic_translations.zerowaste_examples.3_text')
+        %p.text-center
+          %b
+            = t('dynamic_translations.zerowaste_examples.4_subtitle')
+          %br
+          = t('dynamic_translations.zerowaste_examples.4_text')
+        %p.text-center
+          %b
+            = t('dynamic_translations.zerowaste_examples.5_subtitle')
+          %br
+          = t('dynamic_translations.zerowaste_examples.5_text')
+        %p.text-center
+          %b
+            = t('dynamic_translations.zerowaste_examples.6_subtitle')
+          %br
+          = t('dynamic_translations.zerowaste_examples.6_text')
+        %p.text-center
+          %b
+            = t('dynamic_translations.zerowaste_examples.text')
+
+      .row.travel_information
+        %h4
+          = t('dynamic_translations.zerowaste_help.title')
+        %p.text-center
+          = t('dynamic_translations.zerowaste_help.text')
+          %a{href: "mailto:flore@ouishare.net"}
+            = t('dynamic_translations.zerowaste_help.contact')
+
+      .row.travel_information
+        %p.text-center
+          %b
+            = t('dynamic_translations.zerowaste_more.title')
+
+.become_partner
+  .container 
+    .row.centered
+      .col-md-5.col-md-offset-4
+        .btn.btn-pink.become-partner-btn
+          %a{href: "#"}
+            = t('dynamic_translations.zerowaste_more.btn')

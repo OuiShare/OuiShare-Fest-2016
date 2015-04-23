@@ -24,6 +24,12 @@
               %a{href: "about#_about"}
                 = t('dynamic_translations.about.the_event')
             %li
+              %a{href: "about#_key_topics"}
+                = t('dynamic_translations.topics.title')
+            %li
+              %a{href: "about#_zerowaste"}
+                = t('dynamic_translations.zerowaste.title')
+            %li
               %a{href: "about#_highlights"}
                 = t('dynamic_translations.highlight.title')
             %li
@@ -104,9 +110,9 @@
             / %li
             /   %a{href: "program#_sharing_fair"}
             /     = t('dynamic_translations.sharing_fair.title')
-            / %li
-            /   %a{href: "program#_events"}
-            /     = t('dynamic_translations.program.satellite_events')
+            %li
+              %a{href: "program#_events"}
+                = t('dynamic_translations.program.satellite_events')
             %li
               %a{href: "program#_love_party"}
                 = t('dynamic_translations.love_party.title')
