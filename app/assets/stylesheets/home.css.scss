@@ -88,29 +88,6 @@
   }
 }
 
-.events-section:hover{
-  .events-container{
-    border-bottom: 1px solid #f9f9f9;
-    background: rgba(0, 0, 0, 0.15);
-    height: 85px;
-  }
-  .events-container:hover{
-    background: #E03E52;
-  }
-  .events-items:hover {
-    margin-bottom: 10px;
-    margin-left: 15px;
-    font-size: 18px;
-    text-align: left;
-    height: 40px;
-    color: #fff;
-    padding-top: 10px;
-    a{
-      color: white;
-    }
-  }
-}
-
 .event-block {
   a {
     color: #E03E52;
@@ -129,22 +106,16 @@
   }
 }
 
-#_events > div.container.events-section > div > div > div > div {
-  color: red;
+#_events > div.container.events-section > div > div > a > div > div {
   border-top: 2px solid #E03E52;
   min-height: 143px;
-  a:hover {
+}
+
+#_events > div.container.events-section > div > div > a > div > div:hover {
+  background-color: #E03E52;
+  h6 {
     color: white;
   }
-}
-
-
-.event-block:hover > p {
-  color: white;
-}
-
-#_events > div.container.events-section > div > div > div > div:hover {
-  background-color: #E03E52;
 }
 
 .tickets-section{
