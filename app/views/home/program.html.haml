@@ -26,78 +26,84 @@
         %br
     .row
       .col-md-10.col-md-offset-1
-        .col-md-12
-          .tracks-block
-            %h6
-              = t('dynamic_translations.track.collab_title')
-            %p
-              = t('dynamic_translations.track.collab_text')
-        .col-md-12
-          .tracks-block
-            %h6
-              = t('dynamic_translations.track.revolution_title')
-            %p
-              = t('dynamic_translations.track.revolution_text')
-        .col-md-12
-          .tracks-block
-            %h6
-              = t('dynamic_translations.track.spirit_title')
-            %p
-              = t('dynamic_translations.track.spirit_text')
-        .col-md-12
-          .tracks-block
-            %h6
-              = t('dynamic_translations.track.capital_title')
-            %p
-              = t('dynamic_translations.track.capital_text')
-        .col-md-12
-          .tracks-block
-            %h6
-              = t('dynamic_translations.track.legacy_title')
-            %p
-              = t('dynamic_translations.track.legacy_text')
-        .col-md-12
-          .tracks-block
-            %h6
-              = t('dynamic_translations.track.social_title')
-            %p
-              = t('dynamic_translations.track.social_text')
-        .col-md-12
-          .tracks-block
-            %h6
-              = t('dynamic_translations.track.myth_title')
-            %p
-              = t('dynamic_translations.track.myth_text')
-        .col-md-12
-          .tracks-block
-            %h6
-              = t('dynamic_translations.track.democracy_title')
-            %p
-              = t('dynamic_translations.track.democracy_text')
-        .col-md-12
-          .tracks-block
-            %h6
-              = t('dynamic_translations.track.robot_title')
-            %p
-              = t('dynamic_translations.track.robot_text')
-        .col-md-12
-          .tracks-block
-            %h6
-              = t('dynamic_translations.track.citizen_title')
-            %p
-              = t('dynamic_translations.track.citizen_text')
-        .col-md-12
-          .tracks-block
-            %h6
-              = t('dynamic_translations.track.sharing_title')
-            %p
-              = t('dynamic_translations.track.sharing_text')
-        .col-md-12
-          .tracks-block
-            %h6
-              = t('dynamic_translations.track.city_title')
-            %p
-              = t('dynamic_translations.track.city_text')
+        .row
+          .col-md-6
+            .tracks-block
+              %h6
+                = t('dynamic_translations.track.collab_title')
+              %p
+                = t('dynamic_translations.track.collab_text')
+          .col-md-6
+            .tracks-block
+              %h6
+                = t('dynamic_translations.track.revolution_title')
+              %p
+                = t('dynamic_translations.track.revolution_text')
+        .row
+          .col-md-6
+            .tracks-block
+              %h6
+                = t('dynamic_translations.track.spirit_title')
+              %p
+                = t('dynamic_translations.track.spirit_text')
+          .col-md-6
+            .tracks-block
+              %h6
+                = t('dynamic_translations.track.capital_title')
+              %p
+                = t('dynamic_translations.track.capital_text')
+        .row
+          .col-md-6
+            .tracks-block
+              %h6
+                = t('dynamic_translations.track.legacy_title')
+              %p
+                = t('dynamic_translations.track.legacy_text')
+          .col-md-6
+            .tracks-block
+              %h6
+                = t('dynamic_translations.track.social_title')
+              %p
+                = t('dynamic_translations.track.social_text')
+        .row
+          .col-md-6
+            .tracks-block
+              %h6
+                = t('dynamic_translations.track.myth_title')
+              %p
+                = t('dynamic_translations.track.myth_text')
+          .col-md-6
+            .tracks-block
+              %h6
+                = t('dynamic_translations.track.democracy_title')
+              %p
+                = t('dynamic_translations.track.democracy_text')
+        .row
+          .col-md-6
+            .tracks-block
+              %h6
+                = t('dynamic_translations.track.robot_title')
+              %p
+                = t('dynamic_translations.track.robot_text')
+          .col-md-6
+            .tracks-block
+              %h6
+                = t('dynamic_translations.track.citizen_title')
+              %p
+                = t('dynamic_translations.track.citizen_text')
+        .row
+          .col-md-6
+            .tracks-block
+              %h6
+                = t('dynamic_translations.track.sharing_title')
+              %p
+                = t('dynamic_translations.track.sharing_text')
+          .col-md-6
+            .tracks-block
+              %h6
+                = t('dynamic_translations.track.city_title')
+              %p
+                = t('dynamic_translations.track.city_text')
 
 
 
@@ -172,108 +178,192 @@
   /     %iframe{ :src => "https://mapsengine.google.com/map/embed?mid=zvpA9LZ7Vptw.k0O0o696Lyvk", :width => "100%", :height => "480", :style => "position: absolute; left: 0; bottom: 0"}
 
 
+  / .container.events-section
+  /   .row.centered
+  /     %h3.ouishare_stencil
+  /       / Directory of events
+  /     %ul.unstyled.events-list
+  /       .col-xs-12.col-sm-6.col-md-3.col-lg-3.events-container
+  /         %li.events-items
+  /           %a{:href => 'https://oscedays.org/#clients', :target => '_blank'}
+  /             OSCE days 15
+  /       .col-xs-12.col-sm-6.col-md-3.col-lg-3.events-container
+  /         %li.events-items
+
+  /       .col-xs-12.col-sm-6.col-md-3.col-lg-3.events-container
+  /         %li.events-items
+
+  /       .col-xs-12.col-sm-6.col-md-3.col-lg-3.events-container
+  /         %li.events-items
+  /           11.05 to 15.06
+
+  /       .col-xs-12.col-sm-6.col-md-3.col-lg-3.events-container
+  /         %li.events-items
+  /           %a{:href => 'http://camp.ouisharelabs.net/2015/', :target => '_blank'}
+  /             OuiShare Labs Camp
+  /       .col-xs-12.col-sm-6.col-md-3.col-lg-3.events-container
+  /         %li.events-items
+  /           Mozilla Paris
+  /       .col-xs-12.col-sm-6.col-md-3.col-lg-3.events-container
+  /         %li.events-items
+  /           16 Bis Boulevard Montmartre 75009 Paris
+  /       .col-xs-12.col-sm-6.col-md-3.col-lg-3.events-container
+  /         %li.events-items
+  /           18.05 to 19.05 9am - 6pm
+
+  /       .col-xs-12.col-sm-6.col-md-3.col-lg-3.events-container
+  /         %li.events-items
+  /           %a{:href => 'http://www.collegedesbernardins.fr/images/pdf/formation/2015-depliant_MDB.pdf'}
+  /             L’économie du partage mérite-t-elle son nom ?
+  /       .col-xs-12.col-sm-6.col-md-3.col-lg-3.events-container
+  /         %li.events-items
+  /           Collège des Bernardins
+  /       .col-xs-12.col-sm-6.col-md-3.col-lg-3.events-container
+  /         %li.events-items
+  /           20 rue de Poissy - 75005 Paris
+  /       .col-xs-12.col-sm-6.col-md-3.col-lg-3.events-container
+  /         %li.events-items
+  /           19.05 8pm - 9.45pm
+
+  /       .col-xs-12.col-sm-6.col-md-3.col-lg-3.events-container
+  /         %li.events-items
+  /           %a{:href => 'http://www.arts-et-metiers.net/musee/fini-la-propriete-vive-lusage'}
+  /             Rencontre débat : "Fini la propriété, vive l’usage !"
+  /       .col-xs-12.col-sm-6.col-md-3.col-lg-3.events-container
+  /         %li.events-items
+  /           Cnam : Musée des arts et métiers. Salle de conférences
+  /       .col-xs-12.col-sm-6.col-md-3.col-lg-3.events-container
+  /         %li.events-items
+  /           Musée des arts et métiers, 60 rue Réaumur, Paris 3e
+  /       .col-xs-12.col-sm-6.col-md-3.col-lg-3.events-container
+  /         %li.events-items
+  /           21.05 6.30pm - 8pm
+
+  /       .col-xs-12.col-sm-6.col-md-3.col-lg-3.events-container
+  /         %li.events-items
+  /           %a{:href => 'http://events.newschool.edu/event/earth_day_2015_the_remaking_of_making#.VS9zovmsXhK', :target => '_blank'}
+  /             Roundtable: The Remaking of Making
+  /       .col-xs-12.col-sm-6.col-md-3.col-lg-3.events-container
+  /         %li.events-items
+  /           Parsons Paris
+  /       .col-xs-12.col-sm-6.col-md-3.col-lg-3.events-container
+  /         %li.events-items
+  /           45 Rue Saint-Roch 75001 Paris
+  /       .col-xs-12.col-sm-6.col-md-3.col-lg-3.events-container
+  /         %li.events-items
+  /           22.05 6.30pm - 8pm
+
+  /       .col-xs-12.col-sm-6.col-md-3.col-lg-3.events-container
+  /         %li.events-items
+  /           %a{:href => 'https://www.facebook.com/events/1613389028892817/'}
+  /             Collaboration Camp
+  /       .col-xs-12.col-sm-6.col-md-3.col-lg-3.events-container
+  /         %li.events-items
+  /           TBC
+  /       .col-xs-12.col-sm-6.col-md-3.col-lg-3.events-container
+  /         %li.events-items
+  /           TBC
+  /       .col-xs-12.col-sm-6.col-md-3.col-lg-3.events-container
+  /         %li.events-items
+  /           23.05 to 26.05 at 5pm
+
+  /       .col-xs-12.col-sm-6.col-md-3.col-lg-3.events-container
+  /         %li.events-items
+  /           %a{:href => 'http://www.futurearchitecture.org/', :target => '_blank'}
+  /             Future Architecture Night
+  /       .col-xs-12.col-sm-6.col-md-3.col-lg-3.events-container
+  /         %li.events-items
+  /           Volumes Coworking
+  /       .col-xs-12.col-sm-6.col-md-3.col-lg-3.events-container
+  /         %li.events-items
+  /           78 rue Compans 75019 PARIS
+  /       .col-xs-12.col-sm-6.col-md-3.col-lg-3.events-container
+  /         %li.events-items
+  /           26.05 6.30pm - 10.30pm
+
   .container.events-section
-    .row.centered
-      %h3.ouishare_stencil
-        / Directory of events
-      %ul.unstyled.events-list
-        .col-xs-12.col-sm-6.col-md-3.col-lg-3.events-container
-          %li.events-items
-            %a{:href => 'https://oscedays.org/#clients', :target => '_blank'}
-              OSCE days 15
-        .col-xs-12.col-sm-6.col-md-3.col-lg-3.events-container
-          %li.events-items
-
-        .col-xs-12.col-sm-6.col-md-3.col-lg-3.events-container
-          %li.events-items
-
-        .col-xs-12.col-sm-6.col-md-3.col-lg-3.events-container
-          %li.events-items
-            11.05 to 15.06
-
-        .col-xs-12.col-sm-6.col-md-3.col-lg-3.events-container
-          %li.events-items
-            %a{:href => 'http://camp.ouisharelabs.net/2015/', :target => '_blank'}
-              OuiShare Labs Camp
-        .col-xs-12.col-sm-6.col-md-3.col-lg-3.events-container
-          %li.events-items
-            Mozilla Paris
-        .col-xs-12.col-sm-6.col-md-3.col-lg-3.events-container
-          %li.events-items
-            16 Bis Boulevard Montmartre 75009 Paris
-        .col-xs-12.col-sm-6.col-md-3.col-lg-3.events-container
-          %li.events-items
-            18.05 to 19.05 9am - 6pm
-
-        .col-xs-12.col-sm-6.col-md-3.col-lg-3.events-container
-          %li.events-items
-            %a{:href => 'http://www.collegedesbernardins.fr/images/pdf/formation/2015-depliant_MDB.pdf'}
-              L’économie du partage mérite-t-elle son nom ?
-        .col-xs-12.col-sm-6.col-md-3.col-lg-3.events-container
-          %li.events-items
-            Collège des Bernardins
-        .col-xs-12.col-sm-6.col-md-3.col-lg-3.events-container
-          %li.events-items
-            20 rue de Poissy - 75005 Paris
-        .col-xs-12.col-sm-6.col-md-3.col-lg-3.events-container
-          %li.events-items
-            19.05 8pm - 9.45pm
-
-        .col-xs-12.col-sm-6.col-md-3.col-lg-3.events-container
-          %li.events-items
-            %a{:href => 'http://www.arts-et-metiers.net/musee/fini-la-propriete-vive-lusage'}
-              Rencontre débat : "Fini la propriété, vive l’usage !"
-        .col-xs-12.col-sm-6.col-md-3.col-lg-3.events-container
-          %li.events-items
-            Cnam : Musée des arts et métiers. Salle de conférences
-        .col-xs-12.col-sm-6.col-md-3.col-lg-3.events-container
-          %li.events-items
-            Musée des arts et métiers, 60 rue Réaumur, Paris 3e
-        .col-xs-12.col-sm-6.col-md-3.col-lg-3.events-container
-          %li.events-items
-            21.05 6.30pm - 8pm
-
-        .col-xs-12.col-sm-6.col-md-3.col-lg-3.events-container
-          %li.events-items
-            %a{:href => 'http://events.newschool.edu/event/earth_day_2015_the_remaking_of_making#.VS9zovmsXhK', :target => '_blank'}
-              Roundtable: The Remaking of Making
-        .col-xs-12.col-sm-6.col-md-3.col-lg-3.events-container
-          %li.events-items
-            Parsons Paris
-        .col-xs-12.col-sm-6.col-md-3.col-lg-3.events-container
-          %li.events-items
-            45 Rue Saint-Roch 75001 Paris
-        .col-xs-12.col-sm-6.col-md-3.col-lg-3.events-container
-          %li.events-items
-            22.05 6.30pm - 8pm
-
-        .col-xs-12.col-sm-6.col-md-3.col-lg-3.events-container
-          %li.events-items
-            %a{:href => 'https://www.facebook.com/events/1613389028892817/'}
-              Collaboration Camp
-        .col-xs-12.col-sm-6.col-md-3.col-lg-3.events-container
-          %li.events-items
-            TBC
-        .col-xs-12.col-sm-6.col-md-3.col-lg-3.events-container
-          %li.events-items
-            TBC
-        .col-xs-12.col-sm-6.col-md-3.col-lg-3.events-container
-          %li.events-items
-            23.05 to 26.05 at 5pm
-
-        .col-xs-12.col-sm-6.col-md-3.col-lg-3.events-container
-          %li.events-items
-            %a{:href => 'http://www.futurearchitecture.org/', :target => '_blank'}
-              Future Architecture Night
-        .col-xs-12.col-sm-6.col-md-3.col-lg-3.events-container
-          %li.events-items
-            Volumes Coworking
-        .col-xs-12.col-sm-6.col-md-3.col-lg-3.events-container
-          %li.events-items
-            78 rue Compans 75019 PARIS
-        .col-xs-12.col-sm-6.col-md-3.col-lg-3.events-container
-          %li.events-items
-            26.05 6.30pm - 10.30pm
+    .row
+      .col-md-10.col-md-offset-1
+        .row
+          .col-md-12
+            .event-block
+              %h6
+                %a{:href => 'https://oscedays.org/#clients', :target => '_blank'}
+                  OSCE days 15
+              %p
+                11.05 to 15.06
+        .row
+          .col-md-12
+            .event-block
+              %h6
+                %a{:href => 'http://camp.ouisharelabs.net/2015/', :target => '_blank'}
+                  OuiShare Labs Camp
+              %p
+                Mozilla Paris
+              %p
+                16 Bis Boulevard Montmartre 75009 Paris
+              %p
+                18.05 to 19.05 9am - 6pm
+        .row
+          .col-md-12
+            .event-block
+              %h6
+                %a{:href => 'http://www.collegedesbernardins.fr/images/pdf/formation/2015-depliant_MDB.pdf'}
+                  L’économie du partage mérite-t-elle son nom ?
+              %p
+                Collège des Bernardins
+              %p
+                20 rue de Poissy - 75005 Paris
+              %p
+                19.05 8pm - 9.45pm
+        .row
+          .col-md-12
+            .event-block
+              %h6
+                %a{:href => 'http://www.arts-et-metiers.net/musee/fini-la-propriete-vive-lusage'}
+                  Rencontre débat : "Fini la propriété, vive l’usage !"
+              %p
+                Cnam : Musée des arts et métiers. Salle de conférences
+              %p
+                Musée des arts et métiers, 60 rue Réaumur, Paris 3e
+              %p
+                21.05 6.30pm - 8pm
+        .row
+          .col-md-12
+            .event-block
+              %h6
+                %a{:href => 'http://events.newschool.edu/event/earth_day_2015_the_remaking_of_making#.VS9zovmsXhK', :target => '_blank'}
+                  Roundtable: The Remaking of Making
+              %p
+                Parsons Paris
+              %p
+                45 Rue Saint-Roch 75001 Paris
+              %p
+                22.05 6.30pm - 8pm
+        .row
+          .col-md-12
+            .event-block
+              %h6
+                %a{:href => 'https://www.facebook.com/events/1613389028892817/'}
+                  Collaboration Camp
+              %p
+                TBC
+              %p
+                TBC
+              %p
+                23.05 to 26.05 at 5pm
+        .row
+          .col-md-12
+            .event-block
+              %h6
+                %a{:href => 'http://www.futurearchitecture.org/', :target => '_blank'}
+                  Future Architecture Night
+              %p
+                Volumes Coworking
+              %p
+                78 rue Compans 75019 PARIS
+              %p
+                26.05 6.30pm - 10.30pm
 
 
         / .col-xs-12.col-sm-6.col-md-3.col-lg-3.events-container
