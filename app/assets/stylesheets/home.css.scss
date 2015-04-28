@@ -71,22 +71,53 @@
     background: rgba(0, 0, 0, 0.15);
     height: 85px;
   }
-  .events-container:hover{
-    background: rgba(0, 0, 0, 0.5);
-  }
-  .events-items{
+  .events-items {
     margin-bottom: 10px;
     margin-left: 15px;
     font-size: 18px;
     text-align: left;
     height: 40px;
-    color: #fff;
+    color: #34495e;
     padding-top: 10px;
     a{
-      color: #0b0b6d;
+      color: #34495e;
+    }
+    li {
+      color: #34495e;
     }
   }
 }
+
+.event-block {
+  a {
+    color: #E03E52;
+  }
+  p {
+    color: #001E60;
+  }
+}
+
+.event-block:hover {
+  a {
+    color: white;
+  }
+  p {
+    color: white;
+  }
+}
+
+#_events > div.container.events-section > div > div > a > div > div {
+  border-top: 2px solid #E03E52;
+  min-height: 143px;
+}
+
+#_events > div.container.events-section > div > div > a > div > div:hover {
+  background-color: #E03E52;
+  h6 {
+    color: white;
+  }
+}
+
 .tickets-section{
   .tickets-font-color{
     color: #c5c5c5;
@@ -233,7 +264,7 @@
 .tracks-block {
   border-top: 2px solid #E03E52;
   background: none;
-  min-height: 100px;
+  min-height: 160px;
   margin: 0px;
   padding: 10px;
 
