@@ -8,7 +8,10 @@
     .col-md-10.col-md-offset-1.col-lg-8.col-lg-offset-2
       .row.travel_information
         %p.text-center
-          = t('dynamic_translations.zerowaste.descr')
+          %b
+            = t('dynamic_translations.zerowaste.descr')
+
+      .row.travel_information
         %h4
           = t('dynamic_translations.zerowaste_what.title')
         %p.text-center
@@ -71,7 +74,7 @@
           %a{href: "mailto:flore@ouishare.net"}
             = t('dynamic_translations.zerowaste_help.contact')
 
-      .row.centered
+      .row.centered{:style => "margin-top: 20px;"}
         %p.text-center
           %b
             = t('dynamic_translations.zerowaste_more.title')
@@ -80,7 +83,7 @@
             .btn.btn-pink.buy-tickets-btn
               = t('dynamic_translations.zerowaste_more.btn')
 
-      .row.centered
+      .row.centered{:style => "margin-top: 20px;"}
         .col-md-12
           %img{:src => '/assets/logos-zwevent.png', :alt => 'zero waste partners', :style => 'max-height:200px;'}
 
