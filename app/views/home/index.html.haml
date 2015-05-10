@@ -297,18 +297,30 @@
             .btn.btn-pink.get-involved-btn
               %a{href: "https://docs.google.com/forms/d/1_D9_jFoECa0B2qpMdiv-91QfyhSHlvKJ4RowIUsTZ4c/viewform"}
                 =t('dynamic_translations.get_involved.submit')
+          / .col-md-4
+          /   .title
+          /     =t('dynamic_translations.get_involved.contribute')
+          /   .btn.btn-pink.get-involved-btn
+          /     %a{href: "http://awards.ouishare.net/2015/applications/", target: "_blank"}
+          /       =t('dynamic_translations.get_involved_closed.submit')
           .col-md-4
             .title
-              =t('dynamic_translations.get_involved.contribute')
+              =t('dynamic_translations.awards.vote_txt')
             .btn.btn-pink.get-involved-btn
-              %a{href: "http://awards.ouishare.net/2015/applications/", target: "_blank"}
-                =t('dynamic_translations.get_involved_closed.submit')
+              %a{href: "http://awards.ouishare.net/2015/vote/", target: "_blank"}
+                =t('dynamic_translations.awards.vote_btn')
+          / .col-md-4
+          /   .title
+          /     =t('dynamic_translations.get_involved.idea_wall')
+          /   .btn.btn-pink.get-involved-btn
+          /     %a{href: "mailto:partners@ouishare.net", :target => "_blank"}
+          /       = t('dynamic_translations.get_involved.idea_wall_button')
           .col-md-4
             .title
-              =t('dynamic_translations.get_involved.idea_wall')
+              =t('dynamic_translations.pitch_startup.txt')
             .btn.btn-pink.get-involved-btn
-              %a{href: "mailto:partners@ouishare.net", :target => "_blank"}
-                = t('dynamic_translations.get_involved.idea_wall_button')
+              %a{href: "https://docs.google.com/forms/d/1tMbjJHx8SdZb-hp7jm8Q5SfJwh5NEJc2KjwBw35cVhg/viewform", :target => "_blank"}
+                = t('dynamic_translations.pitch_startup.btn')
 
 
 .ouishare-news-section
