@@ -166,6 +166,13 @@
       .col-md-8.col-md-offset-2
         %p.main-section-paragraphes.centered
           = t('dynamic_translations.satellite_events.text')
+      .row.centered
+        .col-md-10.col-md-offset-1
+          .col-md-12
+            .btn.btn-pink{:style => 'margin: 40px 0px 0px 0px;'}
+              %a{:href => '/satellite_events', :target => '_blank'}
+                = t('dynamic_translations.satellite_events.read_more')
+
   %br
   %br
 
@@ -216,13 +223,10 @@
   /           18.05 to 19.05 9am - 6pm
 
 
-  .container.events-section
-    .row
-      .col-md-10.col-md-offset-1
-        %a#sched-embed{:href => "http://ouisharefestsatelliteevents2015.sched.org/"}
-          schedule
-        %script{:type => "text/javascript", :src => "http://ouisharefestsatelliteevents2015.sched.org/js/embed.js"}
-  
+  / .container.events-section
+  /   .row
+
+  /     .col-md-10.col-md-offset-1
   /       %a{:href => 'https://oscedays.org/#clients', :target => '_blank'}
   /         .row
   /           .col-md-12
@@ -346,11 +350,9 @@
         .row
           .col-md-10.col-md-offset-1
             .col-md-12
-              .btn.btn-pink{:style => 'margin: 40px 0px 0px 0px;'}
+              .btn.btn-pink{:style => 'margin: 0px 0px 40px 0px;'}
                 %a{:href => 'http://www.digitick.com/ouishare-love-3-soiree-cabaret-sauvage-paris-22-mai-2015-css4-digitick-pg101-ri3193590.html', :target => '_blank'}
                   = t('dynamic_translations.love_party.see_lineup')
-              %br
-              %br
             .col-md-12
               %img.img-responsive{:src => '/assets/loveparty2015.png', :alt => 'love party picture', :style => 'width:400px;margin:auto;'}
 
