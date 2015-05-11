@@ -166,8 +166,15 @@
       .col-md-8.col-md-offset-2
         %p.main-section-paragraphes.centered
           = t('dynamic_translations.satellite_events.text')
-  %br
-  %br
+      .row.centered
+        .col-md-10.col-md-offset-1
+          .col-md-12
+            .btn.btn-pink{:style => 'margin: 40px 0px 0px 0px;'}
+              %a{:href => '/satellite_events', :target => '_blank'}
+                = t('dynamic_translations.satellite_events.read_more')
+
+  / %br
+  / %br
 
   /     .row
   /       %a{:href => 'https://docs.google.com/forms/d/1xwFAL9C5AHZgBAeC6tGD6_eX0Ca1u00ZawZEueHczII/viewform', :target => '_blank'}
@@ -216,118 +223,116 @@
   /           18.05 to 19.05 9am - 6pm
 
 
-  .container.events-section
-    .row
+  / .container.events-section
+  /   .row
 
-      .col-md-10.col-md-offset-1
-        %a{:href => 'https://oscedays.org/#clients', :target => '_blank'}
-          .row
-            .col-md-12
-              .event-block
-                %h6
-                  OSCE days 15
-                %p
-                  11.05 to 15.06
-        %a{:href => 'http://camp.ouisharelabs.net/2015/', :target => '_blank'}
-          .row
-            .col-md-12
-              .event-block
-                %h6
-                  OuiShare Labs Camp
-                %p
-                  18.05 to 19.05 9am - 6pm
-                %p
-                  Mozilla Paris
-                %p
-                  16 Bis Boulevard Montmartre 75009 Paris
-        %a{:href => 'http://www.collegedesbernardins.fr/images/pdf/formation/2015-depliant_MDB.pdf'}
-          .row
-            .col-md-12
-              .event-block
-                %h6
-                  L’économie du partage mérite-t-elle son nom ?
-                %p
-                  19.05 8pm - 9.45pm
-                %p
-                  Collège des Bernardins
-                %p
-                  20 rue de Poissy - 75005 Paris
-        %a{:href => 'https://www.couchsurfing.com/events/drinks-at-ouishare-w-ceo-of-couchsurfing', :target => '_blank'}
-          .row
-            .col-md-12
-              .event-block
-                %h6
-                  Drinks at Ouishare w/CEO of Couchsurfing
-                %p
-                  21.05 6pm - 7.30pm
-                %p
-                  Restaurant Les Moulins
-                %p
-                  78 rue Compans 75019 PARIS
-        %a{:href => 'http://www.arts-et-metiers.net/musee/fini-la-propriete-vive-lusage'}
-          .row
-            .col-md-12
-              .event-block
-                %h6
-                  Rencontre débat : "Fini la propriété, vive l’usage !"
-                %p
-                  21.05 6.30pm - 8pm
-                %p
-                  Cnam : Musée des arts et métiers. Salle de conférences
-                %p
-                  Musée des arts et métiers, 60 rue Réaumur, Paris 3e
-        %a{:href => 'http://events.newschool.edu/event/earth_day_2015_the_remaking_of_making#.VS9zovmsXhK', :target => '_blank'}
-          .row
-            .col-md-12
-              .event-block
-                %h6
-                  Roundtable: The Remaking of Making
-                %p
-                  22.05 6.30pm - 8pm
-                %p
-                  Parsons Paris
-                %p
-                  45 Rue Saint-Roch 75001 Paris
-        %a{:href => 'http://www.digitick.com/ouishare-love-3-soiree-cabaret-sauvage-paris-22-mai-2015-css4-digitick-pg101-ri3193590.html', :target => '_blank'}
-          .row
-            .col-md-12
-              .event-block
-                %h6
-                  OuiShare Love Party
-                %p
-                  22.05 11pm - 5am
-                %p
-                  Cabaret Sauvage
-                %p
-                  Parc de la Villette, 211 Avenue Jean Jaures, Paris
-        %a{:href => 'https://www.facebook.com/events/1613389028892817/'}
-          .row
-            .col-md-12
-              .event-block
-                %h6
-                  Collaboration Camp
-                %p
-                  23.05 to 26.05 at 5pm
-                %p
-                  TBC
-                %p
-                  TBC
-        %a{:href => 'http://www.futurearchitecture.org/', :target => '_blank'}
-          .row
-            .col-md-12
-              .event-block
-                %h6
-                  Future Architecture Night
-                %p
-                  26.05 6.30pm - 10.30pm
-                %p
-                  Volumes Coworking
-                %p
-                  78 rue Compans 75019 PARIS
+  /     .col-md-10.col-md-offset-1
+  /       %a{:href => 'https://oscedays.org/#clients', :target => '_blank'}
+  /         .row
+  /           .col-md-12
+  /             .event-block
+  /               %h6
+  /                 OSCE days 15
+  /               %p
+  /                 11.05 to 15.06
+  /       %a{:href => 'http://camp.ouisharelabs.net/2015/', :target => '_blank'}
+  /         .row
+  /           .col-md-12
+  /             .event-block
+  /               %h6
+  /                 OuiShare Labs Camp
+  /               %p
+  /                 18.05 to 19.05 9am - 6pm
+  /               %p
+  /                 Mozilla Paris
+  /               %p
+  /                 16 Bis Boulevard Montmartre 75009 Paris
+  /       %a{:href => 'http://www.collegedesbernardins.fr/images/pdf/formation/2015-depliant_MDB.pdf'}
+  /         .row
+  /           .col-md-12
+  /             .event-block
+  /               %h6
+  /                 L’économie du partage mérite-t-elle son nom ?
+  /               %p
+  /                 19.05 8pm - 9.45pm
+  /               %p
+  /                 Collège des Bernardins
+  /               %p
+  /                 20 rue de Poissy - 75005 Paris
+  /       %a{:href => 'https://www.couchsurfing.com/events/drinks-at-ouishare-w-ceo-of-couchsurfing', :target => '_blank'}
+  /         .row
+  /           .col-md-12
+  /             .event-block
+  /               %h6
+  /                 Drinks at Ouishare w/CEO of Couchsurfing
+  /               %p
+  /                 21.05 6pm - 7.30pm
+  /               %p
+  /                 Restaurant Les Moulins
+  /               %p
+  /                 78 rue Compans 75019 PARIS
+  /       %a{:href => 'http://www.arts-et-metiers.net/musee/fini-la-propriete-vive-lusage'}
+  /         .row
+  /           .col-md-12
+  /             .event-block
+  /               %h6
+  /                 Rencontre débat : "Fini la propriété, vive l’usage !"
+  /               %p
+  /                 21.05 6.30pm - 8pm
+  /               %p
+  /                 Cnam : Musée des arts et métiers. Salle de conférences
+  /               %p
+  /                 Musée des arts et métiers, 60 rue Réaumur, Paris 3e
+  /       %a{:href => 'http://events.newschool.edu/event/earth_day_2015_the_remaking_of_making#.VS9zovmsXhK', :target => '_blank'}
+  /         .row
+  /           .col-md-12
+  /             .event-block
+  /               %h6
+  /                 Roundtable: The Remaking of Making
+  /               %p
+  /                 22.05 6.30pm - 8pm
+  /               %p
+  /                 Parsons Paris
+  /               %p
+  /                 45 Rue Saint-Roch 75001 Paris
+  /       %a{:href => 'http://www.digitick.com/ouishare-love-3-soiree-cabaret-sauvage-paris-22-mai-2015-css4-digitick-pg101-ri3193590.html', :target => '_blank'}
+  /         .row
+  /           .col-md-12
+  /             .event-block
+  /               %h6
+  /                 OuiShare Love Party
+  /               %p
+  /                 22.05 11pm - 5am
+  /               %p
+  /                 Cabaret Sauvage
+  /               %p
+  /                 Parc de la Villette, 211 Avenue Jean Jaures, Paris
+  /       %a{:href => 'https://www.facebook.com/events/1613389028892817/'}
+  /         .row
+  /           .col-md-12
+  /             .event-block
+  /               %h6
+  /                 Collaboration Camp
+  /               %p
+  /                 23.05 to 26.05 at 5pm
+  /               %p
+  /                 TBC
+  /               %p
+  /                 TBC
+  /       %a{:href => 'http://www.futurearchitecture.org/', :target => '_blank'}
+  /         .row
+  /           .col-md-12
+  /             .event-block
+  /               %h6
+  /                 Future Architecture Night
+  /               %p
+  /                 26.05 6.30pm - 10.30pm
+  /               %p
+  /                 Volumes Coworking
+  /               %p
+  /                 78 rue Compans 75019 PARIS
 
-
-
-/ Love Party
+  / Love Party
 #_love_party.aboutouishare-section
   .container
     .row.centered
@@ -345,11 +350,12 @@
         .row
           .col-md-10.col-md-offset-1
             .col-md-12
-              %img.img-responsive{:src => '/assets/loveparty2015.png', :alt => 'love party picture', :style => 'width:400px;margin:auto;'}
-            .col-md-12
-              .btn.btn-pink{:style => 'margin: 40px 0px 0px 0px;'}
+              .btn.btn-pink{:style => 'margin: 0px 0px 40px 0px;'}
                 %a{:href => 'http://www.digitick.com/ouishare-love-3-soiree-cabaret-sauvage-paris-22-mai-2015-css4-digitick-pg101-ri3193590.html', :target => '_blank'}
                   = t('dynamic_translations.love_party.see_lineup')
+            .col-md-12
+              %img.img-responsive{:src => '/assets/loveparty2015.png', :alt => 'love party picture', :style => 'width:400px;margin:auto;'}
+
 
 / .triangle_bg#_love_party
 /   .container

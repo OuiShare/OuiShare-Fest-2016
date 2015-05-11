@@ -1,0 +1,21 @@
+.blank_bg
+  .container
+    .row.centered
+      %h3.ouishare_stencil.pink
+        = t('dynamic_translations.satellite_events.title')
+      %hr.pink
+    %br
+    %br
+    .main-section
+      .col-md-8.col-md-offset-2
+        %p.main-section-paragraphes.centered
+          = t('dynamic_translations.satellite_events.text')
+  %br
+  %br
+
+  .container.events-section
+    .row
+      .col-md-10.col-md-offset-1
+        %a#sched-embed{:href => "http://ouisharefestsatelliteevents2015.sched.org/"}
+          schedule
+        %script{:type => "text/javascript", :src => "http://ouisharefestsatelliteevents2015.sched.org/js/embed.js"}
