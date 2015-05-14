@@ -275,52 +275,93 @@
           %a{:href => 'mailto:partners@ouishare.net'}
             Become a partner
 
-/ Get Involved
 
-.get-involved-section
+
+
+/ Petit Fest 
+#_petit_fest.aboutouishare-section{style: "margin-top:40px;"}
   .container
     .row.centered
       %h3.ouishare_stencil
-        = t('dynamic_translations.get_involved.title')
-      %hr.pink
+        = t('dynamic_translations.petit_fest.title')
+      %hr.blue
       %br
-      %p
-        = t('dynamic_translations.get_involved.description')
-    %br
+      %br
+      .container.round_fond
+        .row
+          .col-md-8.col-md-offset-2
+            %p
+              %b
+                = t('dynamic_translations.petit_fest.subtitle')
+            %p
+              = t('dynamic_translations.petit_fest.text1')
+              %a{:href => '#_love_party'}
+                = t('dynamic_translations.love_party.title')
+              = t('dynamic_translations.petit_fest.text2')
+            %p
+              = t('dynamic_translations.petit_fest.text3')
 
-    .centered.get-involved-options-choice
-      .span-centered
-        .col-md-10.col-md-offset-1.col-lg-8.col-lg-offset-2
-          .col-md-4
-            .title
-              = t('dynamic_translations.get_involved.call_for_proposal')
-            .btn.btn-pink.get-involved-btn
-              %a{href: "https://docs.google.com/forms/d/1_D9_jFoECa0B2qpMdiv-91QfyhSHlvKJ4RowIUsTZ4c/viewform"}
-                =t('dynamic_translations.get_involved.submit')
-          / .col-md-4
-          /   .title
-          /     =t('dynamic_translations.get_involved.contribute')
-          /   .btn.btn-pink.get-involved-btn
-          /     %a{href: "http://awards.ouishare.net/2015/applications/", target: "_blank"}
-          /       =t('dynamic_translations.get_involved_closed.submit')
-          .col-md-4
-            .title
-              =t('dynamic_translations.awards.vote_txt')
-            .btn.btn-pink.get-involved-btn
-              %a{href: "http://awards.ouishare.net/2015/vote/", target: "_blank"}
-                =t('dynamic_translations.awards.vote_btn')
-          / .col-md-4
-          /   .title
-          /     =t('dynamic_translations.get_involved.idea_wall')
-          /   .btn.btn-pink.get-involved-btn
-          /     %a{href: "mailto:partners@ouishare.net", :target => "_blank"}
-          /       = t('dynamic_translations.get_involved.idea_wall_button')
-          .col-md-4
-            .title
-              =t('dynamic_translations.pitch_startup.txt')
-            .btn.btn-pink.get-involved-btn
-              %a{href: "https://docs.google.com/forms/d/1tMbjJHx8SdZb-hp7jm8Q5SfJwh5NEJc2KjwBw35cVhg/viewform", :target => "_blank"}
-                = t('dynamic_translations.pitch_startup.btn')
+        .row
+          .col-md-10.col-md-offset-1
+            .col-md-12
+              .btn.btn-pink{:style => 'margin: 0px 0px 40px 0px;'}
+                %a{:href => '/freelancers'}
+                  = t('dynamic_translations.petit_fest.get_ticket')
+              .btn.btn-pink{:style => 'margin: 0px 0px 40px 0px;'}
+                %a{:href => '/assets/petit_fest_2015.png'}
+                  = t('dynamic_translations.petit_fest.see_program')
+            .col-md-12
+              %a{:href => '/assets/petit_fest_2015.png'}
+                %img.img-responsive{:src => '/assets/petit_fest_crop.png', :alt => 'Petit Fest program', :style => 'margin:auto;'}
+
+
+
+/ Get Involved
+
+/ .get-involved-section
+/   .container
+/     .row.centered
+/       %h3.ouishare_stencil
+/         = t('dynamic_translations.get_involved.title')
+/       %hr.pink
+/       %br
+/       %p
+/         = t('dynamic_translations.get_involved.description')
+/     %br
+
+/     .centered.get-involved-options-choice
+/       .span-centered
+/         .col-md-10.col-md-offset-1.col-lg-8.col-lg-offset-2
+/           .col-md-4
+/             .title
+/               = t('dynamic_translations.get_involved.call_for_proposal')
+/             .btn.btn-pink.get-involved-btn
+/               %a{href: "https://docs.google.com/forms/d/1_D9_jFoECa0B2qpMdiv-91QfyhSHlvKJ4RowIUsTZ4c/viewform"}
+/                 =t('dynamic_translations.get_involved.submit')
+/           / .col-md-4
+/           /   .title
+/           /     =t('dynamic_translations.get_involved.contribute')
+/           /   .btn.btn-pink.get-involved-btn
+/           /     %a{href: "http://awards.ouishare.net/2015/applications/", target: "_blank"}
+/           /       =t('dynamic_translations.get_involved_closed.submit')
+/           .col-md-4
+/             .title
+/               =t('dynamic_translations.awards.vote_txt')
+/             .btn.btn-pink.get-involved-btn
+/               %a{href: "http://awards.ouishare.net/2015/vote/", target: "_blank"}
+/                 =t('dynamic_translations.awards.vote_btn')
+/           / .col-md-4
+/           /   .title
+/           /     =t('dynamic_translations.get_involved.idea_wall')
+/           /   .btn.btn-pink.get-involved-btn
+/           /     %a{href: "mailto:partners@ouishare.net", :target => "_blank"}
+/           /       = t('dynamic_translations.get_involved.idea_wall_button')
+/           .col-md-4
+/             .title
+/               =t('dynamic_translations.pitch_startup.txt')
+/             .btn.btn-pink.get-involved-btn
+/               %a{href: "https://docs.google.com/forms/d/1tMbjJHx8SdZb-hp7jm8Q5SfJwh5NEJc2KjwBw35cVhg/viewform", :target => "_blank"}
+/                 = t('dynamic_translations.pitch_startup.btn')
 
 
 .ouishare-news-section

@@ -151,6 +151,42 @@
 /     .col-xs-12.col-md-6.col-lg-6
 /       %img{:src => '/assets/sharing_fair.png', :alt => 'sharing fair picture', :style => 'width: 560px;'}
 
+/ Petit Fest 
+#_petit_fest.aboutouishare-section
+  .container
+    .row.centered
+      %h3.ouishare_stencil
+        = t('dynamic_translations.petit_fest.title')
+      %hr.blue
+      %br
+      %br
+      .container.round_fond
+        .row
+          .col-md-8.col-md-offset-2
+            %p
+              %b
+                = t('dynamic_translations.petit_fest.subtitle')
+            %p
+              = t('dynamic_translations.petit_fest.text1')
+              %a{:href => '#_love_party'}
+                = t('dynamic_translations.love_party.title')
+              = t('dynamic_translations.petit_fest.text2')
+            %p
+              = t('dynamic_translations.petit_fest.text3')
+
+        .row
+          .col-md-10.col-md-offset-1
+            .col-md-12
+              .btn.btn-pink{:style => 'margin: 0px 0px 40px 0px;'}
+                %a{:href => '/freelancers'}
+                  = t('dynamic_translations.petit_fest.get_ticket')
+              .btn.btn-pink{:style => 'margin: 0px 0px 40px 0px;'}
+                %a{:href => '/assets/petit_fest_2015.png'}
+                  = t('dynamic_translations.petit_fest.see_program')
+            .col-md-12
+              %a{:href => '/assets/petit_fest_2015.png'}
+                %img.img-responsive{:src => '/assets/petit_fest_crop.png', :alt => 'Petit Fest program', :style => 'margin:auto;'}
+
 
 / Satellite events
 
