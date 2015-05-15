@@ -1,4 +1,5 @@
 class Magazine < ActiveRecord::Base
+	require 'feedjira'
   attr_accessible :content, :guid, :name, :published_at, :tags, :url
 
   def self.fetch_last_posts
