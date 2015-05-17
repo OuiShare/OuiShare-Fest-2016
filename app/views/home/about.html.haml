@@ -54,17 +54,17 @@
           %p.white
             = t('dynamic_translations.what_is_community.text1')
           %br
-          %p.white
-            = t('dynamic_translations.what_is_community.text2')
-          %br
-          %p.white{:style =>"font-weight:bold;"}
-            = t('dynamic_translations.what_is_community.text3')
-          %br
-          %p.white
-            = t('dynamic_translations.what_is_community.text4')
-          %br
-          %p.white
-            = t('dynamic_translations.what_is_community.text5')
+          / %p.white
+          /   = t('dynamic_translations.what_is_community.text2')
+          / %br
+          / %p.white{:style =>"font-weight:bold;"}
+          /   = t('dynamic_translations.what_is_community.text3')
+          / %br
+          / %p.white
+          /   = t('dynamic_translations.what_is_community.text4')
+          / %br
+          / %p.white
+          /   = t('dynamic_translations.what_is_community.text5')
           %br
           %br
           %br
@@ -145,13 +145,9 @@
             = t('dynamic_translations.zerowaste.btn_text')
 
 
-/ Highlights from 2014
-
-
-
+/ Highlights from 2015
 .blank_bg#_highlights
   .container
-
     .row.centered
       .col-md-6.col-md-offset-3{style:"position: relative"}
         /* I know it's weird, just a hack that allow to scale an iframe before bootstrap 3.2 */
@@ -161,7 +157,7 @@
 
     .row.centered
       %h3.ouishare_stencil
-        = t('dynamic_translations.highlight.title')
+        = t('dynamic_translations.highlight.watch_2015_sessions')
       %hr.pink
 
     .row.centered
@@ -171,70 +167,41 @@
             = t('dynamic_translations.highlight.description_2014')
         .row{:style => "margin-top:50px;"}
           .col-md-12
-            / .col-md-4
-            /   %a.btn.btn-large.btn-primary{href: "http://www.youtube.com/user/OuiShareTV", :target => "_blank", :style => "width: 170px;"}
-            /     = t('dynamic_translations.highlight.btn_watch_2014_impressions')
-            .col-md-6
+            .col-md-6.col-md-offset-3
               %a.btn.btn-large.btn-primary{href: "http://www.youtube.com/user/OuiShareTV", :target => "_blank", :style => "width: 170px;"}
-                = t('dynamic_translations.highlight.btn_watch_2014_sessions')
-            .col-md-6
-              %a.btn.btn-large.btn-primary{href: "http://ouisharefest.com/stories", :target => "_blank", :style => "width: 170px;"}
-                = t('dynamic_translations.highlight.btn_see_2014_stories')
-
-
-
-
-
-    / .row.centered
-    /   .col-md-9.span-centered.margin_25
-    /     %iframe{allowfullscreen: "", frameborder: "0", height: "315", src: "//www.youtube.com/embed/QiXmsACpfRY", width: "560"}
-    / .row.centered
-    /   %p.white
-    /     = t('dynamic_translations.highlight.description_2014')
-
-    / .row.mb_20
-    /   .col-md-2
-    /   .col-md-4
-    /     %a.btn.btn-large.btn-primary{href: "http://www.youtube.com/user/OuiShareTV", :target => "_blank"}
-    /       = t('dynamic_translations.highlight.btn_watch_2014_sessions')
-
-    /   .col-md-4
-    /     %a.btn.btn-large.btn-primary{href: "http://ouisharefest.com/stories", :target => "_blank"}
-    /       = t('dynamic_translations.highlight.btn_see_2014_stories')
-
+                = t('dynamic_translations.highlight.watch_the_sessions')
 
 
 / OSFest14 report
+/ #_report.aboutouishare-section{:style => "padding-top: 100px;"}
+/   .container
+/     .row.centered
+/       %h3.ouishare_stencil
+/         = t('dynamic_translations.report.2014_title')
+/       %hr.blue
+/       %br
+/       %br
+/       .container.round_fond
+/         .row
+/           .col-md-8.col-md-offset-2
+/             %p
+/               = t('dynamic_translations.report.2014_description')
 
-#_report.aboutouishare-section{:style => "padding-top: 100px;"}
-  .container
-    .row.centered
-      %h3.ouishare_stencil
-        = t('dynamic_translations.report.2014_title')
-      %hr.blue
-      %br
-      %br
-      .container.round_fond
-        .row
-          .col-md-8.col-md-offset-2
-            %p
-              = t('dynamic_translations.report.2014_description')
-
-      .row
-        .col-md-12.col-lg-8.col-lg-offset-2
-          .col-sm-12.col-md-6
-            %a{:href => 'http://bit.ly/OuiShareFest14_Report', :target => '_blank'}
-              %img.img-responsive{:src => '/assets/osf_2014_report.jpg', :alt => 'OuiShare Fest 2014 Report', style:"margin:auto"}
-          .col-sm-12.col-md-6
-            %p.centered
-              .col-md-12
-                .btn.btn-pink{:style => 'width: 280px; margin: 60px 0px 40px 0px;'}
-                  %a{:href => 'http://bit.ly/OuiShareFest14_Report', :target => '_blank'}
-                    = t('dynamic_translations.report.link')
-              .col-md-12
-                .btn.btn-pink{:style => 'width: 280px;'}
-                  %a{:href => 'http://2014.ouisharefest.com', :target => '_blank'}
-                    = t('dynamic_translations.report.old_site')
+/       .row
+/         .col-md-12.col-lg-8.col-lg-offset-2
+/           .col-sm-12.col-md-6
+/             %a{:href => 'http://bit.ly/OuiShareFest14_Report', :target => '_blank'}
+/               %img.img-responsive{:src => '/assets/osf_2014_report.jpg', :alt => 'OuiShare Fest 2014 Report', style:"margin:auto"}
+/           .col-sm-12.col-md-6
+/             %p.centered
+/               .col-md-12
+/                 .btn.btn-pink{:style => 'width: 280px; margin: 60px 0px 40px 0px;'}
+/                   %a{:href => 'http://bit.ly/OuiShareFest14_Report', :target => '_blank'}
+/                     = t('dynamic_translations.report.link')
+/               .col-md-12
+/                 .btn.btn-pink{:style => 'width: 280px;'}
+/                   %a{:href => 'http://2014.ouisharefest.com', :target => '_blank'}
+/                     = t('dynamic_translations.report.old_site')
 
 / #location.triangle_bg#_about_location
 /   .container
@@ -323,51 +290,6 @@
         &rsaquo;
 
 
-/ Testimonials
-
-/ #testimonial.yellow_bg#_about_testimonials
-/   .container
-/     .row.centered
-/         = t('dynamic_translations.testimonials.title')
-/     %br
-/     %br
-/     #testimonialCarousel.carousel.slide.col-xs-12.col-md-offset-1.col-lg-offset-2.col-md-10.col-lg-8{ 'data-ride' => "carousel"}
-
-/Wrapper for slides
-/       .carousel-inner
-/         .item.active
-/           .press-content
-/             .press-text
-/               %h3.naiv
-/                 = "“" + t('dynamic_translations.testimonials.hansschoenburg') + "”"
-/           .label-press
-/             Hans Schoenburg | web developer | Yerdle
-/         .item
-/           .press-content
-/             .press-text
-/               %h3.naiv
-/                 = "“" + t('dynamic_translations.testimonials.albertobandolini') + "”"
-/           .label-press
-/             Alberto Bandolini | software entrepreneur
-/         .item
-/           .press-content
-/             .press-text
-/               %h3.naiv
-/                 = "“" + t('dynamic_translations.testimonials.michelbauwens') + "”"
-/           .label-press
-/             Michel Bauwens | founder | Peer-to-Peer Foundation
-
-/       %img.quote-left-carousel{:src => '/assets/quote_left.png', :alt => 'quote left'}
-/       %img.quote-right-carousel{:src => '/assets/quote_left.png', :alt => 'quote right'}
-
-/ Controls
-/       %a.left.carousel-control{:href => "#testimonialCarousel", 'data-slide' => "prev"}
-/         &lsaquo;
-
-/       %a.right.carousel-control{:href => "#testimonialCarousel", 'data-slide' => "next" }
-/         &rsaquo;
-
-
 
 / About OuiShare
 #_ouishare.aboutouishare-section
@@ -392,29 +314,4 @@
               .btn.btn-pink{:style => 'margin: 40px 0px 0px 0px;'}
                 %a{:href => 'http://ouishare.net/en/users/sign_up', :target => '_blank'}
                   = t('dynamic_translations.about.ouishare_btn')
-
-/ #_ouishare.blank_bg
-/   .container
-/     .row.centered
-/       %h3.ouishare_stencil
-/         = t('dynamic_translations.about.ouishare_title')
-/       %br
-/       %br
-/       .container.round_fond
-/         .row
-/           .col-xs-12.col-md-6.col-lg-6
-/             %p.justify
-
-/               = t('dynamic_translations.about.ouishare_text')
-
-/             %p.centered
-/               %br
-/               %a{:href => 'http://ouishare.net/en/users/sign_up', :target => '_blank'}
-/                 %button.btn.btn-embossed.btn-primary
-/                   = t('dynamic_translations.about.ouishare_btn')
-
-/           .col-xs-12.col-md-6.col-lg-6
-/             %img{:src => '/assets/ouishare-400.png', :alt => 'OuiShare logo'}
-
-
 

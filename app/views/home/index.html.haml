@@ -41,17 +41,17 @@
           %p.white
             = t('dynamic_translations.what_is_community.text1')
           %br
-          %p.white
-            = t('dynamic_translations.what_is_community.text2')
-          %br
-          %p.white
-            = t('dynamic_translations.what_is_community.text3')
-          %br
-          %p.white
-            = t('dynamic_translations.what_is_community.text4')
-          %br
-          %p.white
-            = t('dynamic_translations.what_is_community.text5')
+          / %p.white
+          /   = t('dynamic_translations.what_is_community.text2')
+          / %br
+          / %p.white
+          /   = t('dynamic_translations.what_is_community.text3')
+          / %br
+          / %p.white
+          /   = t('dynamic_translations.what_is_community.text4')
+          / %br
+          / %p.white
+          /   = t('dynamic_translations.what_is_community.text5')
           %br
           %br
           %br
@@ -121,249 +121,8 @@
         .col-md-6.col-md-offset-3.space_background
           %br
 
-/ Zero Waste banner
 
-/  .become_partner#_zerowaste
-/   .container
-/     .row.centered
-/       .col-md-5.col-md-offset-4
-/         .btn.btn-pink.become-partner-btn
-/           %a{href: home_zero_waste_event_path}
-/             = t('dynamic_translations.zerowaste.btn_text')
-
-/ Speakers
-
-#speakers
-  .container
-    .row.centered
-      %h3.ouishare_stencil{style: "color: #E03E52;"}
-        = t('dynamic_translations.speakers.title')
-      %hr.pink
-      - if !@displayed_speakers.blank?
-        .ch-grid
-          - @displayed_speakers.each do |speaker|
-            .col-lg-3.individuals-list-display
-              %li
-                = render "/individuals/partials/speaker_display", :speaker => speaker
-          - if !@hidden_speakers.blank?
-            %div
-              #allspeakers{style: "display: none;"}
-                - @hidden_speakers.each do |speaker|
-                  .col-lg-3.individuals-list-display
-                    %li
-                      = render "/individuals/partials/speaker_display", :speaker => speaker
-              %div.row.mb_20
-                %a#btn_showspeakers_down
-                  %button.btn.btn-embossed.btn-primary.mt_20
-                    = t('dynamic_translations.speakers.show_all')
-
-              %div.row.mb_20.mt_20
-                %button.btn.btn-embossed.btn-primary.hide#btn_showspeakers_up
-                  = t('dynamic_translations.speakers.hide_all')
-
-.tickets
-  .container.tickets-section
-    .row
-      .col-md-6.col-md-offset-3
-        %h3.ouishare_stencil.white.centered
-          = t('dynamic_translations.tickets.title')
-        %hr.white
-        %br
-        %br
-        %p.white
-          = t('dynamic_translations.tickets.description1')
-          %a{href: "/join#_getinvolved"}
-            = t('dynamic_translations.tickets.get_involved')
-            = "."
-        %p.white
-          = t('dynamic_translations.tickets.description2')
-          %a{href: "http://bit.ly/OSFest14ticketapplication"}
-            = t('dynamic_translations.tickets.apply_tickets_link')
-        %br
-        %br
-
-
-
-        .col-md-12.centered
-          .row.centered
-
-            .col-md-8.col-md-offset-2.pricing-table.turquoise.bordered.plain
-              %a{href: home_freelancers_path}
-
-                %ul.centered.alt
-                  %li.title{:style => "font-family: naiv_normal,Helvetica; color:#E03E51;"}
-                    = t('dynamic_translations.tickets.freelancers_small_business')
-                  %li.button{:style => "font-family: naiv_normal,Helvetica; padding-top:0px; color:#E03E51;"}
-                    = t('dynamic_translations.tickets.freelancers_small_business_desc')
-            %br
-            %br
-
-            .col-md-8.col-md-offset-2.pricing-table.turquoise.bordered.plain
-              %a{href: home_entreprises_path}
-
-                %ul.centered.alt
-                  %li.title{:style => "font-family: naiv_normal,Helvetica; color:#E03E51;"}
-                    =t('dynamic_translations.tickets.entreprises')
-                  %li.button{:style => "font-family: naiv_normal,Helvetica; padding-top:0px; color:#E03E51;"}
-                    = t('dynamic_translations.tickets.entreprises_desc')
-            %br
-            %br
-            .col-md-8.col-md-offset-2.pricing-table.turquoise.bordered.plain
-              %a{href: home_press_and_media_path}
-                %ul.centered.alt
-                  %li.title{:style => "font-family: naiv_normal,Helvetica; color:#E03E51;"}
-                    =t('dynamic_translations.tickets.press_media')
-                  %li.button{:style => "font-family: naiv_normal,Helvetica; padding-top:0px; color:#E03E51;"}
-                    %br
-                    / = t('dynamic_translations.tickets.entreprises_desc')
-            %br
-            %br
-
-
-.partners-container
-  .container.sinfo
-    - if !@partners.blank?
-      .row.centered
-        %br
-        %h3.ouishare_stencil
-          = t('dynamic_translations.partners.title')
-        %hr.pink
-        .partners
-      = render "/individuals/partials/partners_display", :partners => @partners, :important_partners_display => true, :important_partners_count => 3
-      %br
-      %br
-
-    - if !@media_partners.blank?
-      .row.centered
-        %br
-        %h3.ouishare_stencil
-          = t('dynamic_translations.partners.media_partner_title')
-        %hr.pink
-        .partners
-      = render "/individuals/partials/partners_display", :partners => @media_partners, :important_partners_display => false
-      %br
-      %br
-
-    - if !@friends.blank?
-      .row.centered
-        %br
-        %h3.ouishare_stencil
-          = t('dynamic_translations.partners.friends_title')
-        %hr.pink
-        .partners
-      = render "/individuals/partials/partners_display", :partners => @friends, :important_partners_display => false
-
-      %br
-      %br
-
-
-    - if !@supporters.blank?
-      .row.centered
-        %br
-        %h3.ouishare_stencil
-          = t('dynamic_translations.partners.supporters_title')
-        %hr.pink
-        .partners
-      = render "/individuals/partials/partners_display", :partners => @supporters, :important_partners_display => false
-
-
-.become_partner
-  .container 
-    .row.centered
-      .col-md-5.col-md-offset-4
-        .btn.btn-pink.become-partner-btn
-          %a{:href => 'mailto:partners@ouishare.net'}
-            Become a partner
-
-
-
-
-/ Petit Fest 
-#_petit_fest.aboutouishare-section{style: "margin-top:40px;"}
-  .container
-    .row.centered
-      %h3.ouishare_stencil
-        = t('dynamic_translations.petit_fest.title')
-      %hr.blue
-      %br
-      %br
-      .container.round_fond
-        .row
-          .col-md-8.col-md-offset-2
-            %p
-              %b
-                = t('dynamic_translations.petit_fest.subtitle')
-            %p
-              = t('dynamic_translations.petit_fest.text1')
-              %a{:href => '#_love_party'}
-                = t('dynamic_translations.love_party.title')
-              = t('dynamic_translations.petit_fest.text2')
-            %p
-              = t('dynamic_translations.petit_fest.text3')
-
-        .row
-          .col-md-10.col-md-offset-1
-            .col-md-12
-              .btn.btn-pink{:style => 'margin: 0px 0px 40px 0px;'}
-                %a{:href => '/freelancers'}
-                  = t('dynamic_translations.petit_fest.get_ticket')
-              .btn.btn-pink{:style => 'margin: 0px 0px 40px 0px;'}
-                %a{:href => '/assets/petit_fest_2015.png'}
-                  = t('dynamic_translations.petit_fest.see_program')
-            .col-md-12
-              %a{:href => '/assets/petit_fest_2015.png'}
-                %img.img-responsive{:src => '/assets/petit_fest_crop.png', :alt => 'Petit Fest program', :style => 'margin:auto;'}
-
-
-
-/ Get Involved
-
-/ .get-involved-section
-/   .container
-/     .row.centered
-/       %h3.ouishare_stencil
-/         = t('dynamic_translations.get_involved.title')
-/       %hr.pink
-/       %br
-/       %p
-/         = t('dynamic_translations.get_involved.description')
-/     %br
-
-/     .centered.get-involved-options-choice
-/       .span-centered
-/         .col-md-10.col-md-offset-1.col-lg-8.col-lg-offset-2
-/           .col-md-4
-/             .title
-/               = t('dynamic_translations.get_involved.call_for_proposal')
-/             .btn.btn-pink.get-involved-btn
-/               %a{href: "https://docs.google.com/forms/d/1_D9_jFoECa0B2qpMdiv-91QfyhSHlvKJ4RowIUsTZ4c/viewform"}
-/                 =t('dynamic_translations.get_involved.submit')
-/           / .col-md-4
-/           /   .title
-/           /     =t('dynamic_translations.get_involved.contribute')
-/           /   .btn.btn-pink.get-involved-btn
-/           /     %a{href: "http://awards.ouishare.net/2015/applications/", target: "_blank"}
-/           /       =t('dynamic_translations.get_involved_closed.submit')
-/           .col-md-4
-/             .title
-/               =t('dynamic_translations.awards.vote_txt')
-/             .btn.btn-pink.get-involved-btn
-/               %a{href: "http://awards.ouishare.net/2015/vote/", target: "_blank"}
-/                 =t('dynamic_translations.awards.vote_btn')
-/           / .col-md-4
-/           /   .title
-/           /     =t('dynamic_translations.get_involved.idea_wall')
-/           /   .btn.btn-pink.get-involved-btn
-/           /     %a{href: "mailto:partners@ouishare.net", :target => "_blank"}
-/           /       = t('dynamic_translations.get_involved.idea_wall_button')
-/           .col-md-4
-/             .title
-/               =t('dynamic_translations.pitch_startup.txt')
-/             .btn.btn-pink.get-involved-btn
-/               %a{href: "https://docs.google.com/forms/d/1tMbjJHx8SdZb-hp7jm8Q5SfJwh5NEJc2KjwBw35cVhg/viewform", :target => "_blank"}
-/                 = t('dynamic_translations.pitch_startup.btn')
-
-
+/ OuiShare News
 .ouishare-news-section
   .container
     .row.centered
@@ -397,6 +156,275 @@
       %span.jssora13r{:style => "width: 40px; height: 50px; top: 123px; right: 30px", :u => "arrowright"}
 
 
+/ Highlights from 2015
+.blank_bg#_highlights
+  .container
+    .row.centered
+      .col-md-6.col-md-offset-3{style:"position: relative"}
+        /* I know it's weird, just a hack that allow to scale an iframe before bootstrap 3.2 */
+        %img{style:"display:block;width:100%;height:auto", src:"http://placehold.it/16x9"}
+        %iframe{allowfullscreen: "", frameborder: "0", src: "//www.youtube.com/embed/3g1BpJc-6PM", style:"position:absolute;top:0;left:0;width:100%;height:100%"}
+
+
+    .row.centered
+      %h3.ouishare_stencil
+        = t('dynamic_translations.highlight.watch_2015_sessions')
+      %hr.pink
+
+    .row.centered
+      .col-md-8.col-md-offset-2
+        .row
+          %p
+            = t('dynamic_translations.highlight.description_2014')
+        .row{:style => "margin-top:50px;"}
+          .col-md-12
+            .col-md-6.col-md-offset-3
+              %a.btn.btn-large.btn-primary{href: "http://www.youtube.com/user/OuiShareTV", :target => "_blank", :style => "width: 170px;"}
+                = t('dynamic_translations.highlight.watch_the_sessions')
+
+/ Zero Waste banner
+
+/  .become_partner#_zerowaste
+/   .container
+/     .row.centered
+/       .col-md-5.col-md-offset-4
+/         .btn.btn-pink.become-partner-btn
+/           %a{href: home_zero_waste_event_path}
+/             = t('dynamic_translations.zerowaste.btn_text')
+
+/ Speakers
+
+/ #speakers
+/   .container
+/     .row.centered
+/       %h3.ouishare_stencil{style: "color: #E03E52;"}
+/         = t('dynamic_translations.speakers.title')
+/       %hr.pink
+/       - if !@displayed_speakers.blank?
+/         .ch-grid
+/           - @displayed_speakers.each do |speaker|
+/             .col-lg-3.individuals-list-display
+/               %li
+/                 = render "/individuals/partials/speaker_display", :speaker => speaker
+/           - if !@hidden_speakers.blank?
+/             %div
+/               #allspeakers{style: "display: none;"}
+/                 - @hidden_speakers.each do |speaker|
+/                   .col-lg-3.individuals-list-display
+/                     %li
+/                       = render "/individuals/partials/speaker_display", :speaker => speaker
+/               %div.row.mb_20
+/                 %a#btn_showspeakers_down
+/                   %button.btn.btn-embossed.btn-primary.mt_20
+/                     = t('dynamic_translations.speakers.show_all')
+
+/               %div.row.mb_20.mt_20
+/                 %button.btn.btn-embossed.btn-primary.hide#btn_showspeakers_up
+/                   = t('dynamic_translations.speakers.hide_all')
+
+/ .tickets
+/   .container.tickets-section
+/     .row
+/       .col-md-6.col-md-offset-3
+/         %h3.ouishare_stencil.white.centered
+/           = t('dynamic_translations.tickets.title')
+/         %hr.white
+/         %br
+/         %br
+/         %p.white
+/           = t('dynamic_translations.tickets.description1')
+/           %a{href: "/join#_getinvolved"}
+/             = t('dynamic_translations.tickets.get_involved')
+/             = "."
+/         %p.white
+/           = t('dynamic_translations.tickets.description2')
+/           %a{href: "http://bit.ly/OSFest14ticketapplication"}
+/             = t('dynamic_translations.tickets.apply_tickets_link')
+/         %br
+/         %br
+
+
+
+/         .col-md-12.centered
+/           .row.centered
+
+/             .col-md-8.col-md-offset-2.pricing-table.turquoise.bordered.plain
+/               %a{href: home_freelancers_path}
+
+/                 %ul.centered.alt
+/                   %li.title{:style => "font-family: naiv_normal,Helvetica; color:#E03E51;"}
+/                     = t('dynamic_translations.tickets.freelancers_small_business')
+/                   %li.button{:style => "font-family: naiv_normal,Helvetica; padding-top:0px; color:#E03E51;"}
+/                     = t('dynamic_translations.tickets.freelancers_small_business_desc')
+/             %br
+/             %br
+
+/             .col-md-8.col-md-offset-2.pricing-table.turquoise.bordered.plain
+/               %a{href: home_entreprises_path}
+
+/                 %ul.centered.alt
+/                   %li.title{:style => "font-family: naiv_normal,Helvetica; color:#E03E51;"}
+/                     =t('dynamic_translations.tickets.entreprises')
+/                   %li.button{:style => "font-family: naiv_normal,Helvetica; padding-top:0px; color:#E03E51;"}
+/                     = t('dynamic_translations.tickets.entreprises_desc')
+/             %br
+/             %br
+/             .col-md-8.col-md-offset-2.pricing-table.turquoise.bordered.plain
+/               %a{href: home_press_and_media_path}
+/                 %ul.centered.alt
+/                   %li.title{:style => "font-family: naiv_normal,Helvetica; color:#E03E51;"}
+/                     =t('dynamic_translations.tickets.press_media')
+/                   %li.button{:style => "font-family: naiv_normal,Helvetica; padding-top:0px; color:#E03E51;"}
+/                     %br
+/                     / = t('dynamic_translations.tickets.entreprises_desc')
+/             %br
+/             %br
+
+
+/ .partners-container
+/   .container.sinfo
+/     - if !@partners.blank?
+/       .row.centered
+/         %br
+/         %h3.ouishare_stencil
+/           = t('dynamic_translations.partners.title')
+/         %hr.pink
+/         .partners
+/       = render "/individuals/partials/partners_display", :partners => @partners, :important_partners_display => true, :important_partners_count => 3
+/       %br
+/       %br
+
+/     - if !@media_partners.blank?
+/       .row.centered
+/         %br
+/         %h3.ouishare_stencil
+/           = t('dynamic_translations.partners.media_partner_title')
+/         %hr.pink
+/         .partners
+/       = render "/individuals/partials/partners_display", :partners => @media_partners, :important_partners_display => false
+/       %br
+/       %br
+
+/     - if !@friends.blank?
+/       .row.centered
+/         %br
+/         %h3.ouishare_stencil
+/           = t('dynamic_translations.partners.friends_title')
+/         %hr.pink
+/         .partners
+/       = render "/individuals/partials/partners_display", :partners => @friends, :important_partners_display => false
+
+/       %br
+/       %br
+
+
+/     - if !@supporters.blank?
+/       .row.centered
+/         %br
+/         %h3.ouishare_stencil
+/           = t('dynamic_translations.partners.supporters_title')
+/         %hr.pink
+/         .partners
+/       = render "/individuals/partials/partners_display", :partners => @supporters, :important_partners_display => false
+
+
+.become_partner
+  .container 
+    .row.centered
+      .col-md-5.col-md-offset-4
+        .btn.btn-pink.become-partner-btn
+          %a{:href => 'mailto:partners@ouishare.net'}
+            Become a partner
+
+
+
+
+/ Petit Fest 
+/ #_petit_fest.aboutouishare-section{style: "margin-top:40px;"}
+/   .container
+/     .row.centered
+/       %h3.ouishare_stencil
+/         = t('dynamic_translations.petit_fest.title')
+/       %hr.blue
+/       %br
+/       %br
+/       .container.round_fond
+/         .row
+/           .col-md-8.col-md-offset-2
+/             %p
+/               %b
+/                 = t('dynamic_translations.petit_fest.subtitle')
+/             %p
+/               = t('dynamic_translations.petit_fest.text1')
+/               %a{:href => '#_love_party'}
+/                 = t('dynamic_translations.love_party.title')
+/               = t('dynamic_translations.petit_fest.text2')
+/             %p
+/               = t('dynamic_translations.petit_fest.text3')
+
+/         .row
+/           .col-md-10.col-md-offset-1
+/             .col-md-12
+/               .btn.btn-pink{:style => 'margin: 0px 0px 40px 0px;'}
+/                 %a{:href => '/freelancers'}
+/                   = t('dynamic_translations.petit_fest.get_ticket')
+/               .btn.btn-pink{:style => 'margin: 0px 0px 40px 0px;'}
+/                 %a{:href => '/assets/petit_fest_2015.png'}
+/                   = t('dynamic_translations.petit_fest.see_program')
+/             .col-md-12
+/               %a{:href => '/assets/petit_fest_2015.png'}
+/                 %img.img-responsive{:src => '/assets/petit_fest_crop.png', :alt => 'Petit Fest program', :style => 'margin:auto;'}
+
+
+
+/ Get Involved
+
+.get-involved-section
+  .container
+    .row.centered
+      %h3.ouishare_stencil
+        = t('dynamic_translations.get_involved.title')
+      %hr.pink
+      %br
+      %p
+        = t('dynamic_translations.get_involved.description')
+    %br
+
+    .centered.get-involved-options-choice
+      .span-centered
+        .col-md-10.col-md-offset-1.col-lg-8.col-lg-offset-2
+          .col-md-4
+            .title
+              = t('dynamic_translations.get_involved.call_for_proposal')
+            .btn.btn-pink.get-involved-btn
+              %a{href: "https://docs.google.com/forms/d/1_D9_jFoECa0B2qpMdiv-91QfyhSHlvKJ4RowIUsTZ4c/viewform"}
+                =t('dynamic_translations.get_involved.submit')
+          / .col-md-4
+          /   .title
+          /     =t('dynamic_translations.get_involved.contribute')
+          /   .btn.btn-pink.get-involved-btn
+          /     %a{href: "http://awards.ouishare.net/2015/applications/", target: "_blank"}
+          /       =t('dynamic_translations.get_involved_closed.submit')
+          .col-md-4
+            .title
+              =t('dynamic_translations.awards.vote_txt')
+            .btn.btn-pink.get-involved-btn
+              %a{href: "http://awards.ouishare.net/2015/vote/", target: "_blank"}
+                =t('dynamic_translations.awards.vote_btn')
+          / .col-md-4
+          /   .title
+          /     =t('dynamic_translations.get_involved.idea_wall')
+          /   .btn.btn-pink.get-involved-btn
+          /     %a{href: "mailto:partners@ouishare.net", :target => "_blank"}
+          /       = t('dynamic_translations.get_involved.idea_wall_button')
+          .col-md-4
+            .title
+              =t('dynamic_translations.pitch_startup.txt')
+            .btn.btn-pink.get-involved-btn
+              %a{href: "https://docs.google.com/forms/d/1tMbjJHx8SdZb-hp7jm8Q5SfJwh5NEJc2KjwBw35cVhg/viewform", :target => "_blank"}
+                = t('dynamic_translations.pitch_startup.btn')
+
+/ About OuiShare
 .aboutouishare-section
   .container
     .row.centered
