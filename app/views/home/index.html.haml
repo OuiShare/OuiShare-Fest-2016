@@ -6,17 +6,17 @@
           = image_tag "/assets/osf16_landing.svg", :style => "height:250px;margin-top:40px"
       .row
         .col-md-10.col-md-offset-1
-/           %h1.main-title.white
-/             = t('dynamic_translations.main.title')
+          / %h1.main-title.white
+          /   = t('dynamic_translations.main.title')
         .col-md-8.col-md-offset-2
           %p.main-section-paragraphes.white
             = t('dynamic_translations.main.subtitle')
-/           %p.main-section-paragraphes.white
-/             = t('dynamic_translations.main.event')
-/           %p.centered.join_bouton
-/             %a{:href => 'join#_tickets'}
-/               %button.btn.btn-embossed.btn-primary{:style => "background-color: white; color: #E03E51"}
-/                 = t('dynamic_translations.reminder_ticket.getyourtickets')
+          / %p.main-section-paragraphes.white
+          /   = t('dynamic_translations.main.event')
+          / %p.centered.join_bouton
+          /   %a{:href => 'join#_tickets'}
+          /     %button.btn.btn-embossed.btn-primary{:style => "background-color: white; color: #E03E51"}
+          /       = t('dynamic_translations.reminder_ticket.getyourtickets')
 
       = form_tag home_newsletter_collect_email_path, :class => "form-inline" do
         .row.text-center
