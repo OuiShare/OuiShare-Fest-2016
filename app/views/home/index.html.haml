@@ -3,20 +3,20 @@
     .main-section
       .row
         #head_logo
-          = image_tag "/assets/landing_logo.png", :style => "height:250px;margin-top:40px"
+          = image_tag "/assets/osf16_landing.svg", :style => "height:250px;margin-top:40px"
       .row
         .col-md-10.col-md-offset-1
-          %h1.main-title.white
-            = t('dynamic_translations.main.title')
+/           %h1.main-title.white
+/             = t('dynamic_translations.main.title')
         .col-md-8.col-md-offset-2
           %p.main-section-paragraphes.white
             = t('dynamic_translations.main.subtitle')
-          %p.main-section-paragraphes.white
-            = t('dynamic_translations.main.event')
-          %p.centered.join_bouton
-            %a{:href => 'join#_tickets'}
-              %button.btn.btn-embossed.btn-primary{:style => "background-color: white; color: #E03E51"}
-                = t('dynamic_translations.reminder_ticket.getyourtickets')
+/           %p.main-section-paragraphes.white
+/             = t('dynamic_translations.main.event')
+/           %p.centered.join_bouton
+/             %a{:href => 'join#_tickets'}
+/               %button.btn.btn-embossed.btn-primary{:style => "background-color: white; color: #E03E51"}
+/                 = t('dynamic_translations.reminder_ticket.getyourtickets')
 
       = form_tag home_newsletter_collect_email_path, :class => "form-inline" do
         .row.text-center
@@ -163,7 +163,7 @@
       .col-md-6.col-md-offset-3{style:"position: relative"}
         /* I know it's weird, just a hack that allow to scale an iframe before bootstrap 3.2 */
         %img{style:"display:block;width:100%;height:auto", src:"http://placehold.it/16x9"}
-        %iframe{allowfullscreen: "", frameborder: "0", src: "//www.youtube.com/embed/3g1BpJc-6PM", style:"position:absolute;top:0;left:0;width:100%;height:100%"}
+        %iframe{allowfullscreen: "", frameborder: "0", src: "//www.youtube.com/embed/Tq1oeagn2rA", style:"position:absolute;top:0;left:0;width:100%;height:100%"}
 
 
     .row.centered
