@@ -96,7 +96,7 @@ class AdminController < ApplicationController
   end
 
   def restart_nginx_server
-    executed_bash = "restart"
+    executed_bash = "bin/restart"
     bash_cmd = ENV['PATH_BIN'] + executed_bash
 
     current_directory_contents = system(bash_cmd) 
