@@ -13,8 +13,6 @@
             = t('dynamic_translations.main.subtitle')
           %p.main-section-paragraphes.white
             = t('dynamic_translations.main.date')
-          %p.main-section-paragraphes.white
-            = t('dynamic_translations.main.test')
           / %p.centered.join_bouton
           /   %a{:href => 'join#_tickets'}
           /     %button.btn.btn-embossed.btn-primary{:style => "background-color: white; color: #E03E51"}
@@ -335,7 +333,7 @@
     .row.centered
       .col-md-5.col-md-offset-4
         .btn.btn-pink.become-partner-btn
-          %a{:href => 'mailto:partners@ouishare.net'}
+          %a{:href => 'mailto:partners@ouisharefest.com'}
             Become a partner
 
 
@@ -395,24 +393,30 @@
     .centered.get-involved-options-choice
       .span-centered
         .col-md-10.col-md-offset-1.col-lg-8.col-lg-offset-2
-          .col-md-4.col-md-offset-2
+          .col-md-4
             .title
-              = t('dynamic_translations.get_involved.join_the_team')
+              = t('dynamic_translations.get_involved.volunteers_join_txt')
             .btn.btn-pink.get-involved-btn
-              %a{href: "mailto:francesca@ouishare.net", :target => "_blank"}
-                =t('dynamic_translations.get_involved.join')
+              %a{href: "mailto:volunteers@ouisharefest.com", :target => "_blank"}
+                =t('dynamic_translations.get_involved.volunteers_join_btn')
+          .col-md-4
+            .title
+              =t('dynamic_translations.get_involved.program_call_txt')
+            .btn.btn-pink.get-involved-btn
+              %a{href: "https://ouisharefest.typeform.com/to/TTSxdV", target: "_blank"}
+                =t('dynamic_translations.get_involved.program_call_btn')
           / .col-md-4
           /   .title
-          /     =t('dynamic_translations.get_involved.contribute')
+          /     =t('dynamic_translations.get_involved.awards_apply_txt')
           /   .btn.btn-pink.get-involved-btn
-          /     %a{href: "http://awards.ouishare.net/2015/applications/", target: "_blank"}
-          /       =t('dynamic_translations.get_involved_closed.submit')
+          /     %a{href: "http://awards.ouishare.net/2016/applications/", target: "_blank"}
+          /       =t('dynamic_translations.get_involved.awards_apply_btn')
           / .col-md-4
           /   .title
-          /     =t('dynamic_translations.awards.vote_txt')
+          /     =t('dynamic_translations.get_involved.awards_vote_txt')
           /   .btn.btn-pink.get-involved-btn
           /     %a{href: "http://awards.ouishare.net/2015/vote/", target: "_blank"}
-          /       =t('dynamic_translations.awards.vote_btn')
+          /       =t('dynamic_translations.get_involved.awards_vote_btn')
           / .col-md-4
           /   .title
           /     =t('dynamic_translations.get_involved.idea_wall')
@@ -421,10 +425,10 @@
           /       = t('dynamic_translations.get_involved.idea_wall_button')
           .col-md-4
             .title
-              =t('dynamic_translations.get_involved.idea_wall')
+              =t('dynamic_translations.get_involved.partners_txt')
             .btn.btn-pink.get-involved-btn
-              %a{href: "mailto:partners@ouishare.net", :target => "_blank"}
-                = t('dynamic_translations.get_involved.idea_wall_button')
+              %a{href: "mailto:partners@ouisharefest.com", :target => "_blank"}
+                = t('dynamic_translations.get_involved.partners_btn')
 
 / About OuiShare
 .aboutouishare-section
