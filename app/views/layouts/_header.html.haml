@@ -63,6 +63,15 @@
               %a{href: "http://2013.ouisharefest.com/"}
                 = t('dynamic_translations.past_editions.fest_2013')
 
+        %li.dropdown
+          %a.dropdown-toggle{href: "/participants"}
+            =t('dynamic_translations.participants.title')
+          %ul.dropdown-menu
+            %li
+              %a{href: "participants#_team"}
+                = t('dynamic_translations.team.title')
+
+
         / %li.dropdown
         /   %a.dropdown-toggle{href: "/participants"}
         /     =t('dynamic_translations.participants.title')
