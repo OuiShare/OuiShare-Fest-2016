@@ -5,7 +5,6 @@ en:
       title: Contributors
       show_all: Show all the speakers
       hide_all: Hide speakers
-      2014title: 2014 Contributors
     about:
       description: OuiShare Fest is a three-day festival that brings together 1000
         actors from the collaborative economy in Paris each year.
@@ -40,16 +39,9 @@ en:
       friends_title: Friends
       media_partner_title: Media partners
       supporters_title: Supporters
-      2014friends_title: 2014 Friends
-      2014media_partner_title: 2014 Media partners
-      2014supporters_title: 2014 Supporters
-      2014title: 2014 Partners
     report:
       title: Report
-      2014_title: OuiShare Fest 2014 Report
-      2014_description: This report tells the story behind OuiShare Fest 2014 and highlights important insights and lessons learned throughout its organization, as well as facts and figures. 
       link: View full report
-      old_site: Read more about OuiShare Fest 2014
     get_involved:
       title: Get Involved
       description: As the next OuiShare Fest comes closer, there will be many ways
@@ -172,8 +164,6 @@ en:
       title: Program
     ouishare_awards:
       title: Ouishare Awards
-      description: Hello, i'm the text talking about OuiShare Awards, please write
-        me ^-^
       link: See 2014 Winners
       first_part: The OuiShare Awards put exceptional collaborative economy initiatives
         from across the globe in the spotlight and provide them with support to develop
@@ -232,13 +222,6 @@ en:
       link_title: host a satellite event
     readmore:
       title: Read more
-    sharing_fair:
-      title: Sharing Fair
-      text: During afternoon of May 7th, we invite the public to join our Sharing
-        Fair to meet and connect with the collaborative economy’s most innovative
-        projects and OuiShare members from around the globe! And if you are looking
-        for your dream job, you will have the opportunity to participate in speed
-        recruiting sessions with your favorite companies and projects!
     tooltip:
       orange: Operating in 30 countries, the Orange Group serves over 236 million
         customers, including 178 million mobile customers and 15 million high speed
@@ -248,26 +231,5 @@ en:
         that the digital resources can support the emerging of new, more responsible,
         more cooperative and fairer economic models, it strives to support initiatives
         that help to accelerate this shift.
-    love_party:
-      title: OuiShare Love Party
-      text: To bring OuiShare Fest to a close, join us on May 7th for an all-night
-        long party at our magical event venue, the Cabaret Sauvage.
-      see_lineup: See the lineup
-    live_reporting:
-      title: Live from OuiShare Fest 2014
-      paragraph: See what's happening now
-      stories: Stories
-      listen: Listen
-      2014stories: 2014 Stories
-    fest2014:
-      title: Fest 2014
-    coverage:
-      title: Coverage
-      2014title: 2014 Coverage
-    2014program:
-      title: 2014 Program
     stayposted:
       title: Stay posted
-      subtitle: Interested in OuiShare Fest 2015?
-      subtitle2: Sign-up for updates below and you’ll be the first to know when early
-        bird ticket sales open!

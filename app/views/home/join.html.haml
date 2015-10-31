@@ -1,22 +1,22 @@
-/ .blank_bg
-/   .container
-/     .row.centered
-/       .col-md-6.col-md-offset-3
-/         %h3.ouishare_stencil
-/           = t('dynamic_translations.tickets.title')
-/         %hr.pink
-/         %br
-/         %br
-/         %p.text-center
-/           = t('dynamic_translations.tickets.description1')
-/           %a{href: "/join#_getinvolved"}
-/             = t('dynamic_translations.tickets.get_involved')
-/         %p.text-center
-/           = t('dynamic_translations.tickets.description2')
-/           %a{href: "http://bit.ly/OSFest14ticketapplication"}
-/             = t('dynamic_translations.tickets.apply_tickets_link')
-/         %br
-/         %br
+.blank_bg#_tickets
+  .container
+    .row.centered
+      .col-md-6.col-md-offset-3
+        %h3.ouishare_stencil
+          = t('dynamic_translations.tickets.title')
+        %hr.pink
+        %br
+        %br
+        %p.text-center
+          = t('dynamic_translations.tickets.description1')
+          %a{href: "/join#_getinvolved"}
+            = t('dynamic_translations.tickets.get_involved')
+        %p.text-center
+          = t('dynamic_translations.tickets.description2')
+          %a{href: "http://bit.ly/OSFest14ticketapplication"}
+            = t('dynamic_translations.tickets.apply_tickets_link')
+        %br
+        %br
 
 
 
@@ -44,6 +44,29 @@
 
 /             %br
 /             %br
+
+/ Press-media tickets
+
+.blank_bg#_press_media
+  .container
+    .row.centered
+      %h3.ouishare_stencil
+        = t('dynamic_translations.tickets.press_media')
+      %hr.pink  
+      %br
+      %br
+      %br
+      %p.text-center{:style => "font-size: 20px; text-align: center;"}
+        %a{:href => "mailto:press@ouishare.net"}
+          = t('dynamic_translations.press_media.request')
+        %br
+        %br
+      %p.text-center{:style => "font-size: 20px; text-align: center;"}
+        %a{href: "https://drive.google.com/folderview?id=0B7b2-hkRWIe-XzYtTlJXZjVKMTA&usp=sharing"} 
+          = t('dynamic_translations.press_media.download')
+        %br
+
+
 
 / Get Involved
 
