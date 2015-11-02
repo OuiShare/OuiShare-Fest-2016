@@ -118,24 +118,18 @@
           %a.dropdown-toggle.highlight{href: "/join"}
             =t('dynamic_translations.join.title')
           %ul.dropdown-menu
-            / %li
-            /   %a{href: "join"}
-            /     = t('dynamic_translations.tickets.stay_posted')
-            / %li
-            /   %a{href: "join#_tickets"}
-            /     = t('dynamic_translations.tickets.title')
-            / %li
-            /   %a{href: "join#_stayposted"}
-            /     = t('dynamic_translations.stayposted.title')
+            %li
+              %a{href: "join#_tickets"}
+                = t('dynamic_translations.tickets.title')
+            %li
+              %a{href: "join#_press_media"}
+                = t('dynamic_translations.tickets.press_media')
             %li
               %a{href: "join#_getinvolved"}
                 = t('dynamic_translations.get_involved.title')
             %li
               %a{href: "join#_awards"}
                 = t('dynamic_translations.ouishare_awards.see_2015_awards_winners')
-        /     %li
-        /       %a{href: "join#_awards"}
-        /         = t('dynamic_translations.ouishare_awards.title')
         /     %li
         /       %a{href: "join#_prepare"}
         /         = t('dynamic_translations.prepare_trip.title')
@@ -155,7 +149,13 @@
         /   %a.dropdown-toggle.highlight{href: "/join#_tickets"}
         /     =t('dynamic_translations.tickets.title')
         %li.tickets-highlight
-          %a.highlight{href: "http://magazine.ouishare.net/tag/ouisharefest/", target: "_blank"}
+          %a.highlight{href: "/join#_tickets"}
+            =t('dynamic_translations.tickets.title')
+        / %li.tickets-highlight
+        /   %a.highlight{href: "http://magazine.ouishare.net/tag/ouisharefest/", target: "_blank"}
+        /     =t('dynamic_translations.blog.title')
+        %li
+          %a{href: "http://magazine.ouishare.net/tag/ouisharefest/", target: "_blank"}
             =t('dynamic_translations.blog.title')
         %li
           .text-center.social-media-icons-header
