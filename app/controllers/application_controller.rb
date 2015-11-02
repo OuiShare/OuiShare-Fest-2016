@@ -12,7 +12,7 @@ class ApplicationController < ActionController::Base
 
   def first_visit
 
-    if session[:visited] || Date.current() > Date.parse("2015-01-31")
+    if session[:visited] || Date.current() > Date.parse("2016-01-31")
       @visited = true
     else
       session[:visited] = true
@@ -22,7 +22,7 @@ class ApplicationController < ActionController::Base
   
   def authenticate!
     login = authenticate_or_request_with_http_basic do |login, password|
-      login == "ouishare-fest" && password == "community2014"
+      login == "ouishare-fest" && password == "community2016"
     end
     session[:login] = login
   end
