@@ -400,13 +400,13 @@
           .col-md-4
             .title
               =t('dynamic_translations.get_involved.program_call_txt')
-            .btn.btn-pink.get-involved-btn
+            .btn.btn-embossed.btn-primary.get-involved-btn
               %a{href: "https://ouisharefest.typeform.com/to/TTSxdV", target: "_blank"}
                 =t('dynamic_translations.get_involved.program_call_btn')
           .col-md-4
             .title
               = t('dynamic_translations.get_involved.volunteers_join_txt')
-            .btn.btn-pink.get-involved-btn
+            .btn.btn-embossed.btn-primary.get-involved-btn
               %a{href: "mailto:volunteers@ouisharefest.com", :target => "_blank"}
                 =t('dynamic_translations.get_involved.volunteers_join_btn')
           / .col-md-4
@@ -424,7 +424,7 @@
           .col-md-4
             .title
               =t('dynamic_translations.get_involved.partners_txt')
-            .btn.btn-pink.get-involved-btn
+            .btn.btn-embossed.btn-primary.get-involved-btn
               %a{href: "mailto:partners@ouisharefest.com", :target => "_blank"}
                 = t('dynamic_translations.get_involved.partners_btn')
 
@@ -434,13 +434,13 @@
     .row.centered
       %h3.ouishare_stencil
         = t('dynamic_translations.about.ouishare_title')
-      %hr.blue
+      %hr.pink
       %br
       %br
       .container.round_fond
         .row
           .col-md-8.col-md-offset-2
-            %p
+            %p{:style => "padding-top:30px"}
               = t('dynamic_translations.about.ouishare_text')
 
         .row
@@ -448,7 +448,7 @@
             .col-md-12
               %img{:src => '/assets/coeur-aboutouishare.png', :alt => 'OuiShare logo'}
             .col-md-12
-              .btn.btn-pink{:style => 'margin: 40px 0px 0px 0px;'}
+              .btn.btn-embossed.btn-primary{:style => 'margin: 40px 0px 0px 0px;'}
                 %a{:href => 'http://ouishare.net/en/users/sign_up', :target => '_blank'}
                   = t('dynamic_translations.about.ouishare_btn')
 

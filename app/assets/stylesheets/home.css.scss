@@ -333,7 +333,8 @@ a.btn:nth-child(3) {
 }
 
 .aboutouishare-section {
-  padding-bottom: 10%;
+  padding-top: 12%;
+  padding-bottom: 18%;
 }
 
 .aboutouishare-section > div:nth-child(1) > div:nth-child(1) > div:nth-child(4) > div:nth-child(2) {
@@ -456,7 +457,7 @@ div.row:nth-child(10) > hr:nth-child(3) {
 }
 
 .aboutouishare-section > div:nth-child(1) > div:nth-child(1) > hr:nth-child(2) {
-  border-color: #001E60 -moz-use-text-color -moz-use-text-color;
+  // border-color: #001E60 -moz-use-text-color -moz-use-text-color;
 }
 
 div.col-xs-4:nth-child(1) {
@@ -530,9 +531,10 @@ p.col-xs-6 > a:hover {
 }
 
 body > div.get-involved-section > div > div.centered.get-involved-options-choice > div > div > div > div.button > a {
-  background-color: #E03E51;
+  // background-color: #E03E51;
   font-family: 'naiv_normal';
-  padding: 19px 30px;
+  padding: 10px 15px;
+  // padding: 19px 30px;
   text-transform: uppercase;
   border-radius: 3px !important;
   font-size: 12px;
@@ -542,7 +544,7 @@ body > div.get-involved-section > div > div.centered.get-involved-options-choice
   min-height: 90px;
   color: #E03E51;
   text-transform: uppercase;
-  font-family: 'naiv_normal';
+  // font-family: 'naiv_normal';
 }
 
 body > div.get-involved-section > div > div.row.centered > p {

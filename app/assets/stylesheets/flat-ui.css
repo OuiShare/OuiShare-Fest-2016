@@ -846,6 +846,7 @@ address {
 .submit-email-button-footer{
   margin-left: 2px;
   float: left;
+  background-color: #f56c6c;
 }
 
 .btn.btn-pink {
@@ -1931,7 +1932,7 @@ label {
 }
 .form-control-footer {
   border: 2px solid #fff;
-  background-color: #001E60;
+  background-color: #f56c6c;
   /*color: #34495e;*/
   /*font-family: 'Lato', Helvetica, Arial, sans-serif;*/
   font-family: 'naiv_normal';

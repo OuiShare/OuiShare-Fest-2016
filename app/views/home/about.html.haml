@@ -158,11 +158,11 @@
         .row{:style => "margin-top:50px;"}
           .col-md-12
             .col-md-6.col-md-offset-3
-              %a.btn.btn-large.btn-primary{href: "https://www.youtube.com/playlist?list=PL8Bt3EbdmpKM4tYKyERKbp6VMYTjYZwCF", :target => "_blank", :style => "width: 170px;"}
+              %a.btn.btn-embossed.btn-primary{href: "https://www.youtube.com/playlist?list=PL8Bt3EbdmpKM4tYKyERKbp6VMYTjYZwCF", :target => "_blank", :style => "width: 170px;"}
                 = t('dynamic_translations.highlight.watch_the_sessions')
 
 
-.background_2#_about_press
+.net_bg#_about_press
   .container
     .row.centered
       %h3.ouishare_stencil
@@ -222,7 +222,7 @@
 
 
 / About OuiShare
-#_ouishare.aboutouishare-section.heart_bg{:style => "padding-top:12%"}
+#_ouishare.aboutouishare-section.heart_bg
   .container
     .row.centered
       %h3.ouishare_stencil
@@ -233,7 +233,7 @@
       .container.round_fond
         .row
           .col-md-8.col-md-offset-2
-            %p
+            %p{:style => "padding-top:30px"}
               = t('dynamic_translations.about.ouishare_text')
 
         .row
@@ -241,7 +241,7 @@
             .col-md-12
               %img{:src => '/assets/coeur-aboutouishare.png', :alt => 'OuiShare logo'}
             .col-md-12
-              .btn.btn-pink{:style => 'margin: 40px 0px 0px 0px;'}
+              .btn.btn-embossed.btn-primary{:style => 'margin: 40px 0px 0px 0px;'}
                 %a{:href => 'http://ouishare.net/en/users/sign_up', :target => '_blank'}
                   = t('dynamic_translations.about.ouishare_btn')
 
