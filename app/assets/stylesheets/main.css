@@ -421,6 +421,13 @@ body {
 .net_bg {
 	background: url(/assets/16bg-net.png) no-repeat center top;
 	background-color: #fff;
+	/*background-size: 100% 110% !important;
+	background-position: 0% 0%;
+	text-align: center;
+	background-attachment: scroll;
+	min-height: 100%;*/
+	padding-top: 15%;
+	padding-bottom: 10%;
 }
 .heart_bg {
 	background: url(/assets/16bg-heart.png) no-repeat center top;

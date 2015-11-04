@@ -42,18 +42,18 @@
 
 .first-part
   .container
-    .main-section
+    .second-section
       .row
-        %h3.col-md-6.col-md-offset-3.ouishare_stencil.white.text-center#_about{:style => "font-size:20px;"}
+        %h3.col-md-6.col-md-offset-3.ouishare_stencil.white.text-center#_about{:style => "font-size:20px;background-color: #f56c6c"}
           = t('dynamic_translations.about.subtitle')
         .col-md-6.col-md-offset-3{:style => "text-align:left;"}
-          %p.white{:style => 'margin-top: 45px;'}
+          %p{:style => 'margin-top: 45px;'}
             = t('dynamic_translations.about.p1')
           %br
-          %p.white
+          %p
             = t('dynamic_translations.about.p2')
           %br
-          %p.white
+          %p
             = t('dynamic_translations.about.p3')
           %br
           %br
@@ -165,9 +165,9 @@
 .background_2#_about_press
   .container
     .row.centered
-      %h3.ouishare_stencil.white
+      %h3.ouishare_stencil
         = t('dynamic_translations.press.title')
-      %hr.white
+      %hr.pink
       %br
 
     #myCarousel.carousel.slide.col-xs-12.col-md-offset-1.col-lg-offset-2.col-md-10.col-lg-8{ 'data-ride' => "carousel"}
@@ -222,12 +222,12 @@
 
 
 / About OuiShare
-#_ouishare.aboutouishare-section.heart_bg
+#_ouishare.aboutouishare-section.heart_bg{:style => "padding-top:12%"}
   .container
     .row.centered
       %h3.ouishare_stencil
         = t('dynamic_translations.about.ouishare_title')
-      %hr.blue
+      %hr.pink
       %br
       %br
       .container.round_fond
