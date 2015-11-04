@@ -173,8 +173,9 @@
         .row{:style => "margin-top:50px;"}
           .col-md-12
             .col-md-6.col-md-offset-3
-              %a.btn.btn-large.btn-primary{href: "https://www.youtube.com/playlist?list=PL8Bt3EbdmpKM4tYKyERKbp6VMYTjYZwCF", :target => "_blank", :style => "width: 170px;"}
-                = t('dynamic_translations.highlight.watch_the_sessions')
+              %a{href: "https://www.youtube.com/playlist?list=PL8Bt3EbdmpKM4tYKyERKbp6VMYTjYZwCF", :target => "_blank", :style => "width: 170px;"}
+                %button.btn.btn-large.btn-primary
+                  = t('dynamic_translations.highlight.watch_the_sessions')
 
 / Zero Waste banner
 
@@ -216,7 +217,7 @@
 /                 %button.btn.btn-embossed.btn-primary.hide#btn_showspeakers_up
 /                   = t('dynamic_translations.speakers.hide_all')
 
-.tickets
+.tickets.blue_bg
   .container.tickets-section
     .row
       .col-md-6.col-md-offset-3
@@ -234,6 +235,8 @@
         /   = t('dynamic_translations.tickets.description2')
         /   %a{href: "http://bit.ly/OSFest14ticketapplication"}
         /     = t('dynamic_translations.tickets.apply_tickets_link')
+        %p.text-center
+          %img{:src => '/assets/2016-ticket-options-03.png', :alt => 'Ticket options'}
         %br
         %br
 
@@ -403,32 +406,32 @@
           .col-md-4
             .title
               =t('dynamic_translations.get_involved.program_call_txt')
-            .btn.btn-embossed.btn-primary.get-involved-btn
-              %a{href: "https://ouisharefest.typeform.com/to/TTSxdV", target: "_blank"}
+            %a{href: "https://ouisharefest.typeform.com/to/TTSxdV", target: "_blank"}
+              %button.btn.btn-embossed.btn-primary.get-involved-btn
                 =t('dynamic_translations.get_involved.program_call_btn')
           .col-md-4
             .title
               = t('dynamic_translations.get_involved.volunteers_join_txt')
-            .btn.btn-embossed.btn-primary.get-involved-btn
-              %a{href: "mailto:volunteers@ouisharefest.com", :target => "_blank"}
+            %a{href: "mailto:volunteers@ouisharefest.com", :target => "_blank"}
+              %button.btn.btn-embossed.btn-primary.get-involved-btn
                 =t('dynamic_translations.get_involved.volunteers_join_btn')
           / .col-md-4
           /   .title
           /     =t('dynamic_translations.get_involved.awards_apply_txt')
-          /   .btn.btn-pink.get-involved-btn
-          /     %a{href: "http://awards.ouishare.net/2016/applications/", target: "_blank"}
+          /   %a{href: "http://awards.ouishare.net/2016/applications/", target: "_blank"}
+          /     %button.btn.btn-pink.get-involved-btn
           /       =t('dynamic_translations.get_involved.awards_apply_btn')
           / .col-md-4
           /   .title
           /     =t('dynamic_translations.get_involved.awards_vote_txt')
-          /   .btn.btn-pink.get-involved-btn
-          /     %a{href: "http://awards.ouishare.net/2015/vote/", target: "_blank"}
+          /   %a{href: "http://awards.ouishare.net/2015/vote/", target: "_blank"}
+          /     %button.btn.btn-pink.get-involved-btn
           /       =t('dynamic_translations.get_involved.awards_vote_btn')
           .col-md-4
             .title
               =t('dynamic_translations.get_involved.partners_txt')
-            .btn.btn-embossed.btn-primary.get-involved-btn
-              %a{href: "mailto:partners@ouisharefest.com", :target => "_blank"}
+            %a{href: "mailto:partners@ouisharefest.com", :target => "_blank"}
+              %button.btn.btn-embossed.btn-primary.get-involved-btn
                 = t('dynamic_translations.get_involved.partners_btn')
 
 / About OuiShare
