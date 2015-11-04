@@ -558,9 +558,9 @@ body {
 }
 
 .main_bg {
-	background: url(/assets/osfest15-cover.jpg) no-repeat center top; /* 2014 */
-
-	/*background-color: #33FF99; */
+	/*background: url(/assets/osfest15-cover.jpg) no-repeat center top;*/ /* 2014 */
+    background: url(/assets/16bg-header.png) no-repeat;
+	background-color: #ffffff;
 	margin-top: 0px;
 	padding-top:5%;
 	text-align:center;
