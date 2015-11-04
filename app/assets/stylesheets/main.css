@@ -418,6 +418,14 @@ body {
 .blank_bg a:hover{
 	color:#E03E52;
 }
+.net_bg {
+	background: url(/assets/16bg-net.png) no-repeat center top;
+	background-color: #fff;
+}
+.heart_bg {
+	background: url(/assets/16bg-heart.png) no-repeat center top;
+	background-color: #fff;
+}
 
 .triangle_bg {
 	background: url(/assets/fond_vert.jpg) repeat center top;
@@ -463,6 +471,8 @@ body {
   background-size: contain;*/
 }
 
+/*2014*/ 
+
 .triangle_bg{
 	background: url(/assets/fond_vert.jpg) center top;
 	/*background: url(/assets/background/01-background-01.png);*/
@@ -494,7 +504,7 @@ body {
 }
 
 .background_1 {
-	background: url(/assets/background/01-background-01.png) no-repeat;
+	background: url(/assets/background/01-background-01.png) no-repeat; /* 2015 */
 	background-size: 100% 110% !important;
 	background-position: 0% -15px;
 	text-align: center;
@@ -504,7 +514,7 @@ body {
 }
 
 .background_2 {
-	background: url(/assets/background/02-background-01.png) no-repeat;
+	background: url(/assets/background/02-background-01.png) no-repeat; /* 2015 */
 	background-size: 100% 110% !important;
 	background-position: 0% 0%;
 	text-align: center;
@@ -515,7 +525,7 @@ body {
 }
 
 .background_3 {
-	background: url(/assets/background/03-background-01.png) no-repeat;
+	background: url(/assets/background/03-background-01.png) no-repeat; /* 2015 */
 	background-size: 100% 200% !important;
 	background-position: 0% -300px;
 	text-align: center;
@@ -526,7 +536,7 @@ body {
 }
 
 .background_4 {
-	background: url(/assets/fest2.png) no-repeat;
+	background: url(/assets/fest2.png) no-repeat; /* 2015 */
 	background-size: 100% 150% !important;
 	background-position: 0% 30%;
 	text-align: center;
@@ -537,7 +547,7 @@ body {
 }
 
 .background_5 {
-	background: url(/assets/background/04-background-grey-3.png) no-repeat;
+	background: url(/assets/background/04-background-grey-3.png) no-repeat; /* 2015 */
 	background-size: 100% 120% !important;
 	background-position: 0% 0%;
 	text-align: center;
@@ -548,7 +558,7 @@ body {
 }
 
 .main_bg {
-	background: url(/assets/osfest15-cover.jpg) no-repeat center top;
+	background: url(/assets/osfest15-cover.jpg) no-repeat center top; /* 2014 */
 
 	/*background-color: #33FF99; */
 	margin-top: 0px;
@@ -565,7 +575,7 @@ body {
 }
 
 .blue_bg {
-	background: url(/assets/fond_bleu.jpg) repeat right top;
+	background: url(/assets/fond_bleu.jpg) repeat right top; /* 2014 */
 	/*background-color: #33FF99;*/
 	margin-top: 0px;
 	padding-top:130px;
@@ -589,7 +599,7 @@ body {
 }
 
 .yellow_bg {
-	background: url(/assets/fond_jaune.jpg) repeat center top;
+	background: url(/assets/fond_jaune.jpg) repeat center top; /* 2014 */
 
 	/*background-color: #33FF99; */
 	margin-top: 0px;
@@ -725,7 +735,7 @@ text-transform: none;
 
 #f {
 	/*background: #001E60;*/
-	background: #001E60;
+	background: #f56c6c; /* 2016 */
 	padding-top: 35px;
 	padding-bottom: 35px;
 }

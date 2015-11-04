@@ -222,7 +222,8 @@
   padding-top: 5%;
 }
 .tickets {
-  background: url(/assets/fest2.png);
+  /*background: url(/assets/fest2.png);*/
+  background: url(/assets/16bg-bluetext.png);
   background-size: cover;
   margin-top: -12%;
   padding-top: 18%;
@@ -239,14 +240,14 @@
 }
 
 .first-part {
-  background: url(/assets/fest1.png) no-repeat;
-
+  background: url(/assets/16bg-header.png) no-repeat;
+  /*background: url(/assets/fest1.png) no-repeat;*/
   /*background-color: #33FF99; */
   margin-top: 0px;
   padding-top:5%;
   padding-bottom: 4%;
   text-align:center;
-  background-position: bottom;
+  /*background-position: bottom;*/
 }
 
 .program-part {
