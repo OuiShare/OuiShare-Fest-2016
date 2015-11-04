@@ -1,13 +1,13 @@
-.blue_bg#_tickets
+.blue_bg#_tickets{:style => "padding-top:50px; margin-bottom:12%;"}
   .container
     .row.centered
-      .col-md-6.col-md-offset-3
-        %h3.ouishare_stencil
+      .col-md-6.col-md-offset-3.col-sm-10.col-sm-offset-1
+        %h3.ouishare_stencil.white.centered
           = t('dynamic_translations.tickets.title')
-        %hr.pink
+        %hr.white
         %br
         %br
-        %p.text-center
+        %p.text-center.white
           = t('dynamic_translations.tickets.description1')
           %a{href: "/join#_getinvolved"}
             = t('dynamic_translations.tickets.get_involved')
@@ -15,6 +15,8 @@
         /   = t('dynamic_translations.tickets.description2')
         /   %a{href: "http://bit.ly/OSFest14ticketapplication"}
         /     = t('dynamic_translations.tickets.apply_tickets_link')
+        %p.text-center
+          %img{:src => '/assets/2016-ticket-options-03.png', :alt => 'Ticket options', :style => "max-width: 100%"}
         %br
         %br
         / Eventbrite form

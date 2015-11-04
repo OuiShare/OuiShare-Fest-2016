@@ -815,6 +815,7 @@ address {
 .btn.btn-primary {
   background-color: #001E60;
   font-family:'naiv_normal';
+  text-transform: uppercase;
 }
 .btn.btn-primary:hover,
 .btn.btn-primary:focus,

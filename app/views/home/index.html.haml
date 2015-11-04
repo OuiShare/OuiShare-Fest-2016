@@ -12,7 +12,8 @@
           / %p.main-section-paragraphes.white
           /   = t('dynamic_translations.main.subtitle')
           %p.main-section-paragraphes.white
-            = t('dynamic_translations.main.date')
+            %span.bluebg
+              = t('dynamic_translations.main.date')
           %p.centered.join_bouton
             %a{:href => 'join#_tickets'}
               %button.btn.btn-embossed.btn-primary
@@ -29,8 +30,9 @@
   .container
     .second-section
       .row
-        %h3.col-md-6.col-md-offset-3.ouishare_stencil.white.text-center#_about{:style => "font-size:20px;background-color: #f56c6c"}
-          = t('dynamic_translations.about.subtitle')
+        %h3.col-md-6.col-md-offset-3.ouishare_stencil.white.text-center#_about{:style => "font-size:20px"}
+          %span.pinkbg
+            = t('dynamic_translations.about.subtitle')
       .row
         .col-md-6.col-md-offset-3
           /.col-xs-6.col-xs-offset-3
@@ -217,16 +219,16 @@
 /                 %button.btn.btn-embossed.btn-primary.hide#btn_showspeakers_up
 /                   = t('dynamic_translations.speakers.hide_all')
 
-.tickets.blue_bg
+.tickets.blue_bg{:style => "margin-bottom:12%;"}
   .container.tickets-section
     .row
-      .col-md-6.col-md-offset-3
+      .col-md-6.col-md-offset-3.col-sm-10.col-sm-offset-1
         %h3.ouishare_stencil.white.centered
           = t('dynamic_translations.tickets.title')
         %hr.white
         %br
         %br
-        %p.white
+        %p.text-center.white
           = t('dynamic_translations.tickets.description1')
           %a{href: "/join#_getinvolved"}
             = t('dynamic_translations.tickets.get_involved')
@@ -236,7 +238,7 @@
         /   %a{href: "http://bit.ly/OSFest14ticketapplication"}
         /     = t('dynamic_translations.tickets.apply_tickets_link')
         %p.text-center
-          %img{:src => '/assets/2016-ticket-options-03.png', :alt => 'Ticket options'}
+          %img{:src => '/assets/2016-ticket-options-03.png', :alt => 'Ticket options', :style => "max-width: 100%"}
         %br
         %br
 

@@ -1037,6 +1037,15 @@ p.text-center {
   font-size: 15px;
 }
 
+p.white {
+  font-size: 16px;
+}
+span.bluebg {
+  background-color: #001E60;
+}
+span.pinkbg {
+  background-color: #f56c6c;
+}
 div.alt > div > div > div {
   color: #E03E51;
   font-size: 20px;
