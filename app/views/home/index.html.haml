@@ -1,4 +1,4 @@
-.first-part
+.main_bg
   .container
     .main-section
       .row
@@ -25,8 +25,9 @@
       /     .col-md-2.submit-email-button
       /       = submit_tag t('dynamic_translations.main.stay_posted'), :class => "btn btn-primary"
 
-
-    .second-section.net_bg
+.blank_bg
+  .container
+    .second-section
       .row
         %h3.col-md-6.col-md-offset-3.ouishare_stencil.white.text-center#_about{:style => "font-size:20px;background-color: #f56c6c"}
           = t('dynamic_translations.about.subtitle')
@@ -49,6 +50,8 @@
           %p.topics.row.centered
             = image_tag "/assets/coeur-key-topic.png"
 
+.net_bg
+  .container
     .third-section
       .row.centered
         %h3.ouishare_stencil
@@ -448,8 +451,8 @@
             .col-md-12
               %img{:src => '/assets/coeur-aboutouishare.png', :alt => 'OuiShare logo'}
             .col-md-12
-              .btn.btn-embossed.btn-primary{:style => 'margin: 40px 0px 0px 0px;'}
-                %a{:href => 'http://ouishare.net/en/users/sign_up', :target => '_blank'}
+              %a{:href => 'http://ouishare.net/en/users/sign_up', :target => '_blank'}
+                %button.btn.btn-embossed.btn-primary{:style => 'margin: 40px 0px 0px 0px;'}
                   = t('dynamic_translations.about.ouishare_btn')
 
   - if !@visited
