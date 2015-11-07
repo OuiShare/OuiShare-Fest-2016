@@ -3,7 +3,7 @@
     .main-section
       .row
         #head_logo
-          = image_tag "/assets/logo-fest-2016.png", :style => "margin-top:20px"
+          = image_tag "/assets/logo-fest-2016.png", :style => "height:250px;margin-top:20px"
       .row
         / .col-md-10.col-md-offset-1
         /   %h1.main-title.white
@@ -19,21 +19,21 @@
               %button.btn.btn-embossed.btn-primary
                 = t('dynamic_translations.reminder_ticket.getyourtickets')
 
-      / = form_tag home_newsletter_collect_email_path, :class => "form-inline" do
-      /   .row.text-center
-      /     .col-md-offset-3.col-md-4
-      /       = text_field_tag :email_address,"", :class => "form-control flat", :placeholder => t('dynamic_translations.main.placeholder_stay_posted'), :style => "width: 110%;"
-      /     .col-md-2.submit-email-button
-      /       = submit_tag t('dynamic_translations.main.stay_posted'), :class => "btn btn-primary"
+      = form_tag home_newsletter_collect_email_path, :class => "form-inline" do
+        .row.text-center
+          .col-md-offset-3.col-md-4
+            = text_field_tag :email_address,"", :class => "form-control flat", :placeholder => t('dynamic_translations.main.placeholder_stay_posted'), :style => "width: 110%;"
+          .col-md-2.submit-email-button
+            = submit_tag t('dynamic_translations.main.stay_posted'), :class => "btn btn-primary"
 
 .blank_bg
   .container
     .second-section
-      .row
+      .row.centered
         %h3.col-md-6.col-md-offset-3.ouishare_stencil.white.text-center#_about{:style => "font-size:20px"}
           %span.pinkbg
             = t('dynamic_translations.about.subtitle')
-      .row
+      .row.centered
         .col-md-6.col-md-offset-3
           /.col-xs-6.col-xs-offset-3
           %br

@@ -394,7 +394,8 @@ body {
 }
 
 .become_partner {
-    background-color: #E03E51;
+    /*background-color: #E03E51;*/
+    background-color: #001E60;
     width: 100%;
     margin-top: 0px;
     padding-top: 10px;
@@ -1040,11 +1041,17 @@ p.text-center {
 p.white {
   font-size: 16px;
 }
+p.white a:hover {
+  color :#001e60;
+  background: #ffffff;
+}
 span.bluebg {
   background-color: #001E60;
+  padding:3px;
 }
 span.pinkbg {
   background-color: #f56c6c;
+  padding: 3px;
 }
 div.alt > div > div > div {
   color: #E03E51;
