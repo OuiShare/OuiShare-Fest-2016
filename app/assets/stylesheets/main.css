@@ -1047,11 +1047,11 @@ p.white a:hover {
 }
 span.bluebg {
   background-color: #001E60;
-  padding:3px;
+  padding:4px 9px;
 }
 span.pinkbg {
   background-color: #f56c6c;
-  padding: 3px;
+  padding: 4px 12px;
 }
 div.alt > div > div > div {
   color: #E03E51;

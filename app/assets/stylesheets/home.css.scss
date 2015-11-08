@@ -191,8 +191,10 @@
   .main-section{
     .main-title{
       font-size: 45px;
-      font-family: 'naiv_normal_thin';
+      // font-family: 'naiv_normal_thin';
+      font-family: 'naiv_normal';
       text-transform: uppercase;
+      color: #f56c6c;
     }
     .main-section-paragraphes{
       font-size:20px;
@@ -571,8 +573,9 @@ body > div.get-involved-section > div > div.row.centered > p {
   }
 }
 
-.btn.btn-pink.get-involved-btn{
-  padding: 25px 0px;
+.btn.get-involved-btn{
+  // padding: 25px 0px;
+  padding: 25px 30px;
   width: 180px;
 }
 

@@ -811,13 +811,10 @@ address {
   padding-right: 30px;
 }
 
-
 .btn.btn-primary {
   background-color: #001E60;
   font-family:'naiv_normal';
   text-transform: uppercase;
-  padding: 19px 30px;
-  border-radius: 3px !important;
 }
 .btn.btn-primary:hover,
 .btn.btn-primary:focus,
@@ -1972,7 +1969,8 @@ fieldset[disabled] .form-control {
   cursor: default;
 }
 .form-control.flat {
-  border-color: transparent;
+  /* border-color: transparent; */
+  background-color: #bdc3c7;
 }
 .form-control.flat:hover {
   border-color: #bdc3c7;
