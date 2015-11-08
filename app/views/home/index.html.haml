@@ -3,11 +3,11 @@
     .main-section
       .row
         #head_logo
-          = image_tag "/assets/logo-fest-2016.png", :style => "height:250px;margin-top:20px"
+          = image_tag "/assets/logo-fest-2016-blue.svg", :style => "height:250px;margin-top:20px"
       .row
-        / .col-md-10.col-md-offset-1
-        /   %h1.main-title.white
-        /     = t('dynamic_translations.main.title')
+        .col-md-10.col-md-offset-1
+          %h1.main-title
+            = t('dynamic_translations.main.title')
         .col-md-8.col-md-offset-2
           / %p.main-section-paragraphes.white
           /   = t('dynamic_translations.main.subtitle')
@@ -23,7 +23,7 @@
         .row.text-center
           .col-md-offset-3.col-md-4
             = text_field_tag :email_address,"", :class => "form-control flat", :placeholder => t('dynamic_translations.main.placeholder_stay_posted'), :style => "width: 110%;"
-          .col-md-2.submit-email-button
+          .col-md-2.btn-pink.submit-email-button
             = submit_tag t('dynamic_translations.main.stay_posted'), :class => "btn btn-primary"
 
 .blank_bg
@@ -34,7 +34,7 @@
           %span.pinkbg
             = t('dynamic_translations.about.subtitle')
       .row.centered
-        .col-md-6.col-md-offset-3
+        .col-md-4.col-md-offset-4
           /.col-xs-6.col-xs-offset-3
           %br
           %br
@@ -62,7 +62,7 @@
         %hr.pink
         %br/
         %br/
-      .row
+      .row{:style => "background-color: #fff; padding: 2em 3em"}
         .col-md-6.col-md-offset-3
           .row
             .col-md-4
