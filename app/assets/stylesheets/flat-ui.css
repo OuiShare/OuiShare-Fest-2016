@@ -851,7 +851,8 @@ address {
 }
 
 .btn.btn-pink {
-  background-color: #E03E51;
+  /*background-color: #E03E51;*/
+  background-color: #f56c6c; /* coral */
   font-family:'naiv_normal';
   font-family: "naiv_normal";
   padding: 19px 30px;
@@ -864,20 +865,20 @@ address {
 }
 
 .btn.btn-pink:hover a{
-  color:#E03E51;
+  color:#f56c6c;
 }
 .btn.btn-pink:hover,
 .btn.btn-pink:focus,
 .btn.btn-pink.dropdown-toggle {
   /*background-color: rgba(0, 30, 96, 0.43);*/
   background-color: #fff;
-  color: #E03E51;
+  color: #f56c6c;
 }
 
 .btn.btn-pink:hover,
 .btn.btn-pink:focus,
 .btn.btn-pink.dropdown-toggle a{
-  color: #E03E51;
+  color: #f56c6c;
 }
 
 .btn.btn-pink:active,
@@ -890,7 +891,7 @@ address {
 .btn-group.open .btn.btn-pink.dropdown-toggle,
 .btn.btn-pink.active a {
   background-color: #16a085;
-  color: #E03E51;
+  color: #f56c6c;
 }
 
 
