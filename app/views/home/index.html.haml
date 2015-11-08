@@ -11,13 +11,12 @@
         .col-md-8.col-md-offset-2
           / %p.main-section-paragraphes.white
           /   = t('dynamic_translations.main.subtitle')
-          %p.main-section-paragraphes.white
-            %span.bluebg
-              = t('dynamic_translations.main.date')
-          %p.centered.join_bouton
-            %a{:href => 'join#_tickets'}
-              %button.btn.btn-embossed.btn-primary
-                = t('dynamic_translations.reminder_ticket.getyourtickets')
+          %p.main-section-paragraphes
+            = t('dynamic_translations.main.date')
+          / %p.centered.join_bouton
+          /   %a{:href => 'join#_tickets'}
+          /     %button.btn.btn-embossed.btn-primary
+          /       = t('dynamic_translations.reminder_ticket.getyourtickets')
 
       = form_tag home_newsletter_collect_email_path, :class => "form-inline" do
         .row.text-center
@@ -26,11 +25,18 @@
           .col-md-2.btn-pink.submit-email-button
             = submit_tag t('dynamic_translations.main.stay_posted'), :class => "btn btn-primary"
 
-.blank_bg
+      .row
+        .col-md-8.col-md-offset-2
+          %p.centered.join_bouton
+            %a{:href => 'join#_tickets'}
+              %button.btn.btn-embossed.btn-primary.get-involved-btn
+                = t('dynamic_translations.reminder_ticket.getyourtickets')
+
+.blank_bg#_about
   .container
     .second-section
       .row.centered
-        %h3.col-md-6.col-md-offset-3.ouishare_stencil.white.text-center#_about{:style => "font-size:20px"}
+        %h3.col-md-6.col-md-offset-3.ouishare_stencil.white.text-center{:style => "font-size:20px"}
           %span.pinkbg
             = t('dynamic_translations.about.subtitle')
       .row.centered
@@ -52,7 +58,7 @@
           %p.topics.row.centered
             = image_tag "/assets/coeur-key-topic.png"
 
-.net_bg
+.net_bg#_topics
   .container
     .third-section
       .row.centered
@@ -244,7 +250,7 @@
 
         / Eventbrite form
         %div{:style => "width:100%; text-align:left;"}
-          %iframe{:allowtransparency => "true", :frameborder => "0", :height => "520", :hspace => "0", :marginheight => "5", :marginwidth => "5", :scrolling => "auto", :src => "http://www.eventbrite.com/tickets-external?eid=13148891689&ref=etckt&v=2", :vspace => "0", :width => "100%"}
+          %iframe{:allowtransparency => "true", :frameborder => "0", :height => "520", :hspace => "0", :marginheight => "5", :marginwidth => "5", :scrolling => "auto", :src => "http://www.eventbrite.com/tickets-external?eid=19202830182&ref=etckt&v=2", :vspace => "0", :width => "100%"}
           %div{:style => "font-family:Helvetica, Arial; font-size:10px; padding:5px 0 5px; margin:2px; width:100%; text-align:left;"}
             %a{:href => "http://www.eventbrite.com/r/etckt", :style => "color:#ddd; text-decoration:none;", :target => "_blank"} 
               =t('dynamic_translations.tickets.event_registration_online')
