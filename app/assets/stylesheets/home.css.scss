@@ -191,8 +191,10 @@
   .main-section{
     .main-title{
       font-size: 45px;
-      font-family: 'naiv_normal_thin';
+      // font-family: 'naiv_normal_thin';
+      font-family: 'naiv_normal';
       text-transform: uppercase;
+      color: #f56c6c;
     }
     .main-section-paragraphes{
       font-size:20px;
@@ -222,10 +224,11 @@
   padding-top: 5%;
 }
 .tickets {
-  background: url(/assets/fest2.png);
-  background-size: cover;
-  margin-top: -12%;
-  padding-top: 18%;
+  /*background: url(/assets/fest2.png);*/
+  /*background: url(/assets/16bg-bluetext.png);*/
+  /*background-size: cover;*/
+  /*margin-top: -12%;*/
+  /*padding-top: 18%;*/
 }
 
 
@@ -239,14 +242,14 @@
 }
 
 .first-part {
-  background: url(/assets/fest1.png) no-repeat;
-
+  background: url(/assets/16bg-header.png) no-repeat;
+  /*background: url(/assets/fest1.png) no-repeat;*/
   /*background-color: #33FF99; */
   margin-top: 0px;
   padding-top:5%;
   padding-bottom: 4%;
   text-align:center;
-  background-position: bottom;
+  /*background-position: bottom;*/
 }
 
 .program-part {
@@ -302,13 +305,10 @@
 }
 
 
-p.white {
-  font-size: 16px;
-}
-
 .tickets-section > div:nth-child(1) {
   padding-top: 12%;
-  padding-bottom: 32%;
+  padding-bottom: 12%;
+  // padding-bottom: 32%;
 }
 .third-section {
   padding-bottom: 15%;
@@ -331,7 +331,8 @@ a.btn:nth-child(3) {
 }
 
 .aboutouishare-section {
-  padding-bottom: 10%;
+  padding-top: 12%;
+  padding-bottom: 18%;
 }
 
 .aboutouishare-section > div:nth-child(1) > div:nth-child(1) > div:nth-child(4) > div:nth-child(2) {
@@ -402,7 +403,8 @@ hr.pink {
   margin-bottom: 20px;
   width: 120px;
   border: 0;
-  border-top: 4px solid #E03E52;
+  border-top: 4px solid #f56c6c;
+  // border-top: 4px solid #E03E52;
 }
 
 hr.blue {
@@ -426,7 +428,7 @@ p.col-xs-6:nth-child(2) {
 }
 
 .third-section > div:nth-child(1) > hr:nth-child(2) {
-  border-color: white -moz-use-text-color -moz-use-text-color;
+  // border-color: white -moz-use-text-color -moz-use-text-color;
 }
 
 #speakers > div:nth-child(1) > div:nth-child(1) > hr:nth-child(2) {
@@ -454,7 +456,7 @@ div.row:nth-child(10) > hr:nth-child(3) {
 }
 
 .aboutouishare-section > div:nth-child(1) > div:nth-child(1) > hr:nth-child(2) {
-  border-color: #001E60 -moz-use-text-color -moz-use-text-color;
+  // border-color: #001E60 -moz-use-text-color -moz-use-text-color;
 }
 
 div.col-xs-4:nth-child(1) {
@@ -524,13 +526,14 @@ p.col-xs-6 > a:hover {
 }
 
 .aboutouishare-section > div:nth-child(1) > div:nth-child(1) > h3:nth-child(1) {
-  color: #001E60;
+  // color: #001E60;
 }
 
 body > div.get-involved-section > div > div.centered.get-involved-options-choice > div > div > div > div.button > a {
-  background-color: #E03E51;
+  // background-color: #E03E51;
   font-family: 'naiv_normal';
-  padding: 19px 30px;
+  padding: 10px 15px;
+  // padding: 19px 30px;
   text-transform: uppercase;
   border-radius: 3px !important;
   font-size: 12px;
@@ -538,14 +541,14 @@ body > div.get-involved-section > div > div.centered.get-involved-options-choice
 
 body > div.get-involved-section > div > div.centered.get-involved-options-choice > div > div > div > div.title {
   min-height: 90px;
-  color: #E03E51;
+  color: #f56c6c;
   text-transform: uppercase;
-  font-family: 'naiv_normal';
+  // font-family: 'naiv_normal';
 }
 
 body > div.get-involved-section > div > div.row.centered > p {
   padding: 22px 26%;
-  text-align: left;
+  // text-align: left;
 }
 
 .btn.btn-pink.become-partner-btn{
@@ -555,12 +558,12 @@ body > div.get-involved-section > div > div.row.centered > p {
   margin: 40px 100px 0px 0px;
 
   a{
-    color: #E03E51;
+    color: #001E60;
   }
 }
 
 .btn.btn-pink.become-partner-btn:hover{
-  background-color: #E03E51;
+  background-color: #001E60;
   font-size: 18px;
   padding: 30px 50px;
   margin: 40px 100px 0px 0px;
@@ -570,8 +573,9 @@ body > div.get-involved-section > div > div.row.centered > p {
   }
 }
 
-.btn.btn-pink.get-involved-btn{
+.btn.get-involved-btn{
   padding: 25px 0px;
+  // padding: 25px 10px;
   width: 180px;
 }
 

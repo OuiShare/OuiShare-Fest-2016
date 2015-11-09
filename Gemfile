@@ -37,7 +37,7 @@ gem 'turbolinks'
 
 # Attachments
 gem 'paperclip'
-gem 'aws-sdk'
+gem 'aws-sdk', '< 2.0'
 
 gem 'exception_notification'
 

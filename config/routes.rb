@@ -56,17 +56,17 @@ OuiShareFest::Application.routes.draw do
     # get :contact
     # post :contact, :action => :contact_email
     get :site_off
-    # get :program
+    get :program
     get :about
-    # get :participants
+    get :participants
     get :join
-    # get :freelancers
-    # get :entreprises
-    # get :press_and_media
+    get :freelancers
+    get :entreprises
+    get :press_and_media
     # get :fest2014
-    # get :travel_information
-    # get :where_to_stay
-    # get :getting_to_the_venue
+    get :travel_information
+    get :where_to_stay
+    get :getting_to_the_venue
     get :zero_waste_event
     # get :satellite_events
     # get :stories

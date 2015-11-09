@@ -40,94 +40,87 @@
             And Dance
 
 
-.first-part
+.blank_bg
   .container
-    .main-section
-      .row
-        %h3.col-md-6.col-md-offset-3.ouishare_stencil.white.text-center#_about{:style => "font-size:20px;"}
+    .second-section
+      .row.centered
+        %h3.col-md-6.col-md-offset-3.ouishare_stencil.white.text-center#_about{:style => "font-size:20px;background-color: #f56c6c"}
           = t('dynamic_translations.about.subtitle')
-        .col-md-6.col-md-offset-3{:style => "text-align:left;"}
-          / %p.white{:style => 'margin-top: 45px;'}
-          /   = t('dynamic_translations.about.description')
-          / %br
-
-          / %p.white
-          /   = t('dynamic_translations.what_is_community.text1')
-          / %br
-          / %p.white
-          /   = t('dynamic_translations.what_is_community.text2')
-          / %br
-          / %p.white{:style =>"font-weight:bold;"}
-          /   = t('dynamic_translations.what_is_community.text3')
-          / %br
-          / %p.white
-          /   = t('dynamic_translations.what_is_community.text4')
-          / %br
-          / %p.white
-          /   = t('dynamic_translations.what_is_community.text5')
+        .col-md-4.col-md-offset-4.col-sm-8.col-sm-offset-2
+          %p{:style => 'margin-top: 45px;'}
+            = t('dynamic_translations.about.p1')
+          %br
+          %p
+            = t('dynamic_translations.about.p2')
+          %br
+          %p
+            = t('dynamic_translations.about.p3')
           %br
           %br
           %br
           %p.topics.row.centered
             = image_tag "/assets/coeur-key-topic.png"
+
+.net_bg
+  .container
     .third-section
       .row.centered
-        %h3.ouishare_stencil.white
+        %h3.ouishare_stencil
           = t('dynamic_translations.topics.title')
-        %hr.white
+        %hr.pink
         %br/
         %br/
       .row
         .col-md-6.col-md-offset-3
           .row
-            .col-xs-2
-              %p.topics
-                = image_tag "/assets/collab-economy-icon-2-blue.png"
             .col-md-4
               %h5
                 = t('dynamic_translations.topics.collcon_title')
-            .col-md-6
-              %p.white
-                = t('dynamic_translations.topics.collcon_desc')
-          .row
             .col-xs-2
               %p.topics
-                = image_tag "/assets/crowdfunding-icon-blue.png"
+                = image_tag "/assets/collab-economy-icon-2-blue.png"
+            .col-md-6
+              %p
+                = t('dynamic_translations.topics.collcon_desc')
+          .row
             .col-md-4
               %h5
                 = t('dynamic_translations.topics.cf_title')
-            .col-md-6
-              %p.white
-                = t('dynamic_translations.topics.cf_desc')
-          .row
             .col-xs-2
               %p.topics
-                = image_tag "/assets/open-knowledge-icon.png"
+                = image_tag "/assets/crowdfunding-icon-blue.png"            
+            .col-md-6
+              %p
+                = t('dynamic_translations.topics.cf_desc')
+          .row
             .col-md-4
               %h5
                 = t('dynamic_translations.topics.ok_title')
-            .col-md-6
-              %p.white
-                = t('dynamic_translations.topics.ok_desc')
-          .row
             .col-xs-2
               %p.topics
-                = image_tag "/assets/collab-economy-icon-blue.png"
+                = image_tag "/assets/open-knowledge-icon.png"
+            .col-md-6
+              %p
+                = t('dynamic_translations.topics.ok_desc')
+          .row
             .col-md-4
               %h5
                 = t('dynamic_translations.topics.om_title')
-            .col-md-6
-              %p.white
-                = t('dynamic_translations.topics.om_desc')
-          .row
             .col-xs-2
               %p.topics
-                = image_tag "/assets/horizontal-governance-icon-blue.png"
+                = image_tag "/assets/collab-economy-icon-blue.png"
+            .col-md-6
+              %p
+                = t('dynamic_translations.topics.om_desc')
+          .row
             .col-xs-4
               %h5
                 = t('dynamic_translations.topics.gov_title')
+            .col-xs-2
+              %p.topics
+                = image_tag "/assets/horizontal-governance-icon-blue.png"
             .col-md-6
-              %p.white
+              %p
                 = t('dynamic_translations.topics.gov_desc')
         .col-md-6.col-md-offset-3.space_background
           %br
@@ -168,76 +161,16 @@
         .row{:style => "margin-top:50px;"}
           .col-md-12
             .col-md-6.col-md-offset-3
-              %a.btn.btn-large.btn-primary{href: "https://www.youtube.com/playlist?list=PL8Bt3EbdmpKM4tYKyERKbp6VMYTjYZwCF", :target => "_blank", :style => "width: 170px;"}
+              %a.btn.btn-embossed.btn-primary{href: "https://www.youtube.com/playlist?list=PL8Bt3EbdmpKM4tYKyERKbp6VMYTjYZwCF", :target => "_blank", :style => "width: 170px;"}
                 = t('dynamic_translations.highlight.watch_the_sessions')
 
 
-/ OSFest14 report
-/ #_report.aboutouishare-section{:style => "padding-top: 100px;"}
-/   .container
-/     .row.centered
-/       %h3.ouishare_stencil
-/         = t('dynamic_translations.report.2014_title')
-/       %hr.blue
-/       %br
-/       %br
-/       .container.round_fond
-/         .row
-/           .col-md-8.col-md-offset-2
-/             %p
-/               = t('dynamic_translations.report.2014_description')
-
-/       .row
-/         .col-md-12.col-lg-8.col-lg-offset-2
-/           .col-sm-12.col-md-6
-/             %a{:href => 'http://bit.ly/OuiShareFest14_Report', :target => '_blank'}
-/               %img.img-responsive{:src => '/assets/osf_2014_report.jpg', :alt => 'OuiShare Fest 2014 Report', style:"margin:auto"}
-/           .col-sm-12.col-md-6
-/             %p.centered
-/               .col-md-12
-/                 .btn.btn-pink{:style => 'width: 280px; margin: 60px 0px 40px 0px;'}
-/                   %a{:href => 'http://bit.ly/OuiShareFest14_Report', :target => '_blank'}
-/                     = t('dynamic_translations.report.link')
-/               .col-md-12
-/                 .btn.btn-pink{:style => 'width: 280px;'}
-/                   %a{:href => 'http://2014.ouisharefest.com', :target => '_blank'}
-/                     = t('dynamic_translations.report.old_site')
-
-/ #location.triangle_bg#_about_location
-/   .container
-/     .row.centered
-/       %h3.ouishare_stencil
-/         = t('dynamic_translations.location.title')
-/         / A Magical Location
-/         %br
-/         %br
-/       .container.round_fond
-/         %h4{:style => "font-size:18px;"}
-/           = t('dynamic_translations.location.description')
-/           / We look forward to welcoming you at the Cabaret Sauvage in northeastern Paris: a magical venue with a circus-like hall, located by the canal in the Parc de la Villette.
-/       %br
-/       %br
-/       .col-md-6
-
-/         %object{height: "375", width: "100%"}
-/           %param{name: "flashvars", value: "offsite=true&lang=fr-fr&page_show_url=%2Fphotos%2Fouishare%2Fsets%2F72157641311640224%2Fshow%2F&page_show_back_url=%2Fphotos%2Fouishare%2Fsets%2F72157641311640224%2F&set_id=72157641311640224&jump_to="}/
-/           %param{name: "movie", value: "http://www.flickr.com/apps/slideshow/show.swf?v=140556"}/
-/           %param{name: "allowFullScreen", value: "true"}/
-/           %embed{allowfullscreen: "true", flashvars: "offsite=true&lang=fr-fr&page_show_url=%2Fphotos%2Fouishare%2Fsets%2F72157641311640224%2Fshow%2F&page_show_back_url=%2Fphotos%2Fouishare%2Fsets%2F72157641311640224%2F&set_id=72157641311640224&jump_to=", height: "375", src: "http://www.flickr.com/apps/slideshow/show.swf?v=140556", type: "application/x-shockwave-flash", width: "100%"}
-/       .col-md-6
-/         #gmap_canvas{style: "height:375px;width:100%;margin-bottom:20px;"}
-/     .row.centered
-/       %br
-/       %br
-/       %br
-/       %br
-
-.background_2#_about_press
+.net_bg#_about_press
   .container
     .row.centered
-      %h3.ouishare_stencil.white
+      %h3.ouishare_stencil
         = t('dynamic_translations.press.title')
-      %hr.white
+      %hr.pink
       %br
 
     #myCarousel.carousel.slide.col-xs-12.col-md-offset-1.col-lg-offset-2.col-md-10.col-lg-8{ 'data-ride' => "carousel"}
@@ -248,37 +181,37 @@
           .press-content
             .press-text
               %h3.naiv
-                “For anyone under the impression that the rise of the sharing economy is simply a blip reaction to the recession, the OuiShare conference is proving otherwise”
+                The Fest is an event to not only inspire the new opportunities in the Collaborative Economy, but also to provide a venue to outline and debate the challenges.
           .label-press
-            The Guardian
+            Jeremiah Owyang, Founder of Crowd Companies
         .item
           .press-content
             .press-text
               %h3.naiv
-                This year’s theme, the Age of Communities, was broad enough to welcome all sides of the movement: venture capitalists alongside black markets, slow foodies alongside Bitcoin promoters.
+                There's no other conference I've been to that has this 'TED meets Burning Man' feel.
           .label-press
-            Al Jazeera
+            Arun Sundararajan, Professor at NYU’s Stern School of Business
         .item
           .press-content
             .press-text
               %h3.naiv
-                “Parmi les trois points sensibles évoqués à l'occasion du OuiShareFest: le rapport aux institutions, la possibilité de participer à la réduction des inégalités, et la durabilité du modèle collaboratif”
+                At the Ouishare Fest, the great and the good from Europe’s sharing economy have been delving deep into what it means to be running a collaborative business model within a capitalist framework.
           .label-press
-            Le Monde
+            Izabella Kaminska, FT
         .item
           .press-content
             .press-text
               %h3.naiv
-                \...este festival sin orden pero con sentido..
+                L’édition 2015 du OuiShare Fest marque une nouvelle étape, celle de la crise existentielle, voire d’adolescence (tout grandit si vite avec le numérique).
           .label-press
-            El Pais
+            Usine Digital
         .item
           .press-content
             .press-text
               %h3.naiv
-                The atmosphere was positive and driven. This was an assembly of doers, creators, and thinkers.
+                When co-operatives and left-wingers gathered at the Fest to discuss ways that grass-roots organisations could undermine giant repositories of data like Facebook, the blockchain made it into almost every speech.
           .label-press
-            Shareable
+            The Economist
 
       %img.quote-left-carousel{:src => '/assets/quote_left.png', :alt => 'quote left'}
       %img.quote-right-carousel{:src => '/assets/quote_left.png', :alt => 'quote right'}
@@ -292,18 +225,18 @@
 
 
 / About OuiShare
-#_ouishare.aboutouishare-section
+#_ouishare.aboutouishare-section.heart_bg
   .container
     .row.centered
       %h3.ouishare_stencil
         = t('dynamic_translations.about.ouishare_title')
-      %hr.blue
+      %hr.pink
       %br
       %br
       .container.round_fond
         .row
           .col-md-8.col-md-offset-2
-            %p
+            %p{:style => "padding-top:30px"}
               = t('dynamic_translations.about.ouishare_text')
 
         .row
@@ -311,7 +244,7 @@
             .col-md-12
               %img{:src => '/assets/coeur-aboutouishare.png', :alt => 'OuiShare logo'}
             .col-md-12
-              .btn.btn-pink{:style => 'margin: 40px 0px 0px 0px;'}
-                %a{:href => 'http://ouishare.net/en/users/sign_up', :target => '_blank'}
+              %a{:href => 'http://ouishare.net/en/users/sign_up', :target => '_blank'}
+                %button.btn.btn-embossed.btn-primary{:style => 'margin: 40px 0px 0px 0px;'}
                   = t('dynamic_translations.about.ouishare_btn')
 

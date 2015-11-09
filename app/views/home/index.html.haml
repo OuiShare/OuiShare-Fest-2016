@@ -1,123 +1,125 @@
-.first-part
+.main_bg
   .container
     .main-section
       .row
         #head_logo
-          = image_tag "/assets/osf16_landing.svg", :style => "height:250px;margin-top:40px"
+          = image_tag "/assets/logo-fest-2016-blue.svg", :style => "height:250px;margin-top:20px"
       .row
         .col-md-10.col-md-offset-1
-          / %h1.main-title.white
-          /   = t('dynamic_translations.main.title')
+          %h1.main-title
+            = t('dynamic_translations.main.title')
         .col-md-8.col-md-offset-2
-          %p.main-section-paragraphes.white
-            = t('dynamic_translations.main.subtitle')
-          %p.main-section-paragraphes.white
+          / %p.main-section-paragraphes.white
+          /   = t('dynamic_translations.main.subtitle')
+          %p.main-section-paragraphes
             = t('dynamic_translations.main.date')
             | Test
           / %p.centered.join_bouton
           /   %a{:href => 'join#_tickets'}
-          /     %button.btn.btn-embossed.btn-primary{:style => "background-color: white; color: #E03E51"}
+          /     %button.btn.btn-embossed.btn-primary
           /       = t('dynamic_translations.reminder_ticket.getyourtickets')
 
       = form_tag home_newsletter_collect_email_path, :class => "form-inline" do
         .row.text-center
           .col-md-offset-3.col-md-4
             = text_field_tag :email_address,"", :class => "form-control flat", :placeholder => t('dynamic_translations.main.placeholder_stay_posted'), :style => "width: 110%;"
-          .col-md-2.submit-email-button
+          .col-md-2.btn-pink.submit-email-button
             = submit_tag t('dynamic_translations.main.stay_posted'), :class => "btn btn-primary"
 
+      .row
+        .col-md-8.col-md-offset-2
+          %p.centered.join_bouton
+            %a{:href => 'join#_tickets'}
+              %button.btn.btn-embossed.btn-primary.get-involved-btn
+                = t('dynamic_translations.reminder_ticket.getyourtickets')
 
+.blank_bg#_about
+  .container
     .second-section
-      .row
-        %h3.col-md-6.col-md-offset-3.ouishare_stencil.white.text-center#_about{:style => "font-size:20px;"}
-          = t('dynamic_translations.about.subtitle')
-      .row
-        .col-md-6.col-md-offset-3
+      .row.centered
+        %h3.col-md-6.col-md-offset-3.ouishare_stencil.white.text-center{:style => "font-size:20px"}
+          %span.pinkbg
+            = t('dynamic_translations.about.subtitle')
+      .row.centered
+        .col-md-4.col-md-offset-4.col-sm-8.col-sm-offset-2
           /.col-xs-6.col-xs-offset-3
           %br
           %br
-          / %p.white
-          /   = t('dynamic_translations.about.description')
-          / %br
-          / %p.white
-          /   = t('dynamic_translations.what_is_community.text1')
-          / %br
-          / %p.white
-          /   = t('dynamic_translations.what_is_community.text2')
-          / %br
-          / %p.white
-          /   = t('dynamic_translations.what_is_community.text3')
-          / %br
-          / %p.white
-          /   = t('dynamic_translations.what_is_community.text4')
-          / %br
-          / %p.white
-          /   = t('dynamic_translations.what_is_community.text5')
+          %p
+            = t('dynamic_translations.about.p1')
+          %br
+          %p
+            = t('dynamic_translations.about.p2')
+          %br
+          %p
+            = t('dynamic_translations.about.p3')
           %br
           %br
           %br
           %p.topics.row.centered
             = image_tag "/assets/coeur-key-topic.png"
 
+.net_bg#_topics
+  .container
     .third-section
       .row.centered
-        %h3.ouishare_stencil.white
+        %h3.ouishare_stencil
           = t('dynamic_translations.topics.title')
           /Key topics
-        %hr.white
+        %hr.pink
         %br/
         %br/
-      .row
+      .row{:style => "background-color: #fff; padding: 2em 3em"}
         .col-md-6.col-md-offset-3
           .row
-            .col-xs-2
-              %p.topics
-                = image_tag "/assets/collab-economy-icon-2-blue.png"
             .col-md-4
               %h5
                 = t('dynamic_translations.topics.collcon_title')
-            .col-md-6
-              %p.white
-                = t('dynamic_translations.topics.collcon_desc')
-          .row
             .col-xs-2
               %p.topics
-                = image_tag "/assets/crowdfunding-icon-blue.png"
+                = image_tag "/assets/collab-economy-icon-2-blue.png"
+            .col-md-6
+              %p
+                = t('dynamic_translations.topics.collcon_desc')
+          .row
             .col-md-4
               %h5
                 = t('dynamic_translations.topics.cf_title')
-            .col-md-6
-              %p.white
-                = t('dynamic_translations.topics.cf_desc')
-          .row
             .col-xs-2
               %p.topics
-                = image_tag "/assets/open-knowledge-icon.png"
+                = image_tag "/assets/crowdfunding-icon-blue.png"            
+            .col-md-6
+              %p
+                = t('dynamic_translations.topics.cf_desc')
+          .row
             .col-md-4
               %h5
                 = t('dynamic_translations.topics.ok_title')
-            .col-md-6
-              %p.white
-                = t('dynamic_translations.topics.ok_desc')
-          .row
             .col-xs-2
               %p.topics
-                = image_tag "/assets/collab-economy-icon-blue.png"
+                = image_tag "/assets/open-knowledge-icon.png"
+            .col-md-6
+              %p
+                = t('dynamic_translations.topics.ok_desc')
+          .row
             .col-md-4
               %h5
                 = t('dynamic_translations.topics.om_title')
-            .col-md-6
-              %p.white
-                = t('dynamic_translations.topics.om_desc')
-          .row
             .col-xs-2
               %p.topics
-                = image_tag "/assets/horizontal-governance-icon-blue.png"
+                = image_tag "/assets/collab-economy-icon-blue.png"
+            .col-md-6
+              %p
+                = t('dynamic_translations.topics.om_desc')
+          .row
             .col-xs-4
               %h5
                 = t('dynamic_translations.topics.gov_title')
+            .col-xs-2
+              %p.topics
+                = image_tag "/assets/horizontal-governance-icon-blue.png"
             .col-md-6
-              %p.white
+              %p
                 = t('dynamic_translations.topics.gov_desc')
         .col-md-6.col-md-offset-3.space_background
           %br
@@ -180,8 +182,9 @@
         .row{:style => "margin-top:50px;"}
           .col-md-12
             .col-md-6.col-md-offset-3
-              %a.btn.btn-large.btn-primary{href: "https://www.youtube.com/playlist?list=PL8Bt3EbdmpKM4tYKyERKbp6VMYTjYZwCF", :target => "_blank", :style => "width: 170px;"}
-                = t('dynamic_translations.highlight.watch_the_sessions')
+              %a{href: "https://www.youtube.com/playlist?list=PL8Bt3EbdmpKM4tYKyERKbp6VMYTjYZwCF", :target => "_blank", :style => "width: 170px;"}
+                %button.btn.btn-large.btn-primary
+                  = t('dynamic_translations.highlight.watch_the_sessions')
 
 / Zero Waste banner
 
@@ -223,27 +226,41 @@
 /                 %button.btn.btn-embossed.btn-primary.hide#btn_showspeakers_up
 /                   = t('dynamic_translations.speakers.hide_all')
 
-/ .tickets
-/   .container.tickets-section
-/     .row
-/       .col-md-6.col-md-offset-3
-/         %h3.ouishare_stencil.white.centered
-/           = t('dynamic_translations.tickets.title')
-/         %hr.white
-/         %br
-/         %br
-/         %p.white
-/           = t('dynamic_translations.tickets.description1')
-/           %a{href: "/join#_getinvolved"}
-/             = t('dynamic_translations.tickets.get_involved')
-/             = "."
-/         %p.white
-/           = t('dynamic_translations.tickets.description2')
-/           %a{href: "http://bit.ly/OSFest14ticketapplication"}
-/             = t('dynamic_translations.tickets.apply_tickets_link')
-/         %br
-/         %br
+.tickets.blue_bg{:style => "margin-bottom:12%;"}
+  .container.tickets-section
+    .row.centered
+      .col-md-10.col-md-offset-1.col-sm-12
+        %h3.ouishare_stencil.white.centered
+          = t('dynamic_translations.tickets.title')
+        %hr.white
+        %br
+        %br
+        %p.white
+          = t('dynamic_translations.tickets.description1')
+          %a{href: "/join#_getinvolved"}
+            = t('dynamic_translations.tickets.get_involved')
+        /     = "."
+        / %p.white
+        /   = t('dynamic_translations.tickets.description2')
+        /   %a{href: "http://bit.ly/OSFest14ticketapplication"}
+        /     = t('dynamic_translations.tickets.apply_tickets_link')
+        %p.text-center
+          %img{:src => '/assets/2016-ticket-options-03.png', :alt => 'Ticket options', :style => "max-width: 100%"}
+        %br
+        %br
 
+        / Eventbrite form
+        %div{:style => "width:100%; text-align:left;"}
+          %iframe{:allowtransparency => "true", :frameborder => "0", :height => "520", :hspace => "0", :marginheight => "5", :marginwidth => "5", :scrolling => "auto", :src => "http://www.eventbrite.com/tickets-external?eid=19202830182&ref=etckt&v=2", :vspace => "0", :width => "100%"}
+          %div{:style => "font-family:Helvetica, Arial; font-size:10px; padding:5px 0 5px; margin:2px; width:100%; text-align:left;"}
+            %a{:href => "http://www.eventbrite.com/r/etckt", :style => "color:#ddd; text-decoration:none;", :target => "_blank"} 
+              =t('dynamic_translations.tickets.event_registration_online')
+            %span{:style => "color:#ddd;"} 
+              =t('dynamic_translations.tickets.for')
+            %a{:href => "https://www.eventbrite.com/e/ouishare-fest-paris-2016-tickets-19202830182?aff=eac2", :style => "color:#ddd; text-decoration:none;", :target => "_blank"} OuiShare Fest 2016
+            %span{:style => "color:#ddd;"} 
+              =t('dynamic_translations.tickets.powered_by')
+            %a{:href => "http://www.eventbrite.com?ref=etckt", :style => "color:#ddd; text-decoration:none;", :target => "_blank"} Eventbrite
 
 
 /         .col-md-12.centered
@@ -334,8 +351,9 @@
     .row.centered
       .col-md-5.col-md-offset-4
         .btn.btn-pink.become-partner-btn
-          %a{:href => 'mailto:partners@ouishare.net'}
-            Become a partner
+          %a{:href => 'mailto:partners@ouisharefest.com'}
+            / Become a partner
+            = t('dynamic_translations.partners.button')
 
 
 
@@ -394,50 +412,50 @@
     .centered.get-involved-options-choice
       .span-centered
         .col-md-10.col-md-offset-1.col-lg-8.col-lg-offset-2
-          .col-md-4.col-md-offset-2
-            .title
-              = t('dynamic_translations.get_involved.join_the_team')
-            .btn.btn-pink.get-involved-btn
-              %a{href: "mailto:francesca@ouishare.net", :target => "_blank"}
-                =t('dynamic_translations.get_involved.join')
-          / .col-md-4
-          /   .title
-          /     =t('dynamic_translations.get_involved.contribute')
-          /   .btn.btn-pink.get-involved-btn
-          /     %a{href: "http://awards.ouishare.net/2015/applications/", target: "_blank"}
-          /       =t('dynamic_translations.get_involved_closed.submit')
-          / .col-md-4
-          /   .title
-          /     =t('dynamic_translations.awards.vote_txt')
-          /   .btn.btn-pink.get-involved-btn
-          /     %a{href: "http://awards.ouishare.net/2015/vote/", target: "_blank"}
-          /       =t('dynamic_translations.awards.vote_btn')
-          / .col-md-4
-          /   .title
-          /     =t('dynamic_translations.get_involved.idea_wall')
-          /   .btn.btn-pink.get-involved-btn
-          /     %a{href: "mailto:partners@ouishare.net", :target => "_blank"}
-          /       = t('dynamic_translations.get_involved.idea_wall_button')
           .col-md-4
             .title
-              =t('dynamic_translations.get_involved.idea_wall')
-            .btn.btn-pink.get-involved-btn
-              %a{href: "mailto:partners@ouishare.net", :target => "_blank"}
-                = t('dynamic_translations.get_involved.idea_wall_button')
+              =t('dynamic_translations.get_involved.program_call_txt')
+            %a{href: "https://ouisharefest.typeform.com/to/TTSxdV", target: "_blank"}
+              %button.btn.btn-embossed.btn-primary.get-involved-btn
+                =t('dynamic_translations.get_involved.program_call_btn')
+          .col-md-4
+            .title
+              = t('dynamic_translations.get_involved.volunteers_join_txt')
+            %a{href: "mailto:volunteers@ouisharefest.com", :target => "_blank"}
+              %button.btn.btn-embossed.btn-primary.get-involved-btn
+                =t('dynamic_translations.get_involved.volunteers_join_btn')
+          / .col-md-4
+          /   .title
+          /     =t('dynamic_translations.get_involved.awards_apply_txt')
+          /   %a{href: "http://awards.ouishare.net/2016/applications/", target: "_blank"}
+          /     %button.btn.btn-pink.get-involved-btn
+          /       =t('dynamic_translations.get_involved.awards_apply_btn')
+          / .col-md-4
+          /   .title
+          /     =t('dynamic_translations.get_involved.awards_vote_txt')
+          /   %a{href: "http://awards.ouishare.net/2015/vote/", target: "_blank"}
+          /     %button.btn.btn-pink.get-involved-btn
+          /       =t('dynamic_translations.get_involved.awards_vote_btn')
+          .col-md-4
+            .title
+              =t('dynamic_translations.get_involved.partners_txt')
+            %a{href: "mailto:partners@ouisharefest.com", :target => "_blank"}
+              %button.btn.btn-embossed.btn-primary.get-involved-btn
+                = t('dynamic_translations.get_involved.partners_btn')
 
 / About OuiShare
-.aboutouishare-section
+.aboutouishare-section.heart_bg
   .container
     .row.centered
       %h3.ouishare_stencil
         = t('dynamic_translations.about.ouishare_title')
-      %hr.blue
+      %hr.pink
       %br
       %br
       .container.round_fond
         .row
           .col-md-8.col-md-offset-2
-            %p
+            %p{:style => "padding-top:30px"}
               = t('dynamic_translations.about.ouishare_text')
 
         .row
@@ -445,8 +463,8 @@
             .col-md-12
               %img{:src => '/assets/coeur-aboutouishare.png', :alt => 'OuiShare logo'}
             .col-md-12
-              .btn.btn-pink{:style => 'margin: 40px 0px 0px 0px;'}
-                %a{:href => 'http://ouishare.net/en/users/sign_up', :target => '_blank'}
+              %a{:href => 'http://ouishare.net/en/users/sign_up', :target => '_blank'}
+                %button.btn.btn-embossed.btn-primary{:style => 'margin: 40px 0px 0px 0px;'}
                   = t('dynamic_translations.about.ouishare_btn')
 
   - if !@visited
