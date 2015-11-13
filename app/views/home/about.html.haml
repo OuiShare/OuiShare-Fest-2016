@@ -55,11 +55,11 @@
           %br
           %p
             = t('dynamic_translations.about.p3')
-          %br
-          %br
-          %br
-          %p.topics.row.centered
-            = image_tag "/assets/coeur-key-topic.png"
+          / %br
+          / %br
+          / %br
+          / %p.topics.row.centered
+          /   = image_tag "/assets/coeur-key-topic.png"
 
 .net_bg
   .container
@@ -161,8 +161,9 @@
         .row{:style => "margin-top:50px;"}
           .col-md-12
             .col-md-6.col-md-offset-3
-              %a.btn.btn-embossed.btn-primary{href: "https://www.youtube.com/playlist?list=PL8Bt3EbdmpKM4tYKyERKbp6VMYTjYZwCF", :target => "_blank", :style => "width: 170px;"}
-                = t('dynamic_translations.highlight.watch_the_sessions')
+              %a{href: "https://www.youtube.com/playlist?list=PL8Bt3EbdmpKM4tYKyERKbp6VMYTjYZwCF", :target => "_blank", :style => "width: 170px;"}
+                %button.btn.btn-large.btn-primary
+                  = t('dynamic_translations.highlight.watch_the_sessions')
 
 
 .net_bg#_about_press
