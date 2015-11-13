@@ -405,7 +405,7 @@ body {
 .blank_bg {
 	/*background-color: #F7F7F7;*/
 	background-color: #FFF;
-	min-height: 100%;
+	/*min-height: 100%;*/
 	width: 100%;
 	margin-top: 0px;
 	padding-top: 130px;
