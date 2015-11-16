@@ -6,7 +6,7 @@
           = image_tag "/assets/logo-fest-2016-blue.svg", :style => "height:250px;margin-top:20px"
       .row
         .col-md-10.col-md-offset-1
-          %h1.main-title
+          %h1.main-title{:style => "color:#001E60"}
             = t('dynamic_translations.main.title')
         .col-md-8.col-md-offset-2
           / %p.main-section-paragraphes.white
@@ -27,23 +27,24 @@
 
       .row
         .col-md-8.col-md-offset-2
+          %br
+          %br
           %p.centered.join_bouton
             %a{:href => 'join#_tickets'}
-              %button.btn.btn-embossed.btn-primary.get-involved-btn
+              %button.btn.btn-embossed.btn-primary
                 = t('dynamic_translations.reminder_ticket.getyourtickets')
 
 .blank_bg#_about
   .container
     .second-section
       .row.centered
-        %h3.col-md-6.col-md-offset-3.ouishare_stencil.white.text-center{:style => "font-size:20px"}
-          %span.pinkbg
-            = t('dynamic_translations.about.subtitle')
-      .row.centered
+        %h3.col-md-6.col-md-offset-3.ouishare_stencil.white.text-center{:style => "font-size:20px;background-color: #f56c6c; line-height: 1.5em;"}
+          = t('dynamic_translations.about.subtitle')
+      .row.centered{:style => "padding-bottom:0"}
         .col-md-4.col-md-offset-4.col-sm-8.col-sm-offset-2
           /.col-xs-6.col-xs-offset-3
-          %br
-          %br
+          / %br
+          / %br
           %p
             = t('dynamic_translations.about.p1')
           %br
@@ -52,11 +53,11 @@
           %br
           %p
             = t('dynamic_translations.about.p3')
-          %br
-          %br
-          %br
-          %p.topics.row.centered
-            = image_tag "/assets/coeur-key-topic.png"
+          / %br
+          / %br
+          / %br
+          / %p.topics.row.centered
+          /   = image_tag "/assets/coeur-key-topic.png"
 
 .net_bg#_topics
   .container
@@ -125,37 +126,37 @@
 
 
 / OuiShare News
-.ouishare-news-section
-  .container
-    .row.centered
-      %h3.ouishare_stencil
-        = t('dynamic_translations.ouishare-news.title')
-      %hr.pink
+/ .ouishare-news-section
+/   .container
+/     .row.centered
+/       %h3.ouishare_stencil
+/         = t('dynamic_translations.ouishare-news.title')
+/       %hr.pink
 
-  #slider-container.text-center{:style => "min-height:100%;"}
-    #slider1_container{:style => "position: relative; top: 0px; left: 0px; width: 1200px; height: 300px;"}
-      / Slides Container
-      %div.scale-jssor{:style => "cursor: move; position: absolute; left: 0px; top: 0px; width: 1200px; height: 300px; overflow: hidden;", :u => "slides"}
-        - @magazines.each do |f|
-          %div
-            - if !f.content.split('img')[1].nil?
-              %img{:src => "#{f.content.split(' ')[3].split('"')[1].gsub(/-150x150/, "")}", :u => "image"}
-              %span.presentation.ouishare_stencil.white
-                = f.name
-              %span.btn.btn-blue{:style => "position:absolute; width: 100px; height: 50px; top: 70%; left: 40%;"}
-                %a{href: "#{f.url}", target:"blank"}
-                  Read More
-            - else
-              = image_tag "/assets/landing_logo.png", :style => "height:150px;"
-              %span.presentation.ouishare_stencil.white
-                = f.name
-              %span.btn.btn-blue{:style => "position:absolute; width: 100px; height: 50px; top: 70%; left: 40%;"}
-                %a{href: "#{f.url}", target:"blank"}
-                  Read More
+/   #slider-container.text-center{:style => "min-height:100%;"}
+/     #slider1_container{:style => "position: relative; top: 0px; left: 0px; width: 1200px; height: 300px;"}
+/       / Slides Container
+/       %div.scale-jssor{:style => "cursor: move; position: absolute; left: 0px; top: 0px; width: 1200px; height: 300px; overflow: hidden;", :u => "slides"}
+/         - @magazines.each do |f|
+/           %div
+/             - if !f.content.split('img')[1].nil?
+/               %img{:src => "#{f.content.split(' ')[3].split('"')[1].gsub(/-150x150/, "")}", :u => "image"}
+/               %span.presentation.ouishare_stencil.white
+/                 = f.name
+/               %span.btn.btn-blue{:style => "position:absolute; width: 100px; height: 50px; top: 70%; left: 40%;"}
+/                 %a{href: "#{f.url}", target:"blank"}
+/                   Read More
+/             - else
+/               = image_tag "/assets/landing_logo.png", :style => "height:150px;"
+/               %span.presentation.ouishare_stencil.white
+/                 = f.name
+/               %span.btn.btn-blue{:style => "position:absolute; width: 100px; height: 50px; top: 70%; left: 40%;"}
+/                 %a{href: "#{f.url}", target:"blank"}
+/                   Read More
 
-      %span.jssora13l{:style => "width: 40px; height: 50px; top: 123px; left: 30px;", :u => "arrowleft"}
-      / Arrow Right
-      %span.jssora13r{:style => "width: 40px; height: 50px; top: 123px; right: 30px", :u => "arrowright"}
+/       %span.jssora13l{:style => "width: 40px; height: 50px; top: 123px; left: 30px;", :u => "arrowleft"}
+/       / Arrow Right
+/       %span.jssora13r{:style => "width: 40px; height: 50px; top: 123px; right: 30px", :u => "arrowright"}
 
 
 / Highlights from 2015
