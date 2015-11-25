@@ -35,56 +35,6 @@
             %a{:href => "http://www.eventbrite.com?ref=etckt", :style => "color:#ddd; text-decoration:none;", :target => "_blank"} Eventbrite
 
 
-/ Buttons to ticket pages
-
-/         .col-md-12.centered
-/           .row.centered
-/             .col-md-8.col-md-offset-2.pricing-table
-/               %a{href: home_freelancers_path, :style => 'text-decoration:none;'}
-/                 .btn.btn-pink.buy-tickets-btn
-/                   = t('dynamic_translations.tickets.freelancers_small_business')
-/                   %br
-/                   = t('dynamic_translations.tickets.freelancers_small_business_desc')
-
-/             .col-md-8.col-md-offset-2.pricing-table
-/               %a{href: home_entreprises_path, :style => 'text-decoration:none;'}
-/                 .btn.btn-pink.buy-tickets-btn
-/                   =t('dynamic_translations.tickets.entreprises')
-/                   %br
-/                   = t('dynamic_translations.tickets.entreprises_desc')
-
-
-/             .col-md-8.col-md-offset-2.pricing-table
-/               %a{href: home_press_and_media_path, :style => 'text-decoration:none;'}
-/                 .btn.btn-pink.buy-tickets-btn
-/                   =t('dynamic_translations.tickets.press_media')
-
-/             %br
-/             %br
-
-/ Press-media tickets
-
-.blank_bg#_press_media
-  .container
-    .row.centered
-      %h3.ouishare_stencil
-        = t('dynamic_translations.tickets.press_media')
-      %hr.pink  
-      %br
-      %br
-      %br
-      %p.text-center{:style => "font-size: 20px; text-align: center;"}
-        %a{:href => "mailto:press@ouisharefest.com"}
-          = t('dynamic_translations.press_media.request')
-        %br
-        %br
-      %p.text-center{:style => "font-size: 20px; text-align: center;"}
-        %a{href: "https://drive.google.com/folderview?id=0B2XLJoIHF74KNVVzR1VLTEZ1a2M&usp=sharing"} 
-          = t('dynamic_translations.press_media.download')
-        %br
-
-
-
 / Get Involved
 
 .get-involved-section#_getinvolved
@@ -134,29 +84,39 @@
                 = t('dynamic_translations.get_involved.partners_btn')
 
 
+/ Become a partner
+.become_partner
+  .container 
+    .row.centered
+      .col-md-5.col-md-offset-4
+        .btn.btn-pink.become-partner-btn
+          %a{:href => 'mailto:partners@ouisharefest.com'}
+            / Become a partner
+            = t('dynamic_translations.get_involved.partners_txt')
 
-#_awards.aboutouishare-section
+
+/ Press-media tickets
+
+.blank_bg#_press_media
   .container
     .row.centered
       %h3.ouishare_stencil
-        = t('dynamic_translations.ouishare_awards.title')
-      %hr.pink
+        = t('dynamic_translations.tickets.press_media')
+      %hr.pink  
       %br
       %br
-      .container.round_fond
-        .row
-          .col-md-8.col-md-offset-2
-            %p
-              = t('dynamic_translations.ouishare_awards.first_part')
+      %br
+      %p.text-center{:style => "font-size: 20px; text-align: center;"}
+        %a{:href => "mailto:press@ouisharefest.com"}
+          = t('dynamic_translations.press_media.request')
+        %br
+        %br
+      %p.text-center{:style => "font-size: 20px; text-align: center;"}
+        %a{href: "https://drive.google.com/folderview?id=0B2XLJoIHF74KNVVzR1VLTEZ1a2M&usp=sharing"} 
+          = t('dynamic_translations.press_media.download')
+        %br
 
-        .row
-          .col-md-8.col-md-offset-2
-            .col-md-12
-              %img{:src => '/assets/ouishare-award.png', :alt => 'ouishare awards logo', :style => 'width:50%;'}
-            .col-md-12
-              %a{:href => 'http://awards.ouishare.net/2015/', :target => '_blank'}
-                .btn.btn-embossed.btn-primary{:style => 'margin: 30px 0px 0px 0px;'}
-                  = t('dynamic_translations.ouishare_awards.see_2015_winners')
+
 
 #_prepare.blank_bg
   .container

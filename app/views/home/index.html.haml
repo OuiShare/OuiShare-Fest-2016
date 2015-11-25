@@ -264,97 +264,6 @@
             %a{:href => "http://www.eventbrite.com?ref=etckt", :style => "color:#ddd; text-decoration:none;", :target => "_blank"} Eventbrite
 
 
-/         .col-md-12.centered
-/           .row.centered
-
-/             .col-md-8.col-md-offset-2.pricing-table.turquoise.bordered.plain
-/               %a{href: home_freelancers_path}
-
-/                 %ul.centered.alt
-/                   %li.title{:style => "font-family: naiv_normal,Helvetica; color:#E03E51;"}
-/                     = t('dynamic_translations.tickets.freelancers_small_business')
-/                   %li.button{:style => "font-family: naiv_normal,Helvetica; padding-top:0px; color:#E03E51;"}
-/                     = t('dynamic_translations.tickets.freelancers_small_business_desc')
-/             %br
-/             %br
-
-/             .col-md-8.col-md-offset-2.pricing-table.turquoise.bordered.plain
-/               %a{href: home_entreprises_path}
-
-/                 %ul.centered.alt
-/                   %li.title{:style => "font-family: naiv_normal,Helvetica; color:#E03E51;"}
-/                     =t('dynamic_translations.tickets.entreprises')
-/                   %li.button{:style => "font-family: naiv_normal,Helvetica; padding-top:0px; color:#E03E51;"}
-/                     = t('dynamic_translations.tickets.entreprises_desc')
-/             %br
-/             %br
-/             .col-md-8.col-md-offset-2.pricing-table.turquoise.bordered.plain
-/               %a{href: home_press_and_media_path}
-/                 %ul.centered.alt
-/                   %li.title{:style => "font-family: naiv_normal,Helvetica; color:#E03E51;"}
-/                     =t('dynamic_translations.tickets.press_media')
-/                   %li.button{:style => "font-family: naiv_normal,Helvetica; padding-top:0px; color:#E03E51;"}
-/                     %br
-/                     / = t('dynamic_translations.tickets.entreprises_desc')
-/             %br
-/             %br
-
-
-/ .partners-container
-/   .container.sinfo
-/     - if !@partners.blank?
-/       .row.centered
-/         %br
-/         %h3.ouishare_stencil
-/           = t('dynamic_translations.partners.title')
-/         %hr.pink
-/         .partners
-/       = render "/individuals/partials/partners_display", :partners => @partners, :important_partners_display => true, :important_partners_count => 3
-/       %br
-/       %br
-
-/     - if !@media_partners.blank?
-/       .row.centered
-/         %br
-/         %h3.ouishare_stencil
-/           = t('dynamic_translations.partners.media_partner_title')
-/         %hr.pink
-/         .partners
-/       = render "/individuals/partials/partners_display", :partners => @media_partners, :important_partners_display => false
-/       %br
-/       %br
-
-/     - if !@friends.blank?
-/       .row.centered
-/         %br
-/         %h3.ouishare_stencil
-/           = t('dynamic_translations.partners.friends_title')
-/         %hr.pink
-/         .partners
-/       = render "/individuals/partials/partners_display", :partners => @friends, :important_partners_display => false
-
-/       %br
-/       %br
-
-
-/     - if !@supporters.blank?
-/       .row.centered
-/         %br
-/         %h3.ouishare_stencil
-/           = t('dynamic_translations.partners.supporters_title')
-/         %hr.pink
-/         .partners
-/       = render "/individuals/partials/partners_display", :partners => @supporters, :important_partners_display => false
-
-
-.become_partner
-  .container 
-    .row.centered
-      .col-md-5.col-md-offset-4
-        .btn.btn-pink.become-partner-btn
-          %a{:href => 'mailto:partners@ouisharefest.com'}
-            / Become a partner
-            = t('dynamic_translations.partners.button')
 
 
 
@@ -443,6 +352,64 @@
             %a{href: "mailto:partners@ouisharefest.com", :target => "_blank"}
               %button.btn.btn-embossed.btn-primary.get-involved-btn
                 = t('dynamic_translations.get_involved.partners_btn')
+
+/ Partners
+.partners-container
+  .container.sinfo
+    - if !@partners.blank?
+      .row.centered
+        %br
+        %h3.ouishare_stencil
+          = t('dynamic_translations.partners.title')
+        %hr.pink
+        .partners
+      = render "/individuals/partials/partners_display", :partners => @partners, :important_partners_display => true, :important_partners_count => 3
+      %br
+      %br
+
+    - if !@media_partners.blank?
+      .row.centered
+        %br
+        %h3.ouishare_stencil
+          = t('dynamic_translations.partners.media_partner_title')
+        %hr.pink
+        .partners
+      = render "/individuals/partials/partners_display", :partners => @media_partners, :important_partners_display => false
+      %br
+      %br
+
+    - if !@friends.blank?
+      .row.centered
+        %br
+        %h3.ouishare_stencil
+          = t('dynamic_translations.partners.friends_title')
+        %hr.pink
+        .partners
+      = render "/individuals/partials/partners_display", :partners => @friends, :important_partners_display => false
+
+      %br
+      %br
+
+
+    - if !@supporters.blank?
+      .row.centered
+        %br
+        %h3.ouishare_stencil
+          = t('dynamic_translations.partners.supporters_title')
+        %hr.pink
+        .partners
+      = render "/individuals/partials/partners_display", :partners => @supporters, :important_partners_display => false
+
+
+.become_partner
+  .container 
+    .row.centered
+      .col-md-5.col-md-offset-4
+        .btn.btn-pink.become-partner-btn
+          %a{:href => 'mailto:partners@ouisharefest.com'}
+            / Become a partner
+            = t('dynamic_translations.partners.button')
+
 
 / About OuiShare
 .aboutouishare-section.heart_bg
