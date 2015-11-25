@@ -420,6 +420,10 @@ body {
 .blank_bg a:hover{
 	color:#E03E52;
 }
+.page {
+	padding-top: 130px;
+	padding-bottom: 100px;
+}
 .net_bg {
 	background: url(/assets/16bg-net.png) no-repeat;
 	background-color: #fff;
