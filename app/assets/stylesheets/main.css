@@ -398,6 +398,7 @@ body {
     background-color: #001E60;
     width: 100%;
     margin-top: 0px;
+    margin-bottom: 50px;
     padding-top: 10px;
     padding-bottom: 44px;
     position: relative;
@@ -408,8 +409,8 @@ body {
 	/*min-height: 100%;*/
 	width: 100%;
 	margin-top: 0px;
-	padding-top: 130px;
-	padding-bottom: 100px;
+	/*padding-top: 130px;*/
+	/*padding-bottom: 100px;*/
 }
 
 .blank_bg a {
@@ -418,6 +419,10 @@ body {
 
 .blank_bg a:hover{
 	color:#E03E52;
+}
+.page {
+	padding-top: 130px;
+	padding-bottom: 100px;
 }
 .net_bg {
 	background: url(/assets/16bg-net.png) no-repeat;

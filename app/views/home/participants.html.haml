@@ -115,50 +115,51 @@
       .col-md-5.col-md-offset-4
         .btn.btn-pink.become-partner-btn
           %a{:href => 'mailto:partners@ouisharefest.com'}
-            Become a partner
+            / Become a partner
+            = t('dynamic_translations.get_involved.partners_txt')
 
-/ .background_3#_whoscoming 
-/   .container.tickets-section 
-/     .row.centered{:style => 'padding-top:0%;'}
-/       - if @ouishare_fest_attendees && !@ouishare_fest_attendees["attendees"].blank?
-/         %h3.ouishare_stencil.white
-/           = t('dynamic_translations.tickets.who_s_coming') 
-/         %hr.white
-/         %br
-/         %ul.unstyled.attendees-list
-/           / - attendees = @ouishare_fest_attendees["attendees"].first(ENV["EVENTBRITE_ATTENDEES_DISPLAY_NUMBER"].to_i)
-/           - attendees = @ouishare_fest_attendees["attendees"]
-/           - attendees.each do |attendee|
-/             .col-xs-12.col-sm-4.col-md-3.col-lg-2.attendee-container
-/               %li.attendee-items
-/                 / =image_tag display_gravatar(attendee["attendee"]["email"]), :class => 'img-circle'
-/                 .row{:style => "color:white;"}                  
-/                   = attendee["attendee"]["first_name"]
-/                   = attendee["attendee"]["last_name"][0]+'.'
-/                 .row
-/                   = attendee["attendee"]["company"]
+.background_3#_whoscoming 
+  .container.tickets-section 
+    .row.centered{:style => 'padding-top:0%;'}
+      - if @ouishare_fest_attendees && !@ouishare_fest_attendees["attendees"].blank?
+        %h3.ouishare_stencil.white
+          = t('dynamic_translations.tickets.who_s_coming') 
+        %hr.white
+        %br
+        %ul.unstyled.attendees-list
+          / - attendees = @ouishare_fest_attendees["attendees"].first(ENV["EVENTBRITE_ATTENDEES_DISPLAY_NUMBER"].to_i)
+          - attendees = @ouishare_fest_attendees["attendees"]
+          - attendees.each do |attendee|
+            .col-xs-12.col-sm-4.col-md-3.col-lg-2.attendee-container
+              %li.attendee-items
+                / =image_tag display_gravatar(attendee["attendee"]["email"]), :class => 'img-circle'
+                .row{:style => "color:white;"}                  
+                  = attendee["attendee"]["first_name"]
+                  = attendee["attendee"]["last_name"][0]+'.'
+                .row
+                  = attendee["attendee"]["company"]
               
-/           / - if @ouishare_fest_attendees["attendees"].count > ENV["EVENTBRITE_ATTENDEES_DISPLAY_NUMBER"].to_i  
-/           /   %div
-/           /     #allattendees{style: "display: none;"} 
-/           /       - attendees = @ouishare_fest_attendees["attendees"].last(@ouishare_fest_attendees["attendees"].count - ENV["EVENTBRITE_ATTENDEES_DISPLAY_NUMBER"].to_i)
-/           /       - attendees.each do |attendee|
+          / - if @ouishare_fest_attendees["attendees"].count > ENV["EVENTBRITE_ATTENDEES_DISPLAY_NUMBER"].to_i  
+          /   %div
+          /     #allattendees{style: "display: none;"} 
+          /       - attendees = @ouishare_fest_attendees["attendees"].last(@ouishare_fest_attendees["attendees"].count - ENV["EVENTBRITE_ATTENDEES_DISPLAY_NUMBER"].to_i)
+          /       - attendees.each do |attendee|
                         
-/           /         .col-xs-12.col-sm-4.col-md-3.col-lg-2.attendee-container
-/           /           %li.attendee-items
-/           /             / =image_tag display_gravatar(attendee["attendee"]["email"]), :class => 'img-circle'
-/           /             .row{:style => "color:white;"}                     
-/           /               = attendee["attendee"]["first_name"]
-/           /               = attendee["attendee"]["last_name"][0]+'.'
-/           /             .row
-/           /               = attendee["attendee"]["company"]
+          /         .col-xs-12.col-sm-4.col-md-3.col-lg-2.attendee-container
+          /           %li.attendee-items
+          /             / =image_tag display_gravatar(attendee["attendee"]["email"]), :class => 'img-circle'
+          /             .row{:style => "color:white;"}                     
+          /               = attendee["attendee"]["first_name"]
+          /               = attendee["attendee"]["last_name"][0]+'.'
+          /             .row
+          /               = attendee["attendee"]["company"]
                     
-/           /     %br   
-/           /     %div.row
-/           /       %a.individuals-list-btn#btn_attendees_down
-/           /         %button.btn.btn-embossed.btn-primary 
-/           /           = t('dynamic_translations.tickets.show_all_attendees')
-/           /     %div.row 
-/           /       %a.individuals-list-btn#btn_attendees_up        
-/           /         %button.btn.btn-embossed.btn-primary
-/           /           = t('dynamic_translations.tickets.hide_all_attendees')
+          /     %br   
+          /     %div.row
+          /       %a.individuals-list-btn#btn_attendees_down
+          /         %button.btn.btn-embossed.btn-primary 
+          /           = t('dynamic_translations.tickets.show_all_attendees')
+          /     %div.row 
+          /       %a.individuals-list-btn#btn_attendees_up        
+          /         %button.btn.btn-embossed.btn-primary
+          /           = t('dynamic_translations.tickets.hide_all_attendees')
