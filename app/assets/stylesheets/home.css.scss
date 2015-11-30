@@ -540,7 +540,8 @@ body > div.get-involved-section > div > div.centered.get-involved-options-choice
 }
 
 body > div.get-involved-section > div > div.centered.get-involved-options-choice > div > div > div > div.title {
-  min-height: 90px;
+  // min-height: 90px;
+  min-height: 60px;
   color: #f56c6c;
   text-transform: uppercase;
   // font-family: 'naiv_normal';
@@ -574,9 +575,11 @@ body > div.get-involved-section > div > div.row.centered > p {
 }
 
 .btn.get-involved-btn{
-  padding: 25px 0px;
+  // padding: 25px 0px;
   // padding: 25px 10px;
   width: 180px;
+  height: 100px;
+  white-space: normal;
 }
 
 .btn.btn-pink.buy-tickets-btn{
