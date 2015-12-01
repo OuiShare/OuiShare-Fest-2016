@@ -11,6 +11,10 @@
         .col-md-8.col-md-offset-2
           %p
             = t('dynamic_translations.main_schedule.second_part')
+        .col-md-6.col-md-offset-3{style:"padding-top: 2em;"}
+          %a{href: "/join#_getinvolved"}
+            %button.btn.btn-large.btn-primary
+              = t('dynamic_translations.get_involved.title')
 
       .row.centered
         / %img{:src => '/assets/2016-schedule.png', :alt => 'Main schedule', :style => "max-width: 100%"}
@@ -18,7 +22,7 @@
         / %script{:type => "text/javascript", :src => "http://ouisharefest2015.sched.org/js/embed.js"}
 
 
-#_awards.aboutouishare-section
+#_awards.aboutouishare-section{style:"padding-top: 5em;"}
   .container
     .row.centered
       %h3.ouishare_stencil
