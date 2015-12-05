@@ -180,7 +180,7 @@ class HomeController < ApplicationController
   end
 
   def program
-    @request_response = connect_to_sched().force_encoding('UTF-8')
+    # @request_response = connect_to_sched().force_encoding('UTF-8')
 
     if IndividualType.find_by_title('Track leaders')
       @track_leaders = IndividualType.find_by_title('Track leaders').get_members
