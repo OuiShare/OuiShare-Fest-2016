@@ -88,6 +88,8 @@ group :development, :test do
 
   #provide access to manipulate variable in error console
   gem 'binding_of_caller'
+  gem 'byebug'
+  gem 'pry-byebug'
 
 end
 
