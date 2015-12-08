@@ -118,13 +118,13 @@
             / Become a partner
             = t('dynamic_translations.get_involved.partners_txt')
 
-.background_3#_whoscoming 
+.blank_bg#_whoscoming
   .container.tickets-section 
     .row.centered{:style => 'padding-top:0%;'}
       - if @ouishare_fest_attendees && !@ouishare_fest_attendees["attendees"].blank?
-        %h3.ouishare_stencil.white
+        %h3.ouishare_stencil
           = t('dynamic_translations.tickets.who_s_coming') 
-        %hr.white
+        %hr.pink
         %br
         %ul.unstyled.attendees-list
           / - attendees = @ouishare_fest_attendees["attendees"].first(ENV["EVENTBRITE_ATTENDEES_DISPLAY_NUMBER"].to_i)
@@ -133,7 +133,7 @@
             .col-xs-12.col-sm-4.col-md-3.col-lg-2.attendee-container
               %li.attendee-items
                 / =image_tag display_gravatar(attendee["attendee"]["email"]), :class => 'img-circle'
-                .row{:style => "color:white;"}                  
+                .row                  
                   = attendee["attendee"]["first_name"]
                   = attendee["attendee"]["last_name"][0]+'.'
                 .row

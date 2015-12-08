@@ -4,13 +4,17 @@
       .col-lg-10.col-lg-offset-1
         .col-lg-4
           %h5
-            Subscribe to our newsletter
+            / Subscribe to our newsletter
+            = t('dynamic_translations.footer.subscribe_newsletter')
           = form_tag home_newsletter_collect_email_path, :class => "form-inline" do
             .row
               .col-md-6
                 = text_field_tag :email_address,"", :class => "form-control-footer", :placeholder => t('dynamic_translations.main.placeholder_stay_posted')
               .col-md-2.submit-email-button-footer
                 = submit_tag t('dynamic_translations.main.stay_posted'), :class => "btn-footer btn btn-primary", :style => 'border-radius: 0px;'
+          %p
+            %a{href: "http://ouiki.ouishare.net/index.php?title=Open_Source_Fest", target: "_blank"} 
+              =t('dynamic_translations.footer.open_source_fest')
         .col-lg-4
           %h4
             = t('dynamic_translations.footer.contact')
