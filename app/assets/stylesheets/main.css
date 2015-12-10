@@ -1089,3 +1089,15 @@ div.container:nth-child(11) > div:nth-child(1) > h3:nth-child(1) {
 div.col-xs-6:nth-child(2) > a:nth-child(1) > button:nth-child(1) {
   background-color: #E03E51;
 }
+
+/* 5 column layout 2016 */
+.col-xs-v, .col-sm-v, .col-md-v, .col-lg-v {
+  position: relative;
+  min-height: 1px;
+  padding-right: 10px;
+  padding-left: 10px;
+}
+.col-xs-v { width: 20%; float: left; }
+@media (min-width: 768px) {.col-sm-v {width: 20%; float: left;}}
+@media (min-width: 992px) {.col-md-v {width: 20%; float: left;}}
+@media (min-width: 1200px) {.col-lg-v { width: 20%; float: left;}}
