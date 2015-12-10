@@ -1,4 +1,4 @@
-.blank_bg.page
+.blank_bg.page#_bestof
   .container
     .row.centered
       %h3.ouishare_stencil
@@ -10,31 +10,114 @@
           %img{style:"display:block;width:100%;height:auto", src:"http://placehold.it/16x9"}
           %iframe{allowfullscreen: "", frameborder: "0", src: "//www.youtube.com/embed/Hr683Ldt6dQ", style:"position:absolute;top:0;left:0;width:100%;height:100%"}
         .col-md-12
+          %br
           %p
             = t('dynamic_translations.video.1_title')
-          %p
+            %br
             = t('dynamic_translations.video.1_txt')
       .col-md-4{style:"position: relative"}
         .col-md-12
           %img{style:"display:block;width:100%;height:auto", src:"http://placehold.it/16x9"}
           %iframe{allowfullscreen: "", frameborder: "0", src: "//www.youtube.com/embed/Hr683Ldt6dQ", style:"position:absolute;top:0;left:0;width:100%;height:100%"}
         .col-md-12
+          %br
           %p
             = t('dynamic_translations.video.2_title')
-          %p
+            %br
             = t('dynamic_translations.video.2_txt')
       .col-md-4{style:"position: relative"}
         .col-md-12
           %img{style:"display:block;width:100%;height:auto", src:"http://placehold.it/16x9"}
           %iframe{allowfullscreen: "", frameborder: "0", src: "//www.youtube.com/embed/Hr683Ldt6dQ", style:"position:absolute;top:0;left:0;width:100%;height:100%"}
         .col-md-12
+          %br
           %p
             = t('dynamic_translations.video.3_title')
-          %p
+            %br
             = t('dynamic_translations.video.3_txt')
-    .row.centered{:style => "margin-top:50px; margin-bottom:100px;"}
+    .row.centered{:style => "margin-bottom:100px;"}
       .col-md-12
         .col-md-6.col-md-offset-3
           %a{href: "https://www.youtube.com/playlist?list=PL8Bt3EbdmpKM4tYKyERKbp6VMYTjYZwCF", :target => "_blank", :style => "width: 170px;"}
             %button.btn.btn-large.btn-primary
               = t('dynamic_translations.video.see_all')
+
+/ OuiShare News 2016
+.blank_bg#_news
+  .container
+    .row.centered
+      %h3.ouishare_stencil
+        = t('dynamic_translations.video.section_title')
+      %hr.pink
+    .row.centered
+      - @magazines.each do |f|
+          %div.col-md-4{style:"position: relative"}
+            - if !f.content.split('img')[1].nil?
+              %div.col-md-12
+                %a{href: "#{f.url}", target:"blank"}
+                  %img{:src => "#{f.content.split(' ')[3].split('"')[1].gsub(/-150x150/, "")}", :u => "image", :style => "display:block;width:100%;height:auto"}
+              %div.col-md-12
+                %br
+                %p
+                  %a{href: "#{f.url}", target:"blank"}
+                    = f.name
+                / %span.btn.btn-blue{:style => "position:absolute; width: 100px; height: 50px; top: 70%; left: 40%;"}
+                /   %a{href: "#{f.url}", target:"blank"}
+                /     Read More
+            - else
+              %div.col-md-12
+                %a{href: "#{f.url}", target:"blank"}
+                  = image_tag "/assets/landing_logo.png", :style => "height:150px;"
+              %div.col-md-12
+                %br
+                %p
+                  %a{href: "#{f.url}", target:"blank"}
+                  = f.name
+                / %span.btn.btn-blue{:style => "position:absolute; width: 100px; height: 50px; top: 70%; left: 40%;"}
+                /   %a{href: "#{f.url}", target:"blank"}
+                /     Read More
+      
+
+    .row.centered{:style => "margin-bottom:100px;"}
+      .col-md-12
+        .col-md-6.col-md-offset-3
+          %a{href: "http://magazine.ouishare.net/tag/ouisharefest/", :target => "_blank", :style => "width: 170px;"}
+            %button.btn.btn-large.btn-primary
+              = t('dynamic_translations.news.see_all')
+
+
+/ OuiShare News 2015
+.ouishare-news-section
+  .container
+    .row.centered
+      %h3.ouishare_stencil
+        = t('dynamic_translations.ouishare-news.title')
+      %hr.pink
+
+  #slider-container.text-center{:style => "min-height:100%;"}
+    #slider1_container{:style => "position: relative; top: 0px; left: 0px; width: 1200px; height: 300px;"}
+      / Slides Container
+      %div.scale-jssor{:style => "cursor: move; position: absolute; left: 0px; top: 0px; width: 1200px; height: 300px; overflow: hidden;", :u => "slides"}
+        - @magazines.each do |f|
+          %div
+            - if !f.content.split('img')[1].nil?
+              %img{:src => "#{f.content.split(' ')[3].split('"')[1].gsub(/-150x150/, "")}", :u => "image"}
+              %span.presentation.ouishare_stencil.white
+                = f.name
+              %span.btn.btn-blue{:style => "position:absolute; width: 100px; height: 50px; top: 70%; left: 40%;"}
+                %a{href: "#{f.url}", target:"blank"}
+                  Read More
+            - else
+              = image_tag "/assets/landing_logo.png", :style => "height:150px;"
+              %span.presentation.ouishare_stencil.white
+                = f.name
+              %span.btn.btn-blue{:style => "position:absolute; width: 100px; height: 50px; top: 70%; left: 40%;"}
+                %a{href: "#{f.url}", target:"blank"}
+                  Read More
+
+      %span.jssora13l{:style => "width: 40px; height: 50px; top: 123px; left: 30px;", :u => "arrowleft"}
+      / Arrow Right
+      %span.jssora13r{:style => "width: 40px; height: 50px; top: 123px; right: 30px", :u => "arrowright"}
+
+
+
