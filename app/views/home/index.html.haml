@@ -3,10 +3,10 @@
     .main-section
       .row
         #head_logo
-          = image_tag "/assets/logo-fest-2016-blue.svg", :style => "height:250px;margin-top:20px"
+          = image_tag "/assets/logo-fest-2016-coral.svg", :style => "height:250px;margin-top:20px"
       .row
         .col-md-10.col-md-offset-1
-          %h1.main-title{:style => "color:#001E60"}
+          %h1.main-title{:style => "color:#f56c6c"}
             = t('dynamic_translations.main.title')
         .col-md-8.col-md-offset-2
           / %p.main-section-paragraphes.white
@@ -23,7 +23,7 @@
           .col-md-offset-3.col-md-4
             = text_field_tag :email_address,"", :class => "form-control flat", :placeholder => t('dynamic_translations.main.placeholder_stay_posted'), :style => "width: 110%;"
           .col-md-2.btn-pink.submit-email-button
-            = submit_tag t('dynamic_translations.main.stay_posted'), :class => "btn btn-primary"
+            = submit_tag t('dynamic_translations.main.stay_posted'), :class => "btn btn-pink", :style => "padding: 9px 12px 10px;"
 
       .row
         .col-md-8.col-md-offset-2

@@ -1970,7 +1970,8 @@ fieldset[disabled] .form-control {
 }
 .form-control.flat {
   /* border-color: transparent; */
-  background-color: #bdc3c7;
+  /* background-color: #bdc3c7; */
+  background-color: #ccc;
 }
 .form-control.flat:hover {
   border-color: #bdc3c7;
