@@ -1059,7 +1059,7 @@ p.white a:hover {
   color :#001e60;
   background: #ffffff;
 }
-p.pink {
+p.pink, p.pink a {
   color: #f56c6c;
 }
 span.bluebg {
