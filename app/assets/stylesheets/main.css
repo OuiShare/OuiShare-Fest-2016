@@ -476,6 +476,10 @@ body {
   height: 95%;
 }
 
+#bestof > div > div > div > div > p {
+	margin-left: -1em;
+}
+
 #about{
 	/*background: url(/assets/fond_vert.jpg) center top;*/
 	/*background: url(/assets/background/01-background-01.png)*/
