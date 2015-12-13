@@ -1,10 +1,10 @@
 .blank_bg.page#_bestof
   .container
-    .row.centered
+    .row
       %h3.ouishare_stencil
         = t('dynamic_translations.video.section_title')
       %hr.pink
-    .row.centered{style:"padding-bottom: 3%"}
+    .row{style:"padding-bottom: 3%"}
       .col-md-4{style:"position: relative"}
         .col-md-12
           %img{style:"display:block;width:100%;height:auto", src:"http://placehold.it/16x9"}
@@ -12,9 +12,9 @@
         .col-md-12
           %br
           %p
-            = t('dynamic_translations.video.1_title')
+            Redesigning our Political System for the Internet Era
             %br
-            = t('dynamic_translations.video.1_speaker')
+            Pia Mancini
       .col-md-4{style:"position: relative"}
         .col-md-12
           %img{style:"display:block;width:100%;height:auto", src:"http://placehold.it/16x9"}
@@ -22,9 +22,9 @@
         .col-md-12
           %br
           %p
-            = t('dynamic_translations.video.2_title')
+            How to finance your platform?
             %br
-            = t('dynamic_translations.video.2_speaker')
+            Robin Chase
       .col-md-4{style:"position: relative"}
         .col-md-12
           %img{style:"display:block;width:100%;height:auto", src:"http://placehold.it/16x9"}
@@ -32,9 +32,9 @@
         .col-md-12
           %br
           %p
-            = t('dynamic_translations.video.3_title')
+            You are the product
             %br
-            = t('dynamic_translations.video.3_speaker')
+            Aral Balkan
     .row.centered{:style => "margin-bottom:100px;"}
       .col-md-12
         .col-md-6.col-md-offset-3
@@ -71,40 +71,86 @@
                   = t('dynamic_translations.speakers.hide_all')
 
 
-/ / OuiShare News 2016
-/ .blank_bg#_news
+/ / OuiShare News 2016 static
+/ .blank_bg#_bestof{style: "padding-top:7%;"}
 /   .container
 /     .row.centered
 /       %h3.ouishare_stencil
-/         = t('dynamic_translations.video.section_title')
+/         = t('dynamic_translations.ouishare-news.title')
 /       %hr.pink
-/     .row.centered
-/       - @magazines.each do |f|
-/           %div.col-md-4{style:"position: relative"}
-/             - if !f.content.split('img')[1].nil?
-/               %div.col-md-12
-/                 %a{href: "#{f.url}", target:"blank"}
-/                   %img{:src => "#{f.content.split(' ')[3].split('"')[1].gsub(/-150x150/, "")}", :u => "image"}
-/               %div.col-md-12
-/                 %br
-/                 %p
-/                   %a{href: "#{f.url}", target:"blank"}
-/                     = f.name
-/             - else
-/               %div.col-md-12
-/                 %a{href: "#{f.url}", target:"blank"}
-/                   = image_tag "/assets/landing_logo.png", :style => "height:150px;"
-/               %div.col-md-12
-/                 %br
-/                 %p
-/                   %a{href: "#{f.url}", target:"blank"}
-/                   = f.name
+/     .row{style:"padding-bottom: 3%"}
+/       .col-md-4{style:"position: relative"}
+/         .col-md-12
+/           %img{style:"display:block;width:100%;height:auto", src:"http://placehold.it/16x9"}
+/           %iframe{allowfullscreen: "", frameborder: "0", src: "//www.youtube.com/embed/zQYv6Rp6t-Y", style:"position:absolute;top:0;left:0;width:100%;height:100%"}
+/         .col-md-12
+/           %br
+/           %p
+/             Redesigning our Political System for the Internet Era
+/             %br
+/             Pia Mancini
+/       .col-md-4{style:"position: relative"}
+/         .col-md-12
+/           %img{style:"display:block;width:100%;height:auto", src:"http://placehold.it/16x9"}
+/           %iframe{allowfullscreen: "", frameborder: "0", src: "//www.youtube.com/embed/hkU3DbgQkaQ", style:"position:absolute;top:0;left:0;width:100%;height:100%"}
+/         .col-md-12
+/           %br
+/           %p
+/             How to finance your platform?
+/             %br
+/             Robin Chase
+/       .col-md-4{style:"position: relative"}
+/         .col-md-12
+/           %img{style:"display:block;width:100%;height:auto", src:"http://placehold.it/16x9"}
+/           %iframe{allowfullscreen: "", frameborder: "0", src: "//www.youtube.com/embed/TAUTmxo1sCY", style:"position:absolute;top:0;left:0;width:100%;height:100%"}
+/         .col-md-12
+/           %br
+/           %p
+/             You are the product
+/             %br
+/             Aral Balkan
 /     .row.centered{:style => "margin-bottom:100px;"}
 /       .col-md-12
 /         .col-md-6.col-md-offset-3
-/           %a{href: "http://magazine.ouishare.net/tag/ouisharefest/", :target => "_blank", :style => "width: 170px;"}
+/           %a{href: "https://www.youtube.com/playlist?list=PL8Bt3EbdmpKM4tYKyERKbp6VMYTjYZwCF", :target => "_blank", :style => "width: 170px;"}
 /             %button.btn.btn-large.btn-primary
-/               = t('dynamic_translations.news.see_all')
+/               = t('dynamic_translations.video.see_all')
+
+
+/ OuiShare News 2016
+.blank_bg#_news
+  .container
+    .row.centered
+      %h3.ouishare_stencil
+        = t('dynamic_translations.ouishare-news.title')
+      %hr.pink
+    .row.centered
+      - @magazines.each do |f|
+        %div.col-md-4
+          - if !f.content.split('img')[1].nil?
+            %div.col-md-12
+              %a{href: "#{f.url}", target:"blank"}
+                %img{:src => "#{f.content.split(' ')[3].split('"')[1].gsub(/-150x150/, "")}", :u => "image"}
+            %div.col-md-12
+              %br
+              %p
+                %a{href: "#{f.url}", target:"blank"}
+                  = f.name
+          - else
+            %div.col-md-12
+              %a{href: "#{f.url}", target:"blank"}
+                = image_tag "/assets/landing_logo.png", :style => "height:150px;"
+            %div.col-md-12
+              %br
+              %p
+                %a{href: "#{f.url}", target:"blank"}
+                = f.name
+    .row.centered{:style => "margin-bottom:100px;"}
+      .col-md-12
+        .col-md-6.col-md-offset-3
+          %a{href: "http://magazine.ouishare.net/tag/ouisharefest/", :target => "_blank", :style => "width: 170px;"}
+            %button.btn.btn-large.btn-primary
+              = t('dynamic_translations.news.see_all')
 
 
 / / OuiShare News 2015
