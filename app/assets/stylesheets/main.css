@@ -1059,6 +1059,9 @@ p.white a:hover {
   color :#001e60;
   background: #ffffff;
 }
+p.pink {
+  color: #f56c6c;
+}
 span.bluebg {
   background-color: #001E60;
   padding:4px 9px;

@@ -167,62 +167,20 @@
 /       %span.jssora13r{:style => "width: 40px; height: 50px; top: 123px; right: 30px", :u => "arrowright"}
 
 
-/ Highlights from 2015
-/ .blank_bg#_highlights
-/   .container
-/     .row.centered
-/       .col-md-6.col-md-offset-3{style:"position: relative"}
-/         /* I know it's weird, just a hack that allow to scale an iframe before bootstrap 3.2 */
-/         %img{style:"display:block;width:100%;height:auto", src:"http://placehold.it/16x9"}
-/         %iframe{allowfullscreen: "", frameborder: "0", src: "//www.youtube.com/embed/Hr683Ldt6dQ", style:"position:absolute;top:0;left:0;width:100%;height:100%"}
 
-
-/     .row.centered
-/       %h3.ouishare_stencil
-/         = t('dynamic_translations.highlight.watch_2015_sessions')
-/       %hr.pink
-
-/     .row.centered
-/       .col-md-8.col-md-offset-2
-/         .row
-/           %p
-/             = t('dynamic_translations.highlight.description_2015')
-/         .row{:style => "margin-top:50px; margin-bottom:100px;"}
-/           .col-md-12
-/             .col-md-6.col-md-offset-3
-/               %a{href: "https://www.youtube.com/playlist?list=PL8Bt3EbdmpKM4tYKyERKbp6VMYTjYZwCF", :target => "_blank", :style => "width: 170px;"}
-/                 %button.btn.btn-large.btn-primary
-/                   = t('dynamic_translations.highlight.watch_the_sessions')
-
-/ Zero Waste banner
-
-/  .become_partner#_zerowaste
-/   .container
-/     .row.centered
-/       .col-md-5.col-md-offset-4
-/         .btn.btn-pink.become-partner-btn
-/           %a{href: home_zero_waste_event_path}
-/             = t('dynamic_translations.zerowaste.btn_text')
-
-
-.tickets.blue_bg
+.tickets.blank_bg
   .container.tickets-section
     .row.centered
       .col-md-10.col-md-offset-1.col-sm-12
-        %h3.ouishare_stencil.white.centered
+        %h3.ouishare_stencil.centered
           = t('dynamic_translations.tickets.title')
-        %hr.white
+        %hr.pink
         %br
         %br
-        %p.white
+        %p.pink
           = t('dynamic_translations.tickets.description1')
           %a{href: "/join#_getinvolved"}
             = t('dynamic_translations.tickets.get_involved')
-        /     = "."
-        / %p.white
-        /   = t('dynamic_translations.tickets.description2')
-        /   %a{href: "http://bit.ly/OSFest14ticketapplication"}
-        /     = t('dynamic_translations.tickets.apply_tickets_link')
         %p.text-center
           = image_tag("2016-tickets-#{I18n.locale}-03.png", width: "100%", alt: "Ticket options")
           / %img{:src => '/assets/2016-tickets-en-03.png', :alt => 'Ticket options', :style => "max-width: 100%"}

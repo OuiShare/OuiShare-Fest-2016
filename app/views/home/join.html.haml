@@ -1,13 +1,13 @@
-.blue_bg#_tickets{:style => "padding-top:120px;"}
+.blank_bg#_tickets{:style => "padding-top:120px;"}
   .container
     .row.centered
       .col-md-10.col-md-offset-1.col-sm-12
-        %h3.ouishare_stencil.white.centered
+        %h3.ouishare_stencil.centered
           = t('dynamic_translations.tickets.title')
-        %hr.white
+        %hr.pink
         %br
         %br
-        %p.white
+        %p.pink
           = t('dynamic_translations.tickets.description1')
           %a{href: "/join#_getinvolved"}
             = t('dynamic_translations.tickets.get_involved')
@@ -15,7 +15,7 @@
         /   = t('dynamic_translations.tickets.description2')
         /   %a{href: "http://bit.ly/OSFest14ticketapplication"}
         /     = t('dynamic_translations.tickets.apply_tickets_link')
-        %p.text-center
+        %p.text-center.pink
           = image_tag("2016-tickets-#{I18n.locale}-03.png", width: "100%", alt: "Ticket options")
           / %img{:src => '/assets/2016-tickets-en-03.png', :alt => 'Ticket options', :style => "max-width: 100%"}
           / %img{:src => '/assets/2016-tickets-fr-03.png', :alt => 'Options billets', :style => "max-width: 100%"}
