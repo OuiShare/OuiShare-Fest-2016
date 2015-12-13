@@ -1,6 +1,6 @@
 .main_bg
   .container
-    .main-section
+    .main-section{style: "padding-top:7%;"}
       .row
         #head_logo
           = image_tag "/assets/logo-fest-2016-coral.svg", :style => "height:250px;margin-top:20px"
@@ -110,27 +110,6 @@
             %button.btn.btn-large.btn-primary
               = t('dynamic_translations.video.see_all')
 
-/ About the Fest
-.blank_bg#_about
-  .container
-    .second-section
-      .row.centered
-        %h3.col-md-6.col-md-offset-3.ouishare_stencil.white.text-center{:style => "font-size:20px;background-color: #f56c6c; line-height: 1.5em;"}
-          = t('dynamic_translations.about.subtitle')
-      .row.centered{:style => "padding-bottom:0"}
-        .col-md-6.col-md-offset-3
-          /.col-xs-6.col-xs-offset-3
-          / %br
-          / %br
-          %p
-            = t('dynamic_translations.about.p1')
-          %br
-          %p
-            = t('dynamic_translations.about.p2')
-          %br
-          %p
-            = t('dynamic_translations.about.p3')
-
 
 / OuiShare News 2016 static
 .blank_bg#news{style: "padding-top:7%;"}
@@ -214,6 +193,26 @@
 /       / Arrow Right
 /       %span.jssora13r{:style => "width: 40px; height: 50px; top: 123px; right: 30px", :u => "arrowright"}
 
+/ About the Fest
+.blank_bg#_about
+  .container
+    .second-section
+      .row.centered
+        %h3.col-md-6.col-md-offset-3.ouishare_stencil.white.text-center{:style => "font-size:20px;background-color: #f56c6c; line-height: 1.5em;"}
+          = t('dynamic_translations.about.subtitle')
+      .row.centered{:style => "padding-bottom:0"}
+        .col-md-6.col-md-offset-3
+          /.col-xs-6.col-xs-offset-3
+          / %br
+          / %br
+          %p
+            = t('dynamic_translations.about.p1')
+          %br
+          %p
+            = t('dynamic_translations.about.p2')
+          %br
+          %p
+            = t('dynamic_translations.about.p3')
 
 
 .tickets.blank_bg
