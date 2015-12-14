@@ -435,7 +435,7 @@ body {
 	background-position: 0% 0%;
 	text-align: center;
 	background-attachment: scroll;
-	min-height: 100%;
+	/*min-height: 100%;*/
 	padding-top: 7%;
 	padding-bottom: 7%;
 }
