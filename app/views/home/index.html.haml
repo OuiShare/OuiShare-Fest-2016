@@ -80,7 +80,8 @@
         .col-md-12
           %br
           %p
-            Redesigning our Political System for the Internet Era
+            %a{href: "http://youtu.be/zQYv6Rp6t-Y", :target => "_blank"}
+              Redesigning our Political System for the Internet Era
             %br
             Pia Mancini
       .col-md-4{style:"position: relative"}
@@ -90,7 +91,8 @@
         .col-md-12
           %br
           %p
-            How to finance your platform?
+            %a{href: "http://youtu.be/hkU3DbgQkaQ", :target => "_blank"}
+              How to finance your platform?
             %br
             Robin Chase
       .col-md-4{style:"position: relative"}
@@ -100,7 +102,8 @@
         .col-md-12
           %br
           %p
-            You are the product
+            %a{href: "http://youtu.be/TAUTmxo1sCY", :target => "_blank"}
+              You are the product
             %br
             Aral Balkan
     .row.centered{:style => "margin-bottom:100px;"}
@@ -201,7 +204,7 @@
         .col-md-6.col-md-offset-3{:style => 'padding:3%; background-color: white;'}
           %h3.ouishare_stencil.white.text-center{:style => "font-size:20px;background-color: #f56c6c; line-height: 1.5em;"}
             = t('dynamic_translations.about.subtitle')
-        .col-md-6.col-md-offset-3
+          /.col-md-6.col-md-offset-3
           %br
           %p
             = t('dynamic_translations.about.p1')
@@ -249,48 +252,8 @@
 
 
 
-
-
-/ Petit Fest 
-/ #_petit_fest.aboutouishare-section{style: "margin-top:40px;"}
-/   .container
-/     .row.centered
-/       %h3.ouishare_stencil
-/         = t('dynamic_translations.petit_fest.title')
-/       %hr.blue
-/       %br
-/       %br
-/       .container.round_fond
-/         .row
-/           .col-md-8.col-md-offset-2
-/             %p
-/               %b
-/                 = t('dynamic_translations.petit_fest.subtitle')
-/             %p
-/               = t('dynamic_translations.petit_fest.text1')
-/               %a{:href => '#_love_party'}
-/                 = t('dynamic_translations.love_party.title')
-/               = t('dynamic_translations.petit_fest.text2')
-/             %p
-/               = t('dynamic_translations.petit_fest.text3')
-
-/         .row
-/           .col-md-10.col-md-offset-1
-/             .col-md-12
-/               .btn.btn-pink{:style => 'margin: 0px 0px 40px 0px;'}
-/                 %a{:href => '/freelancers'}
-/                   = t('dynamic_translations.petit_fest.get_ticket')
-/               .btn.btn-pink{:style => 'margin: 0px 0px 40px 0px;'}
-/                 %a{:href => '/assets/petit_fest_2015.png'}
-/                   = t('dynamic_translations.petit_fest.see_program')
-/             .col-md-12
-/               %a{:href => '/assets/petit_fest_2015.png'}
-/                 %img.img-responsive{:src => '/assets/petit_fest_crop.png', :alt => 'Petit Fest program', :style => 'margin:auto;'}
-
-
-
 / Partners
-.partners-container{:style => "padding-top:130px;"}
+.partners-container{:style => "padding-top:3%;"}
   .container.sinfo
     - if !@partners.blank?
       .row.centered

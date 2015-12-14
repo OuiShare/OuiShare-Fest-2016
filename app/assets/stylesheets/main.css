@@ -436,8 +436,8 @@ body {
 	text-align: center;
 	background-attachment: scroll;
 	min-height: 100%;
-	padding-top: 15%;
-	padding-bottom: 20%;
+	padding-top: 7%;
+	padding-bottom: 7%;
 }
 .heart_bg {
 	background: url(/assets/16bg-heart.png) no-repeat center top;
