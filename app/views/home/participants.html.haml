@@ -36,7 +36,7 @@
 
 
 
-.blank_bg#_team{:style => "padding-top: 150px;"}
+.blank_bg#_team{:style => "padding-top: 90px;"}
   .container
     .row.centered
       %h3.ouishare_stencil
@@ -64,7 +64,7 @@
           /         %button.btn.btn-embossed.btn-primary
           /           = t('dynamic_translations.team.hide_all')
 
-.partners-container#_partners{:style => 'padding-top:130px'}
+.partners-container#_partners{:style => 'padding-top:100px'}
   .container.sinfo
     - if !@partners.blank?
       .row.centered
@@ -118,10 +118,10 @@
             / Become a partner
             = t('dynamic_translations.get_involved.partners_txt')
 
-.blank_bg#_whoscoming{:style => 'padding-top:50px'}
+.blank_bg#_whoscoming
   .container.tickets-section 
     .row.centered
-      .col-md-8.col-md-offset-2{:style => 'padding-top:50px'}
+      .col-md-8.col-md-offset-2
         - if @ouishare_fest_attendees && !@ouishare_fest_attendees["attendees"].blank?
           %h3.ouishare_stencil
             = t('dynamic_translations.tickets.who_s_coming') 
