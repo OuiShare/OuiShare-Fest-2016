@@ -121,34 +121,34 @@
     .row{style:"padding-top: 3%"}
       .col-md-4{style:"position: relative"}
         .col-md-12
-          %a{href: "http://magazine.ouishare.net/2015/11/decentralizing-part-of-ouishare-with-blockchain-experiment-1/"}
+          %a{href: "http://magazine.ouishare.net/2015/11/decentralizing-part-of-ouishare-with-blockchain-experiment-1/", :target => "_blank"}
             %img{style:"display:block;width:100%;height:auto", src:"http://magazine.ouishare.net/wp-content/uploads/2015/11/decentralization-osfest-1050x639.png"}
         .col-md-12
           %br
           %p
-            %a{href: "http://magazine.ouishare.net/2015/11/decentralizing-part-of-ouishare-with-blockchain-experiment-1/"}
+            %a{href: "http://magazine.ouishare.net/2015/11/decentralizing-part-of-ouishare-with-blockchain-experiment-1/", :target => "_blank"}
               Decentralizing (part of) OuiShare with blockchain: Experiment 1
             %br
             Francesca Pick
       .col-md-4{style:"position: relative"}
         .col-md-12
-          %a{href: "http://magazine.ouishare.net/2015/11/call-for-contributions-now-open-submit-your-idea-for-ouishare-fest-2016/"}
+          %a{href: "http://magazine.ouishare.net/2015/11/call-for-contributions-now-open-submit-your-idea-for-ouishare-fest-2016/", :target => "_blank"}
             %img{style:"display:block;width:100%;height:auto", src:"http://magazine.ouishare.net/wp-content/uploads/2015/11/call-for-contributions-20163-1050x616.jpg"}
         .col-md-12
           %br
           %p
-            %a{href: "http://magazine.ouishare.net/2015/11/call-for-contributions-now-open-submit-your-idea-for-ouishare-fest-2016/"}
+            %a{href: "http://magazine.ouishare.net/2015/11/call-for-contributions-now-open-submit-your-idea-for-ouishare-fest-2016/", :target => "_blank"}
               Call for Contributions now open: Submit your idea for OuiShare Fest 2016
             %br
             Khushboo Balwani
       .col-md-4{style:"position: relative"}
         .col-md-12
-          %a{href: "http://magazine.ouishare.net/2015/07/uber-wars-an-interview-with-pierre-dimitri-gore-coty/"}
+          %a{href: "http://magazine.ouishare.net/2015/07/uber-wars-an-interview-with-pierre-dimitri-gore-coty/", :target => "_blank"}
             %img{style:"display:block;width:100%;height:auto", src:"http://magazine.ouishare.net/wp-content/uploads/2015/07/uberfest-335x184.png"}
         .col-md-12
           %br
           %p
-            %a{href: "http://magazine.ouishare.net/2015/07/uber-wars-an-interview-with-pierre-dimitri-gore-coty/"}
+            %a{href: "http://magazine.ouishare.net/2015/07/uber-wars-an-interview-with-pierre-dimitri-gore-coty/", :target => "_blank"}
               Uber Wars: An interview with Pierre-Dimitri Gore-Coty
             %br
             Arthur De Grave
@@ -194,17 +194,15 @@
 /       %span.jssora13r{:style => "width: 40px; height: 50px; top: 123px; right: 30px", :u => "arrowright"}
 
 / About the Fest
-.blank_bg#_about
+.net_bg#_about
   .container
     .second-section
-      .row.centered
-        %h3.col-md-6.col-md-offset-3.ouishare_stencil.white.text-center{:style => "font-size:20px;background-color: #f56c6c; line-height: 1.5em;"}
-          = t('dynamic_translations.about.subtitle')
       .row.centered{:style => "padding-bottom:0"}
+        .col-md-6.col-md-offset-3{:style => 'padding:3%; background-color: white;'}
+          %h3.ouishare_stencil.white.text-center{:style => "font-size:20px;background-color: #f56c6c; line-height: 1.5em;"}
+            = t('dynamic_translations.about.subtitle')
         .col-md-6.col-md-offset-3
-          /.col-xs-6.col-xs-offset-3
-          / %br
-          / %br
+          %br
           %p
             = t('dynamic_translations.about.p1')
           %br
@@ -217,7 +215,7 @@
 
 .tickets.blank_bg
   .container.tickets-section
-    .row.centered
+    .row.centered{:style => "padding-top:0; padding-bottom:0"}
       .col-md-10.col-md-offset-1.col-sm-12
         %h3.ouishare_stencil.centered
           = t('dynamic_translations.tickets.title')
