@@ -46,7 +46,7 @@
       .row.centered
         %h3.col-md-6.col-md-offset-3.ouishare_stencil.white.text-center#_about{:style => "font-size:20px;background-color: #f56c6c"}
           = t('dynamic_translations.about.subtitle')
-        .col-md-4.col-md-offset-4.col-sm-8.col-sm-offset-2
+        .col-md-6.col-md-offset-3.col-sm-8.col-sm-offset-2
           %p{:style => 'margin-top: 35px;'}
             = t('dynamic_translations.about.p1')
           %br
@@ -71,99 +71,133 @@
         %br/
         %br/
       .row
-        .col-md-6.col-md-offset-3
+        .col-md-8.col-md-offset-2{:style => 'padding:3%; background-color: white;'}
           .row
-            .col-md-4
+            .col-sm-4
               %h5
-                = t('dynamic_translations.topics.collcon_title')
+                = t('dynamic_translations.topics.tech_title')
             .col-xs-2
               %p.topics
-                = image_tag "/assets/collab-economy-icon-2-blue.png"
-            .col-md-6
+                = image_tag "/assets/horizontal-governance-icon-blue.png"
+            .col-sm-6
               %p
-                = t('dynamic_translations.topics.collcon_desc')
+                = t('dynamic_translations.topics.tech_desc')
           .row
-            .col-md-4
-              %h5
-                = t('dynamic_translations.topics.cf_title')
-            .col-xs-2
-              %p.topics
-                = image_tag "/assets/crowdfunding-icon-blue.png"            
-            .col-md-6
-              %p
-                = t('dynamic_translations.topics.cf_desc')
-          .row
-            .col-md-4
-              %h5
-                = t('dynamic_translations.topics.ok_title')
-            .col-xs-2
-              %p.topics
-                = image_tag "/assets/open-knowledge-icon.png"
-            .col-md-6
-              %p
-                = t('dynamic_translations.topics.ok_desc')
-          .row
-            .col-md-4
+            .col-sm-4
               %h5
                 = t('dynamic_translations.topics.om_title')
             .col-xs-2
               %p.topics
                 = image_tag "/assets/collab-economy-icon-blue.png"
-            .col-md-6
+            .col-sm-6
               %p
                 = t('dynamic_translations.topics.om_desc')
           .row
-            .col-xs-4
+            .col-sm-4
               %h5
-                = t('dynamic_translations.topics.gov_title')
+                = t('dynamic_translations.topics.orgs_title')
             .col-xs-2
               %p.topics
-                = image_tag "/assets/horizontal-governance-icon-blue.png"
-            .col-md-6
+                = image_tag "/assets/open-knowledge-icon.png"
+            .col-sm-6
               %p
-                = t('dynamic_translations.topics.gov_desc')
-        .col-md-6.col-md-offset-3.space_background
+                = t('dynamic_translations.topics.orgs_desc')
+          .row
+            .col-sm-4
+              %h5
+                = t('dynamic_translations.topics.shareco_title')
+            .col-xs-2
+              %p.topics
+                = image_tag "/assets/collab-economy-icon-2-blue.png"
+            .col-sm-6
+              %p
+                = t('dynamic_translations.topics.shareco_desc')
+          .row
+            .col-sm-4
+              %h5
+                = t('dynamic_translations.topics.cf_title')
+            .col-xs-2
+              %p.topics
+                = image_tag "/assets/crowdfunding-icon-blue.png"            
+            .col-sm-6
+              %p
+                = t('dynamic_translations.topics.cf_desc')
+
+
+
+/ Best of 2015
+.blank_bg#bestof{style: "padding-top:7%;"}
+  .container
+    .row.centered
+      %h3.ouishare_stencil
+        = t('dynamic_translations.video.section_title')
+      %hr.pink
+    .row{style:"padding-top: 3%"}
+      .col-md-4{style:"position: relative"}
+        .col-md-12
+          %img{style:"display:block;width:100%;height:auto", src:"http://placehold.it/16x9"}
+          %iframe{allowfullscreen: "", frameborder: "0", src: "//www.youtube.com/embed/Hr683Ldt6dQ", style:"position:absolute;top:0;left:0;width:100%;height:100%"}
+        .col-md-12
           %br
-
-
+          %p
+            %a{href: "http://youtu.be/Hr683Ldt6dQ", :target => "_blank"}
+              = t('dynamic_translations.video.snapshots')
+      .col-md-4{style:"position: relative"}
+        .col-md-12
+          %img{style:"display:block;width:100%;height:auto", src:"http://placehold.it/16x9"}
+          %iframe{allowfullscreen: "", frameborder: "0", src: "//www.youtube.com/embed/zQYv6Rp6t-Y", style:"position:absolute;top:0;left:0;width:100%;height:100%"}
+        .col-md-12
+          %br
+          %p
+            %a{href: "http://youtu.be/zQYv6Rp6t-Y", :target => "_blank"}
+              Redesigning our Political System for the Internet Era
+            %br
+            Pia Mancini
+      .col-md-4{style:"position: relative"}
+        .col-md-12
+          %img{style:"display:block;width:100%;height:auto", src:"http://placehold.it/16x9"}
+          %iframe{allowfullscreen: "", frameborder: "0", src: "//www.youtube.com/embed/TAUTmxo1sCY", style:"position:absolute;top:0;left:0;width:100%;height:100%"}
+        .col-md-12
+          %br
+          %p
+            %a{href: "http://youtu.be/TAUTmxo1sCY", :target => "_blank"}
+              You are the product
+            %br
+            Aral Balkan
+    .row.centered{:style => "margin-bottom:100px;"}
+      .col-md-12
+        .col-md-6.col-md-offset-3
+          %a{href: "https://www.youtube.com/playlist?list=PL8Bt3EbdmpKM4tYKyERKbp6VMYTjYZwCF", :target => "_blank", :style => "width: 170px;"}
+            %button.btn.btn-large.btn-primary
+              = t('dynamic_translations.video.see_all')
 
 / Zero Waste banner
 
 .become_partner#_zerowaste
   .container
     .row.centered
-      .col-md-5.col-md-offset-4
+      .col-md-6.col-md-offset-3.col-sm-12
         .btn.btn-pink.become-partner-btn
           %a{href: home_zero_waste_event_path}
             = t('dynamic_translations.zerowaste.btn_text')
 
 
-/ Highlights from 2015
-.blank_bg#_highlights
+/ OuiShare Radio
+.blank_bg#_radio{:style => 'padding-top:7%;'}
   .container
     .row.centered
-      .col-md-6.col-md-offset-3{style:"position: relative"}
-        /* I know it's weird, just a hack that allow to scale an iframe before bootstrap 3.2 */
-        %img{style:"display:block;width:100%;height:auto", src:"http://placehold.it/16x9"}
-        %iframe{allowfullscreen: "", frameborder: "0", src: "//www.youtube.com/embed/Hr683Ldt6dQ", style:"position:absolute;top:0;left:0;width:100%;height:100%"}
-
-
-    .row.centered
       %h3.ouishare_stencil
-        = t('dynamic_translations.highlight.watch_2015_sessions')
+        = t('dynamic_translations.radio.title')
       %hr.pink
 
     .row.centered
       .col-md-8.col-md-offset-2
         .row
-          %p
-            = t('dynamic_translations.highlight.description_2015')
-        .row{:style => "margin-top:50px;"}
           .col-md-12
             .col-md-6.col-md-offset-3
-              %a{href: "https://www.youtube.com/playlist?list=PL8Bt3EbdmpKM4tYKyERKbp6VMYTjYZwCF", :target => "_blank", :style => "width: 170px;"}
+              %a{href: "https://soundcloud.com/ouishare", :target => "_blank", :style => "width: 170px;"}
                 %button.btn.btn-large.btn-primary
-                  = t('dynamic_translations.highlight.watch_the_sessions')
+                  = t('dynamic_translations.radio.listen')
 
 
 .net_bg#_about_press

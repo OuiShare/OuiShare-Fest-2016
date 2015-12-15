@@ -131,18 +131,20 @@
   }
   .attendee-container{
     border-bottom: 1px solid #f9f9f9;
-    background: rgba(0, 0, 0, 0.15);
+    // background: rgba(0, 0, 0, 0.15);
     height: 70px;
   }
   .attendee-container:hover{
-    background: rgba(0, 0, 0, 0.5);
+    // background: rgba(0, 0, 0, 0.5);
+    background: rgba(245, 108, 108, 0.5);
+    color: #fff;
   }
   .attendee-items{
     margin-bottom: 10px;
     margin-left: 15px;
     text-align: left;
     height: 40px;
-    color: #fff;
+    // color: #fff;
     padding-top: 10px;
   }
 
@@ -215,8 +217,8 @@
 }
 .second-section {
   // min-height: 100%;
-  padding-top: 10%;
-  padding-bottom: 10%;
+  padding-top: 7%;
+  padding-bottom: 2%;
   text-align: left;
 }
 .third-section {
@@ -306,20 +308,19 @@
 
 
 .tickets-section > div:nth-child(1) {
-  padding-top: 12%;
-  padding-bottom: 12%;
-  // padding-bottom: 32%;
+  padding-top: 7%;
+  padding-bottom: 7%;
 }
 .third-section {
   padding-bottom: 15%;
 }
 
 .get-involved-section > div {
-  padding-top: 10%;
-  padding-bottom: 10%;
+  padding-top: 3%;
+  padding-bottom: 3%;
 }
 div.container:nth-child(11) > div:nth-child(1) {
-  padding-top: 10%;
+  padding-top: 7%;
 }
 
 div.alt > div > div > div > a {
@@ -529,6 +530,11 @@ p.col-xs-6 > a:hover {
   // color: #001E60;
 }
 
+// mobile
+body > div.get-involved-section > div > div.centered.get-involved-options-choice > div > div > div.col-md-4 {
+  margin-bottom: 7%;
+}
+
 body > div.get-involved-section > div > div.centered.get-involved-options-choice > div > div > div > div.button > a {
   // background-color: #E03E51;
   font-family: 'naiv_normal';
@@ -556,7 +562,7 @@ body > div.get-involved-section > div > div.row.centered > p {
   background-color: #fff;
   font-size: 18px;
   padding: 30px 50px;
-  margin: 40px 100px 0px 0px;
+  margin: 40px 0px 0px 0px;
 
   a{
     color: #001E60;
@@ -567,7 +573,7 @@ body > div.get-involved-section > div > div.row.centered > p {
   background-color: #001E60;
   font-size: 18px;
   padding: 30px 50px;
-  margin: 40px 100px 0px 0px;
+  margin: 40px 10px 0px 0px;
 
   a{
     color: #fff;

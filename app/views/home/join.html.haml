@@ -1,28 +1,22 @@
-.blue_bg#_tickets{:style => "padding-top:120px;"}
+.blank_bg#_tickets{:style => "padding-top:120px;"}
   .container
     .row.centered
       .col-md-10.col-md-offset-1.col-sm-12
-        %h3.ouishare_stencil.white.centered
+        %h3.ouishare_stencil.centered
           = t('dynamic_translations.tickets.title')
-        %hr.white
+        %hr.pink
         %br
         %br
-        %p.white
+        %p.pink
           = t('dynamic_translations.tickets.description1')
           %a{href: "/join#_getinvolved"}
             = t('dynamic_translations.tickets.get_involved')
-        / %p.text-center
-        /   = t('dynamic_translations.tickets.description2')
-        /   %a{href: "http://bit.ly/OSFest14ticketapplication"}
-        /     = t('dynamic_translations.tickets.apply_tickets_link')
-        %p.text-center
-          = image_tag("2016-tickets-#{I18n.locale}-03.png", width: "100%", alt: "Ticket options")
-          / %img{:src => '/assets/2016-tickets-en-03.png', :alt => 'Ticket options', :style => "max-width: 100%"}
-          / %img{:src => '/assets/2016-tickets-fr-03.png', :alt => 'Options billets', :style => "max-width: 100%"}
+        %p.text-center.pink
+          = image_tag("2016-tickets-#{I18n.locale}-04.png", width: "100%", alt: "Ticket options")
         %br
         %br
         / Eventbrite form
-        %div{:style => "width:100%; text-align:left;"}
+        %div{:style => "width:100%; text-align:left; padding: 0 1.6em;"}
           %iframe{:allowtransparency => "true", :frameborder => "0", :height => "520", :hspace => "0", :marginheight => "5", :marginwidth => "5", :scrolling => "auto", :src => "http://www.eventbrite.com/tickets-external?eid=19202830182&ref=etckt&v=2", :vspace => "0", :width => "100%"}
           %div{:style => "font-family:Helvetica, Arial; font-size:10px; padding:5px 0 5px; margin:2px; width:100%; text-align:left;"}
             %a{:href => "http://www.eventbrite.com/r/etckt", :style => "color:#ddd; text-decoration:none;", :target => "_blank"} 
@@ -94,7 +88,7 @@
 .become_partner
   .container 
     .row.centered
-      .col-md-5.col-md-offset-4
+      .col-md-4.col-md-offset-4.col-sm-12
         .btn.btn-pink.become-partner-btn
           %a{:href => 'mailto:partners@ouisharefest.com'}
             / Become a partner
@@ -103,7 +97,7 @@
 
 / Press-media tickets
 
-.blank_bg#_press_media
+.blank_bg#_press_media{:style => "margin-top:100px;margin-bottom:100px;"}
   .container
     .row.centered
       %h3.ouishare_stencil
@@ -123,8 +117,8 @@
         %br
 
 
-
-#_prepare.blank_bg{:style => "margin-top:50px;"}
+/ Prepare your trip
+#_prepare.blank_bg{:style => "margin-bottom:100px;"}
   .container
     .row.centered
       .col-md-6.col-md-offset-3
@@ -148,10 +142,7 @@
             %b
               = t('dynamic_translations.travel_information.title')
           %p.text-center
-            = t('dynamic_translations.travel_information.first_part')
-            %a{href: "https://massmosaic.com/groups/213/view/ouishare-commons", target: "_blank"}
-              = t('dynamic_translations.travel_information.link')
-            = t('dynamic_translations.travel_information.second_part')
+            = t('dynamic_translations.travel_information.text')
         .col-md-2
           .btn.btn-pink{:style => "margin-top: 43px;"}
             %a{href: home_travel_information_path, :style => 'text-decoration:none;'}

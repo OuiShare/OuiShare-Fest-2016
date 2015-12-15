@@ -1,42 +1,42 @@
-/ .blank_bg#_speakers{:style => "padding-bottom: 10px;"}
-/   .container
-/     .row.centered
-/       %h3.ouishare_stencil
-/         = t('dynamic_translations.speakers.title')
-/       %hr.pink
-/       -if !@displayed_speakers.blank?
-/         .ch-grid
-/           - @speakers.each do |speaker|
-/             .col-lg-3.individuals-list-display
-/               %li
-/                 = render "/individuals/partials/speaker_display", :speaker => speaker
+.blank_bg#_speakers{:style => "padding-top: 130px;padding-bottom: 10px;"}
+  .container
+    .row.centered
+      %h3.ouishare_stencil
+        = t('dynamic_translations.speakers.title')
+      %hr.pink
+      -if !@displayed_speakers.blank?
+        .ch-grid
+          - @speakers.each do |speaker|
+            .col-lg-3.individuals-list-display
+              %li
+                = render "/individuals/partials/speaker_display", :speaker => speaker
                 
 
-/       / -if !@displayed_speakers.blank?
-/       /   .ch-grid
-/       /     - @displayed_speakers.each do |speaker|
-/       /       .col-lg-3.individuals-list-display
-/       /         %li
-/       /           = render "/individuals/partials/speaker_display", :speaker => speaker
-/       /     - if !@hidden_speakers.blank?
-/       /       %div
-/       /         #allspeakers{style: "display: none;"}  
-/       /           - @hidden_speakers.each do |speaker|
-/       /             .col-lg-3.individuals-list-display
-/       /               %li
-/       /                 = render "/individuals/partials/speaker_display", :speaker => speaker              
-/       /         %div.row.mb_20
-/       /           %a#btn_showspeakers_down
-/       /             %button.btn.btn-embossed.btn-primary.mt_20
-/       /               = t('dynamic_translations.speakers.show_all')
+      / -if !@displayed_speakers.blank?
+      /   .ch-grid
+      /     - @displayed_speakers.each do |speaker|
+      /       .col-lg-3.individuals-list-display
+      /         %li
+      /           = render "/individuals/partials/speaker_display", :speaker => speaker
+      /     - if !@hidden_speakers.blank?
+      /       %div
+      /         #allspeakers{style: "display: none;"}  
+      /           - @hidden_speakers.each do |speaker|
+      /             .col-lg-3.individuals-list-display
+      /               %li
+      /                 = render "/individuals/partials/speaker_display", :speaker => speaker              
+      /         %div.row.mb_20
+      /           %a#btn_showspeakers_down
+      /             %button.btn.btn-embossed.btn-primary.mt_20
+      /               = t('dynamic_translations.speakers.show_all')
                     
-/       /         %div.row.mb_20.mt_20
-/       /           %button.btn.btn-embossed.btn-primary.hide#btn_showspeakers_up
-/       /             = t('dynamic_translations.speakers.hide_all')
+      /         %div.row.mb_20.mt_20
+      /           %button.btn.btn-embossed.btn-primary.hide#btn_showspeakers_up
+      /             = t('dynamic_translations.speakers.hide_all')
 
 
 
-.blank_bg#_team{:style => "padding-top: 150px;"}
+.blank_bg#_team{:style => "padding-top: 90px;"}
   .container
     .row.centered
       %h3.ouishare_stencil
@@ -64,7 +64,7 @@
           /         %button.btn.btn-embossed.btn-primary
           /           = t('dynamic_translations.team.hide_all')
 
-.partners-container#_partners{:style => 'padding-top:130px'}
+.partners-container#_partners{:style => 'padding-top:100px'}
   .container.sinfo
     - if !@partners.blank?
       .row.centered
@@ -112,32 +112,34 @@
 .become_partner
   .container 
     .row.centered
-      .col-md-5.col-md-offset-4
+      .col-md-4.col-md-offset-4.col-sm-12
         .btn.btn-pink.become-partner-btn
           %a{:href => 'mailto:partners@ouisharefest.com'}
             / Become a partner
             = t('dynamic_translations.get_involved.partners_txt')
 
-.background_3#_whoscoming 
+.blank_bg#_whoscoming
   .container.tickets-section 
-    .row.centered{:style => 'padding-top:0%;'}
-      - if @ouishare_fest_attendees && !@ouishare_fest_attendees["attendees"].blank?
-        %h3.ouishare_stencil.white
-          = t('dynamic_translations.tickets.who_s_coming') 
-        %hr.white
-        %br
-        %ul.unstyled.attendees-list
-          / - attendees = @ouishare_fest_attendees["attendees"].first(ENV["EVENTBRITE_ATTENDEES_DISPLAY_NUMBER"].to_i)
-          - attendees = @ouishare_fest_attendees["attendees"]
-          - attendees.each do |attendee|
-            .col-xs-12.col-sm-4.col-md-3.col-lg-2.attendee-container
-              %li.attendee-items
-                / =image_tag display_gravatar(attendee["attendee"]["email"]), :class => 'img-circle'
-                .row{:style => "color:white;"}                  
-                  = attendee["attendee"]["first_name"]
-                  = attendee["attendee"]["last_name"][0]+'.'
-                .row
-                  = attendee["attendee"]["company"]
+    .row.centered
+      .col-md-8.col-md-offset-2
+        - if @ouishare_fest_attendees && !@ouishare_fest_attendees["attendees"].blank?
+          %h3.ouishare_stencil
+            = t('dynamic_translations.tickets.who_s_coming') 
+          %hr.pink
+          %br
+          %ul.unstyled.attendees-list
+            / - attendees = @ouishare_fest_attendees["attendees"].first(ENV["EVENTBRITE_ATTENDEES_DISPLAY_NUMBER"].to_i)
+            - attendees = @ouishare_fest_attendees["attendees"]
+            - attendees.each do |attendee|
+              .col-xs-6.col-sm-4.col-md-3.attendee-container
+                %li.attendee-items
+                  / =image_tag display_gravatar(attendee["attendee"]["email"]), :class => 'img-circle'
+                  .row                  
+                    = attendee["attendee"]["first_name"]
+                    = attendee["attendee"]["last_name"][0]+'.'
+                  .row
+                    %b
+                      = attendee["attendee"]["company"]
               
           / - if @ouishare_fest_attendees["attendees"].count > ENV["EVENTBRITE_ATTENDEES_DISPLAY_NUMBER"].to_i  
           /   %div

@@ -16,11 +16,40 @@
             %button.btn.btn-large.btn-primary
               = t('dynamic_translations.get_involved.title')
 
-      .row.centered
-        / %img{:src => '/assets/2016-schedule.png', :alt => 'Main schedule', :style => "max-width: 100%"}
-        / %a#sched-embed{:href => "http://ouisharefest2015.sched.org/grid/"}
-        / %script{:type => "text/javascript", :src => "http://ouisharefest2015.sched.org/js/embed.js"}
+      / .row.centered
+      /   %img{:src => '/assets/2016-schedule.png', :alt => 'Main schedule', :style => "max-width: 100%"}
+      /   %a#sched-embed{:href => "http://ouisharefest2015.sched.org/grid/"}
+      /   %script{:type => "text/javascript", :src => "http://ouisharefest2015.sched.org/js/embed.js"}
 
+.blank_bg
+  .container
+    .row.centered
+      %h3.ouishare_stencil
+        = t('dynamic_translations.goldrush.title')
+      %hr.pink
+
+    .col-md-10.col-md-offset-1.col-lg-8.col-lg-offset-2
+      .row.centered
+        %br
+        %br
+        %p
+          %b
+            = t('dynamic_translations.goldrush.p1')
+        %p
+          = t('dynamic_translations.goldrush.p2a')
+          %a{href: "http://content.time.com/time/specials/packages/article/0,28804,2059521_2059717_2059710,00.html", target: "_blank"}
+            = t('dynamic_translations.goldrush.p2b')
+          = t('dynamic_translations.goldrush.p2c')
+        %p
+          = t('dynamic_translations.goldrush.p3')
+        %p
+          = t('dynamic_translations.goldrush.p4')
+        %p
+          %b
+            = t('dynamic_translations.goldrush.p5')
+        %p
+          %a{href: "http://magazine.ouishare.net/2015/12/after-the-gold-rush", target: "_blank"}
+            = t('dynamic_translations.goldrush.p6')
 
 #_awards.aboutouishare-section{style:"padding-top: 5em;"}
   .container

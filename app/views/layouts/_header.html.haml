@@ -27,11 +27,14 @@
               %a{href: "about#_key_topics"}
                 = t('dynamic_translations.topics.title')
             %li
+              %a{href: "about#bestof"}
+                = t('dynamic_translations.video.section_title')
+            %li
               %a{href: "/zero_waste_event"}
                 = t('dynamic_translations.zerowaste.title_nav')
             %li
-              %a{href: "about#_highlights"}
-                = t('dynamic_translations.highlight.watch_2015_sessions')
+              %a{href: "about#_radio"}
+                = t('dynamic_translations.radio.title')
             %li
               %a{href: "about#_about_press"}
                 = t('dynamic_translations.press.title')
@@ -44,13 +47,13 @@
               %ul.dropdown-menu
                 %li
                   %a{href: "http://2015.ouisharefest.com/"}
-                    = t('dynamic_translations.past_editions.fest_2015')
+                    OuiShare Fest 2015
                 %li
                   %a{href: "http://2014.ouisharefest.com/"}
-                    = t('dynamic_translations.past_editions.fest_2014')
+                    OuiShare Fest 2014
                 %li
                   %a{href: "http://2013.ouisharefest.com/"}
-                    = t('dynamic_translations.past_editions.fest_2013')
+                    OuiShare Fest 2013
 
         / %li.dropdown
         /   %a.dropdown-toggle{href: "#"}
@@ -75,6 +78,9 @@
               %a{href: "program#_schedule"}
                 = t('dynamic_translations.program.main_schedule')
             %li
+              %a{href: "/after_gold_rush"}
+                = t('dynamic_translations.goldrush.title')
+            %li
               %a{href: "program#_awards"}
                 = t('dynamic_translations.ouishare_awards.see_2015_awards_winners')
             / %li
@@ -97,6 +103,9 @@
           %a.dropdown-toggle{href: "/participants"}
             =t('dynamic_translations.participants.title')
           %ul.dropdown-menu
+            %li
+              %a{href: "participants#_speakers"}
+                = t('dynamic_translations.speakers.title')
             %li
               %a{href: "participants#_team"}
                 = t('dynamic_translations.team.title')

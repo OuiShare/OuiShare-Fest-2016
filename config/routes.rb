@@ -64,10 +64,12 @@ OuiShareFest::Application.routes.draw do
     get :entreprises
     get :press_and_media
     # get :fest2014
+    # get :sliders
     get :travel_information
     get :where_to_stay
     get :getting_to_the_venue
     get :zero_waste_event
+    get :after_gold_rush
     # get :satellite_events
     # get :stories
     post :newsletter_collect_email

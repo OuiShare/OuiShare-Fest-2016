@@ -1,0 +1,193 @@
+.blank_bg.page#bestof
+  .container
+    .row
+      %h3.ouishare_stencil
+        = t('dynamic_translations.video.section_title')
+      %hr.pink
+    .row{style:"padding-top: 3%"}
+      .col-md-4{style:"position: relative"}
+        .col-md-12
+          %img{style:"display:block;width:100%;height:auto", src:"http://placehold.it/16x9"}
+          %iframe{allowfullscreen: "", frameborder: "0", src: "//www.youtube.com/embed/zQYv6Rp6t-Y", style:"position:absolute;top:0;left:0;width:100%;height:100%"}
+        .col-md-12
+          %br
+          %p
+            Redesigning our Political System for the Internet Era
+            %br
+            Pia Mancini
+      .col-md-4{style:"position: relative"}
+        .col-md-12
+          %img{style:"display:block;width:100%;height:auto", src:"http://placehold.it/16x9"}
+          %iframe{allowfullscreen: "", frameborder: "0", src: "//www.youtube.com/embed/hkU3DbgQkaQ", style:"position:absolute;top:0;left:0;width:100%;height:100%"}
+        .col-md-12
+          %br
+          %p
+            How to finance your platform?
+            %br
+            Robin Chase
+      .col-md-4{style:"position: relative"}
+        .col-md-12
+          %img{style:"display:block;width:100%;height:auto", src:"http://placehold.it/16x9"}
+          %iframe{allowfullscreen: "", frameborder: "0", src: "//www.youtube.com/embed/TAUTmxo1sCY", style:"position:absolute;top:0;left:0;width:100%;height:100%"}
+        .col-md-12
+          %br
+          %p
+            You are the product
+            %br
+            Aral Balkan
+    .row.centered{:style => "margin-bottom:100px;"}
+      .col-md-12
+        .col-md-6.col-md-offset-3
+          %a{href: "https://www.youtube.com/playlist?list=PL8Bt3EbdmpKM4tYKyERKbp6VMYTjYZwCF", :target => "_blank", :style => "width: 170px;"}
+            %button.btn.btn-large.btn-primary
+              = t('dynamic_translations.video.see_all')
+
+/ #speakers
+/   .container
+/     .row.centered
+/       %h3.ouishare_stencil
+/         = t('dynamic_translations.speakers.title')
+/       %hr.pink
+/       - if !@displayed_speakers.blank?
+/         .ch-grid
+/           - @displayed_speakers.each do |speaker|
+/             .col-lg-3.col-md-v.individuals-list-display
+/               %li
+/                 = render "/individuals/partials/speaker_display", :speaker => speaker
+/           - if !@hidden_speakers.blank?
+/             %div
+/               #allspeakers{style: "display: none;"}
+/                 - @hidden_speakers.each do |speaker|
+/                   .col-lg-3.col-md-v.individuals-list-display
+/                     %li
+/                       = render "/individuals/partials/speaker_display", :speaker => speaker
+/               %div.row.mb_20
+/                 %a#btn_showspeakers_down
+/                   %button.btn.btn-embossed.btn-primary.mt_20
+/                     = t('dynamic_translations.speakers.show_all')
+
+/               %div.row.mb_20.mt_20
+/                 %button.btn.btn-embossed.btn-primary.hide#btn_showspeakers_up
+/                   = t('dynamic_translations.speakers.hide_all')
+
+
+/ OuiShare News 2016 static
+.blank_bg#news{style: "padding-top:7%;"}
+  .container
+    .row.centered
+      %h3.ouishare_stencil
+        = t('dynamic_translations.ouishare-news.title')
+      %hr.pink
+    .row{style:"padding-top: 3%"}
+      .col-md-4{style:"position: relative"}
+        .col-md-12
+          %a{href: "http://magazine.ouishare.net/2015/11/decentralizing-part-of-ouishare-with-blockchain-experiment-1/"}
+            %img{style:"display:block;width:100%;height:auto", src:"http://magazine.ouishare.net/wp-content/uploads/2015/11/decentralization-osfest-1050x639.png"}
+        .col-md-12
+          %br
+          %p
+            %a{href: "http://magazine.ouishare.net/2015/11/decentralizing-part-of-ouishare-with-blockchain-experiment-1/"}
+              Decentralizing (part of) OuiShare with blockchain: Experiment 1
+            %br
+            Francesca Pick
+      .col-md-4{style:"position: relative"}
+        .col-md-12
+          %a{href: "http://magazine.ouishare.net/2015/11/call-for-contributions-now-open-submit-your-idea-for-ouishare-fest-2016/"}
+            %img{style:"display:block;width:100%;height:auto", src:"http://magazine.ouishare.net/wp-content/uploads/2015/11/call-for-contributions-20163-1050x616.jpg"}
+        .col-md-12
+          %br
+          %p
+            %a{href: "http://magazine.ouishare.net/2015/11/call-for-contributions-now-open-submit-your-idea-for-ouishare-fest-2016/"}
+              Call for Contributions now open: Submit your idea for OuiShare Fest 2016
+            %br
+            Khushboo Balwani
+      .col-md-4{style:"position: relative"}
+        .col-md-12
+          %a{href: "http://magazine.ouishare.net/2015/07/uber-wars-an-interview-with-pierre-dimitri-gore-coty/"}
+            %img{style:"display:block;width:100%;height:auto", src:"http://magazine.ouishare.net/wp-content/uploads/2015/07/uberfest-335x184.png"}
+        .col-md-12
+          %br
+          %p
+            %a{href: "http://magazine.ouishare.net/2015/07/uber-wars-an-interview-with-pierre-dimitri-gore-coty/"}
+              Uber Wars: An interview with Pierre-Dimitri Gore-Coty
+            %br
+            Arthur De Grave
+    .row.centered{:style => "margin-bottom:100px;"}
+      .col-md-12
+        .col-md-6.col-md-offset-3
+          %a{href: "http://magazine.ouishare.net/tag/ouisharefest/", :target => "_blank", :style => "width: 170px;"}
+            %button.btn.btn-large.btn-primary
+              = t('dynamic_translations.news.see_all')
+
+
+/ / OuiShare News 2016
+/ .blank_bg#_news
+/   .container
+/     .row.centered
+/       %h3.ouishare_stencil
+/         = t('dynamic_translations.ouishare-news.title')
+/       %hr.pink
+/     .row.centered
+/       - @magazines.each do |f|
+/         %div.col-md-4
+/           - if !f.content.split('img')[1].nil?
+/             %div.col-md-12
+/               %a{href: "#{f.url}", target:"blank"}
+/                 %img{:src => "#{f.content.split(' ')[3].split('"')[1].gsub(/-150x150/, "")}", :u => "image"}
+/             %div.col-md-12
+/               %br
+/               %p
+/                 %a{href: "#{f.url}", target:"blank"}
+/                   = f.name
+/           - else
+/             %div.col-md-12
+/               %a{href: "#{f.url}", target:"blank"}
+/                 = image_tag "/assets/landing_logo.png", :style => "height:150px;"
+/             %div.col-md-12
+/               %br
+/               %p
+/                 %a{href: "#{f.url}", target:"blank"}
+/                   = f.name
+/     .row.centered{:style => "margin-bottom:100px;"}
+/       .col-md-12
+/         .col-md-6.col-md-offset-3
+/           %a{href: "http://magazine.ouishare.net/tag/ouisharefest/", :target => "_blank", :style => "width: 170px;"}
+/             %button.btn.btn-large.btn-primary
+/               = t('dynamic_translations.news.see_all')
+
+
+/ / OuiShare News 2015
+/ .ouishare-news-section
+/   .container
+/     .row.centered
+/       %h3.ouishare_stencil
+/         = t('dynamic_translations.ouishare-news.title')
+/       %hr.pink
+
+/   #slider-container.text-center{:style => "min-height:100%;"}
+/     #slider1_container{:style => "position: relative; top: 0px; left: 0px; width: 1200px; height: 300px;"}
+/       / Slides Container
+/       %div.scale-jssor{:style => "cursor: move; position: absolute; left: 0px; top: 0px; width: 1200px; height: 300px; overflow: hidden;", :u => "slides"}
+/         - @magazines.each do |f|
+/           %div
+/             - if !f.content.split('img')[1].nil?
+/               %img{:src => "#{f.content.split(' ')[3].split('"')[1].gsub(/-150x150/, "")}", :u => "image"}
+/               %span.presentation.ouishare_stencil.white
+/                 = f.name
+/               %span.btn.btn-blue{:style => "position:absolute; width: 100px; height: 50px; top: 70%; left: 40%;"}
+/                 %a{href: "#{f.url}", target:"blank"}
+/                   Read More
+/             - else
+/               = image_tag "/assets/landing_logo.png", :style => "height:150px;"
+/               %span.presentation.ouishare_stencil.white
+/                 = f.name
+/               %span.btn.btn-blue{:style => "position:absolute; width: 100px; height: 50px; top: 70%; left: 40%;"}
+/                 %a{href: "#{f.url}", target:"blank"}
+/                   Read More
+
+/       %span.jssora13l{:style => "width: 40px; height: 50px; top: 123px; left: 30px;", :u => "arrowleft"}
+/       / Arrow Right
+/       %span.jssora13r{:style => "width: 40px; height: 50px; top: 123px; right: 30px", :u => "arrowright"}
+
+
+
