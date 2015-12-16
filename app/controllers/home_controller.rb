@@ -170,7 +170,9 @@ class HomeController < ApplicationController
   def join
   end
 
-  def program
+  def sliders
+    Magazine.fetch_last_posts
+    @magazines = Magazine.all
   end
 
   def faq
