@@ -175,6 +175,11 @@ class HomeController < ApplicationController
     @magazines = Magazine.all
   end
 
+  def news
+    Magazine.fetch_last_posts
+    @magazines = Magazine.all
+  end
+
   def faq
   end
 
