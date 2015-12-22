@@ -42,6 +42,26 @@
             %button.btn.btn-large.btn-primary
               = t('dynamic_translations.video.see_all')
 
+/ Featured Attendees
+#speakers{style: "padding-top:7%;"}
+  .container
+    .row.centered
+      %h3.ouishare_stencil
+        = t('dynamic_translations.speakers.featured_attendees')
+      %hr.pink
+      - if !@featured.blank?
+        .ch-grid
+          - @featured.each do |speaker|
+            .col-lg-3.individuals-list-display
+              %li
+                = render "/individuals/partials/speaker_display", :speaker => @featured
+/       - if !@track_leaders.blank?
+/         .ch-grid
+/           - @track_leaders.each do |track_leader|
+/             .col-lg-3.individuals-list-display
+/               %li
+/                 = render "/individuals/partials/track_leaders_display", :track_leader => track_leader
+
 / #speakers
 /   .container
 /     .row.centered

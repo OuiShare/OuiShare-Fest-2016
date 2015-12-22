@@ -173,6 +173,20 @@ class HomeController < ApplicationController
   def sliders
     Magazine.fetch_last_posts
     @magazines = Magazine.all
+
+    if IndividualType.find_by_title('Featured')
+      @featured = IndividualType.find_by_title('Featured').get_members
+      
+      if ENV["DISPLAYED_FEATURED"].to_i > @featured.count
+        displayed_featured_number = @featured.count
+      else
+        displayed_featured_number = ENV["DISPLAYED_FEATURED"].to_i
+      end
+    end
+  
+    if IndividualType.find_by_title('Speakers')
+      @speakers = IndividualType.find_by_title('Speakers').get_members
+    end
   end
 
   def news
