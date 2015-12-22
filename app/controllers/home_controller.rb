@@ -34,6 +34,16 @@ class HomeController < ApplicationController
       @hidden_team_members = @team_members.last(@team_members.count - displayed_team_members_number)
     end
 
+    if IndividualType.find_by_title('Featured')
+      @featured = IndividualType.find_by_title('Featured').get_members
+      
+      if ENV["DISPLAYED_FEATURED"].to_i > @featured.count
+        displayed_featured_number = @featured.count
+      else
+        displayed_featured_number = ENV["DISPLAYED_FEATURED"].to_i
+      end
+    end
+
     if IndividualType.find_by_title('Partners')      
       @partners = IndividualType.find_by_title('Partners').get_members
     end
@@ -150,6 +160,16 @@ class HomeController < ApplicationController
       @hidden_speakers = @speakers.last(@speakers.count - displayed_speakers_number)
       @displayed_team_members = @team_members.first(displayed_team_members_number)
       @hidden_team_members = @team_members.last(@team_members.count - displayed_team_members_number)
+    end
+
+    if IndividualType.find_by_title('Featured')
+      @featured = IndividualType.find_by_title('Featured').get_members
+      
+      if ENV["DISPLAYED_FEATURED"].to_i > @featured.count
+        displayed_featured_number = @featured.count
+      else
+        displayed_featured_number = ENV["DISPLAYED_FEATURED"].to_i
+      end
     end
 
     if IndividualType.find_by_title('Partners')      
