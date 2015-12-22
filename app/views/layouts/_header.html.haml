@@ -107,6 +107,9 @@
               %a{href: "participants#_speakers"}
                 = t('dynamic_translations.speakers.title')
             %li
+              %a{href: "participants#featured"}
+                = t('dynamic_translations.speakers.featured')
+            %li
               %a{href: "participants#_team"}
                 = t('dynamic_translations.team.title')
             %li
@@ -171,8 +174,11 @@
         / %li.tickets-highlight
         /   %a.highlight{href: "http://magazine.ouishare.net/tag/ouisharefest/", target: "_blank"}
         /     =t('dynamic_translations.blog.title')
+        / %li
+        /   %a{href: "http://magazine.ouishare.net/tag/ouisharefest/", target: "_blank"}
+        /     =t('dynamic_translations.blog.title')
         %li
-          %a{href: "http://magazine.ouishare.net/tag/ouisharefest/", target: "_blank"}
+          %a{href: "/news"}
             =t('dynamic_translations.blog.title')
         %li
           .text-center.social-media-icons-header
