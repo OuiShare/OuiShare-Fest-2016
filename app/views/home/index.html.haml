@@ -64,6 +64,19 @@
                 %button.btn.btn-embossed.btn-primary.hide#btn_showspeakers_up
                   = t('dynamic_translations.speakers.hide_all')
 
+/ Featured Attendees
+#speakers{style: "padding-top:7%;"}
+  .container
+    .row.centered
+      %h3.ouishare_stencil
+        = t('dynamic_translations.speakers.featured')
+      %hr.pink
+      - if !@featured.blank?
+        .ch-grid
+          - @featured.each do |speaker|
+            .col-lg-3.individuals-list-display
+              %li
+                = render "/individuals/partials/speaker_display", :speaker => speaker
 
 / Best of 2015
 .blank_bg#bestof{style: "padding-top:7%;"}
