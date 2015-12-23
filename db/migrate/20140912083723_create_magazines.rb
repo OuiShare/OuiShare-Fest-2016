@@ -7,7 +7,6 @@ class CreateMagazines < ActiveRecord::Migration
       t.datetime :published_at
       t.string :guid
       t.string :tags
-      t.string :author
 
       t.timestamps
     end
