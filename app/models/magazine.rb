@@ -1,6 +1,6 @@
 class Magazine < ActiveRecord::Base
 	require 'feedjira'
-  attr_accessible :content, :guid, :name, :published_at, :tags, :url
+  attr_accessible :content, :guid, :name, :published_at, :tags, :url, :author
 
   def self.fetch_last_posts
   	feed_url = 'http://magazine.ouishare.net/tag/ouisharefest/feed'
@@ -31,6 +31,7 @@ class Magazine < ActiveRecord::Base
 			unless exists? :guid => entry.entry_id
 				create!(
 					:name				=> entry.title,
+					:author				=> entry.author,
 					:content				=> entry.summary,
 					:published_at				=> entry.published,
 					:url				=> entry.url,

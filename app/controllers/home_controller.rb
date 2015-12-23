@@ -208,7 +208,7 @@ class HomeController < ApplicationController
 
   def news
     Magazine.fetch_last_posts
-    @magazines = Magazine.all
+    @magazines = Magazine.order("published_at desc").all
   end
 
   def faq
