@@ -8,8 +8,8 @@ class HomeController < ApplicationController
   
   def index    
 
-    Magazine.fetch_last_posts
-    @magazines = Magazine.order("published_at desc").limit(3)
+    # Magazine.fetch_last_posts
+    # @magazines = Magazine.order("published_at desc").limit(3)
 
     if IndividualType.find_by_title('Team')
       @team_members = IndividualType.find_by_title('Team').get_members
