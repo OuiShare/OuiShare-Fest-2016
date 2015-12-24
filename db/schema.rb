@@ -99,9 +99,9 @@ ActiveRecord::Schema.define(:version => 20151223140641) do
     t.datetime "published_at"
     t.string   "guid"
     t.string   "tags"
+    t.string   "author"
     t.datetime "created_at",   :null => false
     t.datetime "updated_at",   :null => false
-    t.string   "author"
   end
 
   create_table "newsletter_subscribers", :force => true do |t|
