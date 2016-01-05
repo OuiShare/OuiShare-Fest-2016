@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20151223140641) do
+ActiveRecord::Schema.define(:version => 20140912083723) do
 
   create_table "admin_one_shot_codes", :force => true do |t|
     t.integer  "admin_id",   :null => false

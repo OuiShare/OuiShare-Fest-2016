@@ -16,12 +16,12 @@ OuiShareFest::Application.routes.draw do
       get :export_users
       get :export_newsletter_subscribers
       get :users_list
-      get :settings_list 
+      get :settings_list
       get :strong_auth_access_page
       get :individuals_list
       get :individual_types_list
       get :restart_nginx_server
-      post :validate_strong_auth    
+      post :validate_strong_auth
     end
     member do
       get :individual_type
@@ -32,7 +32,7 @@ OuiShareFest::Application.routes.draw do
 
   resources :individuals
 
-  # Devise routes  
+  # Devise routes
   devise_for :users, :skip => [:sessions, :registrations], :path => ''
   devise_scope :user do
     get '/register', :to => 'devise/registrations#new', :as => 'user_registration'
@@ -45,7 +45,7 @@ OuiShareFest::Application.routes.draw do
     # get '/password/change', :to => 'devise/registrations#edit', :as => 'change_password'
     # TODO: delete the route of cancel account, by delete defaut routes of registrations (:skip => [:registrations]) and only keeping custom ones
     end
-  
+
   resources :users, only: [:index, :show, :edit, :update]
 
   # Home routes
@@ -81,13 +81,14 @@ OuiShareFest::Application.routes.draw do
   namespace :me do
     get :dashboard
     get :preferences
-    get :edit_profile   
+    get :edit_profile
     get :change_password
     put :apply_change_password
-    put :update_profile  
+    put :update_profile
   end
 
+  get '/triangles' => 'triangle#index'
   get '/auth/:provider/callback' => 'authentications#create'
-  match '/auth/failure' => 'authentications#failure' 
-    
+  match '/auth/failure' => 'authentications#failure'
+
 end
