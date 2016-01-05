@@ -64,19 +64,19 @@
                 %button.btn.btn-embossed.btn-primary.hide#btn_showspeakers_up
                   = t('dynamic_translations.speakers.hide_all')
 
-/ Featured Attendees
-#featured{style: "padding-top:7%;"}
-  .container
-    .row.centered
-      %h3.ouishare_stencil
-        = t('dynamic_translations.speakers.featured')
-      %hr.pink
-      - if !@featured.blank?
-        .ch-grid
-          - @featured.each do |speaker|
-            .col-lg-3.individuals-list-display
-              %li
-                = render "/individuals/partials/speaker_display", :speaker => speaker
+/ / Featured Attendees
+/ #featured{style: "padding-top:7%;"}
+/   .container
+/     .row.centered
+/       %h3.ouishare_stencil
+/         = t('dynamic_translations.speakers.featured')
+/       %hr.pink
+/       - if !@featured.blank?
+/         .ch-grid
+/           - @featured.each do |speaker|
+/             .col-lg-3.individuals-list-display
+/               %li
+/                 = render "/individuals/partials/speaker_display", :speaker => speaker
 
 / Best of 2015
 .blank_bg#bestof{style: "padding-top:7%;"}
@@ -98,25 +98,25 @@
       .col-md-4{style:"position: relative"}
         .col-md-12
           %img{style:"display:block;width:100%;height:auto", src:"http://placehold.it/16x9"}
-          %iframe{allowfullscreen: "", frameborder: "0", src: "//www.youtube.com/embed/zQYv6Rp6t-Y", style:"position:absolute;top:0;left:0;width:100%;height:100%"}
+          %iframe{allowfullscreen: "", frameborder: "0", src: "//www.youtube.com/embed/hkU3DbgQkaQ", style:"position:absolute;top:0;left:0;width:100%;height:100%"}
         .col-md-12
           %br
           %p
-            %a{href: "http://youtu.be/zQYv6Rp6t-Y", :target => "_blank"}
-              Redesigning our Political System for the Internet Era
+            %a{href: "http://youtu.be/hkU3DbgQkaQ", :target => "_blank"}
+              How to finance your platform?
             %br
-            Pia Mancini
+            Robin Chase
       .col-md-4{style:"position: relative"}
         .col-md-12
           %img{style:"display:block;width:100%;height:auto", src:"http://placehold.it/16x9"}
-          %iframe{allowfullscreen: "", frameborder: "0", src: "//www.youtube.com/embed/TAUTmxo1sCY", style:"position:absolute;top:0;left:0;width:100%;height:100%"}
+          %iframe{allowfullscreen: "", frameborder: "0", src: "//www.youtube.com/embed/-5csKb0R6qE", style:"position:absolute;top:0;left:0;width:100%;height:100%"}
         .col-md-12
           %br
           %p
-            %a{href: "http://youtu.be/TAUTmxo1sCY", :target => "_blank"}
-              You are the product
+            %a{href: "http://youtu.be/-5csKb0R6qE", :target => "_blank"}
+              What is the Purpose of a Collaborative Society Anyway?
             %br
-            Aral Balkan
+            Sara Horowitz
     .row.centered{:style => "margin-bottom:100px;"}
       .col-md-12
         .col-md-6.col-md-offset-3
@@ -125,7 +125,7 @@
               = t('dynamic_translations.video.see_all')
 
 
-/ OuiShare News 2016 static
+/ OuiShare News 2016 dynamic
 .blank_bg#news
   .container
     .row.centered
