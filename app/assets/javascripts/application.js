@@ -22,5 +22,5 @@
 //= require ./libs/libs
 
 //= require ./jquery.themepunch.revolution.min.js
-
+//= require ./triangles.js
 //= require_tree .
