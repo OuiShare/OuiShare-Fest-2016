@@ -5,4 +5,5 @@
 //= require flatui-radio
 //= require html5shiv
 //= require modernizr.custom.79639
+//= require triangles
 //= retina
