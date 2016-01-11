@@ -1583,8 +1583,8 @@ c);e.bind(this.domElement,"transitionend",c);e.bind(this.domElement,"oTransition
     width: 1.2,
     height: 1.2,
     slices: 309,
-    ambient: '#555555',
-    diffuse: '#FFFFFF'
+    ambient: '#B93D3D',
+    diffuse: '#4F7E84'
   };
 
   //------------------------------
@@ -1595,7 +1595,7 @@ c);e.bind(this.domElement,"transitionend",c);e.bind(this.domElement,"oTransition
     xPos : 0,
     yPos : 200,
     zOffset: 20,
-    ambient: '#ffffff',
+    ambient: '#FFFFFF',
     diffuse: '#002DFF',
     pickedup :true,
     proxy : false,
