@@ -1580,11 +1580,11 @@ c);e.bind(this.domElement,"transitionend",c);e.bind(this.domElement,"oTransition
   // Mesh Properties
   //------------------------------
   var MESH = {
-    width: 1.2,
-    height: 1.2,
+    width: 1.4,
+    height: 0.8,
     slices: 309,
-    ambient: '#B93D3D',
-    diffuse: '#4F7E84'
+    ambient: '#E3C335',
+    diffuse: '#8EEEFF'
   };
 
   //------------------------------
@@ -1592,11 +1592,11 @@ c);e.bind(this.domElement,"transitionend",c);e.bind(this.domElement,"oTransition
   //------------------------------
   var LIGHT = {
     count: 1,
-    xPos : 0,
-    yPos : 200,
+    xPos : -500,
+    yPos : 86,
     zOffset: 20,
-    ambient: '#FFFFFF',
-    diffuse: '#002DFF',
+    ambient: '#CD8888',
+    diffuse: '#FFCDCA',
     pickedup :true,
     proxy : false,
     currIndex : 0
