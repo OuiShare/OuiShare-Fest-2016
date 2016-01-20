@@ -1580,8 +1580,8 @@ c);e.bind(this.domElement,"transitionend",c);e.bind(this.domElement,"oTransition
   // Mesh Properties
   //------------------------------
   var MESH = {
-    width: 0.5,
-    height: 1.0,
+    width: 1.2,
+    height: 1.2,
     slices: 468,
     ambient: '#64656B',
     diffuse: '#FFFFFF'
@@ -1707,6 +1707,7 @@ c);e.bind(this.domElement,"transitionend",c);e.bind(this.domElement,"oTransition
     createRenderer();
     createScene();
     createMesh();
+    addLight();
     addLight();
     addEventListeners();
     // addControls();
