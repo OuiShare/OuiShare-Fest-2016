@@ -1591,7 +1591,7 @@ c);e.bind(this.domElement,"transitionend",c);e.bind(this.domElement,"oTransition
   // Light Properties
   //------------------------------
   var LIGHT = {
-    count: 1,
+    count: 2,
     xPos : -500,
     yPos : 86,
     zOffset: 20,
@@ -1707,7 +1707,6 @@ c);e.bind(this.domElement,"transitionend",c);e.bind(this.domElement,"oTransition
     createRenderer();
     createScene();
     createMesh();
-    addLight();
     addLight();
     addEventListeners();
     // addControls();
