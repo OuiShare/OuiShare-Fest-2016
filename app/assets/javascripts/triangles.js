@@ -1580,11 +1580,11 @@ c);e.bind(this.domElement,"transitionend",c);e.bind(this.domElement,"oTransition
   // Mesh Properties
   //------------------------------
   var MESH = {
-    width: 1.2,
-    height: 1.2,
-    slices: 309,
-    ambient: '#E3C335',
-    diffuse: '#8EEEFF'
+    width: 0.5,
+    height: 1.0,
+    slices: 468,
+    ambient: '#64656B',
+    diffuse: '#FFFFFF'
   };
 
   //------------------------------
@@ -1595,8 +1595,8 @@ c);e.bind(this.domElement,"transitionend",c);e.bind(this.domElement,"oTransition
     xPos : -500,
     yPos : 86,
     zOffset: 20,
-    ambient: '#cd88bb',
-    diffuse: '#d29958',
+    ambient: '#001FFF',
+    diffuse: '#A32FBB',
     pickedup :true,
     proxy : false,
     currIndex : 0
