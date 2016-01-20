@@ -1708,6 +1708,8 @@ c);e.bind(this.domElement,"transitionend",c);e.bind(this.domElement,"oTransition
     createScene();
     createMesh();
     addLight();
+    addLight();
+    addLight();
     addEventListeners();
     // addControls();
     resize(container.offsetWidth, container.offsetHeight);
