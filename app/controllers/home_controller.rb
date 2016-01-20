@@ -83,49 +83,6 @@ class HomeController < ApplicationController
 
   end
 
-  def fest2014
-
-    if IndividualType.find_by_title('Team')
-      @team_members = IndividualType.find_by_title('Team').get_members
-      if ENV["DISPLAYED_TEAM_MEMBERS"].to_i > @team_members.count
-        displayed_team_members_number = @team_members.count
-      else
-        displayed_team_members_number = ENV["DISPLAYED_TEAM_MEMBERS"].to_i
-      end
-    end
-
-    if IndividualType.find_by_title('Speakers')
-      @speakers = IndividualType.find_by_title('Speakers').get_members
-      
-      if ENV["DISPLAYED_SPEAKERS"].to_i > @speakers.count
-        displayed_speakers_number = @speakers.count
-      else
-        displayed_speakers_number = ENV["DISPLAYED_SPEAKERS"].to_i
-      end
-
-      @displayed_speakers = @speakers.first(displayed_speakers_number)
-      @hidden_speakers = @speakers.last(@speakers.count - displayed_speakers_number)
-      @displayed_team_members = @team_members.first(displayed_team_members_number)
-      @hidden_team_members = @team_members.last(@team_members.count - displayed_team_members_number)
-
-    end
-
-    if IndividualType.find_by_title('Partners')      
-      @partners = IndividualType.find_by_title('Partners').get_members
-    end
-    if IndividualType.find_by_title('Friends')      
-      @friends = IndividualType.find_by_title('Friends').get_members
-    end
-    if IndividualType.find_by_title('Media Partners')      
-      @media_partners = IndividualType.find_by_title('Media Partners').get_members
-    end
-    if IndividualType.find_by_title('Supporters')      
-      @supporters = IndividualType.find_by_title('Supporters').get_members
-    end
-
-
-  end
-
     def participants
       eb_auth_tokens = { app_key: ENV['EVENTBRITE_APP_KEY'],
                    access_token: ENV['EVENTBRITE_USER_KEY']}

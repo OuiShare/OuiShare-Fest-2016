@@ -52,7 +52,7 @@ OuiShareFest::Application.routes.draw do
   root :to => 'home#index'
 
   namespace :home, :path => nil do
-    get :faq
+    # get :faq
     # get :contact
     # post :contact, :action => :contact_email
     get :site_off
@@ -60,10 +60,9 @@ OuiShareFest::Application.routes.draw do
     get :about
     get :participants
     get :join
-    get :freelancers
-    get :entreprises
-    get :press_and_media
-    # get :fest2014
+    # get :freelancers
+    # get :entreprises
+    # get :press_and_media
     # get :sliders
     get :news
     get :travel_information
