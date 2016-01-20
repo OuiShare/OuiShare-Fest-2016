@@ -54,6 +54,10 @@
           /         %button.btn.btn-embossed.btn-primary
           /           = t('dynamic_translations.team.hide_all')
 
+    .row.centered
+      %a#sched-embed{:href => "http://ouisharefest2015.sched.org/directory/artists"}
+      %script{:type => "text/javascript", :src => "http://ouisharefest2015.sched.org/js/embed.js"}
+
 .partners-container#_partners{:style => 'padding-top:100px'}
   .container.sinfo
     - if !@partners.blank?
