@@ -1582,21 +1582,21 @@ c);e.bind(this.domElement,"transitionend",c);e.bind(this.domElement,"oTransition
   var MESH = {
     width: 1.2,
     height: 1.2,
-    slices: 468,
-    ambient: '#64656B',
-    diffuse: '#FFFFFF'
+    slices: 250,
+    ambient: '#D44882',
+    diffuse: '#056BFF'
   };
 
   //------------------------------
   // Light Properties
   //------------------------------
   var LIGHT = {
-    count: 2,
+    count: 1,
     xPos : -500,
     yPos : 86,
     zOffset: 20,
-    ambient: '#001FFF',
-    diffuse: '#A32FBB',
+    ambient: '#CD2222',
+    diffuse: '#0E00FF',
     pickedup :true,
     proxy : false,
     currIndex : 0
