@@ -52,6 +52,7 @@ OuiShareFest::Application.routes.draw do
   root :to => 'home#index'
 
   namespace :home, :path => nil do
+    get :fest_forward
     # get :faq
     # get :contact
     # post :contact, :action => :contact_email

@@ -1,0 +1,199 @@
+.blank_bg.page
+  .container
+    .main-section
+      .row
+        #head_logo
+          = image_tag "/assets/logo-fest-forward.svg", :style => "height:250px;margin-top:20px"
+      .row
+        .col-md-10.col-md-offset-1
+          %h1.main-title{:style => "color:#f56c6c"}
+            = t('dynamic_translations.ff.title')
+        .col-md-8.col-md-offset-2
+          %p.main-section-paragraphes
+            = t('dynamic_translations.ff.tagline')
+      .row
+        .col-md-8.col-md-offset-2
+          %br
+          %br
+          %p.centered.join_bouton
+            %a{:href => '#_apply'}
+              %button.btn.btn-embossed.btn-primary
+                = t('dynamic_translations.ff.btn_apply')
+.net_bg#_about
+  .container
+    .second-section
+      .row.centered
+        %h3.ouishare_stencil
+          = t('dynamic_translations.ff_about.title')
+        %hr.pink
+        %br/
+        %br/
+      .row.centered.blank_bg
+        %h3.col-md-6.col-md-offset-3.ouishare_stencil.white.text-center{:style => "font-size:20px;background-color: #f56c6c"}
+          = t('dynamic_translations.ff_about.subtitle')
+        .col-md-6.col-md-offset-3.col-sm-8.col-sm-offset-2
+          %br
+          %br
+          %p
+            = t('dynamic_translations.ff_about.p1a')
+            %a{href: "http://ouisharefest.com", target: "_blank"}
+              OuiShare Fest Paris,
+            = t('dynamic_translations.ff_about.p1b')
+          %br
+          %p
+            = t('dynamic_translations.ff_about.p2a')
+            %a{href: "http://poc21.cc", target: "_blank"}
+              POC21
+            = t('dynamic_translations.ff_about.p2b')
+            %a{href: "http://awards.ouishare.net", target: "_blank"}
+              OuiShare Awards,
+            = t('dynamic_translations.ff_about.p2c')
+          %br
+          %p
+            = t('dynamic_translations.ff_about.p3a')
+            %a{href: '#_apply'}
+              apply here >>
+
+.blank_bg#_apply
+  .container
+    .row.centered
+      %h3.ouishare_stencil
+        = t('dynamic_translations.ff_apply.title')
+      %hr.pink
+      %br/
+      %br/
+    .row.centered
+      .col-md-8.col-md-offset-2
+        %h4
+          = t('dynamic_translations.ff_apply.who_title')
+        %p
+          OuiShare Fest Forward aims to showcase a diversity collaborative, open source projects. We are open to applications from:
+        %ul
+          %li
+            startups, non-profits and public initiatives
+          %li
+            hardware and software projects
+          %li
+            large and small teams
+          %li
+            new and established initiatives
+        %p
+          There are only 
+          %b
+            two application requirements:
+        %ol
+          %li
+            The initiative has the potential to create a measurable positive impact on society or the environment
+          %li
+            The initiative is open source
+        %h4
+          Selection criteria
+        %ul
+          %li
+            Impact: how large is the impact of your project (direct and indirect)?
+          %li
+            Replicability: how easy it is to duplicate and scale your project or solution?
+          %li
+            Disruption: how innovative and transfomative is your idea?
+          %li
+            Viability: is your idea coherent with and applicable to the world we live in?
+          %li
+            Structure: how well structured is your team, your concept, your model
+          %li
+            Challenge: how can we contribute to solving your challenge
+          %li
+            Values: how well does your project put into action the 
+            %a{href: '#'}
+              OuiShare values?
+          %li
+            OuiShare Fest Program: does your project address topics that are part of the 
+            %a{href: '#'}
+              OuiShare Fest program?
+        %p
+          The project holders should be available to start working together with OuiShare partners before the Fest. International applications are more than welcome!
+        %p
+          *OuiShare Fest Forward will not cover any flight tickets to Paris.
+        %h4
+          Process & Deadlines
+        %p
+          The Impact | Applicants should pick one or more fields and give brief illustrations of the impact achieved through their actions.
+        %p
+          The Challenge | Applicants are invited to shortly detail the type of challenge their initiative face and the ideas they have to solve them.
+        %p
+          At the end of the call for applications, on February 29th, a selection committee will review the initiatives and start-ups which applied, on the basis of the selection criteria. 
+        %p
+          %b
+            Online Application till  February 29th
+          %br
+          %a{href: '#'}
+            Projects submit an online application
+        %p
+          %b
+            Pre-selection process
+          %br
+          All applications will be evaluated based on the selection criteria by a jury of experts from the OuiShare community to selectthe nominees. Jury members will be soon featured here.
+        %p
+          %b
+            Online community voting March 1- 15
+          %br
+          The community is invited to vote for their favorite initiative online, until date X .
+        %p
+          %b
+            Fest Forward preparation week
+          %br
+          During the week before OuiShareFest, the selected projects will be put in touch with OuiShare partners to start the preparation for the intensive 3-day acceleration program. This process is facilitated by a 
+          %a{href: '#'}
+            OuiShare Connector.      
+        %p
+          %b
+            3 day acceleration during OuiShare Fest Paris
+          %br
+          3 intense days of work, connecting and fun during the conference with 1500 international participants at the Cabaret Sauvage from  May 18th - 20. 
+
+.blank_bg#_jury
+  .container
+    .row.centered
+      %h3.ouishare_stencil
+        Jury
+      %hr.pink
+      %br/
+      %br/
+    .row.centered
+      .col-md-8.col-md-offset-2
+        %p
+          The Fest Forward Jury consists of a committee ofexperts, partners and 
+          %a{href: '#'}
+            OuiShare Connectors
+        %p
+          This committee will do the project pre-selection and chose two of the three final projects. The third project will be selected by the community.
+
+.blank_bg#_program
+  .container
+    .row.centered
+      %h3.ouishare_stencil
+        Program
+      %hr.pink
+      %br/
+      %br/
+    .row.centered
+      .col-md-8.col-md-offset-2
+        %p
+          To make the OuiShare Fest Forward experience as valuable as possible for its participants, the accelerator program is modular and will be adapted to eachproject and its challenge. The global structure is described below but the content of the mentoring sessions and the types of hard skill support will depend on both the project and the challenge. The program design is, therefore, modular to allow the best experience to all the participants. 
+
+.blank_bg#_vote
+  .container
+    .row.centered
+      %h3.ouishare_stencil
+        Vote
+      %hr.pink
+      %br/
+      %br/
+    .row.centered
+      .col-md-8.col-md-offset-2
+        %p
+          Community votes opening soon!
+        %h4
+          Vote for your favorite project below!
+
+
+
