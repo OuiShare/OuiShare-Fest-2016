@@ -7,9 +7,31 @@ toggle_class = (element,class_name) ->
   else
     $(element).addClass class_name
 
+###
+# Change Navbar color while scrolling
+###
+
+handleTopNavAnimation = ->
+  top = $(window).scrollTop()
+  if top > 10
+    $('#site-nav').removeClass 'navbar-solid'
+    # alert('test');
+  else
+    $('#site-nav').addClass 'navbar-solid'
+    # alert('pouet');
+  return
+
+
+
 $(document).ready (e)->
   $('#language').change (e) ->    
     window.location = $(this).val()
+  $(window).scroll ->
+    handleTopNavAnimation()
+    return
+  $(window).load ->
+    handleTopNavAnimation()
+    return
     
 $(document).ready ->
   $('#site-nav').addClass('navbar-solid')
