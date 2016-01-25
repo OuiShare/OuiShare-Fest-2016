@@ -1736,7 +1736,7 @@ c);e.bind(this.domElement,"transitionend",c);e.bind(this.domElement,"oTransition
         renderer = svgRenderer;
         break;
     }
-    // renderer.setSize(container.offsetWidth, container.offsetHeight);
+    renderer.setSize(container.offsetWidth, container.offsetHeight);
     output.appendChild(renderer.element);
   }
 
