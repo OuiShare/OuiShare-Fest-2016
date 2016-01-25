@@ -1595,7 +1595,7 @@ c);e.bind(this.domElement,"transitionend",c);e.bind(this.domElement,"oTransition
     xPos : -500,
     yPos : 86,
     zOffset: 111,
-    ambient: '#AB0A47',
+    ambient: '#D9134C',
     diffuse: '#FFFFFF',
     pickedup :true,
     proxy : false,
