@@ -9,8 +9,8 @@
           transition: all 0.2s linear 0s;
 }
 .navbar-solid .navbar-nav li a{
-  /*color: #FFF !important;*/
-  color: #001e60 !important;
+  color: #FFF !important;
+  /*color: #001e60 !important;*/
 }
 
 .navbar-solid .navbar-nav .tickets-highlight .highlight {
