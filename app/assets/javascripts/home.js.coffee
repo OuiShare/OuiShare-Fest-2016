@@ -12,7 +12,7 @@ $(document).ready (e)->
     window.location = $(this).val()
     
 $(document).ready ->
-
+  $('#site-nav').addClass('navbar-solid')
   $('.special_tooltip').tooltip()
 
   if window.location.search.replace('?', '') == 'tickets'

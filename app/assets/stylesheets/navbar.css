@@ -1,0 +1,25 @@
+.navbar-solid {
+  /*background-color: #001e60 !important;*/
+  /*color:#FFF;*/
+  margin-top: 30px;
+  background-color: transparent !important;
+  color: #001e60;
+  padding: 0 !important;
+  -webkit-transition: all 0.2s linear 0s;
+          transition: all 0.2s linear 0s;
+}
+.navbar-solid .navbar-nav li a{
+  /*color: #FFF !important;*/
+  color: #001e60 !important;
+}
+
+.navbar-solid .navbar-nav .tickets-highlight .highlight {
+  background-color: transparent !important;
+  color: #001e60 !important;
+}
+
+/*.navbar-solid {
+  background-color: #000 !important;
+  padding: 0 !important;
+  transition: all 0.2s linear 0s;
+}*/
