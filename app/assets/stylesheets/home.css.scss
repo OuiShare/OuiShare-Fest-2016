@@ -48,7 +48,10 @@
   #headerwrap{
     padding-top: 55px;
   }
-
+}
+#head_logo img{
+  height:250px;
+  margin-top:20px;
 }
 .speakers-container{
   .container.sinfo{
@@ -196,7 +199,7 @@
       // font-family: 'naiv_normal_thin';
       font-family: 'naiv_normal';
       text-transform: uppercase;
-      color: #f56c6c;
+      // color: #f56c6c;
     }
     .main-section-paragraphes{
       font-size:20px;
