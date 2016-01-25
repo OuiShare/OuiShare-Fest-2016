@@ -1300,7 +1300,8 @@ address {
   padding-left: 5px;
 }
 .navbar .nav ul li {
-  background-color: #f56c6c;
+  /*background-color: #f56c6c;*/
+  background-color: #ffffff;
   padding: 0 3px 3px;
   position: relative;
 }

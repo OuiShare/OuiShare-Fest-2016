@@ -25,11 +25,6 @@ p.little{
   text-transform: uppercase;
   // font-family: 'ouisharestencilbold';
 }
-.triangle_bg{
-  a{
-    color: #34495e;
-  }
-}
 
 .press-content{
   height:200px;
@@ -76,13 +71,13 @@ p.little{
 }
 
 .navbar .nav li.dropdown:hover{
-  background-color: #34495e;
+  // background-color: #34495e;
 }
 
 
 /* Header showing dropdown on hover */
 .navbar .nav li.dropdown:hover .dropdown-menu {
-  background-color: #34495e;
+  // background-color: #34495e;
   opacity: 1;
   padding: 0;
   visibility: visible;
@@ -130,7 +125,7 @@ h3 {
       background-color: #001E60;
   }
     .highlight:hover{
-      background-color: #34495e;
+      // background-color: #34495e;
       color: #fff;
     }
   }
@@ -141,7 +136,7 @@ h3 {
     color: white;
   }
     .highlight:hover{
-      background-color: #34495e;
+      // background-color: #34495e;
       color: #fff;
     }
   }
