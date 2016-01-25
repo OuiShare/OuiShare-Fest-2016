@@ -23,5 +23,4 @@
 
 //= require ./jquery.themepunch.revolution.min.js
 //= require ./triangles.js
-//= require ./navbar.js
 //= require_tree .
