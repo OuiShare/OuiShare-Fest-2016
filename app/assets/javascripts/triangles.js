@@ -1676,7 +1676,7 @@ c);e.bind(this.domElement,"transitionend",c);e.bind(this.domElement,"oTransition
           break;
       }
 
-      resize(container.offsetWidth, container.offsetHeight);
+      // resize(container.offsetWidth, container.offsetHeight);
 
       for (l = scene.lights.length - 1; l >= 0; l--) {
         light = scene.lights[l];
