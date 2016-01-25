@@ -1582,7 +1582,7 @@ c);e.bind(this.domElement,"transitionend",c);e.bind(this.domElement,"oTransition
   var MESH = {
     width: 1.2,
     height: 1.2,
-    slices: 868,
+    slices: 999,
     ambient: '#D44882',
     diffuse: '#056BFF'
   };
@@ -1594,7 +1594,7 @@ c);e.bind(this.domElement,"transitionend",c);e.bind(this.domElement,"oTransition
     count: 1,
     xPos : -500,
     yPos : 86,
-    zOffset: 380,
+    zOffset: 222,
     ambient: '#CD2222',
     diffuse: '#0E00FF',
     pickedup :true,
