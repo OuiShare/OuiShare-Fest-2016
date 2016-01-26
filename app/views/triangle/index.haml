@@ -47,3 +47,67 @@
       .row.centered
         %a#sched-embed{:href => "http://ouisharefestparis2016.sched.org/directory/speakers"}
         %script{:type => "text/javascript", :src => "http://ouisharefest2015.sched.org/js/embed.js"}
+
+.tickets.blank_bg
+  .container.tickets-section
+    .row.centered{:style => "padding-top:0; padding-bottom:0"}
+      .col-md-10.col-md-offset-1.col-sm-12
+        %h3.ouishare_stencil.centered
+          = t('dynamic_translations.tickets.title')
+        %hr.pink
+        %br
+        %br
+        %p.pink
+          = t('dynamic_translations.tickets.description1')
+          %a{href: "/join#_getinvolved"}
+            = t('dynamic_translations.tickets.get_involved')
+        .row.tickets-table
+          .col-md-2.col-md-offset-8.col-sm-6
+            Pioneers
+          .col-md-2.col-sm-6
+            Explorers
+          .col-md-12.title
+            Core Features
+          .col-md-8.col-sm-12
+            Access to full conference site
+          .col-md-2.col-sm-6
+            V
+          .col-md-2.col-sm-6
+            V
+          .col-md-8
+            Food & drinks all day (soft only)
+          .col-md-2.col-sm-6
+            V
+          .col-md-2.col-sm-6
+            V
+          .col-md-8
+            Invitations to special satellite events by partners
+          .col-md-2
+            V
+          .col-md-2
+            V
+          .col-md-8
+            Access to OuiShare Love Party (Friday 20/05)
+          .col-md-2
+            V
+          .col-md-2
+            V
+          .col-md-8
+            List of all participants (pdf)
+          .col-md-2
+            V
+          .col-md-2
+            V
+          .col-md-12.title
+            Extended Features: to help you navigate the Fest
+          .col-md-8
+            Access to speakers' reception (Tuesday 17/05)
+          .col-md-2
+          .col-md-2
+            V
+        %p.text-center
+          = image_tag("2016-tickets-#{I18n.locale}-05.png", width: "100%", alt: "Ticket options")
+        %br
+        %br
+
+
