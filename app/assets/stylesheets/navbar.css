@@ -13,14 +13,14 @@
   /*color: #001e60 !important;*/
 }
 
-.navbar-solid ul {
+.navbar-solid ul, .navbar-solid .navbar .nav ul li {
   background-color: transparent !important;
 }
 .navbar-solid ul li a {
   color: white !important;
 }
-.navbar-solid ul li a:hover {
-  color: #001e60;
+.navbar-solid .navbar .nav ul li a:hover {
+  color: #001e60 !important;
   background-color: white !important;
 }
 
