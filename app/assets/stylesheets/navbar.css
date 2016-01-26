@@ -9,14 +9,26 @@
           transition: all 0.2s linear 0s;
 }
 .navbar-solid .navbar-nav li a{
-  color: #FFF !important;
+  color: white !important;
   /*color: #001e60 !important;*/
+}
+
+.navbar-solid ul {
+  background-color: transparent !important;
+}
+.navbar-solid ul li a {
+  color: white !important;
+}
+.navbar-solid ul li a:hover {
+  color: #001e60;
+  background-color: white !important;
 }
 
 .navbar-solid .navbar-nav .tickets-highlight .highlight {
   background-color: transparent !important;
   color: #001e60 !important;
 }
+
 
 /*.navbar-solid {
   background-color: #000 !important;

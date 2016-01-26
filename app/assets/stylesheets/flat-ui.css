@@ -1336,13 +1336,12 @@ address {
   text-decoration: none;
 }
 .navbar .nav ul a:hover {
-  background-color: white;
-  color: #001E60;
+  background-color: #001E60;
+  color: white;
 }
 .navbar .btn-navbar {
   background: none;
   border: none;
-/*  color: #34495e;*/
   color:#fff;
   margin: 18px 15px 14px;
   text-shadow: none;
