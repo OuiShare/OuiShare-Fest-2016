@@ -13,13 +13,15 @@
   /*color: #001e60 !important;*/
 }
 
-.navbar-solid .navbar .nav ul, .navbar-solid .navbar .nav ul li {
+.navbar-solid .navbar-nav ul, 
+.navbar-solid .navbar-nav ul li, 
+.navbar-solid .navbar-nav ul li a {
   background-color: transparent !important;
 }
-.navbar-solid .navbar .nav ul li a {
+.navbar-solid .navbar-nav ul li a {
   color: white !important;
 }
-.navbar-solid .navbar .nav ul li a:hover {
+.navbar-solid .navbar-nav ul li a:hover {
   color: #001e60 !important;
   background-color: white !important;
 }
