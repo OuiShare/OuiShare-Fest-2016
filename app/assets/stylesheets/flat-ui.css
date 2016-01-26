@@ -1900,18 +1900,23 @@ label {
 .form-control:-moz-placeholder {
   /*color: #b2bcc5;*/
   color: #fdfdfd;
+  opacity: 0.7;
 }
 .form-control::-moz-placeholder {
   color: #fdfdfd;
+  opacity: 0.7;
 }
 .form-control:-ms-input-placeholder {
   color: #fdfdfd;
+  opacity: 0.7;
 }
 .form-control::-webkit-input-placeholder {
   color: #fdfdfd;
+  opacity: 0.7;
 }
 .form-control.placeholder {
   color: #fdfdfd;
+  opacity: 0.7;
 }
 .form-control {
   border: 2px solid #bdc3c7;
@@ -1970,15 +1975,15 @@ fieldset[disabled] .form-control {
   cursor: default;
 }
 .form-control.flat {
-  /* border-color: transparent; */
+   border-color: transparent; 
   /* background-color: #bdc3c7; */
-  background-color: #ccc;
+  /*background-color: #ccc;*/
 }
 .form-control.flat:hover {
-  border-color: #bdc3c7;
+  border-color: #001E60;
 }
 .form-control.flat:focus {
-  border-color: #FF7777;
+  border-color: #001E60;
 }
 .input-sm {
   height: 34px;
