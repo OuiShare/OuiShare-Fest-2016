@@ -1926,7 +1926,7 @@ label {
   /*color: #34495e;*/
   /*font-family: 'Lato', Helvetica, Arial, sans-serif;*/
   font-family: 'naiv_normal';
-  color:#FF7777;
+  color:#fff;
   font-size: 15px;
   padding: 8px 12px;
   height: 41px;
@@ -1978,9 +1978,8 @@ fieldset[disabled] .form-control {
   cursor: default;
 }
 .form-control.flat {
-   border-color: transparent; 
-  /* background-color: #bdc3c7; */
-  /*background-color: #ccc;*/
+  border-color: #fdfdfd; 
+  background-color: transparent;
 }
 .form-control.flat:hover {
   border-color: #001E60;
