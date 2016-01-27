@@ -33,20 +33,20 @@
 = javascript_include_tag 'triangles'
 
 
-.program-part
-  .container
-    .main-section
-      .row.centered
-        .col-md-10.col-md-offset-1
-          %h3.ouishare_stencil
-            Sched speakers test view
-          %hr.pink
-          %br
-          %br
+/ .program-part
+/   .container
+/     .main-section
+/       .row.centered
+/         .col-md-10.col-md-offset-1
+/           %h3.ouishare_stencil
+/             Sched speakers test view
+/           %hr.pink
+/           %br
+/           %br
 
-      .row.centered
-        %a#sched-embed{:href => "http://ouisharefestparis2016.sched.org/directory/speakers"}
-        %script{:type => "text/javascript", :src => "http://ouisharefest2015.sched.org/js/embed.js"}
+/       .row.centered
+/         %a#sched-embed{:href => "http://ouisharefestparis2016.sched.org/directory/speakers"}
+/         %script{:type => "text/javascript", :src => "http://ouisharefest2015.sched.org/js/embed.js"}
 
 .tickets.blank_bg
   .container.tickets-section
@@ -98,7 +98,7 @@
               V
             .col-md-2.col-xs-6
               V
-
+          .row
             .col-md-8
               = t('dynamic_translations.tickets_table.core_5_participants_list')
             .col-md-2.col-xs-6
@@ -114,7 +114,7 @@
               &nbsp;
             .col-md-2.col-xs-6
               V
-          .row
+          .row.row-eq-height
             .col-md-8
               = t('dynamic_translations.tickets_table.ext_2') 
               %br
@@ -127,12 +127,14 @@
               &nbsp;
             .col-md-2.col-xs-6
               V
+          .row
             .col-md-8
               = t('dynamic_translations.tickets_table.ext_3_webinar')
             .col-md-2.col-xs-6
               &nbsp;
             .col-md-2.col-xs-6
               V
+          .row
             .col-md-8
               = t('dynamic_translations.tickets_table.ext_4_book') 
               %em
