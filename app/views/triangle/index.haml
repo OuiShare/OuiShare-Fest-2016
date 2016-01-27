@@ -61,79 +61,88 @@
           = t('dynamic_translations.tickets.description1')
           %a{href: "/join#_getinvolved"}
             = t('dynamic_translations.tickets.get_involved')
-        .row.tickets-table
-          .col-md-2.col-md-offset-8.col-xs-6.col-xs-offset-0.title-blue
-            Pioneers
-          .col-md-2.col-xs-6.title-blue
-            Explorers
-          .col-md-12.title
-            Core Features
-          .col-md-8.col-sm-12
-            Access to full conference site
-          .col-md-2.col-xs-6
-            V
-          .col-md-2.col-xs-6
-            V
-          .col-md-8
-            Food & drinks all day (soft only)
-          .col-md-2.col-xs-6
-            V
-          .col-md-2.col-xs-6
-            V
-          .col-md-8
-            Invitations to special satellite events by partners
-          .col-md-2.col-xs-6
-            V
-          .col-md-2.col-xs-6
-            V
-          .col-md-8
-            Access to OuiShare Love Party (Friday 20/05)
-          .col-md-2.col-xs-6
-            V
-          .col-md-2.col-xs-6
-            V
-          .col-md-8
-            List of all participants (pdf)
-          .col-md-2.col-xs-6
-            V
-          .col-md-2.col-xs-6
-            V
-          .col-md-12.title
-            Extended Features: to help you navigate the Fest
-          .col-md-8
-            Access to speakers' reception (Tuesday 17/05)
-          .col-md-2.col-xs-6
-            &nbsp;
-          .col-md-2.col-xs-6
-            V
-          .col-md-8
-            A personal guide to: 
-            %br
-            Welcome you
-            %br
-            Facilitate connections with other attendees, speakers and partners
-            %br
-            Advise you on which sessions best match your interests
-          .col-md-2.col-xs-6
-            &nbsp;
-          .col-md-2.col-xs-6
-            V
-          .col-md-8
-            3 hour preparation workshop or webinar: introduction to OuiShare Fest
-          .col-md-2.col-xs-6
-            &nbsp;
-          .col-md-2.col-xs-6
-            V
-          .col-md-8
-            Your copy of the book 
-            %em
-              Collaborative Society
-          .col-md-2.col-xs-6
-            &nbsp;
-          .col-md-2.col-xs-6
-            V
+        .tickets-table
+          .row
+            .col-md-2.col-md-offset-8.col-xs-6.col-xs-offset-0.title-blue
+              = t('dynamic_translations.tickets_table.pioneers')
+            .col-md-2.col-xs-6.title-blue
+              = t('dynamic_translations.tickets_table.explorers')
+          .row
+            .col-md-12.title
+              = t('dynamic_translations.tickets_table.core_features')
+          .row
+            .col-md-8.col-sm-12
+              = t('dynamic_translations.tickets_table.core_1_access')
+            .col-md-2.col-xs-6
+              V
+            .col-md-2.col-xs-6
+              V
+          .row
+            .col-md-8
+              = t('dynamic_translations.tickets_table.core_2_food')
+            .col-md-2.col-xs-6
+              V
+            .col-md-2.col-xs-6
+              V
+          .row
+            .col-md-8
+              = t('dynamic_translations.tickets_table.core_3_partner_events')
+            .col-md-2.col-xs-6
+              V
+            .col-md-2.col-xs-6
+              V
+          .row
+            .col-md-8
+              = t('dynamic_translations.tickets_table.core_4_access_party')
+            .col-md-2.col-xs-6
+              V
+            .col-md-2.col-xs-6
+              V
+
+            .col-md-8
+              = t('dynamic_translations.tickets_table.core_5_participants_list')
+            .col-md-2.col-xs-6
+              V
+            .col-md-2.col-xs-6
+              V
+          .row
+            .col-md-12.title
+              = t('dynamic_translations.tickets_table.extended_features')
+            .col-md-8
+              = t('dynamic_translations.tickets_table.ext_1_reception')
+            .col-md-2.col-xs-6
+              &nbsp;
+            .col-md-2.col-xs-6
+              V
+          .row
+            .col-md-8
+              = t('dynamic_translations.tickets_table.ext_2') 
+              %br
+              = t('dynamic_translations.tickets_table.ext_2a')
+              %br
+              = t('dynamic_translations.tickets_table.ext_2b')
+              %br
+              = t('dynamic_translations.tickets_table.ext_2c')
+            .col-md-2.col-xs-6
+              &nbsp;
+            .col-md-2.col-xs-6
+              V
+            .col-md-8
+              = t('dynamic_translations.tickets_table.ext_3_webinar')
+            .col-md-2.col-xs-6
+              &nbsp;
+            .col-md-2.col-xs-6
+              V
+            .col-md-8
+              = t('dynamic_translations.tickets_table.ext_4_book') 
+              %em
+                = t('dynamic_translations.tickets_table.ext_4_book_title')
+            .col-md-2.col-xs-6
+              &nbsp;
+            .col-md-2.col-xs-6
+              V
         %p.left
-          For questions about Explorer tickets and group discounts, email 
+          = t('dynamic_translations.tickets_table.questions') 
           %b
             %a{:href => 'mailto:partners@ouisharefest.com'}
               partners@ouisharefest.com
