@@ -11,6 +11,7 @@
   p{
     @media (min-width: 992px) {
       text-align: left;
+      margin-left: -0.5em;
     }
   .col-xs-6 {
     text-align: center;
@@ -26,6 +27,9 @@
     font-family:'naiv_normal';
     text-transform: uppercase;
     padding: 1em 0.5em;
+  }
+  .row{
+    padding-top:0;
   }
   .row-eq-height{
     overflow: hidden;
