@@ -53,8 +53,11 @@
 }
 
 /* top background image for the blank_bg page tops to show transparent navbar */
-.blank_bg .top {
-  background: url(/assets/01-background-04.png) no-repeat 0 -90%;
+.top {
+  background: url(/assets/top_red.png) no-repeat 0 -150px;
+}
+.top_blue {
+  background: url(/assets/top_blue.png) no-repeat 0 -150px;
 }
 
 /*.navbar-solid {
