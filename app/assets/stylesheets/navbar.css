@@ -1,3 +1,16 @@
+/* default navbar colors */
+.navbar-default {
+  background-color: #001e60;
+  .navbar-nav {
+    li a,
+    ul li a {
+      color: white;
+    }
+  }
+}
+
+
+/* top transparent navbar */
 .navbar-solid {
   /*background-color: #001e60 !important;*/
   /*color:#FFF;*/
