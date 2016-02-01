@@ -53,7 +53,7 @@
 }
 
 /* top background image for the blank_bg page tops to show transparent navbar */
-.top {
+.top, .top_red {
   background: url(/assets/top_red.png) no-repeat 0 -150px;
 }
 .top_blue {
