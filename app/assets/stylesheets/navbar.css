@@ -52,8 +52,8 @@
   color: white !important;
 }
 
-.navbar-default .navbar-nav .tickets-highlight .highlight a:hover,
-.navbar-solid .navbar-nav .tickets-highlight .highlight a:hover{
+.navbar-default .navbar-nav .tickets-highlight .highlight:hover,
+.navbar-solid .navbar-nav .tickets-highlight .highlight:hover{
   background-color: white;
   color: #001e60;
 }
