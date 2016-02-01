@@ -41,34 +41,18 @@
             %li
               %a{href: "about#_ouishare"}
                 = t('dynamic_translations.about.ouishare_title')
-            %li.dropdown
-              %a.dropdown-toggle{href: "#"}
+            %li.divider
+              %a.disabled{href: "#"}
                 =t('dynamic_translations.past_editions.title')
-              %ul.dropdown-menu
-                %li
-                  %a{href: "http://2015.ouisharefest.com/"}
-                    OuiShare Fest 2015
-                %li
-                  %a{href: "http://2014.ouisharefest.com/"}
-                    OuiShare Fest 2014
-                %li
-                  %a{href: "http://2013.ouisharefest.com/"}
-                    OuiShare Fest 2013
-
-        / %li.dropdown
-        /   %a.dropdown-toggle{href: "#"}
-        /     Past editions
-        /     / =t('dynamic_translations.past_editions.title')
-        /   %ul.dropdown-menu
-        /     %li
-        /       %a{href: "http://2015.ouisharefest.com/"}
-        /         = t('dynamic_translations.past_editions.fest_2015')
-        /     %li
-        /       %a{href: "http://2014.ouisharefest.com/"}
-        /         = t('dynamic_translations.past_editions.fest_2014')
-        /     %li
-        /       %a{href: "http://2013.ouisharefest.com/"}
-        /         = t('dynamic_translations.past_editions.fest_2013')
+            %li
+              %a{href: "http://2015.ouisharefest.com/"}
+                OuiShare Fest 2015
+            %li
+              %a{href: "http://2014.ouisharefest.com/"}
+                OuiShare Fest 2014
+            %li
+              %a{href: "http://2013.ouisharefest.com/"}
+                OuiShare Fest 2013
 
         %li.dropdown
           %a.dropdown-toggle{href: "/program"}
@@ -83,21 +67,6 @@
             %li
               %a{href: "program#_awards"}
                 = t('dynamic_translations.ouishare_awards.see_2015_awards_winners')
-            / %li
-            /   %a{href: "program#_tracks"}
-            /     = t('dynamic_translations.track.title')
-            / %li
-            /   %a{href: "program#_track_leader"}
-            /     = t('dynamic_translations.track_leader.title')
-            / %li
-            /   %a{href: "program#_petit_fest"}
-            /     = t('dynamic_translations.petit_fest.title')
-            / %li
-            /   %a{href: "/satellite_events"}
-            /     = t('dynamic_translations.program.satellite_events')
-            / %li
-            /   %a{href: "program#_love_party"}
-            /     = t('dynamic_translations.love_party.title')
 
         %li.dropdown
           %a.dropdown-toggle{href: "/participants"}
@@ -119,24 +88,6 @@
               %a{href: "participants#_whoscoming"}
                 = t('dynamic_translations.tickets.who_s_coming')
 
-        / %li.dropdown
-        /   %a.dropdown-toggle{href: "/participants"}
-        /     =t('dynamic_translations.participants.title')
-        /   %ul.dropdown-menu
-        /     %li
-        /       %a{href: "participants#_speakers"}
-        /         = t('dynamic_translations.speakers.title')
-        /     %li
-        /       %a{href: "participants#_team"}
-        /         = t('dynamic_translations.team.title')
-        /     %li
-        /       %a{href: "participants#_partners"}
-        /         = t('dynamic_translations.partners.title')
-        /     %li
-        /       %a{href: "participants#_whoscoming"}
-        /         = t('dynamic_translations.tickets.who_s_coming')
-
-
         %li.dropdown
           %a.dropdown-toggle{href: "/join"}
             =t('dynamic_translations.join.title')
@@ -153,21 +104,7 @@
             %li
               %a{href: "join#_prepare"}
                 = t('dynamic_translations.prepare_your_trip.title')
-        /     %li
-        /       %a{href: "/#_speakers"}
-        /         =t('dynamic_translations.speakers.title')
-        /     %li
-        /       %a{href: "/#_getinvolved"}
-        /         =t('dynamic_translations.get_involved.title')
-        /     %li
-        /       %a{href: "/#_partners"}
-        /         =t('dynamic_translations.partners.title')
-        /     %li
-        /       %a{href: "/#_team"}
-        /         =t('dynamic_translations.team.title')
-        / %li.tickets-highlight.dropdown
-        /   %a.dropdown-toggle.highlight{href: "/join#_tickets"}
-        /     =t('dynamic_translations.tickets.title')
+
         %li.tickets-highlight
           %a.highlight{href: "/join#_tickets"}
             =t('dynamic_translations.tickets.title')
