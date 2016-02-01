@@ -48,16 +48,16 @@
 
 .navbar-default .navbar-nav .tickets-highlight .highlight,
 .navbar-solid .navbar-nav .tickets-highlight .highlight {
-  background-color: transparent !important;
+  background-color: white !important;
   color: #001e60 !important;
 }
 
 /* top background image for the blank_bg page tops to show transparent navbar */
 .top, .top_red {
-  background: url(/assets/top_red.png) no-repeat 0 -150px;
+  background: url(/assets/top_red.png) no-repeat -40px -140px;
 }
 .top_blue {
-  background: url(/assets/top_blue.png) no-repeat 0 -150px;
+  background: url(/assets/top_blue.png) no-repeat 0 -40px;
 }
 
 /*.navbar-solid {
