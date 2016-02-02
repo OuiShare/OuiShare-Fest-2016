@@ -27,21 +27,29 @@
           transition: all 0.2s linear 0s;
 }
 
-.navbar-solid .navbar-nav ul, 
+.navbar-solid .navbar-nav ul{
+  background-color: white !important;
+}
+.navbar-solid .navbar-nav ul li a {
+  color: #001e60 !important;
+}
+.navbar-solid .navbar-nav li a:hover,
+.navbar-solid .navbar-nav ul li a:hover {
+  background-color: #001e60 !important;
+  color: white !important;
+}
+
 .navbar-solid .navbar-nav ul li, 
 .navbar-solid .navbar-nav ul li a {
   background-color: transparent !important;
 }
 
-.navbar-solid .navbar-nav li a,
-.navbar-solid .navbar-nav ul li a {
+.navbar-solid .navbar-nav li a{
   color: white !important;
 }
 
 .navbar-default .navbar-nav li a:hover,
-.navbar-default .navbar-nav ul li a:hover,
-.navbar-solid .navbar-nav li a:hover,
-.navbar-solid .navbar-nav ul li a:hover {
+.navbar-default .navbar-nav ul li a:hover {
   color: #001e60 !important;
   background-color: white !important;
 }
@@ -52,13 +60,13 @@
   color: white !important;
 }
 
-/*
+
 .navbar-default .navbar-nav .tickets-highlight .highlight:hover,
 .navbar-solid .navbar-nav .tickets-highlight .highlight:hover{
-  background-color: white;
-  color: #001e60;
+  background-color: white !important;
+  color: #001e60 !important;
 }
-*/
+
 /* top background image for the blank_bg page tops to show transparent navbar */
 .top, .top_red {
   background: url(/assets/top_red.png) no-repeat -40px -140px;
