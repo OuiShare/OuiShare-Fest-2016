@@ -3,8 +3,8 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .main_bg.top_ff, .top_ff {
-	background-color: #f56c6c !important;
-	background-position: 0px 80px;
+  background-color: #f56c6c !important;
+  background-position: 0px 80px;
 }
 
 #head_logo_ff img{
@@ -13,21 +13,18 @@
 }
 
 h3, h4, h4.coral {
-    color: #f56c6c;
-    text-transform: uppercase;
-    font-family: "naiv_normal";
+  color: #f56c6c;
+  text-transform: uppercase;
+  font-family: "naiv_normal";
 }
 
 h4 {
-	font-size: 23px;
+  font-size: 23px;
 }
 
 // Typeform styles
-.ff-apply-form iframe{
-	position: absolute;
-	left:0;
-	right:0;
-	bottom:0;
-	top:0;
-	border:0;
+iframe#typeform{
+  border:0;
+  height: 1100px;
+  display:inline-block;
 }
