@@ -2,7 +2,8 @@
 
 .tickets-table [class^=col-]{
   padding: 0.7em 0.5em;
-  border: 1px solid #001E60;
+  border-top: 1px solid #001E60;
+  border-bottom: 1px solid #001E60;
 }
 
 .tickets-table {
@@ -13,9 +14,9 @@
       text-align: left;
       margin-left: -0.5em;
     }
-  .col-xs-6 {
-    text-align: center;
-  }
+    .col-xs-6 {
+      text-align: center;
+    }
   }
   .title {
     background-color: #001E60;
@@ -27,6 +28,7 @@
     font-family:'naiv_normal';
     text-transform: uppercase;
     padding: 1em 0.5em;
+    border: none;
   }
   .row{
     padding-top:0;
