@@ -601,10 +601,6 @@ body {
 	-o-background-size: cover;
 	background-size: cover;
 }
-.main_bg.top_ff {
-	background-color: #f56c6c;
-	background-position: 0px 100px;
-}
 
 .blue_bg_2014 {
 	background: url(/assets/fond_bleu.jpg) repeat right top; /* 2014 */

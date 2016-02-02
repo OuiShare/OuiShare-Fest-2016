@@ -502,7 +502,7 @@ a:focus {
   font-style: italic;
   margin: 24px 0;
 }
-p {
+p, li {
   font-size: 15px;
   line-height: 1.71109;
 }
