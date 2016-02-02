@@ -2,7 +2,7 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.main_bg.top_ff {
+.main_bg.top_ff, .top_ff {
 	background-color: #f56c6c;
 	background-position: 0px 80px;
 }
@@ -12,9 +12,22 @@
   margin-top:150px;
 }
 
-h4.coral {
+h3, h4, h4.coral {
     color: #f56c6c;
     text-transform: uppercase;
     font-family: "naiv_normal";
-    font-size: 23px;
+}
+
+h4 {
+	font-size: 23px;
+}
+
+// Typeform styles
+.ff-apply-form iframe{
+	position: absolute;
+	left:0;
+	right:0;
+	bottom:0;
+	top:0;
+	border:0;
 }
