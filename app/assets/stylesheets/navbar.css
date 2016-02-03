@@ -33,9 +33,7 @@
 .navbar-solid .navbar-nav ul li a {
   color: #001e60 !important;
 }
-.navbar-solid .navbar-nav li a:hover,
-.navbar-solid .navbar-nav ul li a:hover {
-  background-color: #001e60 !important;
+.navbar-solid .navbar-nav li a{
   color: white !important;
 }
 
@@ -43,8 +41,8 @@
 .navbar-solid .navbar-nav ul li a {
   background-color: transparent !important;
 }
-
-.navbar-solid .navbar-nav li a{
+.navbar-solid .navbar-nav ul li a:hover {
+  background-color: #001e60 !important;
   color: white !important;
 }
 
