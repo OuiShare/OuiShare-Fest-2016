@@ -441,6 +441,10 @@ body {
 	padding-bottom: 9%;
 	margin-bottom: 7%;
 }
+.white_bg {  /* white bg for text div on net_bg */
+    padding: 3%;
+    background-color: white;
+}
 .heart_bg {
 	background: url(/assets/16bg-heart.png) no-repeat center top;
 	background-color: #fff;

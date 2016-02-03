@@ -18,13 +18,13 @@
               %button.btn.btn-embossed.btn-primary
                 = t('dynamic_translations.ff.btn_apply')
 
-.blank_bg#_tagline
+.blank_bg.vspace#_tagline
   .container
     .row.centered
       .col-md-8.col-md-offset-2
         %h4.tagline
           = t('dynamic_translations.ff.tagline')
-        %h4.tagline.text-center
+        %h5.tagline.text-center
           = t('dynamic_translations.ff_about.subtitle')
 
 .blank_bg#_about
@@ -34,10 +34,8 @@
         %h3.ouishare_stencil
           = t('dynamic_translations.ff_about.title')
         %hr.pink
-      .row.centered.blank_bg
-        .col-md-6.col-md-offset-3.col-sm-8.col-sm-offset-2
-          %br
-          %br
+      .row.centered
+        .col-sm-8.col-sm-offset-2
           %p
             = t('dynamic_translations.ff_about.p1a')
             %a{href: "http://ouisharefest.com", target: "_blank"}
@@ -61,14 +59,14 @@
             %a{href: '#_apply'}
               apply here >>
 
-.net_bg#_apply
+.net_bg.ff_apply#_apply
   .container
     .row.centered
       %h3.ouishare_stencil
         = t('dynamic_translations.ff_apply.title')
       %hr.pink
     .row.justify
-      .col-md-8.col-md-offset-2.blank_bg
+      .col-md-8.col-md-offset-2.white_bg
         %h4.blue
           = t('dynamic_translations.ff_apply.who_title')
         %p
@@ -91,76 +89,111 @@
             The initiative has the potential to create a measurable positive impact on society or the environment
           %li
             The initiative is open source
+        %br
+        %br
         %h4
           Selection criteria
         %ul
           %li
-            Impact: how large is the impact of your project (direct and indirect)?
+            %span.caps
+              Impact: 
+            how large is the impact of your project (direct and indirect)?
           %li
-            Replicability: how easy it is to duplicate and scale your project or solution?
+            %span.caps
+              Replicability: 
+            how easy it is to duplicate and scale your project or solution?
           %li
-            Disruption: how innovative and transfomative is your idea?
+            %span.caps
+              Disruption: 
+            how innovative and transfomative is your idea?
           %li
-            Viability: is your idea coherent with and applicable to the world we live in?
+            %span.caps
+              Viability: 
+            is your idea coherent with and applicable to the world we live in?
           %li
-            Structure: how well structured is your team, your concept, your model
+            %span.caps
+              Structure: 
+            how well structured is your team, your concept, your model
           %li
-            Challenge: how can we contribute to solving your challenge
+            %span.caps
+              Challenge: 
+            how can we contribute to solving your challenge
           %li
-            Values: how well does your project put into action the 
-            %a{href: '#'}
+            %span.caps
+              Values: 
+            how well does your project put into action the 
+            %a{href: 'http://ouishare.net/about/values', :target => '_blank'}
               OuiShare values?
           %li
-            OuiShare Fest Program: does your project address topics that are part of the 
-            %a{href: '#'}
+            %span.caps
+              OuiShare Fest Program: 
+            does your project address topics that are part of the 
+            %a{href: 'program'}
               OuiShare Fest program?
         %p
           The project holders should be available to start working together with OuiShare partners before the Fest. International applications are more than welcome!
         %p
           *OuiShare Fest Forward will not cover any flight tickets to Paris.
+        %br
+        %br
         %h4.blue
           Process & Deadlines
+        / %p
+        /   The Impact | Applicants should pick one or more fields and give brief illustrations of the impact achieved through their actions.
+        / %p
+        /   The Challenge | Applicants are invited to shortly detail the type of challenge their initiative face and the ideas they have to solve them.
+        / %p
+        /   At the end of the call for applications, on February 29th, a selection committee will review the initiatives and start-ups which applied, on the basis of the selection criteria. 
+        %h6
+          Online Application till February 29th
         %p
-          The Impact | Applicants should pick one or more fields and give brief illustrations of the impact achieved through their actions.
+          %a{:href => 'https://ouisharefest.typeform.com/to/s8ouC5', :target => '_blank'}
+            Projects should submit an online application
         %p
-          The Challenge | Applicants are invited to shortly detail the type of challenge their initiative face and the ideas they have to solve them.
+          Applicants are asked to:
+        %ul
+          %li
+            explain their project and the positive impact it creates
+          %li
+            explain the challenge they would like to address during the 3-day accelerator and the ideas they have to solve it.
+        %h6
+            Pre-selection
         %p
-          At the end of the call for applications, on February 29th, a selection committee will review the initiatives and start-ups which applied, on the basis of the selection criteria. 
-        %p
-          %b
-            Online Application till  February 29th
+          %em
+            March 1-15
           %br
-          %a{href: '#'}
-            Projects submit an online application
-        %p
-          %b
-            Pre-selection process
+          All applications will be reviewed and evaluated based on the selection criteria by a jury of experts from the OuiShare community. We will schedule a call with the short-listed candidates. Two initiatives will be selected directly by the jury.
           %br
-          All applications will be evaluated based on the selection criteria by a jury of experts from the OuiShare community to selectthe nominees. Jury members will be soon featured here.
+        %h6
+          Online community voting 
         %p
-          %b
-            Online community voting March 1- 15
+          %em
+            March 15-25
           %br
-          The community is invited to vote for their favorite initiative online, until date X .
+          The community is invited to vote for their favorite initiative online.
+          %br
+        %h6
+          Fest Forward Preparation
         %p
-          %b
-            Fest Forward preparation week
+          %em
+            Before the Fest
           %br
-          During the week before OuiShareFest, the selected projects will be put in touch with OuiShare partners to start the preparation for the intensive 3-day acceleration program. This process is facilitated by a 
-          %a{href: '#'}
-            OuiShare Connector.      
+          The selected projects and the Fest Forward team we will work together to prepare the 3-day acceleration.
+          %br      
+        %h6
+          3 day acceleration during OuiShare Fest Paris
         %p
-          %b
-            3 day acceleration during OuiShare Fest Paris
+          %em
+            May 18-20
           %br
-          3 intense days of work, connecting and fun during the conference with 1500 international participants at the Cabaret Sauvage from  May 18th - 20. 
+          3 intense days of work, connecting and fun with 1500 international innovators, thought leaders and entrepreneurs at the Cabaret Sauvage. 
 
         %p.centered.join_bouton
-          %a{:href => '#'}
+          %a{:href => 'https://ouisharefest.typeform.com/to/s8ouC5', :target => '_blank'}
             %button.btn.btn-embossed.btn-primary
-              Read more >>
+              Apply >>
 
-.blank_bg.vspace#_jury
+.blank_bg#_jury
   .container
     .row.centered
       %h3.ouishare_stencil
@@ -169,22 +202,24 @@
     .row.centered
       .col-md-8.col-md-offset-2
         %p
-          The Fest Forward Jury consists of a committee ofexperts, partners and 
-          %a{href: '#'}
-            OuiShare Connectors
+          The Fest Forward Jury consists of a committee of experts, partners and 
+          %a{:href => 'http://ouishare.net/about/team', :target => '_blank'}
+            OuiShare Connectors.
+          Jury members will be soon featured here.
         %p
-          This committee will do the project pre-selection and chose two of the three final projects. The third project will be selected by the community.
+          The committee will pre-select projects and chose two of the three final nominees. The third project will be selected by the community.
 
-.net_bg.vspace#_program
+
+.net_bg.vspace#_experience
   .container
     .row.centered
       %h3.ouishare_stencil
-        Program
+        Experience
       %hr.pink
-    .row.travel_information
-      .col-md-8.col-md-offset-2
+    .row.justified
+      .col-md-8.col-md-offset-2.white_bg
         %p
-          To make the OuiShare Fest Forward experience as valuable as possible for its participants, the accelerator program is modular and will be adapted to eachproject and its challenge. The global structure is described below but the content of the mentoring sessions and the types of hard skill support will depend on both the project and the challenge. The program design is, therefore, modular to allow the best experience to all the participants. 
+          To make the OuiShare Fest Forward experience as valuable as possible for its participants, the accelerator program is modular and will be adapted to each project and its challenge. Based on the project needs, we will do our best to provide the necessary materials, tools, and expertise. 
 
 .blank_bg.vspace#_vote
   .container
@@ -195,7 +230,7 @@
       %br/
     .row.centered
       .col-md-8.col-md-offset-2
-        %h4.tagline
+        %h5.tagline
           Community votes opening soon!
         / %h4.coral
         /   Vote for your favorite project below!

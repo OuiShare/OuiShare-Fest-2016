@@ -11,6 +11,7 @@
   background-color: #001E60;
   background-position: 0px 85px;
   min-height: 100%;
+  margin-bottom: 5%;
 }
 #head_logo_ff img{
   height:250px;
@@ -19,8 +20,10 @@
 }
 
 h3, h4, h5, h6 {
-  text-transform: uppercase;
   font-family: "naiv_normal";
+}
+h3, h4, h6 {
+  text-transform: uppercase;
 }
 .blue {
   color: #001E60;
@@ -34,6 +37,12 @@ h3, h4, h5, h6 {
   color: white;
   padding:0.2em 0.5em;
 }
+
+/* styles for application block */
+.ff_apply {
+
+}
+
 
 // Typeform styles
 iframe#typeform{
