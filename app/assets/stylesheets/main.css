@@ -599,9 +599,8 @@ body {
 	padding-bottom: 20%;
 }
 
-.main_bg {
+.main_bg, .fforward_bg {
 	/*background: url(/assets/osfest15-cover.jpg) no-repeat center top;*/ /* 2014 */
-    background: url(/assets/16bg-header-2.png) no-repeat;
 	background-color: #ffffff;
 	margin-top: 0px;
 	padding-top:5%;
@@ -616,7 +615,9 @@ body {
 	-o-background-size: cover;
 	background-size: cover;
 }
-
+.main_bg {
+	background: url(/assets/16bg-header-2.png) no-repeat;
+}
 .blue_bg_2014 {
 	background: url(/assets/fond_bleu.jpg) repeat right top; /* 2014 */
 	/*background-color: #33FF99;*/

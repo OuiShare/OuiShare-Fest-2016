@@ -2,26 +2,33 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.main_bg.top_ff, .top_ff {
-  background-color: #f56c6c !important;
+.top_ff {
+  background-color: #001E60 !important;
   background-position: 0px 80px;
 }
-
+.fforward_bg {
+  background: url(/assets/16bg-fest-forward.jpg) no-repeat;
+}
 #head_logo_ff img{
   height:250px;
   margin-top:150px;
   margin-bottom: 40px;
 }
 
-h3, h4, h4.coral {
-  color: #f56c6c;
+h3, h4 {
   text-transform: uppercase;
   font-family: "naiv_normal";
 }
-
+.blue {
+  color: #001E60;
+}
 /*h4 {
   font-size: 23px !important;
 }*/
+
+.blue_bg_text {
+  color: #001E60;
+}
 
 // Typeform styles
 iframe#typeform{
