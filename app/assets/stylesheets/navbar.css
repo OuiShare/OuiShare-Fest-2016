@@ -147,9 +147,9 @@
     border-radius: 6px 0 6px 6px;
 }*/
 
-li.dropdown-submenu .dropdown-menu {
+li.dropdown .dropdown-submenu {
   visibility: hidden;
 }
-li.dropdown-submenu:hover .dropdown-menu {
+li.dropdown:hover .dropdown-submenu {
   visibility: visible;
 }
