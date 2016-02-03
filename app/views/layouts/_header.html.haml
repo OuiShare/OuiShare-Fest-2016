@@ -42,18 +42,19 @@
               %a{href: "about#_ouishare"}
                 = t('dynamic_translations.about.ouishare_title')
             %li.divider
-            %li
-              %a.disabled{href: "#"}
+            %li.dropdown-submenu
+              %a{href: "#"}
                 =t('dynamic_translations.past_editions.title')
-            %li
-              %a{href: "http://2015.ouisharefest.com/"}
-                OuiShare Fest 2015
-            %li
-              %a{href: "http://2014.ouisharefest.com/"}
-                OuiShare Fest 2014
-            %li
-              %a{href: "http://2013.ouisharefest.com/"}
-                OuiShare Fest 2013
+              %ul.dropdown-menu
+                %li
+                  %a{href: "http://2015.ouisharefest.com/"}
+                    OuiShare Fest 2015
+                %li
+                  %a{href: "http://2014.ouisharefest.com/"}
+                    OuiShare Fest 2014
+                %li
+                  %a{href: "http://2013.ouisharefest.com/"}
+                    OuiShare Fest 2013
 
         %li.dropdown
           %a.dropdown-toggle{href: "/program"}
