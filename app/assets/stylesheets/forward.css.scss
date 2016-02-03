@@ -8,6 +8,9 @@
 }
 .fforward_bg {
   background: url(/assets/16bg-fest-forward.jpg) no-repeat;
+  background-color: #001E60;
+  background-position: 0px 85px;
+  min-height: 100%;
 }
 #head_logo_ff img{
   height:250px;
@@ -15,7 +18,7 @@
   margin-bottom: 40px;
 }
 
-h3, h4 {
+h3, h4, h5, h6 {
   text-transform: uppercase;
   font-family: "naiv_normal";
 }
