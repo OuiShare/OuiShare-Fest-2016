@@ -46,6 +46,9 @@
           %br
           %p
             = t('dynamic_translations.ff_about.p2a')
+          %br
+          %p
+            = t('dynamic_translations.ff_about.p2a_building')
             %a{href: "http://poc21.cc", target: "_blank"}
               POC21
             = t('dynamic_translations.ff_about.p2b')
@@ -58,15 +61,15 @@
             %a{href: '#_apply'}
               apply here >>
 
-.net_bg.vspace#_apply
+.net_bg#_apply
   .container
     .row.centered
       %h3.ouishare_stencil
         = t('dynamic_translations.ff_apply.title')
       %hr.pink
-    .row.travel_information
-      .col-md-8.col-md-offset-2
-        %h4
+    .row.justify
+      .col-md-8.col-md-offset-2.blank_bg
+        %h4.blue
           = t('dynamic_translations.ff_apply.who_title')
         %p
           OuiShare Fest Forward aims to showcase a diversity collaborative, open source projects. We are open to applications from:
@@ -115,7 +118,7 @@
           The project holders should be available to start working together with OuiShare partners before the Fest. International applications are more than welcome!
         %p
           *OuiShare Fest Forward will not cover any flight tickets to Paris.
-        %h4
+        %h4.blue
           Process & Deadlines
         %p
           The Impact | Applicants should pick one or more fields and give brief illustrations of the impact achieved through their actions.

@@ -450,29 +450,6 @@ body {
     background-size: cover;
 }
 
-.triangle_bg {
-	background: url(/assets/fond_vert.jpg) repeat center top;
-	background-color: #33FF99;
-	margin-top: 0px;
-	padding-top: 130px;
-	text-align: center;
-	background-attachment: relative;
-	background-position: center center;
-	min-height: 100%;
-	-webkit-background-size: contain;
-	-moz-background-size: contain;
-	-o-background-size: contain;
-	background-size: contain;
-}
-#tickets h3,h4{
-	color: #F7F7F7;
-}
-
-#tickets a{
-	color: #F7F7F7;
-	text-decoration: underline;
-}
-
 .third-section > div > div > div > div > p > img {
   width: 95%;
   height: 95%;
@@ -497,107 +474,6 @@ body {
 	width:100%;
 	height:auto;
 }
-#about{
-	/*background: url(/assets/fond_vert.jpg) center top;*/
-	/*background: url(/assets/background/01-background-01.png)*/
-  /*background-color: #33FF99; */
-/*  margin-top: 0px;
-  text-align:center;
-  background-attachment: relative;
-  background-position: center center;
-  min-height: 100%;
-
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: contain;*/
-}
-
-/*2014*/ 
-
-.triangle_bg{
-	background: url(/assets/fond_vert.jpg) center top;
-	/*background: url(/assets/background/01-background-01.png);*/
-  /*background-color: #33FF99; */
-  margin-top: 0px;
-  text-align:center;
-  background-attachment: relative;
-  background-position: center center;
-  min-height: 100%;
-
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: contain;
-}
-
-.grey_bg {
-	background: url(/assets/fond_gris.jpg) repeat right top;
-	margin-top: 0px;
-	padding-top: 130px;
-	padding-bottom: 100px;
-	text-align: center;
-	background-attachment: relative;
-	min-height: 100%;
-	-webkit-background-size: contain;
-	-moz-background-size: contain;
-	-o-background-size: contain;
-	background-size: contain;
-}
-
-.background_1 {
-	background: url(/assets/background/01-background-01.png) no-repeat; /* 2015 */
-	background-size: 100% 110% !important;
-	background-position: 0% -15px;
-	text-align: center;
-	background-attachment: scroll;
-	min-height: 100%;
-	padding-bottom: 10%;
-}
-
-.background_2 {
-	background: url(/assets/background/02-background-01.png) no-repeat; /* 2015 */
-	background-size: 100% 110% !important;
-	background-position: 0% 0%;
-	text-align: center;
-	background-attachment: scroll;
-	min-height: 100%;
-	padding-top: 15%;
-	padding-bottom: 10%;
-}
-
-.background_3 {
-	background: url(/assets/background/03-background-01.png) no-repeat; /* 2015 */
-	background-size: 100% 200% !important;
-	background-position: 0% -300px;
-	text-align: center;
-	background-attachment: fixed;
-	min-height: 100%;
-	padding-top: 160px;
-	padding-bottom: 50px;
-}
-
-.background_4 {
-	background: url(/assets/fest2.png) no-repeat; /* 2015 */
-	background-size: 100% 150% !important;
-	background-position: 0% 30%;
-	text-align: center;
-	background-attachment: scroll;
-/*	min-height: 100%;*/
-	padding-top: 15%;
-	padding-bottom: 10%;
-}
-
-.background_5 {
-	background: url(/assets/background/04-background-grey-3.png) no-repeat; /* 2015 */
-	background-size: 100% 120% !important;
-	background-position: 0% 0%;
-	text-align: center;
-	background-attachment: scroll;
-	min-height: 100%;
-	padding-top: 10%;
-	padding-bottom: 20%;
-}
 
 .main_bg, .fforward_bg {
 	margin-top: 0px;
@@ -616,54 +492,8 @@ body {
 	background-color: #ffffff;
 	background-position: center center;
 }
-.blue_bg_2014 {
-	background: url(/assets/fond_bleu.jpg) repeat right top; /* 2014 */
-	/*background-color: #33FF99;*/
-	margin-top: 0px;
-	padding-top:130px;
-	text-align:center;
-	background-attachment: relative;
-	background-position: center center;
-	min-height: 100%;
 
-	-webkit-background-size: contain;
-	-moz-background-size: contain;
-	-o-background-size: contain;
-	background-size: contain;
-}
 
-.no_bg {
-
-  margin-top: 0px;
-  padding-top:130px;
-  text-align:center;
-  min-height: 100%;
-}
-
-.yellow_bg {
-	background: url(/assets/fond_jaune.jpg) repeat center top; /* 2014 */
-
-	/*background-color: #33FF99; */
-	margin-top: 0px;
-	padding-top: 130px;
-	padding-bottom:5%;
-	text-align:center;
-	background-attachment: relative;
-	background-position: center center;
-	min-height: 100%;
-
-	-webkit-background-size: contain;
-	-moz-background-size: contain;
-	-o-background-size: contain;
-	background-size: contain;
-}
-
-#about h3{
-	color: white;
-	font-weight: 300;
-	text-transform: uppercase;
-	padding: 20px;
-}
 /***** Spacer Wraps *****/
 #sp1 {
 	background: url(/assets/head_img.png) repeat right top;
