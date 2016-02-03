@@ -78,7 +78,7 @@ p.little{
 /* Header showing dropdown on hover */
 .navbar .nav li.dropdown:hover .dropdown-menu {
   // background-color: #34495e;
-  opacity: 1;
+  opacity: 0.89;
   padding: 0;
   visibility: visible;
 }
@@ -181,8 +181,4 @@ h3 {
 
 .coral {
   color: #f56c6c;
-}
-.navbar {
-  // color: #001e60;
-  // background-color: #fff;
 }

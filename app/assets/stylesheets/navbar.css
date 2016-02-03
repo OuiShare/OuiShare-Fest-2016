@@ -99,7 +99,7 @@
 
 
 /* Level 2 dropdown menu for Bootstrap 3 from bootsnipp */
-.dropdown-submenu {
+/*.dropdown-submenu {
     position: relative;
 }
 
@@ -145,4 +145,11 @@
     -webkit-border-radius: 6px 0 6px 6px;
     -moz-border-radius: 6px 0 6px 6px;
     border-radius: 6px 0 6px 6px;
+}*/
+
+li.dropdown-submenu .dropdown-menu {
+  visibility: hidden;
+}
+li.dropdown-submenu:hover .dropdown-menu {
+  visibility: visible;
 }
