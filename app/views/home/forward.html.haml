@@ -9,9 +9,11 @@
         /   %h1.main-title{:style => "color:#f56c6c"}
         /     = t('dynamic_translations.ff.title')
 
+      .col-md-8.col-md-offset-2
+        %h5.tagline
+          = t('dynamic_translations.ff.tagline')
       .row
         .col-md-8.col-md-offset-2
-          %br
           %br
           %p.centered.join_bouton
             %a{:href => '#_apply'}
@@ -22,8 +24,8 @@
   .container
     .row.centered
       .col-md-8.col-md-offset-2
-        %h4.tagline
-          = t('dynamic_translations.ff.tagline')
+        / %h4.tagline
+        /   = t('dynamic_translations.ff.tagline')
         %h5.tagline.text-center
           = t('dynamic_translations.ff_about.subtitle')
 
@@ -221,7 +223,6 @@
       %h3.ouishare_stencil
         = t('dynamic_translations.ff_vote.title')
       %hr.pink
-      %br/
     .row.centered
       .col-md-8.col-md-offset-2
         %h5.tagline
