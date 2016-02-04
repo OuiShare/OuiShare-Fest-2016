@@ -7,11 +7,13 @@
   background-position: 0px 80px;
 }
 .fforward_bg {
-  background: url(/assets/16bg-fest-forward.jpg) no-repeat;
+  background: url(/assets/16bg-fest-forward.jpg), url(/assets/16bg-fest-forward.jpg);
+  background-repeat: no-repeat;
   background-color: #001E60;
   background-position: 0px 85px;
   min-height: 100%;
   margin-bottom: 5%;
+  background-blend-mode: multiply, exclusion;
 }
 #head_logo_ff img{
   height:250px;
