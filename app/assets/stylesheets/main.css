@@ -413,13 +413,14 @@ body {
 	/*padding-bottom: 100px;*/
 }
 
-.blank_bg a {
+.blank_bg, .white_bg {
+	a {
 	text-decoration: underline;
-}
-
-.blank_bg a:hover{
+	} 
+	a:hover{
 	color:#E03E52;
 }
+
 .page {
 	padding-top: 130px;
 	padding-bottom: 100px;
