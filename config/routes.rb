@@ -54,7 +54,6 @@ OuiShareFest::Application.routes.draw do
   namespace :home, :path => nil do
     get :forward
     get :code_of_conduct
-    # get :fest_forward_applications
     # get :faq
     # get :contact
     # post :contact, :action => :contact_email
