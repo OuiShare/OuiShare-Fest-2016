@@ -10,6 +10,15 @@ class ApplicationController < ActionController::Base
 
   before_filter :configure_permitted_parameters, if: :devise_controller?
 
+  before_filter :add_transparant_navbar
+
+  def add_transparant_navbar
+    if (controller_name == 'home' && action_name == 'index')
+      @id_nav = "site-nav"
+    end
+    
+  end
+
   def first_visit
 
     if session[:visited] || Date.current() > Date.parse("2015-12-31")
