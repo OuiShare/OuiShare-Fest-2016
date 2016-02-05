@@ -59,7 +59,8 @@
           %p
             = t('dynamic_translations.ff_about.p3a')
             %a{href: '#_apply'}
-              apply here >>
+              = t('dynamic_translations.ff_about.p3_apply_here')
+              \>>
 
 .ff_apply#_apply
   .container
@@ -69,8 +70,8 @@
       %hr.pink
     .row.justify
       .col-md-8.col-md-offset-2.white_bg
-        %h4.blue
-          = t('dynamic_translations.ff_apply.who_title')
+        / %h4.blue
+        /   = t('dynamic_translations.ff_apply.who_title')
         %p
           OuiShare Fest Forward aims to showcase a diversity collaborative, open source projects. We are open to applications from:
         %ul
@@ -94,7 +95,7 @@
         %br
         %br
         %h4
-          Selection criteria
+          = t('dynamic_translations.ff_apply.selection_criteria')
         %ul
           %li
             %span.caps
@@ -139,7 +140,7 @@
         %br
         %br
         %h4.blue
-          Process & Deadlines
+          = t('dynamic_translations.ff_apply.process')
         %h6
           Online Application till February 29th
         %p
@@ -215,7 +216,7 @@
     .row.justified
       .col-md-8.col-md-offset-2.white_bg
         %p
-          To make the OuiShare Fest Forward experience as valuable as possible for its participants, the accelerator program is modular and will be adapted to each project and its challenge. Based on the project needs, we will do our best to provide the necessary materials, tools, and expertise. 
+          = t('dynamic_translations.ff_experience.text') 
 
 .blank_bg#_vote
   .container
