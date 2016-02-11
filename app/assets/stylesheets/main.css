@@ -471,9 +471,11 @@ body {
 }
 .triangle_bg_3 {
     background: url(/assets/bg16_triangles_3.png);
+    background-position: right;
 }
 .triangle_bg_4 {
     background: url(/assets/bg16_triangles_4.png);
+    background-position: left;
 }
 
 
