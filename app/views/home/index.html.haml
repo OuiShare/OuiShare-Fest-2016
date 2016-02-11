@@ -230,7 +230,7 @@
           %p
             = t('dynamic_translations.about.p3')
 
-.tickets.triangle_bg_4
+.tickets.triangle_bg_4.white_txt
   .container.tickets-section
     .row.centered{:style => "padding-top:0; padding-bottom:0"}
       .col-md-10.col-md-offset-1.col-sm-12
@@ -251,8 +251,8 @@
         %br
 
         / Eventbrite form
-        %div{:style => "width:100%; text-align:left; padding: 0 1.6em;"}
-          %iframe{:allowtransparency => "true", :frameborder => "0", :height => "520", :hspace => "0", :marginheight => "5", :marginwidth => "5", :scrolling => "auto", :src => "http://www.eventbrite.com/tickets-external?eid=19202830182&ref=etckt&v=2", :vspace => "0", :width => "100%"}
+        %div.eventbrite
+          %iframe.inverse{:allowtransparency => "true", :frameborder => "0", :height => "520", :hspace => "0", :marginheight => "5", :marginwidth => "5", :scrolling => "auto", :src => "http://www.eventbrite.com/tickets-external?eid=19202830182&ref=etckt&v=2", :vspace => "0", :width => "100%"}
           %div{:style => "font-family:Helvetica, Arial; font-size:10px; padding:5px 0 5px; margin:2px; width:100%; text-align:left;"}
             %a{:href => "http://www.eventbrite.com/r/etckt", :style => "color:#ddd; text-decoration:none;", :target => "_blank"} 
               =t('dynamic_translations.tickets.event_registration_online')

@@ -194,11 +194,23 @@ h3 {
   }
 }
 .white_txt {
-  p, h3, h4, h5, h6 {
+  p, h3, h4, h5, h6, a, a:hover {
     color: white !important;
+  }
+  a {
+    text-decoration:underline;
   }
   hr.pink {
     border-top: 4px solid #ffffff;
   }
   color: white !important;
+}
+.eventbrite {
+  width: 100%;
+  text-align: left;
+  padding: 0 1.6em;
+  iframe.inverse {
+    background-color: transparent !important;
+    color: white !important;
+  }
 }
