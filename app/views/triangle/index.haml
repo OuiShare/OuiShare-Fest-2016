@@ -48,7 +48,7 @@
 /         %a#sched-embed{:href => "http://ouisharefestparis2016.sched.org/directory/speakers"}
 /         %script{:type => "text/javascript", :src => "http://ouisharefest2015.sched.org/js/embed.js"}
 
-.tickets.blank_bg
+.tickets.triangle_bg_4.white.txt
   .container.tickets-section
     .row.centered{:style => "padding-top:0; padding-bottom:0"}
       .col-md-10.col-md-offset-1.col-sm-12
@@ -57,18 +57,18 @@
         %hr.pink
         %br
         %br
-        %p.pink
+        %p
           = t('dynamic_translations.tickets.description1')
           %a{href: "/join#_getinvolved"}
             = t('dynamic_translations.tickets.get_involved')
-        .tickets-table
+        .tickets-table.border-white
           .row
             .col-md-2.col-md-offset-8.col-xs-6.col-xs-offset-0.title-blue
               = t('dynamic_translations.tickets_table.pioneers')
             .col-md-2.col-xs-6.title-blue
               = t('dynamic_translations.tickets_table.explorers')
           .row
-            .col-md-12.title
+            .col-md-12.title-inverse
               = t('dynamic_translations.tickets_table.core_features')
           .row
             .col-md-8.col-sm-12
@@ -106,7 +106,7 @@
             .col-md-2.col-xs-6
               V
           .row
-            .col-md-12.title
+            .col-md-12.title-inverse
               = t('dynamic_translations.tickets_table.extended_features')
             .col-md-8
               = t('dynamic_translations.tickets_table.ext_1_reception')
