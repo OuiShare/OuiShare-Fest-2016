@@ -180,6 +180,11 @@
 
 .individuals-list-display{
   min-height: 335px;
+  /* optimal float settings */
+  display: inline-block;
+  margin-left: -0.125em;
+  margin-right: -0.125em;
+  float: none;
 }
 .individuals-list-btn{
   position: relative;
