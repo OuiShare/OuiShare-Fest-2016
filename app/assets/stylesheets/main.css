@@ -456,22 +456,26 @@ body {
     background: url(/assets/16bg-bluetext.png);
     background-size: cover;
 }
+
+/* OSF16 generated triangle backgrounds */
+.triangle_bg_1, .triangle_bg_2, .triangle_bg_3, .triangle_bg_4 {
+    background-size: cover;
+    margin-top: 3%;
+    margin-bottom: 7%;
+}
 .triangle_bg_1 {
     background: url(/assets/bg16_triangles_1.png);
-    background-size: cover;
 }
 .triangle_bg_2 {
     background: url(/assets/bg16_triangles_2.png);
-    background-size: cover;
 }
 .triangle_bg_3 {
     background: url(/assets/bg16_triangles_3.png);
-    background-size: cover;
 }
 .triangle_bg_4 {
     background: url(/assets/bg16_triangles_4.png);
-    background-size: cover;
 }
+
 
 .third-section > div > div > div > div > p > img {
   width: 95%;
