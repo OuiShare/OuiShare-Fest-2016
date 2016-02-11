@@ -200,6 +200,9 @@ h3 {
   a {
     text-decoration:underline;
   }
+  a:hover {
+    text-decoration: none;
+  }
   hr.pink {
     border-top: 4px solid #ffffff;
   }
