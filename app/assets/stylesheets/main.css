@@ -477,8 +477,14 @@ body {
     background: url(/assets/bg16_triangles_4.png);
     background-position: left;
 }
-
-
+.triangle_bg_topics {
+    background: url(/assets/16bg-triangles-topics.png);
+    background-position: right;
+}
+.triangle_bg_tickets {
+    background: url(/assets/16bg-triangles-tickets.png);
+    background-position: left;
+}
 .third-section > div > div > div > div > p > img {
   width: 95%;
   height: 95%;
