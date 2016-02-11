@@ -187,3 +187,8 @@ h3 {
 .caps {
   text-transform: uppercase;
 }
+.spaced {
+  h4, h5, h6 {
+    margin-top: 1.1em;
+  }
+}
