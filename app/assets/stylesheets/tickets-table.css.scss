@@ -5,7 +5,9 @@
   border-top: 1px solid #001E60;
   border-bottom: 1px solid #001E60;
 }
-
+.tickets-table.border-white [class^=col-]{
+  border-color: white !important;
+}
 .tickets-table {
   .col-md-8,
   .title,
