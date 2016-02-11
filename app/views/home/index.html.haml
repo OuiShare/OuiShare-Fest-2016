@@ -152,23 +152,7 @@
             %button.btn.btn-large.btn-primary
               = t('dynamic_translations.news.see_all')
 
-.blank_bg
-  .container
-    .second-section
-      .row.centered
-        %h5.col-md-6.col-md-offset-3.ouishare_stencil.white.blue_bg.text-center#_about
-          = t('dynamic_translations.about.subtitle')
-        .col-md-6.col-md-offset-3.col-sm-8.col-sm-offset-2
-          %p{:style => 'margin-top: 35px;'}
-            = t('dynamic_translations.about.p1')
-          %br
-          %p
-            = t('dynamic_translations.about.p2')
-          %br
-          %p
-            = t('dynamic_translations.about.p3')
-
-.net_bg
+.triangle_bg_3
   .container
     .third-section
       .row.centered
@@ -178,7 +162,7 @@
         %br/
         %br/
       .row
-        .col-md-8.col-md-offset-2{:style => 'padding:3%; background-color: white;'}
+        .col-md-8.col-md-offset-2
           .row
             .col-sm-4
               %h5
@@ -230,9 +214,23 @@
               %p
                 = t('dynamic_translations.topics.cf_desc')
 
+.blank_bg
+  .container
+    .second-section
+      .row.centered
+        %h5.col-md-6.col-md-offset-3.ouishare_stencil.white.blue_bg.text-center#_about
+          = t('dynamic_translations.about.subtitle')
+        .col-md-6.col-md-offset-3.col-sm-8.col-sm-offset-2
+          %p{:style => 'margin-top: 35px;'}
+            = t('dynamic_translations.about.p1')
+          %br
+          %p
+            = t('dynamic_translations.about.p2')
+          %br
+          %p
+            = t('dynamic_translations.about.p3')
 
-
-.tickets.blank_bg
+.tickets.triangle_bg_4
   .container.tickets-section
     .row.centered{:style => "padding-top:0; padding-bottom:0"}
       .col-md-10.col-md-offset-1.col-sm-12
@@ -241,7 +239,7 @@
         %hr.pink
         %br
         %br
-        %p.pink
+        %p
           = t('dynamic_translations.tickets.description1')
           %a{href: "/join#_getinvolved"}
             = t('dynamic_translations.tickets.get_involved')
