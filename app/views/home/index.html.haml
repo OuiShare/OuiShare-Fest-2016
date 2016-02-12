@@ -127,30 +127,30 @@
       %hr.pink
     .row{style:"padding-top: 3%"}
 
-      - @magazines.each do |magazine|
-        .col-md-4{style:"position: relative; min-height:370px;"}
-          - if !magazine.content.split('img')[1].nil?
-            .col-md-12
-              %a{href: "#{magazine.url}", target:"blank"}
-                %img{:src => "#{magazine.content.split(' ')[3].split('"')[1].gsub(/-150x150/, "")}", :u => "image"}
-              .col-md-12
-              %br
-              %p
-                %a{href: "#{magazine.url}", target:"blank"}
-                  = magazine.name 
-                %br
-                  = "#{magazine.author}" unless magazine.author.blank?
-          - else
-            .col-md-12
-              %a{href: "#{magazine.url}", target:"blank"}
-                = image_tag "/assets/landing_logo.png", :style => "height:150px;"
-            .col-md-12
-              %br
-              %p
-                %a{href: "#{magazine.url}", target:"blank"}
-                  = magazine.name
-                %br
-                  = "#{magazine.author}" unless magazine.author.blank?
+      -# - @magazines.each do |magazine|
+      -#   .col-md-4{style:"position: relative; min-height:370px;"}
+      -#     - if !magazine.content.split('img')[1].nil?
+      -#       .col-md-12
+      -#         %a{href: "#{magazine.url}", target:"blank"}
+      -#           %img{:src => "#{magazine.content.split(' ')[3].split('"')[1].gsub(/-150x150/, "")}", :u => "image"}
+      -#         .col-md-12
+      -#         %br
+      -#         %p
+      -#           %a{href: "#{magazine.url}", target:"blank"}
+      -#             = magazine.name 
+      -#           %br
+      -#             = "#{magazine.author}" unless magazine.author.blank?
+      -#     - else
+      -#       .col-md-12
+      -#         %a{href: "#{magazine.url}", target:"blank"}
+      -#           = image_tag "/assets/landing_logo.png", :style => "height:150px;"
+      -#       .col-md-12
+      -#         %br
+      -#         %p
+      -#           %a{href: "#{magazine.url}", target:"blank"}
+      -#             = magazine.name
+      -#           %br
+      -#             = "#{magazine.author}" unless magazine.author.blank?
             
     .row.centered{:style => "margin-bottom:100px;"}
       .col-md-12
