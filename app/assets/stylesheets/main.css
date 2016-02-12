@@ -488,6 +488,7 @@ body {
 .third-section > div > div > div > div > p > img {
   width: 95%;
   height: 95%;
+  max-width: 73px;
 }
 
 #bestof > div > div > div > div > p {
