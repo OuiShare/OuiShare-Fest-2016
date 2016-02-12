@@ -1,12 +1,15 @@
 // All styles for tickets-table
 
 .tickets-table [class^=col-]{
-  padding: 0.7em 0.5em;
-  border-top: 1px solid #001E60;
-  border-bottom: 1px solid #001E60;
+  padding: 1.1em 0.8em;
+  /*border-top: 1px solid #001E60;*/
+  /*border-bottom: 1px solid #001E60;*/
 }
 .tickets-table.border-white [class^=col-]{
-  border-color: white !important;
+  /*border-color: white !important;*/
+}
+.tickets-border {
+  border: 1px solid white;
 }
 .tickets-table {
   .col-md-8,
@@ -15,7 +18,7 @@
   p{
     @media (min-width: 992px) {
       text-align: left;
-      margin-left: -0.5em;
+      margin-left: -0.8em;
     }
     .col-xs-6 {
       text-align: center;
@@ -23,7 +26,7 @@
   }
   .title, .title-inverse, .title-blue {
     font-family:'naiv_normal';
-    padding: 1em 0.5em;
+    padding: 1.5em 0.8em;
   }
   .title {
     background-color: #001E60;
