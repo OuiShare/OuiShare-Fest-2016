@@ -459,7 +459,6 @@ body {
 
 /* OSF16 generated triangle backgrounds */
 .triangle_bg_1, .triangle_bg_2, .triangle_bg_3, .triangle_bg_4, .triangle_bg_topics, .triangle_bg_tickets {
-    background-size: cover;
     margin-top: 3%;
     margin-bottom: 7%;
 }
@@ -472,18 +471,22 @@ body {
 .triangle_bg_3 {
     background: url(/assets/bg16_triangles_3.png);
     background-position: right;
+    background-size: cover;
 }
 .triangle_bg_4 {
     background: url(/assets/bg16_triangles_4.png);
     background-position: left;
+    background-size: cover;
 }
 .triangle_bg_topics {
     background: url(/assets/16bg-triangles-topics.png);
     background-position: right;
+    background-size: cover;
 }
 .triangle_bg_tickets {
     background: url(/assets/16bg-triangles-tickets.png);
     background-position: left;
+    background-size: cover;
 }
 .third-section > div > div > div > div > p > img {
   width: 95%;
