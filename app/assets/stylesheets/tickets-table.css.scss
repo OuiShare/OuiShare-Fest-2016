@@ -1,7 +1,7 @@
 // All styles for tickets-table
 
 .tickets-table [class^=col-]{
-  padding: 1.1em 0.8em;
+  padding: 1.1em 1.2;
   /*border-top: 1px solid #001E60;*/
   /*border-bottom: 1px solid #001E60;*/
 }
@@ -18,7 +18,7 @@
   p{
     @media (min-width: 992px) {
       text-align: left;
-      margin-left: -0.8em;
+      margin-left: -0em;
     }
     .col-xs-6 {
       text-align: center;
@@ -26,7 +26,8 @@
   }
   .title, .title-inverse, .title-blue {
     font-family:'naiv_normal';
-    padding: 1.5em 0.8em;
+    padding: 1.5em 1.2em;
+    font-size: medium;
   }
   .title {
     background-color: #001E60;
@@ -43,6 +44,7 @@
 
   .row{
     padding-top:0;
+    margin: 0;
   }
   .row-eq-height{
     overflow: hidden;
