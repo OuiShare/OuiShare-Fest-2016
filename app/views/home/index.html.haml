@@ -243,11 +243,101 @@
           = t('dynamic_translations.tickets.description1')
           %a{href: "/join#_getinvolved"}
             = t('dynamic_translations.tickets.get_involved')
-        %p.text-center
-          = image_tag("2016-tickets-#{I18n.locale}-05.png", width: "100%", alt: "Ticket options")
-          / %img{:src => '/assets/2016-tickets-en-03.png', :alt => 'Ticket options', :style => "max-width: 100%"}
-          / %img{:src => '/assets/2016-tickets-fr-03.png', :alt => 'Options billets', :style => "max-width: 100%"}
+        .tickets-table
+          .row
+            .col-md-2.col-md-offset-8.col-xs-6.col-xs-offset-0.title-blue
+              = t('dynamic_translations.tickets_table.pioneers')
+            .col-md-2.col-xs-6.title-blue
+              = t('dynamic_translations.tickets_table.explorers')
+          .tickets-border
+            .row
+              .col-md-12.title-inverse
+                = t('dynamic_translations.tickets_table.core_features')
+            .row
+              .col-md-8.col-sm-12
+                = t('dynamic_translations.tickets_table.core_1_access')
+              .col-md-2.col-xs-6
+                = image_tag "/assets/tickets-tick-white.svg"
+              .col-md-2.col-xs-6
+                = image_tag "/assets/tickets-tick-white.svg"
+            .row
+              .col-md-8
+                = t('dynamic_translations.tickets_table.core_2_food')
+              .col-md-2.col-xs-6
+                = image_tag "/assets/tickets-tick-white.svg"
+              .col-md-2.col-xs-6
+                = image_tag "/assets/tickets-tick-white.svg"
+            .row
+              .col-md-8
+                = t('dynamic_translations.tickets_table.core_3_partner_events')
+              .col-md-2.col-xs-6
+                = image_tag "/assets/tickets-tick-white.svg"
+              .col-md-2.col-xs-6
+                = image_tag "/assets/tickets-tick-white.svg"
+            .row
+              .col-md-8
+                = t('dynamic_translations.tickets_table.core_4_access_party')
+              .col-md-2.col-xs-6
+                = image_tag "/assets/tickets-tick-white.svg"
+              .col-md-2.col-xs-6
+                = image_tag "/assets/tickets-tick-white.svg"
+            .row
+              .col-md-8
+                = t('dynamic_translations.tickets_table.core_5_participants_list')
+              .col-md-2.col-xs-6
+                = image_tag "/assets/tickets-tick-white.svg"
+              .col-md-2.col-xs-6
+                = image_tag "/assets/tickets-tick-white.svg"
+            .row
+              .col-md-12.title-inverse
+                = t('dynamic_translations.tickets_table.extended_features')
+              .col-md-8
+                = t('dynamic_translations.tickets_table.ext_1_reception')
+              .col-md-2.col-xs-6
+                &nbsp;
+              .col-md-2.col-xs-6
+                = image_tag "/assets/tickets-tick-white.svg"
+            .row.row-eq-height
+              .col-md-8
+                = t('dynamic_translations.tickets_table.ext_2') 
+                %ul
+                  %li
+                    = t('dynamic_translations.tickets_table.ext_2a')
+                  %li
+                    = t('dynamic_translations.tickets_table.ext_2b')
+                  %li
+                    = t('dynamic_translations.tickets_table.ext_2c')
+              .col-md-2.col-xs-6
+                &nbsp;
+              .col-md-2.col-xs-6
+                = image_tag "/assets/tickets-tick-white.svg"
+            .row.row-eq-height
+              .col-md-8
+                = t('dynamic_translations.tickets_table.ext_3_webinar')
+              .col-md-2.col-xs-6
+                &nbsp;
+              .col-md-2.col-xs-6
+                = image_tag "/assets/tickets-tick-white.svg"
+            .row
+              .col-md-8
+                = t('dynamic_translations.tickets_table.ext_4_book') 
+                %em
+                  = t('dynamic_translations.tickets_table.ext_4_book_title')
+              .col-md-2.col-xs-6
+                &nbsp;
+              .col-md-2.col-xs-6
+                = image_tag "/assets/tickets-tick-white.svg"
+          %p.left
+            = t('dynamic_translations.tickets_table.questions') 
+            %b
+              %a{:href => 'mailto:partners@ouisharefest.com'}
+                partners@ouisharefest.com
         %br
+        / %p.text-center
+        /   = image_tag("2016-tickets-#{I18n.locale}-05.png", width: "100%", alt: "Ticket options")
+        /   / %img{:src => '/assets/2016-tickets-en-03.png', :alt => 'Ticket options', :style => "max-width: 100%"}
+        /   / %img{:src => '/assets/2016-tickets-fr-03.png', :alt => 'Options billets', :style => "max-width: 100%"}
+        / %br
         %br
 
         / Eventbrite form
