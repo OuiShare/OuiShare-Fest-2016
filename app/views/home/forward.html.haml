@@ -62,7 +62,7 @@
               = t('dynamic_translations.ff_about.p3_apply_here')
               \>>
 
-.triangle_bg_3.white_txt.vspace#_apply
+.triangle_bg_3.white_txt#_apply{style:"padding-top: 5%"}
   .container
     .row.centered
       %h3.ouishare_stencil
@@ -94,6 +94,11 @@
             = t('dynamic_translations.ff_apply.p2_req2')
         %br
         %br
+
+.blank_bg#_apply
+  .container
+    .row.justify
+      .col-md-8.col-md-offset-2
         %h4
           = t('dynamic_translations.ff_apply.selection_criteria')
         %ul
@@ -189,6 +194,8 @@
           %a{:href => 'https://ouisharefest.typeform.com/to/s8ouC5', :target => '_blank'}
             %button.btn.btn-embossed.btn-primary
               = t('dynamic_translations.ff.btn_apply')
+          %br
+          %br
 
 .blank_bg#_jury
   .container
