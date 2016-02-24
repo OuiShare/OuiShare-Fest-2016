@@ -1,4 +1,4 @@
-.program-part.top_blue
+.triangle_bg_3.white_txt.vspace
   .container
     .main-section
       .row.centered
@@ -16,12 +16,14 @@
             %button.btn.btn-large.btn-primary
               = t('dynamic_translations.get_involved.title')
 
-      / .row.centered
-      /   %img{:src => '/assets/2016-schedule.png', :alt => 'Main schedule', :style => "max-width: 100%"}
-      /   %a#sched-embed{:href => "http://ouisharefest2015.sched.org/grid/"}
-      /   %script{:type => "text/javascript", :src => "http://ouisharefest2015.sched.org/js/embed.js"}
+      .row.centered#_schedule
+        %br
+        %br
+        %img{:src => '/assets/2016-schedule-en.png', :alt => 'Main schedule', :style => "max-width: 100%"}
+        / %a#sched-embed{:href => "http://ouisharefestparis2016.sched.org/grid/"}
+        / %script{:type => "text/javascript", :src => "http://ouisharefestparis2016.sched.org/js/embed.js"}
 
-.blank_bg
+.blank_bg.vspace
   .container
     .row.centered
       %h3.ouishare_stencil
