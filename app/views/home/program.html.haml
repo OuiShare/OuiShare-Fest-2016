@@ -63,7 +63,7 @@
       %hr.pink
       - if !@curators.blank?
         .ch-grid
-          - @curators.each do |speaker|
+          - @curators.each do |team_member|
             .col-lg-3.individuals-list-display
               %li
-                = render "/individuals/partials/speaker_display", :speaker => speaker
+                = render "/individuals/partials/team_member_display", :team_member => team_member 
