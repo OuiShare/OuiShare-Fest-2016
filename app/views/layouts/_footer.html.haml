@@ -1,8 +1,8 @@
 #f
   .container
     .row
-      .col-lg-10.col-lg-offset-1
-        .col-lg-4
+      .col-lg-12
+        .col-lg-3
           %h5
             / Subscribe to our newsletter
             = t('dynamic_translations.footer.subscribe_newsletter')
@@ -21,7 +21,7 @@
             %br/
             %a{href: "http://ouiki.ouishare.net/index.php?title=Open_Source_Fest", target: "_blank"} 
               =t('dynamic_translations.footer.open_source_fest')
-        .col-lg-4
+        .col-lg-3
           %h4
             = t('dynamic_translations.footer.contact')
 
@@ -38,7 +38,7 @@
             %br/
             %a{href: "/code_of_conduct"} 
               =t('dynamic_translations.coc.title')
-        .col-lg-4
+        .col-lg-3
           %h4
             = t('dynamic_translations.footer.press')
           %p
@@ -51,6 +51,10 @@
             = t('dynamic_translations.footer.press_contact')
             %a{href: "mailto:press@ouisharefest.com", target: "_blank"} 
               press@ouisharefest.com
+        .col-lg-3
+          %p
+            %a{href: "https://maps.google.fr/maps?q=Cabaret+Sauvage,+Paris=fr=UTF8=48.895308,2.392101=0.01975,0.045362=48.895345,2.392168=0.009875,0.022681=caba=Cabaret+Sauvage,=Paris,+%C3%8Ele-de-France=m=15", target: "_blank"}
+              %img.img-responsive.img-thumbnail{src: "/assets/small_map.png"}/
     %br
     %br
     .row
