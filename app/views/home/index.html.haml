@@ -131,7 +131,7 @@
     .row{style:"padding-top: 3%"}
 
       - @magazines.each do |magazine|
-        .col-md-4{style:"position: relative; min-height:370px;"}
+        .col-md-4{style:"position: relative; min-height:170px;"}
           - if !magazine.content.split('img')[1].nil?
             .col-md-12
               %a{href: "#{magazine.url}", target:"blank"}
