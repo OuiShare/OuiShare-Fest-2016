@@ -210,6 +210,13 @@
           = t('dynamic_translations.ff_jury.p1b')
         %p
           = t('dynamic_translations.ff_jury.p2')
+    .row.centered
+      - if !@jury.blank?
+        .ch-grid
+          - @jury.each do |team_member|
+            .col-lg-3.individuals-list-display
+              %li
+                = render "/individuals/partials/team_member_display", :team_member => team_member          
 
 
 .triangle_bg_4.vspace.white_txt#_experience

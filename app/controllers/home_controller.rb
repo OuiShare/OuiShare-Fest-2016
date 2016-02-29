@@ -187,6 +187,17 @@ class HomeController < ApplicationController
     end
   end
 
+  def forward
+    if IndividualType.find_by_title('Jury')
+      @jury = IndividualType.find_by_title('Jury').get_members
+      if ENV["DISPLAYED_JURY"].to_i > @jury.count
+        displayed_jury_number = @jury.count
+      else
+        displayed_jury_number = ENV["DISPLAYED_JURY"].to_i
+      end
+    end
+  end
+
   def contact
     # Set marker options for contact map
     @lng = '39.8331'
