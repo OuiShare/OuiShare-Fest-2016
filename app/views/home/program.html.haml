@@ -23,7 +23,7 @@
         / %a#sched-embed{:href => "http://ouisharefestparis2016.sched.org/grid/"}
         / %script{:type => "text/javascript", :src => "http://ouisharefestparis2016.sched.org/js/embed.js"}
 
-.blank_bg.vspace
+.blank_bg
   .container
     .row.centered
       %h3.ouishare_stencil
@@ -53,3 +53,17 @@
           %a{href: "http://magazine.ouishare.net/2015/12/after-the-gold-rush", target: "_blank"}
             = t('dynamic_translations.goldrush.p6')
 
+
+/ Curators
+#curators.vspace
+  .container
+    .row.centered
+      %h3.ouishare_stencil
+        = t('dynamic_translations.program.curators')
+      %hr.pink
+      - if !@curators.blank?
+        .ch-grid
+          - @curators.each do |speaker|
+            .col-lg-3.individuals-list-display
+              %li
+                = render "/individuals/partials/speaker_display", :speaker => speaker

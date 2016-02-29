@@ -177,12 +177,12 @@ class HomeController < ApplicationController
   def program
     # @request_response = connect_to_sched().force_encoding('UTF-8')
 
-    if IndividualType.find_by_title('Track leaders')
-      @track_leaders = IndividualType.find_by_title('Track leaders').get_members
-      if ENV["DISPLAYED_TRACK_LEADERS"].to_i > @track_leaders.count
-        displayed_track_leaders_number = @track_leaders.count
+    if IndividualType.find_by_title('Curators')
+      @track_leaders = IndividualType.find_by_title('Curators').get_members
+      if ENV["DISPLAYED_CURATORS"].to_i > @curators.count
+        displayed_curators_number = @curators.count
       else
-        displayed_track_leaders_number = ENV["DISPLAYED_TRACK_LEADERS"].to_i
+        displayed_curators_number = ENV["DISPLAYED_CURATORS"].to_i
       end
     end
   end
