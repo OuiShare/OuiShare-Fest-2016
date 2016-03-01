@@ -70,8 +70,19 @@
       %hr.pink
     .row.justify
       .col-md-8.col-md-offset-2
-        / %h4.blue
-        /   = t('dynamic_translations.ff_apply.who_title')
+        %p
+          = t('dynamic_translations.ff_apply.p2') 
+          %b.caps
+            = t('dynamic_translations.ff_apply.p2_requirements')
+        %ol
+          %li
+            = t('dynamic_translations.ff_apply.p2_req1')
+          %li
+            = t('dynamic_translations.ff_apply.p2_req2')
+        %br
+        %br
+    .row.justify
+      .col-md-8.col-md-offset-2
         %p
           = t('dynamic_translations.ff_apply.p1')
         %ul
@@ -83,16 +94,7 @@
             = t('dynamic_translations.ff_apply.p1c')
           %li
             = t('dynamic_translations.ff_apply.p1d')
-        %p
-          = t('dynamic_translations.ff_apply.p2') 
-          %b.caps
-            = t('dynamic_translations.ff_apply.p2_requirements')
-        %ol
-          %li
-            = t('dynamic_translations.ff_apply.p2_req1')
-          %li
-            = t('dynamic_translations.ff_apply.p2_req2')
-        %br
+
 
 .blank_bg.vspace{style:"padding-top: 0"}
   .container
