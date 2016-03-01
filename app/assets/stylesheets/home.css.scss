@@ -605,8 +605,12 @@ body > div.get-involved-section > div > div.row.centered > p {
 }
 
 .btn.btn-pink.buy-tickets-btn{
-  padding: 30px 30px;
-  width: 270px;
+  padding: 20px 30px;
+  // width: 270px;
+}
+.btn-purple, .btn-lilac {
+  font-size: 18px;
+  text-transform: uppercase;
 }
 .btn-purple {
   background-color: #990229;
@@ -616,6 +620,7 @@ body > div.get-involved-section > div > div.row.centered > p {
 }
 .btn.btn-lilac:hover, .btn.btn-purple:hover {
   background-color: #fff;
+  color: #001E60;
   a{
     color: #001E60;
   }
