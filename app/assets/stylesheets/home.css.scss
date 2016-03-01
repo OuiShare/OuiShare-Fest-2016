@@ -596,7 +596,7 @@ body > div.get-involved-section > div > div.row.centered > p {
   }
 }
 
-.btn.get-involved-btn, .btn.btn-padding{
+.btn.get-involved-btn{
   // padding: 25px 0px;
   // padding: 25px 10px;
   width: 180px;
@@ -605,20 +605,29 @@ body > div.get-involved-section > div > div.row.centered > p {
 }
 
 .btn.btn-pink.buy-tickets-btn{
-  padding: 20px 30px;
-  // width: 270px;
+  padding: 30px 30px;
+  width: 270px;
 }
-.btn-purple, .btn-lilac {
+.btn.btn-padding {
+  padding: 20px 30px;
+  margin: 2em;
+}
+
+.btn-purple, .btn-lilac, .btn-fandango {
   font-size: 18px;
   text-transform: uppercase;
+  font-family: naiv_normal;
 }
 .btn-purple {
   background-color: #990229;
 }
-.btn-lilac {
+.btn-violet {
   background-color: #9b15f1;
 }
-.btn.btn-lilac:hover, .btn.btn-purple:hover {
+.btn-fandango{
+  background-color: #9a096f;
+}
+.btn.btn-lilac:hover, .btn.btn-purple:hover, .btn.btn-fandango:hover {
   background-color: #fff;
   color: #001E60;
   a{
