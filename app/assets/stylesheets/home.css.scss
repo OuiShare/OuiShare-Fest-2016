@@ -618,6 +618,11 @@ body > div.get-involved-section > div > div.row.centered > p {
   font-size: 18px;
   text-transform: uppercase;
   font-family: naiv_normal;
+
+  :hover{
+    background-color: #fff;
+    color: #001E60;
+  }
 }
 .btn-purple {
   background-color: #990229;
@@ -627,7 +632,7 @@ body > div.get-involved-section > div > div.row.centered > p {
 }
 .btn-fandango{
   // background-color: #9a096f;
-  background-color: 
+  background-color: #9a0974;
 }
 .btn.btn-violet:hover, .btn.btn-purple:hover, .btn.btn-fandango:hover {
   background-color: #fff;
