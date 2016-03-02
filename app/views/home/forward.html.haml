@@ -155,61 +155,67 @@
           = t('dynamic_translations.ff_apply.p3')
         %p
           = t('dynamic_translations.ff_apply.p4')
-        %br
-        %br
-        %h4.blue
-          = t('dynamic_translations.ff_apply.process')
-        %h6
-          = t('dynamic_translations.ff_apply.process_dl')
-        %p
-          %a{:href => 'https://ouisharefest.typeform.com/to/s8ouC5', :target => '_blank'}
-            = t('dynamic_translations.ff_apply.process_dl_link')
-        %p
-          = t('dynamic_translations.ff_apply.process_dl_1')
-        %ul
-          %li
-            = t('dynamic_translations.ff_apply.process_dl_1a')
-          %li
-            = t('dynamic_translations.ff_apply.process_dl_1b')
-        %h6
-          = t('dynamic_translations.ff_apply.process_1_pre')
-        %p
-          %em
-            = t('dynamic_translations.ff_apply.process_1_pre_dates')
-          %br
-          = t('dynamic_translations.ff_apply.process_1_pre_desc')
-          %br
-        %h6
-          = t('dynamic_translations.ff_apply.process_2_voting') 
-        %p
-          %em
-            = t('dynamic_translations.ff_apply.process_2_voting_dates')
-          %br
-          = t('dynamic_translations.ff_apply.process_2_voting_desc')
-          %br
-        %h6
-          = t('dynamic_translations.ff_apply.process_3_prep')
-        %p
-          %em
-            = t('dynamic_translations.ff_apply.process_3_prep_dates')
-          %br
-          = t('dynamic_translations.ff_apply.process_3_prep_desc')
-          %br      
-        %h6
-          = t('dynamic_translations.ff_apply.process_4_fest')
-        %p
-          %em
-            = t('dynamic_translations.ff_apply.process_4_fest_dates')
-          %br
-          = t('dynamic_translations.ff_apply.process_4_fest_desc') 
+        / %br
+        / %br
+        / %h4.blue
+        /   = t('dynamic_translations.ff_apply.process')
+        / %h6
+        /   = t('dynamic_translations.ff_apply.process_dl')
+        / %p
+        /   %a{:href => 'https://ouisharefest.typeform.com/to/s8ouC5', :target => '_blank'}
+        /     = t('dynamic_translations.ff_apply.process_dl_link')
+        / %p
+        /   = t('dynamic_translations.ff_apply.process_dl_1')
+        / %ul
+        /   %li
+        /     = t('dynamic_translations.ff_apply.process_dl_1a')
+        /   %li
+        /     = t('dynamic_translations.ff_apply.process_dl_1b')
+        / %h6
+        /   = t('dynamic_translations.ff_apply.process_1_pre')
+        / %p
+        /   %em
+        /     = t('dynamic_translations.ff_apply.process_1_pre_dates')
+        /   %br
+        /   = t('dynamic_translations.ff_apply.process_1_pre_desc')
+        /   %br
+        / %h6
+        /   = t('dynamic_translations.ff_apply.process_2_voting') 
+        / %p
+        /   %em
+        /     = t('dynamic_translations.ff_apply.process_2_voting_dates')
+        /   %br
+        /   = t('dynamic_translations.ff_apply.process_2_voting_desc')
+        /   %br
+        / %h6
+        /   = t('dynamic_translations.ff_apply.process_3_prep')
+        / %p
+        /   %em
+        /     = t('dynamic_translations.ff_apply.process_3_prep_dates')
+        /   %br
+        /   = t('dynamic_translations.ff_apply.process_3_prep_desc')
+        /   %br      
+        / %h6
+        /   = t('dynamic_translations.ff_apply.process_4_fest')
+        / %p
+        /   %em
+        /     = t('dynamic_translations.ff_apply.process_4_fest_dates')
+        /   %br
+        /   = t('dynamic_translations.ff_apply.process_4_fest_desc') 
 
+
+
+.timeline
+  %iframe{:frameborder => "0", :height => "650", :width => "100%", :src => "//cdn.knightlab.com/libs/timeline3/latest/embed/index.html?source=1iX9dHAoxNXIRgQdiK6aCwfxUhv5f2vLOgdaW9YtwCm8&font=Default&lang=en&initial_zoom=2&height=650" }
+
+.blank_bg.vspace
+  .container
+    .row.justify
+      .col-md-8.col-md-offset-2
         %p.centered.join_bouton
           %a{:href => 'https://ouisharefest.typeform.com/to/s8ouC5', :target => '_blank'}
             %button.btn.btn-padding.btn-fandango
               = t('dynamic_translations.ff.btn_apply')
-
-.timeline
-  %iframe{:frameborder => "0", :height => "650", :width => "100%", :src => "//cdn.knightlab.com/libs/timeline3/latest/embed/index.html?source=1iX9dHAoxNXIRgQdiK6aCwfxUhv5f2vLOgdaW9YtwCm8&font=Default&lang=en&initial_zoom=2&height=650" }
 
 .blank_bg#_jury
   .container
