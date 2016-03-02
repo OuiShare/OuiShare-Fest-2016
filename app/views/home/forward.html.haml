@@ -17,7 +17,7 @@
           %br
           %p.centered.join_bouton
             %a{:href => '#_apply'}
-              %button.btn.btn-embossed.btn-primary
+              %button.btn.btn-padding.btn-fandango
                 = t('dynamic_translations.ff.btn_apply')
 
 .blank_bg#_tagline
@@ -70,8 +70,20 @@
       %hr.pink
     .row.justify
       .col-md-8.col-md-offset-2
-        / %h4.blue
-        /   = t('dynamic_translations.ff_apply.who_title')
+        %br
+        %p
+          = t('dynamic_translations.ff_apply.p2') 
+          %b.caps
+            = t('dynamic_translations.ff_apply.p2_requirements')
+        %ol
+          %li
+            = t('dynamic_translations.ff_apply.p2_req1')
+          %li
+            = t('dynamic_translations.ff_apply.p2_req2')
+        %br
+        %br
+    .row.justify
+      .col-md-8.col-md-offset-2
         %p
           = t('dynamic_translations.ff_apply.p1')
         %ul
@@ -83,15 +95,11 @@
             = t('dynamic_translations.ff_apply.p1c')
           %li
             = t('dynamic_translations.ff_apply.p1d')
-        %p
-          = t('dynamic_translations.ff_apply.p2') 
-          %b.caps
-            = t('dynamic_translations.ff_apply.p2_requirements')
-        %ol
-          %li
-            = t('dynamic_translations.ff_apply.p2_req1')
-          %li
-            = t('dynamic_translations.ff_apply.p2_req2')
+        %br
+        %p.centered.join_bouton
+          %a{:href => 'https://ouisharefest.typeform.com/to/s8ouC5', :target => '_blank'}
+            %button.btn.btn-padding.btn-violet
+              = t('dynamic_translations.ff.btn_apply')
         %br
 
 .blank_bg.vspace{style:"padding-top: 0"}
@@ -100,43 +108,49 @@
       .col-md-8.col-md-offset-2
         %h4
           = t('dynamic_translations.ff_apply.selection_criteria')
-        %ul
-          %li
+        %ul.criteria
+          %li.btn.btn-purple
             %span.caps
               = t('dynamic_translations.ff_apply.selection_criteria_impact') 
-            = t('dynamic_translations.ff_apply.selection_criteria_impact_desc')
-          %li
+            / = t('dynamic_translations.ff_apply.selection_criteria_impact_desc')
+          %li.btn.btn-fandango
             %span.caps
               = t('dynamic_translations.ff_apply.selection_criteria_replicability') 
-            = t('dynamic_translations.ff_apply.selection_criteria_replicability_desc')
-          %li
+          /   / = t('dynamic_translations.ff_apply.selection_criteria_replicability_desc')
+          / %li
+          /   %span.caps
+          /     = t('dynamic_translations.ff_apply.selection_criteria_disruption') 
+          /   / = t('dynamic_translations.ff_apply.selection_criteria_disruption_desc')
+          / %li
+          /   %span.caps
+          /     = t('dynamic_translations.ff_apply.selection_criteria_viability') 
+          /   / = t('dynamic_translations.ff_apply.selection_criteria_viability_desc')
+          / %li
+          /   %span.caps
+          /     = t('dynamic_translations.ff_apply.selection_criteria_structure') 
+          /   / = t('dynamic_translations.ff_apply.selection_criteria_structure_desc')
+          %li.btn.btn-purple
             %span.caps
-              = t('dynamic_translations.ff_apply.selection_criteria_disruption') 
-            = t('dynamic_translations.ff_apply.selection_criteria_disruption_desc')
-          %li
-            %span.caps
-              = t('dynamic_translations.ff_apply.selection_criteria_viability') 
-            = t('dynamic_translations.ff_apply.selection_criteria_viability_desc')
-          %li
-            %span.caps
-              = t('dynamic_translations.ff_apply.selection_criteria_structure') 
-            = t('dynamic_translations.ff_apply.selection_criteria_structure_desc')
-          %li
+              = t('dynamic_translations.ff_apply.selection_criteria_team') 
+          %li.btn.btn-fandango
             %span.caps
               = t('dynamic_translations.ff_apply.selection_criteria_challenge') 
-            = t('dynamic_translations.ff_apply.selection_criteria_challenge_desc')
-          %li
+            / = t('dynamic_translations.ff_apply.selection_criteria_challenge_desc')
+          %li.btn.btn-purple
             %span.caps
-              = t('dynamic_translations.ff_apply.selection_criteria_values') 
-            = t('dynamic_translations.ff_apply.selection_criteria_values_desc') 
-            %a{:href => 'http://ouishare.net/about/values', :target => '_blank'}
-              = t('dynamic_translations.ff_apply.selection_criteria_values_link')
-          %li
-            %span.caps
-              = t('dynamic_translations.ff_apply.selection_criteria_program') 
-            = t('dynamic_translations.ff_apply.selection_criteria_program_desc') 
-            %a{href: 'program'}
-              = t('dynamic_translations.ff_apply.selection_criteria_program_link')
+              = t('dynamic_translations.ff_apply.selection_criteria_synergy') 
+          / %li
+          /   %span.caps
+          /     = t('dynamic_translations.ff_apply.selection_criteria_values') 
+          / /   = t('dynamic_translations.ff_apply.selection_criteria_values_desc') 
+          / /   %a{:href => 'http://ouishare.net/about/values', :target => '_blank'}
+          / /     = t('dynamic_translations.ff_apply.selection_criteria_values_link')
+          / / %li
+          / /   %span.caps
+          / /     = t('dynamic_translations.ff_apply.selection_criteria_program') 
+          / /   = t('dynamic_translations.ff_apply.selection_criteria_program_desc') 
+          / /   %a{href: 'program'}
+          / /     = t('dynamic_translations.ff_apply.selection_criteria_program_link')
         %p
           = t('dynamic_translations.ff_apply.p3')
         %p
@@ -191,7 +205,7 @@
 
         %p.centered.join_bouton
           %a{:href => 'https://ouisharefest.typeform.com/to/s8ouC5', :target => '_blank'}
-            %button.btn.btn-embossed.btn-primary
+            %button.btn.btn-padding.btn-fandango
               = t('dynamic_translations.ff.btn_apply')
 
 .blank_bg#_jury
@@ -206,10 +220,17 @@
           = t('dynamic_translations.ff_jury.p1a') 
           %a{:href => 'http://ouishare.net/about/team', :target => '_blank'}
             = t('dynamic_translations.ff_jury.p1a_connectors')
-          %br
-          = t('dynamic_translations.ff_jury.p1b')
+          / %br
+          / = t('dynamic_translations.ff_jury.p1b')
         %p
           = t('dynamic_translations.ff_jury.p2')
+    .row.centered
+      - if !@jury.blank?
+        .ch-grid
+          - @jury.each do |team_member|
+            .col-lg-3.individuals-list-display
+              %li
+                = render "/individuals/partials/team_member_display", :team_member => team_member          
 
 
 .triangle_bg_4.vspace.white_txt#_experience
@@ -236,6 +257,9 @@
           = t('dynamic_translations.ff_vote.open_soon')
         / %h5.tagline
         /   = t('dynamic_translations.ff_vote.vote_now')
+        %br
+        %br
+        %br
 
 
 

@@ -9,22 +9,24 @@
         .col-md-10.col-md-offset-1
           %h1.main-title.white
             = t('dynamic_translations.main.title')
-        .col-md-8.col-md-offset-2
-          %h5.tagline
+        .col-md-6.col-md-offset-3
+          %br
+          %p.main-section-paragraphes.white
             = t('dynamic_translations.main.subtitle')
           %p.main-section-paragraphes.white
-            = t('dynamic_translations.main.date')
+            %span.vert-borders
+              = t('dynamic_translations.main.date')
 
-      = form_tag home_newsletter_collect_email_path, :class => "form-inline" do
-        .row.text-center
-          .col-sm-offset-3.col-sm-4.col-xs-offset-2.col-xs-5
-            = text_field_tag :email_address,"", :class => "form-control flat", :placeholder => t('dynamic_translations.main.placeholder_stay_posted'), :style => "width: 110%;"
-          .col-xs-2.submit-email-button
-            = submit_tag t('dynamic_translations.main.stay_posted'), :class => "btn btn-primary"
+      / = form_tag home_newsletter_collect_email_path, :class => "form-inline" do
+      /   .row.text-center
+      /     .col-sm-offset-3.col-sm-4.col-xs-offset-2.col-xs-5
+      /       = text_field_tag :email_address,"", :class => "form-control flat", :placeholder => t('dynamic_translations.main.placeholder_stay_posted'), :style => "width: 110%;"
+      /     .col-xs-2.submit-email-button
+      /       = submit_tag t('dynamic_translations.main.stay_posted'), :class => "btn btn-primary"
 
       .row
         .col-md-8.col-md-offset-2
-          %br
+          / %br
           %br
           %p.centered.join_bouton
             %a{:href => 'join#_tickets'}
@@ -38,7 +40,7 @@
 
 / Speakers
 
-#speakers{style: "padding-top:7%;"}
+#speakers.vspace
   .container
     .row.centered
       %h3.ouishare_stencil
@@ -66,62 +68,33 @@
                 %button.btn.btn-embossed.btn-primary.hide#btn_showspeakers_up
                   = t('dynamic_translations.speakers.hide_all')
 
-    .row.centered{:style => "margin-bottom:100px;"}
+    .row.centered.btn-space
       .col-md-12
         .col-md-6.col-md-offset-3
           %a{:href => 'participants#_speakers'}
             %button.btn.btn-large.btn-primary
               = t('dynamic_translations.speakers.see_all')
 
-/ Best of 2015
-.blank_bg#bestof{style: "padding-top:7%;"}
+/ About the Fest
+.blank_bg
   .container
-    .row.centered
-      %h3.ouishare_stencil
-        = t('dynamic_translations.video.section_title')
-      %hr.pink
-    .row{style:"padding-top: 3%"}
-      .col-md-4
-        .col-md-12
-          %img{src:"http://placehold.it/16x9"}
-          %iframe{allowfullscreen: "", frameborder: "0", src: "//www.youtube.com/embed/Hr683Ldt6dQ"}
-        .col-md-12
+    .second-section{:style => "padding-top:0"}
+      .row.centered
+        %h5.col-md-6.col-md-offset-3.ouishare_stencil.white.blue_bg.text-center#_about
+          = t('dynamic_translations.about.subtitle')
+        .col-md-6.col-md-offset-3.col-sm-8.col-sm-offset-2
+          %p{:style => 'margin-top: 35px;'}
+            = t('dynamic_translations.about.p1')
           %br
           %p
-            %a{href: "http://youtu.be/Hr683Ldt6dQ", :target => "_blank"}
-              = t('dynamic_translations.video.snapshots')
-      .col-md-4
-        .col-md-12
-          %img{src:"http://placehold.it/16x9"}
-          %iframe{allowfullscreen: "", frameborder: "0", src: "//www.youtube.com/embed/Nx80lcI449Q"}
-        .col-md-12
+            = t('dynamic_translations.about.p2')
           %br
           %p
-            %a{href: "http://youtu.be/Nx80lcI449Q", :target => "_blank"}
-              Sharing Cities [Part 2] - Amsterdam & Nijmegen Sharing Cities
-            / %br
-            / Robin Chase
-      .col-md-4
-        .col-md-12
-          %img{src:"http://placehold.it/16x9"}
-          %iframe{allowfullscreen: "", frameborder: "0", src: "//www.youtube.com/embed/LWxyRG0B1Zk"}
-        .col-md-12
-          %br
-          %p
-            %a{href: "http://youtu.be/LWxyRG0B1Zk", :target => "_blank"}
-              Economic security for the digital age
-            %br
-            Nicolas Colin
-    .row.centered{:style => "margin-bottom:100px;"}
-      .col-md-12
-        .col-md-6.col-md-offset-3
-          %a{href: "https://www.youtube.com/playlist?list=PL8Bt3EbdmpKM4tYKyERKbp6VMYTjYZwCF", :target => "_blank", :style => "width: 170px;"}
-            %button.btn.btn-large.btn-primary
-              = t('dynamic_translations.video.see_all')
+            = t('dynamic_translations.about.p3')
 
 
 / OuiShare News 2016 dynamic
-.blank_bg#news
+.blank_bg.vspace#news
   .container
     .row.centered
       %h3.ouishare_stencil
@@ -130,7 +103,7 @@
     .row{style:"padding-top: 3%"}
 
       - @magazines.each do |magazine|
-        .col-md-4{style:"position: relative; min-height:370px;"}
+        .col-md-4{style:"position: relative; min-height:170px;"}
           - if !magazine.content.split('img')[1].nil?
             .col-md-12
               %a{href: "#{magazine.url}", target:"blank"}
@@ -154,13 +127,14 @@
                 %br
                   = "#{magazine.author}" unless magazine.author.blank?
             
-    .row.centered{:style => "margin-bottom:100px;"}
+    .row.centered.btn-space
       .col-md-12
         .col-md-6.col-md-offset-3
           %a{href: "http://magazine.ouishare.net/tag/ouisharefest/", :target => "_blank", :style => "width: 170px;"}
             %button.btn.btn-large.btn-primary
               = t('dynamic_translations.news.see_all')
 
+/ Topics
 .triangle_bg_topics.white_txt
   .container
     .third-section
@@ -223,22 +197,54 @@
               %p
                 = t('dynamic_translations.topics.cf_desc')
 
-.blank_bg
-  .container
-    .second-section
-      .row.centered
-        %h5.col-md-6.col-md-offset-3.ouishare_stencil.white.blue_bg.text-center#_about
-          = t('dynamic_translations.about.subtitle')
-        .col-md-6.col-md-offset-3.col-sm-8.col-sm-offset-2
-          %p{:style => 'margin-top: 35px;'}
-            = t('dynamic_translations.about.p1')
-          %br
-          %p
-            = t('dynamic_translations.about.p2')
-          %br
-          %p
-            = t('dynamic_translations.about.p3')
 
+/ Best of 2015
+.blank_bg#bestof
+  .container
+    .row.centered
+      %h3.ouishare_stencil
+        = t('dynamic_translations.video.section_title')
+      %hr.pink
+    .row{style:"padding-top: 3%"}
+      .col-md-4
+        .col-md-12
+          %img{src:"http://placehold.it/16x9"}
+          %iframe{allowfullscreen: "", frameborder: "0", src: "//www.youtube.com/embed/Hr683Ldt6dQ"}
+        .col-md-12
+          %br
+          %p
+            %a{href: "http://youtu.be/Hr683Ldt6dQ", :target => "_blank"}
+              = t('dynamic_translations.video.snapshots')
+      .col-md-4
+        .col-md-12
+          %img{src:"http://placehold.it/16x9"}
+          %iframe{allowfullscreen: "", frameborder: "0", src: "//www.youtube.com/embed/Nx80lcI449Q"}
+        .col-md-12
+          %br
+          %p
+            %a{href: "http://youtu.be/Nx80lcI449Q", :target => "_blank"}
+              Sharing Cities [Part 2] - Amsterdam & Nijmegen Sharing Cities
+            / %br
+            / Robin Chase
+      .col-md-4
+        .col-md-12
+          %img{src:"http://placehold.it/16x9"}
+          %iframe{allowfullscreen: "", frameborder: "0", src: "//www.youtube.com/embed/LWxyRG0B1Zk"}
+        .col-md-12
+          %br
+          %p
+            %a{href: "http://youtu.be/LWxyRG0B1Zk", :target => "_blank"}
+              Economic security for the digital age
+            %br
+            Nicolas Colin
+    .row.centered.btn-space
+      .col-md-12
+        .col-md-6.col-md-offset-3
+          %a{href: "https://www.youtube.com/playlist?list=PL8Bt3EbdmpKM4tYKyERKbp6VMYTjYZwCF", :target => "_blank", :style => "width: 170px;"}
+            %button.btn.btn-large.btn-primary
+              = t('dynamic_translations.video.see_all')
+
+/ Buy tickets
 .tickets.triangle_bg_tickets.white_txt.vspace
   .container.tickets-section
     .row.centered{:style => "padding-top:0; padding-bottom:0"}

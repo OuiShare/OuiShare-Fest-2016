@@ -51,6 +51,14 @@ h3, h4, h5, h6 {
 
 }
 
+ul.criteria {
+  padding: 2em 0;
+  li {
+    margin-right: 0.5em;
+    cursor: text;
+    opacity: 0.72;
+  }
+}
 
 // Typeform styles
 iframe#typeform{
