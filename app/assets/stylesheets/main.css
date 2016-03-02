@@ -959,6 +959,15 @@ p.pink, p.pink a {
 .coral {
   color: #f56c6c;
 }
+.purple {
+  color: #990229 !important;
+}
+.violet {
+  color: #9B15EA !important;
+}
+.fandango {
+  color: rgb(154, 12, 141) !important;
+}
 .white_txt {
   p, h3, h4, h5, h6, a, a:hover {
     color: white;
