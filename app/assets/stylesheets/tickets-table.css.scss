@@ -77,7 +77,7 @@
       text-align: left;
     }
   }
-  .col-sm-6:first-child {
+  .row > .col-sm-6:first-of-kind {
     border-right: 1px solid white;
   }
   .row.start {
