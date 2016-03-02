@@ -35,28 +35,116 @@
 
 .triangle_bg_3.white_txt.vspace
   .container
-    .main-section
-      .row.centered
-        .col-md-10.col-md-offset-1
-          %h3.ouishare_stencil
-            = t('dynamic_translations.main_schedule.title')
-          %hr.pink
-          %br
-          %br
-        .col-md-8.col-md-offset-2
-          %p
-            = t('dynamic_translations.main_schedule.second_part')
-        .col-md-6.col-md-offset-3.btn-space
-          %a{href: "/join#_getinvolved"}
-            %button.btn.btn-large.btn-primary
-              = t('dynamic_translations.get_involved.title')
+    .row.centered
+      .col-md-10.col-md-offset-1
+        %h3.ouishare_stencil
+          = t('dynamic_translations.main_schedule.title')
+        %hr.pink
+        %br
+        %br
+      .col-md-8.col-md-offset-2
+        %p
+          = t('dynamic_translations.main_schedule.second_part')
+      .col-md-6.col-md-offset-3.btn-space
+        %a{href: "/join#_getinvolved"}
+          %button.btn.btn-large.btn-primary
+            = t('dynamic_translations.get_involved.title')
+    .row.centered
+      .col-md-10.col-md-offset-1
+        %h3.ouishare_stencil
+          = t('dynamic_translations.main_schedule.program_structure')
+        %hr.pink
+        %br
+        %br
+      .col-md-8.col-md-offset-2
+        %p
+          = t('dynamic_translations.main_schedule.program_structure_text')
+          This year the OuiShare Fest will focus on 6 main macro-topics, exploring two macro-topics per day. The first day will focus on the systemic level, the second on the organisational level and the third on the individual level, exploring these levels and each macro-topic through the lens of a particular question. To foster connection and avoid siloed thinking, all sessions will explore intersections between two or more topics. To make the event as open and relevant as possible to the wide range of participants, this year sessions will be labelled clearly according to the level of expertise required to best enjoy each session.
+        .tickets-table
+          .row
+            .col-md-12.title-inverse
+              %h4.blue
+                DAY 1
+                %br
+                18/05. 8.30 - 19.00
+              %h5.blue
+                Question of the Day
+            .col-sm-6
+              %h5
+                Decentralization and blockchain
+              %p
+                More specific question of the track
+            .col-sm-6
+              %h5
+                Decentralization and blockchain
+              %p
+                More specific question of the track
+          .row
+            .col-md-12.title-inverse
+              %h4.blue
+                DAY 2
+                %br
+                19/05. 8.30 - 19.00
+              %h5.blue
+                Question of the Day
+            .col-sm-6
+              %h5
+                Decentralization and blockchain
+              %p
+                More specific question of the track
+            .col-sm-6
+              %h5
+                Decentralization and blockchain
+              %p
+                More specific question of the track
+          .row
+            .col-md-12.title-inverse
+              %h4.blue
+                DAY 3
+                %br
+                20/05. 13.00 - 21.00
+              %h5.blue
+                Question of the Day
+            .col-sm-6
+              %h5
+                Decentralization and blockchain
+              %p
+                More specific question of the track
+            .col-sm-6
+              %h5
+                Decentralization and blockchain
+              %p
+                More specific question of the track
+            .col-md-12
+              %h4.blue
+                OuiShare Love Party
+          .row
+            .col-md-12.title-inverse
+              %h4.blue
+                Public day
+                %br
+                20/05. 13.00 - 21.00
+              %h5.blue
+                Question of the Day
+            .col-sm-6
+              %h5
+                Decentralization and blockchain
+              %p
+                More specific question of the track
+            .col-sm-6
+              %h5
+                Decentralization and blockchain
+              %p
+                More specific question of the track
 
-      .row.centered#_schedule
-        %br
-        %br
-        %img{:src => '/assets/2016-schedule-en.png', :alt => 'Main schedule', :style => "max-width: 100%"}
-        / %a#sched-embed{:href => "http://ouisharefestparis2016.sched.org/grid/"}
-        / %script{:type => "text/javascript", :src => "http://ouisharefestparis2016.sched.org/js/embed.js"}
+
+
+    .row.centered#_schedule
+      %br
+      %br
+      %img{:src => '/assets/2016-schedule-en.png', :alt => 'Main schedule', :style => "max-width: 100%"}
+      / %a#sched-embed{:href => "http://ouisharefestparis2016.sched.org/grid/"}
+      / %script{:type => "text/javascript", :src => "http://ouisharefestparis2016.sched.org/js/embed.js"}
 
 .tickets.triangle_bg_4.white_txt.vspace
   .container.tickets-section
