@@ -33,20 +33,30 @@
 / = javascript_include_tag 'triangles'
 
 
-/ .program-part
-/   .container
-/     .main-section
-/       .row.centered
-/         .col-md-10.col-md-offset-1
-/           %h3.ouishare_stencil
-/             Sched speakers test view
-/           %hr.pink
-/           %br
-/           %br
+.triangle_bg_3.white_txt.vspace
+  .container
+    .main-section
+      .row.centered
+        .col-md-10.col-md-offset-1
+          %h3.ouishare_stencil
+            = t('dynamic_translations.main_schedule.title')
+          %hr.pink
+          %br
+          %br
+        .col-md-8.col-md-offset-2
+          %p
+            = t('dynamic_translations.main_schedule.second_part')
+        .col-md-6.col-md-offset-3.btn-space
+          %a{href: "/join#_getinvolved"}
+            %button.btn.btn-large.btn-primary
+              = t('dynamic_translations.get_involved.title')
 
-/       .row.centered
-/         %a#sched-embed{:href => "http://ouisharefestparis2016.sched.org/directory/speakers"}
-/         %script{:type => "text/javascript", :src => "http://ouisharefest2015.sched.org/js/embed.js"}
+      .row.centered#_schedule
+        %br
+        %br
+        %img{:src => '/assets/2016-schedule-en.png', :alt => 'Main schedule', :style => "max-width: 100%"}
+        / %a#sched-embed{:href => "http://ouisharefestparis2016.sched.org/grid/"}
+        / %script{:type => "text/javascript", :src => "http://ouisharefestparis2016.sched.org/js/embed.js"}
 
 .tickets.triangle_bg_4.white_txt.vspace
   .container.tickets-section
