@@ -65,7 +65,7 @@
 .tickets-table.program-structure {
   margin-top: 3em;
   h6 {
-    font-variant: normal;
+    text-transform: none;
   }
   .col-md-12 {
     h4, h5, h6 {
@@ -76,6 +76,9 @@
     h5, h6 {
       text-align: left;
     }
+  }
+  .col-sm-6 :first-child {
+    border-right: 1px solid white;
   }
   .row.start {
     margin-top: 4em;
