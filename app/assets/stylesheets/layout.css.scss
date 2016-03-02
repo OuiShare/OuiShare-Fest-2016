@@ -178,13 +178,6 @@ h3 {
   display: inline-block;
 }
 
-.white{
-  color: #ffffff;
-}
-
-.coral {
-  color: #f56c6c;
-}
 .caps {
   text-transform: uppercase;
 }
@@ -193,21 +186,7 @@ h3 {
     margin-top: 1.1em;
   }
 }
-.white_txt {
-  p, h3, h4, h5, h6, a, a:hover {
-    color: white;
-  }
-  a {
-    text-decoration:underline;
-  }
-  a:hover {
-    text-decoration: none;
-  }
-  hr.pink {
-    border-top: 4px solid #ffffff;
-  }
-  color: white !important;
-}
+
 .eventbrite {
   width: 100%;
   text-align: left;
