@@ -74,7 +74,9 @@
   }
   .col-sm-6 {
     h5, h6 {
-      text-align: left;
+      @media (min-width: 992px) {
+        text-align: left;
+      }
     }
   }
   .row > .col-sm-6:first-of-kind {
