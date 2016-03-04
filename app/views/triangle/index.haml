@@ -60,14 +60,14 @@
         %br
       .col-md-8.col-md-offset-2
         %p
-          / = t('dynamic_translations.program_structure.text_a')
-          OuiShare Fest will focus on 6 macro-topics, exploring two macro-topics per day. Starting from the systemic level on day 1, we’ll move onto the organisational level before finally examining the role of individuals, exploring these  through a series of key questions. 
+          = t('dynamic_translations.program_structure.text_a')
+          / OuiShare Fest will focus on 6 macro-topics, exploring two macro-topics per day. Starting from the systemic level on day 1, we’ll move onto the organisational level before finally examining the role of individuals, exploring these  through a series of key questions. 
         %p
-          / = t('dynamic_translations.program_structure.text_b')
-          To foster holistic rather than siloed thinking, all sessions will explore intersections between several topics. Questions around impact, sustainability and inner, individual transformation are fundamental to the entire discussion and will be addressed throughout the whole Fest. 
+          = t('dynamic_translations.program_structure.text_b')
+          / To foster holistic rather than siloed thinking, all sessions will explore intersections between several topics. Questions around impact, sustainability and inner, individual transformation are fundamental to the entire discussion and will be addressed throughout the whole Fest. 
         %p
-          / = t('dynamic_translations.program_structure.text_c')
-          Sessions will be labelled clearly according to the level of expertise required to make the most out of them, allowing you to find the content best designed for you.
+          = t('dynamic_translations.program_structure.text_c')
+          / Sessions will be labelled clearly according to the level of expertise required to make the most out of them, allowing you to find the content best designed for you.
     .row.centered
       .col-md-10.col-md-offset-1.col-sm-12
         .tickets-table.program-structure
@@ -81,13 +81,15 @@
               %h6
                 = t('dynamic_translations.program_structure.day_1_question')
             .col-sm-6
-              %h5.vert-borders
-                = t('dynamic_translations.program_structure.states_title')
+              %h5
+                %span.vert-borders
+                  = t('dynamic_translations.program_structure.states_title')
               %p
                 = t('dynamic_translations.program_structure.states_question')
             .col-sm-6
-              %h5.vert-borders
-                = t('dynamic_translations.program_structure.blockchain_title')
+              %h5
+                %span.vert-borders
+                  = t('dynamic_translations.program_structure.blockchain_title')
               %p
                 = t('dynamic_translations.program_structure.blockchain_question')
           .row.start
@@ -121,13 +123,15 @@
               %h6
                 = t('dynamic_translations.program_structure.day_3_question')
             .col-sm-6
-              %h5.vert-borders
-                = t('dynamic_translations.program_structure.work_title')
+              %h5
+                %span.vert-borders
+                  = t('dynamic_translations.program_structure.work_title')
               %p
                 = t('dynamic_translations.program_structure.work_question')
             .col-sm-6
-              %h5.vert-borders
-                = t('dynamic_translations.program_structure.education_title')
+              %h5
+                %span.vert-borders
+                  = t('dynamic_translations.program_structure.education_title')
               %p
                 = t('dynamic_translations.program_structure.education_question')
             .col-md-12
