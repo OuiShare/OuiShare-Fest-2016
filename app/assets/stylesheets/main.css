@@ -975,19 +975,19 @@ p.pink, p.pink a {
 }
 .purple {
   color: #990229 !important;
-  h3, h4, h5 {
+  h3, h4, h5, h6 {
     color: #990229 !important;
   }
 }
 .violet {
   color: #9B15EA !important;
-  h3, h4, h5 {
+  h3, h4, h5, h6 {
     color: #9B15EA !important;
   }
 }
 .fandango {
   color: rgb(154, 12, 141) !important;
-  h3, h4, h5 {
+  h3, h4, h5, h6 {
     color: rgb(154, 12, 141) !important;
   }
 }
