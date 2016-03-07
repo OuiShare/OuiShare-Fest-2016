@@ -179,7 +179,9 @@
 }
 
 .individuals-list-display{
-  min-height: 335px;
+  /*min-height: 335px;*/
+  padding-bottom: 3em;
+  vertical-align: top;
 }
 
 /* optimal float settings for individuals lists */
