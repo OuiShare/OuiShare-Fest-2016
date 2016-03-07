@@ -56,6 +56,9 @@ class HomeController < ApplicationController
     if IndividualType.find_by_title('Supporters')      
       @supporters = IndividualType.find_by_title('Supporters').get_members
     end
+    if IndividualType.find_by_title('Patronage')      
+      @patronage = IndividualType.find_by_title('Patronage').get_members
+    end
 
     eventbrite_instance = connect_to_eventbrite()
     begin
@@ -141,6 +144,10 @@ class HomeController < ApplicationController
     if IndividualType.find_by_title('Supporters')      
       @supporters = IndividualType.find_by_title('Supporters').get_members
     end
+    if IndividualType.find_by_title('Patronage')      
+      @patronage = IndividualType.find_by_title('Patronage').get_members
+    end
+
     
     end
 
