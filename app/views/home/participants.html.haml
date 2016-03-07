@@ -69,6 +69,16 @@
       %br
       %br
 
+    - if !@patronage.blank?
+      .row.centered
+        %br
+        %h6
+          = t('dynamic_translations.partners.patronage_mairie')
+        .partners
+      = render "/individuals/partials/partners_display", :partners => @patronage, :important_partners_display => false
+      %br
+      %br
+
     - if !@media_partners.blank?
       .row.centered
         %br

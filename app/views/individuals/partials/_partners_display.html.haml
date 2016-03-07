@@ -31,7 +31,7 @@
               - placement = 'left'
             - else
               - placement = 'right'
-            .col-lg-4
+            .col-lg-4.main_partners
               - if !special.blank?
                 %a{:href => partner.url, :target => "_blank", :class => "special_tooltip", :data => {'original-title' => "", 'placement' => placement}}
                   %img.img-responsive.display-inline{:alt => partner.first_name, :src => partner.attachment.url(:medium)}

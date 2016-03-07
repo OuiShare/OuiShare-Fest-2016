@@ -179,11 +179,13 @@
 }
 
 .individuals-list-display{
-  min-height: 335px;
+  /*min-height: 335px;*/
+  padding-bottom: 3em;
+  vertical-align: top;
 }
 
 /* optimal float settings for individuals lists */
-.individuals-list-display, .home_partners {
+.individuals-list-display, .home_partners, .main_partners {
   display: inline-block;
   margin-left: -0.125em;
   margin-right: -0.125em;
@@ -256,7 +258,7 @@
 }
 
 .third-section > div > div > div > div > h5 {
-  color: #001e60;
+  /*color: #001e60;*/
   font-size: 16px;
 }
 

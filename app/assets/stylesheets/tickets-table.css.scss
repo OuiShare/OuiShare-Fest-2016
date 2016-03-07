@@ -62,3 +62,35 @@
   }
 }
 
+.tickets-table.program-structure {
+  margin-top: 3em;
+  h6 {
+    text-transform: none;
+  }
+  .col-md-12 {
+    h4, h5, h6 {
+      text-align: center;
+    }
+  }
+  .col-sm-6 {
+    h5, h6 {
+      @media (min-width: 992px) {
+        text-align: left;
+      }
+    }
+  }
+  .row > .col-sm-6:first-of-kind {
+    border-right: 1px solid white;
+  }
+  .row.start {
+    /*margin-top: 4em;*/
+  }
+  .title-inverse {
+    margin: 2em 0;
+  }
+  .col-sm-6.vert-borders {
+    @media (max-width: 992px) {
+      margin: 1.5em 0;
+    }
+  }
+}
