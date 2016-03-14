@@ -44,9 +44,10 @@
   .container
     .second-section
       .row.centered
-        %h5.col-md-6.col-md-offset-3.ouishare_stencil.white.blue_bg.text-center#_about
-          = t('dynamic_translations.about.subtitle')
-        .col-md-6.col-md-offset-3.col-sm-8.col-sm-offset-2
+        %h5.col-md-6.col-md-offset-3.ouishare_stencil.white.text-center#_about
+          %span.blue_bg
+            = t('dynamic_translations.about.subtitle')
+        .col-md-6.col-md-offset-3.col-sm-8.col-sm-offset-2.h7
           %p{:style => 'margin-top: 35px;'}
             = t('dynamic_translations.about.p1')
           %br
