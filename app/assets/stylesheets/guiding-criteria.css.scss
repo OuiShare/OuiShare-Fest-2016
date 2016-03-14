@@ -7,8 +7,8 @@ table.criteria {
   font-family:'naiv thin';
 
   img, p {
-    padding: 5% 0;
-    margin: auto 10px;
+    margin: 5% 0;
+    line-height: 1.2;
   }
 
   img {
@@ -17,19 +17,22 @@ table.criteria {
   }
   p {
     font-size: larger;
+    padding: 4% 0;
   }
 
   td {
-    padding: 0.25em;
+    /*padding: 0.25em;*/
     border: 3px dashed white;
   }
 }
 
 img.left {
   float: left;
+  margin-right: 0.7em !important;
 }
 img.right {
   float: right;
+  margin-left: 0.7em !important;
 }
 p.left {
 text-align: left;
