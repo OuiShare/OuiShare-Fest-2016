@@ -7,12 +7,15 @@ table.criteria {
   font-family:'naiv thin';
 
   img {
-    max-width: 80px;
-    padding: 0.6em 0.25em;
+    height: 50%;
+    max-width: 50px;
+    margin: 0.6em 1.25em;
+    vertical-align: middle;
   }
   p {
     vertical-align: middle;
     font-size: larger;
+    margin:auto;
   }
 
   td {
