@@ -1,0 +1,19 @@
+// Guiding criteria table styles
+
+table.criteria {
+	width: 100%;
+	border-collapse: collapse;
+	img {
+		max-width: 80px;
+		padding: 0.6em 0.25em;
+	}
+	img.left {
+		float: left;
+	}
+	img.right {
+		float: right;
+	}
+	td {
+		/*padding: 0.5em;*/
+	}
+}
