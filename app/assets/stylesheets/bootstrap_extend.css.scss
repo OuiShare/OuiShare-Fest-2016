@@ -22,13 +22,13 @@
 
 /**** Header display corrective (because languages change his width) ******/
 
-@media (min-width: 1070px) and (max-width: 1999px){
+@media (min-width: 1201px) and (max-width: 1999px){
   .special-container-navbar{
     width: 1200px;
   }
 }
 
-@media (max-width: 1069px){
+@media (max-width: 1200px){
   .navbar-header{
     float: none;
   }
