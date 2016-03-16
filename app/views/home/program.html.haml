@@ -114,8 +114,6 @@
             %button.btn.btn-large.btn-primary
               = t('dynamic_translations.speakers.see_all')
 
-.blank_bg
-  .container
     .row.centered
       .col-md-8.col-md-offset-2
         %br
@@ -135,12 +133,7 @@
       /   / %a#sched-embed{:href => "http://ouisharefestparis2016.sched.org/grid/"}
       /   / %script{:type => "text/javascript", :src => "http://ouisharefestparis2016.sched.org/js/embed.js"}
 
-.triangle_bg_4.white_txt.vspace
-  .container
-    .row.centered
-      .col-md-10.col-md-offset-1
-        %p
-          %img.img-responsive{:src => '/assets/guiding-criteria.png', :alt => 'Guiding principles'}
+
 
 .blank_bg
   .container
@@ -172,6 +165,13 @@
           %a{href: "http://magazine.ouishare.net/2015/12/after-the-gold-rush", target: "_blank"}
             = t('dynamic_translations.goldrush.p6')
 
+/Program guidelines
+.triangle_bg_4.white_txt.vspace
+  .container
+    .row.centered
+      .col-md-10.col-md-offset-1
+        %p
+          %img.img-responsive{:src => '/assets/guiding-criteria.png', :alt => 'Guiding principles'}
 
 / Curators
 #_curators.vspace
