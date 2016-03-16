@@ -44,9 +44,18 @@
   .container
     .second-section
       .row.centered
-        %h5.col-md-6.col-md-offset-3.ouishare_stencil.white.text-center#_about
-          %span.blue_bg
-            = t('dynamic_translations.about.subtitle')
+        / %h5.col-md-6.col-md-offset-3.ouishare_stencil.white.text-center#_about
+        /   %span.blue_bg
+        /     = t('dynamic_translations.about.subtitle')
+        .carousel.slide.col-xs-12.col-md-offset-1.col-lg-offset-2.col-md-10.col-lg-8
+          .carousel-inner
+            .item.active
+              .press-content
+                .press-text
+                  %h3
+                    = t('dynamic_translations.about.subtitle')
+              .label-press
+                Arun Sundararajan, Professor at NYU’s Stern School of Business        
         .col-md-6.col-md-offset-3.col-sm-8.col-sm-offset-2
           %p.h7{:style => 'margin-top: 35px;'}
             = t('dynamic_translations.about.t1')
