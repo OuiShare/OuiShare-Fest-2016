@@ -80,18 +80,31 @@
   .container
     .second-section{:style => "padding-top:0"}
       .row.centered
-        %h5.col-md-6.col-md-offset-3.ouishare_stencil.white.text-center#_about
-          %span.blue_bg
-            = t('dynamic_translations.about.subtitle')
+        .carousel.slide.col-xs-12.col-md-offset-1.col-lg-offset-2.col-md-10.col-lg-8
+          .carousel-inner
+            .item.active
+              .press-content
+                .press-text
+                  %h3
+                    = t('dynamic_translations.about.subtitle')
+              .label-press
+                Arun Sundararajan, Professor at NYU’s Stern School of Business        
+          %img.quote-left-carousel{:src => '/assets/quote_left.png', :alt => 'quote left'}
+          %img.quote-right-carousel{:src => '/assets/quote_left.png', :alt => 'quote right'}
         .col-md-6.col-md-offset-3.col-sm-8.col-sm-offset-2
           %p.h7{:style => 'margin-top: 35px;'}
-            = t('dynamic_translations.about.p1')
+            = t('dynamic_translations.about.t1')
           %br
           %p.h7
-            = t('dynamic_translations.about.p2')
+            = t('dynamic_translations.about.t2')
           %br
           %p.h7
-            = t('dynamic_translations.about.p3')
+            = t('dynamic_translations.about.t3')
+          %br
+          %p.h7
+            = t('dynamic_translations.about.t4')
+            = t('dynamic_translations.about.t5')
+            = t('dynamic_translations.about.t6')
 
 
 / OuiShare News 2016 dynamic
