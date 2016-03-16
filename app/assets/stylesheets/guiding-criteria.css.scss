@@ -1,0 +1,45 @@
+// Guiding criteria table styles
+
+table.criteria {
+  width: 100%;
+  border-collapse: collapse;
+  border-style: hidden;
+  font-family:'naiv thin';
+
+  img, p {
+    margin: 5% 0;
+    line-height: 1.2;
+  }
+
+  img {
+    max-width: 50px;
+    /*margin: 0.6em 1.25em;*/
+  }
+  p {
+    font-size: larger;
+    padding: 4% 0;
+  }
+
+  td {
+    /*padding: 0.25em;*/
+    border: 3px dashed white;
+  }
+}
+
+img.left {
+  float: left;
+  margin-right: 0.7em !important;
+}
+img.right {
+  float: right;
+  margin-left: 0.7em !important;
+}
+p.left {
+text-align: left;
+}
+p.right {
+text-align: right;
+}
+p.justify {
+text-align: justify;
+}

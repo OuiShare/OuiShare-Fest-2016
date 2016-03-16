@@ -32,6 +32,97 @@
 
 / = javascript_include_tag 'triangles'
 
+.triangle_bg_3.white_txt.vspace
+  .container
+    .row.centered
+      .col-md-10.col-md-offset-1
+        %h3.ouishare_stencil
+          Guiding principles
+        %hr.pink
+        %br
+        %br
+      .col-md-8.col-md-offset-2
+        %h6
+          %span.bluebg
+            These are 14 key principles that are guiding us in the OuiShare Fest program and experience design.
+        %br
+        %br
+        %table.criteria
+          %tr
+            %td{:colspan => 4}
+              %img.left{:src => '/assets/criteria/ask.png', :alt => 'Ask'}
+              %p.left
+                Ask the right questions
+            %td{:colspan => 7}
+              %img.left{:src => '/assets/criteria/enable.png', :alt => 'Enable'}
+              %p.left
+                Enable interaction, participation and collaboration
+          %tr
+            %td{:colspan => 5}
+              %img.right{:src => '/assets/criteria/design.png', :alt => 'Design'}
+              %p.right
+                Design constructive confrontation: challenge ideas, expose multiple perspectives.
+            %td{:colspan => 6}
+              %img.left{:src => '/assets/criteria/promote.png', :alt => 'Promote'}
+              %p.left
+                Promote extraordinary ideas and meaningful projects, not the most popular ones.
+          %tr
+            %td{:colspan => 6}
+              %img.left{:src => '/assets/criteria/distill.png', :alt => 'Distill'}
+              %p.left
+                Distill meaning from complexity.
+            %td{:colspan => 5}
+              %img.right{:src => '/assets/criteria/communicate.png', :alt => 'Communicate'}
+              %p.right
+                Communicate clearly and with purpose. 
+          %tr
+            %td{:colspan => 4}
+              %img.right{:src => '/assets/criteria/stay.png', :alt => 'Stay'}
+              %p.left
+                Stay grounded. Be real. Don’t ignore the pressing issues of our times.
+            %td{:colspan => 4}
+              %img.right{:src => '/assets/criteria/highlight.png', :alt => 'Highlight'}
+              %p.right
+                Highlight new content and fresh approaches.
+            %td{:colspan => 3}
+              %img.left{:src => '/assets/criteria/make.png', :alt => 'Make'}
+              %p.left
+                Make it a learning experience.
+          %tr
+            %td{:rowspan => 2, :colspan => 5}
+              %img.left{:src => '/assets/criteria/welcome.png', :alt => 'Welcome'}
+              %p.left
+                Welcome people as their full selves: mind, body and soul.
+            %td{:colspan => 6}
+              %img.right{:src => '/assets/criteria/consider.png', :alt => 'Consider'}
+              %p.left
+                Consider all levels: individuals, teams, organisations, systems.
+          %tr
+            %td{:rowspan => 2, :colspan => 6}
+              %img.left{:src => '/assets/criteria/ensure.png', :alt => 'Ensure'}
+              %p.justify
+                Ensure OuiShare Fest is only a pit-stop on a continuous journey we are on together. 
+          %tr
+            %td{:colspan => 5}
+              %img.right{:src => '/assets/criteria/strive.png', :alt => 'Strive'}
+              %p.left
+                Strive for diversity of origin and gender.
+            / %td
+            /   %img.right{:src => '/assets/criteria/ensure.png', :alt => 'Ensure'}
+            /   %p.right
+            /     Ensure OuiShare Fest is only a pit-stop on a continuous journey we are on together. 
+          %tr
+            %td{:colspan => 11}
+              %img.left{:src => '/assets/criteria/have.png', :alt => 'Have'}
+              %p.left
+                Have fun, smile and be open. Don’t take oneself too seriously.
+
+.triangle_bg_4.white_txt.vspace
+  .container
+    .row.centered
+      .col-md-10.col-md-offset-1
+        %p
+          %img.img-responsive{:src => '/assets/guiding-criteria.png', :alt => 'Guiding principles'}
 
 / .triangle_bg_3.white_txt.vspace
 /   .container
@@ -60,14 +151,11 @@
 /         %br
 /       .col-md-10.col-md-offset-1
 /         %p
-/           = t('dynamic_translations.program_structure.text_a')
-/           / OuiShare Fest will focus on 6 macro-topics, exploring two macro-topics per day. Starting from the systemic level on day 1, we’ll move onto the organisational level before finally examining the role of individuals, exploring these  through a series of key questions. 
+/           = t('dynamic_translations.program_structure.text_a') 
 /         %p
 /           = t('dynamic_translations.program_structure.text_b')
-/           / To foster holistic rather than siloed thinking, all sessions will explore intersections between several topics. Questions around impact, sustainability and inner, individual transformation are fundamental to the entire discussion and will be addressed throughout the whole Fest. 
 /         %p
 /           = t('dynamic_translations.program_structure.text_c')
-/           / Sessions will be labelled clearly according to the level of expertise required to make the most out of them, allowing you to find the content best designed for you.
 /     .row.centered
 /       .col-md-10.col-md-offset-1.col-sm-12
 /         .tickets-table.program-structure
@@ -156,113 +244,5 @@
 /     /   %img{:src => '/assets/2016-schedule-en.png', :alt => 'Main schedule', :style => "max-width: 100%"}
 /     /   / %a#sched-embed{:href => "http://ouisharefestparis2016.sched.org/grid/"}
 /     /   / %script{:type => "text/javascript", :src => "http://ouisharefestparis2016.sched.org/js/embed.js"}
-
-/ .tickets.triangle_bg_4.white_txt.vspace
-/   .container.tickets-section
-/     .row.centered{:style => "padding-top:0; padding-bottom:0"}
-/       .col-md-10.col-md-offset-1.col-sm-12
-/         %h3.ouishare_stencil.centered
-/           = t('dynamic_translations.tickets.title')
-/         %hr.pink
-/         %br
-/         %br
-/         %p
-/           = t('dynamic_translations.tickets.description1')
-/           %a{href: "/join#_getinvolved"}
-/             = t('dynamic_translations.tickets.get_involved')
-/         .tickets-table
-/           .row
-/             .col-md-2.col-md-offset-8.col-xs-6.col-xs-offset-0.title-blue
-/               = t('dynamic_translations.tickets_table.pioneers')
-/             .col-md-2.col-xs-6.title-blue
-/               = t('dynamic_translations.tickets_table.explorers')
-/           .tickets-border
-/             .row
-/               .col-md-12.title-inverse
-/                 = t('dynamic_translations.tickets_table.core_features')
-/             .row
-/               .col-md-8.col-sm-12
-/                 = t('dynamic_translations.tickets_table.core_1_access')
-/               .col-md-2.col-xs-6
-/                 = image_tag "/assets/tickets-tick-white.svg"
-/               .col-md-2.col-xs-6
-/                 = image_tag "/assets/tickets-tick-white.svg"
-/             .row
-/               .col-md-8
-/                 = t('dynamic_translations.tickets_table.core_2_food')
-/               .col-md-2.col-xs-6
-/                 = image_tag "/assets/tickets-tick-white.svg"
-/               .col-md-2.col-xs-6
-/                 = image_tag "/assets/tickets-tick-white.svg"
-/             .row
-/               .col-md-8
-/                 = t('dynamic_translations.tickets_table.core_3_partner_events')
-/               .col-md-2.col-xs-6
-/                 = image_tag "/assets/tickets-tick-white.svg"
-/               .col-md-2.col-xs-6
-/                 = image_tag "/assets/tickets-tick-white.svg"
-/             .row
-/               .col-md-8
-/                 = t('dynamic_translations.tickets_table.core_4_access_party')
-/               .col-md-2.col-xs-6
-/                 = image_tag "/assets/tickets-tick-white.svg"
-/               .col-md-2.col-xs-6
-/                 = image_tag "/assets/tickets-tick-white.svg"
-/             .row
-/               .col-md-8
-/                 = t('dynamic_translations.tickets_table.core_5_participants_list')
-/               .col-md-2.col-xs-6
-/                 = image_tag "/assets/tickets-tick-white.svg"
-/               .col-md-2.col-xs-6
-/                 = image_tag "/assets/tickets-tick-white.svg"
-/             .row
-/               .col-md-12.title-inverse
-/                 = t('dynamic_translations.tickets_table.extended_features')
-/               .col-md-8
-/                 = t('dynamic_translations.tickets_table.ext_1_reception')
-/               .col-md-2.col-xs-6
-/                 &nbsp;
-/               .col-md-2.col-xs-6
-/                 = image_tag "/assets/tickets-tick-white.svg"
-/             .row.row-eq-height
-/               .col-md-8
-/                 = t('dynamic_translations.tickets_table.ext_2') 
-/                 %ul
-/                   %li
-/                     = t('dynamic_translations.tickets_table.ext_2a')
-/                   %li
-/                     = t('dynamic_translations.tickets_table.ext_2b')
-/                   %li
-/                     = t('dynamic_translations.tickets_table.ext_2c')
-/               .col-md-2.col-xs-6
-/                 &nbsp;
-/               .col-md-2.col-xs-6
-/                 = image_tag "/assets/tickets-tick-white.svg"
-/             .row.row-eq-height
-/               .col-md-8
-/                 = t('dynamic_translations.tickets_table.ext_3_webinar')
-/               .col-md-2.col-xs-6
-/                 &nbsp;
-/               .col-md-2.col-xs-6
-/                 = image_tag "/assets/tickets-tick-white.svg"
-/             .row
-/               .col-md-8
-/                 = t('dynamic_translations.tickets_table.ext_4_book') 
-/                 %em
-/                   = t('dynamic_translations.tickets_table.ext_4_book_title')
-/               .col-md-2.col-xs-6
-/                 &nbsp;
-/               .col-md-2.col-xs-6
-/                 = image_tag "/assets/tickets-tick-white.svg"
-/           %p.left
-/             = t('dynamic_translations.tickets_table.questions') 
-/             %b
-/               %a{:href => 'mailto:partners@ouisharefest.com'}
-/                 partners@ouisharefest.com
-/         / %br
-/         / %p.text-center
-/         /   = image_tag("2016-tickets-#{I18n.locale}-05.png", width: "100%", alt: "Ticket options")
-/         / %br
-/         / %br
 
 
