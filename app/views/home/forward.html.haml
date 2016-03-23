@@ -16,9 +16,9 @@
         .col-md-8.col-md-offset-2
           %br
           %p.centered.join_bouton
-            %a{:href => '#_apply'}
+            %a{:href => '#_vote'}
               %button.btn.btn-padding.btn-fandango
-                = t('dynamic_translations.ff.btn_apply')
+                = t('dynamic_translations.ff_vote.title')
 
 .blank_bg#_tagline
   .container
@@ -261,9 +261,10 @@
       %hr.pink
     .row.centered
       .col-md-8.col-md-offset-2
-        %h5.tagline
-          / = t('dynamic_translations.ff_vote.open_soon')
-          = t('dynamic_translations.ff_vote.vote_now')
+        %h5
+          %span.tagline
+            / = t('dynamic_translations.ff_vote.open_soon')
+            = t('dynamic_translations.ff_vote.vote_now')
         %br
     .row.centered
       .col-md-10.col-md-offset-1
