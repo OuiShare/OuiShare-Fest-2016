@@ -16,13 +16,8 @@
           %p.main-section-paragraphes.white
             %span.vert-borders
               = t('dynamic_translations.main.date')
-
-      / = form_tag home_newsletter_collect_email_path, :class => "form-inline" do
-      /   .row.text-center
-      /     .col-sm-offset-3.col-sm-4.col-xs-offset-2.col-xs-5
-      /       = text_field_tag :email_address,"", :class => "form-control flat", :placeholder => t('dynamic_translations.main.placeholder_stay_posted'), :style => "width: 110%;"
-      /     .col-xs-2.submit-email-button
-      /       = submit_tag t('dynamic_translations.main.stay_posted'), :class => "btn btn-primary"
+          / %p.main-section-paragraphes.white
+          /   = t('dynamic_translations.main.theme')
 
       .row
         .col-md-8.col-md-offset-2
@@ -36,6 +31,34 @@
 #controls.controls
 = javascript_include_tag 'triangles'
 
+/ About the Fest
+.blank_bg
+  .container
+    .second-section
+      .row.centered
+        .carousel.slide.col-xs-12.col-md-offset-1.col-lg-offset-2.col-md-10.col-lg-8
+          .carousel-inner
+            .item.active
+              .press-content{:style => 'height:3em;'}
+                .press-text
+                  %h3
+                    = t('dynamic_translations.about.subtitle')
+              .label-press
+                Arun Sundararajan, NYU      
+          %img.quote-left-carousel{:src => '/assets/quote_left.png', :alt => 'quote left'}
+          %img.quote-right-carousel{:src => '/assets/quote_left.png', :alt => 'quote right'}
+        .col-md-6.col-md-offset-3.col-sm-8.col-sm-offset-2
+          %p{:style => 'margin-top: 5em;'}
+            = t('dynamic_translations.about.landing_1')
+          %br
+          %p
+            = t('dynamic_translations.about.landing_2')
+          %br
+      .row.centered.btn-space
+        .col-md-6.col-md-offset-3
+          %a{:href => 'about#_about'}
+            %button.btn.btn-large.btn-primary
+              = t('dynamic_translations.readmore.title')
 
 
 / Speakers
@@ -75,36 +98,6 @@
             %button.btn.btn-large.btn-primary
               = t('dynamic_translations.speakers.see_all')
 
-/ About the Fest
-.blank_bg
-  .container
-    .second-section{:style => "padding-top:0"}
-      .row.centered
-        .carousel.slide.col-xs-12.col-md-offset-1.col-lg-offset-2.col-md-10.col-lg-8
-          .carousel-inner
-            .item.active
-              .press-content{:style => 'height:3em;'}
-                .press-text
-                  %h3
-                    = t('dynamic_translations.about.subtitle')
-              .label-press
-                Arun Sundararajan, Professor at NYU’s Stern School of Business        
-          %img.quote-left-carousel{:src => '/assets/quote_left.png', :alt => 'quote left'}
-          %img.quote-right-carousel{:src => '/assets/quote_left.png', :alt => 'quote right'}
-        .col-md-6.col-md-offset-3.col-sm-8.col-sm-offset-2
-          %p{:style => 'margin-top: 5em;'}
-            = t('dynamic_translations.about.t1')
-          %br
-          %p
-            = t('dynamic_translations.about.t2')
-          %br
-          %p
-            = t('dynamic_translations.about.t3')
-          %br
-          %p
-            = t('dynamic_translations.about.t4')
-            = t('dynamic_translations.about.t5')
-            = t('dynamic_translations.about.t6')
 
 
 / OuiShare News 2016 dynamic
@@ -278,13 +271,13 @@
                 The Fest is an event to not only inspire the new opportunities in the Collaborative Economy, but also to provide a venue to outline and debate the challenges.
           .label-press
             Jeremiah Owyang, Founder of Crowd Companies
-        .item
-          .press-content
-            .press-text
-              %h3
-                There's no other conference I've been to that has this 'TED meets Burning Man' feel.
-          .label-press
-            Arun Sundararajan, Professor at NYU’s Stern School of Business
+        / .item
+        /   .press-content
+        /     .press-text
+        /       %h3
+        /         There's no other conference I've been to that has this 'TED meets Burning Man' feel.
+        /   .label-press
+        /     Arun Sundararajan, Professor at NYU’s Stern School of Business
         .item
           .press-content
             .press-text
