@@ -262,10 +262,12 @@
     .row.centered
       .col-md-8.col-md-offset-2
         %h5.tagline
-          = t('dynamic_translations.ff_vote.open_soon')
-        / %h5.tagline
-        /   = t('dynamic_translations.ff_vote.vote_now')
+          / = t('dynamic_translations.ff_vote.open_soon')
+          = t('dynamic_translations.ff_vote.vote_now')
         %br
+    .row.centered
+      .col-md-8.col-md-offset-2
+        %iframe{:frameborder => "0", :height => "650", :width => "100%", :src => "http://www.tricider.com/embed/?show=2n3c1oHiVbB", :scrolling => "no", :marginheight => "0", :marginwidth => "0"}
         %br
         %br
 
