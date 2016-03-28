@@ -175,6 +175,11 @@ class HomeController < ApplicationController
     @magazines = Magazine.order("published_at desc").all
   end
 
+  def news
+    Magazine.fetch_last_posts
+    @magazines = Magazine.order("published_at desc").limit(3)
+  end
+
   def faq
   end
 
