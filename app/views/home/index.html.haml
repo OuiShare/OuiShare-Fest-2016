@@ -142,47 +142,6 @@
 
 
 
-/ / OuiShare News 2016 dynamic
-/ .blank_bg.vspace#news
-/   .container
-/     .row.centered
-/       %h3.ouishare_stencil
-/         = t('dynamic_translations.ouishare-news.title')
-/       %hr.pink
-/     .row{style:"padding-top: 3%"}
-
-/       - @magazines.each do |magazine|
-/         .col-md-4{style:"position: relative; min-height:170px;"}
-/           - if !magazine.content.split('img')[1].nil?
-/             .col-md-12
-/               %a{href: "#{magazine.url}", target:"blank"}
-/                 %img{:src => "#{magazine.content.split(' ')[3].split('"')[1].gsub(/-150x150/, "")}", :u => "image"}
-/               .col-md-12
-/               %br
-/               %p
-/                 %a{href: "#{magazine.url}", target:"blank"}
-/                   = magazine.name 
-/                 %br
-/                   = "#{magazine.author}" unless magazine.author.blank?
-/           - else
-/             .col-md-12
-/               %a{href: "#{magazine.url}", target:"blank"}
-/                 = image_tag "/assets/landing_logo.png", :style => "height:150px;"
-/             .col-md-12
-/               %br
-/               %p
-/                 %a{href: "#{magazine.url}", target:"blank"}
-/                   = magazine.name
-/                 %br
-/                   = "#{magazine.author}" unless magazine.author.blank?
-            
-/     .row.centered.btn-space
-/       .col-md-12
-/         .col-md-6.col-md-offset-3
-/           %a{href: "http://magazine.ouishare.net/tag/ouisharefest/", :target => "_blank", :style => "width: 170px;"}
-/             %button.btn.btn-large.btn-primary
-/               = t('dynamic_translations.news.see_all')
-
 / / Topics
 / .triangle_bg_topics.white_txt
 /   .container
@@ -247,51 +206,6 @@
 /                 = t('dynamic_translations.topics.cf_desc')
 
 
-/ / Best of 2015 videos
-/ .blank_bg#bestof
-/   .container
-/     .row.centered
-/       %h3.ouishare_stencil
-/         = t('dynamic_translations.video.section_title')
-/       %hr.pink
-/     .row{style:"padding-top: 3%"}
-/       .col-md-4
-/         .col-md-12
-/           %img{src:"http://placehold.it/16x9"}
-/           %iframe{allowfullscreen: "", frameborder: "0", src: "//www.youtube.com/embed/Hr683Ldt6dQ"}
-/         .col-md-12
-/           %br
-/           %p
-/             %a{href: "http://youtu.be/Hr683Ldt6dQ", :target => "_blank"}
-/               = t('dynamic_translations.video.snapshots')
-/       .col-md-4
-/         .col-md-12
-/           %img{src:"http://placehold.it/16x9"}
-/           %iframe{allowfullscreen: "", frameborder: "0", src: "//www.youtube.com/embed/Nx80lcI449Q"}
-/         .col-md-12
-/           %br
-/           %p
-/             %a{href: "http://youtu.be/Nx80lcI449Q", :target => "_blank"}
-/               Sharing Cities [Part 2] - Amsterdam & Nijmegen Sharing Cities
-/             / %br
-/             / Robin Chase
-/       .col-md-4
-/         .col-md-12
-/           %img{src:"http://placehold.it/16x9"}
-/           %iframe{allowfullscreen: "", frameborder: "0", src: "//www.youtube.com/embed/LWxyRG0B1Zk"}
-/         .col-md-12
-/           %br
-/           %p
-/             %a{href: "http://youtu.be/LWxyRG0B1Zk", :target => "_blank"}
-/               Economic security for the digital age
-/             %br
-/             Nicolas Colin
-/     .row.centered.btn-space
-/       .col-md-12
-/         .col-md-6.col-md-offset-3
-/           %a{href: "https://www.youtube.com/playlist?list=PL8Bt3EbdmpKM4tYKyERKbp6VMYTjYZwCF", :target => "_blank", :style => "width: 170px;"}
-/             %button.btn.btn-large.btn-primary
-/               = t('dynamic_translations.video.see_all')
 
 / / Press quotes
 / .blank_bg.vspace#_about_press
