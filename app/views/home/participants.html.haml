@@ -57,6 +57,20 @@
           /         %button.btn.btn-embossed.btn-primary
           /           = t('dynamic_translations.team.hide_all')
 
+/ Curators
+#_curators.vspace
+  .container
+    .row.centered
+      %h3.ouishare_stencil
+        = t('dynamic_translations.program.curators')
+      %hr.pink
+      - if !@curators.blank?
+        .ch-grid
+          - @curators.each do |team_member|
+            .col-lg-3.individuals-list-display
+              %li
+                = render "/individuals/partials/team_member_display", :team_member => team_member 
+
 .partners-container#_partners{:style => 'padding-top:100px'}
   .container.sinfo
     - if !@partners.blank?

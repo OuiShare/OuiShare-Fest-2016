@@ -107,6 +107,15 @@ class HomeController < ApplicationController
       end
     end
 
+    if IndividualType.find_by_title('Curators')
+      @curators = IndividualType.find_by_title('Curators').get_members
+      if ENV["DISPLAYED_CURATORS"].to_i > @curators.count
+        displayed_curators_number = @curators.count
+      else
+        displayed_curators_number = ENV["DISPLAYED_CURATORS"].to_i
+      end
+    end
+
     if IndividualType.find_by_title('Speakers')
       @speakers = IndividualType.find_by_title('Speakers').get_members
       

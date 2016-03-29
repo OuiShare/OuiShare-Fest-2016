@@ -26,6 +26,12 @@
           = t('dynamic_translations.program_structure.text_b')
         %p
           = t('dynamic_translations.program_structure.text_c')
+    .row.centered#_schedule
+      %br
+      %br
+      %a#sched-embed{:href => "http://ouisharefestparis2016.sched.org/grid/"}
+      %script{:type => "text/javascript", :src => "http://ouisharefestparis2016.sched.org/js/embed.js"}
+
     .row.centered
       .col-md-10.col-md-offset-1.col-sm-12
         .tickets-table.program-structure
@@ -126,16 +132,33 @@
             = t('dynamic_translations.get_involved.title')
 
 
-      / .row.centered#_schedule
-      /   %br
-      /   %br
-      /   %img{:src => '/assets/2016-schedule-en.png', :alt => 'Main schedule', :style => "max-width: 100%"}
-      /   / %a#sched-embed{:href => "http://ouisharefestparis2016.sched.org/grid/"}
-      /   / %script{:type => "text/javascript", :src => "http://ouisharefestparis2016.sched.org/js/embed.js"}
 
 
 
-.blank_bg
+
+/Program guidelines
+#_guidelines.triangle_bg_4.white_txt.vspace
+  .container
+    .row.centered
+      .col-md-10.col-md-offset-1
+        %p
+          %img.img-responsive{:src => '/assets/guiding-criteria.png', :alt => 'Guiding principles'}
+
+/ / Curators
+/ #_curators.vspace
+/   .container
+/     .row.centered
+/       %h3.ouishare_stencil
+/         = t('dynamic_translations.program.curators')
+/       %hr.pink
+/       - if !@curators.blank?
+/         .ch-grid
+/           - @curators.each do |team_member|
+/             .col-lg-3.individuals-list-display
+/               %li
+/                 = render "/individuals/partials/team_member_display", :team_member => team_member 
+
+.blank_bg#after_gold_rush
   .container
     .row.centered
       %h3.ouishare_stencil
@@ -164,25 +187,3 @@
         %p
           %a{href: "http://magazine.ouishare.net/2015/12/after-the-gold-rush", target: "_blank"}
             = t('dynamic_translations.goldrush.p6')
-
-/Program guidelines
-#_guidelines.triangle_bg_4.white_txt.vspace
-  .container
-    .row.centered
-      .col-md-10.col-md-offset-1
-        %p
-          %img.img-responsive{:src => '/assets/guiding-criteria.png', :alt => 'Guiding principles'}
-
-/ Curators
-#_curators.vspace
-  .container
-    .row.centered
-      %h3.ouishare_stencil
-        = t('dynamic_translations.program.curators')
-      %hr.pink
-      - if !@curators.blank?
-        .ch-grid
-          - @curators.each do |team_member|
-            .col-lg-3.individuals-list-display
-              %li
-                = render "/individuals/partials/team_member_display", :team_member => team_member 
