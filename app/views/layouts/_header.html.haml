@@ -142,9 +142,19 @@
         / %li
         /   %a{href: "http://magazine.ouishare.net/tag/ouisharefest/", target: "_blank"}
         /     =t('dynamic_translations.blog.title')
-        %li
-          %a{href: "/news"}
-            =t('dynamic_translations.blog.title')
+        %li.dropdown
+          %a.dropdown-toggle{href: "/media"}
+            =t('dynamic_translations.media.title')
+          %ul.dropdown-menu
+            %li
+              %a{href: "media#news"}
+                = t('dynamic_translations.blog.title')
+            %li
+              %a{href: "media#videos_2015"}
+                = t('dynamic_translations.video.section_title')
+            %li
+              %a{href: "media#radio"}
+                = t('dynamic_translations.radio.title')
         %li
           .text-center.social-media-icons-header
             %a{href: "https://www.facebook.com/OuiShare", target: "_blank"}
