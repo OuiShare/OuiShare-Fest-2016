@@ -129,9 +129,20 @@
             %li
               %a{href: "join#_press_media"}
                 = t('dynamic_translations.tickets.press_media')
-            %li
-              %a{href: "join#_prepare"}
+            %li.dropdown
+              %a.dropdown-toggle{href: "join#_prepare"}
                 = t('dynamic_translations.prepare_your_trip.title')
+              %ul.dropdown-submenu
+                %li
+                  %a{href: "/travel_information"}
+                    = t('dynamic_translations.travel_information.title')
+                %li
+                  %a{href: "/where_to_stay"}
+                    = t('dynamic_translations.where_to_stay.title')
+                %li
+                  %a{href: "/getting_to_the_venue"}
+                    = t('dynamic_translations.getting_venue.title')
+
 
         %li.tickets-highlight
           %a.highlight{href: "/join#_tickets"}
