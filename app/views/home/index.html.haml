@@ -48,7 +48,7 @@
         /   %img.quote-left-carousel{:src => '/assets/quote_left.png', :alt => 'quote left'}
         /   %img.quote-right-carousel{:src => '/assets/quote_left.png', :alt => 'quote right'}
         .col-md-6.col-md-offset-3.col-sm-8.col-sm-offset-2
-          %h5.normal{:style => 'margin-top: 5em;'}
+          %h5.normal{:style => 'margin-top: 1.8em;'}
             = t('dynamic_translations.about.landing_1')
           %br
           %h5.normal
@@ -59,6 +59,13 @@
           %a{:href => 'about#_about'}
             %button.btn.btn-large.btn-primary
               = t('dynamic_translations.readmore.title')
+      .row.centered.vspace#ouishare_video
+        .col-md-6.col-md-offset-3{style:"position: relative"}
+          %img{style:"display:block;width:100%;height:auto", src:"http://placehold.it/16x9"}
+          %iframe{allowfullscreen: "", frameborder: "0", src: "//www.youtube.com/embed/Hr683Ldt6dQ", style:"position:absolute;top:0;left:0;width:100%;height:100%"}
+
+
+
 
 / Image Slider 
 %section#slideshow-container
