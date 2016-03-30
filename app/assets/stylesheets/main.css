@@ -428,8 +428,8 @@ body {
     padding-bottom: 100px;
 }
 .vspace {
-    padding-top: 100px;
-    padding-bottom: 100px;
+    padding-top: 2.5em;
+    padding-bottom: 2.5em;
 }
 .vmargin {
     margin-top: 5em;
