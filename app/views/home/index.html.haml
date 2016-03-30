@@ -3,7 +3,7 @@
   .container
     .main-section
       .row
-        #head_logo
+        #head_logo_edges
           = image_tag "/assets/logo_osf16_edges_white.svg"
       .row
         / .col-md-10.col-md-offset-1
@@ -13,10 +13,10 @@
           %br
           / %p.main-section-paragraphes.white
           /   = t('dynamic_translations.main.subtitle')
-          %p.main-section-paragraphes.white
+          %h5.normal.white
             %span.vert-borders
               = t('dynamic_translations.main.date')
-          %p.main-section-paragraphes.white
+          %h5.normal.white
             = t('dynamic_translations.main.theme')
 
       .row
