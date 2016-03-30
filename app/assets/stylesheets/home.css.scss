@@ -54,8 +54,13 @@
   margin-top:5%;
 }
 #head_logo_edges img {
-  width: 400px;
+  width: 520px;
   margin-top: 5%;
+}
+#head_logo_edges {
+  h4, h5, h6 {
+    margin-top: 1.9em;
+  }
 }
 .speakers-container{
   .container.sinfo{
