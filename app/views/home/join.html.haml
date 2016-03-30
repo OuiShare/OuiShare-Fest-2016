@@ -20,9 +20,10 @@
             .col-md-2.col-xs-4.title-blue
               = t('dynamic_translations.tickets_table.hackers')
           .tickets-border
-            .row.row-eq-height
+            .row.title-inverse
               .col-md-6.col-sm-12.title-inverse
-                = t('dynamic_translations.tickets_table.core_features')
+                %span{:style => "padding:2em auto;"}
+                  = t('dynamic_translations.tickets_table.core_features')
               .col-md-2.col-xs-4.title-inverse
                 3-Day 375€
                 %br
