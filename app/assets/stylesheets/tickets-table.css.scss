@@ -18,6 +18,7 @@
     max-width: 1.3em;
   }
   .col-md-8,
+  .col-md-6,
   .title,
   .title-inverse,
   p{
@@ -25,13 +26,14 @@
       text-align: left;
       margin-left: -0em;
     }
-    .col-xs-6 {
+    .col-xs-6,
+    .col-xs-4 {
       text-align: center;
     }
   }
   .title, .title-inverse, .title-blue {
     font-family:'naiv_normal';
-    padding: 1.5em 1.2em;
+    /*padding: 1.5em 1.2em;*/
     font-size: medium;
     font-weight: bold;
   }
