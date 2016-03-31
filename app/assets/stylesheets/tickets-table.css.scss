@@ -47,7 +47,8 @@
   }
   .title-blue {
     text-transform: uppercase;
-    border: none;
+    border: 1px solid white !important;
+    border-bottom: none !important;
   }
 
   .row{
