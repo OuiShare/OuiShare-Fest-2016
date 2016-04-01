@@ -290,96 +290,133 @@
             = t('dynamic_translations.tickets.get_involved')
         .tickets-table
           .row
-            .col-md-2.col-md-offset-8.col-xs-6.col-xs-offset-0.title-blue
+            .col-md-2.col-md-offset-6.col-xs-4.col-xs-offset-0.title-blue
               = t('dynamic_translations.tickets_table.pioneers')
-            .col-md-2.col-xs-6.title-blue
+            .col-md-2.col-xs-4.title-blue
               = t('dynamic_translations.tickets_table.explorers')
+            .col-md-2.col-xs-4.title-blue
+              = t('dynamic_translations.tickets_table.hackers')
           .tickets-border
+            .row.title-inverse
+              .col-md-6.col-sm-12.title-inverse
+                %span{:style => "padding:2em auto;"}
+                  = t('dynamic_translations.tickets_table.core_features')
+              .col-md-2.col-xs-4.title-inverse
+                3-Day 375€
+                %br
+                1-Day 190€
+              .col-md-2.col-xs-4.title-inverse
+                3-Day 950€
+                %br
+                1-Day 390€
+              .col-md-2.col-xs-4.title-inverse
+                3-Day 50€
+                %br
+                1-Day N/A
             .row
-              .col-md-12.title-inverse
-                = t('dynamic_translations.tickets_table.core_features')
-            .row
-              .col-md-8.col-sm-12
+              .col-md-6.col-sm-12
                 = t('dynamic_translations.tickets_table.core_1_access')
-              .col-md-2.col-xs-6
+              .col-md-2.col-xs-4
                 = image_tag "/assets/tickets-tick-white.svg"
-              .col-md-2.col-xs-6
+              .col-md-2.col-xs-4
+                = image_tag "/assets/tickets-tick-white.svg"
+              .col-md-2.col-xs-4
                 = image_tag "/assets/tickets-tick-white.svg"
             .row
-              .col-md-8
+              .col-md-6
                 = t('dynamic_translations.tickets_table.core_2_food')
-              .col-md-2.col-xs-6
+              .col-md-2.col-xs-4
                 = image_tag "/assets/tickets-tick-white.svg"
-              .col-md-2.col-xs-6
+              .col-md-2.col-xs-4
+                = image_tag "/assets/tickets-tick-white.svg"
+              .col-md-2.col-xs-4
                 = image_tag "/assets/tickets-tick-white.svg"
             .row
-              .col-md-8
+              .col-md-6
                 = t('dynamic_translations.tickets_table.core_3_partner_events')
-              .col-md-2.col-xs-6
+              .col-md-2.col-xs-4
                 = image_tag "/assets/tickets-tick-white.svg"
-              .col-md-2.col-xs-6
+              .col-md-2.col-xs-4
+                = image_tag "/assets/tickets-tick-white.svg"
+              .col-md-2.col-xs-4
                 = image_tag "/assets/tickets-tick-white.svg"
             .row
-              .col-md-8
+              .col-md-6
                 = t('dynamic_translations.tickets_table.core_4_access_party')
-              .col-md-2.col-xs-6
+              .col-md-2.col-xs-4
                 = image_tag "/assets/tickets-tick-white.svg"
-              .col-md-2.col-xs-6
+              .col-md-2.col-xs-4
+                = image_tag "/assets/tickets-tick-white.svg"
+              .col-md-2.col-xs-4
                 = image_tag "/assets/tickets-tick-white.svg"
             .row
-              .col-md-8
+              .col-md-6
                 = t('dynamic_translations.tickets_table.core_5_participants_list')
-              .col-md-2.col-xs-6
+              .col-md-2.col-xs-4
                 = image_tag "/assets/tickets-tick-white.svg"
-              .col-md-2.col-xs-6
+              .col-md-2.col-xs-4
+                = image_tag "/assets/tickets-tick-white.svg"
+              .col-md-2.col-xs-4
                 = image_tag "/assets/tickets-tick-white.svg"
             .row
-              .col-md-12.title-inverse
+              .col-md-12.title-inverse{:style => "padding:none;"}
                 = t('dynamic_translations.tickets_table.extended_features')
             .row
-              .col-md-8
+              .col-md-6
                 = t('dynamic_translations.tickets_table.ext_3_webinar')
-              .col-md-2.col-xs-6
+              .col-md-2.col-xs-4
                 &nbsp;
-              .col-md-2.col-xs-6
+              .col-md-2.col-xs-4
                 = image_tag "/assets/tickets-tick-white.svg"
+              .col-md-2.col-xs-4
+                &nbsp;
             .row
-              .col-md-8
+              .col-md-6
                 = t('dynamic_translations.tickets_table.ext_1_reception')
-              .col-md-2.col-xs-6
+              .col-md-2.col-xs-4
                 &nbsp;
-              .col-md-2.col-xs-6
+              .col-md-2.col-xs-4
                 = image_tag "/assets/tickets-tick-white.svg"
+              .col-md-2.col-xs-4
+                &nbsp;
             .row
-              .col-md-8
+              .col-md-6
                 = t('dynamic_translations.tickets_table.ext_welcoming') 
-              .col-md-2.col-xs-6
+              .col-md-2.col-xs-4
                 &nbsp;
-              .col-md-2.col-xs-6
+              .col-md-2.col-xs-4
                 = image_tag "/assets/tickets-tick-white.svg"
+              .col-md-2.col-xs-4
+                &nbsp;
             .row
-              .col-md-8
+              .col-md-6
                 = t('dynamic_translations.tickets_table.ext_matchmaking')
-              .col-md-2.col-xs-6
+              .col-md-2.col-xs-4
                 &nbsp;
-              .col-md-2.col-xs-6
+              .col-md-2.col-xs-4
                 = image_tag "/assets/tickets-tick-white.svg"
+              .col-md-2.col-xs-4
+                &nbsp;
             .row
-              .col-md-8
+              .col-md-6
                 = t('dynamic_translations.tickets_table.ext_advice')
-              .col-md-2.col-xs-6
+              .col-md-2.col-xs-4
                 &nbsp;
-              .col-md-2.col-xs-6
+              .col-md-2.col-xs-4
                 = image_tag "/assets/tickets-tick-white.svg"
+              .col-md-2.col-xs-4
+                &nbsp;
             .row
-              .col-md-8
+              .col-md-6
                 = t('dynamic_translations.tickets_table.ext_4_book') 
                 %em
                   = t('dynamic_translations.tickets_table.ext_4_book_title')
-              .col-md-2.col-xs-6
+              .col-md-2.col-xs-4
                 &nbsp;
-              .col-md-2.col-xs-6
+              .col-md-2.col-xs-4
                 = image_tag "/assets/tickets-tick-white.svg"
+              .col-md-2.col-xs-4
+                &nbsp;
           %p.left
             = t('dynamic_translations.tickets_table.questions') 
             %b
