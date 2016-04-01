@@ -28,17 +28,11 @@
               %a{href: "about#_key_topics"}
                 = t('dynamic_translations.topics.title')
             %li
-              %a{href: "about#bestof"}
-                = t('dynamic_translations.video.section_title')
-            %li
               %a{href: "/zero_waste_event"}
                 = t('dynamic_translations.zerowaste.title_nav')
             %li
-              %a{href: "about#_radio"}
-                = t('dynamic_translations.radio.title')
-            / %li
-            /   %a{href: "about#_about_press"}
-            /     = t('dynamic_translations.press.title')
+              %a{href: "about#_about_press"}
+                = t('dynamic_translations.press.title')
             %li
               %a{href: "about#_ouishare"}
                 = t('dynamic_translations.about.ouishare_title')
@@ -70,9 +64,6 @@
             %li
               %a{href: "program#_guidelines"}
                 = t('dynamic_translations.guidelines.title')
-            %li
-              %a{href: "program#_curators"}
-                = t('dynamic_translations.program.curators')
             / %li
             /   %a{href: "program#_awards"}
             /     = t('dynamic_translations.ouishare_awards.see_2015_awards_winners')
@@ -110,6 +101,9 @@
               %a{href: "participants#_team"}
                 = t('dynamic_translations.team.title')
             %li
+              %a{href: "program#_curators"}
+                = t('dynamic_translations.program.curators')
+            %li
               %a{href: "participants#_partners"}
                 = t('dynamic_translations.partners.title')
             / %li
@@ -129,9 +123,20 @@
             %li
               %a{href: "join#_press_media"}
                 = t('dynamic_translations.tickets.press_media')
-            %li
-              %a{href: "join#_prepare"}
+            %li.dropdown
+              %a.dropdown-toggle{href: "join#_prepare"}
                 = t('dynamic_translations.prepare_your_trip.title')
+              %ul.dropdown-submenu
+                %li
+                  %a{href: "/travel_information"}
+                    = t('dynamic_translations.travel_information.title')
+                %li
+                  %a{href: "/where_to_stay"}
+                    = t('dynamic_translations.where_to_stay.title')
+                %li
+                  %a{href: "/getting_to_the_venue"}
+                    = t('dynamic_translations.getting_venue.title')
+
 
         %li.tickets-highlight
           %a.highlight{href: "/join#_tickets"}
@@ -142,9 +147,19 @@
         / %li
         /   %a{href: "http://magazine.ouishare.net/tag/ouisharefest/", target: "_blank"}
         /     =t('dynamic_translations.blog.title')
-        %li
-          %a{href: "/news"}
-            =t('dynamic_translations.blog.title')
+        %li.dropdown
+          %a.dropdown-toggle{href: "/media"}
+            =t('dynamic_translations.media.title')
+          %ul.dropdown-menu
+            %li
+              %a{href: "media#news"}
+                = t('dynamic_translations.blog.title')
+            %li
+              %a{href: "media#bestof"}
+                = t('dynamic_translations.video.section_title')
+            %li
+              %a{href: "media#radio"}
+                = t('dynamic_translations.radio.title')
         %li
           .text-center.social-media-icons-header
             %a{href: "https://www.facebook.com/OuiShare", target: "_blank"}

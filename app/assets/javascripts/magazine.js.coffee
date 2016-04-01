@@ -1,5 +1,5 @@
-$(document).ready ->
-	jssor_slider1_starter(slider1_container)
+# $(document).ready ->
+# 	jssor_slider1_starter(slider1_container)
 
 
 jssor_slider1_starter = (containerId) ->
