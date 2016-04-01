@@ -3,21 +3,21 @@
   .container
     .main-section
       .row
-        #head_logo
-          = image_tag "/assets/logo-fest-2016-white.svg"
+        #head_logo_edges
+          = image_tag "/assets/logo_osf16_edges_white.svg"
       .row
-        .col-md-10.col-md-offset-1
-          %h1.main-title.white
-            = t('dynamic_translations.main.title')
+        / .col-md-10.col-md-offset-1
+        /   %h1.main-title.white
+        /     = t('dynamic_translations.main.title')
         .col-md-6.col-md-offset-3
           %br
-          %p.main-section-paragraphes.white
-            = t('dynamic_translations.main.subtitle')
-          %p.main-section-paragraphes.white
+          / %p.main-section-paragraphes.white
+          /   = t('dynamic_translations.main.subtitle')
+          %h5.normal.white
             %span.vert-borders
               = t('dynamic_translations.main.date')
-          / %p.main-section-paragraphes.white
-          /   = t('dynamic_translations.main.theme')
+          %h5.normal.white
+            = t('dynamic_translations.main.theme')
 
       .row
         .col-md-8.col-md-offset-2
@@ -36,22 +36,22 @@
   .container
     .second-section
       .row.centered
-        .carousel.slide.col-xs-12.col-md-offset-1.col-lg-offset-2.col-md-10.col-lg-8
-          .carousel-inner
-            .item.active
-              .press-content{:style => 'height:3em;'}
-                .press-text
-                  %h3
-                    = t('dynamic_translations.about.subtitle')
-              .label-press
-                Arun Sundararajan, NYU      
-          %img.quote-left-carousel{:src => '/assets/quote_left.png', :alt => 'quote left'}
-          %img.quote-right-carousel{:src => '/assets/quote_left.png', :alt => 'quote right'}
+        / .carousel.slide.col-xs-12.col-md-offset-1.col-lg-offset-2.col-md-10.col-lg-8
+        /   .carousel-inner
+        /     .item.active
+        /       .press-content{:style => 'height:3em;'}
+        /         .press-text
+        /           %h3
+        /             = t('dynamic_translations.about.subtitle')
+        /       .label-press
+        /         Arun Sundararajan, NYU      
+        /   %img.quote-left-carousel{:src => '/assets/quote_left.png', :alt => 'quote left'}
+        /   %img.quote-right-carousel{:src => '/assets/quote_left.png', :alt => 'quote right'}
         .col-md-6.col-md-offset-3.col-sm-8.col-sm-offset-2
-          %p{:style => 'margin-top: 5em;'}
+          %p.large{:style => 'margin-top: 1.8em;'}
             = t('dynamic_translations.about.landing_1')
           %br
-          %p
+          %p.large
             = t('dynamic_translations.about.landing_2')
           %br
       .row.centered.btn-space
@@ -59,11 +59,61 @@
           %a{:href => 'about#_about'}
             %button.btn.btn-large.btn-primary
               = t('dynamic_translations.readmore.title')
+      / .row.centered.vspace#ouishare_video
+      /   .col-md-8.col-md-offset-2{style:"position: relative"}
+      /     %img{style:"display:block;width:100%;height:auto", src:"http://placehold.it/16x9"}
+      /     %iframe{allowfullscreen: "", frameborder: "0", src: "//www.youtube.com/embed/Hr683Ldt6dQ", style:"position:absolute;top:0;left:0;width:100%;height:100%"}
+
+
+
+%section#slideshow-container
+  .banner
+    %ul
+
+      / slide 1
+      %li{"data-transition" => "fade"}
+        %img{alt: "", src: "assets/slider/inspire_2016.jpg", style: "background:#1abc9c"}/
+        .caption.general_caption.pst_media12.lft{"data-easing" => "easeOutExpo", "data-end" => "7900", "data-endeasing" => "easeInBack", "data-endspeed" => "900", "data-speed" => "600", "data-start" => "800", "data-x" => "58", "data-y" => "250"}
+          %h1{:style => "text-shadow: 2px 0px black"}
+            Inspire
+
+      / slide 2
+      %li{"data-transition" => "fade"}
+        %img{alt: "", src: "assets/slider/cocreate_2016.jpg", style: "background:#1abc9c"}/
+        .caption.general_caption.pst_media14.lfl.ltl{"data-easing" => "easeOutBack", "data-end" => "5700", "data-endeasing" => "easeInBack", "data-endspeed" => "900", "data-speed" => "900", "data-start" => "100", "data-x" => "56", "data-y" => "250"}
+          %h1{:style => "text-shadow: 2px 0px black"}
+            Collaborate
+
+      / slide 3
+      %li{"data-transition" => "fade"}
+        %img{alt: "", src: "assets/slider/connect_2016.jpg", style: "background:#1abc9c"}/
+        .caption.general_caption.pst_media12.lft{"data-easing" => "easeOutExpo", "data-end" => "7900", "data-endeasing" => "easeInBack", "data-endspeed" => "900", "data-speed" => "600", "data-start" => "800", "data-x" => "58", "data-y" => "250"}
+          %h1{:style => "text-shadow: 2px 0px black"}
+            Connect
+
+      / slide 4
+      %li{"data-transition" => "fade"}
+        %img{alt: "", src: "assets/slider/new_img5.jpg", style: "background:#e4e6e6"}/
+        .caption.general_caption.pst_media14.lfl.ltl{"data-easing" => "easeOutBack", "data-end" => "5700", "data-endeasing" => "easeInBack", "data-endspeed" => "900", "data-speed" => "900", "data-start" => "100", "data-x" => "56", "data-y" => "250"}
+          %h1{:style => "text-shadow: 2px 0px black"}
+            Debate
+
+      %li{"data-transition" => "fade"}
+        %img{alt: "", src: "assets/slider/create_2016.jpg", style: "background:#1abc9c"}/
+        .caption.general_caption.pst_media12.lft{"data-easing" => "easeOutExpo", "data-end" => "7900", "data-endeasing" => "easeInBack", "data-endspeed" => "900", "data-speed" => "600", "data-start" => "800", "data-x" => "58", "data-y" => "250"}
+          %h1{:style => "text-shadow: 2px 0px black"}
+            Create
+
+      %li{"data-transition" => "fade"}
+        %img{alt: "", src: "assets/slider/dance_2015.jpg", style: "background:#1abc9c"}/
+        .caption.general_caption.pst_media12.lft{"data-easing" => "easeOutExpo", "data-end" => "7900", "data-endeasing" => "easeInBack", "data-endspeed" => "900", "data-speed" => "600", "data-start" => "800", "data-x" => "58", "data-y" => "250"}
+          %h1{:style => "text-shadow: 2px 0px black"}
+            Dance!
 
 
 / Speakers
 
-#speakers.vspace
+#speakers.vspace{:style => "padding-top:4.5em;"}
   .container
     .row.centered
       %h3.ouishare_stencil
@@ -100,214 +150,128 @@
 
 
 
-/ OuiShare News 2016 dynamic
-.blank_bg.vspace#news
-  .container
-    .row.centered
-      %h3.ouishare_stencil
-        = t('dynamic_translations.ouishare-news.title')
-      %hr.pink
-    .row{style:"padding-top: 3%"}
-
-      - @magazines.each do |magazine|
-        .col-md-4{style:"position: relative; min-height:170px;"}
-          - if !magazine.content.split('img')[1].nil?
-            .col-md-12
-              %a{href: "#{magazine.url}", target:"blank"}
-                %img{:src => "#{magazine.content.split(' ')[3].split('"')[1].gsub(/-150x150/, "")}", :u => "image"}
-              .col-md-12
-              %br
-              %p
-                %a{href: "#{magazine.url}", target:"blank"}
-                  = magazine.name 
-                %br
-                  = "#{magazine.author}" unless magazine.author.blank?
-          - else
-            .col-md-12
-              %a{href: "#{magazine.url}", target:"blank"}
-                = image_tag "/assets/landing_logo.png", :style => "height:150px;"
-            .col-md-12
-              %br
-              %p
-                %a{href: "#{magazine.url}", target:"blank"}
-                  = magazine.name
-                %br
-                  = "#{magazine.author}" unless magazine.author.blank?
-            
-    .row.centered.btn-space
-      .col-md-12
-        .col-md-6.col-md-offset-3
-          %a{href: "http://magazine.ouishare.net/tag/ouisharefest/", :target => "_blank", :style => "width: 170px;"}
-            %button.btn.btn-large.btn-primary
-              = t('dynamic_translations.news.see_all')
-
-/ Topics
-.triangle_bg_topics.white_txt
-  .container
-    .third-section
-      .row.centered
-        %h3.ouishare_stencil
-          = t('dynamic_translations.topics.title')
-        %hr.pink
-        %br/
-        %br/
-      .row
-        .col-md-8.col-md-offset-2
-          .row
-            .col-sm-4
-              %h5
-                = t('dynamic_translations.topics.tech_title')
-            .col-xs-2
-              %p.topics
-                = image_tag "/assets/picto-network.png"
-            .col-sm-6
-              %p
-                = t('dynamic_translations.topics.tech_desc')
-          .row
-            .col-sm-4
-              %h5
-                = t('dynamic_translations.topics.om_title')
-            .col-xs-2
-              %p.topics
-                = image_tag "/assets/picto-makers.png"
-            .col-sm-6
-              %p
-                = t('dynamic_translations.topics.om_desc')
-          .row
-            .col-sm-4
-              %h5
-                = t('dynamic_translations.topics.orgs_title')
-            .col-xs-2
-              %p.topics
-                = image_tag "/assets/picto-book.png"
-            .col-sm-6
-              %p
-                = t('dynamic_translations.topics.orgs_desc')
-          .row
-            .col-sm-4
-              %h5
-                = t('dynamic_translations.topics.shareco_title')
-            .col-xs-2
-              %p.topics
-                = image_tag "/assets/picto-sharingeco.png"
-            .col-sm-6
-              %p
-                = t('dynamic_translations.topics.shareco_desc')
-          .row
-            .col-sm-4
-              %h5
-                = t('dynamic_translations.topics.cf_title')
-            .col-xs-2
-              %p.topics
-                = image_tag "/assets/picto-finance.png"            
-            .col-sm-6
-              %p
-                = t('dynamic_translations.topics.cf_desc')
+/ / Topics
+/ .triangle_bg_topics.white_txt
+/   .container
+/     .third-section
+/       .row.centered
+/         %h3.ouishare_stencil
+/           = t('dynamic_translations.topics.title')
+/         %hr.pink
+/         %br/
+/         %br/
+/       .row
+/         .col-md-8.col-md-offset-2
+/           .row
+/             .col-sm-4
+/               %h5
+/                 = t('dynamic_translations.topics.tech_title')
+/             .col-xs-2
+/               %p.topics
+/                 = image_tag "/assets/picto-network.png"
+/             .col-sm-6
+/               %p
+/                 = t('dynamic_translations.topics.tech_desc')
+/           .row
+/             .col-sm-4
+/               %h5
+/                 = t('dynamic_translations.topics.om_title')
+/             .col-xs-2
+/               %p.topics
+/                 = image_tag "/assets/picto-makers.png"
+/             .col-sm-6
+/               %p
+/                 = t('dynamic_translations.topics.om_desc')
+/           .row
+/             .col-sm-4
+/               %h5
+/                 = t('dynamic_translations.topics.orgs_title')
+/             .col-xs-2
+/               %p.topics
+/                 = image_tag "/assets/picto-book.png"
+/             .col-sm-6
+/               %p
+/                 = t('dynamic_translations.topics.orgs_desc')
+/           .row
+/             .col-sm-4
+/               %h5
+/                 = t('dynamic_translations.topics.shareco_title')
+/             .col-xs-2
+/               %p.topics
+/                 = image_tag "/assets/picto-sharingeco.png"
+/             .col-sm-6
+/               %p
+/                 = t('dynamic_translations.topics.shareco_desc')
+/           .row
+/             .col-sm-4
+/               %h5
+/                 = t('dynamic_translations.topics.cf_title')
+/             .col-xs-2
+/               %p.topics
+/                 = image_tag "/assets/picto-finance.png"            
+/             .col-sm-6
+/               %p
+/                 = t('dynamic_translations.topics.cf_desc')
 
 
-/ Best of 2015 videos
-.blank_bg#bestof
-  .container
-    .row.centered
-      %h3.ouishare_stencil
-        = t('dynamic_translations.video.section_title')
-      %hr.pink
-    .row{style:"padding-top: 3%"}
-      .col-md-4
-        .col-md-12
-          %img{src:"http://placehold.it/16x9"}
-          %iframe{allowfullscreen: "", frameborder: "0", src: "//www.youtube.com/embed/Hr683Ldt6dQ"}
-        .col-md-12
-          %br
-          %p
-            %a{href: "http://youtu.be/Hr683Ldt6dQ", :target => "_blank"}
-              = t('dynamic_translations.video.snapshots')
-      .col-md-4
-        .col-md-12
-          %img{src:"http://placehold.it/16x9"}
-          %iframe{allowfullscreen: "", frameborder: "0", src: "//www.youtube.com/embed/Nx80lcI449Q"}
-        .col-md-12
-          %br
-          %p
-            %a{href: "http://youtu.be/Nx80lcI449Q", :target => "_blank"}
-              Sharing Cities [Part 2] - Amsterdam & Nijmegen Sharing Cities
-            / %br
-            / Robin Chase
-      .col-md-4
-        .col-md-12
-          %img{src:"http://placehold.it/16x9"}
-          %iframe{allowfullscreen: "", frameborder: "0", src: "//www.youtube.com/embed/LWxyRG0B1Zk"}
-        .col-md-12
-          %br
-          %p
-            %a{href: "http://youtu.be/LWxyRG0B1Zk", :target => "_blank"}
-              Economic security for the digital age
-            %br
-            Nicolas Colin
-    .row.centered.btn-space
-      .col-md-12
-        .col-md-6.col-md-offset-3
-          %a{href: "https://www.youtube.com/playlist?list=PL8Bt3EbdmpKM4tYKyERKbp6VMYTjYZwCF", :target => "_blank", :style => "width: 170px;"}
-            %button.btn.btn-large.btn-primary
-              = t('dynamic_translations.video.see_all')
 
-/ Press quotes
-.blank_bg.vspace#_about_press
-  .container
-    .row.centered
-      %h3.ouishare_stencil
-        = t('dynamic_translations.press.title')
-      %hr.pink
-      %br
+/ / Press quotes
+/ .blank_bg.vspace#_about_press
+/   .container
+/     .row.centered
+/       %h3.ouishare_stencil
+/         = t('dynamic_translations.press.title')
+/       %hr.pink
+/       %br
 
-    #myCarousel.carousel.slide.col-xs-12.col-md-offset-1.col-lg-offset-2.col-md-10.col-lg-8{ 'data-ride' => "carousel"}
+/     #myCarousel.carousel.slide.col-xs-12.col-md-offset-1.col-lg-offset-2.col-md-10.col-lg-8{ 'data-ride' => "carousel"}
 
-      /Wrapper for slides
-      .carousel-inner
-        .item.active
-          .press-content
-            .press-text
-              %h3
-                The Fest is an event to not only inspire the new opportunities in the Collaborative Economy, but also to provide a venue to outline and debate the challenges.
-          .label-press
-            Jeremiah Owyang, Founder of Crowd Companies
-        / .item
-        /   .press-content
-        /     .press-text
-        /       %h3
-        /         There's no other conference I've been to that has this 'TED meets Burning Man' feel.
-        /   .label-press
-        /     Arun Sundararajan, Professor at NYU’s Stern School of Business
-        .item
-          .press-content
-            .press-text
-              %h3
-                At the Ouishare Fest, the great and the good from Europe’s sharing economy have been delving deep into what it means to be running a collaborative business model within a capitalist framework.
-          .label-press
-            Izabella Kaminska, FT
-        .item
-          .press-content
-            .press-text
-              %h3
-                L’édition 2015 du OuiShare Fest marque une nouvelle étape, celle de la crise existentielle, voire d’adolescence (tout grandit si vite avec le numérique).
-          .label-press
-            Usine Digital
-        .item
-          .press-content
-            .press-text
-              %h3
-                When co-operatives and left-wingers gathered at the Fest to discuss ways that grass-roots organisations could undermine giant repositories of data like Facebook, the blockchain made it into almost every speech.
-          .label-press
-            The Economist
+/       /Wrapper for slides
+/       .carousel-inner
+/         .item.active
+/           .press-content
+/             .press-text
+/               %h3
+/                 The Fest is an event to not only inspire the new opportunities in the Collaborative Economy, but also to provide a venue to outline and debate the challenges.
+/           .label-press
+/             Jeremiah Owyang, Founder of Crowd Companies
+/         / .item
+/         /   .press-content
+/         /     .press-text
+/         /       %h3
+/         /         There's no other conference I've been to that has this 'TED meets Burning Man' feel.
+/         /   .label-press
+/         /     Arun Sundararajan, Professor at NYU’s Stern School of Business
+/         .item
+/           .press-content
+/             .press-text
+/               %h3
+/                 At the Ouishare Fest, the great and the good from Europe’s sharing economy have been delving deep into what it means to be running a collaborative business model within a capitalist framework.
+/           .label-press
+/             Izabella Kaminska, FT
+/         .item
+/           .press-content
+/             .press-text
+/               %h3
+/                 L’édition 2015 du OuiShare Fest marque une nouvelle étape, celle de la crise existentielle, voire d’adolescence (tout grandit si vite avec le numérique).
+/           .label-press
+/             Usine Digital
+/         .item
+/           .press-content
+/             .press-text
+/               %h3
+/                 When co-operatives and left-wingers gathered at the Fest to discuss ways that grass-roots organisations could undermine giant repositories of data like Facebook, the blockchain made it into almost every speech.
+/           .label-press
+/             The Economist
 
-      %img.quote-left-carousel{:src => '/assets/quote_left.png', :alt => 'quote left'}
-      %img.quote-right-carousel{:src => '/assets/quote_left.png', :alt => 'quote right'}
-      / Controls
-      %a.left.carousel-control{:href => "#myCarousel", 'data-slide' => "prev"}
-        &lsaquo;
+/       %img.quote-left-carousel{:src => '/assets/quote_left.png', :alt => 'quote left'}
+/       %img.quote-right-carousel{:src => '/assets/quote_left.png', :alt => 'quote right'}
+/       / Controls
+/       %a.left.carousel-control{:href => "#myCarousel", 'data-slide' => "prev"}
+/         &lsaquo;
 
-      %a.right.carousel-control{:href => "#myCarousel", 'data-slide' => "next" }
-        &rsaquo;
+/       %a.right.carousel-control{:href => "#myCarousel", 'data-slide' => "next" }
+/         &rsaquo;
 
 
 / Buy tickets
@@ -429,24 +393,29 @@
         / %br
         %br
 
-        / Eventbrite form
-        %div.eventbrite
-          %iframe.inverse{:allowtransparency => "true", :frameborder => "0", :height => "520", :hspace => "0", :marginheight => "5", :marginwidth => "5", :scrolling => "auto", :src => "http://www.eventbrite.com/tickets-external?eid=19202830182&ref=etckt&v=2", :vspace => "0", :width => "100%"}
-          %div{:style => "font-family:Helvetica, Arial; font-size:10px; padding:5px 0 5px; margin:2px; width:100%; text-align:left;"}
-            %a{:href => "http://www.eventbrite.com/r/etckt", :style => "color:#ddd; text-decoration:none;", :target => "_blank"} 
-              =t('dynamic_translations.tickets.event_registration_online')
-            %span{:style => "color:#ddd;"} 
-              =t('dynamic_translations.tickets.for')
-            %a{:href => "https://www.eventbrite.com/e/ouishare-fest-paris-2016-tickets-19202830182?aff=eac2", :style => "color:#ddd; text-decoration:none;", :target => "_blank"} OuiShare Fest 2016
-            %span{:style => "color:#ddd;"} 
-              =t('dynamic_translations.tickets.powered_by')
-            %a{:href => "http://www.eventbrite.com?ref=etckt", :style => "color:#ddd; text-decoration:none;", :target => "_blank"} Eventbrite
+        / / Eventbrite form
+        / %div.eventbrite
+        /   %iframe.inverse{:allowtransparency => "true", :frameborder => "0", :height => "640", :hspace => "0", :marginheight => "5", :marginwidth => "5", :scrolling => "auto", :src => "http://www.eventbrite.com/tickets-external?eid=19202830182&ref=etckt&v=2", :vspace => "0", :width => "100%"}
+        /   %div{:style => "font-family:Helvetica, Arial; font-size:10px; padding:5px 0 5px; margin:2px; width:100%; text-align:left;"}
+        /     %a{:href => "http://www.eventbrite.com/r/etckt", :style => "color:#ddd; text-decoration:none;", :target => "_blank"} 
+        /       =t('dynamic_translations.tickets.event_registration_online')
+        /     %span{:style => "color:#ddd;"} 
+        /       =t('dynamic_translations.tickets.for')
+        /     %a{:href => "https://www.eventbrite.com/e/ouishare-fest-paris-2016-tickets-19202830182?aff=eac2", :style => "color:#ddd; text-decoration:none;", :target => "_blank"} OuiShare Fest 2016
+        /     %span{:style => "color:#ddd;"} 
+        /       =t('dynamic_translations.tickets.powered_by')
+        /     %a{:href => "http://www.eventbrite.com?ref=etckt", :style => "color:#ddd; text-decoration:none;", :target => "_blank"} Eventbrite
 
-
+    .row.centered.btn-space
+      .col-md-12
+        .col-md-6.col-md-offset-3
+          %a{:href => 'join#eventbrite'}
+            %button.btn.btn-large.btn-primary.get-involved-btn
+              = t('dynamic_translations.tickets.title')
 
 
 / Partners
-.partners-container{:style => "padding-top:3%;"}
+.partners-container
   .container.sinfo
     - if !@partners.blank?
       .row.centered
@@ -512,83 +481,102 @@
             / Become a partner
             = t('dynamic_translations.partners.button')
 
-/ Get Involved
+/ / Get Involved
 
-.get-involved-section
+/ .get-involved-section
+/   .container
+/     .row.centered
+/       %h3.ouishare_stencil
+/         = t('dynamic_translations.get_involved.title')
+/       %hr.pink
+/       %br
+/       %p
+/         = t('dynamic_translations.get_involved.description')
+/     %br
+
+/     .centered.get-involved-options-choice
+/       .span-centered
+/         .col-md-10.col-md-offset-1.col-lg-8.col-lg-offset-2
+/           .col-md-4
+/             .title
+/               =t('dynamic_translations.get_involved.program_call_txt')
+/             %a{href: "https://ouisharefest.typeform.com/to/TTSxdV", target: "_blank"}
+/               %button.btn.btn-embossed.btn-primary.get-involved-btn
+/                 =t('dynamic_translations.get_involved.program_call_btn')
+/           .col-md-4
+/             .title
+/               = t('dynamic_translations.get_involved.volunteers_join_txt')
+/             %a{href: "http://goo.gl/forms/E6WNmnFKs7", :target => "_blank"}
+/               %button.btn.btn-embossed.btn-primary.get-involved-btn
+/                 =t('dynamic_translations.get_involved.volunteers_apply_btn')
+/           / .col-md-4
+/           /   .title
+/           /     = t('dynamic_translations.get_involved.volunteers_join_txt')
+/           /   %a{href: "mailto:volunteers@ouisharefest.com", :target => "_blank"}
+/           /     %button.btn.btn-embossed.btn-primary.get-involved-btn
+/           /       =t('dynamic_translations.get_involved.volunteers_join_btn')
+/           / .col-md-4
+/           /   .title
+/           /     =t('dynamic_translations.get_involved.awards_apply_txt')
+/           /   %a{href: "http://awards.ouishare.net/2016/applications/", target: "_blank"}
+/           /     %button.btn.btn-pink.get-involved-btn
+/           /       =t('dynamic_translations.get_involved.awards_apply_btn')
+/           / .col-md-4
+/           /   .title
+/           /     =t('dynamic_translations.get_involved.awards_vote_txt')
+/           /   %a{href: "http://awards.ouishare.net/2015/vote/", target: "_blank"}
+/           /     %button.btn.btn-pink.get-involved-btn
+/           /       =t('dynamic_translations.get_involved.awards_vote_btn')
+/           .col-md-4
+/             .title
+/               =t('dynamic_translations.get_involved.partners_txt')
+/             %a{href: "mailto:partners@ouisharefest.com", :target => "_blank"}
+/               %button.btn.btn-embossed.btn-primary.get-involved-btn
+/                 = t('dynamic_translations.get_involved.partners_btn')
+
+
+/ / About OuiShare
+/ .aboutouishare-section.heart_bg
+/   .container
+/     .row.centered
+/       %h3.ouishare_stencil
+/         = t('dynamic_translations.about.ouishare_title')
+/       %hr.pink
+/       %br
+/       %br
+/       .container.round_fond
+/         .row
+/           .col-md-8.col-md-offset-2
+/             %p{:style => "padding-top:30px"}
+/               = t('dynamic_translations.about.ouishare_text')
+
+/         .row
+/           .col-md-8.col-md-offset-2
+/             .col-md-12
+/               %img{:src => '/assets/coeur-aboutouishare.png', :alt => 'OuiShare logo'}
+/             .col-md-12
+/               %a{:href => 'http://ouishare.net/en/users/sign_up', :target => '_blank'}
+/                 %button.btn.btn-embossed.btn-primary{:style => 'margin: 40px 0px 0px 0px;'}
+/                   = t('dynamic_translations.about.ouishare_btn')
+
+/   - if !@visited
+/     = render "modals/visit_modal"
+
+/ Join section
+.blank_bg.vspace
   .container
     .row.centered
       %h3.ouishare_stencil
-        = t('dynamic_translations.get_involved.title')
-      %hr.pink
-      %br
-      %p
-        = t('dynamic_translations.get_involved.description')
-    %br
-
-    .centered.get-involved-options-choice
-      .span-centered
-        .col-md-10.col-md-offset-1.col-lg-8.col-lg-offset-2
-          .col-md-4
-            .title
-              =t('dynamic_translations.get_involved.program_call_txt')
-            %a{href: "https://ouisharefest.typeform.com/to/TTSxdV", target: "_blank"}
-              %button.btn.btn-embossed.btn-primary.get-involved-btn
-                =t('dynamic_translations.get_involved.program_call_btn')
-          .col-md-4
-            .title
-              = t('dynamic_translations.get_involved.volunteers_join_txt')
-            %a{href: "http://goo.gl/forms/E6WNmnFKs7", :target => "_blank"}
-              %button.btn.btn-embossed.btn-primary.get-involved-btn
-                =t('dynamic_translations.get_involved.volunteers_apply_btn')
-          / .col-md-4
-          /   .title
-          /     = t('dynamic_translations.get_involved.volunteers_join_txt')
-          /   %a{href: "mailto:volunteers@ouisharefest.com", :target => "_blank"}
-          /     %button.btn.btn-embossed.btn-primary.get-involved-btn
-          /       =t('dynamic_translations.get_involved.volunteers_join_btn')
-          / .col-md-4
-          /   .title
-          /     =t('dynamic_translations.get_involved.awards_apply_txt')
-          /   %a{href: "http://awards.ouishare.net/2016/applications/", target: "_blank"}
-          /     %button.btn.btn-pink.get-involved-btn
-          /       =t('dynamic_translations.get_involved.awards_apply_btn')
-          / .col-md-4
-          /   .title
-          /     =t('dynamic_translations.get_involved.awards_vote_txt')
-          /   %a{href: "http://awards.ouishare.net/2015/vote/", target: "_blank"}
-          /     %button.btn.btn-pink.get-involved-btn
-          /       =t('dynamic_translations.get_involved.awards_vote_btn')
-          .col-md-4
-            .title
-              =t('dynamic_translations.get_involved.partners_txt')
-            %a{href: "mailto:partners@ouisharefest.com", :target => "_blank"}
-              %button.btn.btn-embossed.btn-primary.get-involved-btn
-                = t('dynamic_translations.get_involved.partners_btn')
-
-
-/ About OuiShare
-.aboutouishare-section.heart_bg
-  .container
+        = t('dynamic_translations.join.ready')
     .row.centered
-      %h3.ouishare_stencil
-        = t('dynamic_translations.about.ouishare_title')
-      %hr.pink
-      %br
-      %br
-      .container.round_fond
-        .row
-          .col-md-8.col-md-offset-2
-            %p{:style => "padding-top:30px"}
-              = t('dynamic_translations.about.ouishare_text')
-
-        .row
-          .col-md-8.col-md-offset-2
-            .col-md-12
-              %img{:src => '/assets/coeur-aboutouishare.png', :alt => 'OuiShare logo'}
-            .col-md-12
-              %a{:href => 'http://ouishare.net/en/users/sign_up', :target => '_blank'}
-                %button.btn.btn-embossed.btn-primary{:style => 'margin: 40px 0px 0px 0px;'}
-                  = t('dynamic_translations.about.ouishare_btn')
-
-  - if !@visited
-    = render "modals/visit_modal"
+      .col-md-6.col-md-offset-3
+        %br
+        %br
+        %p.centered
+          %img.img-responsive{alt: "Ready to join?", src: "assets/osf16-join.jpg"}/
+    .row.centered.btn-space
+      .col-md-12
+        .col-md-6.col-md-offset-3
+          %a{:href => 'join#eventbrite'}
+            %button.btn.btn-large.btn-primary
+              = t('dynamic_translations.reminder_ticket.getyourtickets')

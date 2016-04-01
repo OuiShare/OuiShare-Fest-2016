@@ -1,65 +1,28 @@
-%section#slideshow-container
-  .banner
-    %ul
-
-      / slide 1
-      %li{"data-transition" => "fade"}
-        %img{alt: "", src: "assets/slider/new_inspire.jpg", style: "background:#1abc9c"}/
-        .caption.general_caption.pst_media12.lft{"data-easing" => "easeOutExpo", "data-end" => "7900", "data-endeasing" => "easeInBack", "data-endspeed" => "900", "data-speed" => "600", "data-start" => "800", "data-x" => "58", "data-y" => "250"}
-          %h1{:style => "text-shadow: 2px 0px black"}
-            Inspire
-
-      / slide 2
-      %li{"data-transition" => "fade"}
-        %img{alt: "", src: "assets/slider/new_cocreate.jpg", style: "background:#1abc9c"}/
-        .caption.general_caption.pst_media14.lfl.ltl{"data-easing" => "easeOutBack", "data-end" => "5700", "data-endeasing" => "easeInBack", "data-endspeed" => "900", "data-speed" => "900", "data-start" => "100", "data-x" => "56", "data-y" => "250"}
-          %h1{:style => "text-shadow: 2px 0px black"}
-            Co-create
-
-      / slide 3
-      %li{"data-transition" => "fade"}
-        %img{alt: "", src: "assets/slider/new_connect.jpg", style: "background:#1abc9c"}/
-        .caption.general_caption.pst_media12.lft{"data-easing" => "easeOutExpo", "data-end" => "7900", "data-endeasing" => "easeInBack", "data-endspeed" => "900", "data-speed" => "600", "data-start" => "800", "data-x" => "58", "data-y" => "250"}
-          %h1{:style => "text-shadow: 2px 0px black"}
-            Connect
-
-      / slide 4
-      %li{"data-transition" => "fade"}
-        %img{alt: "", src: "assets/slider/new_img4.jpg", style: "background:#e4e6e6"}/
-        .caption.general_caption.pst_media14.lfl.ltl{"data-easing" => "easeOutBack", "data-end" => "5700", "data-endeasing" => "easeInBack", "data-endspeed" => "900", "data-speed" => "900", "data-start" => "100", "data-x" => "56", "data-y" => "250"}
-
-
-      %li{"data-transition" => "fade"}
-        %img{alt: "", src: "assets/slider/new_img5.jpg", style: "background:#1abc9c"}/
-        .caption.general_caption.pst_media12.lft{"data-easing" => "easeOutExpo", "data-end" => "7900", "data-endeasing" => "easeInBack", "data-endspeed" => "900", "data-speed" => "600", "data-start" => "800", "data-x" => "58", "data-y" => "250"}
-
-      %li{"data-transition" => "fade"}
-        %img{alt: "", src: "assets/slider/dance_2015.jpg", style: "background:#1abc9c"}/
-        .caption.general_caption.pst_media12.lft{"data-easing" => "easeOutExpo", "data-end" => "7900", "data-endeasing" => "easeInBack", "data-endspeed" => "900", "data-speed" => "600", "data-start" => "800", "data-x" => "58", "data-y" => "250"}
-          %h1{:style => "text-shadow: 2px 0px black"}
-            And Dance
+%div
+  %img{alt: "", src: "assets/slider/about-quote.jpg", style: "background:#1abc9c; width:100%; height:auto; display: block;"}/
+            
 
 
 .blank_bg#_about
   .container
     .second-section
       .row.centered
-        / %h5.col-md-6.col-md-offset-3.ouishare_stencil.white.text-center#_about
-        /   %span.blue_bg
-        /     = t('dynamic_translations.about.subtitle')
-        .carousel.slide.col-xs-12.col-md-offset-1.col-lg-offset-2.col-md-10.col-lg-8
-          .carousel-inner
-            .item.active
-              .press-content{:style => 'height:3em;'}
-                .press-text
-                  %h3
-                    = t('dynamic_translations.about.subtitle')
-              .label-press
-                Arun Sundararajan, Professor at NYU’s Stern School of Business        
-          %img.quote-left-carousel{:src => '/assets/quote_left.png', :alt => 'quote left'}
-          %img.quote-right-carousel{:src => '/assets/quote_left.png', :alt => 'quote right'}
+        %h5.col-md-6.col-md-offset-3.ouishare_stencil.white.text-center#_about
+          %span.bluebg
+            = t('dynamic_translations.tagline.exploring_the_edges')
+        / .carousel.slide.col-xs-12.col-md-offset-1.col-lg-offset-2.col-md-10.col-lg-8
+        /   .carousel-inner
+        /     .item.active
+        /       .press-content{:style => 'height:3em;'}
+        /         .press-text
+        /           %h3
+        /             = t('dynamic_translations.about.subtitle')
+        /       .label-press
+        /         Arun Sundararajan, Professor at NYU’s Stern School of Business        
+        /   %img.quote-left-carousel{:src => '/assets/quote_left.png', :alt => 'quote left'}
+        /   %img.quote-right-carousel{:src => '/assets/quote_left.png', :alt => 'quote right'}
         .col-md-6.col-md-offset-3.col-sm-8.col-sm-offset-2
-          %p{:style => 'margin-top: 5em;'}
+          %p{:style => 'margin-top: 2em;'}
             = t('dynamic_translations.about.t1')
           %br
           %p
@@ -141,56 +104,60 @@
                 = t('dynamic_translations.topics.cf_desc')
 
 
-
-/ Best of 2015
-.blank_bg.vspace#bestof
+/ What the press says
+.blank_bg#_about_press
   .container
     .row.centered
       %h3.ouishare_stencil
-        = t('dynamic_translations.video.section_title')
+        = t('dynamic_translations.press.title')
       %hr.pink
-    .row{style:"padding-top: 3%"}
-      .col-md-4
-        .col-md-12
-          %img{src:"http://placehold.it/16x9"}
-          %iframe{allowfullscreen: "", frameborder: "0", src: "//www.youtube.com/embed/Hr683Ldt6dQ"}
-        .col-md-12
-          %br
-          %p
-            %a{href: "http://youtu.be/Hr683Ldt6dQ", :target => "_blank"}
-              = t('dynamic_translations.video.snapshots')
-      .col-md-4
-        .col-md-12
-          %img{src:"http://placehold.it/16x9"}
-          %iframe{allowfullscreen: "", frameborder: "0", src: "//www.youtube.com/embed/Nx80lcI449Q"}
-        .col-md-12
-          %br
-          %p
-            %a{href: "http://youtu.be/Nx80lcI449Q", :target => "_blank"}
-              Sharing Cities [Part 2] - Amsterdam & Nijmegen Sharing Cities
-            / %br
-            / Robin Chase
-      .col-md-4
-        .col-md-12
-          %img{src:"http://placehold.it/16x9"}
-          %iframe{allowfullscreen: "", frameborder: "0", src: "//www.youtube.com/embed/LWxyRG0B1Zk"}
-        .col-md-12
-          %br
-          %p
-            %a{href: "http://youtu.be/LWxyRG0B1Zk", :target => "_blank"}
-              Economic security for the digital age
-            %br
-            Nicolas Colin
-    .row.centered.btn-space
-      .col-md-12
-        .col-md-6.col-md-offset-3
-          %a{href: "https://www.youtube.com/playlist?list=PL8Bt3EbdmpKM4tYKyERKbp6VMYTjYZwCF", :target => "_blank", :style => "width: 170px;"}
-            %button.btn.btn-large.btn-primary
-              = t('dynamic_translations.video.see_all')
+      %br
+
+    #myCarousel.carousel.slide.col-xs-12.col-md-offset-1.col-lg-offset-2.col-md-10.col-lg-8{ 'data-ride' => "carousel"}
+
+      /Wrapper for slides
+      .carousel-inner
+        .item.active
+          .press-content
+            .press-text
+              %h3
+                The Fest is an event to not only inspire the new opportunities in the Collaborative Economy, but also to provide a venue to outline and debate the challenges.
+          .label-press
+            Jeremiah Owyang, Founder of Crowd Companies
+        .item
+          .press-content
+            .press-text
+              %h3
+                At the Ouishare Fest, the great and the good from Europe’s sharing economy have been delving deep into what it means to be running a collaborative business model within a capitalist framework.
+          .label-press
+            Izabella Kaminska, FT
+        .item
+          .press-content
+            .press-text
+              %h3
+                L’édition 2015 du OuiShare Fest marque une nouvelle étape, celle de la crise existentielle, voire d’adolescence (tout grandit si vite avec le numérique).
+          .label-press
+            Usine Digital
+        .item
+          .press-content
+            .press-text
+              %h3
+                When co-operatives and left-wingers gathered at the Fest to discuss ways that grass-roots organisations could undermine giant repositories of data like Facebook, the blockchain made it into almost every speech.
+          .label-press
+            The Economist
+
+      %img.quote-left-carousel{:src => '/assets/quote_left.png', :alt => 'quote left'}
+      %img.quote-right-carousel{:src => '/assets/quote_left.png', :alt => 'quote right'}
+      / Controls
+      %a.left.carousel-control{:href => "#myCarousel", 'data-slide' => "prev"}
+        &lsaquo;
+
+      %a.right.carousel-control{:href => "#myCarousel", 'data-slide' => "next" }
+        &rsaquo;
 
 / Zero Waste banner
 
-.become_partner#_zerowaste
+.become_partner.vmargin#_zerowaste
   .container
     .row.centered
       .col-md-6.col-md-offset-3.col-sm-12
@@ -198,105 +165,28 @@
           %a{href: home_zero_waste_event_path}
             = t('dynamic_translations.zerowaste.btn_text')
 
-
-/ OuiShare Radio
-.blank_bg#_radio{:style => 'padding-top:7%;'}
-  .container
-    .row.centered
-      %h3.ouishare_stencil
-        = t('dynamic_translations.radio.title')
-      %hr.pink
-
-    .row.centered.btn-space
-      .col-md-8.col-md-offset-2
-        .row
-          .col-md-12
-            .col-md-6.col-md-offset-3
-              %a{href: "https://soundcloud.com/ouishare", :target => "_blank", :style => "width: 170px;"}
-                %button.btn.btn-large.btn-primary
-                  = t('dynamic_translations.radio.listen')
-
-
-/ .blank_bg.vspace#_about_press
+/ #_awards.vspace.aboutouishare-section
 /   .container
 /     .row.centered
 /       %h3.ouishare_stencil
-/         = t('dynamic_translations.press.title')
+/         = t('dynamic_translations.ouishare_awards.title')
 /       %hr.pink
 /       %br
+/       %br
+/       .container.round_fond
+/         .row
+/           .col-md-8.col-md-offset-2
+/             %p
+/               = t('dynamic_translations.ouishare_awards.first_part')
 
-/     #myCarousel.carousel.slide.col-xs-12.col-md-offset-1.col-lg-offset-2.col-md-10.col-lg-8{ 'data-ride' => "carousel"}
-
-/       /Wrapper for slides
-/       .carousel-inner
-/         .item.active
-/           .press-content
-/             .press-text
-/               %h3
-/                 The Fest is an event to not only inspire the new opportunities in the Collaborative Economy, but also to provide a venue to outline and debate the challenges.
-/           .label-press
-/             Jeremiah Owyang, Founder of Crowd Companies
-/         .item
-/           .press-content
-/             .press-text
-/               %h3
-/                 There's no other conference I've been to that has this 'TED meets Burning Man' feel.
-/           .label-press
-/             Arun Sundararajan, Professor at NYU’s Stern School of Business
-/         .item
-/           .press-content
-/             .press-text
-/               %h3
-/                 At the Ouishare Fest, the great and the good from Europe’s sharing economy have been delving deep into what it means to be running a collaborative business model within a capitalist framework.
-/           .label-press
-/             Izabella Kaminska, FT
-/         .item
-/           .press-content
-/             .press-text
-/               %h3
-/                 L’édition 2015 du OuiShare Fest marque une nouvelle étape, celle de la crise existentielle, voire d’adolescence (tout grandit si vite avec le numérique).
-/           .label-press
-/             Usine Digital
-/         .item
-/           .press-content
-/             .press-text
-/               %h3
-/                 When co-operatives and left-wingers gathered at the Fest to discuss ways that grass-roots organisations could undermine giant repositories of data like Facebook, the blockchain made it into almost every speech.
-/           .label-press
-/             The Economist
-
-/       %img.quote-left-carousel{:src => '/assets/quote_left.png', :alt => 'quote left'}
-/       %img.quote-right-carousel{:src => '/assets/quote_left.png', :alt => 'quote right'}
-/       / Controls
-/       %a.left.carousel-control{:href => "#myCarousel", 'data-slide' => "prev"}
-/         &lsaquo;
-
-/       %a.right.carousel-control{:href => "#myCarousel", 'data-slide' => "next" }
-/         &rsaquo;
-
-
-#_awards.vspace.aboutouishare-section
-  .container
-    .row.centered
-      %h3.ouishare_stencil
-        = t('dynamic_translations.ouishare_awards.title')
-      %hr.pink
-      %br
-      %br
-      .container.round_fond
-        .row
-          .col-md-8.col-md-offset-2
-            %p
-              = t('dynamic_translations.ouishare_awards.first_part')
-
-        .row
-          .col-md-8.col-md-offset-2
-            .col-md-12
-              %img{:src => '/assets/ouishare-award.png', :alt => 'ouishare awards logo', :style => 'width:50%;'}
-            .col-md-12
-              %a{:href => 'http://awards.ouishare.net/2015/', :target => '_blank'}
-                .btn.btn-embossed.btn-primary{:style => 'margin: 30px 0px 0px 0px;'}
-                  = t('dynamic_translations.ouishare_awards.see_2015_winners')
+/         .row
+/           .col-md-8.col-md-offset-2
+/             .col-md-12
+/               %img{:src => '/assets/ouishare-award.png', :alt => 'ouishare awards logo', :style => 'width:50%;'}
+/             .col-md-12
+/               %a{:href => 'http://awards.ouishare.net/2015/', :target => '_blank'}
+/                 .btn.btn-embossed.btn-primary{:style => 'margin: 30px 0px 0px 0px;'}
+/                   = t('dynamic_translations.ouishare_awards.see_2015_winners')
 
 
 
@@ -324,3 +214,21 @@
                 %button.btn.btn-embossed.btn-primary{:style => 'margin: 40px 0px 0px 0px;'}
                   = t('dynamic_translations.about.ouishare_btn')
 
+/ Join section
+.blank_bg.vspace
+  .container
+    .row.centered
+      %h3.ouishare_stencil
+        = t('dynamic_translations.join.ready')
+    .row.centered
+      .col-md-6.col-md-offset-3
+        %br
+        %br
+        %p.centered
+          %img.img-responsive{alt: "Ready to join?", src: "assets/osf16-join.jpg"}/
+    .row.centered.btn-space
+      .col-md-12
+        .col-md-6.col-md-offset-3
+          %a{:href => 'join#eventbrite'}
+            %button.btn.btn-large.btn-primary
+              = t('dynamic_translations.reminder_ticket.getyourtickets')

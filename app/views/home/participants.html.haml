@@ -57,6 +57,20 @@
           /         %button.btn.btn-embossed.btn-primary
           /           = t('dynamic_translations.team.hide_all')
 
+/ Curators
+#_curators.vspace
+  .container
+    .row.centered
+      %h3.ouishare_stencil
+        = t('dynamic_translations.program.curators')
+      %hr.pink
+      - if !@curators.blank?
+        .ch-grid
+          - @curators.each do |team_member|
+            .col-lg-3.individuals-list-display
+              %li
+                = render "/individuals/partials/team_member_display", :team_member => team_member 
+
 .partners-container#_partners{:style => 'padding-top:100px'}
   .container.sinfo
     - if !@partners.blank?
@@ -120,6 +134,25 @@
           %a{:href => 'mailto:partners@ouisharefest.com'}
             / Become a partner
             = t('dynamic_translations.get_involved.partners_txt')
+
+/ Join section
+.blank_bg.vspace
+  .container
+    .row.centered
+      %h3.ouishare_stencil
+        = t('dynamic_translations.join.ready')
+    .row.centered
+      .col-md-6.col-md-offset-3
+        %br
+        %br
+        %p.centered
+          %img.img-responsive{alt: "Ready to join?", src: "assets/osf16-join.jpg"}/
+    .row.centered.btn-space
+      .col-md-12
+        .col-md-6.col-md-offset-3
+          %a{:href => 'join#eventbrite'}
+            %button.btn.btn-large.btn-primary
+              = t('dynamic_translations.reminder_ticket.getyourtickets')
 
 / .blank_bg#_whoscoming
 /   .container.tickets-section 
