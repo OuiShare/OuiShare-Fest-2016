@@ -28,13 +28,13 @@
   }
 }
 
-@media (max-width: 1200px){
-  .navbar-header{
-    float: none;
-  }
-}
+// @media (max-width: 1200px){
+//   .navbar-header{
+//     float: none;
+//   }
+// }
 
-/** Navbar breakpoint override */ 
+/** Navbar breakpoint override bootply/120604 */ 
 @media (max-width: 1200px) {
     .navbar-header {
         float: none;
@@ -71,7 +71,7 @@
       display:block !important;
   }
 }
-/* // Navbar brealpoint override end **/
+/* // Navbar breakpoint override end **/
 
 
 // @media (max-width: 1999px){
