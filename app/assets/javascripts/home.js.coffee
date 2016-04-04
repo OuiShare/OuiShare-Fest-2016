@@ -134,7 +134,7 @@ $(document).ready ->
 
   
   #Slideshow
-  
+
   $(".banner").revolution
     delay: 3000
     startwidth: 1040
@@ -159,6 +159,12 @@ $(document).ready ->
     hideSliderAtLimit: 0 # Hide the whole slider, and stop also functions if Width of Browser is less than this value
     fullWidth: "on"
     shadow: 0 #0 = no Shadow, 1,2,3 = 3 Different Art of Shadows -  (No Shadow in Fullwidth Version !)
+
+  $(".banner").revpause()
+  $('.banner').mouseover ->
+    $(".banner").revresume()
+    return
+
 
 
   init_map = ->

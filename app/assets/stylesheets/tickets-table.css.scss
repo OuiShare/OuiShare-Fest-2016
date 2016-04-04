@@ -1,7 +1,7 @@
 // All styles for tickets-table
 
 .tickets-table [class^=col-]{
-  padding: 0.8em 1.2em;
+  padding: 0.6em 1.2em;
   /*border-top: 1px solid #001E60;*/
   /*border-bottom: 1px solid #001E60;*/
 }
@@ -32,8 +32,7 @@
     }
   }
   .title, .title-inverse, .title-blue {
-    font-family:'naiv_normal';
-    /*padding: 1.5em 1.2em;*/
+    padding: 0.8em 1.2em;
     font-size: medium;
     font-weight: bold;
   }
@@ -46,6 +45,7 @@
     color: #001E60;
   }
   .title-blue {
+    font-family:'naiv_normal';
     text-transform: uppercase;
     border: 1px solid white !important;
     border-bottom: none !important;

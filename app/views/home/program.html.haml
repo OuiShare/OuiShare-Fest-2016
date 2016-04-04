@@ -1,4 +1,4 @@
-.triangle_bg_3.white_txt.vspace
+.triangle_bg_1.white_txt.vspace
   .container
     .row.centered
       .col-md-10.col-md-offset-1
@@ -27,16 +27,16 @@
         %p
           = t('dynamic_translations.program_structure.text_c')
 
-    / .blank_bg
-    /   .container
-    /     .row.centered#_schedule
-    /       %br
-    /       %br
-    /       %a#sched-embed{:href => "http://ouisharefestparis2016.sched.org/grid/"}
-    /       %script{:type => "text/javascript", :src => "http://ouisharefestparis2016.sched.org/js/embed.js"}
+.blank_bg
+  .container
+    .row.centered#_schedule
+      %br
+      %br
+      %a#sched-embed{:href => "http://ouisharefestparis2016.sched.org/grid/"}
+      %script{:type => "text/javascript", :src => "http://ouisharefestparis2016.sched.org/js/embed.js"}
 
-    / .triangle_bg_3.white_txt.vspace
-    /   .container
+.triangle_bg_3.white_txt.vspace
+  .container
     .row.centered
       .col-md-10.col-md-offset-1.col-sm-12
         .tickets-table.program-structure
@@ -174,20 +174,29 @@
         %br
         %br
         %p
-          %b
-            = t('dynamic_translations.goldrush.p1')
+          = t('dynamic_translations.goldrush.text1')
         %p
-          = t('dynamic_translations.goldrush.p2a')
-          %a{href: "http://content.time.com/time/specials/packages/article/0,28804,2059521_2059717_2059710,00.html", target: "_blank"}
-            = t('dynamic_translations.goldrush.p2b')
-          = t('dynamic_translations.goldrush.p2c')
+          = t('dynamic_translations.goldrush.text2')
         %p
-          = t('dynamic_translations.goldrush.p3')
-        %p
-          = t('dynamic_translations.goldrush.p4')
+          = t('dynamic_translations.goldrush.text3')
         %p
           %b
-            = t('dynamic_translations.goldrush.p5')
+            = t('dynamic_translations.goldrush.text4')
+        / %p
+        /   %b
+        /     = t('dynamic_translations.goldrush.p1')
+        / %p
+        /   = t('dynamic_translations.goldrush.p2a')
+        /   %a{href: "http://content.time.com/time/specials/packages/article/0,28804,2059521_2059717_2059710,00.html", target: "_blank"}
+        /     = t('dynamic_translations.goldrush.p2b')
+        /   = t('dynamic_translations.goldrush.p2c')
+        / %p
+        /   = t('dynamic_translations.goldrush.p3')
+        / %p
+        /   = t('dynamic_translations.goldrush.p4')
+        / %p
+        /   %b
+        /     = t('dynamic_translations.goldrush.p5')
         %p
           %a{href: "http://magazine.ouishare.net/2015/12/after-the-gold-rush", target: "_blank"}
             = t('dynamic_translations.goldrush.p6')
