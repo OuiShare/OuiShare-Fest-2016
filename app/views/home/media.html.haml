@@ -110,6 +110,25 @@
                 %button.btn.btn-large.btn-primary
                   = t('dynamic_translations.radio.listen')
 
+/ OuiShare Stories
+.blank_bg#stories{:style => 'padding-top:7%;'}
+  .container
+    .row.centered
+      %h3.ouishare_stencil
+        = t('dynamic_translations.stories.title')
+      %hr.pink
+      %br
+      %br
+    .row.centered.btn-space
+      .col-md-8.col-md-offset-2
+        .row
+          .col-md-12
+            .col-md-6.col-md-offset-3
+              %a{href: "http://stories.ouisharefest.com", :target => "_blank", :style => "width: 170px;"}
+                %button.btn.btn-large.btn-primary
+                  = t('dynamic_translations.stories.read')
+
+
 / Join section
 .blank_bg.vspace
   .container
