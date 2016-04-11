@@ -20,7 +20,7 @@
           %a.dropdown-toggle{href: "/about"}
             =t('dynamic_translations.about.title')
             / %b.caret
-          %ul.dropdown-menu
+          %ul.dropdown-menu.hidden-sm
             %li
               %a{href: "about#_about"}
                 = t('dynamic_translations.about.the_event')
@@ -54,7 +54,7 @@
         %li.dropdown
           %a.dropdown-toggle{href: "/program"}
             =t('dynamic_translations.program.title')
-          %ul.dropdown-menu
+          %ul.dropdown-menu.hidden-sm
             %li
               %a{href: "program#_schedule"}
                 = t('dynamic_translations.program.main_schedule')
@@ -90,7 +90,7 @@
         %li.dropdown
           %a.dropdown-toggle{href: "/participants"}
             =t('dynamic_translations.participants.title')
-          %ul.dropdown-menu
+          %ul.dropdown-menu.hidden-sm
             %li
               %a{href: "participants#_speakers"}
                 = t('dynamic_translations.speakers_attendees.title')
@@ -113,7 +113,7 @@
         %li.dropdown
           %a.dropdown-toggle{href: "/join"}
             =t('dynamic_translations.join.title')
-          %ul.dropdown-menu
+          %ul.dropdown-menu.hidden-sm
             %li
               %a{href: "join#_tickets"}
                 = t('dynamic_translations.tickets.title')
@@ -150,7 +150,7 @@
         %li.dropdown
           %a.dropdown-toggle{href: "/media"}
             =t('dynamic_translations.media.title')
-          %ul.dropdown-menu
+          %ul.dropdown-menu.hidden-sm
             %li
               %a{href: "media#news"}
                 = t('dynamic_translations.blog.title')
@@ -163,7 +163,7 @@
             %li
               %a{href: "http://stories.ouisharefest.com", target: "_blank"}
                 = t('dynamic_translations.stories.title')
-        %li
+        %li.hidden-sm
           .text-center.social-media-icons-header
             %a{href: "https://www.facebook.com/OuiShare", target: "_blank"}
               %img{src: "/assets/BT-facebook.png", width: "24px", :style => "margin-top:-10px;"}/
