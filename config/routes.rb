@@ -74,7 +74,7 @@ OuiShareFest::Application.routes.draw do
     get :zero_waste_event
     get :after_gold_rush
     # get :satellite_events
-    # get :stories
+    get :stories
     post :newsletter_collect_email
   end
 
