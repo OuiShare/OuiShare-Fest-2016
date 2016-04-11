@@ -59,6 +59,7 @@ OuiShareFest::Application.routes.draw do
     # post :contact, :action => :contact_email
     # get :entreprises
     # get :faq
+    get :fabl
     get :forward
     # get :freelancers
     get :getting_to_the_venue
