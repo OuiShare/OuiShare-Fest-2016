@@ -51,9 +51,12 @@ p.large {
 }
 
 #ff_projects {
-  .quote-left-carousel img,
-  .quote-right-carousel img {
+  .quote-left-carousel,
+  .quote-right-carousel {
     opacity: 0.5;
+  }
+  .press-content{
+    width: 75%;
   }
 }
 
