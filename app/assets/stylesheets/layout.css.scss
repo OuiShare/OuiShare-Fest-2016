@@ -50,15 +50,6 @@ p.large {
 
 }
 
-#ff_projects {
-  .quote-left-carousel,
-  .quote-right-carousel {
-    opacity: 0.5;
-  }
-  .press-content{
-    width: 75%;
-  }
-}
 
 .press-text{
   h3, h4, h5, h6, .h6{
@@ -85,6 +76,21 @@ p.large {
   text-align: left;
   margin-top: 15px;
   margin-left: 7.5%;
+}
+
+/* FF projects quotes overrides */
+#ff_projects {
+  .quote-left-carousel,
+  .quote-right-carousel {
+    opacity: 0.5;
+  }
+  .press-content{
+    width: 75%;
+    height: auto;
+  }
+  .label-press {
+    margin-right: 99px;
+  }
 }
 
 .navbar .nav li.dropdown:hover{
