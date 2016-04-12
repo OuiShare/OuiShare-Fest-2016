@@ -35,10 +35,9 @@
       %h3.ouishare_stencil
         = t('dynamic_translations.ff_projects.title')
       %hr.pink
-    .row.centered
+    .row.justify#lowtechlab
       .col-md-8.col-md-offset-2
-        %br
-        %H4.blue
+        %h4.blue
           %a{href: "http://lowtechlab.org/", target: "_blank"}
             Low Tech Lab
         %img.img-responsive{alt: "Low Tech Lab", src: "assets/ff16-logo-ltl.png"}/
@@ -56,8 +55,8 @@
               Clément CHABOT
               %br
               = t('dynamic_translations.ff_projects.ltl_author_desc')
-        %img.quote-left-carousel{:src => '/assets/quote_left.png', :alt => 'quote left'}
-        %img.quote-right-carousel{:src => '/assets/quote_left.png', :alt => 'quote right'}
+        %img.quote-left-carousel{:src => 'assets/quote_left.png', :alt => 'quote left'}
+        %img.quote-right-carousel{:src => 'assets/quote_left.png', :alt => 'quote right'}
     .row{:style => 'margin-top: 2em;'}
       .col-md-8.col-md-offset-2
         %p
@@ -75,7 +74,45 @@
             = t('dynamic_translations.ff_apply.selection_criteria_challenge')
             \:
           = t('dynamic_translations.ff_projects.ltl_challenge')
-
+    .row.justify#partup
+      .col-md-8.col-md-offset-2
+        %h4.blue
+          %a{href: "http://part-up.com/", target: "_blank"}
+            Part-up
+        %img.img-responsive{alt: "Low Tech Lab", src: "assets/ff16-logo-ltl.png"}/
+        %br
+        %p
+          = t('dynamic_translations.ff_projects.partup_desc')
+      .carousel.slide.col-xs-12.col-md-offset-1.col-lg-offset-2.col-md-10.col-lg-8
+        .carousel-inner
+          .item.active
+            .press-content{:style => 'height:3em;'}
+              .press-text
+                %p
+                  = t('dynamic_translations.ff_projects.partup_quote')
+            .label-press
+              Clément CHABOT
+              %br
+              = t('dynamic_translations.ff_projects.partup_author_desc')
+        %img.quote-left-carousel{:src => 'assets/quote_left.png', :alt => 'quote left'}
+        %img.quote-right-carousel{:src => 'assets/quote_left.png', :alt => 'quote right'}
+    .row{:style => 'margin-top: 2em;'}
+      .col-md-8.col-md-offset-2
+        %p
+          %b.caps
+            = t('dynamic_translations.ff_projects.status')
+            \:
+          = t('dynamic_translations.ff_projects.partup_status')
+          %br
+          %b.caps
+            = t('dynamic_translations.ff_apply.selection_criteria_impact')
+            \:
+          = t('dynamic_translations.ff_projects.partup_impact')
+         %br
+          %b.caps
+            = t('dynamic_translations.ff_apply.selection_criteria_challenge')
+            \:
+          = t('dynamic_translations.ff_projects.partup_challenge')
 
 .blank_bg#_about
   .container
