@@ -50,6 +50,13 @@ p.large {
 
 }
 
+#ff_projects {
+  .quote-left-carousel img,
+  .quote-right-carousel img {
+    opacity: 0.5;
+  }
+}
+
 .press-text{
   h3, h4, h5, h6, .h6{
     font-family: 'naiv_normal';

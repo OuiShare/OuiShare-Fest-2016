@@ -29,7 +29,7 @@
         %h5.tagline.text-center
           = t('dynamic_translations.ff_about.subtitle')
 
-.blank_bg.vspace#_projects
+.blank_bg.vspace#ff_projects
   .container
     .row.centered
       %h3.ouishare_stencil
@@ -47,9 +47,9 @@
       .carousel.slide.col-xs-12.col-md-offset-1.col-lg-offset-2.col-md-10.col-lg-8
         .carousel-inner
           .item.active
-            .press-content{:style => 'height:3em;'}
+            .press-content
               .press-text
-                %p
+                %p.h7
                   = t('dynamic_translations.ff_projects.ltl_quote')
             .label-press
               Clément CHABOT
@@ -87,12 +87,13 @@
       .carousel.slide.col-xs-12.col-md-offset-1.col-lg-offset-2.col-md-10.col-lg-8
         .carousel-inner
           .item.active
-            .press-content{:style => 'height:3em;'}
+            .press-content
               .press-text
                 %p
                   = t('dynamic_translations.ff_projects.partup_quote')
             .label-press
-              Clément CHABOT
+              %a{href: "https://linkedin.com/in/ralphboeije", target: "_blank"}
+                Ralph Boeije
               %br
               = t('dynamic_translations.ff_projects.partup_author_desc')
         %img.quote-left-carousel{:src => 'assets/quote_left.png', :alt => 'quote left'}
