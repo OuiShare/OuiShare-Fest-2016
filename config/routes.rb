@@ -52,29 +52,31 @@ OuiShareFest::Application.routes.draw do
   root :to => 'home#index'
 
   namespace :home, :path => nil do
-    get :forward
+    get :about
+    get :after_gold_rush
     get :code_of_conduct
-    # get :faq
     # get :contact
     # post :contact, :action => :contact_email
-    get :site_off
-    get :program
-    get :about
-    get :participants
-    get :join
-    # get :freelancers
     # get :entreprises
-    # get :press_and_media
-    # get :sliders
-    get :news
+    # get :faq
+    get :fabl
+    get :forward
+    # get :freelancers
+    get :getting_to_the_venue
+ 
+    get :join
     get :media
+    get :news
+    get :participants
+    # get :press_and_media
+    get :program
+    # get :satellite_events
+    get :site_off
+    # get :sliders
+    # get :stories
     get :travel_information
     get :where_to_stay
-    get :getting_to_the_venue
     get :zero_waste_event
-    get :after_gold_rush
-    # get :satellite_events
-    # get :stories
     post :newsletter_collect_email
   end
 
