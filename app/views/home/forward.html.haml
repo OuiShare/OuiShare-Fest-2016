@@ -37,26 +37,27 @@
       %hr.pink
     .row.centered
       .col-md-8.col-md-offset-2
+        %br
         %H4.blue
           %a{href: "http://lowtechlab.org/", target: "_blank"}
             Low Tech Lab
         %img.img-responsive{alt: "Low Tech Lab", src: "assets/ff16-logo-ltl.png"}/
+        %br
         %p
-          / = t('dynamic_translations.ff_projects.ltl_desc')
-          Low Tech Lab is a  collaborative research platform about low-tech. The project aims to build a worldwide community of inventors and handymen who create, cooperate and share knowledge about low-technologies solving 50 identified challenges from energy to nutrition.
+          = t('dynamic_translations.ff_projects.ltl_desc')
       .carousel.slide.col-xs-12.col-md-offset-1.col-lg-offset-2.col-md-10.col-lg-8
         .carousel-inner
           .item.active
             .press-content{:style => 'height:3em;'}
               .press-text
                 %p
-                  / = t('dynamic_translations.ff_projects.ltl_quote')
-                  The main challenge is to find an economic model to the project who is currently mainly financed by private donors. The second challenge is to find a way to develop but moreover manage the community of low-tech inventors who contribute to the platform. The last challenge will be to assess the impact of the project. Because building a solution to a problem is one thing, but spreading and implement it is another.
+                  = t('dynamic_translations.ff_projects.ltl_quote')
             .label-press
               Clément CHABOT
               %br
-              / = t('dynamic_translations.ff_projects.ltl_author_desc')
-              Engineer passionated about tropical areas and their biodiversity 
+              = t('dynamic_translations.ff_projects.ltl_author_desc')
+        %img.quote-left-carousel{:src => '/assets/quote_left.png', :alt => 'quote left'}
+        %img.quote-right-carousel{:src => '/assets/quote_left.png', :alt => 'quote right'}
     .row{:style => 'margin-top: 2em;'}
       .col-md-8.col-md-offset-2
         %p
@@ -64,12 +65,12 @@
             = t('dynamic_translations.ff_projects.status')
             \:
           = t('dynamic_translations.ff_projects.ltl_status')
-        %p
+          %br
           %b.caps
             = t('dynamic_translations.ff_apply.selection_criteria_impact')
             \:
           = t('dynamic_translations.ff_projects.ltl_impact')
-        %p
+         %br
           %b.caps
             = t('dynamic_translations.ff_apply.selection_criteria_challenge')
             \:
