@@ -80,6 +80,9 @@ p.large {
 
 /* FF projects quotes overrides */
 #ff_projects {
+  .carousel {
+    margin-top: 3em;
+  }
   .quote-left-carousel,
   .quote-right-carousel {
     opacity: 0.5;
