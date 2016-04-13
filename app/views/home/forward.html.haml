@@ -12,13 +12,13 @@
       .col-md-6.col-md-offset-3
         %h5.tagline
           = t('dynamic_translations.ff.tagline')
-      / .row
-      /   .col-md-8.col-md-offset-2
-      /     %br
-      /     %p.centered.join_bouton
-      /       %a{:href => '#_vote'}
-      /         %button.btn.btn-padding.btn-fandango
-      /           = t('dynamic_translations.ff_vote.title')
+      .row
+        .col-md-8.col-md-offset-2
+          %br
+          %p.centered.join_bouton
+            %a{:href => '#ff_projects'}
+              %button.btn.btn-padding.btn-fandango
+                = t('dynamic_translations.ff_projects.title')
 
 .blank_bg#_tagline
   .container
@@ -29,7 +29,7 @@
         %h5.tagline.text-center
           = t('dynamic_translations.ff_about.subtitle')
 
-.blank_bg.vspace#ff_projects
+.blank_bg.vspace#ff_projects{:style => 'margin-top: 3em;'}
   .container
     .row.centered
       %h3.ouishare_stencil
@@ -88,6 +88,8 @@
       .col-md-8.col-md-offset-2
         %p
           = t('dynamic_translations.ff_projects.partup_desc')
+        %br
+        %br
     .row
       .col-md-6.col-md-offset-3
         %img.space{style:"display:block;width:100%;height:auto", src:"http://placehold.it/16x9"}

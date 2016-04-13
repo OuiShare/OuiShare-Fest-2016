@@ -45,9 +45,15 @@
 
 }
 
-#ff_projects img.space {
-  margin-top: 2em;
+#ff_projects {
+  img {
+    max-width: 100%;
+  }
+  img.space {
+  margin-top: 1.5em;
 }
+}
+
 
 ul.criteria {
   padding: 2em 0;
