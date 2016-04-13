@@ -92,7 +92,7 @@
         %br
     .row
       .col-md-6.col-md-offset-3
-        %img.space{style:"display:block;width:100%;height:auto", src:"http://placehold.it/16x9"}
+        %img{style:"display:block;width:100%;height:auto", src:"http://placehold.it/16x9"}
         %iframe{allowfullscreen: "", frameborder: "0", src: "//www.youtube.com/embed/LNpMI5gpNuQ", style:"position:absolute;top:0;left:0;width:100%;height:100%"}
       .carousel.slide.col-xs-12.col-md-offset-1.col-lg-offset-2.col-md-10.col-lg-8
         .carousel-inner
@@ -305,9 +305,9 @@
           = t('dynamic_translations.ff_apply.process')
         / %h6
         /   = t('dynamic_translations.ff_apply.process_dl')
-        %p
-          %a{:href => 'https://ouisharefest.typeform.com/to/s8ouC5', :target => '_blank'}
-            = t('dynamic_translations.ff_apply.process_dl_link')
+        / %p
+        /   %a{:href => 'https://ouisharefest.typeform.com/to/s8ouC5', :target => '_blank'}
+        /     = t('dynamic_translations.ff_apply.process_dl_link')
         %p
           = t('dynamic_translations.ff_apply.process_dl_1')
         %ul
