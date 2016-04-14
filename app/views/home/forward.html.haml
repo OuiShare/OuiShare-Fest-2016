@@ -12,13 +12,13 @@
       .col-md-6.col-md-offset-3
         %h5.tagline
           = t('dynamic_translations.ff.tagline')
-      / .row
-      /   .col-md-8.col-md-offset-2
-      /     %br
-      /     %p.centered.join_bouton
-      /       %a{:href => '#_vote'}
-      /         %button.btn.btn-padding.btn-fandango
-      /           = t('dynamic_translations.ff_vote.title')
+      .row
+        .col-md-8.col-md-offset-2
+          %br
+          %p.centered.join_bouton
+            %a{:href => '#ff_projects'}
+              %button.btn.btn-padding.btn-fandango
+                = t('dynamic_translations.ff_projects.title')
 
 .blank_bg#_tagline
   .container
@@ -29,7 +29,153 @@
         %h5.tagline.text-center
           = t('dynamic_translations.ff_about.subtitle')
 
-.blank_bg#_about
+.blank_bg.vspace#ff_projects
+  .container
+    .row.centered{:style => 'margin-top: 7%;'}
+      %h3.ouishare_stencil
+        = t('dynamic_translations.ff_projects.title')
+      %hr.pink
+    .row.centered#lowtechlab
+      .col-md-8.col-md-offset-2
+        %a{href: "http://lowtechlab.org/", target: "_blank"}
+          %img.space{alt: "Low Tech Lab", src: "assets/ff16-logo-ltl.png"}/
+    .row.justify
+      .col-md-8.col-md-offset-2
+        %p
+          = t('dynamic_translations.ff_projects.ltl_desc')
+    .row
+      .col-md-6.col-md-offset-3
+        %img.space{style:"display:block;width:100%;height:auto", src:"assets/ff16-photo-lowtech.jpg"}
+      .carousel.slide.col-xs-12.col-md-offset-1.col-lg-offset-2.col-md-10.col-lg-8
+        .carousel-inner
+          .item.active
+            .press-content
+              .press-text
+                %p.h6
+                  = t('dynamic_translations.ff_projects.ltl_quote')
+            .label-press
+              Clément CHABOT
+              %br
+              = t('dynamic_translations.ff_projects.ltl_author_desc')
+        %img.quote-left-carousel{:src => 'assets/quote_left.png', :alt => 'quote left'}
+        %img.quote-right-carousel{:src => 'assets/quote_left.png', :alt => 'quote right'}
+    / .row{:style => 'margin-top: 2em;'}
+    /   .col-md-8.col-md-offset-2
+    /     %p
+    /       %b.caps
+    /         = t('dynamic_translations.ff_projects.status')
+    /         \:
+    /       = t('dynamic_translations.ff_projects.ltl_status')
+    /       %br
+    /       %b.caps
+    /         = t('dynamic_translations.ff_apply.selection_criteria_impact')
+    /         \:
+    /       = t('dynamic_translations.ff_projects.ltl_impact')
+    /       %br
+    /       %b.caps
+    /         = t('dynamic_translations.ff_apply.selection_criteria_challenge')
+    /         \:
+    /       = t('dynamic_translations.ff_projects.ltl_challenge')
+    /       %br
+    /       %br
+    /       %br
+
+    .row.centered#partup
+      .col-md-8.col-md-offset-2
+        %a{href: "http://part-up.com/", target: "_blank"}
+          %img{alt: "Part-up", src: "assets/ff16-logo-partup.png", style: "max-height:140px;"}/
+    .row.justify
+      .col-md-8.col-md-offset-2
+        %p
+          = t('dynamic_translations.ff_projects.partup_desc')
+        %br
+        %br
+    .row
+      .col-md-6.col-md-offset-3
+        %img{style:"display:block;width:100%;height:auto", src:"http://placehold.it/16x9"}
+        %iframe{allowfullscreen: "", frameborder: "0", src: "//www.youtube.com/embed/LNpMI5gpNuQ", style:"position:absolute;top:0;left:0;width:100%;height:100%"}
+      .carousel.slide.col-xs-12.col-md-offset-1.col-lg-offset-2.col-md-10.col-lg-8
+        .carousel-inner
+          .item.active
+            .press-content
+              .press-text
+                %p.h6
+                  = t('dynamic_translations.ff_projects.partup_quote')
+            .label-press
+              %a{href: "https://linkedin.com/in/ralphboeije", target: "_blank"}
+                Ralph Boeije
+              %br
+              = t('dynamic_translations.ff_projects.partup_author_desc')
+        %img.quote-left-carousel{:src => 'assets/quote_left.png', :alt => 'quote left'}
+        %img.quote-right-carousel{:src => 'assets/quote_left.png', :alt => 'quote right'}
+    / .row{:style => 'margin-top: 2em;'}
+    /   .col-md-8.col-md-offset-2
+    /     %p
+    /       %b.caps
+    /         = t('dynamic_translations.ff_projects.status')
+    /         \:
+    /       = t('dynamic_translations.ff_projects.partup_status')
+    /       %br
+    /       %b.caps
+    /         = t('dynamic_translations.ff_apply.selection_criteria_impact')
+    /         \:
+    /       = t('dynamic_translations.ff_projects.partup_impact')
+    /       %br
+    /       %b.caps
+    /         = t('dynamic_translations.ff_apply.selection_criteria_challenge')
+    /         \:
+    /       = t('dynamic_translations.ff_projects.partup_challenge')
+    /       %br
+    /       %br
+    /       %br
+
+    .row.centered#s4s
+      .col-md-8.col-md-offset-2
+        %a{href: "http://science4sustainability.com/", target: "_blank"}
+          %img{alt: "Science 4 Sustainability", src: "assets/ff16-logo-s4s.png", style: "max-height:160px;"}/
+    .row.justify
+      .col-md-8.col-md-offset-2
+        %p
+          = t('dynamic_translations.ff_projects.s4s_desc')
+    .row
+      .col-md-6.col-md-offset-3
+        %img.space{style:"display:block;width:100%;height:auto", src:"assets/ff16-photo-s4s.jpg"}
+      .carousel.slide.col-xs-12.col-md-offset-1.col-lg-offset-2.col-md-10.col-lg-8
+        .carousel-inner
+          .item.active
+            .press-content
+              .press-text
+                %p.h6
+                  = t('dynamic_translations.ff_projects.s4s_quote')
+            .label-press
+              %a{href: "https://www.linkedin.com/in/mirabangel", target: "_blank"}
+                Mira Bangel
+              %br
+              = t('dynamic_translations.ff_projects.s4s_author_desc')
+        %img.quote-left-carousel{:src => 'assets/quote_left.png', :alt => 'quote left'}
+        %img.quote-right-carousel{:src => 'assets/quote_left.png', :alt => 'quote right'}
+    / .row{:style => 'margin-top: 2em;'}
+    /   .col-md-8.col-md-offset-2
+    /     %p
+    /       %b.caps
+    /         = t('dynamic_translations.ff_projects.status')
+    /         \:
+    /       = t('dynamic_translations.ff_projects.s4s_status')
+    /       %br
+    /       %b.caps
+    /         = t('dynamic_translations.ff_apply.selection_criteria_impact')
+    /         \:
+    /       = t('dynamic_translations.ff_projects.s4s_impact')
+    /       %br
+    /       %b.caps
+    /         = t('dynamic_translations.ff_apply.selection_criteria_challenge')
+    /         \:
+    /       = t('dynamic_translations.ff_projects.s4s_challenge')
+    /       %br
+    /       %br
+    /       %br
+
+.triangle_bg_3.white_txt#_about
   .container
     .second-section
       .row.centered
@@ -62,7 +208,7 @@
           /     = t('dynamic_translations.ff_about.p3_apply_here')
           /     \>>
 
-.triangle_bg_3.white_txt#_apply{style:"padding-top: 7%; margin-bottom:2%"}
+.blank_bg.vspace#_apply
   .container
     .row.centered
       %h3.ouishare_stencil
@@ -102,8 +248,6 @@
         /       = t('dynamic_translations.ff.btn_apply')
         / %br
 
-.blank_bg.vspace{style:"padding-top: 0"}
-  .container
     .row.justify
       .col-md-8.col-md-offset-2
         %h4
@@ -161,9 +305,9 @@
           = t('dynamic_translations.ff_apply.process')
         / %h6
         /   = t('dynamic_translations.ff_apply.process_dl')
-        %p
-          %a{:href => 'https://ouisharefest.typeform.com/to/s8ouC5', :target => '_blank'}
-            = t('dynamic_translations.ff_apply.process_dl_link')
+        / %p
+        /   %a{:href => 'https://ouisharefest.typeform.com/to/s8ouC5', :target => '_blank'}
+        /     = t('dynamic_translations.ff_apply.process_dl_link')
         %p
           = t('dynamic_translations.ff_apply.process_dl_1')
         %ul
@@ -262,22 +406,23 @@
     .row.centered
       .col-md-8.col-md-offset-2
         %br
-        %p
-          %b.caps
-            = t('dynamic_translations.ff_vote.jury_selected')
-          %a{:href => 'http://lowtechlab.org/', :target => '_blank'}
-            The Low Tech Lab
-          %br
-          %p
-            = t('dynamic_translations.ff_vote.lowtechlab_desc')
+        / %p
+        /   %b.caps
+        /     = t('dynamic_translations.ff_vote.jury_selected')
+        /   %a{:href => 'http://lowtechlab.org/', :target => '_blank'}
+        /     The Low Tech Lab
+        /   %br
+        /   %p
+        /     = t('dynamic_translations.ff_vote.lowtechlab_desc')
         / %p
         /   %b.caps
         /     = t('dynamic_translations.ff_vote.now_we_invite')
-        / %h5
-        /   %span.tagline
-        /     / = t('dynamic_translations.ff_vote.open_soon')
-        /     / = t('dynamic_translations.ff_vote.vote_now')
-        /     / = t('dynamic_translations.ff_vote.vote_favourites')
+        %h5
+          %span.tagline
+            / = t('dynamic_translations.ff_vote.open_soon')
+            / = t('dynamic_translations.ff_vote.vote_now')
+            / = t('dynamic_translations.ff_vote.vote_favourites')
+            = t('dynamic_translations.ff_vote.thank_you')
         %br
     .row.centered
       .col-md-10.col-md-offset-1

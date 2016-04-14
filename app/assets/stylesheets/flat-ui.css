@@ -475,7 +475,8 @@ body {
   font-family: 'regular', Open Sans, Arial, sans-serif;
   font-size: 16px;
   line-height: 1.231;
-  color: #34495e;
+  /*color: #34495e;*/
+  color:#001E60;
   background-color: #ffffff;
 }
 a {
