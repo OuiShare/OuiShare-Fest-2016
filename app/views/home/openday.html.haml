@@ -25,12 +25,12 @@
   .container
     .row.centered
       .col-lg-6.col-lg-offset-3.col-md-8.col-md-offset-2
-        %p{:style => 'margin-top: 1.8em;'}
+        %p.large{:style => 'margin-top: 1.8em;'}
           / = t('dynamic_translations.openday.about')
           A travers des parcours thématiques, des conférences, des ateliers collaboratifs, des startups innovantes ou des initiatives citoyennes, les portes du Cabaret Sauvage s’ouvrent aux publics intéressés par les enjeux de la société collaborative. Vous en en sortirez équipés pour passer à l’action et prendre part au monde qui se crée.
         %br
 
-.triangle_bg_4.white_txt.vspace
+.triangle_bg_4.white_txt.vspace#programme
   .container
     .row.centered
       %h3.ouishare_stencil
@@ -117,7 +117,7 @@
                 = render "/individuals/partials/team_member_display", :team_member => team_member 
 
 
-.partners-container
+.partners-container#partenaires
   .container.sinfo
     - if !@odpartners.blank?
       .row.centered
