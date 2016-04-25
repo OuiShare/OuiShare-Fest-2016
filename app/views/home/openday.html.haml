@@ -1,4 +1,4 @@
-.blank_bg.vspace{:style => 'padding-top:120px;'}
+.openday.vspace{:style => 'padding-top:120px;'}
   .container
     .main-section
       .row
@@ -30,7 +30,7 @@
           A travers des parcours thématiques, des conférences, des ateliers collaboratifs, des startups innovantes ou des initiatives citoyennes, les portes du Cabaret Sauvage s’ouvrent aux publics intéressés par les enjeux de la société collaborative. Vous en en sortirez équipés pour passer à l’action et prendre part au monde qui se crée.
         %br
 
-.blank_bg.vspace
+.triangle_bg_4.white_txt.vspace
   .container
     .row.centered
       %h3.ouishare_stencil
@@ -40,7 +40,7 @@
       %br
       %br
     .row.justify
-      .col-lg-6.col-lg-offset-3.col-md-8.col-md-offset-2
+      .col-md-8.col-md-offset-2
         %h5
           Parcours VERT : Être « écolo » chacun à son niveau
         %p
@@ -72,7 +72,7 @@
       %br
       %br
     .row.justify
-      .col-lg-6.col-lg-offset-3.col-md-8.col-md-offset-2
+      .col-md-8.col-md-offset-2
         %p
           %em
             “Il est temps de passer à l’action !”
@@ -108,13 +108,22 @@
       %hr.pink
       %br
       %br
-
-.blank_bg.vspace#partenaires
-  .container
     .row.centered
-      %h3.ouishare_stencil
-        / = t('dynamic_translations.openday.partners_title')
-        Les partenaires
-      %hr.pink
-      %br
-      %br
+      - if !@odspeaker.blank?
+        .ch-grid
+          - @odspeaker.each do |team_member|
+            .col-lg-3.individuals-list-display
+              %li
+                = render "/individuals/partials/team_member_display", :team_member => team_member 
+
+
+.partners-container
+  .container.sinfo
+    - if !@odpartners.blank?
+      .row.centered
+        %br
+        %h3.ouishare_stencil
+          = t('dynamic_translations.openday.partners_title')
+        %hr.pink
+        .partners
+      = render "/individuals/partials/partners_display", :partners => @odpartners, :important_partners_display => false

@@ -518,7 +518,7 @@ body {
     height:auto;
 }
 
-.main_bg, .fforward_bg {
+.main_bg, .fforward_bg, .openday {
     margin-top: 0px;
     padding-top:5%;
     padding-bottom: 7%;
