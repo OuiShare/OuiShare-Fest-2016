@@ -21,6 +21,8 @@
       /   %br
       .col-md-8.col-md-offset-2
         %p
+          = t('dynamic_translations.program.text')
+        %p
           = t('dynamic_translations.program_structure.text_a')
         / %p
         /   = t('dynamic_translations.program_structure.text_b')
@@ -125,19 +127,45 @@
             %button.btn.btn-large.btn-primary
               = t('dynamic_translations.speakers.see_all')
 
-.blank_bg
+/ .blank_bg
+/   .container
+/     .row.centered
+/       .col-md-8.col-md-offset-2
+/         %br
+/         %br
+/         %p
+/           = t('dynamic_translations.program.text')
+/       .col-md-6.col-md-offset-3.btn-space
+/         %a{href: "/join#_getinvolved"}
+/           %button.btn.btn-large.btn-primary
+/             = t('dynamic_translations.get_involved.title')
+
+.blank_bg#after_gold_rush
   .container
     .row.centered
-      .col-md-8.col-md-offset-2
+      %h3.ouishare_stencil
+        = t('dynamic_translations.goldrush.title')
+      %hr.pink
+
+    .col-md-10.col-md-offset-1.col-lg-8.col-lg-offset-2
+      .row.justify
         %br
         %br
         %p
-          = t('dynamic_translations.program.text')
-      .col-md-6.col-md-offset-3.btn-space
-        %a{href: "/join#_getinvolved"}
-          %button.btn.btn-large.btn-primary
-            = t('dynamic_translations.get_involved.title')
-
+          = t('dynamic_translations.goldrush.text1')
+        %p
+          = t('dynamic_translations.goldrush.text2')
+        %p
+          = t('dynamic_translations.goldrush.text3')
+        %p
+          %b
+            = t('dynamic_translations.goldrush.text4')
+        %p
+          %a{href: "http://stories.ouisharefest.com/after-the-gold-rush/", target: "_blank"}
+            = t('dynamic_translations.goldrush.p6')
+        %br
+        %br
+        %br
 
 
 /Program guidelines
@@ -162,47 +190,7 @@
 /               %li
 /                 = render "/individuals/partials/team_member_display", :team_member => team_member 
 
-.blank_bg#after_gold_rush
-  .container
-    .row.centered
-      %h3.ouishare_stencil
-        = t('dynamic_translations.goldrush.title')
-      %hr.pink
 
-    .col-md-10.col-md-offset-1.col-lg-8.col-lg-offset-2
-      .row.justify
-        %br
-        %br
-        %p
-          = t('dynamic_translations.goldrush.text1')
-        %p
-          = t('dynamic_translations.goldrush.text2')
-        %p
-          = t('dynamic_translations.goldrush.text3')
-        %p
-          %b
-            = t('dynamic_translations.goldrush.text4')
-        / %p
-        /   %b
-        /     = t('dynamic_translations.goldrush.p1')
-        / %p
-        /   = t('dynamic_translations.goldrush.p2a')
-        /   %a{href: "http://content.time.com/time/specials/packages/article/0,28804,2059521_2059717_2059710,00.html", target: "_blank"}
-        /     = t('dynamic_translations.goldrush.p2b')
-        /   = t('dynamic_translations.goldrush.p2c')
-        / %p
-        /   = t('dynamic_translations.goldrush.p3')
-        / %p
-        /   = t('dynamic_translations.goldrush.p4')
-        / %p
-        /   %b
-        /     = t('dynamic_translations.goldrush.p5')
-        %p
-          %a{href: "http://stories.ouisharefest.com/after-the-gold-rush/", target: "_blank"}
-            = t('dynamic_translations.goldrush.p6')
-        %br
-        %br
-        %br
 
 / Love Party
 .blank_bg.vspace#_love_party
