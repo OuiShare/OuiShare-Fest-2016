@@ -2,8 +2,8 @@
   .container
     .main-section
       .row
-        #head_logo_ff
-          = image_tag "/assets/logo-fest-2016-blue.svg"
+        #head_logo_edges
+          = image_tag "/assets/logo-fest-2016-openday.png"
       .row
         .col-md-6.col-md-offset-3
           / %br
@@ -18,23 +18,20 @@
           %p.centered.join_bouton
             %a{:href => '#programme'}
               %button.btn.btn-padding.btn-fandango
-                / = t('dynamic_translations.openday.discover_program')
                 Découvrez le programme !
 
-.blank_bg
+.blank_bg#programme
   .container
     .row.centered
       .col-lg-6.col-lg-offset-3.col-md-8.col-md-offset-2
         %p.large{:style => 'margin-top: 1.8em;'}
-          / = t('dynamic_translations.openday.about')
           A travers des parcours thématiques, des conférences, des ateliers collaboratifs, des startups innovantes ou des initiatives citoyennes, les portes du Cabaret Sauvage s’ouvrent aux publics intéressés par les enjeux de la société collaborative. Vous en en sortirez équipés pour passer à l’action et prendre part au monde qui se crée.
         %br
 
-.triangle_bg_4.white_txt.vspace#programme
+.triangle_bg_4.white_txt.vspace
   .container
     .row.centered
       %h3.ouishare_stencil
-        / = t('dynamic_translations.openday.discover')
         DECOUVREZ LES 5 PARCOURS
       %hr.pink
       %br
@@ -76,7 +73,6 @@
   .container
     .row.centered
       %h3.ouishare_stencil
-        / = t('dynamic_translations.openday.about_title')
         A PROPOS DE L’OPEN DAY - JE REVAIS D’UN AUTRE MONDE
       %hr.pink
       %br
@@ -113,7 +109,6 @@
   .container
     .row.centered
       %h3.ouishare_stencil
-        / = t('dynamic_translations.openday.speakers_title')
         Les intervenants
       %hr.pink
       %br
@@ -133,7 +128,7 @@
       .row.centered
         %br
         %h3.ouishare_stencil
-          = t('dynamic_translations.openday.partners_title')
+          Les partenaires
         %hr.pink
         .partners
       = render "/individuals/partials/partners_display", :partners => @odpartners, :important_partners_display => false
