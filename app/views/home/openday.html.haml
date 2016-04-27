@@ -107,14 +107,14 @@
 
 .blank_bg#intervenants
   .container
-    .row.centered
-      %h3.ouishare_stencil
-        Les intervenants
-      %hr.pink
-      %br
-      %br
-    .row.centered
-      - if !@odspeaker.blank?
+    - if !@odspeaker.blank?
+      .row.centered
+        %h3.ouishare_stencil
+          Les intervenants
+        %hr.pink
+        %br
+        %br
+      .row.centered
         .ch-grid
           - @odspeaker.each do |team_member|
             .col-lg-3.individuals-list-display
