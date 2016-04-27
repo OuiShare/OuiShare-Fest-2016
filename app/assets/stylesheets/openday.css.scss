@@ -12,8 +12,18 @@
 	background-color: #fff074;
 }
 .parcours-violet {
-	background-color: #a4d8d2;
+	background-color: #b1acca;
 }
 .parcours-orange {
 	background-color: #f6c86f;
+}
+.parcours-vert, 
+.parcours-bleu,
+.parcours-jaune,
+.parcours-violet,
+.parcours-orange {
+	padding:1em 0.1em;
+	p, h3, h4, h5 {
+		color: white !important;
+	}
 }
