@@ -428,7 +428,7 @@ body {
     padding-bottom: 100px;
 }
 .vspace {
-    padding-top: 2.5em;
+    padding-top: 3.5em;
     padding-bottom: 2.5em;
 }
 .vmargin {
@@ -518,7 +518,7 @@ body {
     height:auto;
 }
 
-.main_bg, .fforward_bg {
+.main_bg, .fforward_bg, .openday {
     margin-top: 0px;
     padding-top:5%;
     padding-bottom: 7%;

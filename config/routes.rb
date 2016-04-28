@@ -65,8 +65,10 @@ OuiShareFest::Application.routes.draw do
     get :getting_to_the_venue
  
     get :join
+    get :loveparty
     get :media
     get :news
+    get :openday
     get :participants
     # get :press_and_media
     get :program

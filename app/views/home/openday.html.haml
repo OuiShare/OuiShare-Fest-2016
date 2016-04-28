@@ -1,0 +1,144 @@
+.openday{:style => 'padding-bottom:0;'}
+  .container
+    .main-section
+      .row
+        #head_logo
+          %img{alt: "Open Day", src: "assets/2016-openday-bg.png", style: "height:295px"}/
+          / %img{alt: "Open Day", src: "assets/2016-openday-bg-sq.png", style: "height:500px"}/
+      .row
+        .col-md-6.col-md-offset-3
+          / %br
+          %h5.normal
+            %span.vert-borders
+              = t('dynamic_translations.openday.hours')
+            %br
+            
+      .row.justify
+        .col-md-8.col-md-offset-2
+          %br
+          %br
+          %p
+            = t('dynamic_translations.openday.about')
+          %br
+      .row
+        .col-md-8.col-md-offset-2
+          %p.centered.join_bouton
+            %a{:href => '#parcours'}
+              %button.btn.btn-padding.btn-fandango
+                Découvrez le programme !
+          %br
+
+/ .blank_bg#programme{:style => 'padding-top:100px;'}
+/   .container
+/     .row.centered
+/       .col-md-8.col-md-offset-2
+
+
+.triangle_bg_1.white_txt.vspace{:style => 'margin-bottom:0;'}
+  .container
+    .row.centered
+      %h3.ouishare_stencil
+        A PROPOS
+      %hr.pink
+      %br
+      %br
+    .row.justify
+      .col-md-8.col-md-offset-2
+        %p
+          %em
+            = t('dynamic_translations.openday.time_action')
+        %p
+          = t('dynamic_translations.openday.about_2')
+        %p
+          Nous avons 3 objectifs :
+        %ul
+          %li
+            permettre à chacun de reprendre le pouvoir de son action dans la cité et dans l’économie
+          %li
+            montrer que la nouvelle économie peut être responsable, sociale et respectueuse des hommes et de la nature
+          %li
+            s’ancrer sur le territoire francilien, avec une journée en français et une majorité d’acteurs locaux représentés
+        %p
+          Dans chaque parcours thématique : 
+        %ul
+          %li
+            Le discours d’une personnalité inspirante pour introduire le sujet
+          %li
+            Un panel de 3 ou 4 intervenants
+          %li
+            Des ateliers collaboratifs et pratiques
+          %li
+            Des stands de mise en valeur d’initiatives et de start-ups 
+
+%div
+  %img{alt: "", src: "assets/openday.jpg", style: "background:#1abc9c; width:100%; height:auto; display: block;"}/
+
+
+.blank_bg.vspace#parcours
+  .container
+    .row.centered
+      %h3.ouishare_stencil
+        DÉCOUVREZ LES 4 PARCOURS 
+      %hr.pink
+      %br
+      %br
+    .row.justify
+      .col-md-8.col-md-offset-2
+        %h5.parcours-vert.white
+          = t('dynamic_translations.openday.parcours_vert_title')
+        %p
+          = t('dynamic_translations.openday.parcours_vert')
+          %br
+          %br
+        %h5.parcours-bleu.white
+          = t('dynamic_translations.openday.parcours_bleu_title')
+        %p
+          = t('dynamic_translations.openday.parcours_bleu')
+          %br
+          %br
+        %h5.parcours-jaune
+          = t('dynamic_translations.openday.parcours_jaune_title')
+        %p
+          = t('dynamic_translations.openday.parcours_jaune')
+          %br
+          %br
+        %h5.parcours-violet.white
+          = t('dynamic_translations.openday.parcours_violet_title')
+        %p
+          = t('dynamic_translations.openday.parcours_violet')
+          %br
+          %br
+        / %h5.parcours-orange.white
+        /   Parcours ORANGE : Impacter positivement la société depuis mon écran
+        / %p
+        /   = t('dynamic_translations.openday.parcours_orange')
+        /   %br
+        /   %br
+
+.blank_bg#intervenants
+  .container
+    - if !@odspeaker.blank?
+      .row.centered
+        %h3.ouishare_stencil
+          Les intervenants
+        %hr.pink
+        %br
+        %br
+      .row.centered
+        .ch-grid
+          - @odspeaker.each do |team_member|
+            .col-lg-3.individuals-list-display
+              %li
+                = render "/individuals/partials/team_member_display", :team_member => team_member 
+
+
+.partners-container#partenaires
+  .container.sinfo
+    - if !@odpartners.blank?
+      .row.centered
+        %br
+        %h3.ouishare_stencil
+          = t('dynamic_translations.openday.partners_title')
+        %hr.pink
+        .partners
+      = render "/individuals/partials/partners_display", :partners => @odpartners, :important_partners_display => false

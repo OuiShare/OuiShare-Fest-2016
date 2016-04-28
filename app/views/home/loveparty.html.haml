@@ -1,0 +1,21 @@
+.blank_bg.page
+  .container
+    .row.centered
+      %h3.ouishare_stencil
+        = t('dynamic_translations.love_party.title')
+      %hr.pink
+      %br
+      %br
+    .row.centered
+      .col-md-8.col-md-offset-2
+        %p
+          = t('dynamic_translations.love_party.text')
+
+    .row.centered.btn-space
+      .col-md-6.col-md-offset-3
+        %a{:href => 'http://www.digitick.com/ouishare-love-4-soiree-cabaret-sauvage-paris-20-mai-2016-css4-digitick-pg101-ri3897873.html', :target => '_blank'}
+          %button.btn.btn-large.btn-primary
+            = t('dynamic_translations.love_party.see_lineup')
+    .row.centered
+      .col-md-6.col-md-offset-3
+        %img.img-responsive{:src => '/assets/2016-loveparty-vert.png', :alt => 'love party picture'}

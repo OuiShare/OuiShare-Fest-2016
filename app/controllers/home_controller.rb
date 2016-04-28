@@ -195,6 +195,15 @@ class HomeController < ApplicationController
   def site_off
   end
 
+  def openday
+    if IndividualType.find_by_title('ODSpeakers')
+      @odspeaker = IndividualType.find_by_title('ODSpeakers').get_members
+    end
+    if IndividualType.find_by_title('ODPartners')      
+      @odpartners = IndividualType.find_by_title('ODPartners').get_members
+    end
+  end
+
   def program
     # @request_response = connect_to_sched().force_encoding('UTF-8')
 

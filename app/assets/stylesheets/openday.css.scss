@@ -1,0 +1,26 @@
+// Place all the styles related to the Open Day page here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.parcours-vert {
+	background-color: #98cc95;
+}
+.parcours-bleu {
+	background-color: #a4d8d2;
+}
+.parcours-jaune {
+	background-color: #fff074;
+}
+.parcours-violet {
+	background-color: #b1acca;
+}
+.parcours-orange {
+	background-color: #f6c86f;
+}
+.parcours-vert, 
+.parcours-bleu,
+.parcours-jaune,
+.parcours-violet,
+.parcours-orange {
+	padding:0.3em 0.2em;
+}
