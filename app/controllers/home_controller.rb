@@ -202,6 +202,9 @@ class HomeController < ApplicationController
     if IndividualType.find_by_title('ODPartners')      
       @odpartners = IndividualType.find_by_title('ODPartners').get_members
     end
+    if IndividualType.find_by_title('ODCommunity')      
+      @odcommunity = IndividualType.find_by_title('ODCommunity').get_members
+    end
   end
 
   def program

@@ -142,3 +142,14 @@
         %hr.pink
         .partners
       = render "/individuals/partials/partners_display", :partners => @odpartners, :important_partners_display => false
+
+.partners-container#community
+  .container.sinfo
+    - if !@odcommunity.blank?
+      .row.centered
+        %br
+        %h3.ouishare_stencil
+          = t('dynamic_translations.openday.community_title')
+        %hr.pink
+        .partners
+      = render "/individuals/partials/partners_display", :partners => @odcommunity, :important_partners_display => false
