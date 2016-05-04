@@ -10,15 +10,16 @@
       .col-md-8.col-md-offset-2
         %p
           = t('dynamic_translations.love.intro1')
-        %br
-        %br
         %p
           = t('dynamic_translations.love.intro2')
+    .row.centered
+      .col-md-8.col-md-offset-2
         %h4
           = t('dynamic_translations.love.get_ready')
+        %br
+        %br
         %p
           = t('dynamic_translations.love.doors')
-        %br
         %p
           %a{:href => 'http://www.radiomeuh.com', :target => '_blank'}
             = t('dynamic_translations.love.livestream')
@@ -41,7 +42,7 @@
               %span.caps
                 = t('dynamic_translations.love.facebook') 
           %a{:href => "https://www.youtube.com/watch?v=X9IH_Vk5M6k", :target => "_blank"}
-            %li.btn.btn-purple
+            %li.btn.btn-fandango
               %span.caps
                 = t('dynamic_translations.love.listen') 
         %h5
@@ -56,7 +57,7 @@
               %span.caps
                 = t('dynamic_translations.love.facebook') 
           %a{:href => "http://www.radiomeuh.com/", :target => "_blank"}
-            %li.btn.btn-purple
+            %li.btn.btn-fandango
               %span.caps
                 = t('dynamic_translations.love.website') 
           %a{:href => "https://www.mixcloud.com/WORLDWIDEFESTIVAL/phil-radio-meuh/", :target => "_blank"}
@@ -70,17 +71,17 @@
         %p
           = t('dynamic_translations.love.le_limonadier_desc')
         %ul.criteria
-          %a{:href => "http://www.facebook.com/Limonadier.net", :target => "_blank"}
-            %li.btn.btn-purple
-              %span.caps
+          %li
+            %a{:href => "http://www.facebook.com/Limonadier.net", :target => "_blank"}
+              %button.btn.btn-purple
                 = t('dynamic_translations.love.facebook') 
-          %a{:href => "http://www.radiomeuh.com/", :target => "_blank"}
-            %li.btn.btn-purple
-              %span.caps
+          %li
+            %a{:href => "http://www.radiomeuh.com/", :target => "_blank"}
+              %button.btn.btn-fandango
                 = t('dynamic_translations.love.website')
-          %a{:href => "https://soundcloud.com/limonadierofficial", :target => "_blank"}
-            %li.btn.btn-purple
-              %span.caps
+          %li
+            %a{:href => "https://soundcloud.com/limonadierofficial", :target => "_blank"}
+              %button.btn.btn-purple
                 = t('dynamic_translations.love.listen') 
 
     .row.centered
