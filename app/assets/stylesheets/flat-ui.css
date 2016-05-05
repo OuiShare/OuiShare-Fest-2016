@@ -5027,7 +5027,7 @@ a.list-group-item.active > .badge,
   line-height: 30px;
 }
 .modal-body {
-  padding: 20px 24px 20px;
+  padding: 1.5em 2.5em;
 }
 .modal-body p {
   font-size: 16px;
