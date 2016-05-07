@@ -19,11 +19,11 @@
           - if partner.first_name == 'Castorama'
             - special = "tooltip.castorama"
           - if important_partners_count == 1
-            .col-lg-12
+            .col-md-12
               %a{:href => partner.url, :target => "_blank", :class => "special_tooltip", :data => {'original-title' => "", 'placement' => 'right'}}
                 %img.img-responsive.display-inline{:alt => partner.first_name, :src => partner.attachment.url(:medium)}
           - elsif important_partners_count == 2
-            .col-lg-6
+            .col-md-6
               %a{:href => partner.url, :target => "_blank", :class => "special_tooltip", :data => {'original-title' => "", 'placement' => 'right'}}
                 %img.img-responsive.display-inline{:alt => partner.first_name, :src => partner.attachment.url(:medium)}
           - elsif important_partners_count == 3
@@ -31,7 +31,7 @@
               - placement = 'left'
             - else
               - placement = 'right'
-            .col-lg-4.main_partners
+            .col-md-4.main_partners
               - if !special.blank?
                 %a{:href => partner.url, :target => "_blank", :class => "special_tooltip", :data => {'original-title' => "", 'placement' => placement}}
                   %img.img-responsive.display-inline{:alt => partner.first_name, :src => partner.attachment.url(:medium)}
@@ -47,7 +47,7 @@
     - while !array_buffer.empty? do
       .row.centered
         - array_buffer.first(4).each do |partner|
-          .col-lg-3.partners
+          .col-sm-2.partners
             %a{:href => partner.url, :target => "_blank"}
               %img.img-responsive.display-inline{:alt => partner.first_name, :src => partner.attachment.url(:medium)}
           - array_buffer.delete_at(0)
@@ -60,7 +60,7 @@
       - if partner_number % 6 == 0 || partner_number == (partners.count - important_partners_count)
         .row.centered
           - array_buffer.each do |partner|
-            .col-lg-2.home_partners
+            .col-sm-2.col-xs-4.home_partners
               %a{:href => partner.url, :target => "_blank"}
                 %img.img-responsive.display-inline{:alt => partner.first_name, :src => partner.attachment.url(:medium)}
                 
