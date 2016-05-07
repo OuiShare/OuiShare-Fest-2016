@@ -23,7 +23,7 @@
       .row
         .col-md-8.col-md-offset-2
           %p.centered.join_bouton
-            %a{:href => '#parcours'}
+            %a{:href => '#programme'}
               %button.btn.btn-padding.btn-fandango
                 Découvrez le programme !
           %br
@@ -78,22 +78,28 @@
   .container
     .row.centered
       %h3.ouishare_stencil
-        DÉCOUVREZ LES 4 PARCOURS 
+        DÉCOUVREZ LES 5 PARCOURS 
       %hr.pink
       %br
       %br
     .row.justify
       .col-md-8.col-md-offset-2
+        %h5.parcours-orange.white
+          = t('dynamic_translations.openday.parcours_orange_title')
+        %p
+          = t('dynamic_translations.openday.parcours_orange')
+          %br
+          %br
         %h5.parcours-vert.white
           = t('dynamic_translations.openday.parcours_vert_title')
         %p
           = t('dynamic_translations.openday.parcours_vert')
           %br
           %br
-        %h5.parcours-bleu.white
-          = t('dynamic_translations.openday.parcours_bleu_title')
+        %h5.parcours-violet.white
+          = t('dynamic_translations.openday.parcours_violet_title')
         %p
-          = t('dynamic_translations.openday.parcours_bleu')
+          = t('dynamic_translations.openday.parcours_violet')
           %br
           %br
         %h5.parcours-jaune
@@ -102,16 +108,11 @@
           = t('dynamic_translations.openday.parcours_jaune')
           %br
           %br
-        %h5.parcours-violet.white
-          = t('dynamic_translations.openday.parcours_violet_title')
+        %h5.parcours-bleu.white
+          = t('dynamic_translations.openday.parcours_bleu_title')
         %p
-          = t('dynamic_translations.openday.parcours_violet')
-        / %h5.parcours-orange.white
-        /   Parcours ORANGE : Impacter positivement la société depuis mon écran
-        / %p
-        /   = t('dynamic_translations.openday.parcours_orange')
-        /   %br
-        /   %br
+          = t('dynamic_translations.openday.parcours_bleu')
+
     .row.centered.btn-space
       .col-md-12
         .col-md-6.col-md-offset-3
@@ -119,6 +120,14 @@
             %button.btn.btn-padding.btn-fandango
               = t('dynamic_translations.openday.register')
 
+
+.blank_bg#programme
+  %div
+    .row.centered
+      %br
+      %br
+      %a#sched-embed{:href => "http://ouisharefestparis2016.sched.org/"}
+      %script{:type => "text/javascript", :src => "http://ouisharefestparis2016.sched.org/js/embed.js"}
 
 .blank_bg#intervenants
   .container
