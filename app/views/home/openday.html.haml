@@ -129,7 +129,7 @@
       %a#sched-embed{:href => "http://ouisharefestparis2016.sched.org/"}
       %script{:type => "text/javascript", :src => "http://ouisharefestparis2016.sched.org/js/embed.js"}
 
-.blank_bg#intervenants
+.blank_bg.vspace#intervenants
   .container
     - if !@odspeaker.blank?
       .row.centered
@@ -155,7 +155,7 @@
           = t('dynamic_translations.openday.partners_title')
         %hr.pink
         .partners
-      = render "/individuals/partials/partners_display", :partners => @odpartners, :important_partners_display => false
+      = render "/individuals/partials/partners_display", :partners => @odpartners, :important_partners_display => true, :important_partners_count => 3
 
 .partners-container#community
   .container.sinfo
