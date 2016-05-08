@@ -231,6 +231,12 @@ class HomeController < ApplicationController
     end
   end
 
+  def zero_waste_event
+    if IndividualType.find_by_title('Zero Waste Partners')
+      @zerowaste = IndividualType.find_by_title('Zero Waste Partners').get_members
+    end
+  end
+
   def contact
     # Set marker options for contact map
     @lng = '39.8331'
