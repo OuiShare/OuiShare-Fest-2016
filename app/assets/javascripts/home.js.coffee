@@ -52,7 +52,7 @@ $(document).ready ->
   setTimeout (->
     $('#visit_modal').modal 'show'
     return
-  ), 1000
+  ), 10000
 
   $('.get-involved-link').click (e) ->
     $('#visit_modal').modal('hide')
