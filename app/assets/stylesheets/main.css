@@ -955,7 +955,12 @@ p.pink, p.pink a {
 .blue {
   color: #001E60 !important;
 }
-
+.red {
+    color: #8f2d47 !important;
+}
+h5.red {
+    font-weight: bold;
+}
 .white{
   color: #ffffff;
 }

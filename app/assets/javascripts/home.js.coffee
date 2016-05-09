@@ -43,11 +43,16 @@ $(document).ready ->
     $("html, body").animate({ scrollTop: 0 }, 600)
     $('#calendar').fullCalendar('render')  
 
-  if $('#visit_modal').length > 0
-    setTimeout (->
-      $('#visit_modal').modal('show')
-      return
-    ), 4000
+  # if $('#visit_modal').length > 0
+  #   setTimeout (->
+  #     $('#visit_modal').modal('show')
+  #     return
+  #   ), 4000
+  
+  setTimeout (->
+    $('#visit_modal').modal 'show'
+    return
+  ), 6000
 
   $('.get-involved-link').click (e) ->
     $('#visit_modal').modal('hide')

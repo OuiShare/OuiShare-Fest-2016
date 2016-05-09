@@ -32,14 +32,9 @@
           = t('dynamic_translations.zerowaste_examples.title')
         %p.text-center
           %b
-            = t('dynamic_translations.zerowaste_examples.1_subtitle')
+            = t('dynamic_translations.zerowaste_examples.toilets')
           %br
-          = t('dynamic_translations.zerowaste_examples.1_text')
-        %p.text-center
-          %b
-            = t('dynamic_translations.zerowaste_examples.2_subtitle')
-          %br
-          = t('dynamic_translations.zerowaste_examples.2_text')
+          = t('dynamic_translations.zerowaste_examples.toilets_text')
         %p.text-center
           %b
             = t('dynamic_translations.zerowaste_examples.3_subtitle')
@@ -49,22 +44,37 @@
           = t('dynamic_translations.zerowaste_examples.3_text')
         %p.text-center
           %b
-            = t('dynamic_translations.zerowaste_examples.4_subtitle')
+            = t('dynamic_translations.zerowaste_examples.leftovers')
           %br
-          = t('dynamic_translations.zerowaste_examples.4_text')
+          = t('dynamic_translations.zerowaste_examples.leftovers_text')
+          %a{href: "http://www.nowherekitchen.com/", target: "_blank"}
+            = t('dynamic_translations.zerowaste_examples.leftovers_nowhere')
         %p.text-center
           %b
-            = t('dynamic_translations.zerowaste_examples.5_subtitle')
+            = t('dynamic_translations.zerowaste_examples.banners')
           %br
-          = t('dynamic_translations.zerowaste_examples.5_text')
+          = t('dynamic_translations.zerowaste_examples.banners_text')
         %p.text-center
           %b
-            = t('dynamic_translations.zerowaste_examples.6_subtitle')
+            = t('dynamic_translations.zerowaste_examples.plastic')
           %br
-          = t('dynamic_translations.zerowaste_examples.6_text')
+          %a{href: "http://preciousplastic.com/en/", target: "_blank"}
+            = t('dynamic_translations.zerowaste_examples.plastic_precious')
+          = t('dynamic_translations.zerowaste_examples.plastic_text')
         %p.text-center
           %b
-            = t('dynamic_translations.zerowaste_examples.text')
+            = t('dynamic_translations.zerowaste_examples.zwetk')
+          %br
+          %a{href: "https://www.zerowastefrance.org/fr", target: "_blank"}
+            = t('dynamic_translations.zerowaste_examples.zwetk_text')
+          %br
+          = t('dynamic_translations.zerowaste_examples.zwetk_text2')
+
+        %p.text-center
+          %b
+            = t('dynamic_translations.zerowaste_examples.stakeholder')
+          %br
+          = t('dynamic_translations.zerowaste_examples.stakeholder_text')
 
       .row.travel_information
         %h4
@@ -75,18 +85,23 @@
             = t('dynamic_translations.zerowaste_help.contact')
 
       .row.centered{:style => "margin-top: 20px;"}
-        %p.text-center
+        %p
           %b
-            = t('dynamic_translations.zerowaste_more.title')
-        %p.text-center
-          %a{href: "http://bit.ly/zerowasteOSF", target: "_blank", :style => 'text-decoration:none;'}
+            = t('dynamic_translations.zerowaste_more.text')
+        %p
+          %a{href: "https://drive.google.com/drive/u/0/folders/0BwhQglW8Td0Bc0pQUE9LRVZPYWM", target: "_blank", :style => 'text-decoration:none;'}
             .btn.btn-pink.buy-tickets-btn
               = t('dynamic_translations.zerowaste_more.btn')
 
-      .row.centered{:style => "margin-top: 20px;"}
-        .col-md-12
-          %img{:src => '/assets/logos-zwevent.png', :alt => 'zero waste partners', :style => 'max-height:200px;'}
-
+      / .row.centered{:style => "margin-top: 20px;"}
+      /   .col-md-12
+      /     %img{:src => '/assets/logos-zwevent.png', :alt => 'zero waste partners', :style => 'max-height:200px;'}
+.partners-container#zerowaste-partners
+  .container.sinfo
+    - if !@zerowaste.blank?
+      .row.centered
+        .partners
+      = render "/individuals/partials/partners_display", :partners => @zerowaste, :important_partners_display => false
 
 / Join section
 .blank_bg.vspace

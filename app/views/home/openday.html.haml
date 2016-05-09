@@ -23,7 +23,7 @@
       .row
         .col-md-8.col-md-offset-2
           %p.centered.join_bouton
-            %a{:href => '#parcours'}
+            %a{:href => '#programme'}
               %button.btn.btn-padding.btn-fandango
                 Découvrez le programme !
           %br
@@ -78,40 +78,41 @@
   .container
     .row.centered
       %h3.ouishare_stencil
-        DÉCOUVREZ LES 4 PARCOURS 
+        DÉCOUVREZ LES 5 PARCOURS 
       %hr.pink
       %br
       %br
     .row.justify
       .col-md-8.col-md-offset-2
-        %h5.parcours-vert.white
+        %h5.parcours-orange.red
+          = t('dynamic_translations.openday.parcours_orange_title')
+        %p
+          = t('dynamic_translations.openday.parcours_orange')
+          %br
+          %br
+        %h5.parcours-vert.red
           = t('dynamic_translations.openday.parcours_vert_title')
         %p
           = t('dynamic_translations.openday.parcours_vert')
           %br
           %br
-        %h5.parcours-bleu.white
-          = t('dynamic_translations.openday.parcours_bleu_title')
+        %h5.parcours-violet.red
+          = t('dynamic_translations.openday.parcours_violet_title')
         %p
-          = t('dynamic_translations.openday.parcours_bleu')
+          = t('dynamic_translations.openday.parcours_violet')
           %br
           %br
-        %h5.parcours-jaune
+        %h5.parcours-jaune.red
           = t('dynamic_translations.openday.parcours_jaune_title')
         %p
           = t('dynamic_translations.openday.parcours_jaune')
           %br
           %br
-        %h5.parcours-violet.white
-          = t('dynamic_translations.openday.parcours_violet_title')
+        %h5.parcours-bleu.red
+          = t('dynamic_translations.openday.parcours_bleu_title')
         %p
-          = t('dynamic_translations.openday.parcours_violet')
-        / %h5.parcours-orange.white
-        /   Parcours ORANGE : Impacter positivement la société depuis mon écran
-        / %p
-        /   = t('dynamic_translations.openday.parcours_orange')
-        /   %br
-        /   %br
+          = t('dynamic_translations.openday.parcours_bleu')
+
     .row.centered.btn-space
       .col-md-12
         .col-md-6.col-md-offset-3
@@ -120,7 +121,22 @@
               = t('dynamic_translations.openday.register')
 
 
-.blank_bg#intervenants
+.blank_bg#programme
+  %div
+    .row.centered
+      %br
+      %br
+      %a#sched-embed{:href => "https://jerevaisdunautremondeopenda2016.sched.org/"}
+      %script{:type => "text/javascript", :src => "https://jerevaisdunautremondeopenda2016.sched.org/js/embed.js"}
+
+    .row.centered.btn-space
+      .col-md-12
+        .col-md-6.col-md-offset-3
+          %a{:href => "https://drive.google.com/folderview?id=0B0xMFi77V2dnUzQyNl9hM2NFMjQ&usp=sharing", target: "_blank"}
+            %button.btn.btn-padding.btn-fandango
+              = t('dynamic_translations.openday.download_program')
+
+.blank_bg.vspace#intervenants
   .container
     - if !@odspeaker.blank?
       .row.centered
@@ -146,7 +162,7 @@
           = t('dynamic_translations.openday.partners_title')
         %hr.pink
         .partners
-      = render "/individuals/partials/partners_display", :partners => @odpartners, :important_partners_display => false
+      = render "/individuals/partials/partners_display", :partners => @odpartners, :important_partners_display => true, :important_partners_count => 3
 
 .partners-container#community
   .container.sinfo
