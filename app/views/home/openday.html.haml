@@ -129,6 +129,13 @@
       %a#sched-embed{:href => "https://jerevaisdunautremondeopenda2016.sched.org/"}
       %script{:type => "text/javascript", :src => "https://jerevaisdunautremondeopenda2016.sched.org/js/embed.js"}
 
+    .row.centered.btn-space
+      .col-md-12
+        .col-md-6.col-md-offset-3
+          %a{:href => "https://drive.google.com/folderview?id=0B0xMFi77V2dnUzQyNl9hM2NFMjQ&usp=sharing", target: "_blank"}
+            %button.btn.btn-padding.btn-fandango
+              = t('dynamic_translations.openday.download_program')
+
 .blank_bg.vspace#intervenants
   .container
     - if !@odspeaker.blank?
