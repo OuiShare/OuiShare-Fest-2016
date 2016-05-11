@@ -1,2 +1,27 @@
-%div
-  %iframe{:frameborder => "0", :height => "1200", :width => "100%", :src => "http://stories.ouisharefest.com/", :scrolling => "no", :marginheight => "0", :marginwidth => "0"}
+.blank_bg.vspace
+  .container
+    .row.centered{:style => 'margin-top: 7%;'}
+      %h3.ouishare_stencil
+        Twitter Curator
+      %hr.pink
+    .row
+      %a.twitter-grid{:href => "https://twitter.com/kirilind/timelines/730400304718581760"}
+        Twitter grid (test)
+      %script{:src => "//platform.twitter.com/widgets.js", :charset => "utf-8", :async => ""}
+
+.blank_bg.vspace
+  .container
+    .row.centered
+      %h3.ouishare_stencil
+        Twitter widget (#osfest16 or @ouisharefest)
+      %hr.pink
+    .row
+      %a.twitter-timeline{:href => "https://twitter.com/search?q=%23osfest16%20OR%20%40ouisharefest", :data-widget-id => "730403834791628801"}
+
+= javascript_include_tag 'twitter-widget'
+
+
+
+
+/ %div
+/   %iframe{:frameborder => "0", :height => "1200", :width => "100%", :src => "http://stories.ouisharefest.com/", :scrolling => "no", :marginheight => "0", :marginwidth => "0"}
