@@ -77,6 +77,7 @@ OuiShareFest::Application.routes.draw do
     # get :sliders
     # get :stories
     get :travel_information
+    get :twt
     get :where_to_stay
     get :zero_waste_event
     post :newsletter_collect_email
