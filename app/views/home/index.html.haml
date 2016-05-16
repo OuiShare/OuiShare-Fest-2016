@@ -31,22 +31,27 @@
 #controls.controls
 = javascript_include_tag 'triangles'
 
+/ Tweetwall
+
+.blank_bg.vspace
+  .container
+    .row.centered
+      .col-md-10.col-md-offset-1
+        %a.twitter-timeline{:href => "https://twitter.com/search?q=%23osfest16%20OR%20%40ouisharefest", :'data-widget-id' => "730403834791628801", :height => "1000", :width => "1000"}
+          Tweets about OuiShare Fest 2016
+        %script
+          !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';
+          if(!d.getElementById(id)){js=d.createElement(s);
+          js.id=id;
+          js.src=p+"://platform.twitter.com/widgets.js";
+          fjs.parentNode.insertBefore(js,fjs);
+          }}(document,"script","twitter-wjs");
+
 / About the Fest
 .blank_bg
   .container
     .second-section
       .row.centered
-        / .carousel.slide.col-xs-12.col-md-offset-1.col-lg-offset-2.col-md-10.col-lg-8
-        /   .carousel-inner
-        /     .item.active
-        /       .press-content{:style => 'height:3em;'}
-        /         .press-text
-        /           %h3
-        /             = t('dynamic_translations.about.subtitle')
-        /       .label-press
-        /         Arun Sundararajan, NYU      
-        /   %img.quote-left-carousel{:src => '/assets/quote_left.png', :alt => 'quote left'}
-        /   %img.quote-right-carousel{:src => '/assets/quote_left.png', :alt => 'quote right'}
         .col-lg-6.col-lg-offset-3.col-md-8.col-md-offset-2
           %p.large{:style => 'margin-top: 1.8em;'}
             = t('dynamic_translations.about.landing_1')
