@@ -1,13 +1,33 @@
-.blank_bg.vspace
+.blank_bg.vspace.tweetwall
   .container
-    .row.centered{:style => 'margin-top: 7%;'}
-      %h3.ouishare_stencil
-        Twitter Curator
-      %hr.pink
-    .row
-      %a.twitter-grid{:href => "https://twitter.com/kirilind/timelines/730400304718581760"}
-        Twitter grid (test)
-      %script{:src => "//platform.twitter.com/widgets.js", :charset => "utf-8", :async => ""}
+    .row.centered
+      .col-md-4.col-sm-6
+        %a.twitter-timeline{:href => "https://twitter.com/hashtag/osfest16", :'data-widget-id' => "732199411867127808", :'data-chrome' => "noheader nofooter", :height => "1000"}
+          Tweets about OuiShare Fest 2016
+      .col-md-4.col-sm-6
+        %a.twitter-timeline{:href => "https://twitter.com/OuiShareFest", :'data-widget-id' => "424243584460541952", :'data-chrome' => "noheader nofooter", :height => "1000"}
+          Tweets by @OuiShareFest
+      .col-md-4.col-sm-6
+        %a.twitter-timeline{:href => "https://twitter.com/search?q=%40OuiShare%20OR%20%40OuiShareFest", :'data-widget-id' => "732206800662085633", :'data-chrome' => "noheader nofooter", :height => "1000"}
+          Tweets about OuiShare
+        %script
+          !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';
+          if(!d.getElementById(id)){js=d.createElement(s);
+          js.id=id;
+          js.src=p+"://platform.twitter.com/widgets.js";
+          fjs.parentNode.insertBefore(js,fjs);
+          }}(document,"script","twitter-wjs");
+
+/ .blank_bg.vspace
+/   .container
+/     .row.centered{:style => 'margin-top: 7%;'}
+/       %h3.ouishare_stencil
+/         Twitter Curator
+/       %hr.pink
+/     .row
+/       %a.twitter-grid{:href => "https://twitter.com/kirilind/timelines/730400304718581760"}
+/         Twitter grid (test)
+/       %script{:src => "//platform.twitter.com/widgets.js", :charset => "utf-8", :async => ""}
 
 
 
