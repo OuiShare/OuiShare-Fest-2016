@@ -63,7 +63,6 @@ OuiShareFest::Application.routes.draw do
     get :forward
     # get :freelancers
     get :getting_to_the_venue
- 
     get :join
     get :loveparty
     get :media
@@ -78,7 +77,6 @@ OuiShareFest::Application.routes.draw do
     # get :stories
     get :travel_information
     # get :twt
-    get :twidget
     get :where_to_stay
     get :zero_waste_event
     post :newsletter_collect_email
